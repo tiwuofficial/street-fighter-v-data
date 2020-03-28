@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "ES6",
+    "module": "es2015",
+    "lib": [
+      "dom",
+      "esnext",
+      "webworker"
+    ]
+  }
+}

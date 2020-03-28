@@ -1,0 +1,28 @@
+{
+  "name": "street-fighter-v-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --mode production",
+    "watch": "NODE_ENV=development webpack --mode development --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiwuofficial/street-fighter-v-data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiwuofficial/street-fighter-v-data/issues"
+  },
+  "homepage": "https://github.com/tiwuofficial/street-fighter-v-data#readme",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.2.3",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  }
+}
