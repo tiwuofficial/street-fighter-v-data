@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "sourceMap": true,
-    "target": "ES6",
+    "target": "es2017",
     "module": "es2015",
-    "lib": [
-      "dom",
-      "esnext",
-      "webworker"
-    ]
-  }
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "__tests__"
+  ]
 }
