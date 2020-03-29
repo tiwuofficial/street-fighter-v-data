@@ -1,3 +1,5 @@
+import { frameCalculation } from "../module/frameCalculation";
+
 export default class {
   id: number;
   name: string;
@@ -11,6 +13,7 @@ export default class {
   remarks: string;
   command: string;
 
+  
   constructor(id: number, name: string, stan: string, remarks: string, guard: string, outbreak: string, persistence:string, rigidity:string, hit:string, damage:string, command:string) {
     this.id = id;
     this.name = name;
@@ -24,5 +27,28 @@ export default class {
     this.remarks = remarks;
     this.command = command;
   }
-}
 
+  /**
+   *
+   *
+   * @returns {(number | null)}
+   */
+  getCaluculationOutbreak(): number | null {
+    if (this.outbreak === "") {
+      return null;
+    }
+    return frameCalculation(this.outbreak);
+  }
+
+  /**
+   *
+   *
+   * @returns {(number | null)}
+   */
+  getCaluculationGuard(): number | null {
+    if (this.guard === "") {
+      return null;
+    }
+    return frameCalculation(this.guard);
+  }
+}
