@@ -1,4 +1,6 @@
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class default_1 {
     constructor() {
         this.lps = [];
     }
@@ -29,4 +31,5 @@ export default class {
         });
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=Lps.js.map

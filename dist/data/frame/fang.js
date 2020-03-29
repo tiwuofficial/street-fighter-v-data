@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const fang = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
     {
@@ -213,5 +215,5 @@ const fang = [
         command: ""
     }
 ];
-export { fang };
+exports.fang = fang;
 //# sourceMappingURL=fang.js.map

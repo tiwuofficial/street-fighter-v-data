@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const falke = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "15", hit: "8", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -152,5 +154,5 @@ const falke = [
     },
     { name: "サイコフリューゲル", outbreak: "1+3", persistence: "3", rigidity: "58", hit: "D", guard: "-35", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", command: "" }
 ];
-export { falke };
+exports.falke = falke;
 //# sourceMappingURL=falke.js.map

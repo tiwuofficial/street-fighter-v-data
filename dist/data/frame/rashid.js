@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const rashid = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "2", rigidity: "14", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -384,5 +386,5 @@ const rashid = [
     { name: "EX ワールウインド・ショット", outbreak: "23", persistence: "", rigidity: "全体58", hit: "12", guard: "9", damage: "90", stan: "180", remarks: "", command: "" },
     { name: "アルタイル", outbreak: "1+7", persistence: "30", rigidity: "43", hit: "D", guard: "-51", damage: "340", stan: "0", remarks: "1F～17F 完全無敵", command: "" }
 ];
-export { rashid };
+exports.rashid = rashid;
 //# sourceMappingURL=rashid.js.map

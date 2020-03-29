@@ -1,4 +1,6 @@
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class default_1 {
     /**
      *
      */
@@ -55,4 +57,5 @@ export default class {
         }
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=Characters.js.map

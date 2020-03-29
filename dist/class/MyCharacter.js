@@ -1,6 +1,8 @@
-import { characters } from "../data/character";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const character_1 = require("../data/character");
 const LS_KEY = "myCharacterEnName";
-export default class {
+class default_1 {
     constructor() {
         // todo クリーンアーキテクチャのように、データ操作クラスはコンストラクタで渡す
         let myCharacterEnName = localStorage.getItem(LS_KEY);
@@ -8,10 +10,10 @@ export default class {
             myCharacterEnName = "ryu";
             localStorage.setItem(LS_KEY, myCharacterEnName);
         }
-        this.character = characters.getCharacterByEnName(myCharacterEnName);
+        this.character = character_1.characters.getCharacterByEnName(myCharacterEnName);
     }
     setCharacterByEnName(enName) {
-        this.character = characters.getCharacterByEnName(enName);
+        this.character = character_1.characters.getCharacterByEnName(enName);
         // 保存
         // todo クリーンアーキテクチャのように、データ操作クラスはコンストラクタで渡す
         localStorage.setItem("myCharacterEnName", enName);
@@ -20,4 +22,5 @@ export default class {
         return this.character.enName;
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=MyCharacter.js.map

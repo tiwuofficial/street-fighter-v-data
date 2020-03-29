@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const rmika = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "2", rigidity: "13", hit: "8", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
@@ -132,5 +134,5 @@ const rmika = [
     { name: "EX ウィングレスエアプレーン", outbreak: "5", persistence: "11", rigidity: "17+着地後20", hit: "D", guard: "", damage: "160", stan: "200", remarks: "5F～15F 完全無敵", command: "" },
     { name: "バッドリーピーチ", outbreak: "1+2", persistence: "2", rigidity: "51", hit: "D", guard: "", damage: "360", stan: "0", remarks: "1F～4F 完全無敵", command: "" }
 ];
-export { rmika };
+exports.rmika = rmika;
 //# sourceMappingURL=rmika.js.map

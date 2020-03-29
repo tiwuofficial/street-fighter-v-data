@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const sagat = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "10", hit: "5", guard: "4", damage: "30", stan: "70", remarks: "先端はしゃがみ状態にヒットしない", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "15", hit: "7", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -218,5 +220,5 @@ const sagat = [
     },
     { name: "タイガーランペイジ", outbreak: "1+6", persistence: "6", rigidity: "61", hit: "D", guard: "-42", damage: "340", stan: "0", remarks: "1F～13F 完全無敵", command: "" }
 ];
-export { sagat };
+exports.sagat = sagat;
 //# sourceMappingURL=sagat.js.map

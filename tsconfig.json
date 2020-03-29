@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "outDir": "dist",
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
     "sourceMap": true,
     "target": "es2017",
-    "module": "es2015",
     "moduleResolution": "node"
   },
+  "compileOnSave": true,
   "exclude": [
     "__tests__"
   ]

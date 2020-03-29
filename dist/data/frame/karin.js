@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const karin = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "12", hit: "4", guard: "1", damage: "60", stan: "100", remarks: "", command: "" },
@@ -100,5 +102,5 @@ const karin = [
     { name: "V紅蓮虚歩", outbreak: "", persistence: "", rigidity: "全体13", hit: "-4", guard: "-8", damage: "", stan: "", remarks: "Vゲージタイマー500F消費", command: "" },
     { name: "神月流覇道六式 覇者の型", outbreak: "1+4", persistence: "13", rigidity: "14+着地後24", hit: "D", guard: "-18", damage: "340", stan: "0", remarks: "1F～6F, 43F～44F 完全無敵", command: "" }
 ];
-export { karin };
+exports.karin = karin;
 //# sourceMappingURL=karin.js.map

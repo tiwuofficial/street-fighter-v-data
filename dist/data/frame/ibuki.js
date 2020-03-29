@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const ibuki = [
     { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "8", hit: "2", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
@@ -233,5 +235,5 @@ const ibuki = [
     },
     { name: "花鳥風月", outbreak: "1+4", persistence: "17", rigidity: "17", hit: "D", guard: "-20", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", command: "" }
 ];
-export { ibuki };
+exports.ibuki = ibuki;
 //# sourceMappingURL=ibuki.js.map

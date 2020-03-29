@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const kolin = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "13", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
@@ -441,5 +443,5 @@ const kolin = [
     },
     { name: "フロストタワー", outbreak: "7", persistence: "3", rigidity: "52", hit: "D", guard: "-37", damage: "330", stan: "0", remarks: "1F～9F 完全無敵", command: "" }
 ];
-export { kolin };
+exports.kolin = kolin;
 //# sourceMappingURL=kolin.js.map

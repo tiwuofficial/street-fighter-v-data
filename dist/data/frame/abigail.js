@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const abigail = [
     {
         name: "立ち弱P",
@@ -905,5 +907,5 @@ const abigail = [
         command: ""
     }
 ];
-export { abigail };
+exports.abigail = abigail;
 //# sourceMappingURL=abigail.js.map

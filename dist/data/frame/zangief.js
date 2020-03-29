@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const zangief = [
     { name: "立ち弱P", outbreak: "5", persistence: "4", rigidity: "7", hit: "5", guard: "3", damage: "40", stan: "70", remarks: "1F～2Fは地上の相手にヒットしない", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "15", hit: "4", guard: "2", damage: "70", stan: "100", remarks: "", command: "" },
@@ -303,5 +305,5 @@ const zangief = [
     },
     { name: "ボリショイロシアンスープレックス", outbreak: "1+0", persistence: "2", rigidity: "65", hit: "D", guard: "", damage: "400", stan: "0", remarks: "1F～3F 完全無敵", command: "" }
 ];
-export { zangief };
+exports.zangief = zangief;
 //# sourceMappingURL=zangief.js.map

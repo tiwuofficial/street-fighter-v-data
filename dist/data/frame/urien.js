@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const urien = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "10", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "12", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -309,5 +311,5 @@ const urien = [
     },
     { name: "ドミナントクラッシュ", outbreak: "1+5", persistence: "19", rigidity: "60", hit: "D", guard: "-47", damage: "340", stan: "0", remarks: "1F～24F 完全無敵", command: "" }
 ];
-export { urien };
+exports.urien = urien;
 //# sourceMappingURL=urien.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const seth = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "", command: "" },
     {
@@ -390,5 +392,5 @@ const seth = [
     },
     { name: "丹田ディストーション", outbreak: "6", persistence: "10", rigidity: "42", hit: "D", guard: "30", damage: "330", stan: "0", remarks: "1F～15F 完全無敵", command: "" }
 ];
-export { seth };
+exports.seth = seth;
 //# sourceMappingURL=seth.js.map

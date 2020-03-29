@@ -1,4 +1,6 @@
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class default_1 {
     /* eslint @typescript-eslint/no-empty-function: 0 */
     constructor() { }
     getMemoByEnName(enName) {
@@ -15,4 +17,5 @@ export default class {
         }));
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=Memo.js.map

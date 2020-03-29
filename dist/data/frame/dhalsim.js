@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const dhalsim = [
     { name: "立ち弱P", outbreak: "3", persistence: "3", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "1F目は地上の相手にヒットしない", command: "" },
     { name: "立ち中P", outbreak: "12", persistence: "2", rigidity: "17", hit: "4", guard: "-4", damage: "60", stan: "100", remarks: "", command: "" },
@@ -140,5 +142,5 @@ const dhalsim = [
     { name: "空中ヨガサンバースト(Lv3)", outbreak: "1+69", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "400", stan: "0", remarks: "1F～9F 完全無敵", command: "" },
     { name: "空中ヨガサンバースト(接地爆発)", outbreak: "", persistence: "", rigidity: "", hit: "D", guard: "", damage: "200", stan: "0", remarks: "", command: "" }
 ];
-export { dhalsim };
+exports.dhalsim = dhalsim;
 //# sourceMappingURL=dhalsim.js.map

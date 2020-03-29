@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -5,10 +7,11 @@ function shuffle(a) {
     }
     return a;
 }
-export function getRandom(min, max) {
+function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-export function getRandomArray(min, max, count) {
+exports.getRandom = getRandom;
+function getRandomArray(min, max, count) {
     const randoms = [];
     /** 重複チェックしながら乱数作成 */
     for (let i = min; i <= max - 1; i++) {
@@ -25,4 +28,5 @@ export function getRandomArray(min, max, count) {
     tmp.push(0);
     return shuffle(tmp);
 }
+exports.getRandomArray = getRandomArray;
 //# sourceMappingURL=random.js.map

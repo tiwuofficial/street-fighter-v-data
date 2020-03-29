@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const blanka = [
     { name: "立ち弱P", outbreak: "5", persistence: "2", rigidity: "8", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "15", hit: "3", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
@@ -255,5 +257,5 @@ const blanka = [
         command: ""
     }
 ];
-export { blanka };
+exports.blanka = blanka;
 //# sourceMappingURL=blanka.js.map

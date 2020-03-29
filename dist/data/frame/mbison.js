@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const mbison = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "4", rigidity: "13", hit: "2", guard: "0", damage: "70", stan: "100", remarks: "", command: "" },
@@ -518,5 +520,5 @@ const mbison = [
         command: ""
     }
 ];
-export { mbison };
+exports.mbison = mbison;
 //# sourceMappingURL=mbison.js.map

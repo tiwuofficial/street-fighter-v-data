@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const g = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "7", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -758,5 +760,5 @@ const g = [
     },
     { name: "パンゲアバースト", outbreak: "1+5", persistence: "13×3", rigidity: "73", hit: "D", guard: "-39", damage: "330", stan: "0", remarks: "1F～10F 完全無敵", command: "" }
 ];
-export { g };
+exports.g = g;
 //# sourceMappingURL=g.js.map

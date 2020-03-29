@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const poison = [
     { name: "立ち弱P", outbreak: "3", persistence: "3", rigidity: "7", hit: "3", guard: "2", damage: "20", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "16", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -206,5 +208,5 @@ const poison = [
     },
     { name: "ラブハリケーン", outbreak: "1+9", persistence: "2", rigidity: "57", hit: "D", guard: "-37", damage: "340", stan: "0", remarks: "1F～15F 完全無敵", command: "" }
 ];
-export { poison };
+exports.poison = poison;
 //# sourceMappingURL=poison.js.map

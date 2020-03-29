@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const ken = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "15", hit: "3", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
@@ -294,5 +296,5 @@ const ken = [
     { name: "VEX 空中竜巻旋風脚", outbreak: "8", persistence: "6", rigidity: "着地後16", hit: "", guard: "", damage: "80", stan: "200", remarks: "", command: "" },
     { name: "紅蓮炎迅脚", outbreak: "1+4", persistence: "2", rigidity: "44", hit: "D", guard: "-26", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", command: "" }
 ];
-export { ken };
+exports.ken = ken;
 //# sourceMappingURL=ken.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const laura = [
     { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "5", rigidity: "11", hit: "4", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -156,5 +158,5 @@ const laura = [
     { name: "Vヘビーヒール", outbreak: "16", persistence: "2", rigidity: "着地後10", hit: "3", guard: "-2", damage: "70", stan: "100", remarks: "", command: "" },
     { name: "イナズマスピンホールド", outbreak: "1+3", persistence: "2", rigidity: "52", hit: "D", guard: "", damage: "350", stan: "0", remarks: "1F～5F 完全無敵", command: "" }
 ];
-export { laura };
+exports.laura = laura;
 //# sourceMappingURL=laura.js.map

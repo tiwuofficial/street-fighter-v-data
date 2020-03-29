@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const menat = [
     { name: "立ち弱P", outbreak: "5", persistence: "4", rigidity: "8(※11)", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "※空振り時", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "6", rigidity: "20", hit: "-2", guard: "-8", damage: "60", stan: "100", remarks: "", command: "" },
@@ -230,5 +232,5 @@ const menat = [
     { name: "Vジェフティの預言", outbreak: "", persistence: "", rigidity: "全体42", hit: "", guard: "", damage: "", stan: "", remarks: "Vトリガーキャンセルできる通常技からキャンセル可能", command: "" },
     { name: "ウン・ネフェル", outbreak: "1+3", persistence: "16", rigidity: "65", hit: "D", guard: "-46", damage: "330", stan: "0", remarks: "1F～20F 完全無敵", command: "" }
 ];
-export { menat };
+exports.menat = menat;
 //# sourceMappingURL=menat.js.map

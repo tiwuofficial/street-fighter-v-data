@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const gouki = [
     { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "14", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", command: "" },
@@ -608,5 +610,5 @@ const gouki = [
         command: ""
     }
 ];
-export { gouki };
+exports.gouki = gouki;
 //# sourceMappingURL=gouki.js.map

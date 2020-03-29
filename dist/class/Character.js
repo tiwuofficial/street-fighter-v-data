@@ -1,5 +1,7 @@
-import { frameCalculation } from "../module/frameCalculation";
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const frameCalculation_1 = require("../module/frameCalculation");
+class default_1 {
     /**
      *
      * @param {string} id
@@ -145,8 +147,8 @@ export default class {
                     }
                     return 1;
                 }
-                const aValue = frameCalculation(a[sortKey]);
-                const bValue = frameCalculation(b[sortKey]);
+                const aValue = frameCalculation_1.frameCalculation(a[sortKey]);
+                const bValue = frameCalculation_1.frameCalculation(b[sortKey]);
                 if (sortOrder === "asc") {
                     return aValue - bValue;
                 }
@@ -175,4 +177,5 @@ export default class {
         return exists;
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=Character.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const nash = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "6", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "15", hit: "2", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
@@ -196,5 +198,5 @@ const nash = [
         command: ""
     }
 ];
-export { nash };
+exports.nash = nash;
 //# sourceMappingURL=nash.js.map

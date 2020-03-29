@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const ehonda = [
     { name: "立ち弱P", outbreak: "5", persistence: "3", rigidity: "9", hit: "5", guard: "3", damage: "40", stan: "90", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "4", rigidity: "13", hit: "5", guard: "2", damage: "70", stan: "120", remarks: "", command: "" },
@@ -332,5 +334,5 @@ const ehonda = [
     },
     { name: "神ヶ島", outbreak: "9", persistence: "29", rigidity: "9+着地後28", hit: "D", guard: "-26", damage: "340", stan: "0", remarks: "14F～36F 飛び道具無敵\n1F～13F 完全無敵", command: "" }
 ];
-export { ehonda };
+exports.ehonda = ehonda;
 //# sourceMappingURL=ehonda.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const birdie = [
     { name: "立ち弱P", outbreak: "5", persistence: "2", rigidity: "10", hit: "4", guard: "3", damage: "40", stan: "90", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "16(※20)", hit: "4", guard: "1", damage: "60", stan: "120", remarks: "※空振り時", command: "" },
@@ -205,5 +207,5 @@ const birdie = [
     { name: "ブルキャプチャー", outbreak: "19", persistence: "10", rigidity: "18", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "Ｖスキルの缶とバナナに干渉可能", command: "" },
     { name: "バッド・スキップ・チェーン", outbreak: "1+5", persistence: "5", rigidity: "60", hit: "D", guard: "-30", damage: "340", stan: "0", remarks: "1F～10F 完全無敵", command: "" }
 ];
-export { birdie };
+exports.birdie = birdie;
 //# sourceMappingURL=birdie.js.map

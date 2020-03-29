@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const cody = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "しゃがみ弱P・立ち弱K・しゃがみ弱Kに連打キャンセル可能", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "16", hit: "4", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
@@ -373,5 +375,5 @@ const cody = [
         command: ""
     }
 ];
-export { cody };
+exports.cody = cody;
 //# sourceMappingURL=cody.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const gill = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "13", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -493,5 +495,5 @@ const gill = [
     },
     { name: "セラフィックウイング", outbreak: "5", persistence: "29", rigidity: "39", hit: "D", guard: "-32", damage: "340", stan: "0", remarks: "1F～8F 完全無敵", command: "" }
 ];
-export { gill };
+exports.gill = gill;
 //# sourceMappingURL=gill.js.map

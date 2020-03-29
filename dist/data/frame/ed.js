@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const ed = [
     {
         name: "立ち弱P",
@@ -492,5 +494,5 @@ const ed = [
         command: ""
     }
 ];
-export { ed };
+exports.ed = ed;
 //# sourceMappingURL=ed.js.map

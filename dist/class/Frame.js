@@ -1,4 +1,6 @@
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class default_1 {
     constructor(id, name, stan, remarks, guard, outbreak, persistence, rigidity, hit, damage, command) {
         this.id = id;
         this.name = name;
@@ -13,4 +15,5 @@ export default class {
         this.command = command;
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=Frame.js.map

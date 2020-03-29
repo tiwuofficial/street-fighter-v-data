@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const zeku = [
     { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "9", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "14", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
@@ -381,5 +383,5 @@ const zeku = [
     },
     { name: "抜山蓋世", outbreak: "1+3", persistence: "8", rigidity: "47", hit: "D", guard: "-33", damage: "340", stan: "0", remarks: "1F～11F 完全無敵", command: "" }
 ];
-export { zeku };
+exports.zeku = zeku;
 //# sourceMappingURL=zeku.js.map

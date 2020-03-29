@@ -1,4 +1,6 @@
-export function frameCalculation(value) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function frameCalculation(value) {
     // 全体45 パターン
     if (value.indexOf("全体") >= 0) {
         value = value.replace(/全体/, "");
@@ -24,4 +26,5 @@ export function frameCalculation(value) {
     // 1, -1 などを判定
     return /^\d+|-\d+$/g.test(value) ? parseInt(value) : 0;
 }
+exports.frameCalculation = frameCalculation;
 //# sourceMappingURL=frameCalculation.js.map

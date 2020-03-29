@@ -1,4 +1,6 @@
-export default class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class default_1 {
     constructor(id, text, sortKey, sortOrder) {
         this.id = id;
         this.text = text;
@@ -6,4 +8,5 @@ export default class {
         this.sortOrder = sortOrder;
     }
 }
+exports.default = default_1;
 //# sourceMappingURL=FrameSort.js.map

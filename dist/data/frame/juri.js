@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const juri = [
     { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
     { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
@@ -546,5 +548,5 @@ const juri = [
     { name: "EX 両断殺", outbreak: "25", persistence: "3", rigidity: "20", hit: "D", guard: "-2", damage: "80", stan: "150", remarks: "1F～27F 飛び道具無敵", command: "" },
     { name: "殺界風破斬", outbreak: "1+8", persistence: "", rigidity: "全体67", hit: "D", guard: "-15", damage: "330", stan: "0", remarks: "1F～8F 完全無敵", command: "" }
 ];
-export { juri };
+exports.juri = juri;
 //# sourceMappingURL=juri.js.map

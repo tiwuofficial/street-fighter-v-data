@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const cammy = [
     {
         name: "立ち弱P",
@@ -295,5 +297,5 @@ const cammy = [
         command: ""
     }
 ];
-export { cammy };
+exports.cammy = cammy;
 //# sourceMappingURL=cammy.js.map

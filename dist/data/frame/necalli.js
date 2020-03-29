@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const necalli = [
     { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "40", stan: "70", remarks: "", command: "" },
@@ -368,5 +370,5 @@ const necalli = [
     { name: "名誉の儀式", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "330", stan: "0", remarks: "1F～8F 完全無敵", command: "" },
     { name: "V魂の献上", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "370", stan: "0", remarks: "1F～8F 完全無敵", command: "" }
 ];
-export { necalli };
+exports.necalli = necalli;
 //# sourceMappingURL=necalli.js.map

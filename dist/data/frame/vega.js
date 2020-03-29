@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const vega = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "14", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
@@ -206,5 +208,5 @@ const vega = [
     { name: "アルティメット サイコクラッシャー", outbreak: "1+5", persistence: "15", rigidity: "63", hit: "D", guard: "-40", damage: "340", stan: "0", remarks: "1F～20F 完全無敵", command: "" },
     { name: "アルティメット サイコクラッシャー(空中)", outbreak: "1+5", persistence: "15", rigidity: "着地後14", hit: "D", guard: "", damage: "340", stan: "0", remarks: "1F～20F 完全無敵", command: "" }
 ];
-export { vega };
+exports.vega = vega;
 //# sourceMappingURL=vega.js.map

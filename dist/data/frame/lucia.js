@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const lucia = [
     { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
     { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "3", damage: "50", stan: "100", remarks: "", command: "" },
@@ -327,5 +329,5 @@ const lucia = [
         command: ""
     }
 ];
-export { lucia };
+exports.lucia = lucia;
 //# sourceMappingURL=lucia.js.map

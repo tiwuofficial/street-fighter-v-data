@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const balrog = [
     { name: "立ち弱P", outbreak: "5", persistence: "2", rigidity: "9", hit: "7", guard: "1", damage: "30", stan: "70", remarks: "しゃがみの相手にヒットしない", command: "" },
     { name: "立ち中P", outbreak: "8", persistence: "2", rigidity: "14", hit: "6", guard: "2", damage: "70", stan: "100", remarks: "S※スイッチングクローでのみキャンセル可能", command: "" },
@@ -278,5 +280,5 @@ const balrog = [
     },
     { name: "ブラッディレイン", outbreak: "9", persistence: "壁到達まで/8", rigidity: "29", hit: "D", guard: "-14", damage: "330", stan: "0", remarks: "1F～暗転まで投げ&飛び道具無敵", command: "" }
 ];
-export { balrog };
+exports.balrog = balrog;
 //# sourceMappingURL=balrog.js.map
