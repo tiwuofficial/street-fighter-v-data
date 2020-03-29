@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const Frame_1 = require("./Frame");
 const frameCalculation_1 = require("../module/frameCalculation");
 class default_1 {
     /**
@@ -18,7 +19,7 @@ class default_1 {
         this.words = words;
         frames.forEach((obj, index) => {
             const frame = Object.assign(obj, { id: index + 1 });
-            this.frame.push(frame);
+            this.frame.push(new Frame_1.default(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.command));
         });
     }
     /**

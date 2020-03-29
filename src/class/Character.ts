@@ -24,8 +24,8 @@ export default class {
     this.words = words;
 
     frames.forEach((obj, index) => {
-      const frame = Object.assign(obj, { id: index + 1 });
-      this.frame.push(frame as Frame);
+      const frame = Object.assign(obj, { id: index + 1 }) as Frame;
+      this.frame.push(new Frame(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.command));
     });
   }
 
