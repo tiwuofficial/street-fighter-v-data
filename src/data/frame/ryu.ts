@@ -1,12 +1,12 @@
 const ryu = [
-  { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-  { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "100", remarks: "", command: "" },
-  { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "1", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "V立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "1", damage: "60", stan: "130", remarks: "", command: "" },
-  { name: "立ち強P", outbreak: "8", persistence: "3", rigidity: "20", hit: "3", guard: "-1", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "V立ち強P", outbreak: "8", persistence: "3", rigidity: "20", hit: "3", guard: "-1", damage: "90", stan: "180", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "11", hit: "-1", guard: "-2", damage: "30", stan: "70", remarks: "", command: "" },
-  { name: "立ち中K", outbreak: "8", persistence: "3", rigidity: "16", hit: "2", guard: "-2", damage: "70", stan: "100", remarks: "", command: "" },
+  { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "V立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "1", damage: "60", stan: "130", remarks: "", type: "normal", command: "" },
+  { name: "立ち強P", outbreak: "8", persistence: "3", rigidity: "20", hit: "3", guard: "-1", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "V立ち強P", outbreak: "8", persistence: "3", rigidity: "20", hit: "3", guard: "-1", damage: "90", stan: "180", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "11", hit: "-1", guard: "-2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中K", outbreak: "8", persistence: "3", rigidity: "16", hit: "2", guard: "-2", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
   {
     name: "立ち強K",
     outbreak: "10",
@@ -18,12 +18,13 @@ const ryu = [
     stan: "150",
     remarks:
       "クラッシュカウンター対応(+16F)\n                                                                しゃがみの相手にヒットしない\n                                                                                                ガード時に最速でトリガーキャンセル不可",
+    type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "Vしゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "3", guard: "2", damage: "30", stan: "100", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "Vしゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "3", damage: "60", stan: "130", remarks: "", command: "" },
+  { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "Vしゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "3", guard: "2", damage: "30", stan: "100", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "Vしゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "3", damage: "60", stan: "130", remarks: "", type: "normal", command: "" },
   {
     name: "しゃがみ強P",
     outbreak: "6",
@@ -34,6 +35,7 @@ const ryu = [
     damage: "90(※70)",
     stan: "150",
     remarks: "強制立ち効果\n                                                                                                                持続部分はキャンセル不可\n※持続2F目以降",
+    type: "normal",
     command: ""
   },
   {
@@ -46,30 +48,55 @@ const ryu = [
     damage: "90(※70)",
     stan: "180",
     remarks: "強制立ち効果\n                                                                                                                持続部分はキャンセル不可\n※持続2F目以降",
+    type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中K", outbreak: "7", persistence: "3", rigidity: "13", hit: "2", guard: "-1", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強K", outbreak: "8", persistence: "2", rigidity: "22", hit: "D", guard: "-11", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "Vジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "100", remarks: "", command: "" },
-  { name: "ジャンプ中P", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "Vジャンプ中P", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "130", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "ジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "Vジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "180", remarks: "", command: "" },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ中K", outbreak: "6", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "鎖骨割り", outbreak: "22", persistence: "4", rigidity: "17", hit: "1", guard: "-7", damage: "60", stan: "100", remarks: "", command: "→ + 中P" },
-  { name: "V鎖骨割り", outbreak: "22", persistence: "4", rigidity: "17", hit: "1", guard: "-7", damage: "60", stan: "130", remarks: "", command: "→ + 中P" },
-  { name: "鳩尾砕き", outbreak: "17", persistence: "4", rigidity: "18", hit: "8", guard: "-2", damage: "80", stan: "150", remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能", command: "→ + 強P" },
-  { name: "V鳩尾砕き", outbreak: "17", persistence: "4", rigidity: "18", hit: "8", guard: "-2", damage: "90", stan: "180", remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能", command: "→ + 強P" },
-  { name: "踵落とし", outbreak: "9", persistence: "7", rigidity: "16", hit: "4", guard: "-2", damage: "80", stan: "150", remarks: "強制立ち効果", command: "← + 強K" },
-  { name: "上段二連撃", outbreak: "9", persistence: "2", rigidity: "28", hit: "-2", guard: "-9", damage: "70", stan: "100", remarks: "", command: "中P ▶ 強P" },
-  { name: "V上段二連撃", outbreak: "9", persistence: "2", rigidity: "28", hit: "-2", guard: "-9", damage: "80", stan: "130", remarks: "", command: "中P ▶ 強P" },
-  { name: "上段三連撃", outbreak: "9", persistence: "2", rigidity: "26", hit: "D", guard: "-7", damage: "70", stan: "100", remarks: "", command: "中P ▶ 強P ▶ 強K" },
-  { name: "背負い投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", command: "" },
-  { name: "巴投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", command: "" },
+  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中K", outbreak: "7", persistence: "3", rigidity: "13", hit: "2", guard: "-1", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強K", outbreak: "8", persistence: "2", rigidity: "22", hit: "D", guard: "-11", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "100", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "Vジャンプ中P", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "130", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "ジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "180", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "6", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "鎖骨割り", outbreak: "22", persistence: "4", rigidity: "17", hit: "1", guard: "-7", damage: "60", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
+  { name: "V鎖骨割り", outbreak: "22", persistence: "4", rigidity: "17", hit: "1", guard: "-7", damage: "60", stan: "130", remarks: "", type: "unique", command: "→ + 中P" },
+  {
+    name: "鳩尾砕き",
+    outbreak: "17",
+    persistence: "4",
+    rigidity: "18",
+    hit: "8",
+    guard: "-2",
+    damage: "80",
+    stan: "150",
+    remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能",
+    type: "unique",
+    command: "→ + 強P"
+  },
+  {
+    name: "V鳩尾砕き",
+    outbreak: "17",
+    persistence: "4",
+    rigidity: "18",
+    hit: "8",
+    guard: "-2",
+    damage: "90",
+    stan: "180",
+    remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能",
+    type: "unique",
+    command: "→ + 強P"
+  },
+  { name: "踵落とし", outbreak: "9", persistence: "7", rigidity: "16", hit: "4", guard: "-2", damage: "80", stan: "150", remarks: "強制立ち効果", type: "unique", command: "← + 強K" },
+  { name: "上段二連撃", outbreak: "9", persistence: "2", rigidity: "28", hit: "-2", guard: "-9", damage: "70", stan: "100", remarks: "", type: "unique", command: "中P ▶ 強P" },
+  { name: "V上段二連撃", outbreak: "9", persistence: "2", rigidity: "28", hit: "-2", guard: "-9", damage: "80", stan: "130", remarks: "", type: "unique", command: "中P ▶ 強P" },
+  { name: "上段三連撃", outbreak: "9", persistence: "2", rigidity: "26", hit: "D", guard: "-7", damage: "70", stan: "100", remarks: "", type: "unique", command: "中P ▶ 強P ▶ 強K" },
+  { name: "背負い投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+  { name: "巴投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", type: "throw", command: "" },
   {
     name: "[VS1]心眼",
     outbreak: "3",
@@ -80,32 +107,35 @@ const ryu = [
     damage: "",
     stan: "",
     remarks: "心眼成立後に出すキャンセル心眼は発生1F\n動作中常に被カウンター判定(キャンセル心眼は対象外)",
+    type: "vsystem",
     command: ""
   },
-  { name: "[VS2]入り身", outbreak: "25", persistence: "2", rigidity: "26", hit: "D", guard: "-4", damage: "60", stan: "100", remarks: "10F～19F全身当て身判定", command: "" },
+  { name: "[VS2]入り身", outbreak: "25", persistence: "2", rigidity: "26", hit: "D", guard: "-4", damage: "60", stan: "100", remarks: "10F～19F全身当て身判定", type: "vsystem", command: "" },
   {
     name: "[VS2]入り身(当て身成立時)",
-    outbreak: "5",
+    outbreak: "1",
     persistence: "4(※2)",
     rigidity: "37(※21)",
     hit: "D",
     guard: "4",
     damage: "120",
     stan: "200",
-    remarks: "1F～27F 完全無敵\n                                                (初段空振り時は1～15F完全無敵)\n※初段空振り時",
+    remarks: "1F～23F 完全無敵\n                                                (初段空振り時は1～11F完全無敵)\n※初段空振り時",
+    type: "vsystem",
     command: ""
   },
-  { name: "V[VS2]入り身", outbreak: "25", persistence: "2", rigidity: "26", hit: "D", guard: "-4", damage: "60", stan: "130", remarks: "10F～19F全身当て身判定", command: "" },
+  { name: "V[VS2]入り身", outbreak: "25", persistence: "2", rigidity: "26", hit: "D", guard: "-4", damage: "60", stan: "130", remarks: "10F～19F全身当て身判定", type: "vsystem", command: "" },
   {
     name: "V[VS2]入り身(当て身成立時)",
-    outbreak: "5",
+    outbreak: "1",
     persistence: "4(※2)",
     rigidity: "37(※21)",
     hit: "D",
     guard: "4",
     damage: "120",
     stan: "250",
-    remarks: "1F～27F 完全無敵\n                                                (初段空振り時は1～15F完全無敵)\n※初段空振り時",
+    remarks: "1F～23F 完全無敵\n                                                (初段空振り時は1～11F完全無敵)\n※初段空振り時",
+    type: "vsystem",
     command: ""
   },
   {
@@ -119,6 +149,7 @@ const ryu = [
     stan: "",
     remarks:
       "Vゲージタイマー+800F\n                                                                                                                                                                                発動中、P系の通常技・特殊技・必殺技・CAが強化",
+    type: "vsystem",
     command: ""
   },
   {
@@ -131,19 +162,20 @@ const ryu = [
     damage: "60",
     stan: "0",
     remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
-  { name: "弱 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "中 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "強 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "V弱 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", command: "" },
-  { name: "V中 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", command: "" },
-  { name: "V強 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", command: "" },
-  { name: "V波動拳(Lv2)", outbreak: "5", persistence: "", rigidity: "", hit: "D", guard: "0", damage: "100", stan: "200", remarks: "", command: "" },
-  { name: "V波動拳(Lv3)", outbreak: "6", persistence: "", rigidity: "", hit: "D", guard: "GB", damage: "130", stan: "300", remarks: "ガードブレイク時+32F", command: "" },
-  { name: "EX 波動拳", outbreak: "11", persistence: "", rigidity: "全体42", hit: "D", guard: "2", damage: "100", stan: "150", remarks: "", command: "" },
-  { name: "VEX 波動拳(Lv1)", outbreak: "11", persistence: "", rigidity: "全体40", hit: "D", guard: "2", damage: "120", stan: "200", remarks: "", command: "" },
-  { name: "VEX 波動拳(Lv2)", outbreak: "5", persistence: "", rigidity: "", hit: "D", guard: "GB", damage: "150", stan: "300", remarks: "ガードブレイク時+32F", command: "" },
+  { name: "弱 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 波動拳", outbreak: "14", persistence: "", rigidity: "全体45", hit: "-1", guard: "-6", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "V弱 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "V中 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "V強 波動拳", outbreak: "14", persistence: "", rigidity: "全体42", hit: "D", guard: "-2", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "V波動拳(Lv2)", outbreak: "5", persistence: "", rigidity: "", hit: "D", guard: "0", damage: "100", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "V波動拳(Lv3)", outbreak: "6", persistence: "", rigidity: "", hit: "D", guard: "GB", damage: "130", stan: "300", remarks: "ガードブレイク時+32F", type: "special", command: "" },
+  { name: "EX 波動拳", outbreak: "11", persistence: "", rigidity: "全体42", hit: "D", guard: "2", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "VEX 波動拳(Lv1)", outbreak: "11", persistence: "", rigidity: "全体40", hit: "D", guard: "2", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "VEX 波動拳(Lv2)", outbreak: "5", persistence: "", rigidity: "", hit: "D", guard: "GB", damage: "150", stan: "300", remarks: "ガードブレイク時+32F", type: "special", command: "" },
   {
     name: "弱 昇龍拳",
     outbreak: "3",
@@ -154,6 +186,7 @@ const ryu = [
     damage: "100(※60)",
     stan: "150(※100)",
     remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -166,6 +199,7 @@ const ryu = [
     damage: "120(※60)",
     stan: "150(※100)",
     remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※持続3F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -178,6 +212,7 @@ const ryu = [
     damage: "130(※60)",
     stan: "150",
     remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -190,6 +225,7 @@ const ryu = [
     damage: "110(※80)",
     stan: "200(※150)",
     remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -202,6 +238,7 @@ const ryu = [
     damage: "130(※80)",
     stan: "200(※150)",
     remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※持続3F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -214,6 +251,7 @@ const ryu = [
     damage: "140(※80)",
     stan: "200",
     remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -226,6 +264,7 @@ const ryu = [
     damage: "160(※80)",
     stan: "200(※100)",
     remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※持続2F目以降",
+    type: "special",
     command: ""
   },
   {
@@ -238,9 +277,10 @@ const ryu = [
     damage: "180(※100)",
     stan: "200",
     remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※持続2F目以降",
+    type: "special",
     command: ""
   },
-  { name: "弱 竜巻旋風脚", outbreak: "10", persistence: "2", rigidity: "18+着地後12", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "", command: "" },
+  { name: "弱 竜巻旋風脚", outbreak: "10", persistence: "2", rigidity: "18+着地後12", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "中 竜巻旋風脚",
     outbreak: "12",
@@ -251,6 +291,7 @@ const ryu = [
     damage: "100",
     stan: "150",
     remarks: "6F～45F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
+    type: "special",
     command: ""
   },
   {
@@ -263,6 +304,7 @@ const ryu = [
     damage: "110",
     stan: "150",
     remarks: "9F～61F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
+    type: "special",
     command: ""
   },
   {
@@ -275,13 +317,14 @@ const ryu = [
     damage: "140",
     stan: "150",
     remarks: "7F～36F 飛び道具無敵\n                                                S※昇龍拳、EX昇龍拳でのみキャンセル可能",
+    type: "special",
     command: ""
   },
-  { name: "空中竜巻旋風脚", outbreak: "9", persistence: "6", rigidity: "着地後14", hit: "D", guard: "", damage: "100", stan: "200", remarks: "", command: "" },
-  { name: "EX 空中竜巻旋風脚", outbreak: "8", persistence: "10", rigidity: "着地後14", hit: "D", guard: "", damage: "170", stan: "250", remarks: "めくり性能", command: "" },
-  { name: "弱 上段足刀蹴り", outbreak: "10", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "70", stan: "150", remarks: "", command: "" },
-  { name: "中 上段足刀蹴り", outbreak: "16", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "80", stan: "150", remarks: "", command: "" },
-  { name: "強 上段足刀蹴り", outbreak: "18", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "100", stan: "150", remarks: "", command: "" },
+  { name: "空中竜巻旋風脚", outbreak: "9", persistence: "6", rigidity: "着地後14", hit: "D", guard: "", damage: "100", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "EX 空中竜巻旋風脚", outbreak: "8", persistence: "10", rigidity: "着地後14", hit: "D", guard: "", damage: "170", stan: "250", remarks: "めくり性能", type: "special", command: "" },
+  { name: "弱 上段足刀蹴り", outbreak: "10", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "中 上段足刀蹴り", outbreak: "16", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "強 上段足刀蹴り", outbreak: "18", persistence: "2", rigidity: "28", hit: "D", guard: "-16", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "EX 上段足刀蹴り",
     outbreak: "18",
@@ -292,9 +335,10 @@ const ryu = [
     damage: "80",
     stan: "150",
     remarks: "S※竜巻旋風脚/EX竜巻旋風脚でのみキャンセル可能",
+    type: "special",
     command: ""
   },
-  { name: "真空波動拳", outbreak: "1+3", persistence: "", rigidity: "全体65", hit: "D", guard: "-17", damage: "320", stan: "0", remarks: "1F～3F 完全無敵", command: "" },
+  { name: "真空波動拳", outbreak: "1+3", persistence: "", rigidity: "全体65", hit: "D", guard: "-17", damage: "320", stan: "0", remarks: "1F～3F 完全無敵", type: "ca", command: "" },
   {
     name: "V電刃波動拳",
     outbreak: "1+3",
@@ -306,7 +350,9 @@ const ryu = [
     stan: "300",
     remarks:
       "Vゲージタイマー800F消費\n                                                                                                                                1F～3F 完全無敵\n                                                ガードブレイク時+9F",
+    type: "ca",
     command: ""
   }
 ];
+
 export { ryu };

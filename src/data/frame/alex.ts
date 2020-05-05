@@ -1,220 +1,22 @@
 const alex = [
-  {
-    name: "立ち弱P",
-    outbreak: "4",
-    persistence: "3",
-    rigidity: "7",
-    hit: "4",
-    guard: "2",
-    damage: "30",
-    stan: "70",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "立ち中P",
-    outbreak: "6",
-    persistence: "2",
-    rigidity: "12",
-    hit: "5",
-    guard: "2",
-    damage: "60",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "立ち強P",
-    outbreak: "9",
-    persistence: "4",
-    rigidity: "22",
-    hit: "-1",
-    guard: "-3",
-    damage: "90",
-    stan: "150",
-    remarks: "1F目は地上の相手にヒットしない",
-    command: ""
-  },
-  {
-    name: "立ち弱K",
-    outbreak: "5",
-    persistence: "3",
-    rigidity: "8",
-    hit: "2",
-    guard: "-1",
-    damage: "40",
-    stan: "70",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "立ち中K",
-    outbreak: "7",
-    persistence: "3",
-    rigidity: "15",
-    hit: "2",
-    guard: "-2",
-    damage: "70",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "立ち強K",
-    outbreak: "17",
-    persistence: "3",
-    rigidity: "25",
-    hit: "1",
-    guard: "-4",
-    damage: "100",
-    stan: "150",
-    remarks: "クラッシュカウンター対応 (膝)",
-    command: ""
-  },
-  {
-    name: "しゃがみ弱P",
-    outbreak: "4",
-    persistence: "2",
-    rigidity: "7",
-    hit: "4",
-    guard: "2",
-    damage: "30",
-    stan: "70",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "しゃがみ中P",
-    outbreak: "7",
-    persistence: "2",
-    rigidity: "17",
-    hit: "2",
-    guard: "-1",
-    damage: "60",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "しゃがみ強P",
-    outbreak: "10",
-    persistence: "6",
-    rigidity: "23",
-    hit: "D",
-    guard: "-8",
-    damage: "90",
-    stan: "150",
-    remarks: "斜め入力により前進距離が変化",
-    command: ""
-  },
-  {
-    name: "しゃがみ弱K",
-    outbreak: "4",
-    persistence: "3",
-    rigidity: "6",
-    hit: "4",
-    guard: "0",
-    damage: "20",
-    stan: "70",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "しゃがみ中K",
-    outbreak: "9",
-    persistence: "2",
-    rigidity: "18",
-    hit: "0",
-    guard: "-3",
-    damage: "60",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "しゃがみ強K",
-    outbreak: "11",
-    persistence: "2",
-    rigidity: "24",
-    hit: "D",
-    guard: "-12",
-    damage: "100",
-    stan: "150",
-    remarks: "クラッシュカウンター対応 (D)",
-    command: ""
-  },
-  {
-    name: "ジャンプ弱P",
-    outbreak: "4",
-    persistence: "5",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "40",
-    stan: "70",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "ジャンプ中P",
-    outbreak: "5",
-    persistence: "7",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "70",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "ジャンプ強P",
-    outbreak: "8",
-    persistence: "3",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "90",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "ジャンプ弱K",
-    outbreak: "4",
-    persistence: "5",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "40",
-    stan: "70",
-    remarks: "めくり性能",
-    command: ""
-  },
-  {
-    name: "ジャンプ中K",
-    outbreak: "6",
-    persistence: "6",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "70",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "ジャンプ強K",
-    outbreak: "9",
-    persistence: "5",
-    rigidity: "",
-    hit: "",
-    guard: "",
-    damage: "90",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
+  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "12", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強P", outbreak: "9", persistence: "4", rigidity: "22", hit: "-1", guard: "-3", damage: "90", stan: "150", remarks: "1F目は地上の相手にヒットしない", type: "normal", command: "" },
+  { name: "立ち弱K", outbreak: "5", persistence: "3", rigidity: "8", hit: "2", guard: "-1", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "15", hit: "2", guard: "-2", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強K", outbreak: "17", persistence: "3", rigidity: "25", hit: "1", guard: "-4", damage: "100", stan: "150", remarks: "クラッシュカウンター対応 (膝)", type: "normal", command: "" },
+  { name: "しゃがみ弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "7", persistence: "2", rigidity: "17", hit: "2", guard: "-1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強P", outbreak: "10", persistence: "6", rigidity: "23", hit: "D", guard: "-8", damage: "90", stan: "150", remarks: "斜め入力により前進距離が変化", type: "normal", command: "" },
+  { name: "しゃがみ弱K", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "0", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ中K", outbreak: "9", persistence: "2", rigidity: "18", hit: "0", guard: "-3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強K", outbreak: "11", persistence: "2", rigidity: "24", hit: "D", guard: "-12", damage: "100", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "5", persistence: "7", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ強P", outbreak: "8", persistence: "3", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "6", persistence: "6", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
   {
     name: "フライングクロスチョップ",
     outbreak: "14",
@@ -225,9 +27,10 @@ const alex = [
     damage: "90",
     stan: "150",
     remarks: "",
+    type: "unique",
     command: "(前ジャンプ中に) ↓ + 強P"
   },
-  { name: "チョップ", outbreak: "22", persistence: "2", rigidity: "18", hit: "1", guard: "-8", damage: "60", stan: "100", remarks: "", command: "→ + 中P" },
+  { name: "チョップ", outbreak: "22", persistence: "2", rigidity: "18", hit: "1", guard: "-8", damage: "60", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
   {
     name: "ラリアット",
     outbreak: "11",
@@ -238,32 +41,11 @@ const alex = [
     damage: "80",
     stan: "150",
     remarks: "クラッシュカウンター対応(+15F)\n                                                強制立ち効果",
+    type: "unique",
     command: "→ + 強P"
   },
-  {
-    name: "フェイスクラッシュチョップ",
-    outbreak: "5",
-    persistence: "3",
-    rigidity: "17",
-    hit: "",
-    guard: "",
-    damage: "120",
-    stan: "120",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "レッグトマホーク",
-    outbreak: "5",
-    persistence: "3",
-    rigidity: "17",
-    hit: "",
-    guard: "",
-    damage: "160",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
+  { name: "フェイスクラッシュチョップ", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "120", remarks: "", type: "throw", command: "" },
+  { name: "レッグトマホーク", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "160", stan: "200", remarks: "", type: "throw", command: "" },
   {
     name: "[VS1]オーバーホール",
     outbreak: "",
@@ -274,6 +56,7 @@ const alex = [
     damage: "",
     stan: "",
     remarks: "打撃攻撃にハードヒット判定を付与\nハードヒット時は硬直差+5F、クラッシュカウンター対応技は+3F",
+    type: "vsystem",
     command: ""
   },
   {
@@ -286,10 +69,11 @@ const alex = [
     damage: "",
     stan: "",
     remarks: "発動後一回だけ打撃必殺技から別の打撃必殺技にキャンセル可能\n※EX必殺技からはEX必殺技でのみキャンセル可能\nキャンセル版必殺技をヒット/ガードさせた際にVゲージが増加",
+    type: "vsystem",
     command: ""
   },
   {
-    name: "レイジブースト",
+    name: "レイジシフト",
     outbreak: "1",
     persistence: "",
     rigidity: "5",
@@ -298,7 +82,8 @@ const alex = [
     damage: "",
     stan: "",
     remarks:
-      "Vゲージタイマー+2000F\n                                                                                                                                                                                発動中スウィングDDTとチョークスリーパーが必殺技に追加",
+      "Vゲージタイマー+1700F\n                                                                                                                                                                                発動中スレッジハンマーが必殺技に追加",
+    type: "vsystem",
     command: ""
   },
   {
@@ -311,140 +96,20 @@ const alex = [
     damage: "60",
     stan: "0",
     remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
-  {
-    name: "弱 フラッシュチョップ",
-    outbreak: "12",
-    persistence: "3",
-    rigidity: "20",
-    hit: "2",
-    guard: "-4",
-    damage: "70",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 フラッシュチョップ",
-    outbreak: "18",
-    persistence: "3",
-    rigidity: "19",
-    hit: "3",
-    guard: "-4",
-    damage: "80",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 フラッシュチョップ",
-    outbreak: "25",
-    persistence: "3",
-    rigidity: "21",
-    hit: "2",
-    guard: "-6",
-    damage: "90",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "EX フラッシュチョップ",
-    outbreak: "11",
-    persistence: "5",
-    rigidity: "19",
-    hit: "D",
-    guard: "-2",
-    damage: "140",
-    stan: "200",
-    remarks: "VS※VS1のみキャンセル可能",
-    command: ""
-  },
-  {
-    name: "弱 フラッシュチョップ(VS2版)",
-    outbreak: "12",
-    persistence: "3",
-    rigidity: "20",
-    hit: "2",
-    guard: "-4",
-    damage: "70",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 フラッシュチョップ(VS2版)",
-    outbreak: "18",
-    persistence: "3",
-    rigidity: "19",
-    hit: "3",
-    guard: "-4",
-    damage: "80",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 フラッシュチョップ(VS2版)",
-    outbreak: "25",
-    persistence: "3",
-    rigidity: "21",
-    hit: "2",
-    guard: "-6",
-    damage: "100",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "EX フラッシュチョップ(VS2版)",
-    outbreak: "11",
-    persistence: "5",
-    rigidity: "19",
-    hit: "D",
-    guard: "-2",
-    damage: "140",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "弱 スラッシュエルボー",
-    outbreak: "16",
-    persistence: "5",
-    rigidity: "22",
-    hit: "3",
-    guard: "-2",
-    damage: "80",
-    stan: "200",
-    remarks: "S※スウィングDDTでのみキャンセル可能",
-    command: ""
-  },
-  {
-    name: "中 スラッシュエルボー",
-    outbreak: "18",
-    persistence: "5",
-    rigidity: "22",
-    hit: "D",
-    guard: "-6",
-    damage: "90",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 スラッシュエルボー",
-    outbreak: "24",
-    persistence: "5",
-    rigidity: "19",
-    hit: "D",
-    guard: "-7",
-    damage: "100",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
+  { name: "弱 フラッシュチョップ", outbreak: "12", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "中 フラッシュチョップ", outbreak: "18", persistence: "3", rigidity: "19", hit: "3", guard: "-4", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "強 フラッシュチョップ", outbreak: "25", persistence: "3", rigidity: "21", hit: "2", guard: "-6", damage: "90", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "EX フラッシュチョップ", outbreak: "11", persistence: "5", rigidity: "19", hit: "D", guard: "-2", damage: "140", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "弱 フラッシュチョップ(VS2版)", outbreak: "12", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 フラッシュチョップ(VS2版)", outbreak: "18", persistence: "3", rigidity: "19", hit: "3", guard: "-4", damage: "80", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 フラッシュチョップ(VS2版)", outbreak: "25", persistence: "3", rigidity: "21", hit: "2", guard: "-6", damage: "100", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX フラッシュチョップ(VS2版)", outbreak: "11", persistence: "5", rigidity: "19", hit: "D", guard: "-2", damage: "140", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "弱 スラッシュエルボー", outbreak: "16", persistence: "5", rigidity: "22", hit: "3", guard: "-2", damage: "80", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "中 スラッシュエルボー", outbreak: "18", persistence: "5", rigidity: "22", hit: "D", guard: "-6", damage: "90", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "強 スラッシュエルボー", outbreak: "24", persistence: "5", rigidity: "19", hit: "D", guard: "-7", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "EX スラッシュエルボー",
     outbreak: "14",
@@ -455,45 +120,13 @@ const alex = [
     damage: "150",
     stan: "200",
     remarks:
-      "初段ヒット時のみ強制立ち効果\n                                                                                                                発生フレームは密着時のもの\n3F～攻撃判定発生までアーマー判定\nS※初段かつスウィングDDTでのみキャンセル可能\nVS※VS1のみキャンセル可能",
+      "初段ヒット時のみ強制立ち効果\n                                                                                                                発生フレームは密着時のもの\n3F～攻撃判定発生までアーマー判定",
+    type: "special",
     command: ""
   },
-  {
-    name: "弱 スラッシュエルボー(VS2版)",
-    outbreak: "16",
-    persistence: "5",
-    rigidity: "22",
-    hit: "3",
-    guard: "-2",
-    damage: "80",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 スラッシュエルボー(VS2版)",
-    outbreak: "18",
-    persistence: "5",
-    rigidity: "22",
-    hit: "D",
-    guard: "-6",
-    damage: "90",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 スラッシュエルボー(VS2版)",
-    outbreak: "24",
-    persistence: "5",
-    rigidity: "19",
-    hit: "D",
-    guard: "-7",
-    damage: "100",
-    stan: "100",
-    remarks: "",
-    command: ""
-  },
+  { name: "弱 スラッシュエルボー(VS2版)", outbreak: "16", persistence: "5", rigidity: "22", hit: "3", guard: "-2", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "中 スラッシュエルボー(VS2版)", outbreak: "18", persistence: "5", rigidity: "22", hit: "D", guard: "-6", damage: "90", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "強 スラッシュエルボー(VS2版)", outbreak: "24", persistence: "5", rigidity: "19", hit: "D", guard: "-7", damage: "100", stan: "100", remarks: "", type: "special", command: "" },
   {
     name: "EX スラッシュエルボー(VS2版)",
     outbreak: "14",
@@ -505,6 +138,7 @@ const alex = [
     stan: "150",
     remarks:
       "初段ヒット時のみ強制立ち効果\n                                                                                                                発生フレームは密着時のもの\n3F～攻撃判定発生までアーマー判定",
+    type: "special",
     command: ""
   },
   {
@@ -517,6 +151,7 @@ const alex = [
     damage: "130",
     stan: "200",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -529,6 +164,7 @@ const alex = [
     damage: "130",
     stan: "200",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -541,6 +177,7 @@ const alex = [
     damage: "130",
     stan: "200",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -553,6 +190,7 @@ const alex = [
     damage: "140",
     stan: "200",
     remarks: "しゃがみの相手にヒットしない\n                                                5F～13F 飛び道具無敵\n                5F～13F 空中判定の攻撃に対して無敵",
+    type: "special",
     command: ""
   },
   {
@@ -565,6 +203,7 @@ const alex = [
     damage: "130",
     stan: "150",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -577,6 +216,7 @@ const alex = [
     damage: "130",
     stan: "150",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -589,6 +229,7 @@ const alex = [
     damage: "130",
     stan: "150",
     remarks: "地上の相手にヒットしない",
+    type: "special",
     command: ""
   },
   {
@@ -601,44 +242,12 @@ const alex = [
     damage: "140",
     stan: "150",
     remarks: "しゃがみの相手にヒットしない\n                                                5F～13F 飛び道具無敵\n                5F～13F 空中判定の攻撃に対して無敵",
+    type: "special",
     command: ""
   },
-  {
-    name: "弱 エアスタンピート",
-    outbreak: "27",
-    persistence: "3",
-    rigidity: "17",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 エアスタンピート",
-    outbreak: "30",
-    persistence: "3",
-    rigidity: "21",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 エアスタンピート",
-    outbreak: "33",
-    persistence: "3",
-    rigidity: "22",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
+  { name: "弱 エアスタンピート", outbreak: "27", persistence: "3", rigidity: "17", hit: "D", guard: "-5", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "中 エアスタンピート", outbreak: "30", persistence: "3", rigidity: "21", hit: "D", guard: "-5", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "強 エアスタンピート", outbreak: "33", persistence: "3", rigidity: "22", hit: "D", guard: "-5", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
   {
     name: "EX エアスタンピート",
     outbreak: "29",
@@ -648,45 +257,13 @@ const alex = [
     guard: "2",
     damage: "140",
     stan: "200",
-    remarks: "1F～30F 飛び道具無敵\n                                                レバー左右で移動量を調整可能\nVS※VS1のみキャンセル可能",
+    remarks: "1F～30F 飛び道具無敵\n                                                レバー左右で移動量を調整可能",
+    type: "special",
     command: ""
   },
-  {
-    name: "弱 エアスタンピート(VS2版)",
-    outbreak: "27",
-    persistence: "3",
-    rigidity: "17",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 エアスタンピート(VS2版)",
-    outbreak: "30",
-    persistence: "3",
-    rigidity: "21",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 エアスタンピート(VS2版)",
-    outbreak: "33",
-    persistence: "3",
-    rigidity: "22",
-    hit: "D",
-    guard: "-5",
-    damage: "120",
-    stan: "150",
-    remarks: "",
-    command: ""
-  },
+  { name: "弱 エアスタンピート(VS2版)", outbreak: "27", persistence: "3", rigidity: "17", hit: "D", guard: "-5", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "中 エアスタンピート(VS2版)", outbreak: "30", persistence: "3", rigidity: "21", hit: "D", guard: "-5", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "強 エアスタンピート(VS2版)", outbreak: "33", persistence: "3", rigidity: "22", hit: "D", guard: "-5", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "EX エアスタンピート(VS2版)",
     outbreak: "29",
@@ -697,6 +274,7 @@ const alex = [
     damage: "140",
     stan: "150",
     remarks: "1F～30F 飛び道具無敵\n                                                レバー左右で移動量を調整可能",
+    type: "special",
     command: ""
   },
   {
@@ -709,6 +287,7 @@ const alex = [
     damage: "160",
     stan: "250",
     remarks: "レバー入力で前進距離を調整可能",
+    type: "special",
     command: ""
   },
   {
@@ -721,6 +300,7 @@ const alex = [
     damage: "160",
     stan: "250",
     remarks: "レバー入力で前進距離を調整可能",
+    type: "special",
     command: ""
   },
   {
@@ -733,6 +313,7 @@ const alex = [
     damage: "160",
     stan: "250",
     remarks: "レバー入力で前進距離を調整可能",
+    type: "special",
     command: ""
   },
   {
@@ -745,130 +326,61 @@ const alex = [
     damage: "180",
     stan: "300",
     remarks: "1F～4F 投げ無敵\n                                                レバー入力で前進距離を調整可能",
+    type: "special",
     command: ""
   },
+  { name: "弱 パワーボム", outbreak: "6", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "170", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "中 パワーボム", outbreak: "6", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "180", stan: "230", remarks: "", type: "special", command: "" },
+  { name: "強 パワーボム", outbreak: "6", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "190", stan: "250", remarks: "", type: "special", command: "" },
+  { name: "EX パワーボム", outbreak: "5", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "230", stan: "250", remarks: "", type: "special", command: "" },
+  { name: "パワードロップ", outbreak: "5", persistence: "2", rigidity: "52", hit: "D", guard: "", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "EX パワードロップ", outbreak: "5", persistence: "2", rigidity: "52", hit: "D", guard: "", damage: "180", stan: "250", remarks: "", type: "special", command: "" },
   {
-    name: "弱 パワーボム",
-    outbreak: "6",
-    persistence: "2",
-    rigidity: "60",
-    hit: "D",
-    guard: "",
-    damage: "170",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "中 パワーボム",
-    outbreak: "6",
-    persistence: "2",
-    rigidity: "60",
-    hit: "D",
-    guard: "",
-    damage: "180",
-    stan: "230",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "強 パワーボム",
-    outbreak: "6",
-    persistence: "2",
-    rigidity: "60",
-    hit: "D",
-    guard: "",
-    damage: "190",
-    stan: "250",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "EX パワーボム",
-    outbreak: "5",
-    persistence: "2",
-    rigidity: "60",
-    hit: "D",
-    guard: "",
-    damage: "230",
-    stan: "250",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "パワードロップ",
-    outbreak: "5",
-    persistence: "2",
-    rigidity: "52",
-    hit: "D",
-    guard: "",
-    damage: "120",
-    stan: "200",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "EX パワードロップ",
-    outbreak: "5",
-    persistence: "2",
-    rigidity: "52",
-    hit: "D",
-    guard: "",
-    damage: "180",
-    stan: "250",
-    remarks: "",
-    command: ""
-  },
-  {
-    name: "VスウィングDDT",
-    outbreak: "22",
-    persistence: "3",
-    rigidity: "41",
+    name: "Vスレッジハンマー(当身)",
+    outbreak: "2",
+    persistence: "12",
+    rigidity: "23",
     hit: "",
     guard: "",
-    damage: "180",
-    stan: "220",
+    damage: "",
+    stan: "",
     remarks:
-      "Vゲージタイマー500F消費\n                                                                                しゃがみの相手にヒットしない\n                                空中の相手にヒットしない\n                                                                投げ成立時に更にVゲージタイマー500F消費\n通常技・ラリアットからキャンセル可能\nキャンセル版は投げ判定の発生が15F（空中判定は6Fから）かつ、やられモーション中の相手も投げることが可能",
+      "Vゲージタイマー100F消費\n                                                                                                                                                                                当身成立時にVゲージタイマー200F回復\n当て身成立時、特殊ヒットストップ18が発生\nヒットストップ～効果中は再度スレッジハンマーでキャンセル可能",
+    type: "special",
     command: ""
   },
   {
-    name: "Vチョークスリーパー",
-    outbreak: "5",
+    name: "Vスレッジハンマー(攻撃)",
+    outbreak: "20",
     persistence: "2",
-    rigidity: "51",
-    hit: "",
-    guard: "",
-    damage: "120",
-    stan: "120",
+    rigidity: "29",
+    hit: "5(※-1)",
+    guard: "-12",
+    damage: "80",
+    stan: "150(※100)",
     remarks:
-      "Vゲージタイマー1000F消費\n                                                                                                                                                                                各種フラッシュチョップから派生可能",
+      "Vゲージタイマー400F消費\n                                                                                                                                                                                ※裏周りが発生しなかった際の数値",
+    type: "special",
     command: ""
   },
   {
-    name: "ヘビーハンマー",
-    outbreak: "1+4",
+    name: "Vスレッジハンマー(溜め攻撃)",
+    outbreak: "68",
     persistence: "2",
-    rigidity: "",
-    hit: "D",
-    guard: "",
-    damage: "340",
-    stan: "0",
-    remarks: "1F～6F 完全無敵",
+    rigidity: "25",
+    hit: "11(※D)",
+    guard: "GB+4",
+    damage: "130",
+    stan: "200(※150)",
+    remarks:
+      "Vゲージタイマー400F消費\n                                                                                                                                                                                Vゲージタイマーは攻撃発生時に消費\n※裏周りが発生しなかった際の数値",
+    type: "special",
     command: ""
   },
-  {
-    name: "ヘビーハンマー(初段ガードor空振り時)",
-    outbreak: "",
-    persistence: "5",
-    rigidity: "46",
-    hit: "D",
-    guard: "-25",
-    damage: "230",
-    stan: "0",
-    remarks: "",
-    command: ""
-  }
+  { name: "Vパワードロップ(スレッジハンマーVer)", outbreak: "5", persistence: "2", rigidity: "52", hit: "D", guard: "", damage: "140", stan: "250", remarks: "", type: "special", command: "" },
+  { name: "VEX パワードロップ(スレッジハンマーVer)", outbreak: "5", persistence: "2", rigidity: "52", hit: "D", guard: "", damage: "200", stan: "300", remarks: "", type: "special", command: "" },
+  { name: "ヘビーハンマー", outbreak: "1+4", persistence: "2", rigidity: "", hit: "D", guard: "", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", type: "ca", command: "" },
+  { name: "ヘビーハンマー(初段ガードor空振り時)", outbreak: "", persistence: "5", rigidity: "46", hit: "D", guard: "-25", damage: "230", stan: "0", remarks: "", type: "ca", command: "" }
 ];
 
 export { alex };

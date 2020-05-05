@@ -1,9 +1,9 @@
 const kage = [
-  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "-1", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "立ち強P", outbreak: "6", persistence: "2", rigidity: "23", hit: "-3", guard: "-5", damage: "80", stan: "120", remarks: "", command: "" },
-  { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "10", hit: "1", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
-  { name: "立ち中K", outbreak: "9", persistence: "3", rigidity: "17", hit: "3", guard: "-3", damage: "70", stan: "100", remarks: "", command: "" },
+  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "4", guard: "-1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強P", outbreak: "6", persistence: "2", rigidity: "23", hit: "-3", guard: "-5", damage: "80", stan: "120", remarks: "", type: "normal", command: "" },
+  { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "10", hit: "1", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中K", outbreak: "9", persistence: "3", rigidity: "17", hit: "3", guard: "-3", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
   {
     name: "立ち強K",
     outbreak: "11",
@@ -14,10 +14,11 @@ const kage = [
     damage: "80",
     stan: "150",
     remarks: "クラッシュカウンター対応(+23F)\n                                                                しゃがみの相手にヒットしない",
+    type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱P", outbreak: "3", persistence: "2", rigidity: "8", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中P", outbreak: "5", persistence: "3", rigidity: "15", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
+  { name: "しゃがみ弱P", outbreak: "3", persistence: "2", rigidity: "8", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "5", persistence: "3", rigidity: "15", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
   {
     name: "しゃがみ強P",
     outbreak: "8",
@@ -28,19 +29,20 @@ const kage = [
     damage: "80(※70)",
     stan: "120",
     remarks: "持続の1F～3F強制立ち効果\n持続の3F～6Fキャンセル不可\n※持続4F目以降",
+    type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "8", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "15", hit: "2", guard: "-2", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強K", outbreak: "8", persistence: "2", rigidity: "24", hit: "D", guard: "-11", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", command: "" },
-  { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中P", outbreak: "7", persistence: "3", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "ジャンプ強P", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中K", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ強K", outbreak: "10", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "頭蓋破殺", outbreak: "22", persistence: "3", rigidity: "22", hit: "1", guard: "-7", damage: "70", stan: "100", remarks: "", command: "→ + 中P" },
-  { name: "天魔空刃脚", outbreak: "16", persistence: "着地まで", rigidity: "着地後6", hit: "", guard: "", damage: "60", stan: "100", remarks: "", command: "(前ジャンプ中に) ↓ + 中K" },
+  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "8", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "15", hit: "2", guard: "-2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強K", outbreak: "8", persistence: "2", rigidity: "24", hit: "D", guard: "-11", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", type: "normal", command: "" },
+  { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "7", persistence: "3", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "ジャンプ強P", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ強K", outbreak: "10", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "頭蓋破殺", outbreak: "22", persistence: "3", rigidity: "22", hit: "1", guard: "-7", damage: "70", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
+  { name: "天魔空刃脚", outbreak: "16", persistence: "着地まで", rigidity: "着地後6", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "unique", command: "(前ジャンプ中に) ↓ + 中K" },
   {
     name: "鬼哭突き",
     outbreak: "9",
@@ -51,10 +53,35 @@ const kage = [
     damage: "80",
     stan: "150",
     remarks: "クラッシュカウンター対応(D)\n                                                強制立ち効果",
+    type: "unique",
     command: "→ + 強P"
   },
-  { name: "鬼哭裂斬", outbreak: "14", persistence: "2", rigidity: "26", hit: "D", guard: "-12", damage: "70", stan: "100", remarks: "しゃがみの相手にヒットしない", command: "→ + 強P ▶ 強K" },
-  { name: "赤影豪斬拳", outbreak: "27", persistence: "2", rigidity: "29", hit: "D", guard: "", damage: "60", stan: "100", remarks: "", command: "(VスキルⅡ選択時) → + 強P ▶ 強K ▶(ヒット時) 中P 中K" },
+  {
+    name: "鬼哭裂斬",
+    outbreak: "14",
+    persistence: "2",
+    rigidity: "26",
+    hit: "D",
+    guard: "-12",
+    damage: "70",
+    stan: "100",
+    remarks: "しゃがみの相手にヒットしない",
+    type: "unique",
+    command: "→ + 強P ▶ 強K"
+  },
+  {
+    name: "赤影豪斬拳",
+    outbreak: "27",
+    persistence: "2",
+    rigidity: "29",
+    hit: "D",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    type: "unique",
+    command: "(VスキルⅡ選択時) → + 強P ▶ 強K ▶(ヒット時) 中P 中K"
+  },
   {
     name: "V赤影豪斬拳",
     outbreak: "24",
@@ -65,10 +92,11 @@ const kage = [
     damage: "100",
     stan: "150",
     remarks: "",
+    type: "unique",
     command: "(VスキルⅡ選択時)(VトリガーⅡ発動中) → + 強P ▶ 強K ▶(ヒット時) 中P 中K"
   },
-  { name: "背負い投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "170", remarks: "", command: "" },
-  { name: "巴投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "150", stan: "170", remarks: "", command: "" },
+  { name: "背負い投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "170", remarks: "", type: "throw", command: "" },
+  { name: "巴投げ", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "150", stan: "170", remarks: "", type: "throw", command: "" },
   {
     name: "[VS1]穿波活殺",
     outbreak: "22",
@@ -80,6 +108,7 @@ const kage = [
     stan: "100",
     remarks:
       "クラッシュカウンター対応(D)\n                                                                                                                                                                5F～12F 上中段の打撃・飛び道具に対してアーマー判定",
+    type: "vsystem",
     command: ""
   },
   {
@@ -93,9 +122,10 @@ const kage = [
     stan: "150",
     remarks:
       "クラッシュカウンター対応(+24F)\n                                                                                                                                                                5F～40F 上中段の打撃・飛び道具に対してアーマー判定\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
+    type: "vsystem",
     command: ""
   },
-  { name: "[VS2]赤影拳", outbreak: "30", persistence: "2", rigidity: "23", hit: "1", guard: "-2", damage: "60", stan: "100", remarks: "レバー入力で前進距離を調整可能", command: "" },
+  { name: "[VS2]赤影拳", outbreak: "30", persistence: "2", rigidity: "23", hit: "1", guard: "-2", damage: "60", stan: "100", remarks: "レバー入力で前進距離を調整可能", type: "vsystem", command: "" },
   {
     name: "大逆無道",
     outbreak: "1",
@@ -107,6 +137,7 @@ const kage = [
     stan: "",
     remarks:
       "Vゲージタイマー+3000F\n                                                                                                                                                                                Vスキルの性能が強化され、専用技:阿修羅閃空が追加される",
+    type: "vsystem",
     command: ""
   },
   {
@@ -119,6 +150,7 @@ const kage = [
     damage: "100",
     stan: "100",
     remarks: "2F～9F 上中段の打撃・飛び道具に対してアーマー判定\n通常・特殊技からキャンセル可能",
+    type: "vsystem",
     command: ""
   },
   {
@@ -131,10 +163,11 @@ const kage = [
     damage: "120",
     stan: "150",
     remarks: "2F～29F 上中段の打撃・飛び道具に対してアーマー判定\n30F～38F 打撃・飛び道具に対してアーマー判定\n通常・特殊技からキャンセル可能",
+    type: "vsystem",
     command: ""
   },
-  { name: "V[VS2]赤影拳", outbreak: "24", persistence: "6", rigidity: "24", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "", command: "" },
-  { name: "V[VS2]赤影拳(空中)", outbreak: "24", persistence: "着地まで/着地後2", rigidity: "26", hit: "D", guard: "-4", damage: "130", stan: "150", remarks: "", command: "" },
+  { name: "V[VS2]赤影拳", outbreak: "24", persistence: "6", rigidity: "24", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "", type: "vsystem", command: "" },
+  { name: "V[VS2]赤影拳(空中)", outbreak: "24", persistence: "着地まで/着地後2", rigidity: "26", hit: "D", guard: "-4", damage: "130", stan: "150", remarks: "", type: "vsystem", command: "" },
   {
     name: "旋武撃",
     outbreak: "12",
@@ -145,16 +178,17 @@ const kage = [
     damage: "40",
     stan: "0",
     remarks: "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
-  { name: "波動拳", outbreak: "13", persistence: "5", rigidity: "23", hit: "2", guard: "-3", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "EX 波動拳", outbreak: "17", persistence: "6", rigidity: "全体53", hit: "膝", guard: "2", damage: "70", stan: "120", remarks: "", command: "" },
-  { name: "空中波動拳", outbreak: "10", persistence: "23", rigidity: "着地後7", hit: "", guard: "", damage: "90", stan: "100", remarks: "", command: "" },
-  { name: "EX 空中波動拳", outbreak: "9", persistence: "", rigidity: "着地後11", hit: "", guard: "", damage: "100", stan: "100", remarks: "", command: "" },
-  { name: "弱 灼熱波動拳", outbreak: "18", persistence: "", rigidity: "全体52", hit: "D", guard: "-6", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "中 灼熱波動拳", outbreak: "21", persistence: "", rigidity: "全体61", hit: "D", guard: "-6", damage: "70", stan: "120", remarks: "", command: "" },
-  { name: "強 灼熱波動拳", outbreak: "25", persistence: "", rigidity: "全体67", hit: "D", guard: "-6", damage: "80", stan: "150", remarks: "", command: "" },
-  { name: "EX 灼熱波動拳", outbreak: "21", persistence: "", rigidity: "全体55", hit: "D", guard: "6", damage: "120", stan: "150", remarks: "", command: "" },
+  { name: "波動拳", outbreak: "13", persistence: "5", rigidity: "23", hit: "2", guard: "-3", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX 波動拳", outbreak: "17", persistence: "6", rigidity: "全体53", hit: "膝", guard: "2", damage: "70", stan: "120", remarks: "", type: "special", command: "" },
+  { name: "空中波動拳", outbreak: "10", persistence: "23", rigidity: "着地後7", hit: "", guard: "", damage: "90", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX 空中波動拳", outbreak: "9", persistence: "", rigidity: "着地後11", hit: "", guard: "", damage: "100", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "弱 灼熱波動拳", outbreak: "18", persistence: "", rigidity: "全体52", hit: "D", guard: "-6", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 灼熱波動拳", outbreak: "21", persistence: "", rigidity: "全体61", hit: "D", guard: "-6", damage: "70", stan: "120", remarks: "", type: "special", command: "" },
+  { name: "強 灼熱波動拳", outbreak: "25", persistence: "", rigidity: "全体67", hit: "D", guard: "-6", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+  { name: "EX 灼熱波動拳", outbreak: "21", persistence: "", rigidity: "全体55", hit: "D", guard: "6", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "弱 昇龍拳",
     outbreak: "3",
@@ -165,6 +199,7 @@ const kage = [
     damage: "80",
     stan: "120",
     remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -177,6 +212,7 @@ const kage = [
     damage: "120",
     stan: "150",
     remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -189,6 +225,7 @@ const kage = [
     damage: "120",
     stan: "150",
     remarks: "4F～7F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -201,12 +238,13 @@ const kage = [
     damage: "160",
     stan: "200",
     remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)",
+    type: "special",
     command: ""
   },
-  { name: "弱 空靂刃", outbreak: "10", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "中 空靂刃", outbreak: "17", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "強 空靂刃", outbreak: "20", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "EX 空靂刃", outbreak: "16", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "80", stan: "120", remarks: "", command: "" },
+  { name: "弱 空靂刃", outbreak: "10", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "50", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 空靂刃", outbreak: "17", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "50", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 空靂刃", outbreak: "20", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX 空靂刃", outbreak: "16", persistence: "2", rigidity: "26", hit: "D", guard: "-10", damage: "80", stan: "120", remarks: "", type: "special", command: "" },
   {
     name: "空中空靂刃",
     outbreak: "10",
@@ -218,6 +256,7 @@ const kage = [
     stan: "150",
     remarks:
       "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1めくりヒット時は地上のけぞり\n※2空中版のめくり部分のパラメータ",
+    type: "special",
     command: ""
   },
   {
@@ -231,12 +270,13 @@ const kage = [
     stan: "150",
     remarks:
       "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1めくりヒット時は地上のけぞり\n※2空中版のめくり部分のパラメータ",
+    type: "special",
     command: ""
   },
-  { name: "弱 竜爪脚", outbreak: "15", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "中 竜爪脚", outbreak: "18", persistence: "3", rigidity: "18", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "強 竜爪脚", outbreak: "26", persistence: "3", rigidity: "16", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "EX 竜爪脚", outbreak: "20", persistence: "2", rigidity: "26", hit: "D", guard: "-8", damage: "120", stan: "200", remarks: "", command: "" },
+  { name: "弱 竜爪脚", outbreak: "15", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 竜爪脚", outbreak: "18", persistence: "3", rigidity: "18", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 竜爪脚", outbreak: "26", persistence: "3", rigidity: "16", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX 竜爪脚", outbreak: "20", persistence: "2", rigidity: "26", hit: "D", guard: "-8", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
   {
     name: "V阿修羅閃空(前方)",
     outbreak: "",
@@ -248,6 +288,7 @@ const kage = [
     stan: "",
     remarks:
       "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                各種通常技/特殊技/必殺技/穿波活殺からキャンセルで発動可能。キャンセル発動時はVタイマー1200F消費",
+    type: "special",
     command: ""
   },
   {
@@ -261,6 +302,7 @@ const kage = [
     stan: "",
     remarks:
       "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                各種通常技/特殊技/必殺技/穿波活殺からキャンセルで発動可能。キャンセル発動時はVタイマー1200F消費",
+    type: "special",
     command: ""
   },
   {
@@ -274,6 +316,7 @@ const kage = [
     stan: "",
     remarks:
       "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費",
+    type: "special",
     command: ""
   },
   {
@@ -287,6 +330,7 @@ const kage = [
     stan: "",
     remarks:
       "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費",
+    type: "special",
     command: ""
   },
   {
@@ -299,6 +343,7 @@ const kage = [
     damage: "280(※340)",
     stan: "0",
     remarks: "1F～7F 完全無敵\n                                                ※根元ヒット時",
+    type: "ca",
     command: ""
   }
 ];

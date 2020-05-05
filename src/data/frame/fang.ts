@@ -1,5 +1,5 @@
 const fang = [
-  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
+  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", type: "normal", command: "" },
   {
     name: "立ち中P",
     outbreak: "7",
@@ -10,6 +10,7 @@ const fang = [
     damage: "60",
     stan: "100",
     remarks: "2段目は空中の相手にヒットしない\n                                                                S※CA※V※1段目のみ可能\nVS※V二升毒のみキャンセル可能",
+    type: "normal",
     command: ""
   },
   {
@@ -23,9 +24,10 @@ const fang = [
     stan: "150",
     remarks:
       "クラッシュカウンター対応(+16F)\n                                                                                                                                                                VS※V二升毒のみキャンセル可能",
+    type: "normal",
     command: ""
   },
-  { name: "立ち弱K", outbreak: "6", persistence: "3", rigidity: "7", hit: "5", guard: "3", damage: "40", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
+  { name: "立ち弱K", outbreak: "6", persistence: "3", rigidity: "7", hit: "5", guard: "3", damage: "40", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", type: "normal", command: "" },
   {
     name: "立ち中K",
     outbreak: "5",
@@ -37,13 +39,26 @@ const fang = [
     stan: "100(※100)",
     remarks:
       "2段目はしゃがみの相手にヒットしない\n                                1段目は空中の相手にヒットしない\n                                                                ※2段目空中ヒット時\nVS※V二升毒のみキャンセル可能",
+    type: "normal",
     command: ""
   },
-  { name: "立ち強K", outbreak: "12", persistence: "4", rigidity: "16", hit: "6", guard: "1", damage: "80", stan: "150", remarks: "S※CA※1段目のみ可能\nVS※V二升毒のみキャンセル可能", command: "" },
-  { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "8", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
-  { name: "しゃがみ中P", outbreak: "6", persistence: "2", rigidity: "16", hit: "1", guard: "-2", damage: "50", stan: "100", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
-  { name: "しゃがみ強P", outbreak: "9", persistence: "5", rigidity: "19", hit: "D", guard: "-6", damage: "90", stan: "150", remarks: "VS※V二升毒のみキャンセル可能", command: "" },
-  { name: "しゃがみ弱K", outbreak: "5", persistence: "3", rigidity: "7", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", command: "" },
+  {
+    name: "立ち強K",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "16",
+    hit: "6",
+    guard: "1",
+    damage: "80",
+    stan: "150",
+    remarks: "S※CA※1段目のみ可能\nVS※V二升毒のみキャンセル可能",
+    type: "normal",
+    command: ""
+  },
+  { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "8", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "VS※V二升毒のみキャンセル可能", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "6", persistence: "2", rigidity: "16", hit: "1", guard: "-2", damage: "50", stan: "100", remarks: "VS※V二升毒のみキャンセル可能", type: "normal", command: "" },
+  { name: "しゃがみ強P", outbreak: "9", persistence: "5", rigidity: "19", hit: "D", guard: "-6", damage: "90", stan: "150", remarks: "VS※V二升毒のみキャンセル可能", type: "normal", command: "" },
+  { name: "しゃがみ弱K", outbreak: "5", persistence: "3", rigidity: "7", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
   {
     name: "しゃがみ中K",
     outbreak: "8",
@@ -54,6 +69,7 @@ const fang = [
     damage: "60",
     stan: "100(※100)",
     remarks: "2段目は空中の相手にヒットしない\n                                                                S※CA※1段目のみ可能\n※1段目空中ヒット時\nVS※V二升毒のみキャンセル可能",
+    type: "normal",
     command: ""
   },
   {
@@ -67,10 +83,11 @@ const fang = [
     stan: "150",
     remarks:
       "クラッシュカウンター対応 (D)\n                                                                                                                                                                V※1段目のみ可能",
+    type: "normal",
     command: ""
   },
-  { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "", command: "" },
-  { name: "ジャンプ中P", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
+  { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
   {
     name: "ジャンプ強P",
     outbreak: "8",
@@ -81,13 +98,14 @@ const fang = [
     damage: "90",
     stan: "150",
     remarks: "垂直ジャンプ中に発動した場合のみレバー入力で前方に移動可能",
+    type: "jump",
     command: ""
   },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ中K", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", command: "" },
-  { name: "前ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "めくり性能", command: "" },
-  { name: "垂直・後ろジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "", command: "" },
-  { name: "二連咬", outbreak: "12", persistence: "4", rigidity: "21", hit: "0", guard: "-5", damage: "100", stan: "200", remarks: "S※CA※V※1段目のみ可能", command: "↘ + 強P" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+  { name: "前ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "垂直・後ろジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "二連咬", outbreak: "12", persistence: "4", rigidity: "21", hit: "0", guard: "-5", damage: "100", stan: "200", remarks: "S※CA※V※1段目のみ可能", type: "unique", command: "↘ + 強P" },
   {
     name: "潜伏臥(潜伏)",
     outbreak: "",
@@ -98,11 +116,12 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "レバーを下方向に入力し続ける事で最大86Fまで動作を延長可能\nS※22F～二死球でキャンセル可能",
+    type: "unique",
     command: "↓ + 弱P"
   },
-  { name: "潜伏臥(攻撃)", outbreak: "10", persistence: "4", rigidity: "14", hit: "6", guard: "2", damage: "70", stan: "100", remarks: "", command: "↓ + 弱P ▶" },
-  { name: "死悶蹴", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
-  { name: "驚膝撃", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
+  { name: "潜伏臥(攻撃)", outbreak: "10", persistence: "4", rigidity: "14", hit: "6", guard: "2", damage: "70", stan: "100", remarks: "", type: "unique", command: "↓ + 弱P ▶" },
+  { name: "死悶蹴", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
+  { name: "驚膝撃", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
   {
     name: "[VS1]二升毒",
     outbreak: "22",
@@ -113,6 +132,7 @@ const fang = [
     damage: "毒50",
     stan: "",
     remarks: "空中の相手にヒットしない\n                                                                ヒット時毒効果付与",
+    type: "vsystem",
     command: ""
   },
   {
@@ -126,11 +146,24 @@ const fang = [
     stan: "50",
     remarks:
       "Vゲージタイマー250F消費\n                                                                                                                                                                                ヒット時毒効果付与\n必殺技キャンセル可能な通常技からキャンセル発動可能",
+    type: "vsystem",
     command: ""
   },
-  { name: "[VS2]双毒舞", outbreak: "3", persistence: "10", rigidity: "54", hit: "", guard: "", damage: "0", stan: "0", remarks: "打撃属性の攻撃を当身可能\n動作中常に被カウンター判定", command: "" },
-  { name: "[VS2]双毒舞(当て身成立時)", outbreak: "3", persistence: "8", rigidity: "62", hit: "D", guard: "-42", damage: "60+毒50", stan: "120", remarks: "", command: "" },
-  { name: "V[VS2]双毒舞(当て身成立時)", outbreak: "3", persistence: "8", rigidity: "62", hit: "D", guard: "-42", damage: "80+毒50", stan: "150", remarks: "", command: "" },
+  {
+    name: "[VS2]双毒舞",
+    outbreak: "3",
+    persistence: "10",
+    rigidity: "54",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "打撃属性の攻撃を当身可能\n動作中常に被カウンター判定",
+    type: "vsystem",
+    command: ""
+  },
+  { name: "[VS2]双毒舞(当て身成立時)", outbreak: "3", persistence: "8", rigidity: "62", hit: "D", guard: "-42", damage: "60+毒50", stan: "120", remarks: "", type: "vsystem", command: "" },
+  { name: "V[VS2]双毒舞(当て身成立時)", outbreak: "3", persistence: "8", rigidity: "62", hit: "D", guard: "-42", damage: "80+毒50", stan: "150", remarks: "", type: "vsystem", command: "" },
   {
     name: "毒濃霧",
     outbreak: "1",
@@ -142,6 +175,7 @@ const fang = [
     stan: "",
     remarks:
       "Vゲージタイマー+900F\n                                                                                                                                                                                発動中、接触すると毒状態となるフィールドを周囲に展開\n必殺技キャンセル発動時に限り、タメ必殺技のタメ時間が不要に",
+    type: "vsystem",
     command: ""
   },
   {
@@ -154,6 +188,7 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
   {
@@ -166,6 +201,7 @@ const fang = [
     damage: "40+毒50",
     stan: "100",
     remarks: "ヒット時毒効果付与\nS※EX二間脚でのみキャンセル可能",
+    type: "special",
     command: ""
   },
   {
@@ -178,11 +214,12 @@ const fang = [
     damage: "90+毒50",
     stan: "100",
     remarks: "ヒット時毒効果付与\nS※二間脚でのみキャンセル可能",
+    type: "special",
     command: ""
   },
-  { name: "弱 両鞭打", outbreak: "14", persistence: "3", rigidity: "29", hit: "D", guard: "-9", damage: "60+毒50", stan: "200", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "中 両鞭打", outbreak: "19", persistence: "80", rigidity: "全体46", hit: "1", guard: "-8", damage: "40+毒50", stan: "100", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "強 両鞭打", outbreak: "23", persistence: "120", rigidity: "全体52", hit: "-1", guard: "-10", damage: "40+毒50", stan: "100", remarks: "ヒット時毒効果付与", command: "" },
+  { name: "弱 両鞭打", outbreak: "14", persistence: "3", rigidity: "29", hit: "D", guard: "-9", damage: "60+毒50", stan: "200", remarks: "ヒット時毒効果付与", type: "special", command: "" },
+  { name: "中 両鞭打", outbreak: "19", persistence: "80", rigidity: "全体46", hit: "1", guard: "-8", damage: "40+毒50", stan: "100", remarks: "ヒット時毒効果付与", type: "special", command: "" },
+  { name: "強 両鞭打", outbreak: "23", persistence: "120", rigidity: "全体52", hit: "-1", guard: "-10", damage: "40+毒50", stan: "100", remarks: "ヒット時毒効果付与", type: "special", command: "" },
   {
     name: "EX 両鞭打",
     outbreak: "15",
@@ -193,18 +230,55 @@ const fang = [
     damage: "60+毒50",
     stan: "200",
     remarks: "ヒット時毒効果付与\nS※空中部分を二凶襲でキャンセル可能",
+    type: "special",
     command: ""
   },
-  { name: "EX 両鞭打(設置弾)", outbreak: "", persistence: "220", rigidity: "", hit: "", guard: "", damage: "40+毒50", stan: "44", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "弱 双頭蛇", outbreak: "13", persistence: "8", rigidity: "23", hit: "0", guard: "-11", damage: "70+毒50", stan: "200", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "中 双頭蛇", outbreak: "16", persistence: "8", rigidity: "22", hit: "D/-1", guard: "-9", damage: "80+毒50", stan: "200", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "強 双頭蛇", outbreak: "21", persistence: "8", rigidity: "23", hit: "D/-2", guard: "-10", damage: "100+毒50", stan: "200", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "EX 双頭蛇", outbreak: "14", persistence: "8", rigidity: "18", hit: "D", guard: "-2", damage: "100+毒50", stan: "200", remarks: "ヒット時毒効果付与", command: "" },
-  { name: "弱 二間脚", outbreak: "", persistence: "", rigidity: "全体29", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", command: "" },
-  { name: "中 二間脚", outbreak: "", persistence: "", rigidity: "全体29", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", command: "" },
-  { name: "強 二間脚", outbreak: "", persistence: "", rigidity: "全体31", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", command: "" },
-  { name: "EX 二間脚", outbreak: "", persistence: "", rigidity: "全体33", hit: "", guard: "", damage: "", stan: "", remarks: "25F～30F 飛び道具無敵\n1F～24F 打撃&飛び道具無敵", command: "" },
-  { name: "二凶襲", outbreak: "", persistence: "", rigidity: "着地後9", hit: "", guard: "", damage: "", stan: "", remarks: "", command: "" },
+  { name: "EX 両鞭打(設置弾)", outbreak: "", persistence: "220", rigidity: "", hit: "", guard: "", damage: "40+毒50", stan: "44", remarks: "ヒット時毒効果付与", type: "special", command: "" },
+  { name: "弱 双頭蛇", outbreak: "13", persistence: "8", rigidity: "23", hit: "0", guard: "-11", damage: "70+毒50", stan: "200", remarks: "ヒット時毒効果付与", type: "special", command: "" },
+  {
+    name: "中 双頭蛇",
+    outbreak: "16",
+    persistence: "8",
+    rigidity: "23(※22)",
+    hit: "D/-1",
+    guard: "-9",
+    damage: "80+毒50",
+    stan: "200",
+    remarks: "ヒット時毒効果付与\n※1段目ヒット時",
+    type: "special",
+    command: ""
+  },
+  {
+    name: "強 双頭蛇",
+    outbreak: "21",
+    persistence: "8",
+    rigidity: "24(※23)",
+    hit: "D/-2",
+    guard: "-10",
+    damage: "100+毒50",
+    stan: "200",
+    remarks: "ヒット時毒効果付与\n※1段目ヒット時",
+    type: "special",
+    command: ""
+  },
+  { name: "EX 双頭蛇", outbreak: "14", persistence: "8", rigidity: "18", hit: "D", guard: "-2", damage: "100+毒50", stan: "200", remarks: "ヒット時毒効果付与", type: "special", command: "" },
+  { name: "弱 二間脚", outbreak: "", persistence: "", rigidity: "全体29", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", type: "special", command: "" },
+  { name: "中 二間脚", outbreak: "", persistence: "", rigidity: "全体29", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", type: "special", command: "" },
+  { name: "強 二間脚", outbreak: "", persistence: "", rigidity: "全体31", hit: "", guard: "", damage: "", stan: "", remarks: "6F～28F 飛び道具無敵", type: "special", command: "" },
+  {
+    name: "EX 二間脚",
+    outbreak: "",
+    persistence: "",
+    rigidity: "全体33",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "25F～30F 飛び道具無敵\n1F～24F 打撃&飛び道具無敵",
+    type: "special",
+    command: ""
+  },
+  { name: "二凶襲", outbreak: "", persistence: "", rigidity: "着地後9", hit: "", guard: "", damage: "", stan: "", remarks: "", type: "special", command: "" },
   {
     name: "死屍累々",
     outbreak: "10",
@@ -215,7 +289,9 @@ const fang = [
     damage: "292+毒60",
     stan: "0",
     remarks: "1F～25F 完全無敵\n                                                相殺判定は弾部分のみ",
+    type: "ca",
     command: ""
   }
 ];
+
 export { fang };
