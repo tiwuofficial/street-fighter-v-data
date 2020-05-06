@@ -89,9 +89,11 @@ class default_1 {
      */
     sortedFrameForEach(callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
         let frames = this.frame.slice();
-        if (filterTypes.length) {
+        // [""] が来たときに消すため
+        const trimFilterTypes = filterTypes.filter(Boolean);
+        if (trimFilterTypes.length) {
             frames = frames.filter(frame => {
-                return filterTypes.includes(frame.type);
+                return trimFilterTypes.includes(frame.type);
             });
         }
         if (sortKey) {

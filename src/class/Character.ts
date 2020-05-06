@@ -103,9 +103,12 @@ export default class {
   sortedFrameForEach(callback: (frame: Frame, character: this) => void, filterTypes = [], sortKey = "", sortOrder = "asc"): void {
     let frames = this.frame.slice();
 
-    if (filterTypes.length) {
+    // [""] が来たときに消すため
+    const trimFilterTypes = filterTypes.filter(Boolean);
+
+    if (trimFilterTypes.length) {
       frames = frames.filter(frame => {
-        return filterTypes.includes(frame.type);
+        return trimFilterTypes.includes(frame.type);
       });
     }
 
