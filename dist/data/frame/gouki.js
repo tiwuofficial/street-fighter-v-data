@@ -1,22 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const gouki = [
-    { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-    { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "14", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", command: "" },
-    {
-        name: "立ち強P",
-        outbreak: "8",
-        persistence: "3",
-        rigidity: "19",
-        hit: "2",
-        guard: "-5",
-        damage: "80",
-        stan: "150",
-        remarks: "クラッシュカウンター対応 (D)\n                                                                                                                                                                V必殺技でキャンセル可能",
-        command: ""
-    },
-    { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "10", hit: "2", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "立ち中K", outbreak: "5", persistence: "2", rigidity: "18", hit: "4", guard: "-4", damage: "60", stan: "100", remarks: "強制立ち効果", command: "" },
+    { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "14", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "立ち強P", outbreak: "8", persistence: "3", rigidity: "19", hit: "2", guard: "-5", damage: "80", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+    { name: "立ち弱K", outbreak: "4", persistence: "3", rigidity: "10", hit: "2", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中K", outbreak: "5", persistence: "2", rigidity: "18", hit: "4", guard: "-4", damage: "60", stan: "100", remarks: "強制立ち効果", type: "normal", command: "" },
     {
         name: "立ち強K",
         outbreak: "11",
@@ -26,11 +15,12 @@ const gouki = [
         guard: "-2",
         damage: "80",
         stan: "120",
-        remarks: "クラッシュカウンター対応(+10F)\n                                                                しゃがみの相手にヒットしない\n                                                                                                V必殺技でキャンセル可能",
+        remarks: "クラッシュカウンター対応(+10F)\n                                                                しゃがみの相手にヒットしない",
+        type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱P", outbreak: "4", persistence: "2", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-    { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
+    { name: "しゃがみ弱P", outbreak: "4", persistence: "2", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "しゃがみ強P",
         outbreak: "10",
@@ -40,29 +30,19 @@ const gouki = [
         guard: "3",
         damage: "80",
         stan: "150",
-        remarks: "クラッシュカウンター対応 (膝)\n                                                強制立ち効果\n                                                                                                                V必殺技でキャンセル可能",
+        remarks: "クラッシュカウンター対応 (膝)\n                                                強制立ち効果",
+        type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", command: "" },
-    { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "14", hit: "3", guard: "-1", damage: "50", stan: "100", remarks: "", command: "" },
-    {
-        name: "しゃがみ強K",
-        outbreak: "7",
-        persistence: "2",
-        rigidity: "27",
-        hit: "D",
-        guard: "-15",
-        damage: "90",
-        stan: "150",
-        remarks: "クラッシュカウンター対応(D)\n                                                                                                                                                                V必殺技でキャンセル可能",
-        command: ""
-    },
-    { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "50", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-    { name: "ジャンプ強P", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", command: "" },
-    { name: "ジャンプ中K", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-    { name: "ジャンプ強K", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
+    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "14", hit: "3", guard: "-1", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強K", outbreak: "7", persistence: "2", rigidity: "27", hit: "D", guard: "-15", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+    { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "50", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+    { name: "ジャンプ強P", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ中K", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ強K", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
     {
         name: "天魔空刃脚",
         outbreak: "16",
@@ -73,15 +53,16 @@ const gouki = [
         damage: "60",
         stan: "100",
         remarks: "硬直差はリュウに対し最頂点で当てたもの",
+        type: "unique",
         command: "(前ジャンプ中に) ↓ + 中K"
     },
-    { name: "頭蓋破殺", outbreak: "23", persistence: "3", rigidity: "21", hit: "0", guard: "-7", damage: "70", stan: "100", remarks: "", command: "→ + 中P" },
-    { name: "天破", outbreak: "6", persistence: "7", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "200", remarks: "空中ヒット、2段目ヒットで浮き", command: "← + 強P" },
-    { name: "赤星拳", outbreak: "32", persistence: "7", rigidity: "16", hit: "5", guard: "-2", damage: "60", stan: "100", remarks: "ダウン状態にヒットさせられる", command: "→ + 強P" },
-    { name: "金剛拳", outbreak: "18", persistence: "8", rigidity: "22", hit: "D", guard: "-12", damage: "60", stan: "80", remarks: "", command: "強P ▶ 強P" },
-    { name: "鬼哭連斬", outbreak: "15", persistence: "2", rigidity: "16", hit: "7", guard: "0", damage: "50", stan: "70", remarks: "しゃがみの相手にヒットしない", command: "強K ▶ 強K" },
-    { name: "豪衝破", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "170", remarks: "", command: "" },
-    { name: "朱裂斬", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "120", stan: "170", remarks: "", command: "" },
+    { name: "頭蓋破殺", outbreak: "23", persistence: "3", rigidity: "21", hit: "0", guard: "-7", damage: "70", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
+    { name: "天破", outbreak: "6", persistence: "7", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "200", remarks: "空中ヒット、2段目ヒットで浮き", type: "unique", command: "← + 強P" },
+    { name: "赤星拳", outbreak: "32", persistence: "7", rigidity: "16", hit: "5", guard: "-2", damage: "60", stan: "100", remarks: "ダウン状態にヒットさせられる", type: "unique", command: "→ + 強P" },
+    { name: "金剛拳", outbreak: "18", persistence: "8", rigidity: "22", hit: "D", guard: "-12", damage: "60", stan: "80", remarks: "", type: "unique", command: "強P ▶ 強P" },
+    { name: "鬼哭連斬", outbreak: "15", persistence: "2", rigidity: "16", hit: "7", guard: "0", damage: "50", stan: "70", remarks: "しゃがみの相手にヒットしない", type: "unique", command: "強K ▶ 強K" },
+    { name: "豪衝破", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "170", remarks: "", type: "throw", command: "" },
+    { name: "朱裂斬", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "120", stan: "170", remarks: "", type: "throw", command: "" },
     {
         name: "[VS1]羅漢",
         outbreak: "3",
@@ -92,6 +73,7 @@ const gouki = [
         damage: "",
         stan: "",
         remarks: "立ち/空中状態の攻撃と飛び道具を当て身可能\n動作中常に被カウンター判定",
+        type: "vsystem",
         command: ""
     },
     {
@@ -104,6 +86,7 @@ const gouki = [
         damage: "",
         stan: "",
         remarks: "しゃがみ状態の攻撃と飛び道具を当て身可能\n動作中常に被カウンター判定",
+        type: "vsystem",
         command: ""
     },
     {
@@ -115,7 +98,8 @@ const gouki = [
         guard: "-10",
         damage: "70",
         stan: "100",
-        remarks: "立ちしゃがみでパラメータは同じ\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "立ちしゃがみでパラメータは同じ\nCA※動作中瞬獄殺でキャンセル可能",
+        type: "vsystem",
         command: ""
     },
     {
@@ -127,22 +111,25 @@ const gouki = [
         guard: "-13",
         damage: "60",
         stan: "100",
-        remarks: "しゃがみの相手にヒットしない\n                                                                                                立ちしゃがみでパラメータは同じ\nS※CA※VS※ヒット時のみ可能",
+        remarks: "しゃがみの相手にヒットしない\n                                                                                                立ちしゃがみでパラメータは同じ\nS※CA※VS※ヒット時のみ可能\nCA※動作中瞬獄殺でキャンセル可能",
+        type: "vsystem",
         command: ""
     },
     {
         name: "[VS2]気合",
         outbreak: "17 (※123) (※217)",
         persistence: "3(※12)(※26)",
-        rigidity: "41",
+        rigidity: "41(※231)",
         hit: "D",
         guard: "-13",
-        damage: "80 (※1100)",
-        stan: "80 (※1100)",
-        remarks: "※1頭上の炎部分 Vゲージ増加量も0/120に変化\n※2飛び道具相殺時  Vゲージ増加量も0/50に変化\n溜める事が可能で、43F以上ホールドし続けると1FごとにVゲージ1増加(増加量の最大は300)",
+        damage: "50 (※180)",
+        stan: "50 (※180)",
+        remarks: "※1頭上の炎部分 Vゲージ増加量も0/90に変化\n※2飛び道具相殺時  Vゲージ増加量も0/50に変化\n溜める事が可能で、43F以上ホールドし続けると1FごとにVゲージ1増加(増加量の最大は300)\nホールド中、動作の30～40Fに赤鴉豪焦破を入力すると、強化版が発動",
+        type: "vsystem",
         command: ""
     },
-    { name: "[VS2]赤鴉豪焦破", outbreak: "18", persistence: "", rigidity: "全体55", hit: "D", guard: "-6", damage: "70", stan: "100", remarks: "強度で弾速変化", command: "" },
+    { name: "[VS2]赤鴉豪焦破", outbreak: "18", persistence: "", rigidity: "全体55", hit: "D", guard: "-6", damage: "70", stan: "100", remarks: "強度で弾速変化", type: "vsystem", command: "" },
+    { name: "[VS2]赤鴉豪焦破(強化版)", outbreak: "13", persistence: "", rigidity: "全体50", hit: "D", guard: "-4", damage: "80", stan: "100", remarks: "強度で弾速変化", type: "vsystem", command: "" },
     {
         name: "[VS2]EX 赤鴉豪焦破",
         outbreak: "21",
@@ -153,10 +140,24 @@ const gouki = [
         damage: "100 (※+21)",
         stan: "150",
         remarks: "※出始め近くに居ると燃焼ダメージが入る",
+        type: "vsystem",
         command: ""
     },
     {
-        name: "眥裂髪指",
+        name: "[VS2]EX 赤鴉豪焦破(強化版)",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "全体55",
+        hit: "D",
+        guard: "11",
+        damage: "110 (※+13)",
+        stan: "150",
+        remarks: "※出始め近くに居ると燃焼ダメージが入る",
+        type: "vsystem",
+        command: ""
+    },
+    {
+        name: "怒髪衝天",
         outbreak: "1",
         persistence: "",
         rigidity: "5",
@@ -164,7 +165,8 @@ const gouki = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中、一部の通常技・必殺技・EX必殺技・V必殺技からV必殺技へキャンセル可能に",
+        remarks: "Vゲージタイマー+4000F\n                                                                                                                                                                                豪波動拳・斬空波動拳・豪昇龍拳がタイマー消費の専用技になり、EX版が使えなくなる\n(EX百鬼襲の派生を除く)",
+        type: "vsystem",
         command: ""
     },
     {
@@ -177,6 +179,7 @@ const gouki = [
         damage: "60",
         stan: "0",
         remarks: "1F～20F 打撃&飛び道具無敵\n                                                発動時スタン値200回復\n※ヒット時",
+        type: "vsystem",
         command: ""
     },
     {
@@ -188,7 +191,8 @@ const gouki = [
         guard: "-6",
         damage: "60",
         stan: "100(※120)",
-        remarks: "空振り時Vトリガーキャンセル不可\n出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nV※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -200,7 +204,8 @@ const gouki = [
         guard: "-6",
         damage: "60",
         stan: "100(※120)",
-        remarks: "空振り時Vトリガーキャンセル不可\n出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nV※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -212,7 +217,8 @@ const gouki = [
         guard: "-6",
         damage: "60",
         stan: "100(※120)",
-        remarks: "空振り時Vトリガーキャンセル不可\n出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "出がかりと弾消滅時以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒットおよび弾消滅時\n※2弾消滅時の爆発ヒット時のみゲージ増加10\nV※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -224,7 +230,8 @@ const gouki = [
         guard: "1",
         damage: "100",
         stan: "150(※170)",
-        remarks: "空振り時Vトリガーキャンセル不可\n出がかり以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒット時\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "出がかり以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n※根元ヒット時\nV※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -236,7 +243,8 @@ const gouki = [
         guard: "-6",
         damage: "70",
         stan: "120",
-        remarks: "空振り時Vトリガーキャンセル不可\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "V※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -248,7 +256,8 @@ const gouki = [
         guard: "-4",
         damage: "80",
         stan: "120",
-        remarks: "空振り時Vトリガーキャンセル不可\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "V※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -260,7 +269,8 @@ const gouki = [
         guard: "-4",
         damage: "100",
         stan: "150",
-        remarks: "空振り時Vトリガーキャンセル不可\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "V※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -272,7 +282,8 @@ const gouki = [
         guard: "8",
         damage: "100(※+21)",
         stan: "150",
-        remarks: "空振り時Vトリガーキャンセル不可\n※出始め近くに居ると燃焼ダメージが入る\nS※Vトリガー発動中、他のV必殺技でキャンセル可能",
+        remarks: "※出始め近くに居ると燃焼ダメージが入る\nV※空振り時Vトリガーキャンセル不可",
+        type: "special",
         command: ""
     },
     {
@@ -285,10 +296,11 @@ const gouki = [
         damage: "40",
         stan: "50",
         remarks: "強度差で射出角度と速度が変わる\n昇りと下りで出した時の挙動が変わる\n※昇り発動時",
+        type: "special",
         command: ""
     },
-    { name: "EX斬空波動拳(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "EX斬空波動拳(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "150", stan: "150", remarks: "", command: "" },
+    { name: "EX斬空波動拳(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "EX斬空波動拳(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "150", stan: "150", remarks: "", type: "special", command: "" },
     {
         name: "弱 豪昇龍拳",
         outbreak: "3",
@@ -298,7 +310,8 @@ const gouki = [
         guard: "-28",
         damage: "100(※60)",
         stan: "150(※100)",
-        remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続3F目以降\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続3F目以降",
+        type: "special",
         command: ""
     },
     {
@@ -310,7 +323,8 @@ const gouki = [
         guard: "-30",
         damage: "120",
         stan: "150",
-        remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nCA※V※1段目のみ可能\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nCA※V※1段目のみ可能",
+        type: "special",
         command: ""
     },
     {
@@ -322,7 +336,8 @@ const gouki = [
         guard: "-33",
         damage: "120",
         stan: "150",
-        remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能",
+        type: "special",
         command: ""
     },
     {
@@ -334,7 +349,8 @@ const gouki = [
         guard: "-44",
         damage: "160",
         stan: "200",
-        remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nV※1、2段目のみ可能\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nV※1、2段目のみ可能",
+        type: "special",
         command: ""
     },
     {
@@ -346,7 +362,8 @@ const gouki = [
         guard: "-11",
         damage: "50",
         stan: "80",
-        remarks: "しゃがみの相手にヒットしない\n                                                                                                ※ヒット時\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "しゃがみの相手にヒットしない\n                                                                                                ※ヒット時",
+        type: "special",
         command: ""
     },
     {
@@ -358,7 +375,8 @@ const gouki = [
         guard: "-7",
         damage: "70(※80)",
         stan: "120(※120)",
-        remarks: "初段が当たらないとコンボカウントが大幅に上がる\nCA※V※1段目のみ可能\n※初段空振り時\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "初段が当たらないとコンボカウントが大幅に上がる\nCA※V※1段目のみ可能\n※初段空振り時",
+        type: "special",
         command: ""
     },
     {
@@ -370,7 +388,8 @@ const gouki = [
         guard: "-39",
         damage: "100",
         stan: "200",
-        remarks: "2段目以降しゃがみの相手にヒットしない\n                                                                                                CA※V※1段目のみ可能\n※ヒット時\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "2段目以降しゃがみの相手にヒットしない\n                                                                                                CA※V※1段目のみ可能\n※ヒット時",
+        type: "special",
         command: ""
     },
     {
@@ -382,7 +401,8 @@ const gouki = [
         guard: "-19",
         damage: "120",
         stan: "150",
-        remarks: "S※ヒット時のみ着地後豪昇龍拳でキャンセルが可能\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "S※ヒット時のみ着地後豪昇龍拳でキャンセルが可能",
+        type: "special",
         command: ""
     },
     {
@@ -394,23 +414,13 @@ const gouki = [
         guard: "",
         damage: "70",
         stan: "100",
-        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                強度の差でヒット時に相手が吹き飛ぶ距離が変わる\n昇りと下りで出した時の挙動が変わる\nS※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
+        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                強度の差でヒット時に相手が吹き飛ぶ距離が変わる\n昇りと下りで出した時の挙動が変わる",
+        type: "special",
         command: ""
     },
-    {
-        name: "EX空中竜巻斬空脚",
-        outbreak: "8",
-        persistence: "10",
-        rigidity: "着地後9",
-        hit: "D",
-        guard: "",
-        damage: "160",
-        stan: "250",
-        remarks: "めくり性能\n                                                                                                                                                S※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
-        command: ""
-    },
-    { name: "阿修羅閃空(前方)", outbreak: "", persistence: "", rigidity: "全体61", hit: "", guard: "", damage: "", stan: "", remarks: "1F～50F 打撃&飛び道具無敵", command: "" },
-    { name: "阿修羅閃空(後方)", outbreak: "", persistence: "", rigidity: "全体61", hit: "", guard: "", damage: "", stan: "", remarks: "1F～50F 打撃&飛び道具無敵", command: "" },
+    { name: "EX空中竜巻斬空脚", outbreak: "8", persistence: "10", rigidity: "着地後9", hit: "D", guard: "", damage: "160", stan: "250", remarks: "めくり性能", type: "special", command: "" },
+    { name: "阿修羅閃空(前方)", outbreak: "", persistence: "", rigidity: "全体61", hit: "", guard: "", damage: "", stan: "", remarks: "1F～50F 打撃&飛び道具無敵", type: "special", command: "" },
+    { name: "阿修羅閃空(後方)", outbreak: "", persistence: "", rigidity: "全体61", hit: "", guard: "", damage: "", stan: "", remarks: "1F～50F 打撃&飛び道具無敵", type: "special", command: "" },
     {
         name: "弱 百鬼襲",
         outbreak: "",
@@ -420,7 +430,8 @@ const gouki = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻へ派生可能",
+        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻・V斬空波動へ派生可能",
+        type: "special",
         command: ""
     },
     {
@@ -432,7 +443,8 @@ const gouki = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻へ派生可能",
+        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻・V斬空波動へ派生可能",
+        type: "special",
         command: ""
     },
     {
@@ -444,13 +456,14 @@ const gouki = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻へ派生可能",
+        remarks: "キャンセル時4Fから空中判定\n強度で高度、飛距離が変わる\nEX斬空波動・EX空中竜巻・V斬空波動へ派生可能",
+        type: "special",
         command: ""
     },
-    { name: "百鬼豪斬", outbreak: "6", persistence: "8", rigidity: "14", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "", command: "" },
-    { name: "百鬼豪衝", outbreak: "8", persistence: "4", rigidity: "着地後6", hit: "D", guard: "", damage: "100", stan: "150", remarks: "", command: "" },
-    { name: "百鬼豪刃", outbreak: "22", persistence: "着地まで", rigidity: "10(※14)", hit: "", guard: "", damage: "60", stan: "100", remarks: "※低空時", command: "" },
-    { name: "百鬼豪砕", outbreak: "7", persistence: "5", rigidity: "着地後26", hit: "D", guard: "", damage: "150", stan: "200", remarks: "立ち状態のみ投げ可能", command: "" },
+    { name: "百鬼豪斬", outbreak: "6", persistence: "8", rigidity: "14", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "百鬼豪衝", outbreak: "8", persistence: "4", rigidity: "着地後6", hit: "D", guard: "", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "百鬼豪刃", outbreak: "22", persistence: "着地まで", rigidity: "10(※14)", hit: "", guard: "", damage: "60", stan: "100", remarks: "※低空時", type: "special", command: "" },
+    { name: "百鬼豪砕", outbreak: "7", persistence: "5", rigidity: "着地後26", hit: "D", guard: "", damage: "150", stan: "200", remarks: "立ち状態のみ投げ可能", type: "special", command: "" },
     {
         name: "EX百鬼襲",
         outbreak: "6",
@@ -460,141 +473,80 @@ const gouki = [
         guard: "",
         damage: "15",
         stan: "60",
-        remarks: "4F から飛び道具無敵\n                                                空中で多少前後の制御可能\nEX斬空波動・EX空中竜巻へ派生可能",
+        remarks: "4F から飛び道具無敵\n                                                空中で多少前後の制御可能\nEX斬空波動・EX空中竜巻・V斬空波動へ派生可能",
+        type: "special",
         command: ""
     },
-    { name: "EX百鬼豪斬", outbreak: "6", persistence: "8", rigidity: "12", hit: "D", guard: "-2", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "EX百鬼豪衝", outbreak: "8", persistence: "8", rigidity: "着地後6", hit: "D", guard: "", damage: "120", stan: "200", remarks: "", command: "" },
-    { name: "EX百鬼豪刃", outbreak: "19", persistence: "着地まで", rigidity: "10(※14)", hit: "", guard: "", damage: "70", stan: "100", remarks: "※低空時", command: "" },
-    { name: "EX百鬼豪砕", outbreak: "7", persistence: "3", rigidity: "着地後26", hit: "D", guard: "", damage: "180", stan: "250", remarks: "立ち状態のみ投げ可能", command: "" },
-    { name: "百鬼豪斬空(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "百鬼豪斬空(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "150", stan: "150", remarks: "", command: "" },
+    { name: "EX百鬼豪斬", outbreak: "6", persistence: "8", rigidity: "12", hit: "D", guard: "-2", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "EX百鬼豪衝", outbreak: "8", persistence: "8", rigidity: "着地後6", hit: "D", guard: "", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+    { name: "EX百鬼豪刃", outbreak: "19", persistence: "着地まで", rigidity: "10(※14)", hit: "", guard: "", damage: "70", stan: "100", remarks: "※低空時", type: "special", command: "" },
+    { name: "EX百鬼豪砕", outbreak: "7", persistence: "3", rigidity: "着地後26", hit: "D", guard: "", damage: "180", stan: "250", remarks: "立ち状態のみ投げ可能", type: "special", command: "" },
+    { name: "百鬼豪斬空(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "百鬼豪斬空(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "150", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "百鬼豪螺旋", outbreak: "8", persistence: "10", rigidity: "着地後9", hit: "D", guard: "", damage: "160", stan: "250", remarks: "めくり性能", type: "special", command: "" },
     {
-        name: "百鬼豪螺旋",
-        outbreak: "8",
-        persistence: "10",
-        rigidity: "着地後9",
-        hit: "D",
-        guard: "",
-        damage: "160",
-        stan: "250",
-        remarks: "めくり性能\n                                                                                                                                                S※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能",
-        command: ""
-    },
-    {
-        name: "V\t豪波動拳",
+        name: "V豪波動拳",
         outbreak: "11",
         persistence: "",
         rigidity: "全体46",
         hit: "D",
         guard: "1",
-        damage: "70",
-        stan: "120",
-        remarks: "Vゲージタイマー1300F消費\n                                                                                                                                                                                S※他のV必殺技でキャンセル可能",
+        damage: "110(※120)",
+        stan: "120(※150)",
+        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                出がかり以外のタイミングでヒットした場合、ヒット効果が地上のけぞりに\n強度差は弾速のみ\n※根元ヒット時",
+        type: "special",
         command: ""
     },
     {
-        name: "V\t赤鴉豪焦破",
-        outbreak: "21",
+        name: "V斬空波動拳",
+        outbreak: "9",
         persistence: "",
-        rigidity: "全体69",
-        hit: "D",
-        guard: "8",
-        damage: "90(※+11)",
-        stan: "150",
-        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                ※出始め近くに居ると燃焼ダメージが入る\nS※他のV必殺技でキャンセル可能",
-        command: ""
-    },
-    { name: "V斬空波動拳(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "90", stan: "115", remarks: "Vゲージタイマー1300F消費", command: "" },
-    { name: "V斬空波動拳(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "100", remarks: "", command: "" },
-    {
-        name: "V豪昇龍拳",
-        outbreak: "3",
-        persistence: "32",
-        rigidity: "32+着地後15",
-        hit: "D",
-        guard: "-44",
-        damage: "130",
-        stan: "150",
-        remarks: "Vゲージタイマー1300F消費\n                                                                                                                                1F～15F 完全無敵\n                                                S※ヒット時のみV空中竜巻斬空脚、V斬空波動拳でキャンセル可能\n動作中常に被カウンター判定(被ダメージ1.2倍)",
-        command: ""
-    },
-    {
-        name: "V竜巻斬空脚",
-        outbreak: "10",
-        persistence: "11",
-        rigidity: "11+着地後15",
-        hit: "D",
-        guard: "-19",
-        damage: "90",
+        rigidity: "着地後4",
+        hit: "",
+        guard: "",
+        damage: "80",
         stan: "100",
-        remarks: "Vゲージタイマー1300F消費\n                                                                                                                                                                                S※ヒット時のみ着地後豪昇龍拳でキャンセルが可能\nS※ヒット時のみV斬空波動拳でキャンセル可能",
+        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                2発個別の弾を射出する\n強度差で射出角度と速度が変わる\n昇りと下りで出した時の挙動が変わる",
+        type: "special",
         command: ""
     },
     {
-        name: "V空中竜巻斬空脚",
-        outbreak: "8",
-        persistence: "10",
-        rigidity: "着地後9",
+        name: "V弱 豪昇龍拳",
+        outbreak: "3",
+        persistence: "11",
+        rigidity: "31+着地後15",
         hit: "D",
-        guard: "",
-        damage: "130",
-        stan: "200",
-        remarks: "Vゲージタイマー1300F消費\n                                めくり性能\n                                                                                                                                                S※ヒット時のみV斬空波動拳でキャンセル可能",
+        guard: "-36",
+        damage: "180(※80)",
+        stan: "230(※100)",
+        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                1F～8F 完全無敵\n                                                持続ヒット時ゲージ増加量0/20/10\nCA※1段目のみ可能\n根元ヒット時はクイックスタンディング不可\n※持続部分\n動作中常に被カウンター判定(被ダメージ1.2倍)",
+        type: "special",
         command: ""
     },
     {
-        name: "V百鬼襲",
-        outbreak: "6",
-        persistence: "10",
-        rigidity: "",
+        name: "V中 豪昇龍拳",
+        outbreak: "4",
+        persistence: "11",
+        rigidity: "31+着地後15",
         hit: "D",
-        guard: "",
-        damage: "15",
-        stan: "60",
-        remarks: "Vゲージタイマー1300F消費\n                                                                                                                                4F から飛び道具無敵\n                                                空中で多少前後の制御可能\nV斬空波動・V空中竜巻へ派生可能(派生時にVゲージを消費しない)",
+        guard: "-36",
+        damage: "180(※80)",
+        stan: "230(※100)",
+        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                1F～9F 完全無敵\n                                                持続ヒット時ゲージ増加量0/20/10\nCA※1段目のみ可能\n根元ヒット時はクイックスタンディング不可\n※持続部分\n動作中常に被カウンター判定(被ダメージ1.2倍)",
+        type: "special",
         command: ""
     },
-    { name: "V百鬼豪斬", outbreak: "6", persistence: "8", rigidity: "12", hit: "D", guard: "-2", damage: "90", stan: "100", remarks: "", command: "" },
-    { name: "V百鬼豪衝", outbreak: "8", persistence: "8", rigidity: "着地後6", hit: "D", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "V百鬼豪刃", outbreak: "19", persistence: "着地まで", rigidity: "着地後6(※着地後14)", hit: "", guard: "", damage: "40", stan: "50", remarks: "※低空時", command: "" },
-    { name: "V百鬼豪砕", outbreak: "7", persistence: "3", rigidity: "着地後26", hit: "D", guard: "", damage: "180", stan: "250", remarks: "立ち状態のみ投げ可能", command: "" },
-    { name: "V百鬼豪斬空(根元ヒット時)", outbreak: "5", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "90", stan: "115", remarks: "", command: "" },
-    { name: "V百鬼豪斬空(飛び道具部分)", outbreak: "38", persistence: "", rigidity: "着地後4", hit: "D", guard: "", damage: "120", stan: "100", remarks: "", command: "" },
     {
-        name: "V百鬼豪螺旋",
-        outbreak: "8",
-        persistence: "10",
-        rigidity: "着地後9",
+        name: "V強 豪昇龍拳",
+        outbreak: "5",
+        persistence: "11",
+        rigidity: "31+着地後15",
         hit: "D",
-        guard: "",
-        damage: "130",
-        stan: "200",
-        remarks: "めくり性能\n                                                                                                                                                S※V斬空波動拳でキャンセル可能",
-        command: ""
-    },
-    {
-        name: "阿修羅閃空(前方)",
-        outbreak: "",
-        persistence: "",
-        rigidity: "全体49",
-        hit: "",
-        guard: "",
-        damage: "",
-        stan: "",
-        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～11F 完全無敵",
-        command: ""
-    },
-    {
-        name: "V阿修羅閃空(後方)",
-        outbreak: "",
-        persistence: "",
-        rigidity: "全体49",
-        hit: "",
-        guard: "",
-        damage: "",
-        stan: "",
-        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～11F 完全無敵",
+        guard: "-36",
+        damage: "180(※80)",
+        stan: "230(※100)",
+        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                1F～10F 完全無敵\n                                                持続ヒット時ゲージ増加量0/20/10\nCA※1段目のみ可能\n根元ヒット時はクイックスタンディング不可\n※持続部分\n動作中常に被カウンター判定(被ダメージ1.2倍)",
+        type: "special",
         command: ""
     },
     {
@@ -607,6 +559,20 @@ const gouki = [
         damage: "320",
         stan: "0",
         remarks: "10Fまで空中の相手にヒットしない\n                1F～11F 完全無敵",
+        type: "ca",
+        command: ""
+    },
+    {
+        name: "V瞬獄殺",
+        outbreak: "1+0",
+        persistence: "28",
+        rigidity: "39",
+        hit: "D",
+        guard: "",
+        damage: "400",
+        stan: "0",
+        remarks: "Vゲージタイマー4000F消費\n                                                                                                                                1F～11F 完全無敵\n                                                あらゆる地上打撃技のモーション中からキャンセルで出す事が可能",
+        type: "ca",
         command: ""
     }
 ];

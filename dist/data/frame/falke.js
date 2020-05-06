@@ -1,38 +1,51 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const falke = [
-    { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "15", hit: "8", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "立ち強P", outbreak: "10", persistence: "3", rigidity: "22", hit: "4", guard: "-3", damage: "80", stan: "150", remarks: "", command: "" },
-    { name: "立ち弱K", outbreak: "5", persistence: "2", rigidity: "11", hit: "4", guard: "3", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "立ち中K", outbreak: "8", persistence: "3", rigidity: "16", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
+    { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "15", hit: "8", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "立ち強P", outbreak: "10", persistence: "3", rigidity: "22", hit: "4", guard: "-3", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
+    { name: "立ち弱K", outbreak: "5", persistence: "2", rigidity: "11", hit: "4", guard: "3", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中K", outbreak: "8", persistence: "3", rigidity: "16", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "立ち強K",
         outbreak: "12 ",
         persistence: "3",
-        rigidity: "22",
-        hit: "4",
-        guard: "-3",
+        rigidity: "23",
+        hit: "3",
+        guard: "-4",
         damage: "80",
         stan: "150",
-        remarks: "クラッシュカウンター対応(+26F)\n                                                                しゃがみの相手にヒットしない",
+        remarks: "クラッシュカウンター対応(+26F)\n                                                                                                                                                                足先の部分はしゃがみ状態にヒットしない",
+        type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "10", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "しゃがみ中P", outbreak: "9", persistence: "2", rigidity: "18", hit: "4", guard: "-2", damage: "70", stan: "100", remarks: "", command: "" },
-    { name: "しゃがみ強P", outbreak: "8", persistence: "3", rigidity: "27", hit: "-2", guard: "-8", damage: "80", stan: "150", remarks: "", command: "" },
-    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "2", damage: "20", stan: "70", remarks: "しゃがみ弱Pに連打キャンセル可能", command: "" },
-    { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "17", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "しゃがみ強K", outbreak: "10", persistence: "2", rigidity: "24", hit: "D", guard: "-12", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", command: "" },
-    { name: "ジャンプ弱P", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中P", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", command: "" },
-    { name: "ジャンプ強P", outbreak: "12", persistence: "3", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "ジャンプ弱K", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-    { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-    { name: "サイコシュピッツェ", outbreak: "14", persistence: "2", rigidity: "25", hit: "0", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", command: "→ + 強P" },
-    { name: "ブラウクラレ", outbreak: "15", persistence: "6", rigidity: "14", hit: "6", guard: "3", damage: "70", stan: "150", remarks: "ダウン追い打ち可能", command: "↘ + 強K" },
-    { name: "ツヴァイトリット", outbreak: "12", persistence: "3", rigidity: "12", hit: "D", guard: "-9", damage: "70", stan: "100", remarks: "しゃがみの相手にヒットしない", command: "中K ▶ 強K" },
+    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "10", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ中P", outbreak: "9", persistence: "2", rigidity: "18", hit: "4", guard: "-2", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強P", outbreak: "8", persistence: "3", rigidity: "27", hit: "-2", guard: "-8", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "2", damage: "20", stan: "70", remarks: "しゃがみ弱Pに連打キャンセル可能", type: "normal", command: "" },
+    { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "17", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強K", outbreak: "10", persistence: "2", rigidity: "24", hit: "D", guard: "-12", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", type: "normal", command: "" },
+    { name: "ジャンプ弱P", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中P", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ強P", outbreak: "12", persistence: "3", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ弱K", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+    {
+        name: "サイコシュピッツェ",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "25",
+        hit: "0",
+        guard: "-10",
+        damage: "90",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(D)",
+        type: "unique",
+        command: "→ + 強P"
+    },
+    { name: "ブラウクラレ", outbreak: "15", persistence: "6", rigidity: "14", hit: "6", guard: "3", damage: "70", stan: "150", remarks: "ダウン追い打ち可能", type: "unique", command: "↘ + 強K" },
+    { name: "ツヴァイトリット", outbreak: "12", persistence: "3", rigidity: "12", hit: "D", guard: "-14", damage: "70", stan: "100", remarks: "", type: "unique", command: "中K ▶ 強K" },
     {
         name: "サイコゼーレ",
         outbreak: "※13",
@@ -43,6 +56,7 @@ const falke = [
         damage: "70",
         stan: "100",
         remarks: "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n※爆発後",
+        type: "unique",
         command: "(VスキルⅡ選択時) 中K ▶ 強K ▶OR ←OR ↓OR ↙ + 中P 中K"
     },
     {
@@ -55,12 +69,13 @@ const falke = [
         damage: "60",
         stan: "100",
         remarks: "めくり性能\n                                                                                                                                                ヒット・ガード時、落下動作を通常技でキャンセル可能\nS※ヒット・ガード時、落下動作をサイコフェーダー、サイコイェーガーでキャンセル可能",
+        type: "unique",
         command: "(ジャンプ中に) ↓ + 中K"
     },
-    { name: "ヴィルベルヴィント", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "150", remarks: "", command: "" },
-    { name: "ルフトシュトローム", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", command: "" },
-    { name: "ヴィントシュトース", outbreak: "5", persistence: "2", rigidity: "着地後6", hit: "", guard: "", damage: "140", stan: "200", remarks: "", command: "" },
-    { name: "[VS1]サイコトロンベ", outbreak: "14", persistence: "15", rigidity: "22", hit: "D", guard: "-10", damage: "60", stan: "100", remarks: "※飛び道具相殺時", command: "" },
+    { name: "ヴィルベルヴィント", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "150", remarks: "", type: "throw", command: "" },
+    { name: "ルフトシュトローム", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", type: "throw", command: "" },
+    { name: "ヴィントシュトース", outbreak: "5", persistence: "2", rigidity: "着地後6", hit: "", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
+    { name: "[VS1]サイコトロンベ", outbreak: "14", persistence: "15", rigidity: "22", hit: "D", guard: "-10", damage: "60", stan: "100", remarks: "※飛び道具相殺時", type: "vsystem", command: "" },
     {
         name: "[VS2]サイコミーネ",
         outbreak: "※13",
@@ -71,6 +86,7 @@ const falke = [
         damage: "70",
         stan: "100",
         remarks: "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n※爆発後",
+        type: "vsystem",
         command: ""
     },
     {
@@ -83,6 +99,7 @@ const falke = [
         damage: "",
         stan: "",
         remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中、専用の必殺技が追加",
+        type: "vsystem",
         command: ""
     },
     {
@@ -95,12 +112,13 @@ const falke = [
         damage: "60",
         stan: "0",
         remarks: "1F～29F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+        type: "vsystem",
         command: ""
     },
-    { name: "サイコクーゲル", outbreak: "16", persistence: "6", rigidity: "26", hit: "7", guard: "2", damage: "60", stan: "120", remarks: "", command: "" },
-    { name: "サイコカノーネ", outbreak: "24", persistence: "", rigidity: "全体55", hit: "4", guard: "-3", damage: "60", stan: "150", remarks: "", command: "" },
-    { name: "サイコフェーダー", outbreak: "16", persistence: "", rigidity: "着地後9", hit: "", guard: "", damage: "80", stan: "120", remarks: "", command: "" },
-    { name: "サイコシュナイデ", outbreak: "8", persistence: "6", rigidity: "38", hit: "D", guard: "-17", damage: "120", stan: "150", remarks: "1～10Fまで頭部無敵", command: "" },
+    { name: "サイコクーゲル", outbreak: "16", persistence: "6", rigidity: "26", hit: "7", guard: "2", damage: "60", stan: "120", remarks: "", type: "special", command: "" },
+    { name: "サイコカノーネ", outbreak: "24", persistence: "", rigidity: "全体55", hit: "4", guard: "-3", damage: "60", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "サイコフェーダー", outbreak: "16", persistence: "", rigidity: "着地後9", hit: "", guard: "", damage: "80", stan: "120", remarks: "", type: "special", command: "" },
+    { name: "サイコシュナイデ", outbreak: "8", persistence: "6", rigidity: "38", hit: "D", guard: "-17", damage: "120", stan: "150", remarks: "1～10Fまで頭部無敵", type: "special", command: "" },
     {
         name: "EXサイコシュナイデ",
         outbreak: "12",
@@ -111,11 +129,12 @@ const falke = [
         damage: "140",
         stan: "200",
         remarks: "1F～16F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)",
+        type: "special",
         command: ""
     },
-    { name: "カタプルト", outbreak: "16", persistence: "4", rigidity: "31", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "EXカタプルト", outbreak: "20", persistence: "4", rigidity: "22", hit: "D", guard: "-10", damage: "40", stan: "80", remarks: "", command: "" },
-    { name: "EXカタプルト(ヒット時)", outbreak: "20", persistence: "7", rigidity: "24", hit: "D", guard: "", damage: "80", stan: "150", remarks: "", command: "" },
+    { name: "カタプルト", outbreak: "16", persistence: "4", rigidity: "31", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "EXカタプルト", outbreak: "20", persistence: "4", rigidity: "22", hit: "D", guard: "-10", damage: "40", stan: "80", remarks: "", type: "special", command: "" },
+    { name: "EXカタプルト(ヒット時)", outbreak: "20", persistence: "7", rigidity: "24", hit: "D", guard: "", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
     {
         name: "サイコシュロート",
         outbreak: "14 (※16)",
@@ -126,6 +145,7 @@ const falke = [
         damage: "30 (※90)",
         stan: "60 (※90)",
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                パンチ系の通常・特殊技、Vスキルからキャンセル可能\nヒット・ガード時、サイコパンツァーにキャンセル可能\n※弾部分の数値",
+        type: "special",
         command: ""
     },
     {
@@ -138,6 +158,7 @@ const falke = [
         damage: "100",
         stan: "200",
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                パンチ系の通常・特殊技、Vスキルからキャンセル可能\nヒット・ガード時、サイコパンツァーにキャンセル可能",
+        type: "special",
         command: ""
     },
     {
@@ -150,9 +171,10 @@ const falke = [
         damage: "80",
         stan: "150",
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                パンチ系の通常技からキャンセル可能",
+        type: "special",
         command: ""
     },
-    { name: "サイコフリューゲル", outbreak: "1+3", persistence: "3", rigidity: "58", hit: "D", guard: "-35", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", command: "" }
+    { name: "サイコフリューゲル", outbreak: "1+3", persistence: "3", rigidity: "58", hit: "D", guard: "-35", damage: "340", stan: "0", remarks: "1F～6F 完全無敵", type: "ca", command: "" }
 ];
 exports.falke = falke;
 //# sourceMappingURL=falke.js.map

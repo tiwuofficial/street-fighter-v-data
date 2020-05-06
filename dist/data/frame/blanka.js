@@ -1,14 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const blanka = [
-    { name: "立ち弱P", outbreak: "5", persistence: "2", rigidity: "8", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "15", hit: "3", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "立ち強P", outbreak: "10", persistence: "2", rigidity: "24", hit: "0", guard: "-6", damage: "80", stan: "150", remarks: "クラッシュカウンター対応(+15F)", command: "" },
-    { name: "立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "立ち中K", outbreak: "7", persistence: "4", rigidity: "13", hit: "3", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "立ち強K", outbreak: "10", persistence: "5", rigidity: "22", hit: "6", guard: "-4", damage: "80", stan: "150", remarks: "強制立ち効果", command: "" },
-    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "しゃがみ中P", outbreak: "6", persistence: "4", rigidity: "18", hit: "0", guard: "-3", damage: "60", stan: "100", remarks: "", command: "" },
+    { name: "立ち弱P", outbreak: "5", persistence: "2", rigidity: "8", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中P", outbreak: "7", persistence: "2", rigidity: "15", hit: "3", guard: "0", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "立ち強P", outbreak: "10", persistence: "2", rigidity: "24", hit: "0", guard: "-6", damage: "80", stan: "150", remarks: "クラッシュカウンター対応(+15F)", type: "normal", command: "" },
+    { name: "立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    {
+        name: "立ち中K",
+        outbreak: "7",
+        persistence: "4",
+        rigidity: "13",
+        hit: "3",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "S※Vエレクトリックサンダーのみキャンセル可能",
+        type: "normal",
+        command: ""
+    },
+    { name: "立ち強K", outbreak: "10", persistence: "5", rigidity: "22", hit: "6", guard: "-4", damage: "80", stan: "150", remarks: "強制立ち効果", type: "normal", command: "" },
+    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ中P", outbreak: "6", persistence: "4", rigidity: "18", hit: "0", guard: "-3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "しゃがみ強P",
         outbreak: "13",
@@ -19,20 +31,33 @@ const blanka = [
         damage: "90",
         stan: "150",
         remarks: "クラッシュカウンター対応(D)\n                                                強制立ち効果",
+        type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱K", outbreak: "4", persistence: "3", rigidity: "8", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "S※エレクトリックサンダーのみ必殺技キャンセル可能", command: "" },
-    { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "16", hit: "5", guard: "-1", damage: "50", stan: "100", remarks: "", command: "" },
-    { name: "しゃがみ強K", outbreak: "8", persistence: "3", rigidity: "27", hit: "D", guard: "-12", damage: "100", stan: "150", remarks: "クラッシュカウンター対応(D)", command: "" },
-    { name: "ジャンプ弱P", outbreak: "4", persistence: "4", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中P", outbreak: "6", persistence: "3", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", command: "" },
-    { name: "斜めジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "垂直ジャンプ強P", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "ジャンプ弱K", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "めくり性能", command: "" },
-    { name: "ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "ロッククラッシュ", outbreak: "21", persistence: "3", rigidity: "17", hit: "2", guard: "-7", damage: "70", stan: "100", remarks: "", command: "→ + 中P" },
-    { name: "アマゾンリバーラン", outbreak: "11", persistence: "10", rigidity: "25", hit: "D", guard: "-14", damage: "80", stan: "150", remarks: "", command: "↘ + 強P" },
+    {
+        name: "しゃがみ弱K",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "8",
+        hit: "4",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "S※エレクトリックサンダーのみ必殺技キャンセル可能",
+        type: "normal",
+        command: ""
+    },
+    { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "16", hit: "5", guard: "-1", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強K", outbreak: "8", persistence: "3", rigidity: "27", hit: "D", guard: "-12", damage: "100", stan: "150", remarks: "クラッシュカウンター対応(D)", type: "normal", command: "" },
+    { name: "ジャンプ弱P", outbreak: "4", persistence: "4", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中P", outbreak: "6", persistence: "3", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+    { name: "斜めジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "垂直ジャンプ強P", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ弱K", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ロッククラッシュ", outbreak: "21", persistence: "3", rigidity: "17", hit: "2", guard: "-7", damage: "70", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
+    { name: "アマゾンリバーラン", outbreak: "11", persistence: "10", rigidity: "25", hit: "D", guard: "-14", damage: "80", stan: "150", remarks: "", type: "unique", command: "↘ + 強P" },
     {
         name: "レイジングバッシュ(2段目)",
         outbreak: "7",
@@ -43,9 +68,22 @@ const blanka = [
         damage: "60",
         stan: "70",
         remarks: "2段目ヒット時のみ、サプライズフォワード/サプライズバックでキャンセル可能",
+        type: "unique",
         command: "中K ▶ 強K"
     },
-    { name: "レイジングバッシュ(3段目)", outbreak: "26", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "70", stan: "100", remarks: "", command: "中K ▶ 強K ▶(ヒット時) 強P" },
+    {
+        name: "レイジングバッシュ(3段目)",
+        outbreak: "26",
+        persistence: "2",
+        rigidity: "30",
+        hit: "D",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        type: "unique",
+        command: "中K ▶ 強K ▶(ヒット時) 強P"
+    },
     {
         name: "ライトニングダンス",
         outbreak: "36-※1(※223)",
@@ -56,6 +94,7 @@ const blanka = [
         damage: "80(※2100)",
         stan: "100(※2150)",
         remarks: "※1発生フレームはボタンホールド無し時のもの\n※2LV2発動可能時の数値 Vゲージ増加量は0/80に変化",
+        type: "unique",
         command: "(VスキルⅡ選択時) 中K ▶ 強K ▶(ヒット時) 中P 中K"
     },
     {
@@ -68,6 +107,7 @@ const blanka = [
         damage: "",
         stan: "",
         remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+        type: "unique",
         command: "→ + 弱K"
     },
     {
@@ -80,10 +120,11 @@ const blanka = [
         damage: "",
         stan: "",
         remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+        type: "unique",
         command: "← + 弱K"
     },
-    { name: "ワイルドファング", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", command: "" },
-    { name: "ジャングルホイール", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "200", remarks: "", command: "" },
+    { name: "ワイルドファング", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+    { name: "ジャングルホイール", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "200", remarks: "", type: "throw", command: "" },
     {
         name: "[VS1]フィアーダウン",
         outbreak: "",
@@ -94,9 +135,10 @@ const blanka = [
         damage: "",
         stan: "",
         remarks: "レバーを下方向に入力し続ける事で最大48F(全体104F)まで動作を延長可能",
+        type: "vsystem",
         command: ""
     },
-    { name: "[VS1]ワイルドリフト", outbreak: "13", persistence: "4", rigidity: "24", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "S※ヒット時のみ可能", command: "" },
+    { name: "[VS1]ワイルドリフト", outbreak: "13", persistence: "4", rigidity: "24", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "S※ヒット時のみ可能", type: "vsystem", command: "" },
     {
         name: "[VS1]レイドジャンプ",
         outbreak: "",
@@ -107,6 +149,7 @@ const blanka = [
         damage: "",
         stan: "",
         remarks: "レイドジャンプ中にジャンプ通常技を出した際、Vゲージ増加率0/50",
+        type: "vsystem",
         command: ""
     },
     {
@@ -119,6 +162,7 @@ const blanka = [
         damage: "80",
         stan: "100",
         remarks: "※発生フレームはボタンホールド無し時のもの\n50F以上ボタンホールドを続けることにより攻撃がLV2に変化\nホールド中は22F以降、前方ステップ・後方ステップでキャンセル可能\nLV2状態までホールドを続けた後に各種ステップでキャンセルした場合、ホールド無しで即時LV2を発動できるようになる",
+        type: "vsystem",
         command: ""
     },
     {
@@ -131,11 +175,12 @@ const blanka = [
         damage: "100",
         stan: "150",
         remarks: "※発生フレームはLV2に変化後、最速で発生させた時のもの\nホールド中は前方ステップ・後方ステップでキャンセル可能\nホールド中を各種ステップでキャンセルした場合、ホールド無しで即時LV2を発動できるようになる",
+        type: "vsystem",
         command: ""
     },
-    { name: "[VS2]シャウトオブアース Lv2(即時発動版)", outbreak: "23", persistence: "7", rigidity: "27", hit: "D", guard: "4", damage: "100", stan: "150", remarks: "", command: "" },
+    { name: "[VS2]シャウトオブアース Lv2(即時発動版)", outbreak: "23", persistence: "7", rigidity: "27", hit: "D", guard: "4", damage: "100", stan: "150", remarks: "", type: "vsystem", command: "" },
     {
-        name: "ライトニングビースト",
+        name: "ジャングルダイナモ",
         outbreak: "1",
         persistence: "",
         rigidity: "6",
@@ -143,7 +188,8 @@ const blanka = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Vゲージタイマー+3000F\n                                                                                                                                1F 完全無敵\n                                                発動中ローリング系必殺技から「ローリングキャノン」が派生可能になる",
+        remarks: "Vゲージタイマー+2000F\n                                                                                                                                1F 完全無敵\n                                                発動中対応した必殺技の性能が強化される\n発動中必殺技に「グランドシェイブローリング」が追加される",
+        type: "vsystem",
         command: ""
     },
     {
@@ -156,15 +202,114 @@ const blanka = [
         damage: "60",
         stan: "0",
         remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+        type: "vsystem",
         command: ""
     },
-    { name: "弱ローリングアタック", outbreak: "9", persistence: "22", rigidity: "6+着地後6", hit: "D", guard: "-21", damage: "100", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
-    { name: "中ローリングアタック", outbreak: "9", persistence: "30", rigidity: "8+着地後7", hit: "D", guard: "-21", damage: "100", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
-    { name: "強ローリングアタック", outbreak: "9", persistence: "29", rigidity: "4+着地後23", hit: "D", guard: "-21", damage: "100", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
-    { name: "EXローリングアタック", outbreak: "8", persistence: "31", rigidity: "6+着地後4", hit: "D", guard: "-18", damage: "100", stan: "150", remarks: "", command: "" },
-    { name: "弱バーチカルローリング", outbreak: "8", persistence: "21", rigidity: "25+着地後17", hit: "D", guard: "-36", damage: "120", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
-    { name: "中バーチカルローリング", outbreak: "7", persistence: "16", rigidity: "32+着地後20", hit: "D", guard: "-36", damage: "120", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
-    { name: "強バーチカルローリング", outbreak: "5", persistence: "16", rigidity: "30+着地後29", hit: "D", guard: "-34", damage: "120", stan: "150", remarks: "CA※根元ヒット時のみ可能", command: "" },
+    {
+        name: "弱ローリングアタック",
+        outbreak: "9",
+        persistence: "22",
+        rigidity: "6+着地後6",
+        hit: "D",
+        guard: "-21",
+        damage: "100",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "中ローリングアタック",
+        outbreak: "9",
+        persistence: "30",
+        rigidity: "8+着地後7",
+        hit: "D",
+        guard: "-21",
+        damage: "100",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "強ローリングアタック",
+        outbreak: "9",
+        persistence: "29",
+        rigidity: "4+着地後23",
+        hit: "D",
+        guard: "-21",
+        damage: "100",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "Vローリングアタック",
+        outbreak: "7",
+        persistence: "32",
+        rigidity: "着地後10",
+        hit: "D",
+        guard: "-18",
+        damage: "100",
+        stan: "180",
+        remarks: "Vゲージタイマー600F消費\n                                                                                                                                1F～41F 飛び道具無敵\n                                                CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    { name: "EXローリングアタック", outbreak: "8", persistence: "31", rigidity: "6+着地後4", hit: "D", guard: "-18", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+    {
+        name: "弱バーチカルローリング",
+        outbreak: "8",
+        persistence: "21",
+        rigidity: "25+着地後17",
+        hit: "D",
+        guard: "-36",
+        damage: "120",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "中バーチカルローリング",
+        outbreak: "7",
+        persistence: "16",
+        rigidity: "32+着地後20",
+        hit: "D",
+        guard: "-36",
+        damage: "120",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "強バーチカルローリング",
+        outbreak: "5",
+        persistence: "16",
+        rigidity: "30+着地後29",
+        hit: "D",
+        guard: "-34",
+        damage: "120",
+        stan: "150",
+        remarks: "CA※根元ヒット時のみ可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "Vバーチカルローリング",
+        outbreak: "5",
+        persistence: "16",
+        rigidity: "33+着地後36",
+        hit: "D",
+        guard: "-36",
+        damage: "120",
+        stan: "180",
+        remarks: "Vゲージタイマー600F消費\n                                                                                                                                1F～16F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nCA※1段目のみ可能",
+        type: "special",
+        command: ""
+    },
     {
         name: "EXバーチカルローリング",
         outbreak: "5",
@@ -175,6 +320,7 @@ const blanka = [
         damage: "150",
         stan: "200",
         remarks: "1F～16F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)",
+        type: "special",
         command: ""
     },
     {
@@ -187,6 +333,7 @@ const blanka = [
         damage: "80",
         stan: "150",
         remarks: "21F～着地まで 飛び道具無敵",
+        type: "special",
         command: ""
     },
     {
@@ -199,6 +346,7 @@ const blanka = [
         damage: "80",
         stan: "150",
         remarks: "22F～着地まで 飛び道具無敵",
+        type: "special",
         command: ""
     },
     {
@@ -211,6 +359,20 @@ const blanka = [
         damage: "80",
         stan: "150",
         remarks: "25F～着地まで 飛び道具無敵",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "Vバックステップローリング",
+        outbreak: "21",
+        persistence: "着地まで",
+        rigidity: "着地後11",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "200",
+        remarks: "Vゲージタイマー600F消費\n                                めくり性能\n                                                                                                3F～17F 打撃無敵\n                                                1F～着地まで 飛び道具無敵",
+        type: "special",
         command: ""
     },
     {
@@ -223,27 +385,55 @@ const blanka = [
         damage: "100",
         stan: "150",
         remarks: "3F～21F 打撃無敵\n                                                1F～着地まで 飛び道具無敵",
+        type: "special",
         command: ""
     },
-    { name: "エレクトリックサンダー", outbreak: "10", persistence: "10", rigidity: "17", hit: "D", guard: "3", damage: "80", stan: "150", remarks: "", command: "" },
-    { name: "EXエレクトリックサンダー", outbreak: "10", persistence: "10", rigidity: "14", hit: "D", guard: "6", damage: "80", stan: "150", remarks: "", command: "" },
-    { name: "弱ワイルドハント", outbreak: "40", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "170", stan: "200", remarks: "", command: "" },
-    { name: "中ワイルドハント", outbreak: "43", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "180", stan: "200", remarks: "", command: "" },
-    { name: "強ワイルドハント", outbreak: "46", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "190", stan: "200", remarks: "", command: "" },
-    { name: "EXワイルドハント", outbreak: "36", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "190", stan: "200", remarks: "3F～36F 飛び道具無敵", command: "" },
+    { name: "エレクトリックサンダー", outbreak: "10", persistence: "10", rigidity: "17", hit: "D", guard: "3", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
     {
-        name: "ローリングキャノン",
-        outbreak: "3",
-        persistence: "20",
-        rigidity: "着地後9",
+        name: "Vエレクトリックサンダー",
+        outbreak: "12",
+        persistence: "12",
+        rigidity: "12",
         hit: "D",
-        guard: "",
-        damage: "50",
-        stan: "80",
-        remarks: "ローリング系必殺技から最大3回連続で派生可能\n連続で発動した場合のVタイマー消費量\n1回目1000F 2回目150F 3回目150F",
+        guard: "-2",
+        damage: "100",
+        stan: "200",
+        remarks: "Vゲージタイマー600F消費",
+        type: "special",
         command: ""
     },
-    { name: "ダイナミックローリング", outbreak: "1+7", persistence: "3", rigidity: "", hit: "D", guard: "", damage: "340", stan: "0", remarks: "1F～10F 完全無敵", command: "" },
+    { name: "EXエレクトリックサンダー", outbreak: "10", persistence: "10", rigidity: "14", hit: "D", guard: "6", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "弱ワイルドハント", outbreak: "40", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "170", stan: "200", remarks: "", type: "special", command: "" },
+    { name: "中ワイルドハント", outbreak: "43", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "180", stan: "200", remarks: "", type: "special", command: "" },
+    { name: "強ワイルドハント", outbreak: "46", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "190", stan: "200", remarks: "", type: "special", command: "" },
+    { name: "EXワイルドハント", outbreak: "36", persistence: "2", rigidity: "30", hit: "D", guard: "", damage: "190", stan: "200", remarks: "3F～36F 飛び道具無敵", type: "special", command: "" },
+    {
+        name: "グランドシェイブローリング",
+        outbreak: "6",
+        persistence: "31",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "155",
+        stan: "240",
+        remarks: "Vゲージタイマー600F消費\n                                                                                                                                5F～56F 飛び道具無敵\n                                                Vトリガーキャンセル可能な技からキャンセル発動可能",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "グランドシェイブローリング(溜め)",
+        outbreak: "6",
+        persistence: "97",
+        rigidity: "10",
+        hit: "D",
+        guard: "GB",
+        damage: "30+170",
+        stan: "50+250",
+        remarks: "5F～134F 飛び道具無敵\n                                                2段目の攻撃発生は最大溜めで92F\nダメージ/スタン値は最大溜め派生時の溜め動作+突進動作（合計6ヒット）\nVトリガーキャンセル可能な技からキャンセル発動可能",
+        type: "special",
+        command: ""
+    },
+    { name: "ダイナミックローリング", outbreak: "1+7", persistence: "3", rigidity: "", hit: "D", guard: "", damage: "340", stan: "0", remarks: "1F～10F 完全無敵", type: "ca", command: "" },
     {
         name: "ダイナミックローリング(初段ガードor空振り時)",
         outbreak: "1+7",
@@ -254,6 +444,7 @@ const blanka = [
         damage: "120",
         stan: "0",
         remarks: "1F～10F 完全無敵",
+        type: "ca",
         command: ""
     }
 ];

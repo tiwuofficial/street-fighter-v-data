@@ -1,12 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const urien = [
-    { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "10", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "12", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "立ち強P", outbreak: "12", persistence: "3", rigidity: "18", hit: "4", guard: "-2", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+22F)", command: "" },
-    { name: "立ち強P(ボタンホールド)", outbreak: "22", persistence: "3", rigidity: "15", hit: "9", guard: "5", damage: "100", stan: "150", remarks: "クラッシュカウンター対応(+31F)", command: "" },
-    { name: "立ち弱K", outbreak: "5", persistence: "2", rigidity: "8", hit: "4", guard: "3", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "立ち中K", outbreak: "9", persistence: "2", rigidity: "18", hit: "1", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
+    { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "10", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "12", hit: "6", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "立ち強P", outbreak: "12", persistence: "3", rigidity: "18", hit: "4", guard: "-2", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+22F)", type: "normal", command: "" },
+    {
+        name: "立ち強P(ボタンホールド)",
+        outbreak: "22",
+        persistence: "3",
+        rigidity: "15",
+        hit: "9",
+        guard: "5",
+        damage: "100",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(+31F)",
+        type: "normal",
+        command: ""
+    },
+    { name: "立ち弱K", outbreak: "5", persistence: "2", rigidity: "8", hit: "4", guard: "3", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "立ち中K", outbreak: "9", persistence: "2", rigidity: "18", hit: "1", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "立ち強K",
         outbreak: "9",
@@ -17,28 +29,41 @@ const urien = [
         damage: "80(※90)",
         stan: "150",
         remarks: "1F～2Fは地上の相手にヒットしない\n                                                                                ※持続2F目以降\nVキャン・通常時の硬直差は持続4F目を当ててキャンセルした際のフレーム",
+        type: "normal",
         command: ""
     },
-    { name: "立ち強K(ボタンホールド)", outbreak: "22", persistence: "5", rigidity: "18", hit: "8", guard: "2", damage: "100", stan: "150", remarks: "1F～2Fは地上の相手にヒットしない", command: "" },
-    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "4", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
-    { name: "しゃがみ中P", outbreak: "6", persistence: "2", rigidity: "15", hit: "5", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "しゃがみ強P", outbreak: "7", persistence: "5", rigidity: "21", hit: "D", guard: "-8", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", command: "" },
-    { name: "しゃがみ中K", outbreak: "8", persistence: "2", rigidity: "17", hit: "4", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "しゃがみ強K", outbreak: "11", persistence: "2", rigidity: "27", hit: "D", guard: "-14", damage: "100", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-    { name: "ジャンプ弱P", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-    { name: "ジャンプ中P", outbreak: "5", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", command: "" },
-    { name: "ジャンプ強P", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", command: "" },
-    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-    { name: "クォーラルパンチ", outbreak: "7", persistence: "4", rigidity: "14", hit: "2", guard: "-2", damage: "70", stan: "100", remarks: "", command: "→ + 中P" },
-    { name: "クォーラルキック", outbreak: "15", persistence: "4", rigidity: "18", hit: "4", guard: "-4", damage: "90", stan: "150", remarks: "", command: "↘ + 強K" },
-    { name: "テリブルスマッシュ", outbreak: "21", persistence: "2", rigidity: "20", hit: "1", guard: "-8", damage: "80", stan: "150", remarks: "", command: "→ + 強P" },
-    { name: "キラーストレート", outbreak: "5", persistence: "3", rigidity: "14", hit: "1", guard: "-4", damage: "50", stan: "80", remarks: "", command: "弱P ▶ 中P" },
-    { name: "ブレイクラッシュ", outbreak: "17", persistence: "2", rigidity: "20", hit: "1", guard: "-8", damage: "60", stan: "150", remarks: "", command: "→ + 中P ▶ → + 強P" },
-    { name: "スパルタンボム(前)", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", command: "" },
-    { name: "スパルタンボム(後)", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", command: "" },
+    {
+        name: "立ち強K(ボタンホールド)",
+        outbreak: "22",
+        persistence: "5",
+        rigidity: "18",
+        hit: "8",
+        guard: "2",
+        damage: "100",
+        stan: "150",
+        remarks: "1F～2Fは地上の相手にヒットしない",
+        type: "normal",
+        command: ""
+    },
+    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "9", hit: "4", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ中P", outbreak: "6", persistence: "2", rigidity: "15", hit: "5", guard: "0", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強P", outbreak: "7", persistence: "5", rigidity: "21", hit: "D", guard: "-8", damage: "90", stan: "150", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ中K", outbreak: "8", persistence: "2", rigidity: "17", hit: "4", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ強K", outbreak: "11", persistence: "2", rigidity: "27", hit: "D", guard: "-14", damage: "100", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+    { name: "ジャンプ弱P", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中P", outbreak: "5", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ強P", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ中K", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ強K", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "クォーラルパンチ", outbreak: "7", persistence: "4", rigidity: "14", hit: "2", guard: "-2", damage: "70", stan: "100", remarks: "", type: "unique", command: "→ + 中P" },
+    { name: "クォーラルキック", outbreak: "15", persistence: "4", rigidity: "18", hit: "4", guard: "-4", damage: "90", stan: "150", remarks: "", type: "unique", command: "↘ + 強K" },
+    { name: "テリブルスマッシュ", outbreak: "21", persistence: "2", rigidity: "20", hit: "1", guard: "-8", damage: "80", stan: "150", remarks: "", type: "unique", command: "→ + 強P" },
+    { name: "キラーストレート", outbreak: "5", persistence: "3", rigidity: "14", hit: "1", guard: "-4", damage: "50", stan: "80", remarks: "", type: "unique", command: "弱P ▶ 中P" },
+    { name: "ブレイクラッシュ", outbreak: "17", persistence: "2", rigidity: "20", hit: "1", guard: "-8", damage: "60", stan: "150", remarks: "", type: "unique", command: "→ + 中P ▶ → + 強P" },
+    { name: "スパルタンボム(前)", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+    { name: "スパルタンボム(後)", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
     {
         name: "[VS1]メタリックオーラ",
         outbreak: "",
@@ -49,6 +74,7 @@ const urien = [
         damage: "",
         stan: "",
         remarks: "「チャリオットタックル」「デンジャラスヘッドバット」「バイオレンスニードロップ」にアーマー判定を付与",
+        type: "vsystem",
         command: ""
     },
     {
@@ -61,6 +87,7 @@ const urien = [
         damage: "",
         stan: "",
         remarks: "発動後一回だけメタリックスフィアの性質変化",
+        type: "vsystem",
         command: ""
     },
     {
@@ -73,6 +100,7 @@ const urien = [
         damage: "60",
         stan: "0",
         remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中エイジスリフレクターが必殺技に追加",
+        type: "vsystem",
         command: ""
     },
     {
@@ -85,6 +113,7 @@ const urien = [
         damage: "60",
         stan: "0",
         remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中エイジスリフレクターが必殺技に追加",
+        type: "vsystem",
         command: ""
     },
     {
@@ -97,6 +126,7 @@ const urien = [
         damage: "60",
         stan: "0",
         remarks: "Vゲージタイマー+3000F\n                                                                                しゃがみの相手にヒットしない\n                                                                                                発動中エイジスリフレクターが必殺技に追加",
+        type: "vsystem",
         command: ""
     },
     {
@@ -109,6 +139,7 @@ const urien = [
         damage: "60",
         stan: "0",
         remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+        type: "vsystem",
         command: ""
     },
     {
@@ -121,6 +152,7 @@ const urien = [
         damage: "80",
         stan: "150",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～12F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -133,6 +165,7 @@ const urien = [
         damage: "90",
         stan: "150",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～15F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -145,6 +178,7 @@ const urien = [
         damage: "100",
         stan: "150",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 5F～18F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -157,6 +191,7 @@ const urien = [
         damage: "150",
         stan: "200",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～9F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -169,6 +204,7 @@ const urien = [
         damage: "100",
         stan: "150",
         remarks: "しゃがみの相手にヒットしない\n                                                ※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～10F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -181,6 +217,7 @@ const urien = [
         damage: "110",
         stan: "150",
         remarks: "しゃがみの相手にヒットしない\n                                                ※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～13F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -193,6 +230,7 @@ const urien = [
         damage: "120",
         stan: "150",
         remarks: "しゃがみの相手にヒットしない\n                                                ※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～15F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -205,6 +243,7 @@ const urien = [
         damage: "80",
         stan: "80",
         remarks: "※Vスキル1発動時の数値\n                1F～16F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※1ヒット時\n※2ガード時",
+        type: "special",
         command: ""
     },
     {
@@ -217,6 +256,7 @@ const urien = [
         damage: "100",
         stan: "200",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～27F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -229,6 +269,7 @@ const urien = [
         damage: "100",
         stan: "200",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～27F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -241,6 +282,7 @@ const urien = [
         damage: "100",
         stan: "200",
         remarks: "※Vスキル1発動時の数値\n                                                                メタリックオーラ発動中 3F～27F アーマー判定",
+        type: "special",
         command: ""
     },
     {
@@ -253,13 +295,26 @@ const urien = [
         damage: "150",
         stan: "200",
         remarks: "※Vスキル1発動時の数値\n                                                                レバーで移動量を調整可能\nメタリックオーラ発動中 3F～27F アーマー判定",
+        type: "special",
         command: ""
     },
-    { name: "弱 メタリックスフィア", outbreak: "14", persistence: "", rigidity: "全体50", hit: "-1", guard: "-7", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "中 メタリックスフィア", outbreak: "14", persistence: "", rigidity: "全体50", hit: "1", guard: "-7", damage: "60", stan: "100", remarks: "", command: "" },
-    { name: "強 メタリックスフィア", outbreak: "13", persistence: "", rigidity: "全体49", hit: "D", guard: "", damage: "70", stan: "100", remarks: "地上の相手にヒットしない", command: "" },
-    { name: "弱 メタリックスフィア(ボタンホールド)", outbreak: "53", persistence: "", rigidity: "全体81", hit: "7", guard: "4", damage: "90", stan: "120", remarks: "", command: "" },
-    { name: "中 メタリックスフィア(ボタンホールド)", outbreak: "53", persistence: "", rigidity: "全体83", hit: "5", guard: "2", damage: "90", stan: "120", remarks: "", command: "" },
+    { name: "弱 メタリックスフィア", outbreak: "14", persistence: "", rigidity: "全体50", hit: "-1", guard: "-7", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+    { name: "中 メタリックスフィア", outbreak: "14", persistence: "", rigidity: "全体50", hit: "1", guard: "-7", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+    {
+        name: "強 メタリックスフィア",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "全体49",
+        hit: "D",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "地上の相手にヒットしない",
+        type: "special",
+        command: ""
+    },
+    { name: "弱 メタリックスフィア(ボタンホールド)", outbreak: "53", persistence: "", rigidity: "全体81", hit: "7", guard: "4", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
+    { name: "中 メタリックスフィア(ボタンホールド)", outbreak: "53", persistence: "", rigidity: "全体83", hit: "5", guard: "2", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
     {
         name: "強 メタリックスフィア(ボタンホールド)",
         outbreak: "42",
@@ -270,13 +325,50 @@ const urien = [
         damage: "100",
         stan: "120",
         remarks: "地上の相手にヒットしない",
+        type: "special",
         command: ""
     },
-    { name: "EX メタリックスフィア 弱", outbreak: "12", persistence: "", rigidity: "全体44", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", command: "" },
-    { name: "EX メタリックスフィア 中", outbreak: "12", persistence: "", rigidity: "全体44", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", command: "" },
-    { name: "EX メタリックスフィア 強", outbreak: "13", persistence: "", rigidity: "全体45", hit: "D", guard: "", damage: "100", stan: "120", remarks: "地上の相手にヒットしない", command: "" },
-    { name: "EX メタリックスフィア 弱 (ボタンホールド)", outbreak: "41", persistence: "", rigidity: "全体68", hit: "17", guard: "13", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "EX メタリックスフィア 中 (ボタンホールド)", outbreak: "41", persistence: "", rigidity: "全体68", hit: "17", guard: "13", damage: "120", stan: "150", remarks: "", command: "" },
+    { name: "EX メタリックスフィア 弱", outbreak: "12", persistence: "", rigidity: "全体44", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
+    { name: "EX メタリックスフィア 中", outbreak: "12", persistence: "", rigidity: "全体44", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
+    {
+        name: "EX メタリックスフィア 強",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "全体45",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "120",
+        remarks: "地上の相手にヒットしない",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "EX メタリックスフィア 弱 (ボタンホールド)",
+        outbreak: "41",
+        persistence: "",
+        rigidity: "全体68",
+        hit: "17",
+        guard: "13",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "EX メタリックスフィア 中 (ボタンホールド)",
+        outbreak: "41",
+        persistence: "",
+        rigidity: "全体68",
+        hit: "17",
+        guard: "13",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        type: "special",
+        command: ""
+    },
     {
         name: "EX メタリックスフィア 強 (ボタンホールド)",
         outbreak: "32",
@@ -287,16 +379,65 @@ const urien = [
         damage: "130",
         stan: "150",
         remarks: "地上の相手にヒットしない",
+        type: "special",
         command: ""
     },
-    { name: "弱 メタリックスフィア(VS2版)", outbreak: "14", persistence: "", rigidity: "全体50", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", command: "" },
-    { name: "中 メタリックスフィア(VS2版)", outbreak: "14", persistence: "", rigidity: "全体50", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", command: "" },
-    { name: "強 メタリックスフィア(VS2版)", outbreak: "13", persistence: "", rigidity: "全体49", hit: "D", guard: "", damage: "90", stan: "120", remarks: "地上の相手にヒットしない", command: "" },
-    { name: "EX メタリックスフィア 弱(VS2版)", outbreak: "12", persistence: "", rigidity: "全体44", hit: "D", guard: "12", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "EX メタリックスフィア 中(VS2版)", outbreak: "12", persistence: "", rigidity: "全体44", hit: "D", guard: "12", damage: "120", stan: "150", remarks: "", command: "" },
-    { name: "EX メタリックスフィア 強(VS2版)", outbreak: "13", persistence: "", rigidity: "全体45", hit: "D", guard: "", damage: "130", stan: "150", remarks: "地上の相手にヒットしない", command: "" },
-    { name: "V追加エイジスリフレクター(前)", outbreak: "14", persistence: "250", rigidity: "全体30", hit: "6", guard: "1", damage: "60", stan: "0", remarks: "Vゲージタイマー全消費", command: "" },
-    { name: "V追加エイジスリフレクター(後)", outbreak: "24", persistence: "230", rigidity: "全体30", hit: "16", guard: "11", damage: "60", stan: "0", remarks: "Vゲージタイマー全消費", command: "" },
+    { name: "弱 メタリックスフィア(VS2版)", outbreak: "14", persistence: "", rigidity: "全体50", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
+    { name: "中 メタリックスフィア(VS2版)", outbreak: "14", persistence: "", rigidity: "全体50", hit: "3", guard: "2", damage: "90", stan: "120", remarks: "", type: "special", command: "" },
+    {
+        name: "強 メタリックスフィア(VS2版)",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "全体49",
+        hit: "D",
+        guard: "",
+        damage: "90",
+        stan: "120",
+        remarks: "地上の相手にヒットしない",
+        type: "special",
+        command: ""
+    },
+    { name: "EX メタリックスフィア 弱(VS2版)", outbreak: "12", persistence: "", rigidity: "全体44", hit: "D", guard: "12", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+    { name: "EX メタリックスフィア 中(VS2版)", outbreak: "12", persistence: "", rigidity: "全体44", hit: "D", guard: "12", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
+    {
+        name: "EX メタリックスフィア 強(VS2版)",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "全体45",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "150",
+        remarks: "地上の相手にヒットしない",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "V追加エイジスリフレクター(前)",
+        outbreak: "14",
+        persistence: "250",
+        rigidity: "全体30",
+        hit: "6",
+        guard: "1",
+        damage: "60",
+        stan: "0",
+        remarks: "Vゲージタイマー全消費",
+        type: "special",
+        command: ""
+    },
+    {
+        name: "V追加エイジスリフレクター(後)",
+        outbreak: "24",
+        persistence: "230",
+        rigidity: "全体30",
+        hit: "16",
+        guard: "11",
+        damage: "60",
+        stan: "0",
+        remarks: "Vゲージタイマー全消費",
+        type: "special",
+        command: ""
+    },
     {
         name: "V追加エイジスリフレクター(上)",
         outbreak: "16",
@@ -307,9 +448,10 @@ const urien = [
         damage: "60",
         stan: "0",
         remarks: "Vゲージタイマー全消費\n                                                                                しゃがみの相手にヒットしない",
+        type: "special",
         command: ""
     },
-    { name: "ドミナントクラッシュ", outbreak: "1+5", persistence: "19", rigidity: "60", hit: "D", guard: "-47", damage: "340", stan: "0", remarks: "1F～24F 完全無敵", command: "" }
+    { name: "ドミナントクラッシュ", outbreak: "1+5", persistence: "19", rigidity: "60", hit: "D", guard: "-47", damage: "340", stan: "0", remarks: "1F～24F 完全無敵", type: "ca", command: "" }
 ];
 exports.urien = urien;
 //# sourceMappingURL=urien.js.map
