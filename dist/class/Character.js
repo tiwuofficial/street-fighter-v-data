@@ -19,7 +19,7 @@ class default_1 {
         this.words = words;
         frames.forEach((obj, index) => {
             const frame = Object.assign(obj, { id: index + 1 });
-            this.frame.push(new Frame_1.default(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.command));
+            this.frame.push(new Frame_1.default(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.type, frame.command));
         });
     }
     /**
@@ -87,8 +87,13 @@ class default_1 {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEach(callback, sortKey = "", sortOrder = "asc") {
-        const frames = this.frame.slice();
+    sortedFrameForEach(callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
+        let frames = this.frame.slice();
+        if (filterTypes.length) {
+            frames = frames.filter(frame => {
+                return filterTypes.includes(frame.type);
+            });
+        }
         if (sortKey) {
             frames.sort((a, b) => {
                 // todo リファクタリングしないとやばし

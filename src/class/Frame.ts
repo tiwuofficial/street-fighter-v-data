@@ -11,10 +11,23 @@ export default class {
   damage: string;
   stan: string;
   remarks: string;
+  type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
   command: string;
 
-  
-  constructor(id: number, name: string, stan: string, remarks: string, guard: string, outbreak: string, persistence:string, rigidity:string, hit:string, damage:string, command:string) {
+  constructor(
+    id: number,
+    name: string,
+    stan: string,
+    remarks: string,
+    guard: string,
+    outbreak: string,
+    persistence: string,
+    rigidity: string,
+    hit: string,
+    damage: string,
+    type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca",
+    command: string
+  ) {
     this.id = id;
     this.name = name;
     this.outbreak = outbreak;
@@ -25,6 +38,7 @@ export default class {
     this.damage = damage;
     this.stan = stan;
     this.remarks = remarks;
+    this.type = type;
     this.command = command;
   }
 
