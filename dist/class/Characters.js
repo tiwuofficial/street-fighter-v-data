@@ -50,10 +50,10 @@ class default_1 {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEachByEnName(enName, callback, sortKey = "", sortOrder = "asc") {
+    sortedFrameForEachByEnName(enName, callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
         const character = this.getCharacterByEnName(enName);
         if (character) {
-            character.sortedFrameForEach(callback, sortKey, sortOrder);
+            character.sortedFrameForEach(callback, filterTypes, sortKey, sortOrder);
         }
     }
 }
