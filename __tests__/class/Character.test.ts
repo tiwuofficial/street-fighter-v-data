@@ -30,6 +30,26 @@ describe("sortedFrameForEach", (): void => {
     expect(cnt).toBe(character.frame.length);
   });
 
+  test("filter empty array, sort empty", (): void => {
+    const character = new Character("1", "リュウ", "ryu", ryu);
+    let cnt = 0;
+    character.sortedFrameForEach(() => {
+      cnt++;
+    }, []);
+
+    expect(cnt).toBe(character.frame.length);
+  });
+
+  test("filter empty string, sort empty", (): void => {
+    const character = new Character("1", "リュウ", "ryu", ryu);
+    let cnt = 0;
+    character.sortedFrameForEach(() => {
+      cnt++;
+    }, [""]);
+
+    expect(cnt).toBe(character.frame.length);
+  });
+
   test("filter special, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
