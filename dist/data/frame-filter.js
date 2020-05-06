@@ -4,7 +4,6 @@ const FrameFilteres_1 = require("../class/FrameFilteres");
 const FrameFilter_1 = require("../class/FrameFilter");
 const frameFilteres = new FrameFilteres_1.default();
 exports.frameFilteres = frameFilteres;
-frameFilteres.setFrameFilteres(new FrameFilter_1.default("0", "指定なし", ""));
 frameFilteres.setFrameFilteres(new FrameFilter_1.default("1", "通常技", "normal"));
 frameFilteres.setFrameFilteres(new FrameFilter_1.default("2", "ジャンプ技", "jump"));
 frameFilteres.setFrameFilteres(new FrameFilter_1.default("3", "特殊技", "unique"));
