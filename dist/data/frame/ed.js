@@ -1,30 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ed = [
-    {
-        name: "立ち弱P",
-        outbreak: "4",
-        persistence: "2",
-        rigidity: "8",
-        hit: "5",
-        guard: "3",
-        damage: "30",
-        stan: "70",
-        remarks: "連打キャンセル対応",
-        command: ""
-    },
-    {
-        name: "立ち中P",
-        outbreak: "6",
-        persistence: "3",
-        rigidity: "16",
-        hit: "9",
-        guard: "3",
-        damage: "60",
-        stan: "100",
-        remarks: "",
-        command: ""
-    },
+    { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "16", hit: "9", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "立ち強P",
         outbreak: "11",
@@ -35,68 +13,14 @@ const ed = [
         damage: "90",
         stan: "150",
         remarks: "クラッシュカウンター対応 (D)\n                                                                                                                                                                発生は最速での数値",
+        type: "normal",
         command: ""
     },
-    {
-        name: "立ち弱K",
-        outbreak: "3",
-        persistence: "3",
-        rigidity: "8",
-        hit: "2",
-        guard: "1",
-        damage: "30",
-        stan: "70",
-        remarks: "連打キャンセル対応",
-        command: ""
-    },
-    {
-        name: "立ち中K",
-        outbreak: "7",
-        persistence: "3",
-        rigidity: "15",
-        hit: "4",
-        guard: "2",
-        damage: "70",
-        stan: "100",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "立ち強K",
-        outbreak: "15",
-        persistence: "4",
-        rigidity: "22",
-        hit: "2",
-        guard: "-4",
-        damage: "80",
-        stan: "150",
-        remarks: "クラッシュカウンター対応(+20F)",
-        command: ""
-    },
-    {
-        name: "しゃがみ弱P",
-        outbreak: "4",
-        persistence: "2",
-        rigidity: "8",
-        hit: "5",
-        guard: "3",
-        damage: "30",
-        stan: "70",
-        remarks: "連打キャンセル対応",
-        command: ""
-    },
-    {
-        name: "しゃがみ中P",
-        outbreak: "6",
-        persistence: "3",
-        rigidity: "12",
-        hit: "5",
-        guard: "2",
-        damage: "60",
-        stan: "100",
-        remarks: "",
-        command: ""
-    },
+    { name: "立ち弱K", outbreak: "3", persistence: "3", rigidity: "8", hit: "2", guard: "1", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "15", hit: "4", guard: "2", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
+    { name: "立ち強K", outbreak: "15", persistence: "4", rigidity: "22", hit: "2", guard: "-4", damage: "80", stan: "150", remarks: "クラッシュカウンター対応(+20F)", type: "normal", command: "" },
+    { name: "しゃがみ弱P", outbreak: "4", persistence: "2", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+    { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "しゃがみ強P",
         outbreak: "8",
@@ -107,32 +31,11 @@ const ed = [
         damage: "80(※70)",
         stan: "150",
         remarks: "クラッシュカウンター対応 (D)\n                                                強制立ち効果\n                                                                                                                ※持続2F目以降",
+        type: "normal",
         command: ""
     },
-    {
-        name: "しゃがみ弱K",
-        outbreak: "4",
-        persistence: "2",
-        rigidity: "8",
-        hit: "2",
-        guard: "0",
-        damage: "20",
-        stan: "70",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "しゃがみ中K",
-        outbreak: "7",
-        persistence: "2",
-        rigidity: "17",
-        hit: "1",
-        guard: "-3",
-        damage: "50",
-        stan: "100",
-        remarks: "",
-        command: ""
-    },
+    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "8", hit: "2", guard: "0", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+    { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "17", hit: "1", guard: "-3", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
     {
         name: "しゃがみ強K",
         outbreak: "10",
@@ -143,104 +46,17 @@ const ed = [
         damage: "90",
         stan: "150",
         remarks: "クラッシュカウンター対応 (D)\n                                                                                                                                                                ※空振り時",
+        type: "normal",
         command: ""
     },
-    {
-        name: "ジャンプ弱P",
-        outbreak: "4",
-        persistence: "5",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "40",
-        stan: "70",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "ジャンプ中P",
-        outbreak: "7",
-        persistence: "4",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "70",
-        stan: "100",
-        remarks: "空中ヒット時ダウン",
-        command: ""
-    },
-    {
-        name: "ジャンプ強P",
-        outbreak: "9",
-        persistence: "4",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "90",
-        stan: "150",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "ジャンプ弱K",
-        outbreak: "3",
-        persistence: "6",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "40",
-        stan: "70",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "ジャンプ中K",
-        outbreak: "8",
-        persistence: "5",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "60",
-        stan: "100",
-        remarks: "めくり性能",
-        command: ""
-    },
-    {
-        name: "ジャンプ強K",
-        outbreak: "9",
-        persistence: "5",
-        rigidity: "",
-        hit: "",
-        guard: "",
-        damage: "90",
-        stan: "150",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "サイコブロー",
-        outbreak: "5",
-        persistence: "3",
-        rigidity: "17",
-        hit: "D",
-        guard: "",
-        damage: "130",
-        stan: "150",
-        remarks: "",
-        command: ""
-    },
-    {
-        name: "チート＆スマッシュ",
-        outbreak: "5",
-        persistence: "3",
-        rigidity: "17",
-        hit: "D",
-        guard: "",
-        damage: "140",
-        stan: "200",
-        remarks: "",
-        command: ""
-    },
+    { name: "ジャンプ弱P", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時ダウン", type: "jump", command: "" },
+    { name: "ジャンプ強P", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ弱K", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+    { name: "ジャンプ中K", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+    { name: "ジャンプ強K", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    { name: "サイコブロー", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+    { name: "チート＆スマッシュ", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
     {
         name: "サイコアンカー・グランド",
         outbreak: "21",
@@ -251,6 +67,7 @@ const ed = [
         damage: "80",
         stan: "200",
         remarks: "空中の相手にヒットしない\n                                                                発生は最速での数値\nアンカーが当たると自動で接近してボディブローを出す",
+        type: "vsystem",
         command: ""
     },
     {
@@ -263,6 +80,7 @@ const ed = [
         damage: "120",
         stan: "0",
         remarks: "空中の相手にヒットしない\n                                                                アンカーがヒットした場合は浮かせてこちらに寄せ、ガードの場合は地上で寄せる",
+        type: "vsystem",
         command: ""
     },
     {
@@ -275,6 +93,7 @@ const ed = [
         damage: "100",
         stan: "150",
         remarks: "地上の相手にヒットしない\n                                                                                発生は最速での数値\nアンカーが当たると自動で追尾して殴り付ける",
+        type: "vsystem",
         command: ""
     },
     {
@@ -287,20 +106,10 @@ const ed = [
         damage: "80",
         stan: "100",
         remarks: "地上の相手にヒットしない\n                                                                                アンカーがヒットした場合、地面に叩き付けてバウンドさせる",
+        type: "vsystem",
         command: ""
     },
-    {
-        name: "[VS2]サイコスウィング",
-        outbreak: "22",
-        persistence: "3",
-        rigidity: "20",
-        hit: "D",
-        guard: "-6",
-        damage: "70",
-        stan: "100",
-        remarks: "5F～24F 飛び道具無敵",
-        command: ""
-    },
+    { name: "[VS2]サイコスウィング", outbreak: "22", persistence: "3", rigidity: "20", hit: "D", guard: "-6", damage: "70", stan: "100", remarks: "5F～24F 飛び道具無敵", type: "vsystem", command: "" },
     {
         name: "[VS2]サイコスウィング(ボタンホールド)",
         outbreak: "38",
@@ -311,20 +120,10 @@ const ed = [
         damage: "80",
         stan: "120",
         remarks: "5F～37F 飛び道具無敵",
+        type: "vsystem",
         command: ""
     },
-    {
-        name: "[VS2]サイコスマッシュ",
-        outbreak: "11",
-        persistence: "5",
-        rigidity: "21",
-        hit: "D",
-        guard: "-6",
-        damage: "70",
-        stan: "100",
-        remarks: "",
-        command: ""
-    },
+    { name: "[VS2]サイコスマッシュ", outbreak: "11", persistence: "5", rigidity: "21", hit: "D", guard: "-6", damage: "70", stan: "100", remarks: "", type: "vsystem", command: "" },
     {
         name: "[VS2]サイコスマッシュ(ボタンホールド)",
         outbreak: "31",
@@ -335,6 +134,7 @@ const ed = [
         damage: "90",
         stan: "120",
         remarks: "※空振り時",
+        type: "vsystem",
         command: ""
     },
     {
@@ -347,6 +147,7 @@ const ed = [
         damage: "120",
         stan: "150",
         remarks: "※レバーを前に入れることで飛び道具速度が変化",
+        type: "vsystem",
         command: ""
     },
     {
@@ -359,56 +160,13 @@ const ed = [
         damage: "",
         stan: "",
         remarks: "1F～25F 打撃無敵\n                                                発動時スタン値200回復",
+        type: "vsystem",
         command: ""
     },
-    {
-        name: "サイコフリッカー",
-        outbreak: "6",
-        persistence: "6",
-        rigidity: "22",
-        hit: "3",
-        guard: "-2",
-        damage: "80",
-        stan: "150",
-        remarks: "ボタン強度による変化なし",
-        command: ""
-    },
-    {
-        name: "サイコスパーク",
-        outbreak: "11",
-        persistence: "8",
-        rigidity: "16",
-        hit: "1",
-        guard: "-2",
-        damage: "50",
-        stan: "80",
-        remarks: "飛び道具判定",
-        command: ""
-    },
-    {
-        name: "サイコシュート",
-        outbreak: "13",
-        persistence: "",
-        rigidity: "全体39",
-        hit: "4",
-        guard: "-4",
-        damage: "50",
-        stan: "70",
-        remarks: "強度で弾速変化",
-        command: ""
-    },
-    {
-        name: "EXサイコシュート",
-        outbreak: "13",
-        persistence: "",
-        rigidity: "全体36",
-        hit: "D",
-        guard: "8",
-        damage: "100",
-        stan: "150",
-        remarks: "",
-        command: ""
-    },
+    { name: "サイコフリッカー", outbreak: "6", persistence: "6", rigidity: "22", hit: "3", guard: "-2", damage: "80", stan: "150", remarks: "ボタン強度による変化なし", type: "special", command: "" },
+    { name: "サイコスパーク", outbreak: "11", persistence: "8", rigidity: "16", hit: "1", guard: "-2", damage: "50", stan: "80", remarks: "飛び道具判定", type: "special", command: "" },
+    { name: "サイコシュート", outbreak: "13", persistence: "", rigidity: "全体39", hit: "4", guard: "-4", damage: "50", stan: "70", remarks: "強度で弾速変化", type: "special", command: "" },
+    { name: "EXサイコシュート", outbreak: "13", persistence: "", rigidity: "全体36", hit: "D", guard: "8", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
     {
         name: "サイコナックル",
         outbreak: "30",
@@ -419,20 +177,10 @@ const ed = [
         damage: "100",
         stan: "150",
         remarks: "ヒット・ガードで背後周りに移行\n近距離で当てた方が崩れ時間が長い\nVS※VS2のみキャンセル可能",
+        type: "special",
         command: ""
     },
-    {
-        name: "サイコアッパー",
-        outbreak: "16",
-        persistence: "5",
-        rigidity: "33",
-        hit: "D",
-        guard: "-16",
-        damage: "120",
-        stan: "150",
-        remarks: "",
-        command: ""
-    },
+    { name: "サイコアッパー", outbreak: "16", persistence: "5", rigidity: "33", hit: "D", guard: "-16", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
     {
         name: "EXサイコアッパー",
         outbreak: "16(※13)",
@@ -443,6 +191,7 @@ const ed = [
         damage: "140",
         stan: "200",
         remarks: "1F～18F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※キャンセル発動時",
+        type: "special",
         command: ""
     },
     {
@@ -455,6 +204,7 @@ const ed = [
         damage: "50",
         stan: "100",
         remarks: "3F～9F 飛び道具無敵\n10F～13F 完全無敵\n                                                動作中常に被カウンター判定",
+        type: "special",
         command: ""
     },
     {
@@ -467,6 +217,7 @@ const ed = [
         damage: "70",
         stan: "100",
         remarks: "ヒット時のみ派生可",
+        type: "special",
         command: ""
     },
     {
@@ -479,6 +230,7 @@ const ed = [
         damage: "80",
         stan: "100",
         remarks: "ヒット時のみ派生可\n動作中飛び道具無敵",
+        type: "special",
         command: ""
     },
     {
@@ -491,6 +243,7 @@ const ed = [
         damage: "340",
         stan: "0",
         remarks: "1F～22F 完全無敵\n                                                持続フレームは空振り時の物",
+        type: "ca",
         command: ""
     }
 ];

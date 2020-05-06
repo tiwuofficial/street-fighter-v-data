@@ -1,31 +1,43 @@
 const lucia = [
-  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", command: "" },
-  { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "3", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "立ち強P", outbreak: "8", persistence: "2", rigidity: "22", hit: "2", guard: "-2", damage: "80", stan: "150", remarks: "", command: "" },
-  { name: "立ち弱K", outbreak: "5", persistence: "3", rigidity: "9", hit: "3", guard: "1", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "16", hit: "3", guard: "-2", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "立ち強K", outbreak: "13 ", persistence: "2", rigidity: "23", hit: "2", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+20F)", command: "" },
-  { name: "しゃがみ弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中P", outbreak: "5", persistence: "3", rigidity: "12", hit: "4", guard: "2", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強P", outbreak: "7", persistence: "3", rigidity: "26", hit: "-3", guard: "-6", damage: "70", stan: "150", remarks: "", command: "" },
-  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "8", hit: "2", guard: "0", damage: "20", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "14", hit: "2", guard: "-1", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強K", outbreak: "9", persistence: "2", rigidity: "22", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", command: "" },
-  { name: "ジャンプ弱P", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中P", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "ジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "4", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中K", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ強K", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "エルボークラッシュ", outbreak: "22", persistence: "2", rigidity: "23", hit: "0", guard: "-7", damage: "80", stan: "150", remarks: "", command: "→ + 強P" },
-  { name: "ニースライディング", outbreak: "8", persistence: "8", rigidity: "16", hit: "-4", guard: "-7", damage: "30", stan: "70", remarks: "", command: "↘ + 弱K" },
-  { name: "クイックサイドキック", outbreak: "8", persistence: "2", rigidity: "20", hit: "-2", guard: "-6", damage: "30", stan: "50", remarks: "", command: "弱P ▶ 弱K" },
-  { name: "スピンドライブ", outbreak: "11", persistence: "5", rigidity: "25", hit: "-3", guard: "-8", damage: "50", stan: "80", remarks: "", command: "弱P ▶ 弱K ▶ 中K" },
-  { name: "ストリートスタイルワンセット", outbreak: "13", persistence: "2", rigidity: "35", hit: "D", guard: "-15", damage: "60", stan: "120", remarks: "", command: "弱P ▶ 弱K ▶ 中K ▶ 強K" },
-  { name: "キャリーボーナス", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "100", stan: "150", remarks: "", command: "弱P ▶ 弱K ▶ 中K ▶ ↓ + 強P" },
-  { name: "ドロップターゲット", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", command: "(ジャンプ中に) 中P ▶ 強P" },
-  { name: "ジャーマンスープレックス", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
-  { name: "バックキャリースロー", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", command: "" },
+  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中P", outbreak: "5", persistence: "3", rigidity: "10", hit: "7", guard: "3", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強P", outbreak: "8", persistence: "2", rigidity: "22", hit: "2", guard: "-2", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
+  { name: "立ち弱K", outbreak: "5", persistence: "3", rigidity: "9", hit: "3", guard: "1", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "16", hit: "3", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強K", outbreak: "13 ", persistence: "2", rigidity: "23", hit: "2", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+20F)", type: "normal", command: "" },
+  { name: "しゃがみ弱P", outbreak: "3", persistence: "2", rigidity: "7", hit: "3", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "5", persistence: "3", rigidity: "12", hit: "4", guard: "2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強P", outbreak: "7", persistence: "3", rigidity: "26", hit: "-3", guard: "-6", damage: "70", stan: "150", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "8", hit: "2", guard: "0", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中K", outbreak: "6", persistence: "2", rigidity: "14", hit: "2", guard: "-1", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強K", outbreak: "9", persistence: "2", rigidity: "22", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(D)", type: "normal", command: "" },
+  { name: "ジャンプ弱P", outbreak: "3", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "ジャンプ強P", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "4", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ強K", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "エルボークラッシュ", outbreak: "22", persistence: "2", rigidity: "23", hit: "0", guard: "-7", damage: "80", stan: "150", remarks: "", type: "unique", command: "→ + 強P" },
+  { name: "ニースライディング", outbreak: "8", persistence: "8", rigidity: "16", hit: "-4", guard: "-7", damage: "30", stan: "70", remarks: "", type: "unique", command: "↘ + 弱K" },
+  { name: "クイックサイドキック", outbreak: "8", persistence: "2", rigidity: "20", hit: "-2", guard: "-6", damage: "30", stan: "50", remarks: "", type: "unique", command: "弱P ▶ 弱K" },
+  { name: "スピンドライブ", outbreak: "11", persistence: "5", rigidity: "25", hit: "-3", guard: "-8", damage: "50", stan: "80", remarks: "", type: "unique", command: "弱P ▶ 弱K ▶ 中K" },
+  {
+    name: "ストリートスタイルワンセット",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "35",
+    hit: "D",
+    guard: "-15",
+    damage: "60",
+    stan: "120",
+    remarks: "",
+    type: "unique",
+    command: "弱P ▶ 弱K ▶ 中K ▶ 強K"
+  },
+  { name: "キャリーボーナス", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "100", stan: "150", remarks: "", type: "unique", command: "弱P ▶ 弱K ▶ 中K ▶ ↓ + 強P" },
+  { name: "ドロップターゲット", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "unique", command: "(ジャンプ中に) 中P ▶ 強P" },
+  { name: "ジャーマンスープレックス", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
+  { name: "バックキャリースロー", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "150", stan: "200", remarks: "", type: "throw", command: "" },
   {
     name: "[VS1]タッピングキック",
     outbreak: "9",
@@ -36,6 +48,7 @@ const lucia = [
     damage: "60",
     stan: "100",
     remarks: "V※CA※3段目のみ可能\nヒット時のみ最終段に移行",
+    type: "vsystem",
     command: ""
   },
   {
@@ -48,10 +61,11 @@ const lucia = [
     damage: "70",
     stan: "100",
     remarks: "CA※3段目のみ可能\nヒット時のみ最終段に移行",
+    type: "vsystem",
     command: ""
   },
-  { name: "[VS2]アレストヒール", outbreak: "28", persistence: "2", rigidity: "2+着地後16", hit: "D", guard: "-4", damage: "90", stan: "120", remarks: "", command: "" },
-  { name: "V[VS2]アレストヒール", outbreak: "28", persistence: "2", rigidity: "2+着地後16", hit: "D", guard: "-4", damage: "100", stan: "120", remarks: "", command: "" },
+  { name: "[VS2]アレストヒール", outbreak: "28", persistence: "2", rigidity: "2+着地後16", hit: "D", guard: "-4", damage: "90", stan: "120", remarks: "", type: "vsystem", command: "" },
+  { name: "V[VS2]アレストヒール", outbreak: "28", persistence: "2", rigidity: "2+着地後16", hit: "D", guard: "-4", damage: "100", stan: "120", remarks: "", type: "vsystem", command: "" },
   {
     name: "バーニングファイト",
     outbreak: "1",
@@ -63,6 +77,7 @@ const lucia = [
     stan: "",
     remarks:
       "Vゲージタイマー+3000F\n                                                                                                                                                                                トルネードスピナー・サイクロンスピナー・フリッパーシュート・ハリケーンスピナー・ファイアスピナー・ナビングニードルがタイマー消費の専用技になる。\nVスキルが強化される。",
+    type: "vsystem",
     command: ""
   },
   {
@@ -75,6 +90,7 @@ const lucia = [
     damage: "60",
     stan: "0",
     remarks: "1F～31F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
   {
@@ -87,11 +103,12 @@ const lucia = [
     damage: "",
     stan: "",
     remarks: "動作終了後、ブレーキングに派生\n14F目からブレーキング、ラフチェイス、トルネードスピナー、サイクロンスピナーに派生可能",
+    type: "special",
     command: ""
   },
-  { name: "ブレーキング", outbreak: "", persistence: "", rigidity: "全体12", hit: "", guard: "", damage: "", stan: "", remarks: "", command: "" },
-  { name: "ラフチェイス", outbreak: "7", persistence: "6", rigidity: "18", hit: "3", guard: "-6", damage: "70", stan: "80", remarks: "", command: "" },
-  { name: "トルネードスピナー", outbreak: "4", persistence: "4", rigidity: "23+着地後14", hit: "D", guard: "-35", damage: "140", stan: "150", remarks: "", command: "" },
+  { name: "ブレーキング", outbreak: "", persistence: "", rigidity: "全体12", hit: "", guard: "", damage: "", stan: "", remarks: "", type: "special", command: "" },
+  { name: "ラフチェイス", outbreak: "7", persistence: "6", rigidity: "18", hit: "3", guard: "-6", damage: "70", stan: "80", remarks: "", type: "special", command: "" },
+  { name: "トルネードスピナー", outbreak: "4", persistence: "4", rigidity: "23+着地後14", hit: "D", guard: "-35", damage: "140", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "Vトルネードスピナー",
     outbreak: "4",
@@ -103,9 +120,10 @@ const lucia = [
     stan: "200",
     remarks:
       "Vゲージタイマー700F消費\n                                                                                                                                                                                1段目ヒット時のみ最終段に移行",
+    type: "special",
     command: ""
   },
-  { name: "サイクロンスピナー", outbreak: "5", persistence: "5", rigidity: "23", hit: "D", guard: "-8", damage: "120", stan: "150", remarks: "", command: "" },
+  { name: "サイクロンスピナー", outbreak: "5", persistence: "5", rigidity: "23", hit: "D", guard: "-8", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "Vサイクロンスピナー",
     outbreak: "5",
@@ -117,9 +135,10 @@ const lucia = [
     stan: "180",
     remarks:
       "Vゲージタイマー700F消費\n                                                                                                                                                                                ヒット時のみ最終段に移行",
+    type: "special",
     command: ""
   },
-  { name: "ナビングニードル", outbreak: "11", persistence: "5", rigidity: "8+着地後12", hit: "2", guard: "-2", damage: "80", stan: "150", remarks: "", command: "" },
+  { name: "ナビングニードル", outbreak: "11", persistence: "5", rigidity: "8+着地後12", hit: "2", guard: "-2", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
   {
     name: "Vナビングニードル",
     outbreak: "11",
@@ -131,6 +150,7 @@ const lucia = [
     stan: "150",
     remarks:
       "Vゲージタイマー700F消費\n                                                                                                                                                                                ヒット時のみ最終段に移行",
+    type: "special",
     command: ""
   },
   {
@@ -143,10 +163,11 @@ const lucia = [
     damage: "",
     stan: "",
     remarks: "動作終了後、ブレーキングに派生\n12F目からブレーキング、ラフチェイス、トルネードスピナー、サイクロンスピナーに派生可能",
+    type: "special",
     command: ""
   },
-  { name: "EX ブレーキング", outbreak: "", persistence: "", rigidity: "全体12", hit: "", guard: "", damage: "", stan: "", remarks: "", command: "" },
-  { name: "EX ラフチェイス", outbreak: "7", persistence: "3", rigidity: "27", hit: "D", guard: "-8", damage: "80", stan: "120", remarks: "", command: "" },
+  { name: "EX ブレーキング", outbreak: "", persistence: "", rigidity: "全体12", hit: "", guard: "", damage: "", stan: "", remarks: "", type: "special", command: "" },
+  { name: "EX ラフチェイス", outbreak: "7", persistence: "3", rigidity: "27", hit: "D", guard: "-8", damage: "80", stan: "120", remarks: "", type: "special", command: "" },
   {
     name: "EX トルネードスピナー",
     outbreak: "4",
@@ -157,6 +178,7 @@ const lucia = [
     damage: "160(※100)",
     stan: "200(※100)",
     remarks: "1段目ヒット時のみ最終段に移行\n※2段目のみヒット時",
+    type: "special",
     command: ""
   },
   {
@@ -170,6 +192,7 @@ const lucia = [
     stan: "220(※120)",
     remarks:
       "Vゲージタイマー400F消費\n                                                                                                                                                                                1段目ヒット時のみ最終段に移行\n※3～4段目のみヒット時",
+    type: "special",
     command: ""
   },
   {
@@ -182,6 +205,7 @@ const lucia = [
     damage: "150",
     stan: "180",
     remarks: "ヒット時のみ最終段に移行\nV※1段目のみ可能",
+    type: "special",
     command: ""
   },
   {
@@ -195,9 +219,22 @@ const lucia = [
     stan: "200",
     remarks:
       "Vゲージタイマー400F消費\n                                                                                                                                                                                ヒット時のみ最終段に移行",
+    type: "special",
     command: ""
   },
-  { name: "EX ナビングニードル", outbreak: "11", persistence: "5", rigidity: "8+着地後12", hit: "D", guard: "-2", damage: "120", stan: "150", remarks: "ヒット時のみ最終段に移行", command: "" },
+  {
+    name: "EX ナビングニードル",
+    outbreak: "11",
+    persistence: "5",
+    rigidity: "8+着地後12",
+    hit: "D",
+    guard: "-2",
+    damage: "120",
+    stan: "150",
+    remarks: "ヒット時のみ最終段に移行",
+    type: "special",
+    command: ""
+  },
   {
     name: "VEX ナビングニードル",
     outbreak: "11",
@@ -209,9 +246,22 @@ const lucia = [
     stan: "200",
     remarks:
       "Vゲージタイマー700F消費\n                                                                                                                                                                                ヒット時のみ最終段に移行",
+    type: "special",
     command: ""
   },
-  { name: "ファイアクラッカー", outbreak: "12", persistence: "7", rigidity: "19", hit: "0", guard: "-4", damage: "30", stan: "30", remarks: "20F目にフリッパーシュートへ派生可能", command: "" },
+  {
+    name: "ファイアクラッカー",
+    outbreak: "12",
+    persistence: "7",
+    rigidity: "19",
+    hit: "0",
+    guard: "-4",
+    damage: "30",
+    stan: "30",
+    remarks: "20F目にフリッパーシュートへ派生可能",
+    type: "special",
+    command: ""
+  },
   {
     name: "弱 フリッパーシュート",
     outbreak: "9",
@@ -222,11 +272,24 @@ const lucia = [
     damage: "60",
     stan: "100",
     remarks: "ファイアスピナーを当てることで性質が変化",
+    type: "special",
     command: ""
   },
-  { name: "中 フリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "強 フリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "EX ファイアクラッカー", outbreak: "12", persistence: "7", rigidity: "19", hit: "0", guard: "-4", damage: "30", stan: "30", remarks: "20F目にEXフリッパーシュートへ派生可能", command: "" },
+  { name: "中 フリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 フリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "2", guard: "-4", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  {
+    name: "EX ファイアクラッカー",
+    outbreak: "12",
+    persistence: "7",
+    rigidity: "19",
+    hit: "0",
+    guard: "-4",
+    damage: "30",
+    stan: "30",
+    remarks: "20F目にEXフリッパーシュートへ派生可能",
+    type: "special",
+    command: ""
+  },
   {
     name: "EX フリッパーシュート 弱",
     outbreak: "9",
@@ -237,11 +300,24 @@ const lucia = [
     damage: "80",
     stan: "120",
     remarks: "ファイアスピナーを当てることで性質が変化",
+    type: "special",
     command: ""
   },
-  { name: "EX フリッパーシュート 中", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "80", stan: "120", remarks: "", command: "" },
-  { name: "EX フリッパーシュート 強", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "80", stan: "120", remarks: "", command: "" },
-  { name: "Vファイアクラッカー", outbreak: "12", persistence: "7", rigidity: "19", hit: "0", guard: "-4", damage: "30", stan: "30", remarks: "20F目にVフリッパーシュートへ派生可能", command: "" },
+  { name: "EX フリッパーシュート 中", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "80", stan: "120", remarks: "", type: "special", command: "" },
+  { name: "EX フリッパーシュート 強", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "80", stan: "120", remarks: "", type: "special", command: "" },
+  {
+    name: "Vファイアクラッカー",
+    outbreak: "12",
+    persistence: "7",
+    rigidity: "19",
+    hit: "0",
+    guard: "-4",
+    damage: "30",
+    stan: "30",
+    remarks: "20F目にVフリッパーシュートへ派生可能",
+    type: "special",
+    command: ""
+  },
   {
     name: "Vフリッパーシュート",
     outbreak: "9",
@@ -253,10 +329,35 @@ const lucia = [
     stan: "120",
     remarks:
       "Vゲージタイマー400F消費\n                                                                                                                                                                                ファイアスピナーを当てることで性質が変化",
+    type: "special",
     command: ""
   },
-  { name: "Vフリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "90", stan: "120", remarks: "Vゲージタイマー400F消費", command: "" },
-  { name: "Vフリッパーシュート", outbreak: "12", persistence: "", rigidity: "全体40", hit: "4", guard: "3", damage: "90", stan: "120", remarks: "Vゲージタイマー400F消費", command: "" },
+  {
+    name: "Vフリッパーシュート",
+    outbreak: "12",
+    persistence: "",
+    rigidity: "全体40",
+    hit: "4",
+    guard: "3",
+    damage: "90",
+    stan: "120",
+    remarks: "Vゲージタイマー400F消費",
+    type: "special",
+    command: ""
+  },
+  {
+    name: "Vフリッパーシュート",
+    outbreak: "12",
+    persistence: "",
+    rigidity: "全体40",
+    hit: "4",
+    guard: "3",
+    damage: "90",
+    stan: "120",
+    remarks: "Vゲージタイマー400F消費",
+    type: "special",
+    command: ""
+  },
   {
     name: "弱 ハリケーンスピナー",
     outbreak: "7",
@@ -267,6 +368,7 @@ const lucia = [
     damage: "100(※60)",
     stan: "150(※100)",
     remarks: "1F～9F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※後ろ側判定",
+    type: "special",
     command: ""
   },
   {
@@ -279,6 +381,7 @@ const lucia = [
     damage: "110(※60)",
     stan: "150(※100)",
     remarks: "7F～12F 飛び道具無敵\n                1F～12F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※後ろ側判定",
+    type: "special",
     command: ""
   },
   {
@@ -291,6 +394,7 @@ const lucia = [
     damage: "120(※60)",
     stan: "150(※100)",
     remarks: "11F～16F 飛び道具無敵\n                1F～16F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※後ろ側判定",
+    type: "special",
     command: ""
   },
   {
@@ -303,6 +407,7 @@ const lucia = [
     damage: "150",
     stan: "200",
     remarks: "1F～10F 完全無敵\n                                                ヒット時のみ最終段に移行\n動作中常に被カウンター判定(被ダメージ1.2倍)",
+    type: "special",
     command: ""
   },
   {
@@ -316,13 +421,26 @@ const lucia = [
     stan: "200",
     remarks:
       "Vゲージタイマー1000F消費\n                                                                                                                                1F～10F 完全無敵\n                                                ヒット時のみ最終段に移行\n動作中常に被カウンター判定(被ダメージ1.2倍)",
+    type: "special",
     command: ""
   },
-  { name: "弱 ファイアスピナー", outbreak: "15", persistence: "3", rigidity: "9+着地後20", hit: "0", guard: "-4", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "中 ファイアスピナー", outbreak: "18", persistence: "3", rigidity: "10+着地後21", hit: "2", guard: "-4", damage: "70", stan: "100", remarks: "", command: "" },
-  { name: "強 ファイアスピナー", outbreak: "21", persistence: "3", rigidity: "8+着地後20", hit: "D", guard: "-4", damage: "80", stan: "100", remarks: "", command: "" },
-  { name: "EX ファイアスピナー", outbreak: "17", persistence: "3", rigidity: "6+着地後13", hit: "D", guard: "-2", damage: "70", stan: "120", remarks: "", command: "" },
-  { name: "Vファイアスピナー", outbreak: "17", persistence: "3", rigidity: "6+着地後13", hit: "D", guard: "-2", damage: "80", stan: "120", remarks: "Vゲージタイマー700F消費", command: "" },
+  { name: "弱 ファイアスピナー", outbreak: "15", persistence: "3", rigidity: "9+着地後20", hit: "0", guard: "-4", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "中 ファイアスピナー", outbreak: "18", persistence: "3", rigidity: "10+着地後21", hit: "2", guard: "-4", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "強 ファイアスピナー", outbreak: "21", persistence: "3", rigidity: "8+着地後20", hit: "D", guard: "-4", damage: "80", stan: "100", remarks: "", type: "special", command: "" },
+  { name: "EX ファイアスピナー", outbreak: "17", persistence: "3", rigidity: "6+着地後13", hit: "D", guard: "-2", damage: "70", stan: "120", remarks: "", type: "special", command: "" },
+  {
+    name: "Vファイアスピナー",
+    outbreak: "17",
+    persistence: "3",
+    rigidity: "6+着地後13",
+    hit: "D",
+    guard: "-2",
+    damage: "80",
+    stan: "120",
+    remarks: "Vゲージタイマー700F消費",
+    type: "special",
+    command: ""
+  },
   {
     name: "ハードヒットニー",
     outbreak: "1+7",
@@ -333,6 +451,7 @@ const lucia = [
     damage: "340",
     stan: "0",
     remarks: "1F～14F 完全無敵\n                                                ヒット時、攻撃持続終了まで完全無敵",
+    type: "ca",
     command: ""
   }
 ];

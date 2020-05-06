@@ -1,40 +1,40 @@
 const necalli = [
-  { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "", command: "" },
-  { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "14", hit: "5", guard: "0", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "V立ち中P", outbreak: "6", persistence: "3", rigidity: "13", hit: "6", guard: "0", damage: "70", stan: "100", remarks: "", command: "" },
-  { name: "立ち強P", outbreak: "9", persistence: "4", rigidity: "19", hit: "1", guard: "-2", damage: "80", stan: "150", remarks: "クラッシュカウンター対応 (膝)", command: "" },
-  { name: "V立ち強P", outbreak: "9", persistence: "5", rigidity: "18", hit: "2", guard: "-2", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (膝)", command: "" },
-  { name: "立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "2", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "V立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "2", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "立ち中K", outbreak: "5", persistence: "3", rigidity: "12", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "強制立ち効果", command: "" },
-  { name: "V立ち中K", outbreak: "5", persistence: "3", rigidity: "12", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "強制立ち効果", command: "" },
-  { name: "立ち強K", outbreak: "12", persistence: "4", rigidity: "21", hit: "3", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+19F)", command: "" },
-  { name: "V立ち強K", outbreak: "12", persistence: "4", rigidity: "21", hit: "3", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+19F)", command: "" },
-  { name: "しゃがみ弱P", outbreak: "3", persistence: "3", rigidity: "7", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "Vしゃがみ弱P", outbreak: "3", persistence: "3", rigidity: "7", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "連打キャンセル対応", command: "" },
-  { name: "しゃがみ中P", outbreak: "5", persistence: "2", rigidity: "13", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", command: "" },
-  { name: "Vしゃがみ中P", outbreak: "5", persistence: "2", rigidity: "13", hit: "5", guard: "2", damage: "70", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強P", outbreak: "9", persistence: "3", rigidity: "21", hit: "1", guard: "-4", damage: "80", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "Vしゃがみ強P", outbreak: "7", persistence: "3", rigidity: "21", hit: "1", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "", command: "" },
-  { name: "Vしゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "", command: "" },
-  { name: "しゃがみ中K", outbreak: "8", persistence: "3", rigidity: "15", hit: "0", guard: "-4", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "Vしゃがみ中K", outbreak: "8", persistence: "3", rigidity: "15", hit: "0", guard: "-4", damage: "50", stan: "100", remarks: "", command: "" },
-  { name: "しゃがみ強K", outbreak: "7", persistence: "4", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "Vしゃがみ強K", outbreak: "7", persistence: "4", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", command: "" },
-  { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "Vジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "50", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "Vジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", command: "" },
-  { name: "ジャンプ強P", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "Vジャンプ強P", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "100", stan: "150", remarks: "", command: "" },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "Vジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", command: "" },
-  { name: "ジャンプ中K", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-  { name: "Vジャンプ中K", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", command: "" },
-  { name: "ジャンプ強K", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
-  { name: "Vジャンプ強K", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", command: "" },
+  { name: "立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "V立ち弱P", outbreak: "3", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "14", hit: "5", guard: "0", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "V立ち中P", outbreak: "6", persistence: "3", rigidity: "13", hit: "6", guard: "0", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "立ち強P", outbreak: "9", persistence: "4", rigidity: "19", hit: "1", guard: "-2", damage: "80", stan: "150", remarks: "クラッシュカウンター対応 (膝)", type: "normal", command: "" },
+  { name: "V立ち強P", outbreak: "9", persistence: "5", rigidity: "18", hit: "2", guard: "-2", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (膝)", type: "normal", command: "" },
+  { name: "立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "2", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "V立ち弱K", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "2", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "立ち中K", outbreak: "5", persistence: "3", rigidity: "12", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "強制立ち効果", type: "normal", command: "" },
+  { name: "V立ち中K", outbreak: "5", persistence: "3", rigidity: "12", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "強制立ち効果", type: "normal", command: "" },
+  { name: "立ち強K", outbreak: "12", persistence: "4", rigidity: "21", hit: "3", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+19F)", type: "normal", command: "" },
+  { name: "V立ち強K", outbreak: "12", persistence: "4", rigidity: "21", hit: "3", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+19F)", type: "normal", command: "" },
+  { name: "しゃがみ弱P", outbreak: "3", persistence: "3", rigidity: "7", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "Vしゃがみ弱P", outbreak: "3", persistence: "3", rigidity: "7", hit: "3", guard: "1", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
+  { name: "しゃがみ中P", outbreak: "5", persistence: "2", rigidity: "13", hit: "4", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "Vしゃがみ中P", outbreak: "5", persistence: "2", rigidity: "13", hit: "5", guard: "2", damage: "70", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強P", outbreak: "9", persistence: "3", rigidity: "21", hit: "1", guard: "-4", damage: "80", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "Vしゃがみ強P", outbreak: "7", persistence: "3", rigidity: "21", hit: "1", guard: "-4", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "Vしゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "3", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ中K", outbreak: "8", persistence: "3", rigidity: "15", hit: "0", guard: "-4", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "Vしゃがみ中K", outbreak: "8", persistence: "3", rigidity: "15", hit: "0", guard: "-4", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  { name: "しゃがみ強K", outbreak: "7", persistence: "4", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "Vしゃがみ強K", outbreak: "7", persistence: "4", rigidity: "21", hit: "D", guard: "-10", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
+  { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "50", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "Vジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
+  { name: "ジャンプ強P", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ強P", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "100", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
+  { name: "ジャンプ中K", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "Vジャンプ中K", outbreak: "6", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
+  { name: "ジャンプ強K", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  { name: "Vジャンプ強K", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
   {
     name: "解放の短刀",
     outbreak: "23",
@@ -45,6 +45,7 @@ const necalli = [
     damage: "80",
     stan: "100",
     remarks: "クラッシュカウンター対応(+20F)\n                                                                                                                12F～19F 投げ無敵",
+    type: "unique",
     command: "↘ + 強P"
   },
   {
@@ -57,6 +58,7 @@ const necalli = [
     damage: "90",
     stan: "150",
     remarks: "クラッシュカウンター対応(+20F)\n                                                                                                                12F～19F 投げ無敵",
+    type: "unique",
     command: "↘ + 強P"
   },
   {
@@ -69,12 +71,13 @@ const necalli = [
     damage: "100",
     stan: "150",
     remarks: "クラッシュカウンター対応(+26F)\n                                                                                                                23F～34F 投げ無敵",
+    type: "unique",
     command: "↘ + 強P(ボタンホールド)"
   },
-  { name: "太陽の道", outbreak: "14", persistence: "12", rigidity: "着地後11", hit: "", guard: "", damage: "80", stan: "100", remarks: "", command: "(前ジャンプ中に) ↓ + 強K" },
-  { name: "V太陽の道", outbreak: "14", persistence: "12", rigidity: "着地後11", hit: "", guard: "", damage: "80", stan: "100", remarks: "", command: "(前ジャンプ中に) ↓ + 強K" },
-  { name: "祭壇への誘い(2段目)", outbreak: "11", persistence: "4", rigidity: "21", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "", command: "中K ▶ 強K" },
-  { name: "V祭壇への誘い(2段目)", outbreak: "11", persistence: "4", rigidity: "21", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "", command: "中K ▶ 強K" },
+  { name: "太陽の道", outbreak: "14", persistence: "12", rigidity: "着地後11", hit: "", guard: "", damage: "80", stan: "100", remarks: "", type: "unique", command: "(前ジャンプ中に) ↓ + 強K" },
+  { name: "V太陽の道", outbreak: "14", persistence: "12", rigidity: "着地後11", hit: "", guard: "", damage: "80", stan: "100", remarks: "", type: "unique", command: "(前ジャンプ中に) ↓ + 強K" },
+  { name: "祭壇への誘い(2段目)", outbreak: "11", persistence: "4", rigidity: "21", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "", type: "unique", command: "中K ▶ 強K" },
+  { name: "V祭壇への誘い(2段目)", outbreak: "11", persistence: "4", rigidity: "21", hit: "D", guard: "-8", damage: "60", stan: "100", remarks: "", type: "unique", command: "中K ▶ 強K" },
   {
     name: "祭壇への誘い(3段目)",
     outbreak: "20",
@@ -85,6 +88,7 @@ const necalli = [
     damage: "40",
     stan: "50",
     remarks: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) 中K ▶ 強K ▶ 中P 中KOR ← + 中P 中K"
   },
   {
@@ -97,6 +101,7 @@ const necalli = [
     damage: "60",
     stan: "80",
     remarks: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) 中K ▶ 強K ▶ 中P 中KOR ← + 中P 中K"
   },
   {
@@ -109,6 +114,7 @@ const necalli = [
     damage: "60",
     stan: "80",
     remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
   },
   {
@@ -121,14 +127,15 @@ const necalli = [
     damage: "60",
     stan: "80",
     remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
   },
-  { name: "魂の刻印", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "120", remarks: "", command: "" },
-  { name: "V魂の刻印", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", command: "" },
-  { name: "魂の選別", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "110", stan: "120", remarks: "", command: "" },
-  { name: "V魂の選別", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", command: "" },
-  { name: "[VS1]力の集約", outbreak: "25", persistence: "3", rigidity: "29", hit: "D", guard: "-1", damage: "50", stan: "100", remarks: "空中の相手にヒットしない", command: "" },
-  { name: "V[VS1]力の集約", outbreak: "20", persistence: "3", rigidity: "34", hit: "D", guard: "-1", damage: "70", stan: "150", remarks: "空中の相手にヒットしない", command: "" },
+  { name: "魂の刻印", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "120", remarks: "", type: "throw", command: "" },
+  { name: "V魂の刻印", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+  { name: "魂の選別", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "110", stan: "120", remarks: "", type: "throw", command: "" },
+  { name: "V魂の選別", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
+  { name: "[VS1]力の集約", outbreak: "25", persistence: "3", rigidity: "29", hit: "D", guard: "-1", damage: "50", stan: "100", remarks: "空中の相手にヒットしない", type: "vsystem", command: "" },
+  { name: "V[VS1]力の集約", outbreak: "20", persistence: "3", rigidity: "34", hit: "D", guard: "-1", damage: "70", stan: "150", remarks: "空中の相手にヒットしない", type: "vsystem", command: "" },
   {
     name: "[VS2]地を這う獣",
     outbreak: "24",
@@ -139,6 +146,7 @@ const necalli = [
     damage: "60",
     stan: "80",
     remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    type: "vsystem",
     command: ""
   },
   {
@@ -151,6 +159,7 @@ const necalli = [
     damage: "60",
     stan: "80",
     remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    type: "vsystem",
     command: ""
   },
   {
@@ -164,6 +173,7 @@ const necalli = [
     stan: "",
     remarks:
       "Vゲージタイマー+無限F\n                                                                                                                                                                                ラウンド終了まで持続\n専用の必殺技が追加",
+    type: "vsystem",
     command: ""
   },
   {
@@ -176,11 +186,12 @@ const necalli = [
     damage: "60",
     stan: "0",
     remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    type: "vsystem",
     command: ""
   },
-  { name: "弱 円盤の導き", outbreak: "18", persistence: "3", rigidity: "25", hit: "D", guard: "-6", damage: "80", stan: "150", remarks: "6F～20Fまで相殺判定", command: "" },
-  { name: "中 円盤の導き", outbreak: "21", persistence: "3", rigidity: "26", hit: "D", guard: "-6", damage: "100", stan: "150", remarks: "6F～23Fまで相殺判定", command: "" },
-  { name: "強 円盤の導き", outbreak: "24", persistence: "3", rigidity: "26", hit: "D", guard: "-6", damage: "120", stan: "150", remarks: "6F～26Fまで相殺判定", command: "" },
+  { name: "弱 円盤の導き", outbreak: "18", persistence: "3", rigidity: "25", hit: "D", guard: "-6", damage: "80", stan: "150", remarks: "6F～20Fまで相殺判定", type: "special", command: "" },
+  { name: "中 円盤の導き", outbreak: "21", persistence: "3", rigidity: "26", hit: "D", guard: "-6", damage: "100", stan: "150", remarks: "6F～23Fまで相殺判定", type: "special", command: "" },
+  { name: "強 円盤の導き", outbreak: "24", persistence: "3", rigidity: "26", hit: "D", guard: "-6", damage: "120", stan: "150", remarks: "6F～26Fまで相殺判定", type: "special", command: "" },
   {
     name: "V弱 円盤の導き",
     outbreak: "15",
@@ -191,6 +202,7 @@ const necalli = [
     damage: "100",
     stan: "150",
     remarks: "6F～20Fまで相殺判定\nキャンセル発動時はタメ不要",
+    type: "special",
     command: ""
   },
   {
@@ -203,6 +215,7 @@ const necalli = [
     damage: "120",
     stan: "150",
     remarks: "6F～23Fまで相殺判定\nキャンセル発動時はタメ不要",
+    type: "special",
     command: ""
   },
   {
@@ -215,9 +228,22 @@ const necalli = [
     damage: "140",
     stan: "150",
     remarks: "6F～26Fまで相殺判定\nキャンセル発動時はタメ不要",
+    type: "special",
     command: ""
   },
-  { name: "EX 円盤の導き", outbreak: "17", persistence: "7", rigidity: "31", hit: "D", guard: "-13", damage: "150", stan: "200", remarks: "5F～47Fまで相殺判定\nV※2段目のみ可能", command: "" },
+  {
+    name: "EX 円盤の導き",
+    outbreak: "17",
+    persistence: "7",
+    rigidity: "31",
+    hit: "D",
+    guard: "-13",
+    damage: "150",
+    stan: "200",
+    remarks: "5F～47Fまで相殺判定\nV※2段目のみ可能",
+    type: "special",
+    command: ""
+  },
   {
     name: "VEX 円盤の導き",
     outbreak: "17",
@@ -228,6 +254,7 @@ const necalli = [
     damage: "170",
     stan: "200",
     remarks: "5F～47Fまで相殺判定\nキャンセル発動時はタメ不要",
+    type: "special",
     command: ""
   },
   {
@@ -240,6 +267,7 @@ const necalli = [
     damage: "100",
     stan: "150",
     remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -252,6 +280,7 @@ const necalli = [
     damage: "110",
     stan: "150",
     remarks: "1F～足元無敵\n動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -264,6 +293,7 @@ const necalli = [
     damage: "120",
     stan: "150",
     remarks: "3F～8F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -276,6 +306,7 @@ const necalli = [
     damage: "120",
     stan: "150",
     remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -288,6 +319,7 @@ const necalli = [
     damage: "130",
     stan: "150",
     remarks: "1F～足元無敵\n動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -300,6 +332,7 @@ const necalli = [
     damage: "140",
     stan: "150",
     remarks: "3F～8F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定",
+    type: "special",
     command: ""
   },
   {
@@ -312,6 +345,7 @@ const necalli = [
     damage: "150",
     stan: "200",
     remarks: "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)",
+    type: "special",
     command: ""
   },
   {
@@ -324,24 +358,37 @@ const necalli = [
     damage: "170",
     stan: "200",
     remarks: "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)",
+    type: "special",
     command: ""
   },
-  { name: "弱 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "140", stan: "200", remarks: "", command: "" },
-  { name: "中 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "150", stan: "200", remarks: "", command: "" },
-  { name: "強 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "160", stan: "200", remarks: "", command: "" },
-  { name: "V弱 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "160", stan: "200", remarks: "", command: "" },
-  { name: "V中 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "170", stan: "200", remarks: "", command: "" },
-  { name: "V強 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "180", stan: "200", remarks: "", command: "" },
-  { name: "EX 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "60", stan: "50", remarks: "", command: "" },
-  { name: "VEX 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "80", stan: "50", remarks: "", command: "" },
-  { name: "弱 勇猛なる決起", outbreak: "14", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "50", stan: "100", remarks: "14～16Fまで相殺判定", command: "" },
-  { name: "中 勇猛なる決起", outbreak: "19", persistence: "3", rigidity: "20", hit: "5", guard: "-2", damage: "60", stan: "100", remarks: "19～21Fまで相殺判定", command: "" },
-  { name: "強 勇猛なる決起", outbreak: "23", persistence: "3", rigidity: "16", hit: "D", guard: "0", damage: "80", stan: "150", remarks: "23～25Fまで相殺判定", command: "" },
-  { name: "V弱 勇猛なる決起", outbreak: "14", persistence: "4", rigidity: "19", hit: "2", guard: "-3", damage: "70", stan: "100", remarks: "14～17Fまで相殺判定", command: "" },
-  { name: "V中 勇猛なる決起", outbreak: "19", persistence: "5", rigidity: "18", hit: "5", guard: "-1", damage: "80", stan: "100", remarks: "19～23Fまで相殺判定", command: "" },
-  { name: "V強 勇猛なる決起", outbreak: "23", persistence: "6", rigidity: "13", hit: "D", guard: "2", damage: "100", stan: "150", remarks: "23～28Fまで相殺判定", command: "" },
-  { name: "EX 勇猛なる決起", outbreak: "10", persistence: "4", rigidity: "21", hit: "2", guard: "2", damage: "120", stan: "200", remarks: "10～11F、36～37F相殺判定\nV※1段目のみ可能", command: "" },
-  { name: "VEX 勇猛なる決起", outbreak: "10", persistence: "6", rigidity: "20", hit: "2", guard: "2", damage: "140", stan: "200", remarks: "10～12F、36～38F相殺判定", command: "" },
+  { name: "弱 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "140", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "中 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "150", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "強 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "160", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "V弱 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "160", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "V中 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "170", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "V強 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "180", stan: "200", remarks: "", type: "special", command: "" },
+  { name: "EX 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "60", stan: "50", remarks: "", type: "special", command: "" },
+  { name: "VEX 大地の仮面", outbreak: "8", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "80", stan: "50", remarks: "", type: "special", command: "" },
+  { name: "弱 勇猛なる決起", outbreak: "14", persistence: "3", rigidity: "20", hit: "2", guard: "-4", damage: "50", stan: "100", remarks: "14～16Fまで相殺判定", type: "special", command: "" },
+  { name: "中 勇猛なる決起", outbreak: "19", persistence: "3", rigidity: "20", hit: "5", guard: "-2", damage: "60", stan: "100", remarks: "19～21Fまで相殺判定", type: "special", command: "" },
+  { name: "強 勇猛なる決起", outbreak: "23", persistence: "3", rigidity: "16", hit: "D", guard: "0", damage: "80", stan: "150", remarks: "23～25Fまで相殺判定", type: "special", command: "" },
+  { name: "V弱 勇猛なる決起", outbreak: "14", persistence: "4", rigidity: "19", hit: "2", guard: "-3", damage: "70", stan: "100", remarks: "14～17Fまで相殺判定", type: "special", command: "" },
+  { name: "V中 勇猛なる決起", outbreak: "19", persistence: "5", rigidity: "18", hit: "5", guard: "-1", damage: "80", stan: "100", remarks: "19～23Fまで相殺判定", type: "special", command: "" },
+  { name: "V強 勇猛なる決起", outbreak: "23", persistence: "6", rigidity: "13", hit: "D", guard: "2", damage: "100", stan: "150", remarks: "23～28Fまで相殺判定", type: "special", command: "" },
+  {
+    name: "EX 勇猛なる決起",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "21",
+    hit: "2",
+    guard: "2",
+    damage: "120",
+    stan: "200",
+    remarks: "10～11F、36～37F相殺判定\nV※1段目のみ可能",
+    type: "special",
+    command: ""
+  },
+  { name: "VEX 勇猛なる決起", outbreak: "10", persistence: "6", rigidity: "20", hit: "2", guard: "2", damage: "140", stan: "200", remarks: "10～12F、36～38F相殺判定", type: "special", command: "" },
   {
     name: "V煙纏う鏡",
     outbreak: "43",
@@ -352,6 +399,7 @@ const necalli = [
     damage: "70",
     stan: "100",
     remarks: "16F～47F 飛び道具無敵\n                                                受身不可\n必殺技キャンセル可能な技とVスキルからキャンセル発動可能",
+    type: "special",
     command: ""
   },
   {
@@ -364,9 +412,10 @@ const necalli = [
     damage: "80",
     stan: "100",
     remarks: "25F～63F 飛び道具無敵\n                                                ダウン追い討ち判定\n必殺技キャンセル可能な技とVスキルからキャンセル発動可能",
+    type: "special",
     command: ""
   },
-  { name: "名誉の儀式", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "330", stan: "0", remarks: "1F～8F 完全無敵", command: "" },
-  { name: "V魂の献上", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "370", stan: "0", remarks: "1F～8F 完全無敵", command: "" }
+  { name: "名誉の儀式", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "330", stan: "0", remarks: "1F～8F 完全無敵", type: "ca", command: "" },
+  { name: "V魂の献上", outbreak: "1+6", persistence: "2", rigidity: "45", hit: "D", guard: "-25", damage: "370", stan: "0", remarks: "1F～8F 完全無敵", type: "ca", command: "" }
 ];
 export { necalli };
