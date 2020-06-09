@@ -1,5 +1,13 @@
 # street-fighter-v-data
 
+## Build
+
+```
+npm run build
+```
+
+# Script
+
 
 ```javascript
 list = [];
