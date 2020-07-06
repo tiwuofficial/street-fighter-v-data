@@ -9,6 +9,23 @@ class default_1 {
         this.enName = enName;
         this.words = words;
     }
+    /**
+     *
+     * @param {string} text
+     * @returns {boolean}
+     */
+    existsLP(text) {
+        let exists = false;
+        this.words.forEach(word => {
+            if (text.indexOf(word) > 0) {
+                exists = true;
+            }
+        });
+        if (text.indexOf(this.name) > 0) {
+            exists = true;
+        }
+        return exists;
+    }
 }
 exports.default = default_1;
 //# sourceMappingURL=Lp.js.map
