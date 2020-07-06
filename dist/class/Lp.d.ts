@@ -1,5 +1,9 @@
 export default class {
     id: string;
-    text: string;
-    constructor(id: string, text: string);
+    startLP: number;
+    endLP: number;
+    name: string;
+    enName: string;
+    words: string[];
+    constructor(id: string, startLP: number, endLP: number, name: string, enName: string, words?: string[]);
 }
