@@ -33,10 +33,17 @@ export default class {
     }
 
     if (this.endLP && String(this.endLP).length >= 4) {
+      // 桁数に応じて刻んでいくLPを変える
+      // 4桁であれば100, 5桁であれば1000
       const splitLP = Math.pow(10, String(this.endLP).length - 2);
 
       // 3桁以上の数値を取り出す
-      const lpCheck = text.match(/[0-9]{3,}/g).some(number => {
+      const matches = text.match(/[0-9]{3,}/g);
+      if (matches === null) {
+        return false;
+      }
+
+      const lpCheck = matches.some(number => {
         let exists = false;
         for (let lp = this.startLP; lp < this.endLP; lp = lp + splitLP) {
           if (parseInt(number) === lp) {

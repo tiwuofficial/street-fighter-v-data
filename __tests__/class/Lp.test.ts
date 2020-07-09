@@ -64,4 +64,14 @@ describe("existsLP", (): void => {
     `;
     expect(lp.existsLP(text)).toBe(true);
   });
+
+  test("なし", (): void => {
+    const lp = new Lp("3", 1000, 1499, "スーパー ブロンズ", "SUPER BRONZE");
+    const text = `
+    【使用キャラ】ダルシム
+    【Lp】1
+    【ルール】3先
+    `;
+    expect(lp.existsLP(text)).toBe(false);
+  });
 });
