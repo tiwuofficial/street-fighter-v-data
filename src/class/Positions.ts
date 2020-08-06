@@ -19,7 +19,7 @@ export default class {
    *
    * @param {(Position: ) => void} callback
    */
-    positionsForEach(callback: (position: Position) => void): void {
+  positionsForEach(callback: (position: Position) => void): void {
     this.positions.forEach(position => {
       callback(position);
     });
