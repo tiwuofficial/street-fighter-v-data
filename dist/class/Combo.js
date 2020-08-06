@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class default_1 {
-    constructor(id, docId = "", character, combo, damage, stun, title = "", memo = "", create) {
+    constructor(id, docId = "", character, combo, startStatus, position, damage, stun, title = "", memo = "", create) {
         this.id = id;
         this.docId = docId;
         this.character = character;
         this.combo = combo;
+        this.startStatus = startStatus;
+        this.position = position;
         this.damage = damage;
         this.stun = stun;
         this.title = title;

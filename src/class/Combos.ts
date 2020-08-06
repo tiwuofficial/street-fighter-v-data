@@ -41,6 +41,8 @@ export default class {
         characterId: combo.character.id,
         combo: frames,
         damage: combo.damage,
+        startStatus: combo.startStatus.id,
+        position: combo.position.id,
         stun: combo.stun,
         title: combo.title,
         memo: combo.memo,
