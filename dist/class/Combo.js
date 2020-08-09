@@ -24,6 +24,8 @@ class default_1 {
             characterId: this.character.id,
             combo: frames,
             damage: this.damage,
+            startStatusId: this.startStatus.id,
+            positionId: this.position.id,
             stun: this.stun,
             title: this.title,
             memo: this.memo,
