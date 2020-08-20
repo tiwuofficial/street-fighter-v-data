@@ -16,6 +16,12 @@ class default_1 {
         }
         return 1;
     }
+    deleteComboById(id) {
+        const index = this.combos.findIndex(combo => {
+            return combo.id === id;
+        });
+        this.combos.splice(index, 1);
+    }
     pushCombo(combo) {
         this.combos.push(combo);
     }

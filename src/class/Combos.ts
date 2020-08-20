@@ -21,6 +21,13 @@ export default class {
     return 1;
   }
 
+  deleteComboById(id: number): void {
+    const index = this.combos.findIndex(combo => {
+      return combo.id === id;
+    });
+    this.combos.splice(index, 1);
+  }
+
   pushCombo(combo: Combo): void {
     this.combos.push(combo);
   }
