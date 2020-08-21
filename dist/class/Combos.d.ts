@@ -4,7 +4,7 @@ export default class {
     constructor();
     getComboFromId(id: number): Combo | undefined;
     getNextId(): number;
-    deleteComboById(id: number): void;
+    updateComboById(id: number, combo: Combo): void;
     pushCombo(combo: Combo): void;
     save(): void;
     getSaveDate(): any;

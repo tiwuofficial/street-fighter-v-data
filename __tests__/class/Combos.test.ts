@@ -41,8 +41,8 @@ describe("getNextId", (): void => {
   });
 });
 
-describe("deleteComboById", (): void => {
-  test("deleteComboById", (): void => {
+describe("updateComboById", (): void => {
+  test("updateComboById", (): void => {
     const combos = new Combos();
     const character = new Character("1", "リュウ", "ryu", ryu);
     const startStatus = startStatuses.getStartStatusById("1");
@@ -51,16 +51,15 @@ describe("deleteComboById", (): void => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(new Combo(1, "", character, [1, 2] as any, startStatus, position, 1, 2, "title", "memo", new Date()));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    combos.pushCombo(new Combo(2, "", character, [1, 2] as any, startStatus, position, 1, 2, "title", "memo", new Date()));
+    combos.pushCombo(new Combo(2, "", character, [1, 2] as any, startStatus, position, 1, 2, "title2", "memo", new Date()));
 
     const combo = combos.getComboFromId(2);
+    expect(combo.title).toBe("title2");
 
-    expect(combo.id).toBe(2);
-
-    combos.deleteComboById(2);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    combos.updateComboById(2, new Combo(2, "", character, [1, 2] as any, startStatus, position, 1, 2, "title2-1", "memo", new Date()));
 
     const combo2 = combos.getComboFromId(2);
-
-    expect(combo2).toBe(undefined);
+    expect(combo2.title).toBe("title2-1");
   });
 });

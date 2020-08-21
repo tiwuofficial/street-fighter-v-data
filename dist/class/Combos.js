@@ -16,11 +16,11 @@ class default_1 {
         }
         return 1;
     }
-    deleteComboById(id) {
+    updateComboById(id, combo) {
         const index = this.combos.findIndex(combo => {
             return combo.id === id;
         });
-        this.combos.splice(index, 1);
+        this.combos.splice(index, 1, combo);
     }
     pushCombo(combo) {
         this.combos.push(combo);
