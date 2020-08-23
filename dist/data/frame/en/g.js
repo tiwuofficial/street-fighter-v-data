@@ -1,11 +1,76 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const g = [
-    { name: "Standing LP", outbreak: "4", persistence: "2", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "Standing MP", outbreak: "6", persistence: "3", rigidity: "12", hit: "7", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-    { name: "Standing HP", outbreak: "11", persistence: "4", rigidity: "21", hit: "3", guard: "-3", damage: "80", stan: "150", remarks: "Triggers Crush Counter (D)", type: "normal", command: "" },
-    { name: "Standing LK", outbreak: "5", persistence: "3", rigidity: "10", hit: "4", guard: "1", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "Standing MK", outbreak: "9", persistence: "3", rigidity: "17", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "Standing LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "8",
+        hit: "5",
+        guard: "3",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "7",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HP",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "21",
+        hit: "3",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter (D)",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing LK",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "1",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MK",
+        outbreak: "9",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "Standing HK",
         outbreak: "9",
@@ -16,11 +81,38 @@ const g = [
         damage: "90(*80)",
         stan: "150(*100)",
         remarks: "*On max-distance hit\nCA*Only possible during 1st attack",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "Crouching LP", outbreak: "4", persistence: "3", rigidity: "8", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "Crouching MP", outbreak: "7", persistence: "3", rigidity: "15", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "Crouching LP",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "8",
+        hit: "5",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "15",
+        hit: "5",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "Crouching HP",
         outbreak: "8",
@@ -31,11 +123,38 @@ const g = [
         damage: "90(*80)",
         stan: "150",
         remarks: "Forces stand\n                                                                                                                From active frame 2F",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "Crouching LK", outbreak: "4", persistence: "2", rigidity: "9", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "Crouching MK", outbreak: "8", persistence: "3", rigidity: "14", hit: "4", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "Crouching LK",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "4",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "14",
+        hit: "4",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "Crouching HK",
         outbreak: "10",
@@ -46,15 +165,94 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "Triggers Crush Counter (D)\n                                                                                                                                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "Jumping LP", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-    { name: "Jumping MP", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "jump", command: "" },
-    { name: "Jumping HP", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-    { name: "Jumping LK", outbreak: "4", persistence: "7", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-    { name: "Jumping MK", outbreak: "5", persistence: "6", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
-    { name: "Jumping HK", outbreak: "11", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    {
+        name: "Jumping LP",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "7",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "4",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "11",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
     {
         name: "Wild President",
         outbreak: "15",
@@ -65,6 +263,7 @@ const g = [
         damage: "90",
         stan: "150",
         remarks: "Triggers Crush Counter (+16F)\n                                                                                                                                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "unique",
         command: "→ + HP"
     },
@@ -78,10 +277,24 @@ const g = [
         damage: "80(*70)",
         stan: "150(*150)",
         remarks: "Can only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "unique",
         command: "← + HP"
     },
-    { name: "Crash President", outbreak: "25", persistence: "2", rigidity: "22", hit: "1", guard: "-7", damage: "90", stan: "150", remarks: "", type: "unique", command: "→ + HK" },
+    {
+        name: "Crash President",
+        outbreak: "25",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "→ + HK"
+    },
     {
         name: "Flying President",
         outbreak: "9",
@@ -92,6 +305,7 @@ const g = [
         damage: "60",
         stan: "100",
         remarks: "Can cross-up",
+        vtrigger: 1,
         type: "unique",
         command: "(DURING FORWARD JUMP) ↓ + MP"
     },
@@ -105,6 +319,7 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1460F: EX Gauge +300\nNote: Move can be canceled from 32F to 1430F.",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + LK MK"
     },
@@ -118,6 +333,7 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1555F: EX Gauge +300\nNote: Move can be canceled from 32F to 1530F",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + MK HK"
     },
@@ -131,6 +347,7 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1525F: EX Gauge +300\nNote: Move can be canceled from 32F to 1510F",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + LK HK"
     },
@@ -144,12 +361,52 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "Patterns 1-3 have the same functionality",
+        vtrigger: 1,
         type: "unique",
         command: ""
     },
-    { name: "Violence President", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
-    { name: "Destroy President", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "200", remarks: "", type: "throw", command: "" },
-    { name: "Shining President", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
+    {
+        name: "Violence President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(NEAR OPPONENT) → OR + LP LK"
+    },
+    {
+        name: "Destroy President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(NEAR OPPONENT) ← + LP LK"
+    },
+    {
+        name: "Shining President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(WHILE OPPONENT IS CROUCHING) (NEAR OPPONENT) → OR + LP LK"
+    },
     {
         name: "[VS1] G Barrier",
         outbreak: "13(*9)",
@@ -160,8 +417,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "*Value while absorbing projectile\nV-Gauge +80 upon successful absorption of a projectile\nS*Can only be canceled into G Charge on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
         name: "[VS1] Airborne G Barrier",
@@ -173,8 +431,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "*Value while absorbing projectile\nV-Gauge +80 upon successful absorption of a projectile\nCan perform moves in the air after absorbing a projectile",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) (DURING VERTICAL OR FORWARD JUMP) MP MK"
     },
     {
         name: "V[VS1] G Barrier",
@@ -186,8 +445,9 @@ const g = [
         damage: "50+80",
         stan: "100+100",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) MP MK"
     },
     {
         name: "V[VS1] Airborne G Barrier",
@@ -199,8 +459,9 @@ const g = [
         damage: "50+80",
         stan: "100+100",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) (DURING VERTICAL OR FORWARD JUMP) MP MK"
     },
     {
         name: "[VS2] G Protection",
@@ -212,8 +473,9 @@ const g = [
         damage: "",
         stan: "",
         remarks: "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
         name: "V[VS2] G Protection",
@@ -225,8 +487,9 @@ const g = [
         damage: "",
         stan: "",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される\nArmor from 3F to 31F",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
         name: "Maximum President",
@@ -238,8 +501,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                While active, certain special moves will be strengthened, and G can cancel from one strengthened special move into another (once)",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "HP HK"
     },
     {
         name: "G Revenge",
@@ -251,8 +515,9 @@ const g = [
         damage: "60",
         stan: "0",
         remarks: "1F - 32F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(DURING GUARD) → + LP"
     },
     {
         name: "L G Smash Over (Lv1)",
@@ -264,8 +529,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LP"
     },
     {
         name: "M G Smash Over (Lv1)",
@@ -277,8 +543,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MP"
     },
     {
         name: "H G Smash Over (Lv1)",
@@ -290,8 +557,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HP"
     },
     {
         name: "L G Smash Over (Lv2)",
@@ -303,8 +571,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LP"
     },
     {
         name: "M G Smash Over (Lv2)",
@@ -316,8 +585,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MP"
     },
     {
         name: "H G Smash Over (Lv2)",
@@ -329,8 +599,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HP"
     },
     {
         name: "G Smash Over (Lv3)",
@@ -342,8 +613,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "S*Cannot be canceled on block. Can only be canceled into G Charge on hit.\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + P"
     },
     {
         name: "V G Smash Over",
@@ -355,8 +627,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                S*Cannot be canceled into V G Smash Over, G Charge\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↓↘ + P"
     },
     {
         name: "V G Smash Over (Cancel)",
@@ -368,8 +641,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Can only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↓↘ + P"
     },
     {
         name: "EX G Smash Over",
@@ -381,8 +655,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "S*Cannot be canceled on block. Can only be canceled into G Charge on hit.\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + P P"
     },
     {
         name: "L G Smash Under (Lv1)",
@@ -394,8 +669,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LK"
     },
     {
         name: "M G Smash Under (Lv1)",
@@ -407,8 +683,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MK"
     },
     {
         name: "H G Smash Under (Lv1)",
@@ -420,8 +697,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HK"
     },
     {
         name: "L G Smash Under (Lv2)",
@@ -433,8 +711,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LK"
     },
     {
         name: "M G Smash Under (Lv2)",
@@ -446,8 +725,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MK"
     },
     {
         name: "H G Smash Under (Lv2)",
@@ -459,8 +739,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HK"
     },
     {
         name: "G Smash Under (Lv3)",
@@ -472,8 +753,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + K"
     },
     {
         name: "V G Smash Under",
@@ -485,8 +767,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *When in contact\nS*Cannot be canceled into V G Smash Under, G Charge\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↓↘ + K"
     },
     {
         name: "V G Smash Under (Cancel)",
@@ -498,8 +781,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *When in contact\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↓↘ + K"
     },
     {
         name: "EX G Smash Under",
@@ -511,8 +795,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "*When in contact\nS*Cannot be canceled on block. Can only be canceled into G Charge on hit.\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + K K"
     },
     {
         name: "L G Burst (Lv1)",
@@ -524,8 +809,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + LP"
     },
     {
         name: "M G Burst (Lv1)",
@@ -537,8 +823,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + MP"
     },
     {
         name: "H G Burst (Lv1)",
@@ -550,8 +837,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + HP"
     },
     {
         name: "L G Burst (Lv2)",
@@ -563,8 +851,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + LP"
     },
     {
         name: "M G Burst (Lv2)",
@@ -576,8 +865,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + MP"
     },
     {
         name: "H G Burst (Lv2)",
@@ -589,8 +879,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + HP"
     },
     {
         name: "G Burst (Lv3)",
@@ -602,8 +893,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nNote: Can be canceled on whiff, excluding CA, V-Trigger\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + P"
     },
     {
         name: "V G Burst",
@@ -615,8 +907,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                S*Cannot be canceled into V G Burst, G Charge\nCan be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) ↓↘→ + P"
     },
     {
         name: "V G Burst (Cancel)",
@@ -628,8 +921,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Can be canceled on whiff, except the CA\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) ↓↘→ + P"
     },
     {
         name: "EX G Burst",
@@ -641,8 +935,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan be canceled on whiff, except V-Trigger\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ P P"
     },
     {
         name: "L G Spin Kick (Lv1)",
@@ -654,8 +949,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + LK"
     },
     {
         name: "M G Spin Kick (Lv1)",
@@ -667,8 +963,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + MK"
     },
     {
         name: "H G Spin Kick (Lv1)",
@@ -680,8 +977,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + HK"
     },
     {
         name: "L G Spin Kick (Lv2)",
@@ -693,8 +991,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + LK"
     },
     {
         name: "M G Spin Kick (Lv2)",
@@ -706,8 +1005,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + MK"
     },
     {
         name: "H G Spin Kick (Lv2)",
@@ -719,8 +1019,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + HK"
     },
     {
         name: "G Spin Kick (Lv3)",
@@ -732,8 +1033,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "4F - 30F  projectile invincibility\n                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + K"
     },
     {
         name: "V G Spin Kick",
@@ -745,8 +1047,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                4F - 30F  projectile invincibility\n                                                S*Cannot be canceled into V G Spin Kick, G Charge\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) ↓↘→ + K"
     },
     {
         name: "V G Spin Kick (Cancel)",
@@ -758,8 +1061,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                4F - 30F  projectile invincibility\n                                                Can only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) ↓↘→ + K"
     },
     {
         name: "EX G Spin Kick",
@@ -771,10 +1075,24 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "4F - 30F  projectile invincibility\n                                                S*Can only be canceled into G Charge on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + K K"
     },
-    { name: "G Impact (Lv1)", outbreak: "12", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+    {
+        name: "G Impact (Lv1)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
     {
         name: "G Impact (Lv2)",
         outbreak: "12",
@@ -785,8 +1103,9 @@ const g = [
         damage: "70",
         stan: "120",
         remarks: "Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K"
     },
     {
         name: "G Impact (Lv3)",
@@ -798,8 +1117,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K"
     },
     {
         name: "V G Impact",
@@ -811,8 +1131,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↘↓↙← + K"
     },
     {
         name: "V G Impact (Cancel)",
@@ -824,8 +1145,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING V-TRIGGER I) →↘↓↙← + K"
     },
     {
         name: "EX G Impact",
@@ -837,8 +1159,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Hit recovery can be canceled into special moves, V-Skill",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K K"
     },
     {
         name: "G Charge",
@@ -850,8 +1173,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "Gain 1 President Lv on 43F\nHold the buttons to use the Hold version",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓ ↓ + P P"
     },
     {
         name: "G Charge (Hold)",
@@ -863,8 +1187,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "Gain 1 President Lv on 43F, 120F",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓ ↓ + P P"
     },
     {
         name: "G Charge (Cancel)",
@@ -876,10 +1201,1102 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "Gain 1 President Lv on 58F\nCannot use button hold for the cancel version",
+        vtrigger: 1,
         type: "special",
+        command: "(DURING A G CHARGE-SUPPORTED ATTACK) P P"
+    },
+    {
+        name: "Pangaea Burst",
+        outbreak: "1+5",
+        persistence: "13×3",
+        rigidity: "73",
+        hit: "D",
+        guard: "-39",
+        damage: "330",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + P"
+    },
+    {
+        name: "Standing LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "8",
+        hit: "5",
+        guard: "3",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
         command: ""
     },
-    { name: "Pangaea Burst", outbreak: "1+5", persistence: "13×3", rigidity: "73", hit: "D", guard: "-39", damage: "330", stan: "0", remarks: "1F - 10F  full invincibility", type: "ca", command: "" }
+    {
+        name: "Standing MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "7",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Explosion, G Rage",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HP",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "21",
+        hit: "3",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter (D)",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing LK",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "1",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MK",
+        outbreak: "9",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Explosion, G Rage",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HK",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "25",
+        hit: "2",
+        guard: "-5",
+        damage: "90(*80)",
+        stan: "150(*100)",
+        remarks: "*On max-distance hit\nCA*Only possible during 1st attack",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching LP",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "8",
+        hit: "5",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "15",
+        hit: "5",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching HP",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "21",
+        hit: "1",
+        guard: "-3",
+        damage: "90(*80)",
+        stan: "150",
+        remarks: "Forces stand\n                                                                                                                From active frame 2F",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching LK",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "4",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "S*Can only be canceled into G Explosion, G Rage",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "14",
+        hit: "4",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Explosion, G Rage",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching HK",
+        outbreak: "10",
+        persistence: "2",
+        rigidity: "28",
+        hit: "D",
+        guard: "-14",
+        damage: "100",
+        stan: "150",
+        remarks: "Triggers Crush Counter (D)\n                                                                                                                                                                S*Can only be canceled into G Charge, G Explosion, G Rage\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Jumping LP",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "7",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "4",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "11",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Wild President",
+        outbreak: "15",
+        persistence: "3",
+        rigidity: "22",
+        hit: "2",
+        guard: "-4",
+        damage: "90",
+        stan: "150",
+        remarks: "Triggers Crush Counter (+16F)\n                                                                                                                                                                S*Can only be canceled into G Charge, G Explosion, G Rage\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + HP"
+    },
+    {
+        name: "Strong President",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "23",
+        hit: "D",
+        guard: "-5",
+        damage: "80(*70)",
+        stan: "150(*150)",
+        remarks: "Can only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "unique",
+        command: "← + HP"
+    },
+    {
+        name: "Crash President",
+        outbreak: "25",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + HK"
+    },
+    {
+        name: "Flying President",
+        outbreak: "9",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Can cross-up",
+        vtrigger: 2,
+        type: "unique",
+        command: "(DURING FORWARD JUMP) ↓ + MP"
+    },
+    {
+        name: "Message To The People * Pattern 1",
+        outbreak: "",
+        persistence: "",
+        rigidity: "1660 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1460F: EX Gauge +300\nNote: Move can be canceled from 32F to 1430F.",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + LK MK"
+    },
+    {
+        name: "Message To The People * Pattern 2",
+        outbreak: "",
+        persistence: "",
+        rigidity: "1760 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1555F: EX Gauge +300\nNote: Move can be canceled from 32F to 1530F",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + MK HK"
+    },
+    {
+        name: "Message To The People * Pattern 3",
+        outbreak: "",
+        persistence: "",
+        rigidity: "1720 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F: EX Gauge +50\n80F: EX Gauge +50\n280F: EX Gauge +50\n480F: EX Gauge +50\n680F: EX Gauge +100\n880F: EX Gauge +100\n1080F: EX Gauge +100\n1280F: EX Gauge +100\n1525F: EX Gauge +300\nNote: Move can be canceled from 32F to 1510F",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + LK HK"
+    },
+    {
+        name: "Message To The People (Cancel)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "38 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Patterns 1-3 have the same functionality",
+        vtrigger: 2,
+        type: "unique",
+        command: ""
+    },
+    {
+        name: "Violence President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(NEAR OPPONENT) → OR + LP LK"
+    },
+    {
+        name: "Destroy President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(NEAR OPPONENT) ← + LP LK"
+    },
+    {
+        name: "Shining President",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(WHILE OPPONENT IS CROUCHING) (NEAR OPPONENT) → OR + LP LK"
+    },
+    {
+        name: "[VS1] G Barrier",
+        outbreak: "13(*9)",
+        persistence: "13(*23)",
+        rigidity: "23",
+        hit: "D",
+        guard: "-17",
+        damage: "50",
+        stan: "100",
+        remarks: "*Value while absorbing projectile\nV-Gauge +80 upon successful absorption of a projectile\nS*Can be canceled into G Charge, G Explosion, and G Rage only on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) MP MK"
+    },
+    {
+        name: "[VS1] Airborne G Barrier",
+        outbreak: "13(*9)",
+        persistence: "16(*26)",
+        rigidity: "11 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "50",
+        stan: "100",
+        remarks: "*Value while absorbing projectile\nV-Gauge +80 upon successful absorption of a projectile",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) (DURING VERTICAL OR FORWARD JUMP) MP MK"
+    },
+    {
+        name: "[VS2] G Protection",
+        outbreak: "31",
+        persistence: "",
+        rigidity: "60 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK"
+    },
+    {
+        name: "Dangerous President",
+        outbreak: "1",
+        persistence: "",
+        rigidity: "6",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                Gains the special moves G Explosion, G Rage while active",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP HK"
+    },
+    {
+        name: "G Revenge",
+        outbreak: "17",
+        persistence: "2",
+        rigidity: "24",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 32F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(DURING GUARD) → + LP"
+    },
+    {
+        name: "L G Smash Over (Lv1)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LP"
+    },
+    {
+        name: "M G Smash Over (Lv1)",
+        outbreak: "20",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + MP"
+    },
+    {
+        name: "H G Smash Over (Lv1)",
+        outbreak: "25(*22)",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + HP"
+    },
+    {
+        name: "L G Smash Over (Lv2)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LP"
+    },
+    {
+        name: "M G Smash Over (Lv2)",
+        outbreak: "20",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + MP"
+    },
+    {
+        name: "H G Smash Over (Lv2)",
+        outbreak: "25(*22)",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + HP"
+    },
+    {
+        name: "G Smash Over (Lv3)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "120",
+        remarks: "S*Cannot be canceled on block. Can be canceled into G Charge, G Explosion only on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + P"
+    },
+    {
+        name: "EX　G Smash Over",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "120",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + P P"
+    },
+    {
+        name: "L G Smash Under (Lv1)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LK"
+    },
+    {
+        name: "M G Smash Under (Lv1)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + MK"
+    },
+    {
+        name: "H G Smash Under (Lv1)",
+        outbreak: "23(*20)",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + HK"
+    },
+    {
+        name: "L G Smash Under (Lv2)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "100",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LK"
+    },
+    {
+        name: "M G Smash Under (Lv2)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + MK"
+    },
+    {
+        name: "H G Smash Under (Lv2)",
+        outbreak: "23(*20)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + HK"
+    },
+    {
+        name: "G Smash Under (Lv3)",
+        outbreak: "18(*13)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "110",
+        stan: "150",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + K"
+    },
+    {
+        name: "EX G Smash Under",
+        outbreak: "18(*13)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "110",
+        stan: "150",
+        remarks: "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + K K"
+    },
+    {
+        name: "L G Burst (Lv1)",
+        outbreak: "15",
+        persistence: "11",
+        rigidity: "46 total frames",
+        hit: "-3",
+        guard: "-8",
+        damage: "50",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LP"
+    },
+    {
+        name: "M G Burst (Lv1)",
+        outbreak: "20",
+        persistence: "11",
+        rigidity: "49 total frames",
+        hit: "-1",
+        guard: "-6",
+        damage: "50",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MP"
+    },
+    {
+        name: "H G Burst (Lv1)",
+        outbreak: "25",
+        persistence: "11",
+        rigidity: "52 total frames",
+        hit: "1",
+        guard: "-4",
+        damage: "50",
+        stan: "100",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HP"
+    },
+    {
+        name: "L G Burst (Lv2)",
+        outbreak: "15",
+        persistence: "11",
+        rigidity: "46 total frames",
+        hit: "±0",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LP"
+    },
+    {
+        name: "M G Burst (Lv2)",
+        outbreak: "20",
+        persistence: "11",
+        rigidity: "49 total frames",
+        hit: "2",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MP"
+    },
+    {
+        name: "H G Burst (Lv2)",
+        outbreak: "25",
+        persistence: "11",
+        rigidity: "52 total frames",
+        hit: "4",
+        guard: "-1",
+        damage: "80",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan be canceled on whiff, except for CA, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HP"
+    },
+    {
+        name: "G Burst  (Lv3)",
+        outbreak: "15",
+        persistence: "30",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nNote: Can be canceled on whiff, excluding CA, V-Trigger, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + P"
+    },
+    {
+        name: "EX G Burst",
+        outbreak: "15",
+        persistence: "30",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nNote: Can be canceled on whiff, excluding CA, V-Trigger, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ P P"
+    },
+    {
+        name: "L G Spin Kick (Lv1)",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "20",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LK"
+    },
+    {
+        name: "M G Spin Kick (Lv1)",
+        outbreak: "25",
+        persistence: "7",
+        rigidity: "22",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MK"
+    },
+    {
+        name: "H G Spin Kick (Lv1)",
+        outbreak: "28",
+        persistence: "7",
+        rigidity: "22",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HK"
+    },
+    {
+        name: "L G Spin Kick (Lv2)",
+        outbreak: "17",
+        persistence: "9",
+        rigidity: "19",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LK"
+    },
+    {
+        name: "M G Spin Kick (Lv2)",
+        outbreak: "22",
+        persistence: "9",
+        rigidity: "22",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MK"
+    },
+    {
+        name: "H G Spin Kick (Lv2)",
+        outbreak: "25",
+        persistence: "9",
+        rigidity: "22",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "First hit will not hit grounded opponents\n                                                                                S*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HK"
+    },
+    {
+        name: "G Spin Kick (Lv3)",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "22",
+        hit: "D",
+        guard: "-2",
+        damage: "110",
+        stan: "150",
+        remarks: "4F - 30F  throw invincibility\n                                                S*Can only be canceled into G Charge on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K"
+    },
+    {
+        name: "EX G Spin Kick",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "22",
+        hit: "D",
+        guard: "-2",
+        damage: "110",
+        stan: "150",
+        remarks: "4F - 30F  throw invincibility\n                                                S*Can only be canceled into G Charge on hit\nCan only be canceled into Message to the People on hit.",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K"
+    },
+    {
+        name: "G Impact (Lv1)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "G Impact (Lv2)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "70",
+        stan: "120",
+        remarks: "Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "G Impact (Lv3)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "120",
+        remarks: "Hit recovery can be canceled into special moves, CA, V-Skill",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "EX G Impact",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "120",
+        remarks: "Hit recovery can be canceled into special moves, V-Skill",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K K"
+    },
+    {
+        name: "G Charge",
+        outbreak: "",
+        persistence: "",
+        rigidity: "64 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Gain 1 President Lv on 43F\nHold the buttons to use the Hold version",
+        vtrigger: 2,
+        type: "special",
+        command: "↓ ↓ + P P"
+    },
+    {
+        name: "G Charge (Hold)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "128 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Gain 1 President Lv on 43F, 120F",
+        vtrigger: 2,
+        type: "special",
+        command: "↓ ↓ + P P"
+    },
+    {
+        name: "G Charge (Cancel)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Gain 1 President Lv on 58F\nCannot use button hold for the cancel version",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING A G CHARGE-SUPPORTED ATTACK) P P"
+    },
+    {
+        name: "G Explosion",
+        outbreak: "12",
+        persistence: "12",
+        rigidity: "38",
+        hit: "D",
+        guard: "-28",
+        damage: "150(*150)",
+        stan: "200(*200)",
+        remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                *On max-distance hit\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II) HP HK"
+    },
+    {
+        name: "G Rage",
+        outbreak: "20",
+        persistence: "3",
+        rigidity: "60",
+        hit: "",
+        guard: "",
+        damage: "200",
+        stan: "200",
+        remarks: "Uses 1200F V-Gauge Timer\n                                                                                                                                                                                Uses an additional 300F of V-Timer gauge on hit.\nArmor from 3F to 22F",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II) ↓ + HP HK"
+    },
+    {
+        name: "G Rage (Cancel)",
+        outbreak: "25",
+        persistence: "3",
+        rigidity: "60",
+        hit: "",
+        guard: "",
+        damage: "200",
+        stan: "200",
+        remarks: "Uses 1200F V-Gauge Timer\n                                                                                                                                                                                Uses an additional 300F of V-Timer gauge on hit.\nArmor from 3F - 27F",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II) ↓ + HP HK"
+    },
+    {
+        name: "Pangaea Burst",
+        outbreak: "1+5",
+        persistence: "14×3",
+        rigidity: "73",
+        hit: "D",
+        guard: "-39",
+        damage: "330",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + P"
+    }
 ];
 exports.g = g;
 //# sourceMappingURL=g.js.map

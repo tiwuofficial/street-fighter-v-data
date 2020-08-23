@@ -1,6 +1,32 @@
 const juri = [
-  { name: "Standing LP", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-  { name: "VStanding LP", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
+  {
+    name: "Standing LP",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VStanding LP",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VStanding LP (Chain Combo)",
     outbreak: "3",
@@ -12,11 +38,38 @@ const juri = [
     stan: "40",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Standing MP", outbreak: "5", persistence: "3", rigidity: "11", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "VStanding MP", outbreak: "5", persistence: "3", rigidity: "11", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "Standing MP",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "11",
+    hit: "5",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VStanding MP",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "11",
+    hit: "5",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VStanding MP (Chain Combo)",
     outbreak: "5",
@@ -28,11 +81,38 @@ const juri = [
     stan: "60",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Standing HP", outbreak: "8", persistence: "3", rigidity: "17", hit: "4", guard: "-3", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
-  { name: "VStanding HP", outbreak: "8", persistence: "3", rigidity: "17", hit: "4", guard: "-3", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
+  {
+    name: "Standing HP",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "4",
+    guard: "-3",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VStanding HP",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "4",
+    guard: "-3",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VStanding HP (Chain Combo)",
     outbreak: "8",
@@ -44,11 +124,38 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Standing LK", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "VStanding LK", outbreak: "4", persistence: "4", rigidity: "8", hit: "4", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  {
+    name: "Standing LK",
+    outbreak: "4",
+    persistence: "4",
+    rigidity: "8",
+    hit: "4",
+    guard: "1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VStanding LK",
+    outbreak: "4",
+    persistence: "4",
+    rigidity: "8",
+    hit: "4",
+    guard: "1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VStanding LK (Chain Combo)",
     outbreak: "4",
@@ -60,6 +167,7 @@ const juri = [
     stan: "40",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -72,7 +180,9 @@ const juri = [
     guard: "-4",
     damage: "70(*60)",
     stan: "100(*100)",
-    remarks: "S*CA*VS*Only possible during 1st attack\nV*Only possible during 2nd attack\n*On max-distance hit",
+    remarks:
+      "S*CA*VS*Only possible during 1st attack\nV*Only possible during 2nd attack\n*On max-distance hit",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -85,7 +195,9 @@ const juri = [
     guard: "-4",
     damage: "70(*60)",
     stan: "100(*100)",
-    remarks: "S*VS*Only possible during 1st attack\n(2nd hit possible only during Fuharenkyaku)\nCA*Only possible during 2nd attack\n*On max-distance hit",
+    remarks:
+      "S*VS*Only possible during 1st attack\n(2nd hit possible only during Fuharenkyaku)\nCA*Only possible during 2nd attack\n*On max-distance hit",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -100,10 +212,24 @@ const juri = [
     stan: "60(*60)",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku\n*On max-distance hit",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Standing HK", outbreak: "14", persistence: "3", rigidity: "20", hit: "1", guard: "-4", damage: "80", stan: "150", remarks: "Triggers Crush Counter (+20F)", type: "normal", command: "" },
+  {
+    name: "Standing HK",
+    outbreak: "14",
+    persistence: "3",
+    rigidity: "20",
+    hit: "1",
+    guard: "-4",
+    damage: "80",
+    stan: "150",
+    remarks: "Triggers Crush Counter (+20F)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VStanding HK",
     outbreak: "14",
@@ -115,6 +241,7 @@ const juri = [
     stan: "150",
     remarks:
       "Triggers Crush Counter (+20F)\n                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -129,11 +256,38 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                Triggers Crush Counter (+20F)\n                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching LP", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-  { name: "VCrouching LP", outbreak: "4", persistence: "3", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
+  {
+    name: "Crouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VCrouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VCrouching LP (Chain Combo)",
     outbreak: "4",
@@ -145,11 +299,38 @@ const juri = [
     stan: "40",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching MP", outbreak: "6", persistence: "3", rigidity: "16", hit: "2", guard: "0", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "VCrouching MP", outbreak: "6", persistence: "3", rigidity: "16", hit: "2", guard: "0", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "Crouching MP",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "16",
+    hit: "2",
+    guard: "0",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VCrouching MP",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "16",
+    hit: "2",
+    guard: "0",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VCrouching MP (Chain Combo)",
     outbreak: "6",
@@ -161,6 +342,7 @@ const juri = [
     stan: "60",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -175,6 +357,7 @@ const juri = [
     stan: "150",
     remarks:
       "Triggers Crush Counter (+21F)\n                                                Forces stand\n                                                                                                                *During airborne hit",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -189,6 +372,7 @@ const juri = [
     stan: "150",
     remarks:
       "Triggers Crush Counter (+21F)\n                                                Forces stand\n                                                                                                                *During airborne hit",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -203,10 +387,24 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                Triggers Crush Counter (+21F)\n                                                                                                                                                                Does not knock down only for Crush Counter\nS*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching LK", outbreak: "3", persistence: "2", rigidity: "10", hit: "2", guard: "0", damage: "20", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
+  {
+    name: "Crouching LK",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "2",
+    guard: "0",
+    damage: "20",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VCrouching LK",
     outbreak: "3",
@@ -216,7 +414,9 @@ const juri = [
     guard: "0",
     damage: "20",
     stan: "70",
-    remarks: "Can be rapid canceled\n                                                                                                                                S*Only Fuharenkyaku",
+    remarks:
+      "Can be rapid canceled\n                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -231,11 +431,38 @@ const juri = [
     stan: "40",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching MK", outbreak: "6", persistence: "2", rigidity: "14", hit: "2", guard: "-2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "VCrouching MK", outbreak: "6", persistence: "2", rigidity: "14", hit: "2", guard: "-2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "Crouching MK",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "2",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "VCrouching MK",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "2",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VCrouching MK (Chain Combo)",
     outbreak: "6",
@@ -247,10 +474,24 @@ const juri = [
     stan: "60",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching HK", outbreak: "8", persistence: "2", rigidity: "23", hit: "D", guard: "-12", damage: "100", stan: "150", remarks: "Triggers Crush Counter  (D)", type: "normal", command: "" },
+  {
+    name: "Crouching HK",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "23",
+    hit: "D",
+    guard: "-12",
+    damage: "100",
+    stan: "150",
+    remarks: "Triggers Crush Counter  (D)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "VCrouching HK",
     outbreak: "8",
@@ -262,6 +503,7 @@ const juri = [
     stan: "150",
     remarks:
       "Triggers Crush Counter  (D)\n                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -276,12 +518,52 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                Triggers Crush Counter  (D)\n                                                                                                                                                                S*Only Fuharenkyaku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Jumping LP", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "VJumping LP", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "Causes blowback knockdown on airborne hit", type: "jump", command: "" },
-  { name: "Jumping MP", outbreak: "6", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "Causes blowback knockdown on airborne hit", type: "jump", command: "" },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "VJumping LP",
+    outbreak: "4",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "6",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "VJumping MP",
     outbreak: "6",
@@ -292,6 +574,7 @@ const juri = [
     damage: "60",
     stan: "100",
     remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
@@ -306,10 +589,24 @@ const juri = [
     stan: "60",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
-  { name: "Jumping HP", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  {
+    name: "Jumping HP",
+    outbreak: "9",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "VJumping HP",
     outbreak: "9",
@@ -320,6 +617,7 @@ const juri = [
     damage: "90",
     stan: "150",
     remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
@@ -334,10 +632,24 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
-  { name: "Jumping LK", outbreak: "4", persistence: "7", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "Can cross-up", type: "jump", command: "" },
+  {
+    name: "Jumping LK",
+    outbreak: "4",
+    persistence: "7",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "Can cross-up",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "VJumping LK",
     outbreak: "4",
@@ -349,10 +661,24 @@ const juri = [
     stan: "70",
     remarks:
       "Can cross-up\n                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
-  { name: "Jumping MK", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "Can cross-up", type: "jump", command: "" },
+  {
+    name: "Jumping MK",
+    outbreak: "7",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Can cross-up",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "VJumping MK",
     outbreak: "7",
@@ -364,6 +690,7 @@ const juri = [
     stan: "100",
     remarks:
       "Can cross-up\n                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
@@ -378,10 +705,24 @@ const juri = [
     stan: "60",
     remarks:
       "Uses 250F V-Gauge Timer\n                                Can cross-up\n                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
-  { name: "Jumping HK", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+  {
+    name: "Jumping HK",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "VJumping HK",
     outbreak: "8",
@@ -392,6 +733,7 @@ const juri = [
     damage: "90",
     stan: "150",
     remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
@@ -406,6 +748,7 @@ const juri = [
     stan: "80",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
@@ -419,6 +762,7 @@ const juri = [
     damage: "60",
     stan: "100",
     remarks: "16F - 21F  throw invincibility",
+    vtrigger: 1,
     type: "unique",
     command: "→ + MK"
   },
@@ -431,7 +775,9 @@ const juri = [
     guard: "-2",
     damage: "80",
     stan: "150",
-    remarks: "First hit only forces stand\n                                                                                                                V*Only possible during 2nd attack",
+    remarks:
+      "First hit only forces stand\n                                                                                                                V*Only possible during 2nd attack",
+    vtrigger: 1,
     type: "unique",
     command: "← + HK"
   },
@@ -445,14 +791,80 @@ const juri = [
     damage: "60",
     stan: "100",
     remarks: "S*CA*VS*Only on hit",
+    vtrigger: 1,
     type: "unique",
-    command: "MP ▶ ←OR → + HP"
+    command: "MP ▶ ← OR → + HP"
   },
-  { name: "Enkushu", outbreak: "5", persistence: "5", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "unique", command: "(DURING JUMP) MP ▶ HK" },
-  { name: "Chisenkyaku", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "120", stan: "120", remarks: "", type: "throw", command: "" },
-  { name: "Kaeikyaku", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
-  { name: "Zankasen", outbreak: "5", persistence: "2", rigidity: "8 frame(s) after landing", hit: "D", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
-  { name: "[VS1] Kasatushu (Whiff)", outbreak: "46", persistence: "2", rigidity: "25", hit: "D", guard: "-10", damage: "", stan: "", remarks: "", type: "vsystem", command: "" },
+  {
+    name: "Enkushu",
+    outbreak: "5",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "(DURING JUMP) MP ▶ HK"
+  },
+  {
+    name: "Chisenkyaku",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "120",
+    stan: "120",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Kaeikyaku",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "140",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
+  {
+    name: "Zankasen",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "140",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(CLOSE TO OPPONENT IN AIR) LP LK"
+  },
+  {
+    name: "[VS1] Kasatushu (Whiff)",
+    outbreak: "46",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-10",
+    damage: "",
+    stan: "",
+    remarks: "",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
   {
     name: "[VS1] Kasatushu Lv.1",
     outbreak: "*37",
@@ -464,8 +876,9 @@ const juri = [
     stan: "150",
     remarks:
       "*When in contact\nAttack powers up to Lv. 2 upon holding the button for 32F or longer\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
     name: "[VS1] Kasatushu Lv.2",
@@ -478,8 +891,9 @@ const juri = [
     stan: "200",
     remarks:
       "*changes on button hold\n39F - Projectile invincibility while moving forward\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
     name: "[VS1] Kasatushu Lv.2 (Instant Activation Version)",
@@ -490,9 +904,11 @@ const juri = [
     guard: "-18",
     damage: "100",
     stan: "200",
-    remarks: "*changes on button hold\n6F - Projectile invincibility while moving forward\nCan be canceled into a forward or backward dash from button hold 22F",
+    remarks:
+      "*changes on button hold\n6F - Projectile invincibility while moving forward\nCan be canceled into a forward or backward dash from button hold 22F",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
     name: "[VS2] Fuha Enzan (Charge)",
@@ -504,10 +920,24 @@ const juri = [
     damage: "",
     stan: "",
     remarks: "溜め動作成立後に再度入力で「風破円斬」(攻撃)が発動",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL II) MP MK"
   },
-  { name: "[VS2] Fuha Enzan (Attack)", outbreak: "19", persistence: "74", rigidity: "47 total frames", hit: "D", guard: "-2", damage: "50", stan: "80", remarks: "", type: "vsystem", command: "" },
+  {
+    name: "[VS2] Fuha Enzan (Attack)",
+    outbreak: "19",
+    persistence: "74",
+    rigidity: "47 total frames",
+    hit: "D",
+    guard: "-2",
+    damage: "50",
+    stan: "80",
+    remarks: "",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL II) (DURING V-SKILL II) MP MK"
+  },
   {
     name: "Feng Shui Enngine Type Alpha",
     outbreak: "1",
@@ -519,8 +949,9 @@ const juri = [
     stan: "",
     remarks:
       "V-Gauge Timer + 2700F\n                                                                                                                                                                                (1)Can use Fuharenkyaku without storing it first, and strengthened properties\n(2)\nCan perform grounded and mid-air chain combos\nGrounded: Can cancel into a P or K of the same or higher strength, cannot cancel into a lower strength\nAirborne: Can cancel into a P or K of greater strength (cannot cancel into the same strength)\n(3)All normal moves can be canceled into Fuharenkyaku",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "HP HK"
   },
   {
     name: "Kaisenrenkyaku",
@@ -531,9 +962,11 @@ const juri = [
     guard: "-2",
     damage: "60",
     stan: "0",
-    remarks: "1F - 29F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\nTransitions into a unique motion on hit",
+    remarks:
+      "1F - 29F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\nTransitions into a unique motion on hit",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(DURING GUARD) → + LK"
   },
   {
     name: "Fuharenkyaku (Charge Kick)",
@@ -545,8 +978,9 @@ const juri = [
     damage: "30",
     stan: "30",
     remarks: "Can stock Fuharenkyaku on 10F of each strength",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + K"
   },
   {
     name: "L Fuharenkyaku",
@@ -558,8 +992,9 @@ const juri = [
     damage: "50",
     stan: "80",
     remarks: "VS*VS1はヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + LK"
   },
   {
     name: "M Fuharenkyaku",
@@ -571,8 +1006,9 @@ const juri = [
     damage: "70",
     stan: "80",
     remarks: "VS*VS1はヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + MK"
   },
   {
     name: "H Fuharenkyaku",
@@ -583,9 +1019,11 @@ const juri = [
     guard: "-6",
     damage: "90",
     stan: "150",
-    remarks: "VS*VS1は2段目ヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    remarks:
+      "VS*VS1は2段目ヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + HK"
   },
   {
     name: "VL Fuharenkyaku",
@@ -598,8 +1036,9 @@ const juri = [
     stan: "100",
     remarks:
       "Uses 800F V-Gauge Timer\n                                                                                                                                                                                VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + LK"
   },
   {
     name: "VM Fuharenkyaku",
@@ -612,8 +1051,9 @@ const juri = [
     stan: "100",
     remarks:
       "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + MK"
   },
   {
     name: "VH Fuharenkyaku",
@@ -626,8 +1066,9 @@ const juri = [
     stan: "170",
     remarks:
       "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*VS1は2段目ヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + HK"
   },
   {
     name: "EX Fuharenkyaku",
@@ -639,8 +1080,9 @@ const juri = [
     damage: "140",
     stan: "150",
     remarks: "V*Only possible on the 2nd and last hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + K K"
   },
   {
     name: "L Tensenrin",
@@ -653,8 +1095,9 @@ const juri = [
     stan: "150",
     remarks:
       "First hit only forces stand\n                Second hit will not hit crouching opponents\n                                                1F - 8F  throw invincibility\n                                                *when opponent is crouching\nCA*Only possible during 2nd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + LP"
   },
   {
     name: "M Tensenrin",
@@ -665,9 +1108,11 @@ const juri = [
     guard: "-29",
     damage: "120",
     stan: "150",
-    remarks: "1F - 8F  invincible to mid-air attacks\n                                3rd attack will not hit grounded opponents\nSubject to counter hit during move duration",
+    remarks:
+      "1F - 8F  invincible to mid-air attacks\n                                3rd attack will not hit grounded opponents\nSubject to counter hit during move duration",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + MP"
   },
   {
     name: "H Tensenrin",
@@ -678,9 +1123,11 @@ const juri = [
     guard: "-32",
     damage: "120",
     stan: "150",
-    remarks: "3F - 8F  attack & projectile invincibility\n                                                Attacks from the 3rd onward will not hit grounded opponents",
+    remarks:
+      "3F - 8F  attack & projectile invincibility\n                                                Attacks from the 3rd onward will not hit grounded opponents",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + HP"
   },
   {
     name: "EX Tensenrin",
@@ -693,12 +1140,52 @@ const juri = [
     stan: "200",
     remarks:
       "1F - 12F  full invincibility\n                                                Transitions into finishing kick attack if all 4 attacks connect\nAttacks from the 3rd onward will not hit grounded opponents\nSubject to counter hit during move duration (1.2x damage)",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + P P"
   },
-  { name: "L Ryodansatsu", outbreak: "19", persistence: "3", rigidity: "24", hit: "D", guard: "-6", damage: "70", stan: "150", remarks: "", type: "special", command: "" },
-  { name: "M Ryodansatsu", outbreak: "20", persistence: "3", rigidity: "24", hit: "D", guard: "-6", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
-  { name: "H Ryodansatsu", outbreak: "25", persistence: "3", rigidity: "24", hit: "D", guard: "-6", damage: "100", stan: "200", remarks: "", type: "special", command: "" },
+  {
+    name: "L Ryodansatsu",
+    outbreak: "19",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "70",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↙← + LK"
+  },
+  {
+    name: "M Ryodansatsu",
+    outbreak: "20",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↙← + MK"
+  },
+  {
+    name: "H Ryodansatsu",
+    outbreak: "25",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "100",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↙← + HK"
+  },
   {
     name: "EX Ryodansatsu",
     outbreak: "25",
@@ -709,8 +1196,9 @@ const juri = [
     damage: "80",
     stan: "150",
     remarks: "1F - 27F  projectile invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + K K"
   },
   {
     name: "Sakkai Fuhazan",
@@ -722,8 +1210,680 @@ const juri = [
     damage: "330",
     stan: "0",
     remarks: "1F - 8F  full invincibility",
+    vtrigger: 1,
     type: "ca",
+    command: "↓↙← ↓↙← + K"
+  },
+  {
+    name: "Standing LP",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 2,
+    type: "normal",
     command: ""
+  },
+  {
+    name: "Standing MP",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "11",
+    hit: "5",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HP",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "4",
+    guard: "-3",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing LK",
+    outbreak: "4",
+    persistence: "4",
+    rigidity: "8",
+    hit: "4",
+    guard: "1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing MK",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "15",
+    hit: "1",
+    guard: "-4",
+    damage: "70(*60)",
+    stan: "100(*100)",
+    remarks:
+      "S*CA*VS*Only possible during 1st attack\nV*Only possible during 2nd attack\n*On max-distance hit",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HK",
+    outbreak: "14",
+    persistence: "3",
+    rigidity: "20",
+    hit: "1",
+    guard: "-4",
+    damage: "80",
+    stan: "150",
+    remarks: "Triggers Crush Counter (+20F)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MP",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "16",
+    hit: "2",
+    guard: "0",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HP",
+    outbreak: "10",
+    persistence: "2",
+    rigidity: "21",
+    hit: "3",
+    guard: "-5",
+    damage: "90(*70)",
+    stan: "150",
+    remarks:
+      "Triggers Crush Counter (+21F)\n                                                Forces stand\n                                                                                                                *During airborne hit",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LK",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "2",
+    guard: "0",
+    damage: "20",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MK",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "2",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HK",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "23",
+    hit: "D",
+    guard: "-12",
+    damage: "100",
+    stan: "150",
+    remarks: "Triggers Crush Counter  (D)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "6",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HP",
+    outbreak: "9",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping LK",
+    outbreak: "4",
+    persistence: "7",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "Can cross-up",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MK",
+    outbreak: "7",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Can cross-up",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HK",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Senkaikyaku",
+    outbreak: "22",
+    persistence: "2",
+    rigidity: "19",
+    hit: "0",
+    guard: "-7",
+    damage: "60",
+    stan: "100",
+    remarks: "16F - 21F  throw invincibility",
+    vtrigger: 2,
+    type: "unique",
+    command: "→ + MK"
+  },
+  {
+    name: "Korenzan",
+    outbreak: "7",
+    persistence: "5",
+    rigidity: "15",
+    hit: "4",
+    guard: "-2",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "First hit only forces stand\n                                                                                                                V*Only possible during 2nd attack",
+    vtrigger: 2,
+    type: "unique",
+    command: "← + HK"
+  },
+  {
+    name: "Kyoretsushu",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "25",
+    hit: "D",
+    guard: "-12",
+    damage: "60",
+    stan: "100",
+    remarks: "S*CA*VS*Only on hit",
+    vtrigger: 2,
+    type: "unique",
+    command: "MP ▶ ← OR → + HP"
+  },
+  {
+    name: "Enkushu",
+    outbreak: "5",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "(DURING JUMP) MP ▶ HK"
+  },
+  {
+    name: "Chisenkyaku",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "120",
+    stan: "120",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Kaeikyaku",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "140",
+    stan: "200",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
+  {
+    name: "Zankasen",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "140",
+    stan: "200",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(CLOSE TO OPPONENT IN AIR) LP LK"
+  },
+  {
+    name: "[VS1] Kasatushu (Whiff)",
+    outbreak: "46",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-10",
+    damage: "",
+    stan: "",
+    remarks: "",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS1] Kasatushu Lv.1",
+    outbreak: "*37",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-10",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "*When in contact\nAttack powers up to Lv. 2 upon holding the button for 32F or longer\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS1] Kasatushu Lv.2",
+    outbreak: "*39-80",
+    persistence: "During forward movement + +2",
+    rigidity: "33",
+    hit: "D",
+    guard: "-18",
+    damage: "100",
+    stan: "200",
+    remarks:
+      "*changes on button hold\n39F - Projectile invincibility while moving forward\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS1] Kasatushu Lv.2 (Instant Activation Version)",
+    outbreak: "*10-61",
+    persistence: "During forward movement + +2",
+    rigidity: "33",
+    hit: "D",
+    guard: "-18",
+    damage: "100",
+    stan: "200",
+    remarks:
+      "*changes on button hold\n6F - Projectile invincibility while moving forward\nCan be canceled into a forward or backward dash from button hold 22F",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS2] Fuha Enzan (Charge)",
+    outbreak: "",
+    persistence: "",
+    rigidity: "50 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "溜め動作成立後に再度入力で「風破円斬」(攻撃)が発動",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL II) MP MK"
+  },
+  {
+    name: "[VS2] Fuha Enzan (Attack)",
+    outbreak: "19",
+    persistence: "74",
+    rigidity: "47 total frames",
+    hit: "D",
+    guard: "-2",
+    damage: "50",
+    stan: "80",
+    remarks: "",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL II) (DURING V-SKILL II) MP MK"
+  },
+  {
+    name: "Feng Shui Enngine beta",
+    outbreak: "1+7",
+    persistence: "6",
+    rigidity: "31",
+    hit: "5",
+    guard: "1",
+    damage: "70",
+    stan: "150",
+    remarks:
+      "V-Gauge Timer + 750F\n                                                                                                                                                                                While active, the opponent's EX gauge will be absorbed while they are within the effect range",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP HK"
+  },
+  {
+    name: "Kaisenrenkyaku",
+    outbreak: "17",
+    persistence: "2",
+    rigidity: "24",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks:
+      "1F - 29F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\nTransitions into a unique motion on hit",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "Fuharenkyaku (Charge Kick)",
+    outbreak: "10",
+    persistence: "3",
+    rigidity: "18",
+    hit: "D",
+    guard: "-2",
+    damage: "30",
+    stan: "30",
+    remarks: "Can stock Fuharenkyaku on 10F of each strength",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + K"
+  },
+  {
+    name: "L Fuharenkyaku",
+    outbreak: "14",
+    persistence: "80",
+    rigidity: "37 total frames",
+    hit: "2",
+    guard: "-2",
+    damage: "50",
+    stan: "80",
+    remarks: "VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + LK"
+  },
+  {
+    name: "M Fuharenkyaku",
+    outbreak: "23",
+    persistence: "2",
+    rigidity: "19",
+    hit: "6",
+    guard: "-4",
+    damage: "70",
+    stan: "80",
+    remarks: "VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + MK"
+  },
+  {
+    name: "H Fuharenkyaku",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "21",
+    hit: "D",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks:
+      "VS*VS1は2段目ヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + HK"
+  },
+  {
+    name: "EX Fuharenkyaku",
+    outbreak: "7",
+    persistence: "8",
+    rigidity: "15",
+    hit: "D",
+    guard: "-2",
+    damage: "140",
+    stan: "150",
+    remarks: "V*Only possible on the 2nd and last hit",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + K K"
+  },
+  {
+    name: "L Tensenrin",
+    outbreak: "7",
+    persistence: "5",
+    rigidity: "22",
+    hit: "2",
+    guard: "-3 (*-8)",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "First hit only forces stand\n                Second hit will not hit crouching opponents\n                                                1F - 8F  throw invincibility\n                                                *when opponent is crouching\nCA*Only possible during 2nd attack",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + LP"
+  },
+  {
+    name: "M Tensenrin",
+    outbreak: "6",
+    persistence: "7",
+    rigidity: "22+16 frame(s) after landing",
+    hit: "D",
+    guard: "-29",
+    damage: "120",
+    stan: "150",
+    remarks:
+      "1F - 8F  invincible to mid-air attacks\n                                3rd attack will not hit grounded opponents\nSubject to counter hit during move duration",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + MP"
+  },
+  {
+    name: "H Tensenrin",
+    outbreak: "7",
+    persistence: "8",
+    rigidity: "22+16 frame(s) after landing",
+    hit: "D",
+    guard: "-32",
+    damage: "120",
+    stan: "150",
+    remarks:
+      "3F - 8F  attack & projectile invincibility\n                                                Attacks from the 3rd onward will not hit grounded opponents",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + HP"
+  },
+  {
+    name: "EX Tensenrin",
+    outbreak: "7",
+    persistence: "8",
+    rigidity: "22+18 frame(s) after landing",
+    hit: "D",
+    guard: "-31",
+    damage: "150",
+    stan: "200",
+    remarks:
+      "1F - 12F  full invincibility\n                                                Transitions into finishing kick attack if all 4 attacks connect\nAttacks from the 3rd onward will not hit grounded opponents\nSubject to counter hit during move duration (1.2x damage)",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + P P"
+  },
+  {
+    name: "L Ryodansatsu",
+    outbreak: "19",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "70",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + LK"
+  },
+  {
+    name: "M Ryodansatsu",
+    outbreak: "20",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + MK"
+  },
+  {
+    name: "H Ryodansatsu",
+    outbreak: "25",
+    persistence: "3",
+    rigidity: "24",
+    hit: "D",
+    guard: "-6",
+    damage: "100",
+    stan: "200",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + HK"
+  },
+  {
+    name: "EX Ryodansatsu",
+    outbreak: "25",
+    persistence: "3",
+    rigidity: "20",
+    hit: "D",
+    guard: "-2",
+    damage: "80",
+    stan: "150",
+    remarks: "1F - 27F  projectile invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + K K"
+  },
+  {
+    name: "Sakkai Fuhazan",
+    outbreak: "1+8",
+    persistence: "",
+    rigidity: "67 total frames",
+    hit: "D",
+    guard: "-15",
+    damage: "330",
+    stan: "0",
+    remarks: "1F - 8F  full invincibility",
+    vtrigger: 2,
+    type: "ca",
+    command: "↓↙← ↓↙← + K"
   }
 ];
 export { juri };

@@ -8,6 +8,7 @@ declare const ibuki: {
     damage: string;
     stan: string;
     remarks: string;
+    vtrigger: number;
     type: string;
     command: string;
 }[];

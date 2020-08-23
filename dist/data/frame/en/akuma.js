@@ -1,11 +1,76 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const akuma = [
-    { name: "Standing LP", outbreak: "3", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-    { name: "Standing MP", outbreak: "7", persistence: "3", rigidity: "14", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-    { name: "Standing HP", outbreak: "8", persistence: "3", rigidity: "19", hit: "2", guard: "-5", damage: "80", stan: "150", remarks: "Triggers Crush Counter  (D)", type: "normal", command: "" },
-    { name: "Standing LK", outbreak: "4", persistence: "3", rigidity: "10", hit: "2", guard: "1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "Standing MK", outbreak: "5", persistence: "2", rigidity: "18", hit: "4", guard: "-4", damage: "60", stan: "100", remarks: "Forces stand", type: "normal", command: "" },
+    {
+        name: "Standing LP",
+        outbreak: "3",
+        persistence: "2",
+        rigidity: "7",
+        hit: "4",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MP",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "14",
+        hit: "3",
+        guard: "1",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HP",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "19",
+        hit: "2",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (D)",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing LK",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "10",
+        hit: "2",
+        guard: "1",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MK",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "18",
+        hit: "4",
+        guard: "-4",
+        damage: "60",
+        stan: "100",
+        remarks: "Forces stand",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "Standing HK",
         outbreak: "11",
@@ -16,11 +81,38 @@ const akuma = [
         damage: "80",
         stan: "120",
         remarks: "Triggers Crush Counter (+10F)\n                                                                Will not hit crouching opponents",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "Crouching LP", outbreak: "4", persistence: "2", rigidity: "6", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-    { name: "Crouching MP", outbreak: "6", persistence: "3", rigidity: "12", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "Crouching LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6",
+        hit: "4",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "5",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "Crouching HP",
         outbreak: "10",
@@ -31,18 +123,136 @@ const akuma = [
         damage: "80",
         stan: "150",
         remarks: "Triggers Crush Counter  (crumple)\n                                                Forces stand",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "Crouching LK", outbreak: "4", persistence: "2", rigidity: "7", hit: "2", guard: "1", damage: "20", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-    { name: "Crouching MK", outbreak: "6", persistence: "2", rigidity: "14", hit: "3", guard: "-1", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
-    { name: "Crouching HK", outbreak: "7", persistence: "2", rigidity: "27", hit: "D", guard: "-15", damage: "90", stan: "150", remarks: "Triggers Crush Counter  (D)", type: "normal", command: "" },
-    { name: "Jumping LP", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-    { name: "Jumping MP", outbreak: "7", persistence: "5", rigidity: "", hit: "", guard: "", damage: "50", stan: "100", remarks: "Causes blowback knockdown on airborne hit", type: "jump", command: "" },
-    { name: "Jumping HP", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-    { name: "Jumping LK", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "Can cross-up", type: "jump", command: "" },
-    { name: "Jumping MK", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "Can cross-up", type: "jump", command: "" },
-    { name: "Jumping HK", outbreak: "8", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    {
+        name: "Crouching LK",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "7",
+        hit: "2",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "6",
+        persistence: "2",
+        rigidity: "14",
+        hit: "3",
+        guard: "-1",
+        damage: "50",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching HK",
+        outbreak: "7",
+        persistence: "2",
+        rigidity: "27",
+        hit: "D",
+        guard: "-15",
+        damage: "90",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (D)",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Jumping LP",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "7",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "50",
+        stan: "100",
+        remarks: "Causes blowback knockdown on airborne hit",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "8",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "4",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "Can cross-up",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "7",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Can cross-up",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
     {
         name: "Tenmakujinkyaku",
         outbreak: "16",
@@ -53,10 +263,24 @@ const akuma = [
         damage: "60",
         stan: "100",
         remarks: "Value upon hitting Ryu at the highest point",
+        vtrigger: 1,
         type: "unique",
         command: "(DURING FORWARD JUMP) ↓ + MK"
     },
-    { name: "Zugaihasatsu", outbreak: "23", persistence: "3", rigidity: "21", hit: "0", guard: "-7", damage: "70", stan: "100", remarks: "", type: "unique", command: "→ + MP" },
+    {
+        name: "Zugaihasatsu",
+        outbreak: "23",
+        persistence: "3",
+        rigidity: "21",
+        hit: "0",
+        guard: "-7",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "→ + MP"
+    },
     {
         name: "Tenha",
         outbreak: "6",
@@ -67,6 +291,7 @@ const akuma = [
         damage: "90",
         stan: "200",
         remarks: "2nd hit, hit on an airborne opponent causes float",
+        vtrigger: 1,
         type: "unique",
         command: "← + HP"
     },
@@ -80,10 +305,24 @@ const akuma = [
         damage: "60",
         stan: "100",
         remarks: "Can hit a knocked down opponent",
+        vtrigger: 1,
         type: "unique",
         command: "→ + HP"
     },
-    { name: "Kongoken", outbreak: "18", persistence: "8", rigidity: "22", hit: "D", guard: "-12", damage: "60", stan: "80", remarks: "", type: "unique", command: "HP ▶ HP" },
+    {
+        name: "Kongoken",
+        outbreak: "18",
+        persistence: "8",
+        rigidity: "22",
+        hit: "D",
+        guard: "-12",
+        damage: "60",
+        stan: "80",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "HP ▶ HP"
+    },
     {
         name: "Kikokurenzan",
         outbreak: "15",
@@ -94,11 +333,38 @@ const akuma = [
         damage: "50",
         stan: "70",
         remarks: "Will not hit crouching opponents",
+        vtrigger: 1,
         type: "unique",
         command: "HK ▶ HK"
     },
-    { name: "Goshoha", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "170", remarks: "", type: "throw", command: "" },
-    { name: "Shuretsuzan", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "120", stan: "170", remarks: "", type: "throw", command: "" },
+    {
+        name: "Goshoha",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "170",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "OR → + LP LK"
+    },
+    {
+        name: "Shuretsuzan",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "170",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "← + LP LK"
+    },
     {
         name: "[VS1] Rakan",
         outbreak: "3",
@@ -109,8 +375,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "Parries standing/airborne attacks and projectiles\nSubject to counter hit during move duration",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
         name: "[VS1] Rakan",
@@ -122,8 +389,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "Parries crouching attacks and projectiles\nSubject to counter hit during move duration",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
     },
     {
         name: "[VS1] Rakan Gosho",
@@ -135,8 +403,9 @@ const akuma = [
         damage: "70",
         stan: "100",
         remarks: "Parameters the same for standing/crouching\nCA*Can be canceled into Shun Goku Satsu",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) (DURING Rakan) P"
     },
     {
         name: "[VS1] Rakan Gokyaku",
@@ -148,8 +417,9 @@ const akuma = [
         damage: "60",
         stan: "100",
         remarks: "Will not hit crouching opponents\n                                                                                                Parameters the same for standing/crouching\nS*CA*VS*Only on hit\nCA*Can be canceled into Shun Goku Satsu",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL I) (DURING Rakan) K"
     },
     {
         name: "[VS2] Kiai",
@@ -161,8 +431,9 @@ const akuma = [
         damage: "50 (*180)",
         stan: "50 (*180)",
         remarks: "*1頭上の炎部分 Vゲージ増加量も0/90に変化\n*2飛び道具相殺時  Vゲージ増加量も0/50に変化\n溜める事が可能で、43F以上ホールドし続けると1FごとにVゲージ1増加(増加量の最大は300)\nWhile holding, inputting Sekia Goshoha between 30F - 40F of the animation will activate the stronger version of the attack",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
         name: "[VS2] Sekia Goshoha",
@@ -174,8 +445,9 @@ const akuma = [
         damage: "70",
         stan: "100",
         remarks: "Button strength changes projectile speed",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ →↘↓↙← + P"
     },
     {
         name: "[VS2] Sekia Goshoha (Strengthened Version)",
@@ -187,8 +459,9 @@ const akuma = [
         damage: "80",
         stan: "100",
         remarks: "Button strength changes projectile speed",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ (at specific timing while holding) →↘↓↙← + P"
     },
     {
         name: "[VS2] EX Sekia Goshoha",
@@ -200,8 +473,9 @@ const akuma = [
         damage: "100 (*+21)",
         stan: "150",
         remarks: "*Inflicts burn damage on opponents in close range on startup",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ →↘↓↙← + P P"
     },
     {
         name: "[VS2] EX Sekia Goshoha (Strengthened Version)",
@@ -213,8 +487,9 @@ const akuma = [
         damage: "110 (*+13)",
         stan: "150",
         remarks: "*Inflicts burn damage on opponents in close range on startup",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ (at specific timing while holding) →↘↓↙← + P P"
     },
     {
         name: "Dohatsu Shoten",
@@ -226,8 +501,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "V-Gauge Timer + 4000F\n                                                                                                                                                                                Gohadoken, Zanku Hadoken, Goshoryuken become moves that use V-Timer, lose the EX version\n(EX Hyakkishu excluded)",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "HP HK"
     },
     {
         name: "Gosenkyaku",
@@ -239,8 +515,9 @@ const akuma = [
         damage: "60",
         stan: "0",
         remarks: "1F - 20F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\n*on hit",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(DURING GUARD) → + LK"
     },
     {
         name: "L Gohadoken",
@@ -252,8 +529,9 @@ const akuma = [
         damage: "60",
         stan: "100(*120)",
         remarks: "Causes grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nV*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + LP"
     },
     {
         name: "M Gohadoken",
@@ -265,8 +543,9 @@ const akuma = [
         damage: "60",
         stan: "100(*120)",
         remarks: "Causes grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nV*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + MP"
     },
     {
         name: "H Gohadoken",
@@ -278,8 +557,9 @@ const akuma = [
         damage: "60",
         stan: "100(*120)",
         remarks: "Causes grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nV*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + HP"
     },
     {
         name: "EX Gohadoken",
@@ -291,8 +571,9 @@ const akuma = [
         damage: "100",
         stan: "150(*170)",
         remarks: "Causes grounded stun damage on hit, except for the initial startup\n*During release hit\nV*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + P P"
     },
     {
         name: "L Sekia Goshoha",
@@ -304,8 +585,9 @@ const akuma = [
         damage: "70",
         stan: "120",
         remarks: "V*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + LP"
     },
     {
         name: "M Sekia Goshoha",
@@ -317,8 +599,9 @@ const akuma = [
         damage: "80",
         stan: "120",
         remarks: "V*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + MP"
     },
     {
         name: "H Sekia Goshoha",
@@ -330,8 +613,9 @@ const akuma = [
         damage: "100",
         stan: "150",
         remarks: "V*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + HP"
     },
     {
         name: "EX Sekia Goshoha",
@@ -343,8 +627,9 @@ const akuma = [
         damage: "100(*+21)",
         stan: "150",
         remarks: "*Inflicts burn damage on opponents in close range on startup\nV*Cannot cancel into V-Trigger on whiff",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + P P"
     },
     {
         name: "Zanku Hadoken",
@@ -356,8 +641,9 @@ const akuma = [
         damage: "40",
         stan: "50",
         remarks: "Button strength changes projectile angle and speed\nHadoken changes depending on whether it was fired during the jump ascent or descent\n*During the rise",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING FORWARD JUMP) ↓↘→ + P"
     },
     {
         name: "EX Zanku Hadoken (On release hit)",
@@ -369,8 +655,9 @@ const akuma = [
         damage: "120",
         stan: "150",
         remarks: "",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING JUMP) ↓↘→ + P P"
     },
     {
         name: "EX Zanku Hadoken (Projectile)",
@@ -382,8 +669,9 @@ const akuma = [
         damage: "150",
         stan: "150",
         remarks: "",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING JUMP) ↓↘→ + P P"
     },
     {
         name: "L Goshoryuken",
@@ -395,8 +683,9 @@ const akuma = [
         damage: "100(*60)",
         stan: "150(*100)",
         remarks: "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 3F",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LP"
     },
     {
         name: "M Goshoryuken",
@@ -408,8 +697,9 @@ const akuma = [
         damage: "120",
         stan: "150",
         remarks: "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nCA*V*Only possible during 1st attack",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MP"
     },
     {
         name: "H Goshoryuken",
@@ -421,8 +711,9 @@ const akuma = [
         damage: "120",
         stan: "150",
         remarks: "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HP"
     },
     {
         name: "EX Goshoryuken",
@@ -434,8 +725,9 @@ const akuma = [
         damage: "160",
         stan: "200",
         remarks: "1F - 15F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nV*Only possible during 1st, 2nd attack",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + P P"
     },
     {
         name: "L Tatsumaki Zankukyaku",
@@ -447,8 +739,9 @@ const akuma = [
         damage: "50",
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *on hit",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↙← + LK"
     },
     {
         name: "M Tatsumaki Zankukyaku",
@@ -460,8 +753,9 @@ const akuma = [
         damage: "70(*80)",
         stan: "120(*120)",
         remarks: "Combo count increases greatly if the first hit does not connect\nCA*V*Only possible during 1st attack\n*When the first hit whiffs",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↙← + MK"
     },
     {
         name: "H Tatsumaki Zankukyaku",
@@ -473,8 +767,9 @@ const akuma = [
         damage: "100",
         stan: "200",
         remarks: "Will not hit crouching opponents from the 2nd hit onwards\n                                                                                                CA*V*Only possible during 1st attack\n*on hit",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↙← + HK"
     },
     {
         name: "EX Tatsumaki Zankukyaku",
@@ -486,8 +781,9 @@ const akuma = [
         damage: "120",
         stan: "150",
         remarks: "S*On hit only, landing recovery can be canceled into Goshoryuken",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↙← + K K"
     },
     {
         name: "Airborne Tatsumaki Zankukyaku",
@@ -499,8 +795,9 @@ const akuma = [
         damage: "70",
         stan: "100",
         remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                Distance the opponent is knocked back on hit changes depending on the button strength used\nHadoken changes depending on whether it was fired during the jump ascent or descent",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING FORWARD JUMP) ↓↙← + K"
     },
     {
         name: "EX Airborne Tatsumaki Zankukyaku",
@@ -512,8 +809,9 @@ const akuma = [
         damage: "160",
         stan: "250",
         remarks: "Can cross-up",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING FORWARD JUMP) ↓↙← + K K"
     },
     {
         name: "Ashura Senku (Forward)",
@@ -525,8 +823,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "1F - 50F  attack & projectile invincibility",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LK"
     },
     {
         name: "Ashura Senku (Back)",
@@ -538,8 +837,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "1F - 50F  attack & projectile invincibility",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "←↓↙ + LK"
     },
     {
         name: "L Hyakkishu",
@@ -551,8 +851,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nEX Zanku Hadoken, EX Airborne Tatsumaki, V-Zanku Hadoken can be performed",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "←↙↓↘→ + LK"
     },
     {
         name: "M Hyakkishu",
@@ -564,8 +865,9 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nEX Zanku Hadoken, EX Airborne Tatsumaki, V-Zanku Hadoken can be performed",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "←↙↓↘→ + MK"
     },
     {
         name: "H Hyakkishu",
@@ -577,12 +879,52 @@ const akuma = [
         damage: "",
         stan: "",
         remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nEX Zanku Hadoken, EX Airborne Tatsumaki, V-Zanku Hadoken can be performed",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "←↙↓↘→ + HK"
     },
-    { name: "Hyakki Gozan", outbreak: "6", persistence: "8", rigidity: "14", hit: "D", guard: "-2", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
-    { name: "Hyakki Gosho", outbreak: "8", persistence: "4", rigidity: "6 frame(s) after landing", hit: "D", guard: "", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
-    { name: "Hyakki Gojin", outbreak: "22", persistence: "Until landing", rigidity: "10(*14)", hit: "", guard: "", damage: "60", stan: "100", remarks: "*at low height", type: "special", command: "" },
+    {
+        name: "Hyakki Gozan",
+        outbreak: "6",
+        persistence: "8",
+        rigidity: "14",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING Hyakkishu) ▶ (NO INPUT)"
+    },
+    {
+        name: "Hyakki Gosho",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING Hyakkishu) P"
+    },
+    {
+        name: "Hyakki Gojin",
+        outbreak: "22",
+        persistence: "Until landing",
+        rigidity: "10(*14)",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "*at low height",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING Hyakkishu) K"
+    },
     {
         name: "Hyakki Gosai",
         outbreak: "7",
@@ -593,8 +935,9 @@ const akuma = [
         damage: "150",
         stan: "200",
         remarks: "Can only throw standing opponents",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING Hyakkishu) LP LK"
     },
     {
         name: "EX Hyakkishu",
@@ -606,11 +949,38 @@ const akuma = [
         damage: "15",
         stan: "60",
         remarks: "4F  - Projectile invincible while active\n                                                Forward/backwards mid-air movement slightly controllable\nEX Zanku Hadoken, EX Airborne Tatsumaki, V-Zanku Hadoken can be performed",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "←↙↓↘→ + K K"
     },
-    { name: "EX Hyakki Gozan", outbreak: "6", persistence: "8", rigidity: "12", hit: "D", guard: "-2", damage: "120", stan: "150", remarks: "", type: "special", command: "" },
-    { name: "EX Hyakki Gosho", outbreak: "8", persistence: "8", rigidity: "6 frame(s) after landing", hit: "D", guard: "", damage: "120", stan: "200", remarks: "", type: "special", command: "" },
+    {
+        name: "EX Hyakki Gozan",
+        outbreak: "6",
+        persistence: "8",
+        rigidity: "12",
+        hit: "D",
+        guard: "-2",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING EX Hyakkishu) ▶ (NO INPUT)"
+    },
+    {
+        name: "EX Hyakki Gosho",
+        outbreak: "8",
+        persistence: "8",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING EX Hyakkishu) P"
+    },
     {
         name: "EX Hyakki Gojin",
         outbreak: "19",
@@ -621,8 +991,9 @@ const akuma = [
         damage: "70",
         stan: "100",
         remarks: "*at low height",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING EX Hyakkishu) K"
     },
     {
         name: "EX Hyakki Gosai",
@@ -634,8 +1005,9 @@ const akuma = [
         damage: "180",
         stan: "250",
         remarks: "Can only throw standing opponents",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING EX Hyakkishu) LP LK"
     },
     {
         name: "Hyakki Gozanku (On startup hit)",
@@ -647,8 +1019,9 @@ const akuma = [
         damage: "120",
         stan: "150",
         remarks: "",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING EX Hyakkishu) ↓↘→ + P"
     },
     {
         name: "Hyakki Gozanku (Projectile)",
@@ -660,8 +1033,9 @@ const akuma = [
         damage: "150",
         stan: "150",
         remarks: "",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING EX Hyakkishu) ↓↘→ + P"
     },
     {
         name: "Hyakki Gorasen",
@@ -673,8 +1047,9 @@ const akuma = [
         damage: "160",
         stan: "250",
         remarks: "Can cross-up",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING EX Hyakkishu) ↓↙← + K"
     },
     {
         name: "VGohadoken",
@@ -686,8 +1061,9 @@ const akuma = [
         damage: "110(*120)",
         stan: "120(*150)",
         remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Causes grounded stun damage on hit, except for the initial startup\nButton strength changes projectile speed only\n*During release hit",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + P"
     },
     {
         name: "VZanku Hadoken",
@@ -699,8 +1075,9 @@ const akuma = [
         damage: "80",
         stan: "100",
         remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Fires two separate projectiles\nButton strength changes projectile angle and speed\nHadoken changes depending on whether it was fired during the jump ascent or descent",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(DURING JUMP) ↓↘→ + P"
     },
     {
         name: "VL Goshoryuken",
@@ -712,8 +1089,9 @@ const akuma = [
         damage: "180(*80)",
         stan: "230(*100)",
         remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                1F - 8F  full invincibility\n                                                Gauge increase on consecutive hits is 0/20/10\nCA*Only possible during 1st attack\nOpponent cannot quick recover if the final strike connects\n*active\nSubject to counter hit during move duration (1.2x damage)",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + LP"
     },
     {
         name: "VM Goshoryuken",
@@ -725,8 +1103,9 @@ const akuma = [
         damage: "180(*80)",
         stan: "230(*100)",
         remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                1F - 9F  full invincibility\n                                                Gauge increase on consecutive hits is 0/20/10\nCA*Only possible during 1st attack\nOpponent cannot quick recover if the final strike connects\n*active\nSubject to counter hit during move duration (1.2x damage)",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + MP"
     },
     {
         name: "VH Goshoryuken",
@@ -738,8 +1117,9 @@ const akuma = [
         damage: "180(*80)",
         stan: "230(*100)",
         remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                1F - 10F  full invincibility\n                                                Gauge increase on consecutive hits is 0/20/10\nCA*Only possible during 1st attack\nOpponent cannot quick recover if the final strike connects\n*active\nSubject to counter hit during move duration (1.2x damage)",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + HP"
     },
     {
         name: "Sekia Kuretsuha",
@@ -751,8 +1131,9 @@ const akuma = [
         damage: "320",
         stan: "0",
         remarks: "Will not hit airborne opponents until frame 10F\n                1F - 11F  full invincibility",
+        vtrigger: 1,
         type: "ca",
-        command: ""
+        command: "↓↘→ ↓↘→ + P"
     },
     {
         name: "VShun Goku Satsu",
@@ -764,8 +1145,1311 @@ const akuma = [
         damage: "400",
         stan: "0",
         remarks: "Uses 4000F V-Gauge Timer\n                                                                                                                                1F - 11F  full invincibility\n                                                Can be canceled from any grounded attack motion",
+        vtrigger: 1,
         type: "ca",
+        command: "LP ▶ LP ▶ → ▶ LK ▶ HP"
+    },
+    {
+        name: "Standing LP",
+        outbreak: "3",
+        persistence: "2",
+        rigidity: "7",
+        hit: "4",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 2,
+        type: "normal",
         command: ""
+    },
+    {
+        name: "Standing MP",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "14",
+        hit: "3",
+        guard: "1",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HP",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "19",
+        hit: "2",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (D)\n                                                                                                                                                                Can be V-special move canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing LK",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "10",
+        hit: "2",
+        guard: "1",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing MK",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "18",
+        hit: "4",
+        guard: "-4",
+        damage: "60",
+        stan: "100",
+        remarks: "Forces stand",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Standing HK",
+        outbreak: "11",
+        persistence: "2",
+        rigidity: "22",
+        hit: "3",
+        guard: "-2",
+        damage: "80",
+        stan: "120",
+        remarks: "Triggers Crush Counter (+10F)\n                                                                Will not hit crouching opponents\n                                                                                                Can be V-special move canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6",
+        hit: "4",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "5",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching HP",
+        outbreak: "10",
+        persistence: "4",
+        rigidity: "20",
+        hit: "8",
+        guard: "3",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (crumple)\n                                                Forces stand\n                                                                                                                Can be V-special move canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching LK",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "7",
+        hit: "2",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "6",
+        persistence: "2",
+        rigidity: "14",
+        hit: "3",
+        guard: "-1",
+        damage: "50",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Crouching HK",
+        outbreak: "7",
+        persistence: "2",
+        rigidity: "27",
+        hit: "D",
+        guard: "-15",
+        damage: "90",
+        stan: "150",
+        remarks: "Triggers Crush Counter (D)\n                                                                                                                                                                Can be V-special move canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "Jumping LP",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "7",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "50",
+        stan: "100",
+        remarks: "Causes blowback knockdown on airborne hit",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "8",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "4",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "Can cross-up",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "7",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Can cross-up",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "Tenmakujinkyaku",
+        outbreak: "16",
+        persistence: "Until landing",
+        rigidity: "6 frame(s) after landing",
+        hit: "2",
+        guard: "-4",
+        damage: "60",
+        stan: "100",
+        remarks: "Value upon hitting Ryu at the highest point",
+        vtrigger: 2,
+        type: "unique",
+        command: "(DURING FORWARD JUMP) ↓ + MK"
+    },
+    {
+        name: "Zugaihasatsu",
+        outbreak: "23",
+        persistence: "3",
+        rigidity: "21",
+        hit: "0",
+        guard: "-7",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + MP"
+    },
+    {
+        name: "Tenha",
+        outbreak: "6",
+        persistence: "7",
+        rigidity: "21",
+        hit: "D",
+        guard: "-10",
+        damage: "90",
+        stan: "200",
+        remarks: "2nd hit, hit on an airborne opponent causes float",
+        vtrigger: 2,
+        type: "unique",
+        command: "← + HP"
+    },
+    {
+        name: "Sekiseiken",
+        outbreak: "32",
+        persistence: "7",
+        rigidity: "16",
+        hit: "5",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "Can hit a knocked down opponent",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + HP"
+    },
+    {
+        name: "Kongoken",
+        outbreak: "18",
+        persistence: "8",
+        rigidity: "22",
+        hit: "D",
+        guard: "-12",
+        damage: "60",
+        stan: "80",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "HP ▶ HP"
+    },
+    {
+        name: "Kikokurenzan",
+        outbreak: "15",
+        persistence: "2",
+        rigidity: "16",
+        hit: "7",
+        guard: "0",
+        damage: "50",
+        stan: "70",
+        remarks: "Will not hit crouching opponents",
+        vtrigger: 2,
+        type: "unique",
+        command: "HK ▶ HK"
+    },
+    {
+        name: "Goshoha",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "170",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "OR → + LP LK"
+    },
+    {
+        name: "Shuretsuzan",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "170",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "← + LP LK"
+    },
+    {
+        name: "[VS1] Rakan",
+        outbreak: "3",
+        persistence: "12",
+        rigidity: "29",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Parries standing/airborne attacks and projectiles\nSubject to counter hit during move duration",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) MP MK"
+    },
+    {
+        name: "[VS1] Rakan",
+        outbreak: "3",
+        persistence: "12",
+        rigidity: "29",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Parries crouching attacks and projectiles\nSubject to counter hit during move duration",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
+    },
+    {
+        name: "[VS1] Rakan Gosho",
+        outbreak: "5",
+        persistence: "4",
+        rigidity: "26",
+        hit: "D",
+        guard: "-10",
+        damage: "70",
+        stan: "100",
+        remarks: "Parameters the same for standing/crouching\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) (DURING Rakan) P"
+    },
+    {
+        name: "[VS1] Rakan Gokyaku",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "26",
+        hit: "D",
+        guard: "-13",
+        damage: "60",
+        stan: "100",
+        remarks: "Will not hit crouching opponents\n                                                                                                Parameters the same for standing/crouching\nS*CA*VS*Only on hit",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) (DURING Rakan) K"
+    },
+    {
+        name: "[VS2] Kiai",
+        outbreak: "17 (*123) (*217)",
+        persistence: "3(*12)(*26)",
+        rigidity: "41(*231)",
+        hit: "D",
+        guard: "-13",
+        damage: "50 (*180)",
+        stan: "50 (*180)",
+        remarks: "*1頭上の炎部分 Vゲージ増加量も0/90に変化\n*2飛び道具相殺時  Vゲージ増加量も0/50に変化\n溜める事が可能で、43F以上ホールドし続けると1FごとにVゲージ1増加(増加量の最大は300)\nWhile holding, inputting Sekia Goshoha between 30F - 40F of the animation will activate the stronger version of the attack",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK"
+    },
+    {
+        name: "[VS2] Sekia Goshoha",
+        outbreak: "18",
+        persistence: "",
+        rigidity: "55 total frames",
+        hit: "D",
+        guard: "-6",
+        damage: "70",
+        stan: "100",
+        remarks: "Button strength changes projectile speed",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ →↘↓↙← + P"
+    },
+    {
+        name: "[VS2] Sekia Goshoha (Strengthened Version)",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "50 total frames",
+        hit: "D",
+        guard: "-4",
+        damage: "80",
+        stan: "100",
+        remarks: "Button strength changes projectile speed",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ (at specific timing while holding) →↘↓↙← + P"
+    },
+    {
+        name: "[VS2] EX Sekia Goshoha",
+        outbreak: "21",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "D",
+        guard: "8",
+        damage: "100 (*+21)",
+        stan: "150",
+        remarks: "*Inflicts burn damage on opponents in close range on startup",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ →↘↓↙← + P P"
+    },
+    {
+        name: "[VS2] EX Sekia Goshohav(Strengthened Version)",
+        outbreak: "13",
+        persistence: "",
+        rigidity: "55 total frames",
+        hit: "D",
+        guard: "11",
+        damage: "110 (*+13)",
+        stan: "150",
+        remarks: "*Inflicts burn damage on opponents in close range on startup",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK ▶ (at specific timing while holding) →↘↓↙← + P P"
+    },
+    {
+        name: "Shiretsu Hasshi",
+        outbreak: "1",
+        persistence: "",
+        rigidity: "5",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                While active, certain normal moves, special moves, EX special moves, and V-special moves can be V-special move canceled",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP HK"
+    },
+    {
+        name: "Gosenkyaku",
+        outbreak: "17",
+        persistence: "2",
+        rigidity: "24(*32)",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 20F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\n*on hit",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(DURING GUARD) → + LK"
+    },
+    {
+        name: "L Gohadoken",
+        outbreak: "14",
+        persistence: "52",
+        rigidity: "48 total frames",
+        hit: "D",
+        guard: "-6",
+        damage: "60",
+        stan: "100(*120)",
+        remarks: "Cannot cancel into V-Trigger on whiff\nCauses grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LP"
+    },
+    {
+        name: "M Gohadoken",
+        outbreak: "14",
+        persistence: "42",
+        rigidity: "48 total frames",
+        hit: "D",
+        guard: "-6",
+        damage: "60",
+        stan: "100(*120)",
+        remarks: "Cannot cancel into V-Trigger on whiff\nCauses grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MP"
+    },
+    {
+        name: "H Gohadoken",
+        outbreak: "14",
+        persistence: "30",
+        rigidity: "48 total frames",
+        hit: "D",
+        guard: "-6",
+        damage: "60",
+        stan: "100(*120)",
+        remarks: "Cannot cancel into V-Trigger on whiff\nCauses grounded stun damage on hit, except for the initial startup and when the projectile dissipates\n*During release hit and projectile explosion\n*2Gauge increase on consecutive hits is 0/20/10Gauge increase of 10 for projectile explosion hit only\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HP"
+    },
+    {
+        name: "EX Gohadoken",
+        outbreak: "11",
+        persistence: "",
+        rigidity: "46 total frames",
+        hit: "D",
+        guard: "1",
+        damage: "100",
+        stan: "150(*170)",
+        remarks: "Cannot cancel into V-Trigger on whiff\nCauses grounded stun damage on hit, except for the initial startup\n*During release hit\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + P P"
+    },
+    {
+        name: "L Sekia Goshoha",
+        outbreak: "18",
+        persistence: "",
+        rigidity: "55 total frames",
+        hit: "D",
+        guard: "-6",
+        damage: "70",
+        stan: "120",
+        remarks: "Cannot cancel into V-Trigger on whiff\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + LP"
+    },
+    {
+        name: "M Sekia Goshoha",
+        outbreak: "23",
+        persistence: "",
+        rigidity: "61 total frames",
+        hit: "D",
+        guard: "-4",
+        damage: "80",
+        stan: "120",
+        remarks: "Cannot cancel into V-Trigger on whiff\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + MP"
+    },
+    {
+        name: "H Sekia Goshoha",
+        outbreak: "25",
+        persistence: "",
+        rigidity: "67 total frames",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "150",
+        remarks: "Cannot cancel into V-Trigger on whiff\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + HP"
+    },
+    {
+        name: "EX Sekia Goshoha",
+        outbreak: "21",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "D",
+        guard: "8",
+        damage: "100(*+21)",
+        stan: "150",
+        remarks: "Cannot cancel into V-Trigger on whiff\n*Inflicts burn damage on opponents in close range on startup\nS*Can cancel into V-special moves during V-Trigger",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + P P"
+    },
+    {
+        name: "Zanku Hadoken",
+        outbreak: "11",
+        persistence: "",
+        rigidity: "11 frame(s) after landing(*9 frame(s) after landing)",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "50",
+        remarks: "Button strength changes projectile angle and speed\nHadoken changes depending on whether it was fired during the jump ascent or descent\n*During the rise",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING FORWARD JUMP) ↓↘→ + P"
+    },
+    {
+        name: "EX Zanku Hadoken (On release hit)",
+        outbreak: "5",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING JUMP) ↓↘→ + P P"
+    },
+    {
+        name: "EX Zanku Hadoken (Projectile)",
+        outbreak: "38",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "150",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING JUMP) ↓↘→ + P P"
+    },
+    {
+        name: "L Goshoryuken",
+        outbreak: "3",
+        persistence: "12",
+        rigidity: "19+15 frame(s) after landing",
+        hit: "D",
+        guard: "-28",
+        damage: "100(*60)",
+        stan: "150(*100)",
+        remarks: "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 3F\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LP"
+    },
+    {
+        name: "M Goshoryuken",
+        outbreak: "4",
+        persistence: "11",
+        rigidity: "26+15 frame(s) after landing",
+        hit: "D",
+        guard: "-30",
+        damage: "120",
+        stan: "150",
+        remarks: "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nCA*V*Only possible during 1st attack\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + MP"
+    },
+    {
+        name: "H Goshoryuken",
+        outbreak: "4",
+        persistence: "11",
+        rigidity: "29+15 frame(s) after landing",
+        hit: "D",
+        guard: "-33",
+        damage: "120",
+        stan: "150",
+        remarks: "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + HP"
+    },
+    {
+        name: "EX Goshoryuken",
+        outbreak: "3",
+        persistence: "32",
+        rigidity: "32+15 frame(s) after landing",
+        hit: "D",
+        guard: "-44",
+        damage: "160",
+        stan: "200",
+        remarks: "1F - 15F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nV*Only possible during 1st, 2nd attack\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + P P"
+    },
+    {
+        name: "L Tatsumaki Zankukyaku",
+        outbreak: "11",
+        persistence: "2",
+        rigidity: "14+10 frame(s) after landing(*14+7 frame(s) after landing)",
+        hit: "D",
+        guard: "-11",
+        damage: "50",
+        stan: "80",
+        remarks: "Will not hit crouching opponents\n                                                                                                *on hit\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + LK"
+    },
+    {
+        name: "M Tatsumaki Zankukyaku",
+        outbreak: "4",
+        persistence: "6",
+        rigidity: "11+12 frame(s) after landing",
+        hit: "D",
+        guard: "-7",
+        damage: "70(*80)",
+        stan: "120(*120)",
+        remarks: "Combo count increases greatly if the first hit does not connect\nCA*V*Only possible during 1st attack\n*When the first hit whiffs\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + MK"
+    },
+    {
+        name: "H Tatsumaki Zankukyaku",
+        outbreak: "4",
+        persistence: "9",
+        rigidity: "20+10 frame(s) after landing(*20+6 frame(s) after landing)",
+        hit: "D",
+        guard: "-39",
+        damage: "100",
+        stan: "200",
+        remarks: "Will not hit crouching opponents from the 2nd hit onwards\n                                                                                                CA*V*Only possible during 1st attack\n*on hit\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + HK"
+    },
+    {
+        name: "EX Tatsumaki Zankukyaku",
+        outbreak: "10",
+        persistence: "11",
+        rigidity: "11+15 frame(s) after landing",
+        hit: "D",
+        guard: "-19",
+        damage: "120",
+        stan: "150",
+        remarks: "S*On hit only, landing recovery can be canceled into Goshoryuken\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + K K"
+    },
+    {
+        name: "Airborne Tatsumaki Zankukyaku",
+        outbreak: "7",
+        persistence: "6",
+        rigidity: "15 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                Distance the opponent is knocked back on hit changes depending on the button strength used\nHadoken changes depending on whether it was fired during the jump ascent or descent\nS*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING FORWARD JUMP) ↓↙← + K"
+    },
+    {
+        name: "EX Airborne Tatsumaki Zankukyaku",
+        outbreak: "8",
+        persistence: "10",
+        rigidity: "9 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "250",
+        remarks: "Can cross-up\n                                                                                                                                                S*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING FORWARD JUMP) ↓↙← + K K"
+    },
+    {
+        name: "Ashura Senku (Forward)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "61 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 50F  attack & projectile invincibility",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + LK"
+    },
+    {
+        name: "Ashura Senku (Back)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "61 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 50F  attack & projectile invincibility",
+        vtrigger: 2,
+        type: "special",
+        command: "←↓↙ + LK"
+    },
+    {
+        name: "L Hyakkishu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "40 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nCan perform EX Zanku Hadoken, EX Airborne Tatsumaki Zankukyaku",
+        vtrigger: 2,
+        type: "special",
+        command: "←↙↓↘→ + LK"
+    },
+    {
+        name: "M Hyakkishu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "41 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nCan perform EX Zanku Hadoken, EX Airborne Tatsumaki Zankukyaku",
+        vtrigger: 2,
+        type: "special",
+        command: "←↙↓↘→ + MK"
+    },
+    {
+        name: "H Hyakkishu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "42 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Airborne for 4F on cancel\nHeight, distance changes depending on the button strength used\nCan perform EX Zanku Hadoken, EX Airborne Tatsumaki Zankukyaku",
+        vtrigger: 2,
+        type: "special",
+        command: "←↙↓↘→ + HK"
+    },
+    {
+        name: "Hyakki Gozan",
+        outbreak: "6",
+        persistence: "8",
+        rigidity: "14",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING Hyakkishu) ▶ (NO INPUT)"
+    },
+    {
+        name: "Hyakki Gosho",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING Hyakkishu) P"
+    },
+    {
+        name: "Hyakki Gojin",
+        outbreak: "22",
+        persistence: "Until landing",
+        rigidity: "10(*14)",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "*at low height",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING Hyakkishu) K"
+    },
+    {
+        name: "Hyakki Gosai",
+        outbreak: "7",
+        persistence: "5",
+        rigidity: "26 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "150",
+        stan: "200",
+        remarks: "Can only throw standing opponents",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING Hyakkishu) LP LK"
+    },
+    {
+        name: "EX Hyakkishu",
+        outbreak: "6",
+        persistence: "10",
+        rigidity: "23",
+        hit: "D",
+        guard: "",
+        damage: "15",
+        stan: "60",
+        remarks: "4F  - Projectile invincible while active\n                                                Forward/backwards mid-air movement slightly controllable\nCan perform EX Zanku Hadoken, EX Airborne Tatsumaki Zankukyaku",
+        vtrigger: 2,
+        type: "special",
+        command: "←↙↓↘→ + K K"
+    },
+    {
+        name: "EX Hyakki Gozan",
+        outbreak: "6",
+        persistence: "8",
+        rigidity: "12",
+        hit: "D",
+        guard: "-2",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) ▶ (NO INPUT)"
+    },
+    {
+        name: "EX Hyakki Gosho",
+        outbreak: "8",
+        persistence: "8",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "200",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) P"
+    },
+    {
+        name: "EX Hyakki Gojin",
+        outbreak: "19",
+        persistence: "Until landing",
+        rigidity: "10(*14)",
+        hit: "",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "*at low height",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) K"
+    },
+    {
+        name: "EX Hyakki Gosai",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "26 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "180",
+        stan: "250",
+        remarks: "Can only throw standing opponents",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) LP LK"
+    },
+    {
+        name: "Hyakki Gozanku (On startup hit)",
+        outbreak: "5",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) ↓↘→ + P"
+    },
+    {
+        name: "Hyakki Gozanku (Projectile)",
+        outbreak: "38",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "150",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) ↓↘→ + P"
+    },
+    {
+        name: "Hyakki Gorasen",
+        outbreak: "8",
+        persistence: "10",
+        rigidity: "9 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "250",
+        remarks: "Can cross-up\n                                                                                                                                                S*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING EX Hyakkishu) ↓↙← + K"
+    },
+    {
+        name: "V\tGohadoken",
+        outbreak: "11",
+        persistence: "",
+        rigidity: "46 total frames",
+        hit: "D",
+        guard: "1",
+        damage: "70",
+        stan: "120",
+        remarks: "Uses 1300F V-Gauge Timer\n                                                                                                                                                                                S*Can be canceled into other V-special moves",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) ↓↘→ + P P"
+    },
+    {
+        name: "V\tSekia Goshoha",
+        outbreak: "21",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "D",
+        guard: "8",
+        damage: "90(*+11)",
+        stan: "150",
+        remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                *Inflicts burn damage on opponents in close range on startup\nS*Can be canceled into other V-special moves",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) →↘↓↙← + P P"
+    },
+    {
+        name: "VEX Zanku Hadoken (On release hit)",
+        outbreak: "5",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "90",
+        stan: "115",
+        remarks: "Uses 1300F V-Gauge Timer",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II OR AN AIRBORNE SPECIAL MOVE) ↓↘→ + P P"
+    },
+    {
+        name: "VZanku Hadoken (Projectile)",
+        outbreak: "38",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II OR AN AIRBORNE SPECIAL MOVE) ↓↘→ + P P"
+    },
+    {
+        name: "VGoshoryuken",
+        outbreak: "3",
+        persistence: "32",
+        rigidity: "32+15 frame(s) after landing",
+        hit: "D",
+        guard: "-44",
+        damage: "130",
+        stan: "150",
+        remarks: "Uses 1300F V-Gauge Timer\n                                                                                                                                1F - 15F  full invincibility\n                                                S*Can cancel into Airborne V-Tatsumaki Zankukyaku, V-Zanku Hadoken on hit only\nSubject to counter hit during move duration (1.2x damage)",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) →↓↘ + P P"
+    },
+    {
+        name: "VTatsumaki Zankukyaku",
+        outbreak: "10",
+        persistence: "11",
+        rigidity: "11+15 frame(s) after landing",
+        hit: "D",
+        guard: "-19",
+        damage: "90",
+        stan: "100",
+        remarks: "Uses 1300F V-Gauge Timer\n                                                                                                                                                                                S*On hit only, landing recovery can be canceled into Goshoryuken\nS*Can cancel into V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) ↓↙← + K K"
+    },
+    {
+        name: "VAirborne Tatsumaki Zankukyaku",
+        outbreak: "8",
+        persistence: "10",
+        rigidity: "9 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "Uses 1300F V-Gauge Timer\n                                Can cross-up\n                                                                                                                                                S*Can cancel into V-Zanku Hadoken on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II OR AN AIRBORNE SPECIAL MOVE) ↓↙← + K K"
+    },
+    {
+        name: "VHyakkishu",
+        outbreak: "6",
+        persistence: "10",
+        rigidity: "",
+        hit: "D",
+        guard: "",
+        damage: "15",
+        stan: "60",
+        remarks: "Uses 1300F V-Gauge Timer\n                                                                                                                                4F  - Projectile invincible while active\n                                                Forward/backwards mid-air movement slightly controllable\nCan perform V-Zanku Hadoken and V-Airborne Tatsumaki Zankukyaku (does not use any additional V-gauge)",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) ←↙↓↘→ + K K"
+    },
+    {
+        name: "VHyakki Gozan",
+        outbreak: "6",
+        persistence: "8",
+        rigidity: "12",
+        hit: "D",
+        guard: "-2",
+        damage: "90",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) ▶ (NO INPUT)"
+    },
+    {
+        name: "VHyakki Gosho",
+        outbreak: "8",
+        persistence: "8",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) P"
+    },
+    {
+        name: "VHyakki Gojin",
+        outbreak: "19",
+        persistence: "Until landing",
+        rigidity: "6 frame(s) after landing(*14 frame(s) after landing)",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "50",
+        remarks: "*at low height",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) K"
+    },
+    {
+        name: "VHyakki Gosai",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "26 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "180",
+        stan: "250",
+        remarks: "Can only throw standing opponents",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) LP LK"
+    },
+    {
+        name: "VHyakki Gozanku (On startup hit)",
+        outbreak: "5",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "90",
+        stan: "115",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) ↓↘→ + P"
+    },
+    {
+        name: "VHyakki Gozanku (Projectile)",
+        outbreak: "38",
+        persistence: "",
+        rigidity: "4 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) ↓↘→ + P"
+    },
+    {
+        name: "VHyakki Gorasen",
+        outbreak: "8",
+        persistence: "10",
+        rigidity: "9 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "Can cross-up\n                                                                                                                                                S*Can cancel into V-Zanku Hadoken",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-HYAKKISHU) ↓↙← + K"
+    },
+    {
+        name: "Ashura Senku (Forward)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "49 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 11F  full invincibility",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) →↓↘ + LK"
+    },
+    {
+        name: "VAshura Senku (Back)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "49 total frames",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 11F  full invincibility",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II WITH SPECIAL MOVE) ←↓↙ + LK"
+    },
+    {
+        name: "Sekia Kuretsuha",
+        outbreak: "8",
+        persistence: "21",
+        rigidity: "46",
+        hit: "D",
+        guard: "-30",
+        damage: "320",
+        stan: "0",
+        remarks: "Will not hit airborne opponents until frame 10F\n                1F - 11F  full invincibility",
+        vtrigger: 2,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + P"
     }
 ];
 exports.akuma = akuma;

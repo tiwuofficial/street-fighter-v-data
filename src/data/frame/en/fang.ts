@@ -9,6 +9,7 @@ const fang = [
     damage: "30",
     stan: "70",
     remarks: "VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -23,6 +24,7 @@ const fang = [
     stan: "100",
     remarks:
       "Second hit will not hit airborne opponents\n                                                                S*CA*V*Only possible during 1st attack\nVS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -37,6 +39,7 @@ const fang = [
     stan: "150",
     remarks:
       "Triggers Crush Counter (+16F)\n                                                                                                                                                                VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -50,6 +53,7 @@ const fang = [
     damage: "40",
     stan: "70",
     remarks: "VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -64,6 +68,7 @@ const fang = [
     stan: "100(*100)",
     remarks:
       "Second hit will not hit crouching opponents\n                                First hit will not hit airborne opponents\n                                                                *During 2nd mid-air hit\nVS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -77,6 +82,7 @@ const fang = [
     damage: "80",
     stan: "150",
     remarks: "S*CA*Only possible during 1st attack\nVS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -90,6 +96,7 @@ const fang = [
     damage: "30",
     stan: "70",
     remarks: "VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -103,6 +110,7 @@ const fang = [
     damage: "50",
     stan: "100",
     remarks: "VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -116,10 +124,24 @@ const fang = [
     damage: "90",
     stan: "150",
     remarks: "VS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching LK", outbreak: "5", persistence: "3", rigidity: "7", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
+  {
+    name: "Crouching LK",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "7",
+    hit: "4",
+    guard: "1",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "Crouching MK",
     outbreak: "8",
@@ -131,6 +153,7 @@ const fang = [
     stan: "100(*100)",
     remarks:
       "Second hit will not hit airborne opponents\n                                                                S*CA*Only possible during 1st attack\n*During 1st mid-air hit\nVS*Can only be canceled into V-Nishodoku",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -145,11 +168,38 @@ const fang = [
     stan: "150",
     remarks:
       "Triggers Crush Counter  (D)\n                                                                                                                                                                V*Only possible during 1st attack",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Jumping LP", outbreak: "4", persistence: "5", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "", type: "jump", command: "" },
-  { name: "Jumping MP", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "Causes blowback knockdown on airborne hit", type: "jump", command: "" },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "50",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "Jumping HP",
     outbreak: "8",
@@ -160,13 +210,66 @@ const fang = [
     damage: "90",
     stan: "150",
     remarks: "During neutral jump only - can move forward with directional input",
+    vtrigger: 1,
     type: "jump",
     command: ""
   },
-  { name: "Jumping LK", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "50", remarks: "Can cross-up", type: "jump", command: "" },
-  { name: "Jumping MK", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
-  { name: "Forward Jump HK", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "Can cross-up", type: "jump", command: "" },
-  { name: "Vertical/Back Jump HK", outbreak: "9", persistence: "4", rigidity: "", hit: "", guard: "", damage: "80", stan: "150", remarks: "", type: "jump", command: "" },
+  {
+    name: "Jumping LK",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "50",
+    remarks: "Can cross-up",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MK",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Forward Jump HK",
+    outbreak: "9",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "Can cross-up",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Vertical/Back Jump HK",
+    outbreak: "9",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
   {
     name: "Nirenko",
     outbreak: "12",
@@ -177,6 +280,7 @@ const fang = [
     damage: "100",
     stan: "200",
     remarks: "S*CA*V*Only possible during 1st attack",
+    vtrigger: 1,
     type: "unique",
     command: "↘ + HP"
   },
@@ -189,13 +293,54 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "Can extend the move duration by a max of 86F by continuing to hold down\nS*Can be canceled into Nishikyu from 22F",
+    remarks:
+      "Can extend the move duration by a max of 86F by continuing to hold down\nS*Can be canceled into Nishikyu from 22F",
+    vtrigger: 1,
     type: "unique",
     command: "↓ + LP"
   },
-  { name: "Senpukuga (Attack)", outbreak: "10", persistence: "4", rigidity: "14", hit: "6", guard: "2", damage: "70", stan: "100", remarks: "", type: "unique", command: "↓ + LP ▶" },
-  { name: "Shimonshu", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
-  { name: "Kyoshitsugeki", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "120", stan: "150", remarks: "", type: "throw", command: "" },
+  {
+    name: "Senpukuga (Attack)",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "↓ + LP ▶ K"
+  },
+  {
+    name: "Shimonshu",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "120",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Kyoshitsugeki",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "120",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
   {
     name: "[VS1] Nishodoku",
     outbreak: "22",
@@ -205,9 +350,11 @@ const fang = [
     guard: "",
     damage: "50 poison",
     stan: "",
-    remarks: "Will not hit airborne opponents\n                                                                Causes poison effect on hit",
+    remarks:
+      "Will not hit airborne opponents\n                                                                Causes poison effect on hit",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
     name: "V[VS1] Nishodoku",
@@ -220,8 +367,9 @@ const fang = [
     stan: "50",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit\nCan be canceled into from special move-cancelable normal moves",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) MP MK"
   },
   {
     name: "[VS2] Sodokubu",
@@ -233,8 +381,9 @@ const fang = [
     damage: "0",
     stan: "0",
     remarks: "打撃属性の攻撃を当身可能\nSubject to counter hit during move duration",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
     name: "[VS2] Sodokubu (upon successful parry)",
@@ -246,6 +395,7 @@ const fang = [
     damage: "60+50 poison",
     stan: "120",
     remarks: "",
+    vtrigger: 1,
     type: "vsystem",
     command: ""
   },
@@ -259,6 +409,7 @@ const fang = [
     damage: "80+50 poison",
     stan: "150",
     remarks: "",
+    vtrigger: 1,
     type: "vsystem",
     command: ""
   },
@@ -273,8 +424,9 @@ const fang = [
     stan: "",
     remarks:
       "V-Gauge Timer + 900F\n                                                                                                                                                                                While active, coming into contact with F.A.N.G will poison the opponent\nNo charge time required for charge moves used from a special move cancel",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "HP HK"
   },
   {
     name: "Nikaiho",
@@ -285,9 +437,11 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+    remarks:
+      "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(DURING GUARD) → + LP"
   },
   {
     name: "Nishikyu",
@@ -299,8 +453,9 @@ const fang = [
     damage: "40+50 poison",
     stan: "100",
     remarks: "Causes poison effect on hit\nS*Can only cancel into Nikankyaku, EX Nikankyaku",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + P"
   },
   {
     name: "EX Nishikyu",
@@ -312,8 +467,9 @@ const fang = [
     damage: "90+50 poison",
     stan: "100",
     remarks: "Causes poison effect on hit\nS*Can only cancel into Nikankyaku",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + P P"
   },
   {
     name: "L Ryobenda",
@@ -325,8 +481,9 @@ const fang = [
     damage: "60+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + LK"
   },
   {
     name: "M Ryobenda",
@@ -338,8 +495,9 @@ const fang = [
     damage: "40+50 poison",
     stan: "100",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + MK"
   },
   {
     name: "H Ryobenda",
@@ -351,8 +509,9 @@ const fang = [
     damage: "40+50 poison",
     stan: "100",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + HK"
   },
   {
     name: "EX Ryobenda",
@@ -364,8 +523,9 @@ const fang = [
     damage: "60+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit\nS*Airborne portion can be canceled into Nikyoushu",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "EX Ryobenda (Placed Poison)",
@@ -377,8 +537,9 @@ const fang = [
     damage: "40+50 poison",
     stan: "44",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "L Sotoja",
@@ -390,8 +551,9 @@ const fang = [
     damage: "70+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + LP"
   },
   {
     name: "M Sotoja",
@@ -403,8 +565,9 @@ const fang = [
     damage: "80+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit\n*1st hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + MP"
   },
   {
     name: "H Sotoja",
@@ -416,8 +579,9 @@ const fang = [
     damage: "100+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit\n*1st hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + HP"
   },
   {
     name: "EX Sotoja",
@@ -429,8 +593,9 @@ const fang = [
     damage: "100+50 poison",
     stan: "200",
     remarks: "Causes poison effect on hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + P P"
   },
   {
     name: "L Nikankyaku",
@@ -442,8 +607,9 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + LK"
   },
   {
     name: "M Nikankyaku",
@@ -455,8 +621,9 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + MK"
   },
   {
     name: "H Nikankyaku",
@@ -468,8 +635,9 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + HK"
   },
   {
     name: "EX Nikankyaku",
@@ -481,10 +649,24 @@ const fang = [
     damage: "",
     stan: "",
     remarks: "25F - 30F  projectile invincibility\n1F - 24F  attack & projectile invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + K K"
   },
-  { name: "Nikyoushu", outbreak: "", persistence: "", rigidity: "9 frame(s) after landing", hit: "", guard: "", damage: "", stan: "", remarks: "", type: "special", command: "" },
+  {
+    name: "Nikyoushu",
+    outbreak: "",
+    persistence: "",
+    rigidity: "9 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(DURING JUMP) LP"
+  },
   {
     name: "Shishiruirui",
     outbreak: "10",
@@ -494,9 +676,768 @@ const fang = [
     guard: "",
     damage: "292+60 poison",
     stan: "0",
-    remarks: "1F - 25F  full invincibility\n                                                Only the projectile has a projectile-nullifying hitbox",
+    remarks:
+      "1F - 25F  full invincibility\n                                                Only the projectile has a projectile-nullifying hitbox",
+    vtrigger: 1,
     type: "ca",
+    command: "↓↘→ ↓↘→ + P"
+  },
+  {
+    name: "Standing LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "6",
+    hit: "5",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
     command: ""
+  },
+  {
+    name: "Standing MP",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "15",
+    hit: "2",
+    guard: "-3",
+    damage: "60",
+    stan: "100",
+    remarks:
+      "Second hit will not hit airborne opponents\n                                                                S*CA*V*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HP",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "19",
+    hit: "1",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "Triggers Crush Counter (+16F)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing LK",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "7",
+    hit: "5",
+    guard: "3",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing MK",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "14",
+    hit: "3",
+    guard: "1",
+    damage: "60(*60)",
+    stan: "100(*100)",
+    remarks:
+      "Second hit will not hit crouching opponents\n                                First hit will not hit airborne opponents\n                                                                *During 2nd mid-air hit",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HK",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "16",
+    hit: "6",
+    guard: "1",
+    damage: "80",
+    stan: "150",
+    remarks: "S*CA*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "8",
+    hit: "3",
+    guard: "1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MP",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "16",
+    hit: "1",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HP",
+    outbreak: "9",
+    persistence: "5",
+    rigidity: "19",
+    hit: "D",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LK",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "7",
+    hit: "4",
+    guard: "1",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MK",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "14",
+    hit: "5",
+    guard: "3",
+    damage: "60",
+    stan: "100(*100)",
+    remarks:
+      "Second hit will not hit airborne opponents\n                                                                S*CA*Only possible during 1st attack\n*During 1st mid-air hit",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HK",
+    outbreak: "9",
+    persistence: "4",
+    rigidity: "24",
+    hit: "D",
+    guard: "-12",
+    damage: "100",
+    stan: "150",
+    remarks:
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                V*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "50",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HP",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "During neutral jump only - can move forward with directional input",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping LK",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "50",
+    remarks: "Can cross-up",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MK",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Forward Jump HK",
+    outbreak: "9",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "Can cross-up",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Vertical/Back Jump HK",
+    outbreak: "9",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Nirenko",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "21",
+    hit: "0",
+    guard: "-5",
+    damage: "100",
+    stan: "200",
+    remarks: "S*CA*V*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "unique",
+    command: "↘ + HP"
+  },
+  {
+    name: "Senpukuga (Prone)",
+    outbreak: "",
+    persistence: "",
+    rigidity: "54 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "Can extend the move duration by a max of 86F by continuing to hold down\nS*Can be canceled into Nishikyu from 22F",
+    vtrigger: 2,
+    type: "unique",
+    command: "↓ + LP"
+  },
+  {
+    name: "Senpukuga (Attack)",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "↓ + LP ▶ K"
+  },
+  {
+    name: "Shimonshu",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "120",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Kyoshitsugeki",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "120",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
+  {
+    name: "[VS1] Nishodoku",
+    outbreak: "22",
+    persistence: "250",
+    rigidity: "40 total frames",
+    hit: "",
+    guard: "",
+    damage: "50 poison",
+    stan: "",
+    remarks:
+      "Will not hit airborne opponents\n                                                                Causes poison effect on hit",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS2] Sodokubu",
+    outbreak: "3",
+    persistence: "10",
+    rigidity: "54",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "打撃属性の攻撃を当身可能\nSubject to counter hit during move duration",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL II) MP MK"
+  },
+  {
+    name: "[VS2] Sodokubu (upon successful parry)",
+    outbreak: "3",
+    persistence: "8",
+    rigidity: "62",
+    hit: "D",
+    guard: "-42",
+    damage: "60+50 poison",
+    stan: "120",
+    remarks: "",
+    vtrigger: 2,
+    type: "vsystem",
+    command: ""
+  },
+  {
+    name: "Koryo Dokuda",
+    outbreak: "1",
+    persistence: "",
+    rigidity: "2",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "V-Gauge Timer + 3000F\n                                                                                                                                                                                Nishikyu and Ryobenda are strengthened while active",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP HK"
+  },
+  {
+    name: "Nikaiho",
+    outbreak: "",
+    persistence: "",
+    rigidity: "31 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "Nishikyu",
+    outbreak: "13",
+    persistence: "",
+    rigidity: "60 total frames",
+    hit: "-7",
+    guard: "-11",
+    damage: "40+50 poison",
+    stan: "100",
+    remarks: "Causes poison effect on hit\nS*Can only cancel into Nikankyaku, EX Nikankyaku",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + P"
+  },
+  {
+    name: "VNishikyu",
+    outbreak: "13",
+    persistence: "",
+    rigidity: "60 total frames",
+    hit: "1",
+    guard: "-2",
+    damage: "80+50 poison",
+    stan: "140",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit\nS*Can only cancel into Nikankyaku, EX Nikankyaku\nUses 500 of the V-Timer when canceling into normal Nikankyaku",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) ↑ + P"
+  },
+  {
+    name: "EX Nishikyu",
+    outbreak: "13",
+    persistence: "",
+    rigidity: "49 total frames",
+    hit: "3",
+    guard: "-1",
+    damage: "90+50 poison",
+    stan: "100",
+    remarks: "Causes poison effect on hit\nS*Can only cancel into Nikankyaku",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + P P"
+  },
+  {
+    name: "VEX 二Nishikyu",
+    outbreak: "13",
+    persistence: "",
+    rigidity: "49 total frames",
+    hit: "D",
+    guard: "3",
+    damage: "130+50 poison",
+    stan: "140",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit\nS*Can only cancel into Nikankyaku, EX Nikankyaku\nDoes not use V-Timer when canceling into Nikankyaku",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) ↑ + P P"
+  },
+  {
+    name: "L Ryobenda",
+    outbreak: "14",
+    persistence: "3",
+    rigidity: "29",
+    hit: "D",
+    guard: "-9",
+    damage: "60+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + LK"
+  },
+  {
+    name: "M Ryobenda",
+    outbreak: "19",
+    persistence: "80",
+    rigidity: "46 total frames",
+    hit: "1",
+    guard: "-8",
+    damage: "40+50 poison",
+    stan: "100",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + MK"
+  },
+  {
+    name: "H Ryobenda",
+    outbreak: "23",
+    persistence: "120",
+    rigidity: "52 total frames",
+    hit: "-1",
+    guard: "-10",
+    damage: "40+50 poison",
+    stan: "100",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + HK"
+  },
+  {
+    name: "VL Ryobenda",
+    outbreak: "14",
+    persistence: "23",
+    rigidity: "29",
+    hit: "D",
+    guard: "-9",
+    damage: "70+50 poison",
+    stan: "200",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) → + LK"
+  },
+  {
+    name: "VM Ryobenda",
+    outbreak: "19",
+    persistence: "100",
+    rigidity: "46 total frames",
+    hit: "D",
+    guard: "0",
+    damage: "60+50 poison",
+    stan: "150",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) → + MK"
+  },
+  {
+    name: "VH Ryobenda",
+    outbreak: "23",
+    persistence: "140",
+    rigidity: "52 total frames",
+    hit: "D",
+    guard: "0",
+    damage: "60+50 poison",
+    stan: "150",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) → + HK"
+  },
+  {
+    name: "EX Ryobenda",
+    outbreak: "15",
+    persistence: "2",
+    rigidity: "48 total frames",
+    hit: "D",
+    guard: "2",
+    damage: "60+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit\nS*Airborne portion can be canceled into Nikyoushu",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + K K"
+  },
+  {
+    name: "EX Ryobenda (Placed Poison)",
+    outbreak: "",
+    persistence: "220",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40+50 poison",
+    stan: "44",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + K K"
+  },
+  {
+    name: "VEX Ryobenda",
+    outbreak: "15",
+    persistence: "2",
+    rigidity: "49 total frames",
+    hit: "D",
+    guard: "6",
+    damage: "60+50 poison",
+    stan: "150",
+    remarks:
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit\nS*Airborne portion can be canceled into Nikyoushu",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) → + K K"
+  },
+  {
+    name: "VEX Ryobenda (Placed Poison)",
+    outbreak: "",
+    persistence: "240",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60+50 poison",
+    stan: "94",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) → + K K"
+  },
+  {
+    name: "L Sotoja",
+    outbreak: "13",
+    persistence: "8",
+    rigidity: "23",
+    hit: "0",
+    guard: "-11",
+    damage: "70+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + LP"
+  },
+  {
+    name: "M Sotoja",
+    outbreak: "16",
+    persistence: "8",
+    rigidity: "23(*22)",
+    hit: "D/-1",
+    guard: "-9",
+    damage: "80+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit\n*1st hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + MP"
+  },
+  {
+    name: "H Sotoja",
+    outbreak: "21",
+    persistence: "8",
+    rigidity: "24(*23)",
+    hit: "D/-2",
+    guard: "-10",
+    damage: "100+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit\n*1st hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + HP"
+  },
+  {
+    name: "EX Sotoja",
+    outbreak: "14",
+    persistence: "8",
+    rigidity: "18",
+    hit: "D",
+    guard: "-2",
+    damage: "100+50 poison",
+    stan: "200",
+    remarks: "Causes poison effect on hit",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + P P"
+  },
+  {
+    name: "L Nikankyaku",
+    outbreak: "",
+    persistence: "",
+    rigidity: "29 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + LK"
+  },
+  {
+    name: "M Nikankyaku",
+    outbreak: "",
+    persistence: "",
+    rigidity: "29 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + MK"
+  },
+  {
+    name: "H Nikankyaku",
+    outbreak: "",
+    persistence: "",
+    rigidity: "31 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "6F - 28F  projectile invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + HK"
+  },
+  {
+    name: "EX Nikankyaku",
+    outbreak: "",
+    persistence: "",
+    rigidity: "33 total frames",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "25F - 30F  projectile invincibility\n1F - 24F  attack & projectile invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + K K"
+  },
+  {
+    name: "Nikyoushu",
+    outbreak: "",
+    persistence: "",
+    rigidity: "9 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING JUMP) LP"
+  },
+  {
+    name: "Shishiruirui",
+    outbreak: "10",
+    persistence: "9",
+    rigidity: "4 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "292+60 poison",
+    stan: "0",
+    remarks:
+      "1F - 25F  full invincibility\n                                                Only the projectile has a projectile-nullifying hitbox",
+    vtrigger: 2,
+    type: "ca",
+    command: "↓↘→ ↓↘→ + P"
   }
 ];
 export { fang };

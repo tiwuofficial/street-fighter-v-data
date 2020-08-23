@@ -1,9 +1,74 @@
 const mbison = [
-  { name: "Standing LP", outbreak: "4", persistence: "3", rigidity: "7", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "Standing MP", outbreak: "7", persistence: "3", rigidity: "14", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "Standing HP", outbreak: "11", persistence: "3", rigidity: "20", hit: "-1", guard: "-6", damage: "90", stan: "150", remarks: "", type: "normal", command: "" },
-  { name: "Standing LK", outbreak: "3", persistence: "2", rigidity: "10", hit: "0", guard: "-2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "Standing MK", outbreak: "7", persistence: "3", rigidity: "13", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "Standing LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "7",
+    hit: "5",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing MP",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HP",
+    outbreak: "11",
+    persistence: "3",
+    rigidity: "20",
+    hit: "-1",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing LK",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "0",
+    guard: "-2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing MK",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "13",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "Standing HK",
     outbreak: "9",
@@ -13,23 +78,194 @@ const mbison = [
     guard: "3",
     damage: "80",
     stan: "150",
-    remarks: "Triggers Crush Counter  (crumple)\n                                                Forces stand",
+    remarks:
+      "Triggers Crush Counter  (crumple)\n                                                Forces stand",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "Crouching LP", outbreak: "4", persistence: "3", rigidity: "5", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-  { name: "Crouching MP", outbreak: "6", persistence: "3", rigidity: "12", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "Crouching HP", outbreak: "10", persistence: "5", rigidity: "23", hit: "-5", guard: "-11", damage: "100", stan: "150", remarks: "Forces stand", type: "normal", command: "" },
-  { name: "Crouching LK", outbreak: "4", persistence: "2", rigidity: "7", hit: "3", guard: "2", damage: "20", stan: "70", remarks: "Can be rapid canceled", type: "normal", command: "" },
-  { name: "Crouching MK", outbreak: "7", persistence: "2", rigidity: "15", hit: "-1", guard: "-2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "Crouching HK", outbreak: "15", persistence: "10", rigidity: "18", hit: "D", guard: "-12", damage: "90", stan: "150", remarks: "Triggers Crush Counter  (D)", type: "normal", command: "" },
-  { name: "Jumping LP", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "Jumping MP", outbreak: "7", persistence: "3", rigidity: "", hit: "", guard: "", damage: "50", stan: "100", remarks: "Causes blowback knockdown on airborne hit", type: "jump", command: "" },
-  { name: "Jumping HP", outbreak: "8", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "Jumping LK", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "Jumping MK", outbreak: "6", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "Can cross-up", type: "jump", command: "" },
-  { name: "Jumping HK", outbreak: "8", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "Hell Attack", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "50", remarks: "", type: "unique", command: "(DURING JUMP) MP ▶ MP" },
+  {
+    name: "Crouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "5",
+    hit: "4",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MP",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "12",
+    hit: "3",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HP",
+    outbreak: "10",
+    persistence: "5",
+    rigidity: "23",
+    hit: "-5",
+    guard: "-11",
+    damage: "100",
+    stan: "150",
+    remarks: "Forces stand",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LK",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MK",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "15",
+    hit: "-1",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HK",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "18",
+    hit: "D",
+    guard: "-12",
+    damage: "90",
+    stan: "150",
+    remarks: "Triggers Crush Counter  (D)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "50",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HP",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping LK",
+    outbreak: "3",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MK",
+    outbreak: "6",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Can cross-up",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HK",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Hell Attack",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "50",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "(DURING JUMP) MP ▶ MP"
+  },
   {
     name: "Psycho Axe",
     outbreak: "18",
@@ -41,6 +277,7 @@ const mbison = [
     stan: "150",
     remarks:
       "Triggers Crush Counter (+15F)\n                                                                                                                                                                *On whiff",
+    vtrigger: 1,
     type: "unique",
     command: "↘ + HP"
   },
@@ -54,11 +291,38 @@ const mbison = [
     damage: "50",
     stan: "120",
     remarks: "Triggers Crush Counter (+15F)",
+    vtrigger: 1,
     type: "unique",
     command: "MP ▶ ↘ + HP"
   },
-  { name: "Psycho Impact", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "170", remarks: "", type: "throw", command: "" },
-  { name: "Psycho Fall", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+  {
+    name: "Psycho Impact",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "140",
+    stan: "170",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Psycho Fall",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
   {
     name: "[VS1] Psycho Reflect",
     outbreak: "6",
@@ -69,8 +333,9 @@ const mbison = [
     damage: "",
     stan: "",
     remarks: "*Value while absorbing projectile\nSubject to counter hit during move duration",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
     name: "[VS1] Psycho Reflect (Shoot Projectile)",
@@ -82,8 +347,9 @@ const mbison = [
     damage: "80",
     stan: "100",
     remarks: "Note: Automatically fires the projectile upon successful Psycho Reflect absorption",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) MP MK (HOLD BUTTONS)"
   },
   {
     name: "[VS1] Psycho Reflect (Attack)",
@@ -94,7 +360,9 @@ const mbison = [
     guard: "2",
     damage: "100",
     stan: "150",
-    remarks: "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    remarks:
+      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    vtrigger: 1,
     type: "vsystem",
     command: ""
   },
@@ -109,8 +377,9 @@ const mbison = [
     stan: "100",
     remarks:
       "Can be canceled into from special move-cancelable normal moves\nNote: After a successful non-button hold Psycho Reflect absorption, the projectile can be fired by pressing MP + MK again",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL I) (DURING THE ABSORPTION STATE) MP MK"
   },
   {
     name: "[VS2] Hell's Warp",
@@ -121,9 +390,11 @@ const mbison = [
     guard: "1",
     damage: "70",
     stan: "100",
-    remarks: "21F - 31F  full invincibility\n                                                *On whiff",
+    remarks:
+      "21F - 31F  full invincibility\n                                                *On whiff",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
     name: "Psycho Power",
@@ -136,8 +407,9 @@ const mbison = [
     stan: "",
     remarks:
       "V-Gauge Timer + 2000F\n                                                                                                                                                                                Special move performance enhanced while active",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "HP HK"
   },
   {
     name: "Psycho Burst",
@@ -148,13 +420,54 @@ const mbison = [
     guard: "-2",
     damage: "60",
     stan: "0",
-    remarks: "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\n*on block/whiff",
+    remarks:
+      "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\n*on block/whiff",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(DURING GUARD) → + LP"
   },
-  { name: "L Psycho Blast", outbreak: "12", persistence: "10", rigidity: "40 total frames", hit: "D", guard: "-2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "M Psycho Blast", outbreak: "15", persistence: "10", rigidity: "42 total frames", hit: "D", guard: "-1", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "H Psycho Blast", outbreak: "19", persistence: "10", rigidity: "42 total frames", hit: "D", guard: "2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
+  {
+    name: "L Psycho Blast",
+    outbreak: "12",
+    persistence: "10",
+    rigidity: "40 total frames",
+    hit: "D",
+    guard: "-2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + LP"
+  },
+  {
+    name: "M Psycho Blast",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "42 total frames",
+    hit: "D",
+    guard: "-1",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + MP"
+  },
+  {
+    name: "H Psycho Blast",
+    outbreak: "19",
+    persistence: "10",
+    rigidity: "42 total frames",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + HP"
+  },
   {
     name: "VPsycho Blast",
     outbreak: "11",
@@ -165,10 +478,24 @@ const mbison = [
     damage: "100",
     stan: "100",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + P"
   },
-  { name: "EX Psycho Blast", outbreak: "15", persistence: "", rigidity: "38 total frames", hit: "D", guard: "6", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+  {
+    name: "EX Psycho Blast",
+    outbreak: "15",
+    persistence: "",
+    rigidity: "38 total frames",
+    hit: "D",
+    guard: "6",
+    damage: "100",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + P P"
+  },
   {
     name: "VEX Psycho Blast",
     outbreak: "14",
@@ -179,8 +506,9 @@ const mbison = [
     damage: "120",
     stan: "150",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + P P"
   },
   {
     name: "L Psycho Inferno",
@@ -192,8 +520,9 @@ const mbison = [
     damage: "80",
     stan: "150",
     remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + LP"
   },
   {
     name: "M Psycho Inferno",
@@ -205,8 +534,9 @@ const mbison = [
     damage: "90",
     stan: "150",
     remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + MP"
   },
   {
     name: "H Psycho Inferno",
@@ -218,8 +548,9 @@ const mbison = [
     damage: "100",
     stan: "150",
     remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + HP"
   },
   {
     name: "VPsycho Inferno",
@@ -232,10 +563,24 @@ const mbison = [
     stan: "150",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                                                                CA*Only possible during 4th attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P"
   },
-  { name: "EX Psycho Inferno", outbreak: "15", persistence: "18", rigidity: "54 total frames", hit: "D", guard: "-1", damage: "140", stan: "150", remarks: "", type: "special", command: "" },
+  {
+    name: "EX Psycho Inferno",
+    outbreak: "15",
+    persistence: "18",
+    rigidity: "54 total frames",
+    hit: "D",
+    guard: "-1",
+    damage: "140",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↙← + P P"
+  },
   {
     name: "VEX Psycho Inferno",
     outbreak: "15",
@@ -246,8 +591,9 @@ const mbison = [
     damage: "160",
     stan: "150",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P P"
   },
   {
     name: "VEX Psycho Inferno (Cancel)",
@@ -259,8 +605,9 @@ const mbison = [
     damage: "160",
     stan: "150",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P P"
   },
   {
     name: "L Double Knee Press",
@@ -272,8 +619,9 @@ const mbison = [
     damage: "80",
     stan: "150",
     remarks: "CA*Only possible during 1st attack\nV*Only possible during 2nd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + LK"
   },
   {
     name: "M Double Knee Press",
@@ -285,8 +633,9 @@ const mbison = [
     damage: "90",
     stan: "150",
     remarks: "CA*Only possible during 1st attack\nV*Only possible during 2nd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + MK"
   },
   {
     name: "H Double Knee Press",
@@ -298,8 +647,9 @@ const mbison = [
     damage: "100",
     stan: "150",
     remarks: "CA*Only possible during 1st attack\nV*Only possible during 2nd attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + HK"
   },
   {
     name: "VL Double Knee Press",
@@ -312,8 +662,9 @@ const mbison = [
     stan: "150",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                6F - 9F  full invincibility\n                                                CA*Only possible during 1st attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + LK"
   },
   {
     name: "VM Double Knee Press",
@@ -326,8 +677,9 @@ const mbison = [
     stan: "150",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                6F - 11F  full invincibility\n                                                CA*Only possible during 1st attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + MK"
   },
   {
     name: "VH Double Knee Press",
@@ -340,8 +692,9 @@ const mbison = [
     stan: "150",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                6F - 13F  full invincibility\n                                                CA*Only possible during 1st attack",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + HK"
   },
   {
     name: "EX Double Knee Press",
@@ -353,8 +706,9 @@ const mbison = [
     damage: "150(*160)(*270)",
     stan: "200(*1*2100)",
     remarks: "V*Only for the second hit on block\n*1During airborne hit\n*2From active frame 2F",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "VEX Double Knee Press",
@@ -365,9 +719,11 @@ const mbison = [
     guard: "3",
     damage: "160",
     stan: "200",
-    remarks: "Uses 200F V-Gauge Timer\n                                                                                                                                4F - 12F  full invincibility",
+    remarks:
+      "Uses 200F V-Gauge Timer\n                                                                                                                                4F - 12F  full invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "VEX Double Knee Press (Cancel)",
@@ -378,11 +734,26 @@ const mbison = [
     guard: "3",
     damage: "160",
     stan: "200",
-    remarks: "Uses 200F V-Gauge Timer\n                                                                                                                                1F - 12F  full invincibility",
+    remarks:
+      "Uses 200F V-Gauge Timer\n                                                                                                                                1F - 12F  full invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
-  { name: "Head Press", outbreak: "23", persistence: "Until landing", rigidity: "7 frame(s) after landing", hit: "", guard: "", damage: "100", stan: "200", remarks: "", type: "special", command: "" },
+  {
+    name: "Head Press",
+    outbreak: "23",
+    persistence: "Until landing",
+    rigidity: "7 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "100",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↑ + K"
+  },
   {
     name: "VHead Press",
     outbreak: "24",
@@ -394,8 +765,9 @@ const mbison = [
     stan: "200",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                                                                Cannot recover",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K"
   },
   {
     name: "EX Head Press",
@@ -408,8 +780,9 @@ const mbison = [
     stan: "200(*100)",
     remarks:
       "Can cross-up\n                                                                                                                                                Projectile invincible from 1-2F, 8F until landing\nHit and projectile invincible from 3F to 7F\n*During airborne hit",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
   {
     name: "VEX Head Press",
@@ -422,8 +795,9 @@ const mbison = [
     stan: "200",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                1F - 25F  full invincibility\n                                                Cannot recover",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
   {
     name: "VEX Head Press (Cancel)",
@@ -436,11 +810,38 @@ const mbison = [
     stan: "200",
     remarks:
       "Uses 200F V-Gauge Timer\n                                                                                                                                                                                Cannot recover",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
-  { name: "Somersault Skull Diver", outbreak: "5", persistence: "10", rigidity: "4 frame(s) after landing", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "Devil Reverse", outbreak: "15", persistence: "22", rigidity: "7 frame(s) after landing", hit: "D", guard: "2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
+  {
+    name: "Somersault Skull Diver",
+    outbreak: "5",
+    persistence: "10",
+    rigidity: "4 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(AFTER HEAD PRESS HITS) P"
+  },
+  {
+    name: "Devil Reverse",
+    outbreak: "15",
+    persistence: "22",
+    rigidity: "7 frame(s) after landing",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(BEFORE HEAD PRESS HITS) P"
+  },
   {
     name: "VDevil Reverse",
     outbreak: "32",
@@ -451,8 +852,9 @@ const mbison = [
     damage: "100",
     stan: "150",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(BEFORE HEAD PRESS HITS) P"
   },
   {
     name: "EX Devil Reverse",
@@ -464,8 +866,9 @@ const mbison = [
     damage: "140",
     stan: "200",
     remarks: "1F - 16F  full invincibility",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(BEFORE HEAD PRESS HITS) P P"
   },
   {
     name: "VEX Devil Reverse",
@@ -477,8 +880,9 @@ const mbison = [
     damage: "160",
     stan: "200",
     remarks: "Uses 200F V-Gauge Timer",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(BEFORE HEAD PRESS HITS) P P"
   },
   {
     name: "Ultimate Psycho Crusher",
@@ -490,8 +894,9 @@ const mbison = [
     damage: "340",
     stan: "0",
     remarks: "1F - 20F  full invincibility",
+    vtrigger: 1,
     type: "ca",
-    command: ""
+    command: "↓↘→ ↓↘→ + P"
   },
   {
     name: "Ultimate Psycho Crusher (Airborne)",
@@ -503,8 +908,748 @@ const mbison = [
     damage: "340",
     stan: "0",
     remarks: "1F - 20F  full invincibility",
+    vtrigger: 1,
     type: "ca",
+    command: "(DURING JUMP) ↓↘→ ↓↘→ + P"
+  },
+  {
+    name: "Standing LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "7",
+    hit: "5",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
     command: ""
+  },
+  {
+    name: "Standing MP",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HP",
+    outbreak: "11",
+    persistence: "3",
+    rigidity: "20",
+    hit: "-1",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing LK",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "0",
+    guard: "-2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing MK",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "13",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Standing HK",
+    outbreak: "9",
+    persistence: "3",
+    rigidity: "13",
+    hit: "6",
+    guard: "3",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "Triggers Crush Counter  (crumple)\n                                                Forces stand",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LP",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "5",
+    hit: "4",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MP",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "12",
+    hit: "3",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HP",
+    outbreak: "10",
+    persistence: "5",
+    rigidity: "23",
+    hit: "-5",
+    guard: "-11",
+    damage: "100",
+    stan: "150",
+    remarks: "Forces stand",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching LK",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "Can be rapid canceled",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching MK",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "15",
+    hit: "-1",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Crouching HK",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "18",
+    hit: "D",
+    guard: "-12",
+    damage: "90",
+    stan: "150",
+    remarks: "Triggers Crush Counter  (D)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "Jumping LP",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MP",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "50",
+    stan: "100",
+    remarks: "Causes blowback knockdown on airborne hit",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HP",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping LK",
+    outbreak: "3",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping MK",
+    outbreak: "6",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "Can cross-up",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Jumping HK",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "Hell Attack",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "50",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "(DURING JUMP) MP ▶ MP"
+  },
+  {
+    name: "Psycho Axe",
+    outbreak: "18",
+    persistence: "3",
+    rigidity: "20(*25)",
+    hit: "6",
+    guard: "1",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "Triggers Crush Counter (+15F)\n                                                                                                                                                                *On whiff",
+    vtrigger: 2,
+    type: "unique",
+    command: "↘ + HP"
+  },
+  {
+    name: "Shadow Axe",
+    outbreak: "14",
+    persistence: "3",
+    rigidity: "20",
+    hit: "2",
+    guard: "-8",
+    damage: "50",
+    stan: "120",
+    remarks: "Triggers Crush Counter (+15F)",
+    vtrigger: 2,
+    type: "unique",
+    command: "MP ▶ ↘ + HP"
+  },
+  {
+    name: "Psycho Impact",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "140",
+    stan: "170",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) → OR + LP LK"
+  },
+  {
+    name: "Psycho Fall",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(NEAR OPPONENT) ← + LP LK"
+  },
+  {
+    name: "[VS1] Psycho Reflect",
+    outbreak: "6",
+    persistence: "9(*7)",
+    rigidity: "28",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "*Value while absorbing projectile\nSubject to counter hit during move duration",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK"
+  },
+  {
+    name: "[VS1] Psycho Reflect (Shoot Projectile)",
+    outbreak: "16",
+    persistence: "",
+    rigidity: "36 total frames",
+    hit: "D",
+    guard: "13",
+    damage: "80",
+    stan: "100",
+    remarks: "Note: Automatically fires the projectile upon successful Psycho Reflect absorption",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) MP MK (HOLD BUTTONS)"
+  },
+  {
+    name: "[VS1] Psycho Reflect (Attack)",
+    outbreak: "13",
+    persistence: "5",
+    rigidity: "25",
+    hit: "D",
+    guard: "2",
+    damage: "100",
+    stan: "150",
+    remarks:
+      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    vtrigger: 2,
+    type: "vsystem",
+    command: ""
+  },
+  {
+    name: "[VS1] Psycho Punishment",
+    outbreak: "16",
+    persistence: "",
+    rigidity: "36 total frames",
+    hit: "D",
+    guard: "13",
+    damage: "80",
+    stan: "100",
+    remarks:
+      "Can be canceled into from special move-cancelable normal moves\nNote: After a successful non-button hold Psycho Reflect absorption, the projectile can be fired by pressing MP + MK again",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL I) (DURING THE ABSORPTION STATE) MP MK"
+  },
+  {
+    name: "[VS2] Hell's Warp",
+    outbreak: "43",
+    persistence: "4",
+    rigidity: "18(*20)",
+    hit: "D",
+    guard: "1",
+    damage: "70",
+    stan: "100",
+    remarks:
+      "21F - 31F  full invincibility\n                                                *On whiff",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(WHEN SELECTING VSKILL II) MP MK"
+  },
+  {
+    name: "Psycho Nightmare",
+    outbreak: "1",
+    persistence: "",
+    rigidity: "10",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "V-Gauge Timer + 4000F\n                                                                                                                                                                                Gains an exclusive special move\nCannot be canceled into from a special move",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP HK"
+  },
+  {
+    name: "Psycho Burst",
+    outbreak: "17",
+    persistence: "2",
+    rigidity: "20(*23)",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks:
+      "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation\n*on block/whiff",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "L Psycho Blast",
+    outbreak: "10",
+    persistence: "10",
+    rigidity: "40 total frames",
+    hit: "D",
+    guard: "-2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + LP"
+  },
+  {
+    name: "M Psycho Blast",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "42 total frames",
+    hit: "D",
+    guard: "-1",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + MP"
+  },
+  {
+    name: "H Psycho Blast",
+    outbreak: "19",
+    persistence: "10",
+    rigidity: "42 total frames",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + HP"
+  },
+  {
+    name: "EX Psycho Blast",
+    outbreak: "15",
+    persistence: "",
+    rigidity: "38 total frames",
+    hit: "D",
+    guard: "6",
+    damage: "100",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + P P"
+  },
+  {
+    name: "L Psycho Inferno",
+    outbreak: "14",
+    persistence: "12",
+    rigidity: "56 total frames",
+    hit: "D",
+    guard: "-12",
+    damage: "80",
+    stan: "150",
+    remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + LP"
+  },
+  {
+    name: "M Psycho Inferno",
+    outbreak: "16",
+    persistence: "14",
+    rigidity: "58 total frames",
+    hit: "D",
+    guard: "-11",
+    damage: "90",
+    stan: "150",
+    remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + MP"
+  },
+  {
+    name: "H Psycho Inferno",
+    outbreak: "18",
+    persistence: "16",
+    rigidity: "63 total frames",
+    hit: "D",
+    guard: "-10",
+    damage: "100",
+    stan: "150",
+    remarks: "CA*Only possible during 3rd attack",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + HP"
+  },
+  {
+    name: "EX Psycho Inferno",
+    outbreak: "15",
+    persistence: "18",
+    rigidity: "54 total frames",
+    hit: "D",
+    guard: "-1",
+    damage: "140",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + P P"
+  },
+  {
+    name: "L Double Knee Press",
+    outbreak: "11",
+    persistence: "5",
+    rigidity: "19",
+    hit: "2",
+    guard: "-4",
+    damage: "80",
+    stan: "150",
+    remarks: "CA*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + LK"
+  },
+  {
+    name: "M Double Knee Press",
+    outbreak: "14",
+    persistence: "5",
+    rigidity: "20",
+    hit: "2",
+    guard: "-3",
+    damage: "90",
+    stan: "150",
+    remarks: "CA*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + MK"
+  },
+  {
+    name: "H Double Knee Press",
+    outbreak: "19",
+    persistence: "5",
+    rigidity: "21",
+    hit: "2",
+    guard: "-2",
+    damage: "100",
+    stan: "150",
+    remarks: "CA*Only possible during 1st attack",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + HK"
+  },
+  {
+    name: "EX Double Knee Press",
+    outbreak: "12",
+    persistence: "6",
+    rigidity: "17",
+    hit: "D",
+    guard: "1",
+    damage: "150(*160)(*270)",
+    stan: "200(*1*2100)",
+    remarks:
+      "S*Can cancel into Psycho Crusher and Psycho Judgment on the 2nd hit (non-locked version)\n*1During airborne hit\n*2From active frame 2F",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + K K"
+  },
+  {
+    name: "Head Press",
+    outbreak: "23",
+    persistence: "Until landing",
+    rigidity: "7 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "100",
+    stan: "200",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + K"
+  },
+  {
+    name: "EX Head Press",
+    outbreak: "18",
+    persistence: "Until landing",
+    rigidity: "16 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "160(*100)",
+    stan: "200(*100)",
+    remarks:
+      "Can cross-up\n                                                                                                1F - 6F  attack & projectile invincibility\n                                                *During airborne hit",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + K K"
+  },
+  {
+    name: "Somersault Skull Diver",
+    outbreak: "5",
+    persistence: "10",
+    rigidity: "4 frame(s) after landing",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(AFTER HEAD PRESS HITS) P"
+  },
+  {
+    name: "Devil Reverse",
+    outbreak: "15",
+    persistence: "22",
+    rigidity: "7 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(BEFORE HEAD PRESS HITS) P"
+  },
+  {
+    name: "EX Devil Reverse",
+    outbreak: "27",
+    persistence: "",
+    rigidity: "4 frame(s) after landing",
+    hit: "D",
+    guard: "9",
+    damage: "140",
+    stan: "200",
+    remarks: "1F - 16F  full invincibility",
+    vtrigger: 2,
+    type: "special",
+    command: "(BEFORE HEAD PRESS HITS) P P"
+  },
+  {
+    name: "Psycho Crusher",
+    outbreak: "14",
+    persistence: "17",
+    rigidity: "26",
+    hit: "D",
+    guard: "-8",
+    damage: "100",
+    stan: "100",
+    remarks:
+      "Uses 2000F V-Gauge Timer\n                                Can cross-up\n                                                                                                14F - 29F  projectile invincibility\n                                                30F～34F 上半身飛び道具無敵\nCan be canceled into from V-Trigger-cancelable moves",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) HP HK"
+  },
+  {
+    name: "Psycho Charge",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "100",
+    stan: "100",
+    remarks:
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                On hit, an additional attack will be triggered on the opponent after a set amount of time passes\nThe Psycho Charge effect will be lost if Bison takes a hit from the opponent\nCan combo only as a special move cancel",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) →↘↓↙← + K"
+  },
+  {
+    name: "Psycho Judgement",
+    outbreak: "15",
+    persistence: "12",
+    rigidity: "37 total frames",
+    hit: "D",
+    guard: "14",
+    damage: "70",
+    stan: "90",
+    remarks: "Can be canceled into from V-Trigger-cancelable moves",
+    vtrigger: 2,
+    type: "special",
+    command: "(AFTER Psycho Charge HITS) →↘↓↙← + K"
+  },
+  {
+    name: "Ultimate Psycho Crusher",
+    outbreak: "1+5",
+    persistence: "15",
+    rigidity: "63",
+    hit: "D",
+    guard: "-40",
+    damage: "340",
+    stan: "0",
+    remarks: "1F - 20F  full invincibility",
+    vtrigger: 2,
+    type: "ca",
+    command: "↓↘→ ↓↘→ + P"
+  },
+  {
+    name: "Ultimate Psycho Crusher  (Airborne)",
+    outbreak: "1+5",
+    persistence: "15",
+    rigidity: "14 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "340",
+    stan: "0",
+    remarks: "1F - 20F  full invincibility",
+    vtrigger: 2,
+    type: "ca",
+    command: "(DURING JUMP) ↓↘→ ↓↘→ + P"
   }
 ];
 
