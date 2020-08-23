@@ -19,7 +19,7 @@ class default_1 {
         this.words = words;
         frames.forEach((obj, index) => {
             const frame = Object.assign(obj, { id: index + 1 });
-            this.frame.push(new Frame_1.default(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.type, frame.command));
+            this.frame.push(new Frame_1.default(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.type, frame.vtrigger, frame.command));
         });
     }
     /**
@@ -46,8 +46,9 @@ class default_1 {
      *
      * @param {(frame: Frame) => void} callback
      */
-    frameForEach(callback) {
-        this.frame.forEach(frame => {
+    frameForEachByVtrigger(vtrigger, callback) {
+        const filteredFrame = this.filterFrameByVtrigger(vtrigger);
+        filteredFrame.forEach(frame => {
             callback(frame);
         });
     }
@@ -60,10 +61,19 @@ class default_1 {
     }
     /**
      *
+     * @param vtrigger
+     */
+    filterFrameByVtrigger(vtrigger) {
+        return this.filterFrame(frame => {
+            return frame.vtrigger === vtrigger;
+        });
+    }
+    /**
+     *
      * @returns
      */
     filterFrameByGuardAvailable() {
-        return this.frame.filter((frame) => {
+        return this.filterFrame((frame) => {
             // 1, -1 判定
             return /^\d+|-\d+$/g.test(frame.guard);
         });

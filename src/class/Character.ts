@@ -25,7 +25,23 @@ export default class {
 
     frames.forEach((obj, index) => {
       const frame = Object.assign(obj, { id: index + 1 }) as Frame;
-      this.frame.push(new Frame(frame.id, frame.name, frame.stan, frame.remarks, frame.guard, frame.outbreak, frame.persistence, frame.rigidity, frame.hit, frame.damage, frame.type, frame.command));
+      this.frame.push(
+        new Frame(
+          frame.id,
+          frame.name,
+          frame.stan,
+          frame.remarks,
+          frame.guard,
+          frame.outbreak,
+          frame.persistence,
+          frame.rigidity,
+          frame.hit,
+          frame.damage,
+          frame.type,
+          frame.vtrigger,
+          frame.command
+        )
+      );
     });
   }
 
@@ -55,8 +71,9 @@ export default class {
    *
    * @param {(frame: Frame) => void} callback
    */
-  frameForEach(callback: (frame: Frame) => void): void {
-    this.frame.forEach(frame => {
+  frameForEachByVtrigger(vtrigger: 1 | 2, callback: (frame: Frame) => void): void {
+    const filteredFrame = this.filterFrameByVtrigger(vtrigger);
+    filteredFrame.forEach(frame => {
       callback(frame);
     });
   }
@@ -71,10 +88,20 @@ export default class {
 
   /**
    *
+   * @param vtrigger
+   */
+  filterFrameByVtrigger(vtrigger: 1 | 2): Frame[] {
+    return this.filterFrame(frame => {
+      return frame.vtrigger === vtrigger;
+    });
+  }
+
+  /**
+   *
    * @returns
    */
   filterFrameByGuardAvailable(): Frame[] {
-    return this.frame.filter((frame: Frame) => {
+    return this.filterFrame((frame: Frame) => {
       // 1, -1 判定
       return /^\d+|-\d+$/g.test(frame.guard);
     });
@@ -100,7 +127,12 @@ export default class {
    * @param {string} sortKey
    * @param {string} sortOrder
    */
-  sortedFrameForEach(callback: (frame: Frame, character: this) => void, filterTypes = [], sortKey = "", sortOrder = "asc"): void {
+  sortedFrameForEach(
+    callback: (frame: Frame, character: this) => void,
+    filterTypes = [],
+    sortKey = "",
+    sortOrder = "asc"
+  ): void {
     let frames = this.frame.slice();
 
     // [""] が来たときに消すため

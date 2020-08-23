@@ -8,6 +8,7 @@ declare const birdie: {
     damage: string;
     stan: string;
     remarks: string;
+    vtrigger: number;
     type: string;
     command: string;
 }[];

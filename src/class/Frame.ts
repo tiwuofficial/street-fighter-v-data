@@ -12,6 +12,7 @@ export default class {
   stan: string;
   remarks: string;
   type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
+  vtrigger: 1 | 2;
   command: string;
 
   constructor(
@@ -26,6 +27,7 @@ export default class {
     hit: string,
     damage: string,
     type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca",
+    vtrigger: 1 | 2,
     command: string
   ) {
     this.id = id;
@@ -39,6 +41,7 @@ export default class {
     this.stan = stan;
     this.remarks = remarks;
     this.type = type;
+    this.vtrigger = vtrigger;
     this.command = command;
   }
 

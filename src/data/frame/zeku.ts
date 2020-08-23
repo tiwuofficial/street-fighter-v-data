@@ -1,12 +1,116 @@
 const zeku = [
-  { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "9", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "立ち中P", outbreak: "6", persistence: "2", rigidity: "14", hit: "5", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "立ち強P", outbreak: "9", persistence: "2", rigidity: "30", hit: "-2", guard: "-5", damage: "80", stan: "150", remarks: "", type: "normal", command: "" },
-  { name: "立ち弱K", outbreak: "5", persistence: "4", rigidity: "6", hit: "4", guard: "2", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "12", hit: "7", guard: "2", damage: "60", stan: "100", remarks: "強制立ち効果", type: "normal", command: "" },
-  { name: "立ち強K", outbreak: "13", persistence: "2", rigidity: "24", hit: "5", guard: "-2", damage: "90", stan: "150", remarks: "クラッシュカウンター対応(+21F)", type: "normal", command: "" },
-  { name: "しゃがみ弱P", outbreak: "4", persistence: "2", rigidity: "7", hit: "4", guard: "2", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
-  { name: "しゃがみ中P", outbreak: "8", persistence: "2", rigidity: "14", hit: "5", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中P",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強P",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "30",
+    hit: "-2",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "12",
+    hit: "7",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "強制立ち効果",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強K",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "24",
+    hit: "5",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応(+21F)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "しゃがみ強P",
     outbreak: "10",
@@ -16,21 +120,166 @@ const zeku = [
     guard: "2",
     damage: "80",
     stan: "150",
-    remarks: "クラッシュカウンター対応 (D)\n                                                強制立ち効果",
+    remarks:
+      "クラッシュカウンター対応 (D)\n                                                強制立ち効果",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱K", outbreak: "5", persistence: "2", rigidity: "8", hit: "4", guard: "2", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "しゃがみ中K", outbreak: "8", persistence: "3", rigidity: "17", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "しゃがみ強K", outbreak: "10", persistence: "2", rigidity: "25", hit: "D", guard: "-8", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
-  { name: "ジャンプ弱P", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ中P", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ強P", outbreak: "8", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ弱K", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ中K", outbreak: "7", persistence: "4", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
-  { name: "ジャンプ強K", outbreak: "10", persistence: "4", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "立ち弱P(韋駄天派生)", outbreak: "4", persistence: "2", rigidity: "11", hit: "2", guard: "0", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "立ち中P(韋駄天派生)", outbreak: "6", persistence: "2", rigidity: "19", hit: "0", guard: "-3", damage: "50", stan: "80", remarks: "S※CA※初段で使用した時のみ", type: "normal", command: "" },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-8",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "立ち弱P(韋駄天派生)",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "11",
+    hit: "2",
+    guard: "0",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中P(韋駄天派生)",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "19",
+    hit: "0",
+    guard: "-3",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "立ち強P(韋駄天派生)",
     outbreak: "8",
@@ -41,10 +290,24 @@ const zeku = [
     damage: "60",
     stan: "100",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "立ち弱K(韋駄天派生)", outbreak: "5", persistence: "4", rigidity: "9", hit: "1", guard: "-1", damage: "40", stan: "70", remarks: "S※CA※初段で使用した時のみ", type: "normal", command: "" },
+  {
+    name: "立ち弱K(韋駄天派生)",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "9",
+    hit: "1",
+    guard: "-1",
+    damage: "40",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "立ち中K(韋駄天派生)",
     outbreak: "6",
@@ -54,7 +317,9 @@ const zeku = [
     guard: "-2",
     damage: "50",
     stan: "80",
-    remarks: "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    remarks:
+      "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -68,10 +333,24 @@ const zeku = [
     damage: "60",
     stan: "100",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱P(韋駄天派生)", outbreak: "4", persistence: "2", rigidity: "9", hit: "2", guard: "-1", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
+  {
+    name: "しゃがみ弱P(韋駄天派生)",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "2",
+    guard: "-1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "しゃがみ中P(韋駄天派生)",
     outbreak: "8",
@@ -82,6 +361,7 @@ const zeku = [
     damage: "50",
     stan: "80",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -94,7 +374,9 @@ const zeku = [
     guard: "-4",
     damage: "60",
     stan: "100",
-    remarks: "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    remarks:
+      "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -108,6 +390,7 @@ const zeku = [
     damage: "20",
     stan: "70",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -121,6 +404,7 @@ const zeku = [
     damage: "50",
     stan: "80",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
@@ -134,12 +418,52 @@ const zeku = [
     damage: "60",
     stan: "100",
     remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "脳巓割り", outbreak: "22", persistence: "4", rigidity: "20", hit: "1", guard: "-7", damage: "80", stan: "100", remarks: "", type: "unique", command: "→ + 強P" },
-  { name: "釣鐘落とし", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
-  { name: "神輿", outbreak: "5", persistence: "3", rigidity: "17", hit: "D", guard: "", damage: "150", stan: "200", remarks: "", type: "throw", command: "" },
+  {
+    name: "脳巓割り",
+    outbreak: "22",
+    persistence: "4",
+    rigidity: "20",
+    hit: "1",
+    guard: "-7",
+    damage: "80",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "→ + 強P"
+  },
+  {
+    name: "釣鐘落とし",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(近距離で) → OR + 弱P 弱K"
+  },
+  {
+    name: "神輿",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "150",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(近距離で) ← + 弱P 弱K"
+  },
   {
     name: "[VS1]梟",
     outbreak: "14",
@@ -149,9 +473,11 @@ const zeku = [
     guard: "-7",
     damage: "100",
     stan: "150",
-    remarks: "ヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
+    remarks:
+      "ヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅠ選択時) 中P 中K"
   },
   {
     name: "[VS2]口寄せ 蒔威",
@@ -164,8 +490,9 @@ const zeku = [
     stan: "80",
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※数値はニュートラル時 後ろ入力時:151/前入力時:217",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅡ選択時) ← OR OR → + 中P 中K"
   },
   {
     name: "武神流神撃功",
@@ -178,8 +505,9 @@ const zeku = [
     stan: "",
     remarks:
       "Vゲージタイマー+1500F\n                                                                                                                                                                                韋駄天が使用可能になる",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "強P 強K"
   },
   {
     name: "通し",
@@ -190,9 +518,11 @@ const zeku = [
     guard: "-2",
     damage: "40",
     stan: "0",
-    remarks: "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    remarks:
+      "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(ガード中に) → + 弱P"
   },
   {
     name: "弱 武神倶羅無・刻(根元)",
@@ -203,9 +533,11 @@ const zeku = [
     guard: "-6",
     damage: "90",
     stan: "150",
-    remarks: "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 弱K"
   },
   {
     name: "中 武神倶羅無・刻(根元)",
@@ -216,9 +548,11 @@ const zeku = [
     guard: "-4",
     damage: "100",
     stan: "150",
-    remarks: "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 中K"
   },
   {
     name: "強 武神倶羅無・刻(根元)",
@@ -229,9 +563,11 @@ const zeku = [
     guard: "-2",
     damage: "120",
     stan: "200",
-    remarks: "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 強K"
   },
   {
     name: "EX 武神倶羅無・刻(根元)",
@@ -243,8 +579,9 @@ const zeku = [
     damage: "140",
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + K K"
   },
   {
     name: "弱 武神倶羅無・刻",
@@ -256,8 +593,9 @@ const zeku = [
     damage: "60",
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 弱K"
   },
   {
     name: "中 武神倶羅無・刻",
@@ -269,8 +607,9 @@ const zeku = [
     damage: "70",
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 中K"
   },
   {
     name: "強 武神倶羅無・刻",
@@ -282,8 +621,9 @@ const zeku = [
     damage: "90",
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 強K"
   },
   {
     name: "EX 武神倶羅無・刻",
@@ -295,8 +635,9 @@ const zeku = [
     damage: "110",
     stan: "100",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + K K"
   },
   {
     name: "弱 武神倶羅無・蛮(根元)",
@@ -307,9 +648,11 @@ const zeku = [
     guard: "-23",
     damage: "100",
     stan: "200",
-    remarks: "根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 弱K"
   },
   {
     name: "中 武神倶羅無・蛮(根元)",
@@ -320,9 +663,11 @@ const zeku = [
     guard: "-29",
     damage: "110",
     stan: "200",
-    remarks: "1F～7F 投げ無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "1F～7F 投げ無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 中K"
   },
   {
     name: "強 武神倶羅無・蛮(根元)",
@@ -335,8 +680,9 @@ const zeku = [
     stan: "200",
     remarks:
       "1F～8F 空中判定の攻撃に対して無敵\n                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 強K"
   },
   {
     name: "EX 武神倶羅無・蛮(根元)",
@@ -347,9 +693,11 @@ const zeku = [
     guard: "-33",
     damage: "150",
     stan: "200",
-    remarks: "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + K K"
   },
   {
     name: "弱 武神倶羅無・蛮",
@@ -361,8 +709,9 @@ const zeku = [
     damage: "100",
     stan: "150",
     remarks: "動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 弱K"
   },
   {
     name: "中 武神倶羅無・蛮",
@@ -373,9 +722,11 @@ const zeku = [
     guard: "",
     damage: "110",
     stan: "150",
-    remarks: "1F～7F 投げ無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "1F～7F 投げ無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 中K"
   },
   {
     name: "強 武神倶羅無・蛮",
@@ -386,9 +737,11 @@ const zeku = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "1F～8F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "1F～8F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + 強K"
   },
   {
     name: "EX 武神倶羅無・蛮",
@@ -399,9 +752,11 @@ const zeku = [
     guard: "",
     damage: "120",
     stan: "100",
-    remarks: "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    remarks:
+      "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→↓↘ + K K"
   },
   {
     name: "弱 武神倶羅無・狄(根元)",
@@ -414,8 +769,9 @@ const zeku = [
     stan: "150",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 弱K"
   },
   {
     name: "中 武神倶羅無・狄(根元)",
@@ -428,8 +784,9 @@ const zeku = [
     stan: "150",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 中K"
   },
   {
     name: "強 武神倶羅無・狄(根元)",
@@ -442,8 +799,9 @@ const zeku = [
     stan: "200",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 強K"
   },
   {
     name: "EX 武神倶羅無・狄(根元)",
@@ -456,8 +814,9 @@ const zeku = [
     stan: "150",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + K K"
   },
   {
     name: "弱 武神倶羅無・狄",
@@ -470,8 +829,9 @@ const zeku = [
     stan: "100",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 弱K"
   },
   {
     name: "中 武神倶羅無・狄",
@@ -484,8 +844,9 @@ const zeku = [
     stan: "100",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 中K"
   },
   {
     name: "強 武神倶羅無・狄",
@@ -498,8 +859,9 @@ const zeku = [
     stan: "100",
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 強K"
   },
   {
     name: "EX 武神倶羅無・狄",
@@ -511,8 +873,9 @@ const zeku = [
     damage: "90",
     stan: "100",
     remarks: "武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + K K"
   },
   {
     name: "弱 武神雀羅",
@@ -524,8 +887,9 @@ const zeku = [
     damage: "0",
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 弱P"
   },
   {
     name: "中 武神雀羅",
@@ -537,8 +901,9 @@ const zeku = [
     damage: "0",
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 中P"
   },
   {
     name: "強 武神雀羅",
@@ -550,8 +915,9 @@ const zeku = [
     damage: "0",
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + 強P"
   },
   {
     name: "EX 武神雀羅",
@@ -563,8 +929,9 @@ const zeku = [
     damage: "0",
     stan: "0",
     remarks: "発生後レバー入力により前後移動が可能\n発生から着地まで飛び道具無敵",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↘→ + P P"
   },
   {
     name: "武神逆鱗肘",
@@ -576,10 +943,24 @@ const zeku = [
     damage: "60",
     stan: "100",
     remarks: "めくり状態でしか当たらない",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(武神雀羅中に) P"
   },
-  { name: "武神麒麟脚", outbreak: "6", persistence: "5", rigidity: "着地後15", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+  {
+    name: "武神麒麟脚",
+    outbreak: "6",
+    persistence: "5",
+    rigidity: "着地後15",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(武神雀羅中に) K"
+  },
   {
     name: "武神天眼",
     outbreak: "5",
@@ -590,8 +971,9 @@ const zeku = [
     damage: "170",
     stan: "200",
     remarks: "空中・しゃがんでいる相手は投げられない",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(武神雀羅中に) 弱P 弱K"
   },
   {
     name: "EX 武神逆鱗肘",
@@ -603,10 +985,24 @@ const zeku = [
     damage: "80",
     stan: "150",
     remarks: "めくり状態でしか当たらない",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(EX武神雀羅中に) P"
   },
-  { name: "EX 武神麒麟脚", outbreak: "6", persistence: "5", rigidity: "着地後9", hit: "", guard: "", damage: "80", stan: "150", remarks: "", type: "special", command: "" },
+  {
+    name: "EX 武神麒麟脚",
+    outbreak: "6",
+    persistence: "5",
+    rigidity: "着地後9",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(EX武神雀羅中に) K"
+  },
   {
     name: "EX 武神天眼",
     outbreak: "5",
@@ -617,10 +1013,24 @@ const zeku = [
     damage: "220",
     stan: "250",
     remarks: "空中・しゃがんでいる相手は投げられない",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(EX武神雀羅中に) 弱P 弱K"
   },
-  { name: "宿命", outbreak: "", persistence: "", rigidity: "全体25", hit: "", guard: "", damage: "0", stan: "0", remarks: "若に変身する", type: "special", command: "" },
+  {
+    name: "宿命",
+    outbreak: "",
+    persistence: "",
+    rigidity: "全体25",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "若に変身する",
+    vtrigger: 1,
+    type: "special",
+    command: "↓ ↓ + P P"
+  },
   {
     name: "V韋駄天",
     outbreak: "",
@@ -632,11 +1042,929 @@ const zeku = [
     stan: "0",
     remarks:
       "Vゲージタイマー全消費\n                                                                                                                                16F～17F 飛び道具&投げ無敵\n3F～15F 完全無敵\n                                                Vトリガーキャンセルできる技からキャンセル可能\n動作中は弱P→弱K→中P→中K→強P→強Kの順番（立ちしゃがみ区別なし）でチェーンコンボが可能な特殊な通常技が出せる\n韋駄天動作中、またはチェーンコンボ中に武神白蛇掌へ派生可能",
+    vtrigger: 1,
     type: "special",
+    command: "(Vトリガー発動中) 強P 強K"
+  },
+  {
+    name: "武神白蛇掌",
+    outbreak: "14",
+    persistence: "6",
+    rigidity: "18",
+    hit: "D",
+    guard: "-2",
+    damage: "160",
+    stan: "200",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(韋駄天・韋駄天からの攻撃中に) 強P 強K"
+  },
+  {
+    name: "抜山蓋世",
+    outbreak: "1+3",
+    persistence: "8",
+    rigidity: "47",
+    hit: "D",
+    guard: "-33",
+    damage: "340",
+    stan: "0",
+    remarks: "1F～11F 完全無敵",
+    vtrigger: 1,
+    type: "ca",
+    command: "↓↘→ ↓↘→ + K"
+  },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
     command: ""
   },
-  { name: "武神白蛇掌", outbreak: "14", persistence: "6", rigidity: "18", hit: "D", guard: "-2", damage: "160", stan: "200", remarks: "", type: "special", command: "" },
-  { name: "抜山蓋世", outbreak: "1+3", persistence: "8", rigidity: "47", hit: "D", guard: "-33", damage: "340", stan: "0", remarks: "1F～11F 完全無敵", type: "ca", command: "" }
+  {
+    name: "立ち中P",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強P",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "30",
+    hit: "-2",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "12",
+    hit: "7",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強K",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "24",
+    hit: "5",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応(+21F)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "16",
+    hit: "7",
+    guard: "2",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (D)\n                                                強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-8",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "脳巓割り",
+    outbreak: "22",
+    persistence: "4",
+    rigidity: "20",
+    hit: "1",
+    guard: "-7",
+    damage: "80",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "→ + 強P"
+  },
+  {
+    name: "釣鐘落とし",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(近距離で) → OR + 弱P 弱K"
+  },
+  {
+    name: "神輿",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "D",
+    guard: "",
+    damage: "150",
+    stan: "200",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(近距離で) ← + 弱P 弱K"
+  },
+  {
+    name: "[VS1]梟",
+    outbreak: "14",
+    persistence: "4",
+    rigidity: "29",
+    hit: "D",
+    guard: "-7",
+    damage: "100",
+    stan: "150",
+    remarks:
+      "ヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅠ選択時) 中P 中K"
+  },
+  {
+    name: "[VS2]口寄せ 蒔威",
+    outbreak: "182※",
+    persistence: "5",
+    rigidity: "全体64",
+    hit: "D",
+    guard: "",
+    damage: "80",
+    stan: "80",
+    remarks:
+      "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※数値はニュートラル時 後ろ入力時:151/前入力時:217",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅡ選択時) ← OR OR → + 中P 中K"
+  },
+  {
+    name: "迦楼羅天斬",
+    outbreak: "1+5",
+    persistence: "8",
+    rigidity: "39",
+    hit: "D",
+    guard: "-28",
+    damage: "140",
+    stan: "150",
+    remarks:
+      "Vゲージタイマー+2000F\n                                                                                                                                1F～13F 飛び道具&投げ無敵\n                1F～13F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\n発動中、必殺技に「迦楼羅天斬」が追加\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 強K"
+  },
+  {
+    name: "通し",
+    outbreak: "12",
+    persistence: "2",
+    rigidity: "24",
+    hit: "2",
+    guard: "-2",
+    damage: "40",
+    stan: "0",
+    remarks:
+      "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "弱 武神倶羅無・刻(根元)",
+    outbreak: "14",
+    persistence: "1",
+    rigidity: "31",
+    hit: "D",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・刻(根元)",
+    outbreak: "20",
+    persistence: "1",
+    rigidity: "30",
+    hit: "D",
+    guard: "-4",
+    damage: "100",
+    stan: "150",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 中K"
+  },
+  {
+    name: "強 武神倶羅無・刻(根元)",
+    outbreak: "25",
+    persistence: "1",
+    rigidity: "30",
+    hit: "D",
+    guard: "-2",
+    damage: "120",
+    stan: "200",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・刻(根元)",
+    outbreak: "17",
+    persistence: "1",
+    rigidity: "40",
+    hit: "D",
+    guard: "1",
+    damage: "140",
+    stan: "150",
+    remarks: "S※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + K K"
+  },
+  {
+    name: "弱 武神倶羅無・刻",
+    outbreak: "15",
+    persistence: "8",
+    rigidity: "全体45",
+    hit: "4",
+    guard: "-3",
+    damage: "60",
+    stan: "100",
+    remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・刻",
+    outbreak: "21",
+    persistence: "9",
+    rigidity: "全体48",
+    hit: "2",
+    guard: "-4",
+    damage: "70",
+    stan: "100",
+    remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 中K"
+  },
+  {
+    name: "強 武神倶羅無・刻",
+    outbreak: "26",
+    persistence: "10",
+    rigidity: "全体50",
+    hit: "2",
+    guard: "-5",
+    damage: "90",
+    stan: "100",
+    remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・刻",
+    outbreak: "18",
+    persistence: "20",
+    rigidity: "全体57",
+    hit: "D",
+    guard: "-1",
+    damage: "110",
+    stan: "100",
+    remarks: "S※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + K K"
+  },
+  {
+    name: "弱 武神倶羅無・蛮(根元)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "18+着地後22",
+    hit: "D",
+    guard: "-23",
+    damage: "100",
+    stan: "200",
+    remarks:
+      "根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・蛮(根元)",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "21+着地後23",
+    hit: "D",
+    guard: "-29",
+    damage: "110",
+    stan: "200",
+    remarks:
+      "1F～7F 投げ無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 中K"
+  },
+  {
+    name: "強 武神倶羅無・蛮(根元)",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "31+着地後20",
+    hit: "D",
+    guard: "-33",
+    damage: "120",
+    stan: "200",
+    remarks:
+      "1F～8F 空中判定の攻撃に対して無敵\n                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・蛮(根元)",
+    outbreak: "5",
+    persistence: "1",
+    rigidity: "32+着地後31",
+    hit: "D",
+    guard: "-33",
+    damage: "150",
+    stan: "200",
+    remarks:
+      "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + K K"
+  },
+  {
+    name: "弱 武神倶羅無・蛮",
+    outbreak: "7",
+    persistence: "10",
+    rigidity: "全体46",
+    hit: "D",
+    guard: "",
+    damage: "100",
+    stan: "150",
+    remarks: "動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・蛮",
+    outbreak: "9",
+    persistence: "13",
+    rigidity: "全体51",
+    hit: "D",
+    guard: "",
+    damage: "110",
+    stan: "150",
+    remarks:
+      "1F～7F 投げ無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 中K"
+  },
+  {
+    name: "強 武神倶羅無・蛮",
+    outbreak: "9",
+    persistence: "14",
+    rigidity: "全体59",
+    hit: "D",
+    guard: "",
+    damage: "120",
+    stan: "150",
+    remarks:
+      "1F～8F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・蛮",
+    outbreak: "7",
+    persistence: "14",
+    rigidity: "全体68",
+    hit: "D",
+    guard: "",
+    damage: "120",
+    stan: "100",
+    remarks:
+      "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↓↘ + K K"
+  },
+  {
+    name: "弱 武神倶羅無・狄(根元)",
+    outbreak: "15",
+    persistence: "2",
+    rigidity: "35",
+    hit: "D",
+    guard: "-14",
+    damage: "70",
+    stan: "150",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・狄(根元)",
+    outbreak: "23",
+    persistence: "2",
+    rigidity: "37",
+    hit: "D",
+    guard: "-14",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 中K"
+  },
+  {
+    name: "強 武神倶羅無・狄(根元)",
+    outbreak: "30",
+    persistence: "2",
+    rigidity: "35",
+    hit: "D",
+    guard: "-14",
+    damage: "120",
+    stan: "200",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・狄(根元)",
+    outbreak: "18",
+    persistence: "2",
+    rigidity: "35",
+    hit: "D",
+    guard: "-2",
+    damage: "110",
+    stan: "150",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + K K"
+  },
+  {
+    name: "弱 武神倶羅無・狄",
+    outbreak: "17",
+    persistence: "12",
+    rigidity: "全体51",
+    hit: "D",
+    guard: "-2",
+    damage: "70",
+    stan: "100",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 弱K"
+  },
+  {
+    name: "中 武神倶羅無・狄",
+    outbreak: "25",
+    persistence: "12",
+    rigidity: "全体61",
+    hit: "D",
+    guard: "-4",
+    damage: "70",
+    stan: "100",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 中K"
+  },
+  {
+    name: "強 武神倶羅無・狄",
+    outbreak: "32",
+    persistence: "12",
+    rigidity: "全体66",
+    hit: "D",
+    guard: "-2",
+    damage: "100",
+    stan: "100",
+    remarks:
+      "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 強K"
+  },
+  {
+    name: "EX 武神倶羅無・狄",
+    outbreak: "20",
+    persistence: "18",
+    rigidity: "全体54",
+    hit: "D",
+    guard: "5",
+    damage: "90",
+    stan: "100",
+    remarks: "武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + K K"
+  },
+  {
+    name: "弱 武神雀羅",
+    outbreak: "",
+    persistence: "",
+    rigidity: "49+着地後8",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 弱P"
+  },
+  {
+    name: "中 武神雀羅",
+    outbreak: "",
+    persistence: "",
+    rigidity: "47+着地後8",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 中P"
+  },
+  {
+    name: "強 武神雀羅",
+    outbreak: "",
+    persistence: "",
+    rigidity: "47+着地後8",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "強度によって飛距離と全体動作が変化する",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + 強P"
+  },
+  {
+    name: "EX 武神雀羅",
+    outbreak: "",
+    persistence: "",
+    rigidity: "46+着地後7",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "発生後レバー入力により前後移動が可能\n発生から着地まで飛び道具無敵",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + P P"
+  },
+  {
+    name: "武神逆鱗肘",
+    outbreak: "9",
+    persistence: "着地まで",
+    rigidity: "着地後15",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり状態でしか当たらない",
+    vtrigger: 2,
+    type: "special",
+    command: "(武神雀羅中に) P"
+  },
+  {
+    name: "武神麒麟脚",
+    outbreak: "6",
+    persistence: "5",
+    rigidity: "着地後15",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(武神雀羅中に) K"
+  },
+  {
+    name: "武神天眼",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "着地後17",
+    hit: "D",
+    guard: "",
+    damage: "170",
+    stan: "200",
+    remarks: "空中・しゃがんでいる相手は投げられない",
+    vtrigger: 2,
+    type: "special",
+    command: "(武神雀羅中に) 弱P 弱K"
+  },
+  {
+    name: "EX 武神逆鱗肘",
+    outbreak: "9",
+    persistence: "着地まで",
+    rigidity: "着地後9",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "めくり状態でしか当たらない",
+    vtrigger: 2,
+    type: "special",
+    command: "(EX武神雀羅中に) P"
+  },
+  {
+    name: "EX 武神麒麟脚",
+    outbreak: "6",
+    persistence: "5",
+    rigidity: "着地後9",
+    hit: "",
+    guard: "",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(EX武神雀羅中に) K"
+  },
+  {
+    name: "EX 武神天眼",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "着地後17",
+    hit: "D",
+    guard: "",
+    damage: "220",
+    stan: "250",
+    remarks: "空中・しゃがんでいる相手は投げられない",
+    vtrigger: 2,
+    type: "special",
+    command: "(EX武神雀羅中に) 弱P 弱K"
+  },
+  {
+    name: "宿命",
+    outbreak: "",
+    persistence: "",
+    rigidity: "全体25",
+    hit: "",
+    guard: "",
+    damage: "0",
+    stan: "0",
+    remarks: "若に変身する",
+    vtrigger: 2,
+    type: "special",
+    command: "↓ ↓ + P P"
+  },
+  {
+    name: "迦楼羅天斬",
+    outbreak: "10",
+    persistence: "8",
+    rigidity: "39",
+    hit: "D",
+    guard: "-28",
+    damage: "140",
+    stan: "100",
+    remarks:
+      "Vゲージタイマー全消費\n                                                                                                                                1F～17F 飛び道具&投げ無敵\n                1F～17F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "(VトリガーⅡ発動中) 強P 強K"
+  },
+  {
+    name: "抜山蓋世",
+    outbreak: "1+3",
+    persistence: "8",
+    rigidity: "47",
+    hit: "D",
+    guard: "-33",
+    damage: "340",
+    stan: "0",
+    remarks: "1F～11F 完全無敵",
+    vtrigger: 2,
+    type: "ca",
+    command: "↓↘→ ↓↘→ + K"
+  }
 ];
 
 export { zeku };

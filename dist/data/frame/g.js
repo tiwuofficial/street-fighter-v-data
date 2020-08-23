@@ -1,11 +1,76 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const g = [
-    { name: "立ち弱P", outbreak: "4", persistence: "2", rigidity: "8", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "立ち中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "7", guard: "3", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-    { name: "立ち強P", outbreak: "11", persistence: "4", rigidity: "21", hit: "3", guard: "-3", damage: "80", stan: "150", remarks: "クラッシュカウンター対応(D)", type: "normal", command: "" },
-    { name: "立ち弱K", outbreak: "5", persistence: "3", rigidity: "10", hit: "4", guard: "1", damage: "40", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "立ち中K", outbreak: "9", persistence: "3", rigidity: "17", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "立ち弱P",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "8",
+        hit: "5",
+        guard: "3",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち中P",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "7",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち強P",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "21",
+        hit: "3",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(D)",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち弱K",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "1",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち中K",
+        outbreak: "9",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "立ち強K",
         outbreak: "9",
@@ -16,11 +81,38 @@ const g = [
         damage: "90(※80)",
         stan: "150(※100)",
         remarks: "※先端ヒット時\nCA※1段目のみ可能",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "8", hit: "5", guard: "2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "しゃがみ中P", outbreak: "7", persistence: "3", rigidity: "15", hit: "5", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "しゃがみ弱P",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "8",
+        hit: "5",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ中P",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "15",
+        hit: "5",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "しゃがみ強P",
         outbreak: "8",
@@ -31,11 +123,38 @@ const g = [
         damage: "90(※80)",
         stan: "150",
         remarks: "強制立ち効果\n                                                                                                                持続2F目以降",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "9", hit: "4", guard: "1", damage: "20", stan: "70", remarks: "", type: "normal", command: "" },
-    { name: "しゃがみ中K", outbreak: "8", persistence: "3", rigidity: "14", hit: "4", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+    {
+        name: "しゃがみ弱K",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "4",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ中K",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "14",
+        hit: "4",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: ""
+    },
     {
         name: "しゃがみ強K",
         outbreak: "10",
@@ -46,15 +165,94 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "クラッシュカウンター対応(D)\n                                                                                                                                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "normal",
         command: ""
     },
-    { name: "ジャンプ弱P", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-    { name: "ジャンプ中P", outbreak: "7", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "", type: "jump", command: "" },
-    { name: "ジャンプ強P", outbreak: "9", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-    { name: "ジャンプ弱K", outbreak: "4", persistence: "7", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-    { name: "ジャンプ中K", outbreak: "5", persistence: "6", rigidity: "", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "jump", command: "" },
-    { name: "ジャンプ強K", outbreak: "11", persistence: "5", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
+    {
+        name: "ジャンプ弱P",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ中P",
+        outbreak: "7",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ強P",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ弱K",
+        outbreak: "4",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ中K",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ強K",
+        outbreak: "11",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: ""
+    },
     {
         name: "ワイルドプレジデント",
         outbreak: "15",
@@ -65,6 +263,7 @@ const g = [
         damage: "90",
         stan: "150",
         remarks: "クラッシュカウンター対応(+16F)\n                                                                                                                                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "unique",
         command: "→ + 強P"
     },
@@ -78,10 +277,24 @@ const g = [
         damage: "80(※70)",
         stan: "150(※150)",
         remarks: "地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "unique",
         command: "← + 強P"
     },
-    { name: "クラッシュプレジデント", outbreak: "25", persistence: "2", rigidity: "22", hit: "1", guard: "-7", damage: "90", stan: "150", remarks: "", type: "unique", command: "→ + 強K" },
+    {
+        name: "クラッシュプレジデント",
+        outbreak: "25",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "→ + 強K"
+    },
     {
         name: "フライングプレジデント",
         outbreak: "9",
@@ -92,6 +305,7 @@ const g = [
         damage: "60",
         stan: "100",
         remarks: "めくり性能",
+        vtrigger: 1,
         type: "unique",
         command: "(前ジャンプ中に) ↓ + 中P"
     },
@@ -105,6 +319,7 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1460F：EXゲージ+300\n※動作32F目～1430Fまで動作を中断可能",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + 弱K 中K"
     },
@@ -118,6 +333,7 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1555F：EXゲージ+300\n※動作32F目～1530Fまで動作を中断可能",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + 中K 強K"
     },
@@ -131,13 +347,66 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1525F：EXゲージ+300\n※動作32F目～1510Fまで動作を中断可能",
+        vtrigger: 1,
         type: "unique",
         command: "↓ ↓ + 弱K 強K"
     },
-    { name: "地球人民に告ぐ(キャンセル時)", outbreak: "", persistence: "", rigidity: "", hit: "", guard: "", damage: "0", stan: "0", remarks: "パターン1～3と同様の性能", type: "unique", command: "" },
-    { name: "バイオレンスプレジデント", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
-    { name: "デストロイプレジデント", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "200", remarks: "", type: "throw", command: "" },
-    { name: "シャイニングプレジデント", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "200", remarks: "", type: "throw", command: "" },
+    {
+        name: "地球人民に告ぐ(キャンセル時)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "パターン1～3と同様の性能",
+        vtrigger: 1,
+        type: "unique",
+        command: ""
+    },
+    {
+        name: "バイオレンスプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(近距離で) → OR + 弱P 弱K"
+    },
+    {
+        name: "デストロイプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(近距離で) ← + 弱P 弱K"
+    },
+    {
+        name: "シャイニングプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(相手しゃがみ中に) (近距離で) → OR + 弱P 弱K"
+    },
     {
         name: "[VS1]G・バリア",
         outbreak: "13(※9)",
@@ -148,8 +417,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "※飛び道具吸収判定の値\n飛び道具吸収成立時Vゲージ80増加\nS※ヒット時G・チャージのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅠ選択時) 中P 中K"
     },
     {
         name: "[VS1]空中G・バリア",
@@ -161,8 +431,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "※飛び道具吸収判定の値\n飛び道具吸収成立時Vゲージ80増加\n飛び道具吸収後、空中行動可能",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅠ選択時) (垂直・前ジャンプ中に) 中P 中K"
     },
     {
         name: "V[VS1]G・バリア",
@@ -174,8 +445,9 @@ const g = [
         damage: "50+80",
         stan: "100+100",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅠ選択時) (VトリガーⅠ発動中) 中P 中K"
     },
     {
         name: "V[VS1]空中G・バリア",
@@ -187,8 +459,9 @@ const g = [
         damage: "50+80",
         stan: "100+100",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅠ選択時) (VトリガーⅠ発動中) (垂直・前ジャンプ中に) 中P 中K"
     },
     {
         name: "[VS2]G・プロテクション",
@@ -200,8 +473,9 @@ const g = [
         damage: "",
         stan: "",
         remarks: "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "V[VS2]G・プロテクション",
@@ -213,8 +487,9 @@ const g = [
         damage: "",
         stan: "",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される\n3F～31Fアーマー判定",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "マキシマムプレジデント",
@@ -226,8 +501,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中対応した必殺技の性能が強化され、強化された技から強化された技がキャンセルで発動可能になる(1回)",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "強P 強K"
     },
     {
         name: "G・リベンジ",
@@ -239,8 +515,9 @@ const g = [
         damage: "60",
         stan: "0",
         remarks: "1F～32F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+        vtrigger: 1,
         type: "vsystem",
-        command: ""
+        command: "(ガード中に) → + 弱P"
     },
     {
         name: "弱 G・スマッシュ・オーバー(Lv1)",
@@ -252,8 +529,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 弱P"
     },
     {
         name: "中 G・スマッシュ・オーバー(Lv1)",
@@ -265,8 +543,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 中P"
     },
     {
         name: "強 G・スマッシュ・オーバー(Lv1)",
@@ -278,8 +557,9 @@ const g = [
         damage: "100",
         stan: "100",
         remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 強P"
     },
     {
         name: "弱 G・スマッシュ・オーバー(Lv2)",
@@ -291,8 +571,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 弱P"
     },
     {
         name: "中 G・スマッシュ・オーバー(Lv2)",
@@ -304,8 +585,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 中P"
     },
     {
         name: "強 G・スマッシュ・オーバー(Lv2)",
@@ -317,8 +599,9 @@ const g = [
         damage: "120",
         stan: "120",
         remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 強P"
     },
     {
         name: "G・スマッシュ・オーバー(Lv3)",
@@ -330,8 +613,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "S※ガード時キャンセル不可。ヒット時のみG・チャージでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + P"
     },
     {
         name: "V G・スマッシュ・オーバー",
@@ -343,8 +627,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                S※V G・スマッシュ・オーバー、G・チャージによるキャンセル不可\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↓↘ + P"
     },
     {
         name: "V G・スマッシュ・オーバー(キャンセル版)",
@@ -356,8 +641,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↓↘ + P"
     },
     {
         name: "EX G・スマッシュ・オーバー",
@@ -369,8 +655,9 @@ const g = [
         damage: "100",
         stan: "120",
         remarks: "S※ガード時キャンセル不可。ヒット時のみG・チャージでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + P P"
     },
     {
         name: "弱 G・スマッシュ・アンダー(Lv1)",
@@ -382,8 +669,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 弱K"
     },
     {
         name: "中 G・スマッシュ・アンダー(Lv1)",
@@ -395,8 +683,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 中K"
     },
     {
         name: "強 G・スマッシュ・アンダー(Lv1)",
@@ -408,8 +697,9 @@ const g = [
         damage: "80",
         stan: "100",
         remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 強K"
     },
     {
         name: "弱 G・スマッシュ・アンダー(Lv2)",
@@ -421,8 +711,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 弱K"
     },
     {
         name: "中 G・スマッシュ・アンダー(Lv2)",
@@ -434,8 +725,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 中K"
     },
     {
         name: "強 G・スマッシュ・アンダー(Lv2)",
@@ -447,8 +739,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + 強K"
     },
     {
         name: "G・スマッシュ・アンダー(Lv3)",
@@ -460,8 +753,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + K"
     },
     {
         name: "V G・スマッシュ・アンダー",
@@ -473,8 +767,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ※密着時\nS※V G・スマッシュ・アンダー、G・チャージによるキャンセル不可\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↓↘ + K"
     },
     {
         name: "V G・スマッシュ・アンダー(キャンセル版)",
@@ -486,8 +781,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ※密着時\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↓↘ + K"
     },
     {
         name: "EX G・スマッシュ・アンダー",
@@ -499,8 +795,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "※密着時\nS※ガード時キャンセル不可。ヒット時のみG・チャージでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↓↘ + K K"
     },
     {
         name: "弱 G・バースト(Lv1)",
@@ -512,8 +809,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 弱P"
     },
     {
         name: "中 G・バースト(Lv1)",
@@ -525,8 +823,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 中P"
     },
     {
         name: "強 G・バースト(Lv1)",
@@ -538,8 +837,9 @@ const g = [
         damage: "50",
         stan: "100",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 強P"
     },
     {
         name: "弱 G・バースト(Lv2)",
@@ -551,8 +851,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 弱P"
     },
     {
         name: "中 G・バースト(Lv2)",
@@ -564,8 +865,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 中P"
     },
     {
         name: "強 G・バースト(Lv2)",
@@ -577,8 +879,9 @@ const g = [
         damage: "80",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 強P"
     },
     {
         name: "G・バースト (Lv3)",
@@ -590,8 +893,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n※CA Vトリガー以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + P"
     },
     {
         name: "V G・バースト",
@@ -603,8 +907,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                S※V G・バースト、G・チャージによるキャンセル不可\n※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) ↓↘→ + P"
     },
     {
         name: "V G・バースト(キャンセル版)",
@@ -616,8 +921,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ※CA以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) ↓↘→ + P"
     },
     {
         name: "EX G・バースト",
@@ -629,8 +935,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n※Vトリガー以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ P P"
     },
     {
         name: "弱 G・スピンキック(Lv1)",
@@ -642,8 +949,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 弱K"
     },
     {
         name: "中 G・スピンキック(Lv1)",
@@ -655,8 +963,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 中K"
     },
     {
         name: "強 G・スピンキック(Lv1)",
@@ -668,8 +977,9 @@ const g = [
         damage: "70",
         stan: "150",
         remarks: "S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 強K"
     },
     {
         name: "弱 G・スピンキック(Lv2)",
@@ -681,8 +991,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 弱K"
     },
     {
         name: "中 G・スピンキック(Lv2)",
@@ -694,8 +1005,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 中K"
     },
     {
         name: "強 G・スピンキック(Lv2)",
@@ -707,8 +1019,9 @@ const g = [
         damage: "100",
         stan: "150",
         remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + 強K"
     },
     {
         name: "G・スピンキック(Lv3)",
@@ -720,8 +1033,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "4F～30F 飛び道具無敵\n                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + K"
     },
     {
         name: "V G・スピンキック",
@@ -733,8 +1047,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                4F～30F 飛び道具無敵\n                                                S※V G・スピンキック、G・チャージによるキャンセル不可\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) ↓↘→ + K"
     },
     {
         name: "V G・スピンキック(キャンセル版)",
@@ -746,8 +1061,9 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                4F～30F 飛び道具無敵\n                                                ヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) ↓↘→ + K"
     },
     {
         name: "EX G・スピンキック",
@@ -759,10 +1075,24 @@ const g = [
         damage: "110",
         stan: "150",
         remarks: "4F～30F 飛び道具無敵\n                                                S※ヒット時G・チャージのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓↘→ + K K"
     },
-    { name: "G・インパクト(Lv1)", outbreak: "12", persistence: "2", rigidity: "60", hit: "D", guard: "", damage: "60", stan: "100", remarks: "", type: "special", command: "" },
+    {
+        name: "G・インパクト(Lv1)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
     {
         name: "G・インパクト(Lv2)",
         outbreak: "12",
@@ -773,8 +1103,9 @@ const g = [
         damage: "70",
         stan: "120",
         remarks: "ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K"
     },
     {
         name: "G・インパクト(Lv3)",
@@ -786,8 +1117,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K"
     },
     {
         name: "V G・インパクト",
@@ -799,8 +1131,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↘↓↙← + K"
     },
     {
         name: "V G・インパクト(キャンセル版)",
@@ -812,8 +1145,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "Vゲージタイマー300F消費\n                                                                                                                                                                                ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "(VトリガーⅠ発動中) →↘↓↙← + K"
     },
     {
         name: "EX G・インパクト",
@@ -825,8 +1159,9 @@ const g = [
         damage: "80",
         stan: "120",
         remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "→↘↓↙← + K K"
     },
     {
         name: "G・チャージ",
@@ -838,8 +1173,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "43FでプレジデントLvが1上昇\nホールドする事でホールド版に移行",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓ ↓ + P P"
     },
     {
         name: "G・チャージ(ホールド)",
@@ -851,8 +1187,9 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "43F、120FでプレジデントLvが1上昇",
+        vtrigger: 1,
         type: "special",
-        command: ""
+        command: "↓ ↓ + P P"
     },
     {
         name: "G・チャージ(キャンセル版)",
@@ -864,10 +1201,1102 @@ const g = [
         damage: "0",
         stan: "0",
         remarks: "58FでプレジデントLvが1上昇\nキャンセル版はホールド不可能",
+        vtrigger: 1,
         type: "special",
+        command: "(Gチャージ対応技中に) P P"
+    },
+    {
+        name: "パンゲアバースト",
+        outbreak: "1+5",
+        persistence: "13×3",
+        rigidity: "73",
+        hit: "D",
+        guard: "-39",
+        damage: "330",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 1,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + P"
+    },
+    {
+        name: "立ち弱P",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "8",
+        hit: "5",
+        guard: "3",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
         command: ""
     },
-    { name: "パンゲアバースト", outbreak: "1+5", persistence: "13×3", rigidity: "73", hit: "D", guard: "-39", damage: "330", stan: "0", remarks: "1F～10F 完全無敵", type: "ca", command: "" }
+    {
+        name: "立ち中P",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "12",
+        hit: "7",
+        guard: "3",
+        damage: "60",
+        stan: "100",
+        remarks: "S※G・エクスプロージョン G・レイジのみキャンセル可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち強P",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "21",
+        hit: "3",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(D)",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち弱K",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "1",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち中K",
+        outbreak: "9",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "S※G・エクスプロージョン G・レイジのみキャンセル可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "立ち強K",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "25",
+        hit: "2",
+        guard: "-5",
+        damage: "90(※80)",
+        stan: "150(※100)",
+        remarks: "※先端ヒット時\nCA※1段目のみ可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ弱P",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "8",
+        hit: "5",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ中P",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "15",
+        hit: "5",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ強P",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "21",
+        hit: "1",
+        guard: "-3",
+        damage: "90(※80)",
+        stan: "150",
+        remarks: "強制立ち効果\n                                                                                                                持続2F目以降",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ弱K",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "4",
+        guard: "1",
+        damage: "20",
+        stan: "70",
+        remarks: "S※G・エクスプロージョン G・レイジのみキャンセル可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ中K",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "14",
+        hit: "4",
+        guard: "-2",
+        damage: "60",
+        stan: "100",
+        remarks: "S※G・エクスプロージョン G・レイジのみキャンセル可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "しゃがみ強K",
+        outbreak: "10",
+        persistence: "2",
+        rigidity: "28",
+        hit: "D",
+        guard: "-14",
+        damage: "100",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(D)\n                                                                                                                                                                S※G・チャージ G・エクスプロージョン G・レイジのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "normal",
+        command: ""
+    },
+    {
+        name: "ジャンプ弱P",
+        outbreak: "3",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ中P",
+        outbreak: "7",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ強P",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ弱K",
+        outbreak: "4",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ中K",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ジャンプ強K",
+        outbreak: "11",
+        persistence: "5",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: ""
+    },
+    {
+        name: "ワイルドプレジデント",
+        outbreak: "15",
+        persistence: "3",
+        rigidity: "22",
+        hit: "2",
+        guard: "-4",
+        damage: "90",
+        stan: "150",
+        remarks: "クラッシュカウンター対応(+16F)\n                                                                                                                                                                S※G・チャージ G・エクスプロージョン G・レイジのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + 強P"
+    },
+    {
+        name: "ストロングプレジデント",
+        outbreak: "9",
+        persistence: "5",
+        rigidity: "23",
+        hit: "D",
+        guard: "-5",
+        damage: "80(※70)",
+        stan: "150(※150)",
+        remarks: "地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "unique",
+        command: "← + 強P"
+    },
+    {
+        name: "クラッシュプレジデント",
+        outbreak: "25",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + 強K"
+    },
+    {
+        name: "フライングプレジデント",
+        outbreak: "9",
+        persistence: "7",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "めくり性能",
+        vtrigger: 2,
+        type: "unique",
+        command: "(前ジャンプ中に) ↓ + 中P"
+    },
+    {
+        name: "地球人民に告ぐ※パターン1",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体1660",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1460F：EXゲージ+300\n※動作32F目～1430Fまで動作を中断可能",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + 弱K 中K"
+    },
+    {
+        name: "地球人民に告ぐ※パターン2",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体1760",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1555F：EXゲージ+300\n※動作32F目～1530Fまで動作を中断可能",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + 中K 強K"
+    },
+    {
+        name: "地球人民に告ぐ※パターン3",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体1720",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "31F：EXゲージ+50\n80F：EXゲージ+50\n280F：EXゲージ+50\n480F：EXゲージ+50\n680F：EXゲージ+100\n880F：EXゲージ+100\n1080F：EXゲージ+100\n1280F：EXゲージ+100\n1525F：EXゲージ+300\n※動作32F目～1510Fまで動作を中断可能",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ ↓ + 弱K 強K"
+    },
+    {
+        name: "地球人民に告ぐ(キャンセル時)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体38",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "パターン1～3と同様の性能",
+        vtrigger: 2,
+        type: "unique",
+        command: ""
+    },
+    {
+        name: "バイオレンスプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(近距離で) → OR + 弱P 弱K"
+    },
+    {
+        name: "デストロイプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(近距離で) ← + 弱P 弱K"
+    },
+    {
+        name: "シャイニングプレジデント",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(相手しゃがみ中に) (近距離で) → OR + 弱P 弱K"
+    },
+    {
+        name: "[VS1]G・バリア",
+        outbreak: "13(※9)",
+        persistence: "13(※23)",
+        rigidity: "23",
+        hit: "D",
+        guard: "-17",
+        damage: "50",
+        stan: "100",
+        remarks: "※飛び道具吸収判定の値\n飛び道具吸収成立時Vゲージ80増加\nS※ヒット時のみG・チャージ G・エクスプロージョン G・レイジでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(VスキルⅠ選択時) 中P 中K"
+    },
+    {
+        name: "[VS1]空中G・バリア",
+        outbreak: "13(※9)",
+        persistence: "16(※26)",
+        rigidity: "着地後11",
+        hit: "D",
+        guard: "",
+        damage: "50",
+        stan: "100",
+        remarks: "※飛び道具吸収判定の値\n飛び道具吸収成立時Vゲージ80増加",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(VスキルⅠ選択時) (垂直・前ジャンプ中に) 中P 中K"
+    },
+    {
+        name: "[VS2]G・プロテクション",
+        outbreak: "31",
+        persistence: "",
+        rigidity: "全体60",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(VスキルⅡ選択時) 中P 中K"
+    },
+    {
+        name: "デンジャープレジデント",
+        outbreak: "1",
+        persistence: "",
+        rigidity: "6",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中G・エクスプロージョン G・レイジが必殺技に追加",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "強P 強K"
+    },
+    {
+        name: "G・リベンジ",
+        outbreak: "17",
+        persistence: "2",
+        rigidity: "24",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F～32F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(ガード中に) → + 弱P"
+    },
+    {
+        name: "弱 G・スマッシュ・オーバー(Lv1)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 弱P"
+    },
+    {
+        name: "中 G・スマッシュ・オーバー(Lv1)",
+        outbreak: "20",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 中P"
+    },
+    {
+        name: "強 G・スマッシュ・オーバー(Lv1)",
+        outbreak: "25(※22)",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "100",
+        stan: "100",
+        remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 強P"
+    },
+    {
+        name: "弱 G・スマッシュ・オーバー(Lv2)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 弱P"
+    },
+    {
+        name: "中 G・スマッシュ・オーバー(Lv2)",
+        outbreak: "20",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 中P"
+    },
+    {
+        name: "強 G・スマッシュ・オーバー(Lv2)",
+        outbreak: "25(※22)",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-4",
+        damage: "120",
+        stan: "120",
+        remarks: "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 強P"
+    },
+    {
+        name: "G・スマッシュ・オーバー(Lv3)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "120",
+        remarks: "S※ガード時キャンセル不可。ヒット時のみG・チャージ G・エクスプロージョンのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + P"
+    },
+    {
+        name: "EX　G・スマッシュ・オーバー(→↓＼ + PP)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "120",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + P P"
+    },
+    {
+        name: "弱 G・スマッシュ・アンダー(Lv1)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 弱K"
+    },
+    {
+        name: "中 G・スマッシュ・アンダー(Lv1)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 中K"
+    },
+    {
+        name: "強 G・スマッシュ・アンダー(Lv1)",
+        outbreak: "23(※20)",
+        persistence: "5",
+        rigidity: "25",
+        hit: "D",
+        guard: "-8",
+        damage: "80",
+        stan: "100",
+        remarks: "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 強K"
+    },
+    {
+        name: "弱 G・スマッシュ・アンダー(Lv2)",
+        outbreak: "13",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "100",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 弱K"
+    },
+    {
+        name: "中 G・スマッシュ・アンダー(Lv2)",
+        outbreak: "16",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 中K"
+    },
+    {
+        name: "強 G・スマッシュ・アンダー(Lv2)",
+        outbreak: "23(※20)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + 強K"
+    },
+    {
+        name: "G・スマッシュ・アンダー(Lv3)",
+        outbreak: "18(※13)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "110",
+        stan: "150",
+        remarks: "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + K"
+    },
+    {
+        name: "EX G・スマッシュ・アンダー",
+        outbreak: "18(※13)",
+        persistence: "5",
+        rigidity: "22",
+        hit: "D",
+        guard: "-8",
+        damage: "110",
+        stan: "150",
+        remarks: "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↓↘ + K K"
+    },
+    {
+        name: "弱 G・バースト(Lv1)",
+        outbreak: "15",
+        persistence: "11",
+        rigidity: "全体46",
+        hit: "-3",
+        guard: "-8",
+        damage: "50",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱P"
+    },
+    {
+        name: "中 G・バースト(Lv1)",
+        outbreak: "20",
+        persistence: "11",
+        rigidity: "全体49",
+        hit: "-1",
+        guard: "-6",
+        damage: "50",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 中P"
+    },
+    {
+        name: "強 G・バースト(Lv1)",
+        outbreak: "25",
+        persistence: "11",
+        rigidity: "全体52",
+        hit: "1",
+        guard: "-4",
+        damage: "50",
+        stan: "100",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 強P"
+    },
+    {
+        name: "弱 G・バースト(Lv2)",
+        outbreak: "15",
+        persistence: "11",
+        rigidity: "全体46",
+        hit: "±0",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱P"
+    },
+    {
+        name: "中 G・バースト(Lv2)",
+        outbreak: "20",
+        persistence: "11",
+        rigidity: "全体49",
+        hit: "2",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 中P"
+    },
+    {
+        name: "強 G・バースト(Lv2)",
+        outbreak: "25",
+        persistence: "11",
+        rigidity: "全体52",
+        hit: "4",
+        guard: "-1",
+        damage: "80",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 強P"
+    },
+    {
+        name: "G・バースト (Lv3)",
+        outbreak: "15",
+        persistence: "30",
+        rigidity: "全体64",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA Vトリガー G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + P"
+    },
+    {
+        name: "EX G・バースト",
+        outbreak: "15",
+        persistence: "30",
+        rigidity: "全体64",
+        hit: "D",
+        guard: "-2",
+        damage: "100",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA Vトリガー G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ P P"
+    },
+    {
+        name: "弱 G・スピンキック(Lv1)",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "20",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱K"
+    },
+    {
+        name: "中 G・スピンキック(Lv1)",
+        outbreak: "25",
+        persistence: "7",
+        rigidity: "22",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 中K"
+    },
+    {
+        name: "強 G・スピンキック(Lv1)",
+        outbreak: "28",
+        persistence: "7",
+        rigidity: "22",
+        hit: "3",
+        guard: "-5",
+        damage: "70",
+        stan: "150",
+        remarks: "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 強K"
+    },
+    {
+        name: "弱 G・スピンキック(Lv2)",
+        outbreak: "17",
+        persistence: "9",
+        rigidity: "19",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱K"
+    },
+    {
+        name: "中 G・スピンキック(Lv2)",
+        outbreak: "22",
+        persistence: "9",
+        rigidity: "22",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 中K"
+    },
+    {
+        name: "強 G・スピンキック(Lv2)",
+        outbreak: "25",
+        persistence: "9",
+        rigidity: "22",
+        hit: "5",
+        guard: "-5",
+        damage: "100",
+        stan: "150",
+        remarks: "1段目は地上の相手にヒットしない\n                                                                                S※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 強K"
+    },
+    {
+        name: "G・スピンキック(Lv3)",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "22",
+        hit: "D",
+        guard: "-2",
+        damage: "110",
+        stan: "150",
+        remarks: "4F～30F 投げ無敵\n                                                S※ヒット時G・チャージのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K"
+    },
+    {
+        name: "EX G・スピンキック",
+        outbreak: "20",
+        persistence: "7",
+        rigidity: "22",
+        hit: "D",
+        guard: "-2",
+        damage: "110",
+        stan: "150",
+        remarks: "4F～30F 投げ無敵\n                                                S※ヒット時G・チャージのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K"
+    },
+    {
+        name: "G・インパクト(Lv1)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "G・インパクト(Lv2)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "70",
+        stan: "120",
+        remarks: "ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "G・インパクト(Lv3)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "120",
+        remarks: "ヒット時硬直を必殺技 CA Vスキルでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K"
+    },
+    {
+        name: "EX G・インパクト",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "60",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "120",
+        remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "→↘↓↙← + K K"
+    },
+    {
+        name: "G・チャージ",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体64",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "43FでプレジデントLvが1上昇\nホールドする事でホールド版に移行",
+        vtrigger: 2,
+        type: "special",
+        command: "↓ ↓ + P P"
+    },
+    {
+        name: "G・チャージ(ホールド)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体128",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "43F、120FでプレジデントLvが1上昇",
+        vtrigger: 2,
+        type: "special",
+        command: "↓ ↓ + P P"
+    },
+    {
+        name: "G・チャージ(キャンセル版)",
+        outbreak: "",
+        persistence: "",
+        rigidity: "全体69",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "58FでプレジデントLvが1上昇\nキャンセル版はホールド不可能",
+        vtrigger: 2,
+        type: "special",
+        command: "(Gチャージ対応技中に) P P"
+    },
+    {
+        name: "G・エクスプロージョン",
+        outbreak: "12",
+        persistence: "12",
+        rigidity: "38",
+        hit: "D",
+        guard: "-28",
+        damage: "150(※150)",
+        stan: "200(※200)",
+        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                ※先端ヒット時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "(VトリガーⅡ発動中) 強P 強K"
+    },
+    {
+        name: "G・レイジ",
+        outbreak: "20",
+        persistence: "3",
+        rigidity: "60",
+        hit: "",
+        guard: "",
+        damage: "200",
+        stan: "200",
+        remarks: "Vゲージタイマー1200F消費\n                                                                                                                                                                                ヒット時追加でVタイマー300F消費\n3F～22Fアーマー判定",
+        vtrigger: 2,
+        type: "special",
+        command: "(VトリガーⅡ発動中) ↓ + 強P 強K"
+    },
+    {
+        name: "G・レイジ(キャンセル版)",
+        outbreak: "25",
+        persistence: "3",
+        rigidity: "60",
+        hit: "",
+        guard: "",
+        damage: "200",
+        stan: "200",
+        remarks: "Vゲージタイマー1200F消費\n                                                                                                                                                                                ヒット時追加でVタイマー300F消費\n3F～27Fアーマー判定",
+        vtrigger: 2,
+        type: "special",
+        command: "(VトリガーⅡ発動中) ↓ + 強P 強K"
+    },
+    {
+        name: "パンゲアバースト",
+        outbreak: "1+5",
+        persistence: "14×3",
+        rigidity: "73",
+        hit: "D",
+        guard: "-39",
+        damage: "330",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 2,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + P"
+    }
 ];
 exports.g = g;
 //# sourceMappingURL=g.js.map

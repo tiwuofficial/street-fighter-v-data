@@ -57,7 +57,7 @@ describe("sortedFrameForEach", (): void => {
       cnt++;
     }, ["special"]);
 
-    expect(cnt).toBe(29);
+    expect(cnt).toBe(49);
   });
 
   test("filter ca, sort empty", (): void => {
@@ -67,7 +67,7 @@ describe("sortedFrameForEach", (): void => {
       cnt++;
     }, ["ca"]);
 
-    expect(cnt).toBe(2);
+    expect(cnt).toBe(3);
   });
 
   test("filter special and ca, sort empty", (): void => {
@@ -77,6 +77,6 @@ describe("sortedFrameForEach", (): void => {
       cnt++;
     }, ["special", "ca"]);
 
-    expect(cnt).toBe(31);
+    expect(cnt).toBe(52);
   });
 });

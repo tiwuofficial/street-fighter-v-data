@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const frameCalculation_1 = require("../module/frameCalculation");
 class default_1 {
-    constructor(id, name, stan, remarks, guard, outbreak, persistence, rigidity, hit, damage, type, command) {
+    constructor(id, name, stan, remarks, guard, outbreak, persistence, rigidity, hit, damage, type, vtrigger, command) {
         this.id = id;
         this.name = name;
         this.outbreak = outbreak;
@@ -14,6 +14,7 @@ class default_1 {
         this.stan = stan;
         this.remarks = remarks;
         this.type = type;
+        this.vtrigger = vtrigger;
         this.command = command;
     }
     /**

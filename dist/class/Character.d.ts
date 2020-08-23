@@ -30,12 +30,17 @@ export default class {
      *
      * @param {(frame: Frame) => void} callback
      */
-    frameForEach(callback: (frame: Frame) => void): void;
+    frameForEachByVtrigger(vtrigger: 1 | 2, callback: (frame: Frame) => void): void;
     /**
      *
      * @param callback
      */
     filterFrame(callback: (frame: Frame) => boolean): Frame[];
+    /**
+     *
+     * @param vtrigger
+     */
+    filterFrameByVtrigger(vtrigger: 1 | 2): Frame[];
     /**
      *
      * @returns

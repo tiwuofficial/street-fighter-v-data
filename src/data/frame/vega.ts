@@ -1,9 +1,74 @@
 const vega = [
-  { name: "立ち弱P", outbreak: "4", persistence: "3", rigidity: "7", hit: "5", guard: "3", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "立ち中P", outbreak: "7", persistence: "3", rigidity: "14", hit: "6", guard: "2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "立ち強P", outbreak: "11", persistence: "3", rigidity: "20", hit: "-1", guard: "-6", damage: "90", stan: "150", remarks: "", type: "normal", command: "" },
-  { name: "立ち弱K", outbreak: "3", persistence: "2", rigidity: "10", hit: "0", guard: "-2", damage: "30", stan: "70", remarks: "", type: "normal", command: "" },
-  { name: "立ち中K", outbreak: "7", persistence: "3", rigidity: "13", hit: "2", guard: "-2", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "7",
+    hit: "5",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中P",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強P",
+    outbreak: "11",
+    persistence: "3",
+    rigidity: "20",
+    hit: "-1",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "0",
+    guard: "-2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "13",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
   {
     name: "立ち強K",
     outbreak: "9",
@@ -13,23 +78,194 @@ const vega = [
     guard: "3",
     damage: "80",
     stan: "150",
-    remarks: "クラッシュカウンター対応 (膝)\n                                                強制立ち効果",
+    remarks:
+      "クラッシュカウンター対応 (膝)\n                                                強制立ち効果",
+    vtrigger: 1,
     type: "normal",
     command: ""
   },
-  { name: "しゃがみ弱P", outbreak: "4", persistence: "3", rigidity: "5", hit: "4", guard: "3", damage: "30", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
-  { name: "しゃがみ中P", outbreak: "6", persistence: "3", rigidity: "12", hit: "3", guard: "1", damage: "60", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "しゃがみ強P", outbreak: "10", persistence: "5", rigidity: "23", hit: "-5", guard: "-11", damage: "100", stan: "150", remarks: "強制立ち効果", type: "normal", command: "" },
-  { name: "しゃがみ弱K", outbreak: "4", persistence: "2", rigidity: "7", hit: "3", guard: "2", damage: "20", stan: "70", remarks: "連打キャンセル対応", type: "normal", command: "" },
-  { name: "しゃがみ中K", outbreak: "7", persistence: "2", rigidity: "15", hit: "-1", guard: "-2", damage: "50", stan: "100", remarks: "", type: "normal", command: "" },
-  { name: "しゃがみ強K", outbreak: "15", persistence: "10", rigidity: "18", hit: "D", guard: "-12", damage: "90", stan: "150", remarks: "クラッシュカウンター対応 (D)", type: "normal", command: "" },
-  { name: "ジャンプ弱P", outbreak: "4", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ中P", outbreak: "7", persistence: "3", rigidity: "", hit: "", guard: "", damage: "50", stan: "100", remarks: "空中ヒット時吹き飛びやられ", type: "jump", command: "" },
-  { name: "ジャンプ強P", outbreak: "8", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ弱K", outbreak: "3", persistence: "6", rigidity: "", hit: "", guard: "", damage: "40", stan: "70", remarks: "", type: "jump", command: "" },
-  { name: "ジャンプ中K", outbreak: "6", persistence: "6", rigidity: "", hit: "", guard: "", damage: "60", stan: "100", remarks: "めくり性能", type: "jump", command: "" },
-  { name: "ジャンプ強K", outbreak: "8", persistence: "6", rigidity: "", hit: "", guard: "", damage: "90", stan: "150", remarks: "", type: "jump", command: "" },
-  { name: "ヘルアタック", outbreak: "5", persistence: "4", rigidity: "", hit: "", guard: "", damage: "70", stan: "50", remarks: "", type: "unique", command: "(ジャンプ中に) 中P ▶ 中P" },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "5",
+    hit: "4",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "12",
+    hit: "3",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "5",
+    rigidity: "23",
+    hit: "-5",
+    guard: "-11",
+    damage: "100",
+    stan: "150",
+    remarks: "強制立ち効果",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "15",
+    hit: "-1",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "18",
+    hit: "D",
+    guard: "-12",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 1,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "50",
+    stan: "100",
+    remarks: "空中ヒット時吹き飛びやられ",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "3",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "6",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ヘルアタック",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "50",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "(ジャンプ中に) 中P ▶ 中P"
+  },
   {
     name: "サイコアックス",
     outbreak: "18",
@@ -41,6 +277,7 @@ const vega = [
     stan: "150",
     remarks:
       "クラッシュカウンター対応(+15F)\n                                                                                                                                                                ※空振り時",
+    vtrigger: 1,
     type: "unique",
     command: "↘ + 強P"
   },
@@ -54,11 +291,38 @@ const vega = [
     damage: "50",
     stan: "120",
     remarks: "クラッシュカウンター対応(+15F)",
+    vtrigger: 1,
     type: "unique",
     command: "中P ▶ ↘ + 強P"
   },
-  { name: "サイコインパクト", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "140", stan: "170", remarks: "", type: "throw", command: "" },
-  { name: "サイコフォール", outbreak: "5", persistence: "3", rigidity: "17", hit: "", guard: "", damage: "130", stan: "150", remarks: "", type: "throw", command: "" },
+  {
+    name: "サイコインパクト",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "140",
+    stan: "170",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(近距離で) → OR + 弱P 弱K"
+  },
+  {
+    name: "サイコフォール",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "throw",
+    command: "(近距離で) ← + 弱P 弱K"
+  },
   {
     name: "[VS1]サイコリジェクト",
     outbreak: "6",
@@ -69,8 +333,9 @@ const vega = [
     damage: "",
     stan: "",
     remarks: "※飛び道具吸収判定の値\n動作中常に被カウンター判定",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅠ選択時) 中P 中K"
   },
   {
     name: "[VS1]サイコリジェクト(射出)",
@@ -82,8 +347,9 @@ const vega = [
     damage: "80",
     stan: "100",
     remarks: "※「サイコリジェクト（吸収）」の当て身判定成立時に自動派生",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅠ選択時) 中P 中K (ボタンホールド)"
   },
   {
     name: "[VS1]サイコリジェクト(打撃)",
@@ -94,7 +360,9 @@ const vega = [
     guard: "2",
     damage: "100",
     stan: "150",
-    remarks: "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    remarks:
+      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    vtrigger: 1,
     type: "vsystem",
     command: ""
   },
@@ -109,8 +377,9 @@ const vega = [
     stan: "100",
     remarks:
       "必殺技キャンセル可能な通常技からキャンセル発動可能\n※「サイコリジェクト（吸収）」の当て身判定成立時、ボタンホールドを行っていなかった場合、再度「中P+中K」コマンド入力を行う事で射出動作を発動可能",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅠ選択時) 吸収状態中に 中P 中K"
   },
   {
     name: "[VS2]ヘルズワープ",
@@ -122,8 +391,9 @@ const vega = [
     damage: "70",
     stan: "100",
     remarks: "21F～31F 完全無敵\n                                                ※空振り時",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(VスキルⅡ選択時) 中P 中K"
   },
   {
     name: "サイコパワー",
@@ -136,8 +406,9 @@ const vega = [
     stan: "",
     remarks:
       "Vゲージタイマー+2000F\n                                                                                                                                                                                発動中必殺技の性能が強化される",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "強P 強K"
   },
   {
     name: "サイコバースト",
@@ -148,13 +419,54 @@ const vega = [
     guard: "-2",
     damage: "60",
     stan: "0",
-    remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復\n※ガード/空振り時",
+    remarks:
+      "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復\n※ガード/空振り時",
+    vtrigger: 1,
     type: "vsystem",
-    command: ""
+    command: "(ガード中に) → + 弱P"
   },
-  { name: "弱 サイコブラスト", outbreak: "12", persistence: "10", rigidity: "全体40", hit: "D", guard: "-2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "中 サイコブラスト", outbreak: "15", persistence: "10", rigidity: "全体42", hit: "D", guard: "-1", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "強 サイコブラスト", outbreak: "19", persistence: "10", rigidity: "全体42", hit: "D", guard: "2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
+  {
+    name: "弱 サイコブラスト",
+    outbreak: "12",
+    persistence: "10",
+    rigidity: "全体40",
+    hit: "D",
+    guard: "-2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + 弱P"
+  },
+  {
+    name: "中 サイコブラスト",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "全体42",
+    hit: "D",
+    guard: "-1",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + 中P"
+  },
+  {
+    name: "強 サイコブラスト",
+    outbreak: "19",
+    persistence: "10",
+    rigidity: "全体42",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + 強P"
+  },
   {
     name: "Vサイコブラスト",
     outbreak: "11",
@@ -165,10 +477,24 @@ const vega = [
     damage: "100",
     stan: "100",
     remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + P"
   },
-  { name: "EX サイコブラスト", outbreak: "15", persistence: "", rigidity: "全体38", hit: "D", guard: "6", damage: "100", stan: "150", remarks: "", type: "special", command: "" },
+  {
+    name: "EX サイコブラスト",
+    outbreak: "15",
+    persistence: "",
+    rigidity: "全体38",
+    hit: "D",
+    guard: "6",
+    damage: "100",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + P P"
+  },
   {
     name: "VEX サイコブラスト",
     outbreak: "14",
@@ -179,8 +505,9 @@ const vega = [
     damage: "120",
     stan: "150",
     remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + P P"
   },
   {
     name: "弱 サイコインフェルノ",
@@ -192,8 +519,9 @@ const vega = [
     damage: "80",
     stan: "150",
     remarks: "CA※3段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 弱P"
   },
   {
     name: "中 サイコインフェルノ",
@@ -205,8 +533,9 @@ const vega = [
     damage: "90",
     stan: "150",
     remarks: "CA※3段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 中P"
   },
   {
     name: "強 サイコインフェルノ",
@@ -218,8 +547,9 @@ const vega = [
     damage: "100",
     stan: "150",
     remarks: "CA※3段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + 強P"
   },
   {
     name: "Vサイコインフェルノ",
@@ -232,10 +562,24 @@ const vega = [
     stan: "150",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                                                                CA※4段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P"
   },
-  { name: "EX サイコインフェルノ", outbreak: "15", persistence: "18", rigidity: "全体54", hit: "D", guard: "-1", damage: "140", stan: "150", remarks: "", type: "special", command: "" },
+  {
+    name: "EX サイコインフェルノ",
+    outbreak: "15",
+    persistence: "18",
+    rigidity: "全体54",
+    hit: "D",
+    guard: "-1",
+    damage: "140",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↙← + P P"
+  },
   {
     name: "VEX サイコインフェルノ",
     outbreak: "15",
@@ -246,8 +590,9 @@ const vega = [
     damage: "160",
     stan: "150",
     remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P P"
   },
   {
     name: "VEX サイコインフェルノ(キャンセル)",
@@ -259,8 +604,9 @@ const vega = [
     damage: "160",
     stan: "150",
     remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↓↙← + P P"
   },
   {
     name: "弱 ダブルニープレス",
@@ -272,8 +618,9 @@ const vega = [
     damage: "80",
     stan: "150",
     remarks: "CA※1段目のみ可能\nV※2段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 弱K"
   },
   {
     name: "中 ダブルニープレス",
@@ -285,8 +632,9 @@ const vega = [
     damage: "90",
     stan: "150",
     remarks: "CA※1段目のみ可能\nV※2段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 中K"
   },
   {
     name: "強 ダブルニープレス",
@@ -298,8 +646,9 @@ const vega = [
     damage: "100",
     stan: "150",
     remarks: "CA※1段目のみ可能\nV※2段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 強K"
   },
   {
     name: "V弱 ダブルニープレス",
@@ -312,8 +661,9 @@ const vega = [
     stan: "150",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                6F～9F 完全無敵\n                                                CA※1段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 弱K"
   },
   {
     name: "V中 ダブルニープレス",
@@ -326,8 +676,9 @@ const vega = [
     stan: "150",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                6F～11F 完全無敵\n                                                CA※1段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 中K"
   },
   {
     name: "V強 ダブルニープレス",
@@ -340,8 +691,9 @@ const vega = [
     stan: "150",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                6F～13F 完全無敵\n                                                CA※1段目のみ可能",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + 強K"
   },
   {
     name: "EX ダブルニープレス",
@@ -353,8 +705,9 @@ const vega = [
     damage: "150(※160)(※270)",
     stan: "200(※1※2100)",
     remarks: "V※2段目ガード時のみ可能\n※1空中ヒット時\n※2持続2F目以降",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "VEX ダブルニープレス",
@@ -365,9 +718,11 @@ const vega = [
     guard: "3",
     damage: "160",
     stan: "200",
-    remarks: "Vゲージタイマー200F消費\n                                                                                                                                4F～12F 完全無敵",
+    remarks:
+      "Vゲージタイマー200F消費\n                                                                                                                                4F～12F 完全無敵",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "VEX ダブルニープレス(キャンセル)",
@@ -378,9 +733,11 @@ const vega = [
     guard: "3",
     damage: "160",
     stan: "200",
-    remarks: "Vゲージタイマー200F消費\n                                                                                                                                1F～12F 完全無敵",
+    remarks:
+      "Vゲージタイマー200F消費\n                                                                                                                                1F～12F 完全無敵",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "→ + K K"
   },
   {
     name: "ヘッドプレス",
@@ -392,8 +749,9 @@ const vega = [
     damage: "100",
     stan: "200",
     remarks: "密着で発動した際の発生フレーム",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K"
   },
   {
     name: "Vヘッドプレス",
@@ -406,8 +764,9 @@ const vega = [
     stan: "200",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                                                                受身不可",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K"
   },
   {
     name: "EX ヘッドプレス",
@@ -420,8 +779,9 @@ const vega = [
     stan: "200(※100)",
     remarks:
       "めくり性能\n                                                                                                                                                1F～2F, 8F～着地まで 飛び道具無敵\n3F～7F 打撃&飛び道具無敵\n※空中ヒット時",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
   {
     name: "VEX ヘッドプレス",
@@ -434,8 +794,9 @@ const vega = [
     stan: "200",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                1F～25F 完全無敵\n                                                受身不可",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
   {
     name: "VEX ヘッドプレス(キャンセル)",
@@ -448,13 +809,66 @@ const vega = [
     stan: "200",
     remarks:
       "Vゲージタイマー200F消費\n                                                                                                                                                                                受身不可",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "↑ + K K"
   },
-  { name: "サマーソルトスカルダイバー", outbreak: "5", persistence: "10", rigidity: "着地後4", hit: "", guard: "", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "デビルリバース", outbreak: "15", persistence: "22", rigidity: "着地後7", hit: "D", guard: "2", damage: "70", stan: "100", remarks: "", type: "special", command: "" },
-  { name: "Vデビルリバース", outbreak: "32", persistence: "", rigidity: "着地後4", hit: "D", guard: "8", damage: "100", stan: "150", remarks: "Vゲージタイマー200F消費", type: "special", command: "" },
-  { name: "EX デビルリバース", outbreak: "27", persistence: "", rigidity: "着地後10", hit: "D", guard: "9", damage: "140", stan: "200", remarks: "1F～16F 完全無敵", type: "special", command: "" },
+  {
+    name: "サマーソルトスカルダイバー",
+    outbreak: "5",
+    persistence: "10",
+    rigidity: "着地後4",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(ヘッドプレスヒット後に) P"
+  },
+  {
+    name: "デビルリバース",
+    outbreak: "15",
+    persistence: "22",
+    rigidity: "着地後7",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "(ヘッドプレスヒット前に) P"
+  },
+  {
+    name: "Vデビルリバース",
+    outbreak: "32",
+    persistence: "",
+    rigidity: "着地後4",
+    hit: "D",
+    guard: "8",
+    damage: "100",
+    stan: "150",
+    remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
+    type: "special",
+    command: "(ヘッドプレスヒット前に) P"
+  },
+  {
+    name: "EX デビルリバース",
+    outbreak: "27",
+    persistence: "",
+    rigidity: "着地後10",
+    hit: "D",
+    guard: "9",
+    damage: "140",
+    stan: "200",
+    remarks: "1F～16F 完全無敵",
+    vtrigger: 1,
+    type: "special",
+    command: "(ヘッドプレスヒット前に) P P"
+  },
   {
     name: "VEX デビルリバース",
     outbreak: "40",
@@ -465,8 +879,9 @@ const vega = [
     damage: "160",
     stan: "200",
     remarks: "Vゲージタイマー200F消費",
+    vtrigger: 1,
     type: "special",
-    command: ""
+    command: "(ヘッドプレスヒット前に) P P"
   },
   {
     name: "アルティメット サイコクラッシャー",
@@ -478,8 +893,9 @@ const vega = [
     damage: "340",
     stan: "0",
     remarks: "1F～20F 完全無敵",
+    vtrigger: 1,
     type: "ca",
-    command: ""
+    command: "↓↘→ ↓↘→ + P"
   },
   {
     name: "アルティメット サイコクラッシャー(空中)",
@@ -491,8 +907,747 @@ const vega = [
     damage: "340",
     stan: "0",
     remarks: "1F～20F 完全無敵",
+    vtrigger: 1,
     type: "ca",
+    command: "(ジャンプ中に) ↓↘→ ↓↘→ + P"
+  },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "7",
+    hit: "5",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
     command: ""
+  },
+  {
+    name: "立ち中P",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "14",
+    hit: "6",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強P",
+    outbreak: "11",
+    persistence: "3",
+    rigidity: "20",
+    hit: "-1",
+    guard: "-6",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "0",
+    guard: "-2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "13",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "立ち強K",
+    outbreak: "9",
+    persistence: "3",
+    rigidity: "13",
+    hit: "6",
+    guard: "3",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (膝)\n                                                強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "5",
+    hit: "4",
+    guard: "3",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "12",
+    hit: "3",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "5",
+    rigidity: "23",
+    hit: "-5",
+    guard: "-11",
+    damage: "100",
+    stan: "150",
+    remarks: "強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "7",
+    persistence: "2",
+    rigidity: "15",
+    hit: "-1",
+    guard: "-2",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "18",
+    hit: "D",
+    guard: "-12",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 2,
+    type: "normal",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "50",
+    stan: "100",
+    remarks: "空中ヒット時吹き飛びやられ",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "3",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "6",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "8",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: ""
+  },
+  {
+    name: "ヘルアタック",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "50",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "(ジャンプ中に) 中P ▶ 中P"
+  },
+  {
+    name: "サイコアックス",
+    outbreak: "18",
+    persistence: "3",
+    rigidity: "20(※25)",
+    hit: "6",
+    guard: "1",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応(+15F)\n                                                                                                                                                                ※空振り時",
+    vtrigger: 2,
+    type: "unique",
+    command: "↘ + 強P"
+  },
+  {
+    name: "シャドウアックス",
+    outbreak: "14",
+    persistence: "3",
+    rigidity: "20",
+    hit: "2",
+    guard: "-8",
+    damage: "50",
+    stan: "120",
+    remarks: "クラッシュカウンター対応(+15F)",
+    vtrigger: 2,
+    type: "unique",
+    command: "中P ▶ ↘ + 強P"
+  },
+  {
+    name: "サイコインパクト",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "140",
+    stan: "170",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(近距離で) → OR + 弱P 弱K"
+  },
+  {
+    name: "サイコフォール",
+    outbreak: "5",
+    persistence: "3",
+    rigidity: "17",
+    hit: "",
+    guard: "",
+    damage: "130",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "throw",
+    command: "(近距離で) ← + 弱P 弱K"
+  },
+  {
+    name: "[VS1]サイコリジェクト",
+    outbreak: "6",
+    persistence: "9(※7)",
+    rigidity: "28",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks: "※飛び道具吸収判定の値\n動作中常に被カウンター判定",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅠ選択時) 中P 中K"
+  },
+  {
+    name: "[VS1]サイコリジェクト(射出)",
+    outbreak: "16",
+    persistence: "",
+    rigidity: "全体36",
+    hit: "D",
+    guard: "13",
+    damage: "80",
+    stan: "100",
+    remarks: "※「サイコリジェクト（吸収）」の当て身判定成立時に自動派生",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅠ選択時) 中P 中K (ボタンホールド)"
+  },
+  {
+    name: "[VS1]サイコリジェクト(打撃)",
+    outbreak: "13",
+    persistence: "5",
+    rigidity: "25",
+    hit: "D",
+    guard: "2",
+    damage: "100",
+    stan: "150",
+    remarks:
+      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+    vtrigger: 2,
+    type: "vsystem",
+    command: ""
+  },
+  {
+    name: "サイコサイコパニッシュメント",
+    outbreak: "16",
+    persistence: "",
+    rigidity: "全体36",
+    hit: "D",
+    guard: "13",
+    damage: "80",
+    stan: "100",
+    remarks:
+      "必殺技キャンセル可能な通常技からキャンセル発動可能\n※「サイコリジェクト（吸収）」の当て身判定成立時、ボタンホールドを行っていなかった場合、再度「中P+中K」コマンド入力を行う事で射出動作を発動可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅠ選択時) 吸収状態中に 中P 中K"
+  },
+  {
+    name: "[VS2]ヘルズワープ",
+    outbreak: "43",
+    persistence: "4",
+    rigidity: "18(※20)",
+    hit: "D",
+    guard: "1",
+    damage: "70",
+    stan: "100",
+    remarks: "21F～31F 完全無敵\n                                                ※空振り時",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(VスキルⅡ選択時) 中P 中K"
+  },
+  {
+    name: "サイコナイトメア",
+    outbreak: "1",
+    persistence: "",
+    rigidity: "10",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "Vゲージタイマー+4000F\n                                                                                                                                                                                発動中、専用の必殺技が追加\n必殺技からキャンセル不可",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 強K"
+  },
+  {
+    name: "サイコバースト",
+    outbreak: "17",
+    persistence: "2",
+    rigidity: "20(※23)",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks:
+      "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復\n※ガード/空振り時",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "弱 サイコブラスト",
+    outbreak: "10",
+    persistence: "10",
+    rigidity: "全体40",
+    hit: "D",
+    guard: "-2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 弱P"
+  },
+  {
+    name: "中 サイコブラスト",
+    outbreak: "15",
+    persistence: "10",
+    rigidity: "全体42",
+    hit: "D",
+    guard: "-1",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 中P"
+  },
+  {
+    name: "強 サイコブラスト",
+    outbreak: "19",
+    persistence: "10",
+    rigidity: "全体42",
+    hit: "D",
+    guard: "2",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 強P"
+  },
+  {
+    name: "EX サイコブラスト",
+    outbreak: "15",
+    persistence: "",
+    rigidity: "全体38",
+    hit: "D",
+    guard: "6",
+    damage: "100",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + P P"
+  },
+  {
+    name: "弱 サイコインフェルノ",
+    outbreak: "14",
+    persistence: "12",
+    rigidity: "全体56",
+    hit: "D",
+    guard: "-12",
+    damage: "80",
+    stan: "150",
+    remarks: "CA※3段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 弱P"
+  },
+  {
+    name: "中 サイコインフェルノ",
+    outbreak: "16",
+    persistence: "14",
+    rigidity: "全体58",
+    hit: "D",
+    guard: "-11",
+    damage: "90",
+    stan: "150",
+    remarks: "CA※3段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 中P"
+  },
+  {
+    name: "強 サイコインフェルノ",
+    outbreak: "18",
+    persistence: "16",
+    rigidity: "全体63",
+    hit: "D",
+    guard: "-10",
+    damage: "100",
+    stan: "150",
+    remarks: "CA※3段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + 強P"
+  },
+  {
+    name: "EX サイコインフェルノ",
+    outbreak: "15",
+    persistence: "18",
+    rigidity: "全体54",
+    hit: "D",
+    guard: "-1",
+    damage: "140",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↙← + P P"
+  },
+  {
+    name: "弱 ダブルニープレス",
+    outbreak: "11",
+    persistence: "5",
+    rigidity: "19",
+    hit: "2",
+    guard: "-4",
+    damage: "80",
+    stan: "150",
+    remarks: "CA※1段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 弱K"
+  },
+  {
+    name: "中 ダブルニープレス",
+    outbreak: "14",
+    persistence: "5",
+    rigidity: "20",
+    hit: "2",
+    guard: "-3",
+    damage: "90",
+    stan: "150",
+    remarks: "CA※1段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 中K"
+  },
+  {
+    name: "強 ダブルニープレス",
+    outbreak: "19",
+    persistence: "5",
+    rigidity: "21",
+    hit: "2",
+    guard: "-2",
+    damage: "100",
+    stan: "150",
+    remarks: "CA※1段目のみ可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + 強K"
+  },
+  {
+    name: "EX ダブルニープレス",
+    outbreak: "12",
+    persistence: "6",
+    rigidity: "17",
+    hit: "D",
+    guard: "1",
+    damage: "150(※160)(※270)",
+    stan: "200(※1※2100)",
+    remarks:
+      "S※二段目(非ロック時)がヒットした際に、サイコクラッシャーアタック サイコジャッジメントでキャンセル可能\n※1空中ヒット時\n※2持続2F目以降",
+    vtrigger: 2,
+    type: "special",
+    command: "→ + K K"
+  },
+  {
+    name: "ヘッドプレス",
+    outbreak: "23",
+    persistence: "着地まで",
+    rigidity: "着地後7",
+    hit: "",
+    guard: "",
+    damage: "100",
+    stan: "200",
+    remarks: "密着で発動した際の発生フレーム",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + K"
+  },
+  {
+    name: "EX ヘッドプレス",
+    outbreak: "18",
+    persistence: "着地まで",
+    rigidity: "着地後16",
+    hit: "D",
+    guard: "",
+    damage: "160(※100)",
+    stan: "200(※100)",
+    remarks:
+      "めくり性能\n                                                                                                1F～6F 打撃&飛び道具無敵\n                                                ※空中ヒット時",
+    vtrigger: 2,
+    type: "special",
+    command: "↑ + K K"
+  },
+  {
+    name: "サマーソルトスカルダイバー",
+    outbreak: "5",
+    persistence: "10",
+    rigidity: "着地後4",
+    hit: "",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(ヘッドプレスヒット後に) P"
+  },
+  {
+    name: "デビルリバース",
+    outbreak: "15",
+    persistence: "22",
+    rigidity: "着地後7",
+    hit: "D",
+    guard: "",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "special",
+    command: "(ヘッドプレスヒット前に) P"
+  },
+  {
+    name: "EX デビルリバース",
+    outbreak: "27",
+    persistence: "",
+    rigidity: "着地後4",
+    hit: "D",
+    guard: "9",
+    damage: "140",
+    stan: "200",
+    remarks: "1F～16F 完全無敵",
+    vtrigger: 2,
+    type: "special",
+    command: "(ヘッドプレスヒット前に) P P"
+  },
+  {
+    name: "サイコクラッシャーアタック",
+    outbreak: "14",
+    persistence: "17",
+    rigidity: "26",
+    hit: "D",
+    guard: "-8",
+    damage: "100",
+    stan: "100",
+    remarks:
+      "Vゲージタイマー2000F消費\n                                めくり性能\n                                                                                                14F～29F 飛び道具無敵\n                                                30F～34F 上半身飛び道具無敵\nVトリガーⅠでVトリガーキャンセル可能な技からキャンセル発動可能",
+    vtrigger: 2,
+    type: "special",
+    command: "(VトリガーⅡ発動中) 強P 強K"
+  },
+  {
+    name: "サイコチャージ",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "100",
+    stan: "100",
+    remarks:
+      "Vゲージタイマー1000F消費\n                                                                                                                                                                                ヒット後、一定時間経過で相手に追加の攻撃が発生する\n相手からの攻撃が自身にヒットするとサイコチャージ状態が解除される\n必殺技キャンセルで出した場合のみ連続でヒットする",
+    vtrigger: 2,
+    type: "special",
+    command: "(VトリガーⅡ発動中) →↘↓↙← + K"
+  },
+  {
+    name: "サイコジャッジメント",
+    outbreak: "15",
+    persistence: "12",
+    rigidity: "全体37",
+    hit: "D",
+    guard: "14",
+    damage: "70",
+    stan: "90",
+    remarks: "VトリガーⅠでVトリガーキャンセル可能な技からキャンセル発動可能",
+    vtrigger: 2,
+    type: "special",
+    command: "(サイコチャージヒット後に) →↘↓↙← + K"
+  },
+  {
+    name: "アルティメット サイコクラッシャー",
+    outbreak: "1+5",
+    persistence: "15",
+    rigidity: "63",
+    hit: "D",
+    guard: "-40",
+    damage: "340",
+    stan: "0",
+    remarks: "1F～20F 完全無敵",
+    vtrigger: 2,
+    type: "ca",
+    command: "↓↘→ ↓↘→ + P"
+  },
+  {
+    name: "アルティメット サイコクラッシャー(空中)",
+    outbreak: "1+5",
+    persistence: "15",
+    rigidity: "着地後14",
+    hit: "D",
+    guard: "",
+    damage: "340",
+    stan: "0",
+    remarks: "1F～20F 完全無敵",
+    vtrigger: 2,
+    type: "ca",
+    command: "(ジャンプ中に) ↓↘→ ↓↘→ + P"
   }
 ];
 

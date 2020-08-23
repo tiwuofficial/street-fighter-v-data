@@ -8,6 +8,7 @@ declare const abigail: {
     damage: string;
     stan: string;
     remarks: string;
+    vtrigger: number;
     type: string;
     command: string;
 }[];
