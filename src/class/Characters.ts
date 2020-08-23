@@ -58,10 +58,17 @@ export default class {
    * @param {string} sortKey
    * @param {string} sortOrder
    */
-  sortedFrameForEachByEnName(enName: string, callback: (frame: Frame, character: Character) => void, filterTypes = [], sortKey = "", sortOrder = "asc"): void {
+  sortedFrameForEachByEnName(
+    vtrigger: 1 | 2,
+    enName: string,
+    callback: (frame: Frame, character: Character) => void,
+    filterTypes = [],
+    sortKey = "",
+    sortOrder = "asc"
+  ): void {
     const character = this.getCharacterByEnName(enName);
     if (character) {
-      character.sortedFrameForEach(callback, filterTypes, sortKey, sortOrder);
+      character.sortedFrameForEach(vtrigger, callback, filterTypes, sortKey, sortOrder);
     }
   }
 }

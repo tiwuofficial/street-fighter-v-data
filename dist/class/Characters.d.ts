@@ -35,5 +35,5 @@ export default class {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEachByEnName(enName: string, callback: (frame: Frame, character: Character) => void, filterTypes?: any[], sortKey?: string, sortOrder?: string): void;
+    sortedFrameForEachByEnName(vtrigger: 1 | 2, enName: string, callback: (frame: Frame, character: Character) => void, filterTypes?: any[], sortKey?: string, sortOrder?: string): void;
 }

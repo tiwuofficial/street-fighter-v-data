@@ -97,8 +97,8 @@ class default_1 {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEach(callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
-        let frames = this.frame.slice();
+    sortedFrameForEach(vtrigger, callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
+        let frames = this.filterFrameByVtrigger(vtrigger);
         // [""] が来たときに消すため
         const trimFilterTypes = filterTypes.filter(Boolean);
         if (trimFilterTypes.length) {

@@ -128,12 +128,13 @@ export default class {
    * @param {string} sortOrder
    */
   sortedFrameForEach(
+    vtrigger: 1 | 2,
     callback: (frame: Frame, character: this) => void,
     filterTypes = [],
     sortKey = "",
     sortOrder = "asc"
   ): void {
-    let frames = this.frame.slice();
+    let frames = this.filterFrameByVtrigger(vtrigger);
 
     // [""] が来たときに消すため
     const trimFilterTypes = filterTypes.filter(Boolean);

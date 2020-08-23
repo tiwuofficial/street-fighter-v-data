@@ -23,60 +23,80 @@ describe("sortedFrameForEach", (): void => {
   test("filter empty, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
+    character.sortedFrameForEach(1, () => {
       cnt++;
     });
 
-    expect(cnt).toBe(character.frame.length);
+    expect(cnt).toBe(75);
   });
 
   test("filter empty array, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
-      cnt++;
-    }, []);
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      []
+    );
 
-    expect(cnt).toBe(character.frame.length);
+    expect(cnt).toBe(75);
   });
 
   test("filter empty string, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
-      cnt++;
-    }, [""]);
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      [""]
+    );
 
-    expect(cnt).toBe(character.frame.length);
+    expect(cnt).toBe(75);
   });
 
   test("filter special, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
-      cnt++;
-    }, ["special"]);
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["special"]
+    );
 
-    expect(cnt).toBe(49);
+    expect(cnt).toBe(29);
   });
 
   test("filter ca, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
-      cnt++;
-    }, ["ca"]);
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["ca"]
+    );
 
-    expect(cnt).toBe(3);
+    expect(cnt).toBe(2);
   });
 
   test("filter special and ca, sort empty", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);
     let cnt = 0;
-    character.sortedFrameForEach(() => {
-      cnt++;
-    }, ["special", "ca"]);
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["special", "ca"]
+    );
 
-    expect(cnt).toBe(52);
+    expect(cnt).toBe(31);
   });
 });
