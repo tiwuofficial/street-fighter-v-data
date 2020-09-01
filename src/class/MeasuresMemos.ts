@@ -1,10 +1,13 @@
 import MeasuresMemo, { MeasuresMemoSaveData } from "./MeasuresMemo";
+import { characters } from "../data/character";
 
 export default class {
   measuresMemo: MeasuresMemo[];
+  measuresMemosLSKey: "measuresMemos";
 
   constructor() {
     this.measuresMemo = [];
+    this.measuresMemosLSKey = "measuresMemos";
   }
 
   getNextId(): number {
@@ -20,7 +23,31 @@ export default class {
   }
 
   save(): void {
-    localStorage.setItem("measuresMemos", JSON.stringify(this.getSaveData()));
+    localStorage.setItem(this.measuresMemosLSKey, JSON.stringify(this.getSaveData()));
+  }
+
+  syncFromLS(): void {
+    const measuresMemosLS = JSON.parse(localStorage.getItem(this.measuresMemosLSKey));
+
+    if (measuresMemosLS) {
+      measuresMemosLS.forEach((measuresMemoLS: MeasuresMemoSaveData) => {
+        const character = characters.getCharacterById(measuresMemoLS.characterId);
+        const measuresCharacter = characters.getCharacterById(measuresMemoLS.measuresCharacterId);
+        if (character && measuresCharacter) {
+          const skill = measuresCharacter.getFrameById(Number(measuresMemoLS.skillId));
+          this.pushMeasuresMemo(
+            new MeasuresMemo(
+              measuresMemoLS.id,
+              character,
+              measuresCharacter,
+              skill ?? null,
+              measuresMemoLS.memo,
+              measuresMemoLS.create
+            )
+          );
+        }
+      });
+    }
   }
 
   getSaveData(): MeasuresMemoSaveData[] {
