@@ -1,5 +1,5 @@
 import MeasuresMemo, { MeasuresMemoSaveData } from "./MeasuresMemo";
-import { characters } from "../data/character";
+import Characters from "./Characters";
 
 export default class {
   measuresMemo: MeasuresMemo[];
@@ -26,7 +26,7 @@ export default class {
     localStorage.setItem(this.measuresMemosLSKey, JSON.stringify(this.getSaveData()));
   }
 
-  syncFromLS(): void {
+  syncFromLS(characters: Characters): void {
     const measuresMemosLS = JSON.parse(localStorage.getItem(this.measuresMemosLSKey));
 
     if (measuresMemosLS) {

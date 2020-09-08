@@ -1,4 +1,5 @@
 import MeasuresMemo, { MeasuresMemoSaveData } from "./MeasuresMemo";
+import Characters from "./Characters";
 export default class {
     measuresMemo: MeasuresMemo[];
     measuresMemosLSKey: "measuresMemos";
@@ -6,6 +7,6 @@ export default class {
     getNextId(): number;
     pushMeasuresMemo(measuresMemo: MeasuresMemo): void;
     save(): void;
-    syncFromLS(): void;
+    syncFromLS(characters: Characters): void;
     getSaveData(): MeasuresMemoSaveData[];
 }

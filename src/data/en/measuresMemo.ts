@@ -1,4 +1,4 @@
-import MeasuresMemo from "../class/MeasuresMemos";
+import MeasuresMemo from "../../class/MeasuresMemos";
 import { characters } from "./character";
 
 const measuresMemo = new MeasuresMemo();

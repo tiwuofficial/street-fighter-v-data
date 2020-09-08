@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const MeasuresMemo_1 = require("./MeasuresMemo");
-const character_1 = require("../data/character");
 class default_1 {
     constructor() {
         this.measuresMemo = [];
@@ -20,12 +19,12 @@ class default_1 {
     save() {
         localStorage.setItem(this.measuresMemosLSKey, JSON.stringify(this.getSaveData()));
     }
-    syncFromLS() {
+    syncFromLS(characters) {
         const measuresMemosLS = JSON.parse(localStorage.getItem(this.measuresMemosLSKey));
         if (measuresMemosLS) {
             measuresMemosLS.forEach((measuresMemoLS) => {
-                const character = character_1.characters.getCharacterById(measuresMemoLS.characterId);
-                const measuresCharacter = character_1.characters.getCharacterById(measuresMemoLS.measuresCharacterId);
+                const character = characters.getCharacterById(measuresMemoLS.characterId);
+                const measuresCharacter = characters.getCharacterById(measuresMemoLS.measuresCharacterId);
                 if (character && measuresCharacter) {
                     const skill = measuresCharacter.getFrameById(Number(measuresMemoLS.skillId));
                     this.pushMeasuresMemo(new MeasuresMemo_1.default(measuresMemoLS.id, character, measuresCharacter, skill !== null && skill !== void 0 ? skill : null, measuresMemoLS.memo, measuresMemoLS.create));
