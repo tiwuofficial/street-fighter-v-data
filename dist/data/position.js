@@ -6,4 +6,5 @@ const positions = new Positions_1.default();
 exports.positions = positions;
 positions.setPositions(new Position_1.default("1", "真ん中"));
 positions.setPositions(new Position_1.default("2", "画面端"));
+positions.setPositions(new Position_1.default("3", "対空"));
 //# sourceMappingURL=position.js.map
