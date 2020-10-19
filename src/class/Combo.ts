@@ -16,7 +16,19 @@ export default class {
   memo: string;
   create: Date;
 
-  constructor(id: number, docId = "", character: Character, combo: Frame[], startStatus: StartStatus, position: Position, damage: number, stun: number, title = "", memo = "", create: Date) {
+  constructor(
+    id: number,
+    docId = "",
+    character: Character,
+    combo: Frame[],
+    startStatus: StartStatus,
+    position: Position,
+    damage: number,
+    stun: number,
+    title = "",
+    memo = "",
+    create: Date
+  ) {
     this.id = id;
     this.docId = docId;
     this.character = character;

@@ -6,6 +6,7 @@ export default class {
     getNextId(): number;
     updateComboById(id: number, combo: Combo): void;
     pushCombo(combo: Combo): void;
+    sortedComboForEach(callback: (combo: Combo) => void, sortKey?: "create" | "damage" | "stun", sortOrder?: "asc" | "desc"): void;
     save(): void;
     getSaveDate(): any;
 }

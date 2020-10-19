@@ -32,6 +32,36 @@ export default class {
     this.combos.push(combo);
   }
 
+  sortedComboForEach(
+    callback: (combo: Combo) => void,
+    sortKey: "create" | "damage" | "stun" = "create",
+    sortOrder: "asc" | "desc" = "desc"
+  ): void {
+    const combos = this.combos;
+
+    combos.sort((a, b) => {
+      if (sortKey === "create") {
+        if (a[sortKey] > b[sortKey]) {
+          return -1;
+        }
+        if (a[sortKey] < b[sortKey]) {
+          return 1;
+        }
+        return 0;
+      }
+
+      if (sortOrder === "asc") {
+        return a[sortKey] - b[sortKey];
+      }
+
+      return b[sortKey] - a[sortKey];
+    });
+
+    combos.forEach(combo => {
+      callback(combo);
+    });
+  }
+
   save(): void {
     localStorage.setItem("combos", JSON.stringify(this.getSaveDate()));
   }
