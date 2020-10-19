@@ -1,7 +1,7 @@
 export default class {
   id: string;
   text: string;
-  sortKey: string;
+  sortKey: "create" | "damage" | "stun";
   sortOrder: "asc" | "desc";
 
   constructor(
