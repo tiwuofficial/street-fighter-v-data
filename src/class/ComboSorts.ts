@@ -1,6 +1,7 @@
 import ComboSort from "./ComboSort";
 
 export default class {
+  defaultSort: ComboSort;
   comboSorts: ComboSort[];
 
   constructor() {
@@ -34,5 +35,13 @@ export default class {
     return this.comboSorts.find(comboSort => {
       return comboSort.id === id;
     });
+  }
+
+  setDefaultSort(comboSort: ComboSort): void {
+    this.defaultSort = comboSort;
+  }
+
+  getDefaultSort(): ComboSort {
+    return this.defaultSort;
   }
 }

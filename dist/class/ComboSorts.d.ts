@@ -1,5 +1,6 @@
 import ComboSort from "./ComboSort";
 export default class {
+    defaultSort: ComboSort;
     comboSorts: ComboSort[];
     constructor();
     /**
@@ -18,4 +19,6 @@ export default class {
      * @returns {ComboSort | undefined}
      */
     getComboSortById(id: string): ComboSort | undefined;
+    setDefaultSort(comboSort: ComboSort): void;
+    getDefaultSort(): ComboSort;
 }

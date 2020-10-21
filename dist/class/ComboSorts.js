@@ -30,6 +30,12 @@ class default_1 {
             return comboSort.id === id;
         });
     }
+    setDefaultSort(comboSort) {
+        this.defaultSort = comboSort;
+    }
+    getDefaultSort() {
+        return this.defaultSort;
+    }
 }
 exports.default = default_1;
 //# sourceMappingURL=ComboSorts.js.map
