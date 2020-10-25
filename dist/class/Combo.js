@@ -14,6 +14,19 @@ class default_1 {
         this.memo = memo;
         this.create = create;
     }
+    zeroFill(val) {
+        return ("0" + String(val)).slice(-2);
+    }
+    // 2020年10月23日18:28
+    getDateFromat() {
+        return `${this.create.getFullYear()}年${this.create.getMonth() +
+            1}月${this.create.getDate()}日${this.zeroFill(this.create.getHours())}:${this.zeroFill(this.create.getMinutes())}`;
+    }
+    // 2020-10-23T18:28:02+09:00
+    getDateFormatTimezone() {
+        return `${this.create.getFullYear()}-${this.create.getMonth() +
+            1}-${this.create.getDate()}T${this.zeroFill(this.create.getHours())}:${this.zeroFill(this.create.getMinutes())}:${this.zeroFill(this.create.getSeconds())}+09:00`;
+    }
     getDateForFireStore() {
         const frames = [];
         this.combo.forEach(frame => {
