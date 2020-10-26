@@ -39,7 +39,8 @@ export default class {
           frame.damage,
           frame.type,
           frame.vtrigger,
-          frame.command
+          frame.command,
+          frame.zeku ? frame.zeku : ""
         )
       );
     });

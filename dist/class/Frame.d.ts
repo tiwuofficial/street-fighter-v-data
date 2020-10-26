@@ -12,7 +12,8 @@ export default class {
     type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
     vtrigger: 1 | 2;
     command: string;
-    constructor(id: number, name: string, stan: string, remarks: string, guard: string, outbreak: string, persistence: string, rigidity: string, hit: string, damage: string, type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca", vtrigger: 1 | 2, command: string);
+    zeku: "" | "old" | "young";
+    constructor(id: number, name: string, stan: string, remarks: string, guard: string, outbreak: string, persistence: string, rigidity: string, hit: string, damage: string, type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca", vtrigger: 1 | 2, command: string, zeku?: "" | "old" | "young");
     /**
      *
      *

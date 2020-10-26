@@ -14,6 +14,7 @@ export default class {
   type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
   vtrigger: 1 | 2;
   command: string;
+  zeku: "" | "old" | "young";
 
   constructor(
     id: number,
@@ -28,7 +29,8 @@ export default class {
     damage: string,
     type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca",
     vtrigger: 1 | 2,
-    command: string
+    command: string,
+    zeku: "" | "old" | "young" = ""
   ) {
     this.id = id;
     this.name = name;
@@ -43,6 +45,7 @@ export default class {
     this.type = type;
     this.vtrigger = vtrigger;
     this.command = command;
+    this.zeku = zeku;
   }
 
   /**
