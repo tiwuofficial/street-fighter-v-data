@@ -1,5 +1,6 @@
 import Character from "../../src/class/Character";
 import { ryu } from "../../src/data/frame/ryu";
+import { zeku } from "../../src/data/frame/zeku";
 
 describe("constructor", (): void => {
   test("constructor", (): void => {
@@ -98,5 +99,55 @@ describe("sortedFrameForEach", (): void => {
     );
 
     expect(cnt).toBe(31);
+  });
+
+  test("filter zeku", (): void => {
+    const character = new Character("1", "リュウ", "zeku", zeku);
+    let cnt = 0;
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["ca"],
+      "",
+      ""
+    );
+
+    expect(cnt).toBe(2);
+  });
+
+  test("filter zeku old", (): void => {
+    const character = new Character("1", "リュウ", "zeku", zeku);
+    let cnt = 0;
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["ca"],
+      "",
+      "",
+      "old"
+    );
+
+    expect(cnt).toBe(1);
+  });
+
+  test("filter zeku young", (): void => {
+    const character = new Character("1", "リュウ", "zeku", zeku);
+    let cnt = 0;
+    character.sortedFrameForEach(
+      1,
+      () => {
+        cnt++;
+      },
+      ["ca"],
+      "",
+      "",
+      "young"
+    );
+
+    expect(cnt).toBe(1);
   });
 });

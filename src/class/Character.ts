@@ -133,9 +133,15 @@ export default class {
     callback: (frame: Frame, character: this) => void,
     filterTypes = [],
     sortKey = "",
-    sortOrder = "asc"
+    sortOrder = "asc",
+    zeku: "" | "old" | "young" = ""
   ): void {
     let frames = this.filterFrameByVtrigger(vtrigger);
+    if (zeku !== "") {
+      frames = frames.filter(frame => {
+        return frame.zeku === zeku;
+      });
+    }
 
     // [""] が来たときに消すため
     const trimFilterTypes = filterTypes.filter(Boolean);

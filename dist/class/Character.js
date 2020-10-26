@@ -97,8 +97,13 @@ class default_1 {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEach(vtrigger, callback, filterTypes = [], sortKey = "", sortOrder = "asc") {
+    sortedFrameForEach(vtrigger, callback, filterTypes = [], sortKey = "", sortOrder = "asc", zeku = "") {
         let frames = this.filterFrameByVtrigger(vtrigger);
+        if (zeku !== "") {
+            frames = frames.filter(frame => {
+                return frame.zeku === zeku;
+            });
+        }
         // [""] が来たときに消すため
         const trimFilterTypes = filterTypes.filter(Boolean);
         if (trimFilterTypes.length) {
