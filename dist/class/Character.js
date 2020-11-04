@@ -46,8 +46,13 @@ class default_1 {
      *
      * @param {(frame: Frame) => void} callback
      */
-    frameForEachByVtrigger(vtrigger, callback) {
-        const filteredFrame = this.filterFrameByVtrigger(vtrigger);
+    frameForEachByVtrigger(vtrigger, callback, zeku = "") {
+        let filteredFrame = this.filterFrameByVtrigger(vtrigger);
+        if (zeku !== "") {
+            filteredFrame = filteredFrame.filter(frame => {
+                return frame.zeku === zeku;
+            });
+        }
         filteredFrame.forEach(frame => {
             callback(frame);
         });

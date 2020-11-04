@@ -30,7 +30,7 @@ export default class {
      *
      * @param {(frame: Frame) => void} callback
      */
-    frameForEachByVtrigger(vtrigger: 1 | 2, callback: (frame: Frame) => void): void;
+    frameForEachByVtrigger(vtrigger: 1 | 2, callback: (frame: Frame) => void, zeku?: "" | "old" | "young"): void;
     /**
      *
      * @param callback
