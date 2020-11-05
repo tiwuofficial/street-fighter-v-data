@@ -33,7 +33,7 @@ export default class {
   }
 
   sortedComboForEach(
-    callback: (combo: Combo) => void,
+    callback: (combo: Combo, index: number) => void,
     sortKey: "create" | "damage" | "stun" = "create",
     sortOrder: "asc" | "desc" = "desc"
   ): void {
@@ -57,8 +57,8 @@ export default class {
       return b[sortKey] - a[sortKey];
     });
 
-    combos.forEach(combo => {
-      callback(combo);
+    combos.forEach((combo, index) => {
+      callback(combo, index);
     });
   }
 
