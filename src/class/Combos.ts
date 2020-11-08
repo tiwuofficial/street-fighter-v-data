@@ -1,4 +1,6 @@
 import Combo from "./Combo";
+import Position from "./Position";
+import StartStatus from "./StartStatus";
 
 export default class {
   combos: Combo[];
@@ -35,12 +37,35 @@ export default class {
   sortedComboForEach(
     callback: (combo: Combo, index: number) => void,
     sortKey: "create" | "damage" | "stun" = "create",
-    sortOrder: "asc" | "desc" = "desc"
+    sortOrder: "asc" | "desc" = "desc",
+    filterStartStatus: StartStatus = null,
+    filterPosition: Position = null
   ): void {
-    const combos = this.combos;
+    let combos = this.combos;
+
+    if (filterStartStatus) {
+      combos = combos.filter(combo => {
+        return combo.startStatus.id === filterStartStatus.id;
+      });
+    }
+
+    if (filterPosition) {
+      combos = combos.filter(combo => {
+        return combo.position.id === filterPosition.id;
+      });
+    }
 
     combos.sort((a, b) => {
       if (sortKey === "create") {
+        if (sortOrder === "asc") {
+          if (a[sortKey] > b[sortKey]) {
+            return 1;
+          }
+          if (a[sortKey] < b[sortKey]) {
+            return -1;
+          }
+        }
+
         if (a[sortKey] > b[sortKey]) {
           return -1;
         }

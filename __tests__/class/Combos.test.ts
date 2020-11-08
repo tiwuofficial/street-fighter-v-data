@@ -166,8 +166,10 @@ describe("updateComboById", (): void => {
 describe("sortedComboForEach", () => {
   const combos = new Combos();
   const character = new Character("1", "リュウ", "ryu", ryu);
-  const startStatus = startStatuses.getStartStatusById("1");
-  const position = positions.getPositionById("1");
+  const startStatus1 = startStatuses.getStartStatusById("1");
+  const startStatus2 = startStatuses.getStartStatusById("2");
+  const position1 = positions.getPositionById("1");
+  const position2 = positions.getPositionById("2");
 
   combos.pushCombo(
     new Combo(
@@ -175,8 +177,8 @@ describe("sortedComboForEach", () => {
       "",
       character,
       [1, 2] as any,
-      startStatus,
-      position,
+      startStatus1,
+      position1,
       1,
       10,
       "title",
@@ -190,8 +192,8 @@ describe("sortedComboForEach", () => {
       "",
       character,
       [1, 2] as any,
-      startStatus,
-      position,
+      startStatus1,
+      position2,
       10,
       2,
       "title2",
@@ -205,8 +207,8 @@ describe("sortedComboForEach", () => {
       "",
       character,
       [1, 2] as any,
-      startStatus,
-      position,
+      startStatus2,
+      position2,
       2,
       3,
       "title2",
@@ -243,6 +245,24 @@ describe("sortedComboForEach", () => {
     expect(combo3.id).toBe(1);
   });
 
+  test("ダメージの低い順", (): void => {
+    const sortedCombos: Combo[] = [];
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "damage",
+      "asc"
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(1);
+    const combo2 = sortedCombos.shift();
+    expect(combo2.id).toBe(3);
+    const combo3 = sortedCombos.shift();
+    expect(combo3.id).toBe(2);
+  });
+
   test("スタンの高い順", (): void => {
     const sortedCombos: Combo[] = [];
     combos.sortedComboForEach(combo => {
@@ -255,5 +275,58 @@ describe("sortedComboForEach", () => {
     expect(combo2.id).toBe(3);
     const combo3 = sortedCombos.shift();
     expect(combo3.id).toBe(2);
+  });
+
+  test("開始状況(id=2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const startStatus2 = startStatuses.getStartStatusById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "desc",
+      startStatus2
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(3);
+  });
+
+  test("位置(id=2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const position2 = positions.getPositionById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "asc",
+      null,
+      position2
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(2);
+    const combo2 = sortedCombos.shift();
+    expect(combo2.id).toBe(3);
+  });
+
+  test("開始状況(id=2)と位置(id=2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const startStatus2 = startStatuses.getStartStatusById("2");
+    const position2 = positions.getPositionById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "desc",
+      startStatus2,
+      position2
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(3);
   });
 });

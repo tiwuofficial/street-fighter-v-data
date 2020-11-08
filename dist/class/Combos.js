@@ -25,10 +25,28 @@ class default_1 {
     pushCombo(combo) {
         this.combos.push(combo);
     }
-    sortedComboForEach(callback, sortKey = "create", sortOrder = "desc") {
-        const combos = this.combos;
+    sortedComboForEach(callback, sortKey = "create", sortOrder = "desc", filterStartStatus = null, filterPosition = null) {
+        let combos = this.combos;
+        if (filterStartStatus) {
+            combos = combos.filter(combo => {
+                return combo.startStatus.id === filterStartStatus.id;
+            });
+        }
+        if (filterPosition) {
+            combos = combos.filter(combo => {
+                return combo.position.id === filterPosition.id;
+            });
+        }
         combos.sort((a, b) => {
             if (sortKey === "create") {
+                if (sortOrder === "asc") {
+                    if (a[sortKey] > b[sortKey]) {
+                        return 1;
+                    }
+                    if (a[sortKey] < b[sortKey]) {
+                        return -1;
+                    }
+                }
                 if (a[sortKey] > b[sortKey]) {
                     return -1;
                 }
@@ -42,8 +60,8 @@ class default_1 {
             }
             return b[sortKey] - a[sortKey];
         });
-        combos.forEach(combo => {
-            callback(combo);
+        combos.forEach((combo, index) => {
+            callback(combo, index);
         });
     }
     save() {
