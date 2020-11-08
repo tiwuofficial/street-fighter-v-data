@@ -38,20 +38,26 @@ export default class {
     callback: (combo: Combo, index: number) => void,
     sortKey: "create" | "damage" | "stun" = "create",
     sortOrder: "asc" | "desc" = "desc",
-    filterStartStatus: StartStatus = null,
-    filterPosition: Position = null
+    filterStartStatues: StartStatus[] = [],
+    filterPositions: Position[] = []
   ): void {
     let combos = this.combos;
 
-    if (filterStartStatus) {
+    if (filterStartStatues.length > 0) {
+      const filterStartStatusIds = filterStartStatues.map(filterStartStatus => {
+        return filterStartStatus.id;
+      });
       combos = combos.filter(combo => {
-        return combo.startStatus.id === filterStartStatus.id;
+        return filterStartStatusIds.includes(combo.startStatus.id);
       });
     }
 
-    if (filterPosition) {
+    if (filterPositions.length > 0) {
+      const filterPositionIds = filterPositions.map(filterPosition => {
+        return filterPosition.id;
+      });
       combos = combos.filter(combo => {
-        return combo.position.id === filterPosition.id;
+        return filterPositionIds.includes(combo.position.id);
       });
     }
 

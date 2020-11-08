@@ -168,8 +168,10 @@ describe("sortedComboForEach", () => {
   const character = new Character("1", "リュウ", "ryu", ryu);
   const startStatus1 = startStatuses.getStartStatusById("1");
   const startStatus2 = startStatuses.getStartStatusById("2");
+  const startStatus3 = startStatuses.getStartStatusById("3");
   const position1 = positions.getPositionById("1");
   const position2 = positions.getPositionById("2");
+  const position3 = positions.getPositionById("3");
 
   combos.pushCombo(
     new Combo(
@@ -178,7 +180,7 @@ describe("sortedComboForEach", () => {
       character,
       [1, 2] as any,
       startStatus1,
-      position1,
+      position3,
       1,
       10,
       "title",
@@ -192,8 +194,8 @@ describe("sortedComboForEach", () => {
       "",
       character,
       [1, 2] as any,
-      startStatus1,
-      position2,
+      startStatus3,
+      position1,
       10,
       2,
       "title2",
@@ -286,11 +288,30 @@ describe("sortedComboForEach", () => {
       },
       "create",
       "desc",
-      startStatus2
+      [startStatus2]
     );
 
     const combo1 = sortedCombos.shift();
     expect(combo1.id).toBe(3);
+  });
+
+  test("開始状況(id=1,2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const startStatus1 = startStatuses.getStartStatusById("1");
+    const startStatus2 = startStatuses.getStartStatusById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "desc",
+      [startStatus1, startStatus2]
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(3);
+    const combo2 = sortedCombos.shift();
+    expect(combo2.id).toBe(1);
   });
 
   test("位置(id=2)でのフィルタ", (): void => {
@@ -302,8 +323,26 @@ describe("sortedComboForEach", () => {
       },
       "create",
       "asc",
-      null,
-      position2
+      [],
+      [position2]
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(3);
+  });
+
+  test("位置(id=1,2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const position1 = positions.getPositionById("1");
+    const position2 = positions.getPositionById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "asc",
+      [],
+      [position1, position2]
     );
 
     const combo1 = sortedCombos.shift();
@@ -322,8 +361,28 @@ describe("sortedComboForEach", () => {
       },
       "create",
       "desc",
-      startStatus2,
-      position2
+      [startStatus2],
+      [position2]
+    );
+
+    const combo1 = sortedCombos.shift();
+    expect(combo1.id).toBe(3);
+  });
+
+  test("開始状況(id=1,2)と位置(id=1,2)でのフィルタ", (): void => {
+    const sortedCombos: Combo[] = [];
+    const startStatus1 = startStatuses.getStartStatusById("1");
+    const startStatus2 = startStatuses.getStartStatusById("2");
+    const position1 = positions.getPositionById("1");
+    const position2 = positions.getPositionById("2");
+    combos.sortedComboForEach(
+      combo => {
+        sortedCombos.push(combo);
+      },
+      "create",
+      "desc",
+      [startStatus1, startStatus2],
+      [position1, position2]
     );
 
     const combo1 = sortedCombos.shift();

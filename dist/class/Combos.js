@@ -25,16 +25,22 @@ class default_1 {
     pushCombo(combo) {
         this.combos.push(combo);
     }
-    sortedComboForEach(callback, sortKey = "create", sortOrder = "desc", filterStartStatus = null, filterPosition = null) {
+    sortedComboForEach(callback, sortKey = "create", sortOrder = "desc", filterStartStatues = [], filterPositions = []) {
         let combos = this.combos;
-        if (filterStartStatus) {
+        if (filterStartStatues.length > 0) {
+            const filterStartStatusIds = filterStartStatues.map(filterStartStatus => {
+                return filterStartStatus.id;
+            });
             combos = combos.filter(combo => {
-                return combo.startStatus.id === filterStartStatus.id;
+                return filterStartStatusIds.includes(combo.startStatus.id);
             });
         }
-        if (filterPosition) {
+        if (filterPositions.length > 0) {
+            const filterPositionIds = filterPositions.map(filterPosition => {
+                return filterPosition.id;
+            });
             combos = combos.filter(combo => {
-                return combo.position.id === filterPosition.id;
+                return filterPositionIds.includes(combo.position.id);
             });
         }
         combos.sort((a, b) => {
