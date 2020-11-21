@@ -1,4 +1,6 @@
+import Character from "./Character";
 import Combo from "./Combo";
+import Frame from "./Frame";
 import Position from "./Position";
 import StartStatus from "./StartStatus";
 
@@ -32,6 +34,21 @@ export default class {
 
   pushCombo(combo: Combo): void {
     this.combos.push(combo);
+  }
+
+  getCharacterStartSkillMap() : Map<Character, Frame[]> {
+    const characterStartSkillMap = new Map<Character, Frame[]>();
+    this.combos.forEach(combo => {
+      if (!characterStartSkillMap.has(combo.character)) {
+        characterStartSkillMap.set(combo.character, []);
+      }
+      const startSkills = characterStartSkillMap.get(combo.character);
+      const skill = combo.combo[0];
+      if (skill && !startSkills.includes(skill)) {
+        startSkills.push(skill);
+      }
+    });
+    return characterStartSkillMap;
   }
 
   sortedComboForEach(

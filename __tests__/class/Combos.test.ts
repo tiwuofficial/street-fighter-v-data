@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Combos from "../../src/class/Combos";
 import Combo from "../../src/class/Combo";
 import Character from "../../src/class/Character";
 import { ryu } from "../../src/data/frame/ryu";
+import { ken } from "../../src/data/frame/ken";
 import { startStatuses } from "../../src/data/startStatus";
 import { positions } from "../../src/data/position";
 
@@ -12,7 +14,6 @@ describe("getComboFromId", (): void => {
     const startStatus = startStatuses.getStartStatusById("1");
     const position = positions.getPositionById("1");
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         1,
@@ -28,7 +29,6 @@ describe("getComboFromId", (): void => {
         new Date()
       )
     );
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         2,
@@ -58,7 +58,6 @@ describe("getNextId", (): void => {
     const startStatus = startStatuses.getStartStatusById("1");
     const position = positions.getPositionById("1");
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         1,
@@ -74,7 +73,6 @@ describe("getNextId", (): void => {
         new Date()
       )
     );
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         2,
@@ -104,7 +102,6 @@ describe("updateComboById", (): void => {
     const startStatus = startStatuses.getStartStatusById("1");
     const position = positions.getPositionById("1");
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         1,
@@ -120,7 +117,6 @@ describe("updateComboById", (): void => {
         new Date()
       )
     );
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.pushCombo(
       new Combo(
         2,
@@ -140,7 +136,6 @@ describe("updateComboById", (): void => {
     const combo = combos.getComboFromId(2);
     expect(combo.title).toBe("title2");
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     combos.updateComboById(
       2,
       new Combo(
@@ -160,6 +155,74 @@ describe("updateComboById", (): void => {
 
     const combo2 = combos.getComboFromId(2);
     expect(combo2.title).toBe("title2-1");
+  });
+});
+
+describe("getCharacterStartSkillMap", () => {
+  const combos = new Combos();
+  const character1 = new Character("1", "リュウ", "ryu", ryu);
+  const character2 = new Character("2", "ケン", "ken", ken);
+  const startStatus1 = startStatuses.getStartStatusById("1");
+  const position1 = positions.getPositionById("1");
+
+  combos.pushCombo(
+    new Combo(
+      1,
+      "",
+      character1,
+      [character1.getFrameById(4), character1.getFrameById(2)],
+      startStatus1,
+      position1,
+      1,
+      10,
+      "title",
+      "memo",
+      new Date(2017, 0, 0, 0, 0, 0, 0)
+    )
+  );
+  combos.pushCombo(
+    new Combo(
+      2,
+      "",
+      character1,
+      [character1.getFrameById(2), character1.getFrameById(1)],
+      startStatus1,
+      position1,
+      10,
+      2,
+      "title2",
+      "memo",
+      new Date(2017, 0, 0, 0, 0, 0, 1)
+    )
+  );
+  combos.pushCombo(
+    new Combo(
+      3,
+      "",
+      character2,
+      [character2.getFrameById(11), character2.getFrameById(2)],
+      startStatus1,
+      position1,
+      2,
+      3,
+      "title2",
+      "memo",
+      new Date(2017, 0, 0, 0, 0, 0, 2)
+    )
+  );
+
+  test("正常テスト", (): void => {
+    const characterStartSkillMap = combos.getCharacterStartSkillMap();
+
+    const character1Skills = characterStartSkillMap.get(character1);
+    const skill1 = character1Skills.shift();
+    expect(skill1.id).toBe(4);
+    const skill2 = character1Skills.shift();
+    expect(skill2.id).toBe(2);
+
+    const character2Skills = characterStartSkillMap.get(character2);
+    const skill3 = character2Skills.shift();
+    expect(skill3.id).toBe(11);
   });
 });
 

@@ -25,6 +25,20 @@ class default_1 {
     pushCombo(combo) {
         this.combos.push(combo);
     }
+    getCharacterStartSkillMap() {
+        const characterStartSkillMap = new Map();
+        this.combos.forEach(combo => {
+            if (!characterStartSkillMap.has(combo.character)) {
+                characterStartSkillMap.set(combo.character, []);
+            }
+            const startSkills = characterStartSkillMap.get(combo.character);
+            const skill = combo.combo[0];
+            if (skill && !startSkills.includes(skill)) {
+                startSkills.push(skill);
+            }
+        });
+        return characterStartSkillMap;
+    }
     sortedComboForEach(callback, sortKey = "create", sortOrder = "desc", filterStartStatues = [], filterPositions = []) {
         let combos = this.combos;
         if (filterStartStatues.length > 0) {
