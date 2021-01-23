@@ -11,6 +11,22 @@ describe("constructor", (): void => {
   });
 });
 
+describe("getObject", (): void => {
+  test("getObject", (): void => {
+    const character = new Character("1", "リュウ", "ryu", ryu);
+    const frame = character.frame.map(frame => {
+      return frame.getObject();
+    });
+    expect(character.getObject()).toEqual({
+      id: "1",
+      name: "リュウ",
+      enName: "ryu",
+      frame: frame,
+      words: []
+    });
+  });
+});
+
 describe("getFrameById", (): void => {
   test("getFrameById 1", (): void => {
     const character = new Character("1", "リュウ", "ryu", ryu);

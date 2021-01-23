@@ -26,4 +26,20 @@ export default class {
      * @returns {(number | null)}
      */
     getCaluculationGuard(): number | null;
+    getObject(): {
+        id: number;
+        name: string;
+        outbreak: string;
+        persistence: string;
+        rigidity: string;
+        hit: string;
+        guard: string;
+        damage: string;
+        stan: string;
+        remarks: string;
+        type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
+        vtrigger: 1 | 2;
+        command: string;
+        zeku: "" | "old" | "young";
+    };
 }

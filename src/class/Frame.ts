@@ -71,4 +71,38 @@ export default class {
     }
     return frameCalculation(this.guard);
   }
+
+  getObject(): {
+    id: number;
+    name: string;
+    outbreak: string;
+    persistence: string;
+    rigidity: string;
+    hit: string;
+    guard: string;
+    damage: string;
+    stan: string;
+    remarks: string;
+    type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
+    vtrigger: 1 | 2;
+    command: string;
+    zeku: "" | "old" | "young";
+  } {
+    return {
+      id: this.id,
+      name: this.name,
+      outbreak: this.outbreak,
+      persistence: this.persistence,
+      rigidity: this.rigidity,
+      hit: this.hit,
+      guard: this.guard,
+      damage: this.damage,
+      stan: this.stan,
+      remarks: this.remarks,
+      type: this.type,
+      vtrigger: this.vtrigger,
+      command: this.command,
+      zeku: this.zeku
+    };
+  }
 }

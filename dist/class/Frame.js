@@ -40,6 +40,24 @@ class default_1 {
         }
         return frameCalculation_1.frameCalculation(this.guard);
     }
+    getObject() {
+        return {
+            id: this.id,
+            name: this.name,
+            outbreak: this.outbreak,
+            persistence: this.persistence,
+            rigidity: this.rigidity,
+            hit: this.hit,
+            guard: this.guard,
+            damage: this.damage,
+            stan: this.stan,
+            remarks: this.remarks,
+            type: this.type,
+            vtrigger: this.vtrigger,
+            command: this.command,
+            zeku: this.zeku
+        };
+    }
 }
 exports.default = default_1;
 //# sourceMappingURL=Frame.js.map

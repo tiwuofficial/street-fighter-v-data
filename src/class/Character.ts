@@ -264,4 +264,38 @@ export default class {
     }
     return exists;
   }
+
+  getObject(): {
+    id: string;
+    name: string;
+    enName: string;
+    frame: {
+      id: number;
+      name: string;
+      outbreak: string;
+      persistence: string;
+      rigidity: string;
+      hit: string;
+      guard: string;
+      damage: string;
+      stan: string;
+      remarks: string;
+      type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
+      vtrigger: 1 | 2;
+      command: string;
+      zeku: "" | "old" | "young";
+    }[];
+    words: string[];
+  } {
+    const frame = this.frame.map(frame => {
+      return frame.getObject();
+    });
+    return {
+      id: this.id,
+      name: this.name,
+      enName: this.enName,
+      frame: frame,
+      words: this.words
+    };
+  }
 }

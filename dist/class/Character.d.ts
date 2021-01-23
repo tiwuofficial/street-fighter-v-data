@@ -60,4 +60,26 @@ export default class {
      * @returns {boolean}
      */
     existsCharacterName(text: string): boolean;
+    getObject(): {
+        id: string;
+        name: string;
+        enName: string;
+        frame: {
+            id: number;
+            name: string;
+            outbreak: string;
+            persistence: string;
+            rigidity: string;
+            hit: string;
+            guard: string;
+            damage: string;
+            stan: string;
+            remarks: string;
+            type: "normal" | "jump" | "unique" | "throw" | "vsystem" | "special" | "ca";
+            vtrigger: 1 | 2;
+            command: string;
+            zeku: "" | "old" | "young";
+        }[];
+        words: string[];
+    };
 }

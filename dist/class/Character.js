@@ -204,6 +204,18 @@ class default_1 {
         }
         return exists;
     }
+    getObject() {
+        const frame = this.frame.map(frame => {
+            return frame.getObject();
+        });
+        return {
+            id: this.id,
+            name: this.name,
+            enName: this.enName,
+            frame: frame,
+            words: this.words
+        };
+    }
 }
 exports.default = default_1;
 //# sourceMappingURL=Character.js.map
