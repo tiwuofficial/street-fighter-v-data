@@ -36,7 +36,7 @@ export default class {
     this.combos.push(combo);
   }
 
-  getCharacterStartSkillMap() : Map<Character, Frame[]> {
+  getCharacterStartSkillMap(): Map<Character, Frame[]> {
     const characterStartSkillMap = new Map<Character, Frame[]>();
     this.combos.forEach(combo => {
       if (!characterStartSkillMap.has(combo.character)) {
