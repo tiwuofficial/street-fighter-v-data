@@ -4,6 +4,11 @@ class default_1 {
     constructor() {
         this.combos = [];
     }
+    getComboFromDocId(docId) {
+        return this.combos.find(combo => {
+            return combo.docId === docId;
+        });
+    }
     getComboFromId(id) {
         return this.combos.find(combo => {
             return combo.id === id;

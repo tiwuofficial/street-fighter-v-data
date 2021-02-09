@@ -11,6 +11,12 @@ export default class {
     this.combos = [];
   }
 
+  getComboFromDocId(docId: string): Combo | undefined {
+    return this.combos.find(combo => {
+      return combo.docId === docId;
+    });
+  }
+
   getComboFromId(id: number): Combo | undefined {
     return this.combos.find(combo => {
       return combo.id === id;

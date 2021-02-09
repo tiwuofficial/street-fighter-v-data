@@ -7,6 +7,50 @@ import { ken } from "../../src/data/frame/ken";
 import { startStatuses } from "../../src/data/startStatus";
 import { positions } from "../../src/data/position";
 
+describe("getComboFromDocId", (): void => {
+  test("getComboFromDocId", (): void => {
+    const combos = new Combos();
+    const character = new Character("1", "リュウ", "ryu", ryu);
+    const startStatus = startStatuses.getStartStatusById("1");
+    const position = positions.getPositionById("1");
+
+    combos.pushCombo(
+      new Combo(
+        1,
+        "",
+        character,
+        [1, 2] as any,
+        startStatus,
+        position,
+        1,
+        2,
+        "title",
+        "memo",
+        new Date()
+      )
+    );
+    combos.pushCombo(
+      new Combo(
+        2,
+        "aaa",
+        character,
+        [1, 2] as any,
+        startStatus,
+        position,
+        1,
+        2,
+        "title",
+        "memo",
+        new Date()
+      )
+    );
+
+    const combo = combos.getComboFromDocId("aaa");
+
+    expect(combo.id).toBe(2);
+  });
+});
+
 describe("getComboFromId", (): void => {
   test("getComboFromId", (): void => {
     const combos = new Combos();

@@ -1,3 +1,2 @@
-import MeasuresMemo from "../class/MeasuresMemos";
-declare const measuresMemo: MeasuresMemo;
-export { measuresMemo };
+import MeasuresMemos from "../class/MeasuresMemos";
+export declare function getMeasuresMemosFromLocalStroage(): MeasuresMemos;

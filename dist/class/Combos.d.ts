@@ -6,6 +6,7 @@ import StartStatus from "./StartStatus";
 export default class {
     combos: Combo[];
     constructor();
+    getComboFromDocId(docId: string): Combo | undefined;
     getComboFromId(id: number): Combo | undefined;
     getNextId(): number;
     updateComboById(id: number, combo: Combo): void;
