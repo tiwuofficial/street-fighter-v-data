@@ -290,7 +290,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "",
+        remarks: "動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 1,
         type: "unique",
         command: "(ジャンプ中、壁付近で) ↗ OR ↘"
@@ -430,7 +430,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能",
+        remarks: "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 1,
         type: "vsystem",
         command: "(VスキルⅡ選択時) 中P 中K"
@@ -472,7 +472,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能",
+        remarks: "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 1,
         type: "vsystem",
         command: "(VスキルⅡ選択時) (垂直・前ジャンプ中に) 中P 中K"
@@ -560,6 +560,34 @@ const rashid = [
         vtrigger: 1,
         type: "vsystem",
         command: "(ガード中に) → + 弱P"
+    },
+    {
+        name: "Vシフト",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "強P 中K"
+    },
+    {
+        name: "イーグル・スラッシュ",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "弱 スピニング・ミキサー",
@@ -1354,7 +1382,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "",
+        remarks: "動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 2,
         type: "unique",
         command: "(ジャンプ中、壁付近で) ↗ OR ↘"
@@ -1494,7 +1522,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能",
+        remarks: "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) 中P 中K"
@@ -1536,7 +1564,7 @@ const rashid = [
         guard: "-20",
         damage: "",
         stan: "",
-        remarks: "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能",
+        remarks: "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) (垂直・前ジャンプ中に) 中P 中K"
@@ -1606,7 +1634,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "各種ワールウインドショットからキャンセル可能\n19F後～Vウイングスパイクに移行可能\n40F後～各種ジャンプ攻撃に移行可能",
+        remarks: "各種ワールウインドショットからキャンセル可能\n19F後～Vウイングスパイクに移行可能\n40F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) 中P 中K"
@@ -1620,7 +1648,7 @@ const rashid = [
         guard: "-19",
         damage: "120",
         stan: "150",
-        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～29F 飛び道具無敵",
+        remarks: "Vゲージタイマー750F消費\n                                                                                                                                1F～29F 飛び道具無敵\n                                                Vワールウインドショット/ハブーブから派生した際はVタイマー500F消費",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) 中P 中K ▶ K"
@@ -1634,7 +1662,7 @@ const rashid = [
         guard: "-18",
         damage: "110",
         stan: "150",
-        remarks: "Vゲージタイマー1000F消費\n                                                                                しゃがみの相手にヒットしない\n                                                1F～28F 飛び道具無敵\n                                                初段ヒット時のみ2段目に派生",
+        remarks: "Vゲージタイマー750F消費\n                                                                                しゃがみの相手にヒットしない\n                                                1F～28F 飛び道具無敵\n                                                初段ヒット時のみ2段目に派生\nVワールウインドショット/ハブーブから派生した際はVタイマー500F消費",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) 中P 中K ▶ K K"
@@ -1648,7 +1676,7 @@ const rashid = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "19F後～V空中ウイングスパイクに移行可能\n36F後～各種ジャンプ攻撃に移行可能",
+        remarks: "19F後～V空中ウイングスパイクに移行可能\n36F後～各種ジャンプ攻撃に移行可能\n動作開始から着地までの間、特殊な被カウンター状態",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) (垂直・前ジャンプ中に) 中P 中K"
@@ -1662,7 +1690,7 @@ const rashid = [
         guard: "",
         damage: "100",
         stan: "150",
-        remarks: "Vゲージタイマー1000F消費",
+        remarks: "Vゲージタイマー750F消費",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) (垂直・前ジャンプ中に) 中P 中K ▶ K"
@@ -1676,7 +1704,7 @@ const rashid = [
         guard: "-2",
         damage: "120",
         stan: "150",
-        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～着地まで, 着地後1F～29F 飛び道具無敵",
+        remarks: "Vゲージタイマー750F消費\n                                                                                                                                1F～着地まで, 着地後1F～29F 飛び道具無敵",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅡ選択時) (垂直・前ジャンプ中に) 中P 中K ▶ K K"
@@ -1750,6 +1778,34 @@ const rashid = [
         vtrigger: 2,
         type: "vsystem",
         command: "(ガード中に) → + 弱P"
+    },
+    {
+        name: "Vシフト",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "強P 中K"
+    },
+    {
+        name: "イーグル・スラッシュ",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "弱 スピニング・ミキサー",

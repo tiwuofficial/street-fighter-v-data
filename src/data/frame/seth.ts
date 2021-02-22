@@ -345,10 +345,10 @@ const seth = [
     persistence: "3",
     rigidity: "21 (※26)",
     hit: "2",
-    guard: "-5",
+    guard: "-8",
     damage: "60",
     stan: "80",
-    remarks: "※空振り時",
+    remarks: "※ガード/空振り時",
     vtrigger: 1,
     type: "unique",
     command: "→ + 中P ▶ 強K"
@@ -365,7 +365,7 @@ const seth = [
     remarks: "",
     vtrigger: 1,
     type: "unique",
-    command: "→ + 中P ▶ 強K ▶ 強P"
+    command: "↗ + 中P ▶ 強K ▶ 強P"
   },
   {
     name: "デススルー",
@@ -518,7 +518,7 @@ const seth = [
     damage: "",
     stan: "",
     remarks:
-      "Vゲージタイマー+4000F\n                                                                                                                                                                                発動中、ヘカトンケイル/マッドクレイドル/クルーエルディザスター/アナイアレイトソードからそれぞれ専用の派生技が追加される",
+      "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中、ヘカトンケイル/マッドクレイドル/クルーエルディザスター/アナイアレイトソードからそれぞれ専用の派生技が追加される",
     vtrigger: 1,
     type: "vsystem",
     command: "強P 強K"
@@ -537,6 +537,35 @@ const seth = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ヘルアサルト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 ヘカトンケイル",
@@ -718,7 +747,7 @@ const seth = [
     name: "弱 アナイアレイトソード",
     outbreak: "14",
     persistence: "6",
-    rigidity: "着地後9",
+    rigidity: "着地後13",
     hit: "",
     guard: "",
     damage: "70",
@@ -732,7 +761,7 @@ const seth = [
     name: "中 アナイアレイトソード",
     outbreak: "23",
     persistence: "6",
-    rigidity: "着地後9",
+    rigidity: "着地後13",
     hit: "",
     guard: "",
     damage: "80",
@@ -746,7 +775,7 @@ const seth = [
     name: "強 アナイアレイトソード",
     outbreak: "27",
     persistence: "6",
-    rigidity: "着地後16",
+    rigidity: "着地後20",
     hit: "D",
     guard: "",
     damage: "90",
@@ -780,7 +809,7 @@ const seth = [
     damage: "120",
     stan: "100",
     remarks:
-      "Vゲージタイマー1000F消費\n                                                                                                                                                                                ヘカトンケイル・特定のインストールアーツがヒット/ガード時にキャンセル可能",
+      "Vゲージタイマー700F消費\n                                                                                                                                                                                ヘカトンケイル・特定のインストールアーツがヒット/ガード時にキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) ↓↘→ + P ▶ 強P 強K"
@@ -795,7 +824,7 @@ const seth = [
     damage: "※n×10",
     stan: "※n×10+20",
     remarks:
-      "Vゲージタイマー1000F消費\n                                                                                                                                                                                マッドクレイドルヒット時もしくは特定のインストールアーツがヒット/ガード時にキャンセル可能\n※着地までのヒット数",
+      "Vゲージタイマー700F消費\n                                                                                                                                                                                マッドクレイドルヒット時もしくは特定のインストールアーツがヒット/ガード時にキャンセル可能\n※着地までのヒット数",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) →↓↘ + P ▶ 強P 強K"
@@ -806,10 +835,11 @@ const seth = [
     persistence: "2",
     rigidity: "75",
     hit: "D",
-    guard: "-56",
+    guard: "-2",
     damage: "80",
     stan: "100",
-    remarks: "Vゲージタイマー1000F消費",
+    remarks:
+      "Vゲージタイマー700F消費\n                                                                                                                                                                                ガード時は硬直が52F短くなる",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) (アレックスのインストールアーツから) 強P 強K"
@@ -824,7 +854,7 @@ const seth = [
     damage: "70",
     stan: "100",
     remarks:
-      "Vゲージタイマー1000F消費\n                                                                                                                                                                                クルーエルディザスター・特定のインストールアーツがヒット/ガード時にキャンセル可能\nEXクルーエルディザスターはヒット時のみキャンセル可能",
+      "Vゲージタイマー700F消費\n                                                                                                                                                                                クルーエルディザスター・特定のインストールアーツがヒット/ガード時にキャンセル可能\nEXクルーエルディザスターはヒット時のみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) ↓↙← + K ▶ 強P 強K"
@@ -839,7 +869,7 @@ const seth = [
     damage: "90",
     stan: "120",
     remarks:
-      "Vゲージタイマー1000F消費\n                                                                                                                                                                                アナイアレイトソード・特定のインストールアーツがヒット/ガード時にキャンセル可能",
+      "Vゲージタイマー700F消費\n                                                                                                                                                                                アナイアレイトソード・特定のインストールアーツがヒット/ガード時にキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) (前ジャンプ中に) ↓↙← + K ▶ 強P 強K"
@@ -847,13 +877,13 @@ const seth = [
   {
     name: "丹田ディストーション",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "-30",
     damage: "330",
     stan: "0",
-    remarks: "1F～15F 完全無敵",
+    remarks: "1F～10F 完全無敵",
     vtrigger: 1,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
@@ -861,13 +891,13 @@ const seth = [
   {
     name: "V丹田エクストリーム",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "-30",
     damage: "350",
     stan: "0",
-    remarks: "1F～15F 完全無敵",
+    remarks: "1F～10F 完全無敵",
     vtrigger: 1,
     type: "ca",
     command: "(VトリガーⅠ発動中) ↓↘→ ↓↘→ + P"
@@ -1218,10 +1248,10 @@ const seth = [
     persistence: "3",
     rigidity: "21(※26)",
     hit: "2",
-    guard: "-5",
+    guard: "-8",
     damage: "60",
     stan: "80",
-    remarks: "※空振り時",
+    remarks: "※ガード/空振り時",
     vtrigger: 2,
     type: "unique",
     command: "→ + 中P ▶ 強K"
@@ -1238,7 +1268,7 @@ const seth = [
     remarks: "",
     vtrigger: 2,
     type: "unique",
-    command: "→ + 中P ▶ 強K ▶ 強P"
+    command: "↗ + 中P ▶ 強K ▶ 強P"
   },
   {
     name: "デススルー",
@@ -1523,6 +1553,35 @@ const seth = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ヘルアサルト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 ヘカトンケイル",
     outbreak: "11",
     persistence: "8",
@@ -1702,7 +1761,7 @@ const seth = [
     name: "弱 アナイアレイトソード",
     outbreak: "14",
     persistence: "6",
-    rigidity: "着地後9",
+    rigidity: "着地後13",
     hit: "",
     guard: "",
     damage: "70",
@@ -1716,7 +1775,7 @@ const seth = [
     name: "中 アナイアレイトソード",
     outbreak: "23",
     persistence: "6",
-    rigidity: "着地後9",
+    rigidity: "着地後13",
     hit: "",
     guard: "",
     damage: "80",
@@ -1730,7 +1789,7 @@ const seth = [
     name: "強 アナイアレイトソード",
     outbreak: "27",
     persistence: "6",
-    rigidity: "着地後16",
+    rigidity: "着地後20",
     hit: "D",
     guard: "",
     damage: "90",
@@ -1870,13 +1929,13 @@ const seth = [
   {
     name: "丹田ディストーション",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "30",
     damage: "330",
     stan: "0",
-    remarks: "1F～15F 完全無敵",
+    remarks: "1F～10F 完全無敵",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"

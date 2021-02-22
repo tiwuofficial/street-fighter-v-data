@@ -413,8 +413,8 @@ const g = [
   },
   {
     name: "[VS1]G・バリア",
-    outbreak: "13(※9)",
-    persistence: "13(※23)",
+    outbreak: "13(※13)",
+    persistence: "13(※13)",
     rigidity: "23",
     hit: "D",
     guard: "-17",
@@ -450,7 +450,7 @@ const g = [
     damage: "50+80",
     stan: "100+100",
     remarks:
-      "Vゲージタイマー300F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
+      "Vゲージタイマー500F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅠ選択時) (VトリガーⅠ発動中) 中P 中K"
@@ -465,7 +465,7 @@ const g = [
     damage: "50+80",
     stan: "100+100",
     remarks:
-      "Vゲージタイマー300F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
+      "Vゲージタイマー500F消費\n                                                                                                                                                                                ※飛び道具吸収判定の値\n飛び道具吸収成立時にEXゲージ80増加",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅠ選択時) (VトリガーⅠ発動中) (垂直・前ジャンプ中に) 中P 中K"
@@ -510,7 +510,7 @@ const g = [
     damage: "0",
     stan: "0",
     remarks:
-      "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中対応した必殺技の性能が強化され、強化された技から強化された技がキャンセルで発動可能になる(1回)",
+      "Vトリガー発動時点でのプレジデントレベルに応じてVタイマーの量が以下の数値に変動する\nプレジデントレベル1⇒2500F\nプレジデントレベル2⇒3000F\nプレジデントレベル3⇒3500F\n\n発動中対応した必殺技の性能が強化され、強化された技から強化された技がキャンセルで発動可能になる(1回)",
     vtrigger: 1,
     type: "vsystem",
     command: "強P 強K"
@@ -529,6 +529,35 @@ const g = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "G・エリミネイト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 G・スマッシュ・オーバー(Lv1)",
@@ -624,7 +653,7 @@ const g = [
     damage: "100",
     stan: "120",
     remarks:
-      "S※ガード時キャンセル不可。ヒット時のみG・チャージでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+      "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュアンダー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + P"
@@ -767,7 +796,8 @@ const g = [
     guard: "-8",
     damage: "110",
     stan: "150",
-    remarks: "※密着時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+    remarks:
+      "※密着時\nS※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + K"
@@ -821,9 +851,9 @@ const g = [
     name: "弱 G・バースト(Lv1)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "全体46",
-    hit: "-3",
-    guard: "-8",
+    rigidity: "全体49",
+    hit: "-6",
+    guard: "-11",
     damage: "50",
     stan: "100",
     remarks:
@@ -866,9 +896,9 @@ const g = [
     name: "弱 G・バースト(Lv2)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "全体46",
-    hit: "±0",
-    guard: "-5",
+    rigidity: "全体49",
+    hit: "-3",
+    guard: "-8",
     damage: "80",
     stan: "150",
     remarks:
@@ -917,7 +947,7 @@ const g = [
     damage: "100",
     stan: "150",
     remarks:
-      "S※G・チャージのみキャンセル可能\n※CA Vトリガー以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+      "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・スピンキック、EX (キャンセル版)G・インパクトでキャンセル可能\n※CA Vトリガー以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P"
@@ -1064,7 +1094,7 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "4F～30F 飛び道具無敵\n                                                S※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+      "4F～30F 飛び道具無敵\n                                                S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + K"
@@ -1193,8 +1223,22 @@ const g = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "120",
+    damage: "110",
+    stan: "150",
+    remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
+    vtrigger: 1,
+    type: "special",
+    command: "→↘↓↙← + K K"
+  },
+  {
+    name: "EX G・インパクト(Lv3技キャンセル版)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "110",
+    stan: "150",
     remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
     vtrigger: 1,
     type: "special",
@@ -1670,8 +1714,8 @@ const g = [
   },
   {
     name: "[VS1]G・バリア",
-    outbreak: "13(※9)",
-    persistence: "13(※23)",
+    outbreak: "13(※13)",
+    persistence: "13(※13)",
     rigidity: "23",
     hit: "D",
     guard: "-17",
@@ -1741,6 +1785,35 @@ const g = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "G・エリミネイト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 G・スマッシュ・オーバー(Lv1)",
@@ -1841,7 +1914,7 @@ const g = [
     damage: "100",
     stan: "120",
     remarks:
-      "S※ガード時キャンセル不可。ヒット時のみG・チャージ G・エクスプロージョンのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+      "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュアンダー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + P"
@@ -1961,7 +2034,7 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "※密着時\nS※G・チャージ G・エクスプロージョンのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+      "※密着時\nS※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + K"
@@ -1985,9 +2058,9 @@ const g = [
     name: "弱 G・バースト(Lv1)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "全体46",
-    hit: "-3",
-    guard: "-8",
+    rigidity: "全体49",
+    hit: "-6",
+    guard: "-11",
     damage: "50",
     stan: "100",
     remarks:
@@ -2030,9 +2103,9 @@ const g = [
     name: "弱 G・バースト(Lv2)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "全体46",
-    hit: "±0",
-    guard: "-5",
+    rigidity: "全体49",
+    hit: "-3",
+    guard: "-8",
     damage: "80",
     stan: "150",
     remarks:
@@ -2081,7 +2154,7 @@ const g = [
     damage: "100",
     stan: "150",
     remarks:
-      "S※G・チャージ G・エクスプロージョンのみキャンセル可能\n※CA Vトリガー G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
+      "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・スピンキック、EX (キャンセル版)G・インパクトでキャンセル可能\n※CA Vトリガー G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P"
@@ -2201,7 +2274,7 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "4F～30F 投げ無敵\n                                                S※ヒット時G・チャージのみキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
+      "4F～30F 投げ無敵\n                                                S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + K"
@@ -2270,8 +2343,22 @@ const g = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "120",
+    damage: "110",
+    stan: "150",
+    remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
+    vtrigger: 2,
+    type: "special",
+    command: "→↘↓↙← + K K"
+  },
+  {
+    name: "EX G・インパクト(Lv3技キャンセル版)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "110",
+    stan: "150",
     remarks: "ヒット時硬直を必殺技 Vスキルでキャンセル可能",
     vtrigger: 2,
     type: "special",
@@ -2326,7 +2413,7 @@ const g = [
     rigidity: "38",
     hit: "D",
     guard: "-28",
-    damage: "150(※150)",
+    damage: "170(※150)",
     stan: "200(※200)",
     remarks:
       "Vゲージタイマー1500F消費\n                                                                                                                                                                                ※先端ヒット時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",

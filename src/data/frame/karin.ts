@@ -345,7 +345,8 @@ const karin = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "クラッシュカウンター対応(D)",
+    remarks:
+      "クラッシュカウンター対応(D)\n                                                                                                                                                                S※紅蓮拳でのみキャンセル可能",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K"
@@ -355,7 +356,7 @@ const karin = [
     outbreak: "30",
     persistence: "5",
     rigidity: "17",
-    hit: "4",
+    hit: "6",
     guard: "3",
     damage: "80",
     stan: "120",
@@ -393,6 +394,35 @@ const karin = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "劫火転身肘・皇",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 神月流歩行術　刹歩",
@@ -681,7 +711,7 @@ const karin = [
     persistence: "4",
     rigidity: "32",
     hit: "D",
-    guard: "-9",
+    guard: "-16",
     damage: "110",
     stan: "120",
     remarks: "",
@@ -1143,7 +1173,7 @@ const karin = [
     outbreak: "30",
     persistence: "5",
     rigidity: "17",
-    hit: "4",
+    hit: "6",
     guard: "3",
     damage: "80",
     stan: "120",
@@ -1181,6 +1211,35 @@ const karin = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "劫火転身肘・皇",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 神月流歩行術　刹歩",

@@ -290,7 +290,7 @@ const kolin = [
     guard: "",
     damage: "30",
     stan: "70",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "unique",
     command: "(ジャンプ中に) ↓ + 中K"
@@ -590,6 +590,35 @@ const kolin = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "フリージアシュート",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "フロストタッチ・ロー",
@@ -1198,7 +1227,7 @@ const kolin = [
     guard: "2",
     damage: "40",
     stan: "70",
-    remarks: "",
+    remarks: "ヒット時Vタイマー80F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1212,7 +1241,7 @@ const kolin = [
     guard: "2",
     damage: "70",
     stan: "100",
-    remarks: "",
+    remarks: "ヒット時Vタイマー100F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1226,7 +1255,8 @@ const kolin = [
     guard: "-4",
     damage: "90",
     stan: "150",
-    remarks: "クラッシュカウンター対応(+18F)",
+    remarks:
+      "クラッシュカウンター対応(+18F)\n                                                                                                                                                                ヒット時Vタイマー150F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1240,7 +1270,7 @@ const kolin = [
     guard: "1",
     damage: "30",
     stan: "70",
-    remarks: "",
+    remarks: "ヒット時Vタイマー80F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1254,7 +1284,7 @@ const kolin = [
     guard: "2",
     damage: "70",
     stan: "100",
-    remarks: "",
+    remarks: "ヒット時Vタイマー100F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1268,7 +1298,7 @@ const kolin = [
     guard: "-3",
     damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "ヒット時Vタイマー150F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1282,7 +1312,7 @@ const kolin = [
     guard: "",
     damage: "50",
     stan: "70",
-    remarks: "",
+    remarks: "ヒット時Vタイマー80F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "jump",
     command: ""
@@ -1296,7 +1326,7 @@ const kolin = [
     guard: "",
     damage: "80",
     stan: "100",
-    remarks: "",
+    remarks: "ヒット時Vタイマー100F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "jump",
     command: ""
@@ -1310,7 +1340,7 @@ const kolin = [
     guard: "",
     damage: "100",
     stan: "150",
-    remarks: "",
+    remarks: "ヒット時Vタイマー150F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "jump",
     command: ""
@@ -1352,7 +1382,7 @@ const kolin = [
     guard: "",
     damage: "30",
     stan: "70",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "unique",
     command: "(ジャンプ中に) ↓ + 中K"
@@ -1548,7 +1578,7 @@ const kolin = [
     guard: "-6",
     damage: "50",
     stan: "60",
-    remarks: "S※フロストエッジのみキャンセル可能",
+    remarks: "S※フロストエッジのみキャンセル可能\nヒット時Vタイマー50F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) 弱P ▶ 中P"
@@ -1562,7 +1592,7 @@ const kolin = [
     guard: "-9",
     damage: "70",
     stan: "80",
-    remarks: "S※CA※ヒット時のみ可能",
+    remarks: "S※CA※ヒット時のみ可能\nヒット時Vタイマー75F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) 弱P ▶ 中P ▶ 強P"
@@ -1576,7 +1606,7 @@ const kolin = [
     guard: "-9",
     damage: "60",
     stan: "70",
-    remarks: "S※フロストエッジのみキャンセル可能",
+    remarks: "S※フロストエッジのみキャンセル可能\nヒット時Vタイマー75F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) 中K ▶ 強P"
@@ -1604,7 +1634,7 @@ const kolin = [
     guard: "-2",
     damage: "100",
     stan: "150",
-    remarks: "S※CA※ヒット時のみ可能",
+    remarks: "S※CA※ヒット時のみ可能\nヒット時Vタイマー75F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) (中バニティステップ中に) ↓ + 弱K ▶ ↓ + 強P"
@@ -1618,7 +1648,7 @@ const kolin = [
     guard: "2",
     damage: "70",
     stan: "100",
-    remarks: "",
+    remarks: "ヒット時Vタイマー100F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) (中バニティステップ中に) ↓ + 中P"
@@ -1632,7 +1662,7 @@ const kolin = [
     guard: "-8",
     damage: "100",
     stan: "150",
-    remarks: "S※CA※ヒット時のみ可能",
+    remarks: "S※CA※ヒット時のみ可能\nヒット時Vタイマー75F消費（ガード時は1/2）",
     vtrigger: 2,
     type: "unique",
     command: "(VトリガーⅡ発動中) (中バニティステップ中に) ↓ + 中P ▶ 強P"
@@ -1731,7 +1761,7 @@ const kolin = [
     damage: "0",
     stan: "0",
     remarks:
-      "Vゲージタイマー+2800F\n                                                                                                                                                                                前ステップが前入力し続けるとダッシュに変化 Vタイマー700消費\n発動中フロストエッジ、リバースジャベリンが必殺技に追加\nP系の通常・特殊攻撃、ヘイルストーム強化",
+      "Vゲージタイマー+2500F\n                                                                                                                                                                                前ステップが前入力し続けるとダッシュに変化 Vタイマー600消費\n発動中フロストエッジ、リバースジャベリンが必殺技に追加\nP系の通常・特殊攻撃、ヘイルストーム強化",
     vtrigger: 2,
     type: "vsystem",
     command: "強P 強K"
@@ -1764,6 +1794,35 @@ const kolin = [
     vtrigger: 2,
     type: "vsystem",
     command: "(VスキルⅠ選択時) 中P 中K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "フリージアシュート",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "フロストタッチ・ロー",

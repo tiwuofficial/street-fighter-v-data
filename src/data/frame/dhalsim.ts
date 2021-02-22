@@ -99,7 +99,7 @@ const dhalsim = [
   },
   {
     name: "しゃがみ中P",
-    outbreak: "8",
+    outbreak: "9",
     persistence: "4",
     rigidity: "19",
     hit: "-1",
@@ -360,7 +360,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "6F～着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅠ選択時) → OR + 中P 中K"
@@ -374,7 +374,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅠ選択時) (ジャンプ中に) 中P 中K"
@@ -435,6 +435,35 @@ const dhalsim = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ヨガバズーカ",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "ヨガファイア",
@@ -831,7 +860,7 @@ const dhalsim = [
   },
   {
     name: "しゃがみ中P",
-    outbreak: "8",
+    outbreak: "9",
     persistence: "4",
     rigidity: "19",
     hit: "-1",
@@ -1092,7 +1121,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "6F～着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "vsystem",
     command: "(VスキルⅠ選択時) → OR + 中P 中K"
@@ -1106,7 +1135,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "vsystem",
     command: "(VスキルⅠ選択時) (ジャンプ中に) 中P 中K"
@@ -1185,6 +1214,35 @@ const dhalsim = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ヨガバズーカ",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "ヨガファイア",
     outbreak: "15",
     persistence: "",
@@ -1249,7 +1307,7 @@ const dhalsim = [
     guard: "-3",
     damage: "60",
     stan: "150",
-    remarks: "",
+    remarks: "S※V※ヒット・ガード時にヨガサンサーラでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + 弱P"
@@ -1263,7 +1321,7 @@ const dhalsim = [
     guard: "-2",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "S※V※ヒット・ガード時にヨガサンサーラでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + 中P"
@@ -1277,7 +1335,7 @@ const dhalsim = [
     guard: "3",
     damage: "90",
     stan: "200",
-    remarks: "",
+    remarks: "S※V※ヒット・ガード時にヨガサンサーラでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + 強P"
@@ -1291,7 +1349,7 @@ const dhalsim = [
     guard: "-8",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "S※V※ヒット・ガード時にヨガサンサーラでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + P P"

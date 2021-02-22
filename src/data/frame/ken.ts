@@ -483,12 +483,41 @@ const ken = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "電影脚",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "波動拳",
     outbreak: "14",
     persistence: "",
-    rigidity: "全体49",
-    hit: "-2",
-    guard: "-8",
+    rigidity: "全体47",
+    hit: "0",
+    guard: "-6",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -500,9 +529,9 @@ const ken = [
     name: "V波動拳",
     outbreak: "13",
     persistence: "",
-    rigidity: "全体48",
+    rigidity: "全体46",
     hit: "D",
-    guard: "-7",
+    guard: "-5",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -578,7 +607,7 @@ const ken = [
     damage: "140",
     stan: "150",
     remarks:
-      "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能",
+      "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能\nS※ヒット時のみ、着地後硬直終了7F前から必殺技キャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + 強P"
@@ -1335,7 +1364,7 @@ const ken = [
     damage: "110",
     stan: "150",
     remarks:
-      "Vゲージタイマー+3000F\n                                                                                                                                19F～61F 飛び道具無敵\n1F～18F 飛び道具&投げ無敵\n                                                発動中、専用の必殺技が追加\nヒット時にP連打で派生可\nヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
+      "Vゲージタイマー+3000F\n                                                                                                                                19F～61F 飛び道具無敵\n1F～18F 飛び道具&投げ無敵\n                12F～33F 空中判定の攻撃に対して無敵\n                                発動中、専用の必殺技が追加\nヒット時にP連打で派生可\nヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
     vtrigger: 2,
     type: "vsystem",
     command: "強P 強K"
@@ -1365,7 +1394,7 @@ const ken = [
     damage: "180",
     stan: "200",
     remarks:
-      "Vゲージタイマー1500F消費\n                                                                                                                                19F～111F 飛び道具無敵\n1F～18F 飛び道具&投げ無敵\n                                                ヒット時に着地硬直を必殺技キャンセル可",
+      "Vゲージタイマー1500F消費\n                                                                                                                                19F～111F 飛び道具無敵\n1F～18F 飛び道具&投げ無敵\n                                                ヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
     vtrigger: 2,
     type: "vsystem",
     command: "強P 強K ▶ P (ボタン連打)"
@@ -1386,12 +1415,41 @@ const ken = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "電影脚",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "波動拳",
     outbreak: "14",
     persistence: "",
-    rigidity: "全体49",
-    hit: "-2",
-    guard: "-8",
+    rigidity: "全体47",
+    hit: "0",
+    guard: "-6",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -1453,7 +1511,7 @@ const ken = [
     damage: "140",
     stan: "150",
     remarks:
-      "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能",
+      "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\nCA※V※1、2段目のみ可能\nS※ヒット時のみ、着地後硬直終了7F前から必殺技キャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + 強P"
@@ -1594,10 +1652,10 @@ const ken = [
     rigidity: "28+着地後30",
     hit: "D",
     guard: "-51",
-    damage: "140",
-    stan: "200",
+    damage: "110",
+    stan: "150",
     remarks:
-      "Vゲージタイマー2000F消費\n                                                                                                                                4F～61F 飛び道具無敵\n                                                Vトリガーキャンセル可能な技からキャンセル発動可能\nヒット時にP連打で派生可\nヒット時に着地硬直を必殺技キャンセル可",
+      "Vゲージタイマー1000F消費\n                                                                                                                                4F～61F 飛び道具無敵\n                12F～33F 空中判定の攻撃に対して無敵\n                                Vトリガーキャンセル可能な技からキャンセル発動可能\nヒット時にP連打で派生可\nヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K"
@@ -1609,10 +1667,25 @@ const ken = [
     rigidity: "54+着地後40",
     hit: "D",
     guard: "",
-    damage: "170",
+    damage: "140",
+    stan: "150",
+    remarks:
+      "Vゲージタイマー1000F消費\n                                                                                                                                4F～94F 飛び道具無敵\n                                                ヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
+    vtrigger: 2,
+    type: "special",
+    command: "(VトリガーⅡ発動中) 強P 強K ▶ P (ボタン連打)"
+  },
+  {
+    name: "神龍拳(Lv3)",
+    outbreak: "9",
+    persistence: "31",
+    rigidity: "71+着地後40",
+    hit: "D",
+    guard: "",
+    damage: "180",
     stan: "200",
     remarks:
-      "Vゲージタイマー1500F消費\n                                                                                                                                4F～94F 飛び道具無敵\n                                                ヒット時に着地硬直を必殺技キャンセル可",
+      "Vゲージタイマー1000F消費\n                                                                                                                                4F～111F 飛び道具無敵\n                                                ヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K ▶ P (ボタン連打)"

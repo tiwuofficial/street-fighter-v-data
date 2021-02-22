@@ -30,10 +30,10 @@ const zangief = [
   {
     name: "立ち強P",
     outbreak: "13",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "2",
-    guard: "-3",
+    guard: "0",
     damage: "100",
     stan: "150",
     remarks:
@@ -45,10 +45,10 @@ const zangief = [
   {
     name: "立ち強P(ボタンホールド)",
     outbreak: "37",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "D",
-    guard: "1",
+    guard: "3",
     damage: "130",
     stan: "200",
     remarks:
@@ -512,6 +512,35 @@ const zangief = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "マッスル・ブート・キック",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 スクリューパイルドライバー",
     outbreak: "5",
     persistence: "2",
@@ -689,7 +718,7 @@ const zangief = [
     damage: "130(※100)",
     stan: "200",
     remarks:
-      "1F～41F 飛び道具無敵\n                                                ※持続4F目以降\n9F～11Fの攻撃判定がヒットした際 硬直10F減少",
+      "1F～41F 飛び道具無敵\n                                                ※持続4F目以降\n9F～11Fの攻撃判定がヒットした際 硬直10F減少\nV※ヒットまたはガード時",
     vtrigger: 1,
     type: "special",
     command: "弱P"
@@ -798,10 +827,10 @@ const zangief = [
   {
     name: "立ち強P",
     outbreak: "13",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "2",
-    guard: "-3",
+    guard: "0",
     damage: "100",
     stan: "150",
     remarks:
@@ -813,10 +842,10 @@ const zangief = [
   {
     name: "立ち強P(ボタンホールド)",
     outbreak: "37",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "D",
-    guard: "1",
+    guard: "3",
     damage: "130",
     stan: "200",
     remarks:
@@ -1250,6 +1279,35 @@ const zangief = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "マッスル・ブート・キック",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 スクリューパイルドライバー",
     outbreak: "5",
     persistence: "2",
@@ -1524,9 +1582,10 @@ const zangief = [
     rigidity: "着地後12",
     hit: "D",
     guard: "",
-    damage: "310",
-    stan: "350",
-    remarks: "発動時Vタイマー1000F、ヒット時1000F消費",
+    damage: "310(※240)",
+    stan: "350(※300)",
+    remarks:
+      "発動時Vタイマー1000F、ヒット時1000F消費\n※フライングヘッドバットからキャンセル発動した際の数値",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) (垂直・前ジャンプ中に) →↘↓↙← + 弱P"
@@ -1538,9 +1597,10 @@ const zangief = [
     rigidity: "着地後12",
     hit: "D",
     guard: "",
-    damage: "330",
-    stan: "350",
-    remarks: "発動時Vタイマー1000F、ヒット時1000F消費",
+    damage: "330(※250)",
+    stan: "350(※300)",
+    remarks:
+      "発動時Vタイマー1000F、ヒット時1000F消費\n※フライングヘッドバットからキャンセル発動した際の数値",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) (垂直・前ジャンプ中に) →↘↓↙← + 中P"
@@ -1552,9 +1612,10 @@ const zangief = [
     rigidity: "着地後12",
     hit: "D",
     guard: "",
-    damage: "350",
-    stan: "350",
-    remarks: "発動時Vタイマー1000F、ヒット時1000F消費",
+    damage: "350(※260)",
+    stan: "350(※300)",
+    remarks:
+      "発動時Vタイマー1000F、ヒット時1000F消費\n※フライングヘッドバットからキャンセル発動した際の数値",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) (垂直・前ジャンプ中に) →↘↓↙← + 強P"
@@ -1597,7 +1658,7 @@ const zangief = [
     damage: "130(※100)",
     stan: "200",
     remarks:
-      "1F～41F 飛び道具無敵\n                                                ※持続4F目以降\n9F～11Fの攻撃判定がヒットした際 硬直10F減少",
+      "1F～41F 飛び道具無敵\n                                                ※持続4F目以降\n9F～11Fの攻撃判定がヒットした際 硬直10F減少\nV※ヒットまたはガード時",
     vtrigger: 2,
     type: "special",
     command: "弱P"

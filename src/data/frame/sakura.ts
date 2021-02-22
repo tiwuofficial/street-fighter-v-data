@@ -291,7 +291,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "強制立ち効果\n                                                                                                                VS※VS2のみキャンセル可能",
+      "強制立ち効果\n                                                                                                                VS※VS2のみキャンセル可能\n空中ヒット時吹き飛びやられ",
     vtrigger: 1,
     type: "unique",
     command: "↘ + 強K"
@@ -453,6 +453,35 @@ const sakura = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "フラワーサイドキック",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 波動拳",
@@ -686,7 +715,7 @@ const sakura = [
     outbreak: "17",
     persistence: "2",
     rigidity: "13+着地後9",
-    hit: "1",
+    hit: "2",
     guard: "-2",
     damage: "60",
     stan: "150",
@@ -732,7 +761,7 @@ const sakura = [
     guard: "-2",
     damage: "",
     stan: "",
-    remarks: "※立ち弱P、しゃがみ中Kキャンセル時",
+    remarks: "※立ち弱P、しゃがみ弱P、しゃがみ中Kキャンセル時\nV※ガード時3段目でキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + K K"
@@ -746,7 +775,7 @@ const sakura = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "V※3段目のみ可能",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + K K"
@@ -1114,7 +1143,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "強制立ち効果\n                                                                                                                VS※VS2のみキャンセル可能",
+      "強制立ち効果\n                                                                                                                VS※VS2のみキャンセル可能\n空中ヒット時吹き飛びやられ",
     vtrigger: 2,
     type: "unique",
     command: "↘ + 強K"
@@ -1276,6 +1305,35 @@ const sakura = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "フラワーサイドキック",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 波動拳",
@@ -1466,7 +1524,7 @@ const sakura = [
     outbreak: "17",
     persistence: "2",
     rigidity: "13+着地後9",
-    hit: "1",
+    hit: "2",
     guard: "-2",
     damage: "60",
     stan: "150",
@@ -1541,7 +1599,7 @@ const sakura = [
     guard: "-2",
     damage: "",
     stan: "",
-    remarks: "※立ち弱P、しゃがみ中Kキャンセル時",
+    remarks: "※立ち弱P、しゃがみ弱P、しゃがみ中Kキャンセル時\nV※ガード時3段目でキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + K K"
@@ -1555,7 +1613,7 @@ const sakura = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "V※3段目のみ可能",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + K K"

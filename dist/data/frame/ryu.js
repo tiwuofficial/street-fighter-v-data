@@ -13,8 +13,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "V立ち弱P",
@@ -28,8 +27,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち中P",
@@ -43,8 +41,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "V立ち中P",
@@ -58,8 +55,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち強P",
@@ -73,8 +69,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応 (D)",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "V立ち強P",
@@ -88,8 +83,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応 (D)",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち弱K",
@@ -103,8 +97,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち中K",
@@ -118,8 +111,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち強K",
@@ -133,8 +125,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応(+16F)\n                                                                しゃがみの相手にヒットしない\n                                                                                                ガード時に最速でトリガーキャンセル不可",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ弱P",
@@ -148,8 +139,7 @@ const ryu = [
         remarks: "連打キャンセル対応",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vしゃがみ弱P",
@@ -163,8 +153,7 @@ const ryu = [
         remarks: "連打キャンセル対応",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ中P",
@@ -178,8 +167,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vしゃがみ中P",
@@ -193,8 +181,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ強P",
@@ -208,8 +195,7 @@ const ryu = [
         remarks: "強制立ち効果\n                                                                                                                持続部分はキャンセル不可\n※持続2F目以降",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vしゃがみ強P",
@@ -223,8 +209,7 @@ const ryu = [
         remarks: "強制立ち効果\n                                                                                                                持続部分はキャンセル不可\n※持続2F目以降",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ弱K",
@@ -238,8 +223,7 @@ const ryu = [
         remarks: "連打キャンセル対応",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ中K",
@@ -253,8 +237,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ強K",
@@ -268,8 +251,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応 (D)",
         vtrigger: 1,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ弱P",
@@ -283,8 +265,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vジャンプ弱P",
@@ -298,8 +279,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ中P",
@@ -313,8 +293,7 @@ const ryu = [
         remarks: "空中ヒット時吹き飛びやられ",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vジャンプ中P",
@@ -328,8 +307,7 @@ const ryu = [
         remarks: "空中ヒット時吹き飛びやられ",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ強P",
@@ -343,8 +321,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "Vジャンプ強P",
@@ -358,8 +335,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ弱K",
@@ -373,8 +349,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ中K",
@@ -388,8 +363,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ強K",
@@ -403,8 +377,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "鎖骨割り",
@@ -418,8 +391,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "→ + 中P",
-        zeku: "old"
+        command: "→ + 中P"
     },
     {
         name: "V鎖骨割り",
@@ -433,8 +405,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "→ + 中P",
-        zeku: "old"
+        command: "→ + 中P"
     },
     {
         name: "鳩尾砕き",
@@ -448,8 +419,7 @@ const ryu = [
         remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能",
         vtrigger: 1,
         type: "unique",
-        command: "→ + 強P",
-        zeku: "old"
+        command: "→ + 強P"
     },
     {
         name: "V鳩尾砕き",
@@ -463,8 +433,7 @@ const ryu = [
         remarks: "S※昇龍拳、EX昇龍拳でのみキャンセル可能",
         vtrigger: 1,
         type: "unique",
-        command: "→ + 強P",
-        zeku: "old"
+        command: "→ + 強P"
     },
     {
         name: "踵落とし",
@@ -478,8 +447,7 @@ const ryu = [
         remarks: "強制立ち効果",
         vtrigger: 1,
         type: "unique",
-        command: "← + 強K",
-        zeku: "old"
+        command: "← + 強K"
     },
     {
         name: "上段二連撃",
@@ -493,8 +461,7 @@ const ryu = [
         remarks: "VS※ヒット時のみVS2でキャンセル可能",
         vtrigger: 1,
         type: "unique",
-        command: "強P ▶ 強K",
-        zeku: "old"
+        command: "強P ▶ 強K"
     },
     {
         name: "上段三連撃(2段止め)(立ち)",
@@ -508,8 +475,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "中P ▶ 強P",
-        zeku: "old"
+        command: "中P ▶ 強P"
     },
     {
         name: "V上段三連撃(2段止め)(立ち)",
@@ -523,8 +489,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "中P ▶ 強P",
-        zeku: "old"
+        command: "中P ▶ 強P"
     },
     {
         name: "上段三連撃(2段止め)(しゃがみ)",
@@ -538,8 +503,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "中P ▶ ↓ + 強P",
-        zeku: "old"
+        command: "中P ▶ ↓ + 強P"
     },
     {
         name: "V上段三連撃(2段止め)(しゃがみ)",
@@ -553,8 +517,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "中P ▶ ↓ + 強P",
-        zeku: "old"
+        command: "中P ▶ ↓ + 強P"
     },
     {
         name: "上段三連撃",
@@ -568,8 +531,7 @@ const ryu = [
         remarks: "VS※ヒット時のみVS2でキャンセル可能",
         vtrigger: 1,
         type: "unique",
-        command: "中P ▶ 強P OR ↓ + 強P ▶ 強K",
-        zeku: "old"
+        command: "中P ▶ 強P OR ↓ + 強P ▶ 強K"
     },
     {
         name: "背負い投げ",
@@ -583,8 +545,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "throw",
-        command: "(近距離で) → OR + 弱P 弱K",
-        zeku: "old"
+        command: "(近距離で) → OR + 弱P 弱K"
     },
     {
         name: "巴投げ",
@@ -598,8 +559,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "throw",
-        command: "(近距離で) ← + 弱P 弱K",
-        zeku: "old"
+        command: "(近距離で) ← + 弱P 弱K"
     },
     {
         name: "[VS1]心眼",
@@ -613,8 +573,7 @@ const ryu = [
         remarks: "心眼成立後に出すキャンセル心眼は発生1F\n動作中常に被カウンター判定(キャンセル心眼は対象外)\nVトリガー発動中に当身が成立するとVタイマー50F回復\nS※当て身成立時にEX技のみキャンセル可能\nCA※当て身成立時のみキャンセル可能",
         vtrigger: 1,
         type: "vsystem",
-        command: "(VスキルⅠ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅠ選択時) 中P 中K"
     },
     {
         name: "[VS2]入り身",
@@ -628,8 +587,7 @@ const ryu = [
         remarks: "10F～21F全身当て身判定",
         vtrigger: 1,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "[VS2]入り身(当て身成立時)",
@@ -643,8 +601,7 @@ const ryu = [
         remarks: "1F～23F 完全無敵\n                                                (初段空振り時は1～11F完全無敵)\n※初段空振り時",
         vtrigger: 1,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "V[VS2]入り身",
@@ -658,8 +615,7 @@ const ryu = [
         remarks: "10F～21F全身当て身判定",
         vtrigger: 1,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "V[VS2]入り身(当て身成立時)",
@@ -673,8 +629,7 @@ const ryu = [
         remarks: "1F～23F 完全無敵\n                                                (初段空振り時は1～11F完全無敵)\n※初段空振り時",
         vtrigger: 1,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "電刃練気",
@@ -688,8 +643,7 @@ const ryu = [
         remarks: "Vゲージタイマー+1000F\n                                                                                                                                                                                発動中、P系の通常技・特殊技・必殺技・CAが強化",
         vtrigger: 1,
         type: "vsystem",
-        command: "強P 強K",
-        zeku: "old"
+        command: "強P 強K"
     },
     {
         name: "波掌撃",
@@ -703,8 +657,7 @@ const ryu = [
         remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
         vtrigger: 1,
         type: "vsystem",
-        command: "(ガード中に) → + 弱P",
-        zeku: "old"
+        command: "(ガード中に) → + 弱P"
     },
     {
         name: "Vシフト",
@@ -718,8 +671,7 @@ const ryu = [
         remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
         vtrigger: 1,
         type: "vsystem",
-        command: "強P 中K",
-        zeku: "old"
+        command: "強P 中K"
     },
     {
         name: "踏み込み上段鈎突き",
@@ -733,8 +685,7 @@ const ryu = [
         remarks: "1F～10F 完全無敵",
         vtrigger: 1,
         type: "vsystem",
-        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
-        zeku: "old"
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "弱 波動拳",
@@ -748,8 +699,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 弱P",
-        zeku: "old"
+        command: "↓↘→ + 弱P"
     },
     {
         name: "中 波動拳",
@@ -763,8 +713,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 中P",
-        zeku: "old"
+        command: "↓↘→ + 中P"
     },
     {
         name: "強 波動拳",
@@ -778,8 +727,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 強P",
-        zeku: "old"
+        command: "↓↘→ + 強P"
     },
     {
         name: "V弱 波動拳",
@@ -793,8 +741,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 弱P",
-        zeku: "old"
+        command: "↓↘→ + 弱P"
     },
     {
         name: "V中 波動拳",
@@ -808,8 +755,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 中P",
-        zeku: "old"
+        command: "↓↘→ + 中P"
     },
     {
         name: "V強 波動拳",
@@ -823,8 +769,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + 強P",
-        zeku: "old"
+        command: "↓↘→ + 強P"
     },
     {
         name: "V波動拳(Lv2)",
@@ -838,8 +783,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P (ボタンホールド)",
-        zeku: "old"
+        command: "↓↘→ + P (ボタンホールド)"
     },
     {
         name: "V波動拳(Lv3)",
@@ -853,8 +797,7 @@ const ryu = [
         remarks: "ガードブレイク時+32F",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P (ボタンホールド最大)",
-        zeku: "old"
+        command: "↓↘→ + P (ボタンホールド最大)"
     },
     {
         name: "EX 波動拳",
@@ -868,8 +811,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P P",
-        zeku: "old"
+        command: "↓↘→ + P P"
     },
     {
         name: "VEX 波動拳(Lv1)",
@@ -883,8 +825,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P P",
-        zeku: "old"
+        command: "↓↘→ + P P"
     },
     {
         name: "VEX 波動拳(Lv2)",
@@ -898,8 +839,7 @@ const ryu = [
         remarks: "ガードブレイク時+32F",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P P (ボタンホールド)",
-        zeku: "old"
+        command: "↓↘→ + P P (ボタンホールド)"
     },
     {
         name: "弱 昇龍拳",
@@ -913,8 +853,7 @@ const ryu = [
         remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 弱P",
-        zeku: "old"
+        command: "→↓↘ + 弱P"
     },
     {
         name: "中 昇龍拳",
@@ -928,8 +867,7 @@ const ryu = [
         remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※持続3F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 中P",
-        zeku: "old"
+        command: "→↓↘ + 中P"
     },
     {
         name: "強 昇龍拳",
@@ -943,8 +881,7 @@ const ryu = [
         remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 強P",
-        zeku: "old"
+        command: "→↓↘ + 強P"
     },
     {
         name: "V弱 昇龍拳",
@@ -958,8 +895,7 @@ const ryu = [
         remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 弱P",
-        zeku: "old"
+        command: "→↓↘ + 弱P"
     },
     {
         name: "V中 昇龍拳",
@@ -973,8 +909,7 @@ const ryu = [
         remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※持続3F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 中P",
-        zeku: "old"
+        command: "→↓↘ + 中P"
     },
     {
         name: "V強 昇龍拳",
@@ -988,8 +923,7 @@ const ryu = [
         remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + 強P",
-        zeku: "old"
+        command: "→↓↘ + 強P"
     },
     {
         name: "EX 昇龍拳",
@@ -1003,8 +937,7 @@ const ryu = [
         remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + P P",
-        zeku: "old"
+        command: "→↓↘ + P P"
     },
     {
         name: "VEX 昇龍拳",
@@ -1018,8 +951,7 @@ const ryu = [
         remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※持続2F目以降",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + P P",
-        zeku: "old"
+        command: "→↓↘ + P P"
     },
     {
         name: "弱 竜巻旋風脚",
@@ -1033,8 +965,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + 弱K",
-        zeku: "old"
+        command: "↓↙← + 弱K"
     },
     {
         name: "中 竜巻旋風脚",
@@ -1048,8 +979,7 @@ const ryu = [
         remarks: "6F～45F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + 中K",
-        zeku: "old"
+        command: "↓↙← + 中K"
     },
     {
         name: "強 竜巻旋風脚",
@@ -1063,8 +993,7 @@ const ryu = [
         remarks: "9F～61F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + 強K",
-        zeku: "old"
+        command: "↓↙← + 強K"
     },
     {
         name: "EX 竜巻旋風脚",
@@ -1078,8 +1007,7 @@ const ryu = [
         remarks: "7F～36F 飛び道具無敵\n                                                S※昇龍拳、EX昇龍拳でのみキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + K K",
-        zeku: "old"
+        command: "↓↙← + K K"
     },
     {
         name: "空中竜巻旋風脚",
@@ -1093,8 +1021,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(ジャンプ中に) ↓↙← + K",
-        zeku: "old"
+        command: "(ジャンプ中に) ↓↙← + K"
     },
     {
         name: "EX 空中竜巻旋風脚",
@@ -1108,8 +1035,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 1,
         type: "special",
-        command: "(ジャンプ中に) ↓↙← + K K",
-        zeku: "old"
+        command: "(ジャンプ中に) ↓↙← + K K"
     },
     {
         name: "弱 上段足刀蹴り",
@@ -1123,8 +1049,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "←↙↓↘→ + 弱K",
-        zeku: "old"
+        command: "←↙↓↘→ + 弱K"
     },
     {
         name: "中 上段足刀蹴り",
@@ -1138,8 +1063,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "←↙↓↘→ + 中K",
-        zeku: "old"
+        command: "←↙↓↘→ + 中K"
     },
     {
         name: "強 上段足刀蹴り",
@@ -1153,8 +1077,7 @@ const ryu = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "←↙↓↘→ + 強K",
-        zeku: "old"
+        command: "←↙↓↘→ + 強K"
     },
     {
         name: "EX 上段足刀蹴り",
@@ -1168,8 +1091,7 @@ const ryu = [
         remarks: "S※竜巻旋風脚/EX竜巻旋風脚でのみキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "←↙↓↘→ + K K",
-        zeku: "old"
+        command: "←↙↓↘→ + K K"
     },
     {
         name: "真空波動拳",
@@ -1183,8 +1105,7 @@ const ryu = [
         remarks: "1F～3F 完全無敵",
         vtrigger: 1,
         type: "ca",
-        command: "↓↘→ ↓↘→ + P",
-        zeku: "old"
+        command: "↓↘→ ↓↘→ + P"
     },
     {
         name: "V電刃波動拳",
@@ -1198,8 +1119,7 @@ const ryu = [
         remarks: "1F～3F 完全無敵\n                                                Vタイマー全消費\nガードブレイク時+9F",
         vtrigger: 1,
         type: "ca",
-        command: "↓↘→ ↓↘→ + P",
-        zeku: "old"
+        command: "↓↘→ ↓↘→ + P"
     },
     {
         name: "立ち弱P",
@@ -1213,8 +1133,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち中P",
@@ -1228,8 +1147,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち強P",
@@ -1243,8 +1161,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応 (D)",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち弱K",
@@ -1258,8 +1175,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち中K",
@@ -1273,8 +1189,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "立ち強K",
@@ -1288,8 +1203,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応(+16F)\n                                                                しゃがみの相手にヒットしない\n                                                                                                ガード時に最速でトリガーキャンセル不可",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ弱P",
@@ -1303,8 +1217,7 @@ const ryu = [
         remarks: "連打キャンセル対応",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ中P",
@@ -1318,8 +1231,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ強P",
@@ -1333,8 +1245,7 @@ const ryu = [
         remarks: "強制立ち効果\n                                                                                                                持続部分はキャンセル不可\n※持続2F目以降",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ弱K",
@@ -1348,8 +1259,7 @@ const ryu = [
         remarks: "連打キャンセル対応",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ中K",
@@ -1363,8 +1273,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "しゃがみ強K",
@@ -1378,8 +1287,7 @@ const ryu = [
         remarks: "クラッシュカウンター対応 (D)",
         vtrigger: 2,
         type: "normal",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ弱P",
@@ -1393,8 +1301,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ中P",
@@ -1408,8 +1315,7 @@ const ryu = [
         remarks: "空中ヒット時吹き飛びやられ",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ強P",
@@ -1423,8 +1329,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ弱K",
@@ -1438,8 +1343,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ中K",
@@ -1453,8 +1357,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "ジャンプ強K",
@@ -1468,8 +1371,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: "",
-        zeku: "old"
+        command: ""
     },
     {
         name: "鎖骨割り",
@@ -1483,8 +1385,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "unique",
-        command: "→ + 中P",
-        zeku: "old"
+        command: "→ + 中P"
     },
     {
         name: "鳩尾砕き",
@@ -1498,8 +1399,7 @@ const ryu = [
         remarks: "S※昇龍拳、EX昇龍拳、一心でのみキャンセル可能",
         vtrigger: 2,
         type: "unique",
-        command: "→ + 強P",
-        zeku: "old"
+        command: "→ + 強P"
     },
     {
         name: "踵落とし",
@@ -1513,8 +1413,7 @@ const ryu = [
         remarks: "強制立ち効果\n                                                                                                                S※一心でキャンセル可能",
         vtrigger: 2,
         type: "unique",
-        command: "← + 強K",
-        zeku: "old"
+        command: "← + 強K"
     },
     {
         name: "上段二連撃",
@@ -1528,8 +1427,7 @@ const ryu = [
         remarks: "VS※ヒット時のみVS2でキャンセル可能",
         vtrigger: 2,
         type: "unique",
-        command: "強P ▶ 強K",
-        zeku: "old"
+        command: "強P ▶ 強K"
     },
     {
         name: "上段三連撃(2段止め)(立ち)",
@@ -1543,8 +1441,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "unique",
-        command: "中P ▶ 強P",
-        zeku: "old"
+        command: "中P ▶ 強P"
     },
     {
         name: "上段三連撃(2段止め)(しゃがみ)",
@@ -1558,8 +1455,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "unique",
-        command: "中P ▶ ↓ + 強P",
-        zeku: "old"
+        command: "中P ▶ ↓ + 強P"
     },
     {
         name: "上段三連撃",
@@ -1573,8 +1469,7 @@ const ryu = [
         remarks: "VS※ヒット時のみVS2でキャンセル可能",
         vtrigger: 2,
         type: "unique",
-        command: "中P ▶ 強P OR ↓ + 強P ▶ 強K",
-        zeku: "old"
+        command: "中P ▶ 強P OR ↓ + 強P ▶ 強K"
     },
     {
         name: "背負い投げ",
@@ -1588,8 +1483,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "throw",
-        command: "(近距離で) → OR + 弱P 弱K",
-        zeku: "old"
+        command: "(近距離で) → OR + 弱P 弱K"
     },
     {
         name: "巴投げ",
@@ -1603,8 +1497,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "throw",
-        command: "(近距離で) ← + 弱P 弱K",
-        zeku: "old"
+        command: "(近距離で) ← + 弱P 弱K"
     },
     {
         name: "[VS1]心眼",
@@ -1618,8 +1511,7 @@ const ryu = [
         remarks: "心眼成立後に出すキャンセル心眼は発生1F\n動作中常に被カウンター判定(キャンセル心眼は対象外)\nVトリガー発動中に当身が成立するとVタイマー50F回復\nS※当て身成立時にEX技のみキャンセル可能\nCA※当て身成立時のみキャンセル可能",
         vtrigger: 2,
         type: "vsystem",
-        command: "(VスキルⅠ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅠ選択時) 中P 中K"
     },
     {
         name: "[VS2]入り身",
@@ -1633,8 +1525,7 @@ const ryu = [
         remarks: "10F～21F全身当て身判定",
         vtrigger: 2,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "[VS2]入り身(当て身成立時)",
@@ -1648,8 +1539,7 @@ const ryu = [
         remarks: "1F～23F 完全無敵\n                                                (初段空振り時は1～11F完全無敵)\n※初段空振り時",
         vtrigger: 2,
         type: "vsystem",
-        command: "(VスキルⅡ選択時) 中P 中K",
-        zeku: "old"
+        command: "(VスキルⅡ選択時) 中P 中K"
     },
     {
         name: "確固不抜",
@@ -1663,8 +1553,7 @@ const ryu = [
         remarks: "Vゲージタイマー+3000F\n                                                                                                                                                                                発動中、専用の必殺技が追加",
         vtrigger: 2,
         type: "vsystem",
-        command: "強P 強K",
-        zeku: "old"
+        command: "強P 強K"
     },
     {
         name: "波掌撃",
@@ -1678,8 +1567,7 @@ const ryu = [
         remarks: "1F～30F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
         vtrigger: 2,
         type: "vsystem",
-        command: "(ガード中に) → + 弱P",
-        zeku: "old"
+        command: "(ガード中に) → + 弱P"
     },
     {
         name: "Vシフト",
@@ -1693,8 +1581,7 @@ const ryu = [
         remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
         vtrigger: 2,
         type: "vsystem",
-        command: "強P 中K",
-        zeku: "old"
+        command: "強P 中K"
     },
     {
         name: "踏み込み上段鈎突き",
@@ -1708,8 +1595,7 @@ const ryu = [
         remarks: "1F～10F 完全無敵",
         vtrigger: 2,
         type: "vsystem",
-        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
-        zeku: "old"
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "弱 波動拳",
@@ -1723,8 +1609,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + 弱P",
-        zeku: "old"
+        command: "↓↘→ + 弱P"
     },
     {
         name: "中 波動拳",
@@ -1738,8 +1623,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + 中P",
-        zeku: "old"
+        command: "↓↘→ + 中P"
     },
     {
         name: "強 波動拳",
@@ -1753,8 +1637,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + 強P",
-        zeku: "old"
+        command: "↓↘→ + 強P"
     },
     {
         name: "EX 波動拳",
@@ -1768,8 +1651,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + P P",
-        zeku: "old"
+        command: "↓↘→ + P P"
     },
     {
         name: "弱 昇龍拳",
@@ -1783,8 +1665,7 @@ const ryu = [
         remarks: "1F～3F 投げ無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降\nS※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + 弱P",
-        zeku: "old"
+        command: "→↓↘ + 弱P"
     },
     {
         name: "中 昇龍拳",
@@ -1798,8 +1679,7 @@ const ryu = [
         remarks: "1F～6F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\n※持続3F目以降\nS※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + 中P",
-        zeku: "old"
+        command: "→↓↘ + 中P"
     },
     {
         name: "強 昇龍拳",
@@ -1813,8 +1693,7 @@ const ryu = [
         remarks: "3F～6F 打撃&飛び道具無敵\n                                                動作中常に被カウンター判定\n※持続2F目以降\nS※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + 強P",
-        zeku: "old"
+        command: "→↓↘ + 強P"
     },
     {
         name: "EX 昇龍拳",
@@ -1828,8 +1707,7 @@ const ryu = [
         remarks: "1F～15F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\n※持続2F目以降",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + P P",
-        zeku: "old"
+        command: "→↓↘ + P P"
     },
     {
         name: "弱 竜巻旋風脚",
@@ -1843,8 +1721,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + 弱K",
-        zeku: "old"
+        command: "↓↙← + 弱K"
     },
     {
         name: "中 竜巻旋風脚",
@@ -1858,8 +1735,7 @@ const ryu = [
         remarks: "6F～45F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + 中K",
-        zeku: "old"
+        command: "↓↙← + 中K"
     },
     {
         name: "強 竜巻旋風脚",
@@ -1873,8 +1749,7 @@ const ryu = [
         remarks: "9F～61F 飛び道具無敵\n                                                削りダメージがヒットダメージの1/6",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + 強K",
-        zeku: "old"
+        command: "↓↙← + 強K"
     },
     {
         name: "EX 竜巻旋風脚",
@@ -1888,8 +1763,7 @@ const ryu = [
         remarks: "7F～36F 飛び道具無敵\n                                                S※昇龍拳、EX昇龍拳でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + K K",
-        zeku: "old"
+        command: "↓↙← + K K"
     },
     {
         name: "空中竜巻旋風脚",
@@ -1903,8 +1777,7 @@ const ryu = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(ジャンプ中に) ↓↙← + K",
-        zeku: "old"
+        command: "(ジャンプ中に) ↓↙← + K"
     },
     {
         name: "EX 空中竜巻旋風脚",
@@ -1918,8 +1791,7 @@ const ryu = [
         remarks: "めくり性能",
         vtrigger: 2,
         type: "special",
-        command: "(ジャンプ中に) ↓↙← + K K",
-        zeku: "old"
+        command: "(ジャンプ中に) ↓↙← + K K"
     },
     {
         name: "弱 上段足刀蹴り",
@@ -1933,8 +1805,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "←↙↓↘→ + 弱K",
-        zeku: "old"
+        command: "←↙↓↘→ + 弱K"
     },
     {
         name: "中 上段足刀蹴り",
@@ -1948,8 +1819,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "←↙↓↘→ + 中K",
-        zeku: "old"
+        command: "←↙↓↘→ + 中K"
     },
     {
         name: "強 上段足刀蹴り",
@@ -1963,8 +1833,7 @@ const ryu = [
         remarks: "S※ヒット・ガード時に一心でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "←↙↓↘→ + 強K",
-        zeku: "old"
+        command: "←↙↓↘→ + 強K"
     },
     {
         name: "EX 上段足刀蹴り",
@@ -1978,8 +1847,7 @@ const ryu = [
         remarks: "S※竜巻旋風脚/EX竜巻旋風脚でのみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "←↙↓↘→ + K K",
-        zeku: "old"
+        command: "←↙↓↘→ + K K"
     },
     {
         name: "一心 (構え)",
@@ -1993,8 +1861,7 @@ const ryu = [
         remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                動作中常に被カウンター判定\n心眼成立後の硬直を一心でキャンセル可能\n一心成立後の攻撃判定がヒットしなかった場合に硬直を一心でキャンセル発動可能\n※心眼からのキャンセル版は当身発生1F、被カウンター判定無し\n必殺技キャンセル可能な技からキャンセル不可",
         vtrigger: 2,
         type: "special",
-        command: "強P 強K",
-        zeku: "old"
+        command: "強P 強K"
     },
     {
         name: "一心 (攻撃)",
@@ -2008,8 +1875,7 @@ const ryu = [
         remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                S※昇龍拳(全強度) EX上段足刀蹴りでキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "(当身成立時)",
-        zeku: "old"
+        command: "(当身成立時)"
     },
     {
         name: "一心(攻撃)",
@@ -2023,8 +1889,7 @@ const ryu = [
         remarks: "Vゲージタイマー1500F消費",
         vtrigger: 2,
         type: "special",
-        command: "(必殺技キャンセル時)",
-        zeku: "old"
+        command: "(必殺技キャンセル時)"
     },
     {
         name: "真空波動拳",
@@ -2038,8 +1903,7 @@ const ryu = [
         remarks: "1F～3F 完全無敵",
         vtrigger: 2,
         type: "ca",
-        command: "↓↘→ ↓↘→ + P",
-        zeku: "old"
+        command: "↓↘→ ↓↘→ + P"
     }
 ];
 exports.ryu = ryu;

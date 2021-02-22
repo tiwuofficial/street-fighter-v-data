@@ -333,7 +333,8 @@ const balrog = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "19F目からジャンプ攻撃等を出せるようになる",
+    remarks:
+      "19F目からジャンプ攻撃等を出せるようになる\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "unique",
     command: "(ジャンプ中、壁付近で) ↗"
@@ -460,7 +461,7 @@ const balrog = [
     guard: "-2",
     damage: "110",
     stan: "150",
-    remarks: "攻撃判定が出る7F前から攻撃動作中完全無敵",
+    remarks: "攻撃判定が出る7F前から攻撃動作中完全無敵\nアーマーブレイク属性",
     vtrigger: 1,
     type: "vsystem",
     command: "強P 強K"
@@ -488,7 +489,7 @@ const balrog = [
     guard: "-23",
     damage: "150",
     stan: "200",
-    remarks: "突進中飛び道具無敵\n攻撃判定が出る7F前から攻撃動作中完全無敵",
+    remarks: "突進中飛び道具無敵\n攻撃判定が出る7F前から攻撃動作中完全無敵\nアーマーブレイク属性",
     vtrigger: 1,
     type: "vsystem",
     command: "↓ + 強P 強K"
@@ -516,7 +517,7 @@ const balrog = [
     guard: "2",
     damage: "110",
     stan: "150",
-    remarks: "攻撃動作中完全無敵",
+    remarks: "攻撃動作中完全無敵\nアーマーブレイク属性",
     vtrigger: 1,
     type: "vsystem",
     command: "(前ジャンプ中に) 強P 強K"
@@ -550,6 +551,35 @@ const balrog = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ディセクションユニバース",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "フライングバルセロナ",
@@ -638,7 +668,7 @@ const balrog = [
   {
     name: "弱 クリムゾンテラー",
     outbreak: "8",
-    persistence: "7",
+    persistence: "8",
     rigidity: "12",
     hit: "2",
     guard: "-6",
@@ -743,7 +773,7 @@ const balrog = [
     guard: "-3",
     damage: "150",
     stan: "200",
-    remarks: "動作中投げ無敵",
+    remarks: "1F～18F 投げ無敵",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + P P"
@@ -814,7 +844,7 @@ const balrog = [
     damage: "100",
     stan: "120",
     remarks:
-      "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定発生中は飛び道具無敵",
+      "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定中は飛び道具無敵",
     vtrigger: 1,
     type: "special",
     command: "↑ + P"
@@ -828,7 +858,7 @@ const balrog = [
     guard: "-15",
     damage: "120",
     stan: "150",
-    remarks: "攻撃判定発生中は飛び道具無敵",
+    remarks: "攻撃判定中は飛び道具無敵",
     vtrigger: 1,
     type: "special",
     command: "↑ + P P"
@@ -837,9 +867,9 @@ const balrog = [
     name: "ブラッディレイン",
     outbreak: "9",
     persistence: "壁到達まで/8",
-    rigidity: "29",
+    rigidity: "40",
     hit: "D",
-    guard: "-14",
+    guard: "-25",
     damage: "330",
     stan: "0",
     remarks: "1F～暗転まで投げ&飛び道具無敵",
@@ -1181,7 +1211,8 @@ const balrog = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "19F目からジャンプ攻撃等を出せるようになる",
+    remarks:
+      "19F目からジャンプ攻撃等を出せるようになる\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "unique",
     command: "(ジャンプ中、壁付近で) ↗"
@@ -1331,6 +1362,35 @@ const balrog = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ディセクションユニバース",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "フライングバルセロナ",
     outbreak: "",
     persistence: "",
@@ -1417,7 +1477,7 @@ const balrog = [
   {
     name: "弱 クリムゾンテラー",
     outbreak: "8",
-    persistence: "7",
+    persistence: "8",
     rigidity: "12",
     hit: "2",
     guard: "-6",
@@ -1522,7 +1582,7 @@ const balrog = [
     guard: "-3",
     damage: "150",
     stan: "200",
-    remarks: "動作中投げ無敵",
+    remarks: "1F～18F 投げ無敵",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + P P"
@@ -1607,8 +1667,7 @@ const balrog = [
     guard: "",
     damage: "150",
     stan: "200",
-    remarks:
-      "Vゲージタイマー全消費\n                                                                                                                                                                                動作中完全無敵",
+    remarks: "動作中完全無敵",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K"
@@ -1620,9 +1679,10 @@ const balrog = [
     rigidity: "27",
     hit: "D",
     guard: "-11",
-    damage: "120",
-    stan: "150",
-    remarks: "Vゲージタイマー全消費",
+    damage: "100",
+    stan: "120",
+    remarks:
+      "Vゲージタイマー1000F消費\n                                                                                                                                                                                S※CA※ヒット時のみ可能",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) → + 強P 強K"
@@ -1637,7 +1697,7 @@ const balrog = [
     damage: "100",
     stan: "120",
     remarks:
-      "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定発生中は飛び道具無敵",
+      "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定中は飛び道具無敵",
     vtrigger: 2,
     type: "special",
     command: "↑ + P"
@@ -1651,7 +1711,7 @@ const balrog = [
     guard: "-15",
     damage: "120",
     stan: "150",
-    remarks: "攻撃判定発生中は飛び道具無敵",
+    remarks: "攻撃判定中は飛び道具無敵",
     vtrigger: 2,
     type: "special",
     command: "↑ + P P"
@@ -1660,9 +1720,9 @@ const balrog = [
     name: "ブラッディレイン",
     outbreak: "9",
     persistence: "壁到達まで/8",
-    rigidity: "29",
+    rigidity: "40",
     hit: "D",
-    guard: "-14",
+    guard: "-25",
     damage: "330",
     stan: "0",
     remarks: "1F～暗転まで投げ&飛び道具無敵",

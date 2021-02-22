@@ -33,7 +33,7 @@ const cody = [
     persistence: "5",
     rigidity: "21",
     hit: "3",
-    guard: "-7",
+    guard: "-10",
     damage: "120(※70)",
     stan: "170(※120)",
     remarks: "S※CA※1段目のみ可能\n※2段目だけヒット時",
@@ -261,7 +261,7 @@ const cody = [
     damage: "30",
     stan: "70",
     remarks:
-      "しゃがみ弱P・立ち弱K・しゃがみ弱Kに連打キャンセル可能\nヒット時Vタイマー50消費(ガード時は1/2)",
+      "しゃがみ弱P・立ち弱K・しゃがみ弱Kに連打キャンセル可能\nヒット時Vタイマー50F消費（ガード時は1/2）",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -276,7 +276,7 @@ const cody = [
     damage: "60",
     stan: "100",
     remarks:
-      "ヒット時Vタイマー80消費(ガード時は1/2)\nS※スナイプショット・アンチエアスナイプショット・ラピッドファイアでキャンセル可能",
+      "ヒット時Vタイマー80F消費（ガード時は1/2）\nS※スナイプショット・アンチエアスナイプショット・ラピッドファイアでキャンセル可能",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -290,7 +290,7 @@ const cody = [
     guard: "-2",
     damage: "90",
     stan: "150",
-    remarks: "ヒット時Vタイマー150消費(ガード時は1/2)\n※空振り時",
+    remarks: "ヒット時Vタイマー150F消費（ガード時は1/2）\n※空振り時",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -305,7 +305,7 @@ const cody = [
     damage: "30",
     stan: "70",
     remarks:
-      "連打キャンセル対応\n                                                                                                                                ヒット時Vタイマー50消費(ガード時は1/2)",
+      "連打キャンセル対応\n                                                                                                                                ヒット時Vタイマー50F消費（ガード時は1/2）",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -320,7 +320,7 @@ const cody = [
     damage: "60",
     stan: "100",
     remarks:
-      "ヒット時Vタイマー80消費(ガード時は1/2)\nS※スナイプショット・アンチエアスナイプショット・ラピッドファイアでキャンセル可能",
+      "ヒット時Vタイマー80F消費（ガード時は1/2）\nS※スナイプショット・アンチエアスナイプショット・ラピッドファイアでキャンセル可能",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -334,7 +334,7 @@ const cody = [
     guard: "-5",
     damage: "90",
     stan: "150",
-    remarks: "ヒット時Vタイマー150消費(ガード時は1/2)",
+    remarks: "ヒット時Vタイマー150F消費（ガード時は1/2）",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -348,7 +348,7 @@ const cody = [
     guard: "",
     damage: "40",
     stan: "70",
-    remarks: "ヒット時Vタイマー50消費(ガード時は1/2)",
+    remarks: "ヒット時Vタイマー50F消費（ガード時は1/2）",
     vtrigger: 1,
     type: "jump",
     command: ""
@@ -362,7 +362,7 @@ const cody = [
     guard: "",
     damage: "70",
     stan: "100",
-    remarks: "ヒット時Vタイマー80消費(ガード時は1/2)\n空中ヒット時吹き飛びやられ",
+    remarks: "ヒット時Vタイマー80F消費（ガード時は1/2）\n空中ヒット時吹き飛びやられ",
     vtrigger: 1,
     type: "jump",
     command: ""
@@ -376,7 +376,7 @@ const cody = [
     guard: "",
     damage: "90",
     stan: "150",
-    remarks: "ヒット時Vタイマー150消費(ガード時は1/2)",
+    remarks: "ヒット時Vタイマー150F消費（ガード時は1/2）",
     vtrigger: 1,
     type: "jump",
     command: ""
@@ -461,7 +461,7 @@ const cody = [
     guard: "",
     damage: "40",
     stan: "70",
-    remarks: "",
+    remarks: "めくり性能",
     vtrigger: 1,
     type: "unique",
     command: "(ジャンプ中に) 中K ▶ 弱K"
@@ -475,7 +475,7 @@ const cody = [
     guard: "-14",
     damage: "80",
     stan: "120",
-    remarks: "ヒット時Vタイマー300消費",
+    remarks: "ヒット時Vタイマー300F消費",
     vtrigger: 1,
     type: "unique",
     command: "(VトリガーⅠ発動中) (ナイフ所持状態で) 中P ▶ 強P"
@@ -541,11 +541,11 @@ const cody = [
     outbreak: "3",
     persistence: "4",
     rigidity: "14",
-    hit: "2",
+    hit: "5",
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "技強度設定が弱扱い",
+    remarks: "技強度設定が強扱い",
     vtrigger: 1,
     type: "unique",
     command: "(その場受け身発動時に) ↑ + P"
@@ -682,11 +682,40 @@ const cody = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "リベンジブロー",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱トルネードスイープ",
     outbreak: "18",
-    persistence: "65",
+    persistence: "50",
     rigidity: "全体49",
-    hit: "-2",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -698,9 +727,9 @@ const cody = [
   {
     name: "中トルネードスイープ",
     outbreak: "18",
-    persistence: "52",
+    persistence: "70",
     rigidity: "全体49",
-    hit: "0",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -712,7 +741,7 @@ const cody = [
   {
     name: "強トルネードスイープ",
     outbreak: "18",
-    persistence: "39",
+    persistence: "55",
     rigidity: "全体49",
     hit: "2",
     guard: "-7",
@@ -853,7 +882,7 @@ const cody = [
   },
   {
     name: "スナイプショット",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "",
     rigidity: "全体37",
     hit: "D",
@@ -903,7 +932,7 @@ const cody = [
     damage: "140",
     stan: "180",
     remarks:
-      "Vゲージタイマー900F消費\n                                                                                                                                                                                Vタイマー0では出せない\nフィニッシュ時にVタイマーが0の時、最終段の攻撃が変化",
+      "Vゲージタイマー600F消費\n                                                                                                                                                                                Vタイマー0では出せない\nフィニッシュ時にVタイマーが0の時、最終段の攻撃が変化",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) (ナイフ所持状態で) ↓↙← + P"
@@ -957,7 +986,7 @@ const cody = [
     persistence: "5",
     rigidity: "21",
     hit: "3",
-    guard: "-7",
+    guard: "-10",
     damage: "120(※70)",
     stan: "170(※120)",
     remarks: "S※CA※1段目のみ可能\n※2段目だけヒット時",
@@ -1185,7 +1214,7 @@ const cody = [
     damage: "100",
     stan: "150",
     remarks:
-      "クラッシュカウンター対応\n                                                                                                                                                                ヒット時Vタイマー300消費\nクラッシュカウンター時Vタイマー500増加",
+      "クラッシュカウンター対応\n                                                                                                                                                                ヒット時Vタイマー300F消費\nクラッシュカウンター時Vタイマー500増加",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1199,7 +1228,7 @@ const cody = [
     guard: "-7",
     damage: "90",
     stan: "150",
-    remarks: "ヒット時Vタイマー300消費\nS※CA※発生1F目のみキャンセル可",
+    remarks: "ヒット時Vタイマー300F消費\nS※CA※発生1F目のみキャンセル可",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1213,7 +1242,7 @@ const cody = [
     guard: "",
     damage: "100",
     stan: "150",
-    remarks: "ヒット時Vタイマー300消費",
+    remarks: "ヒット時Vタイマー300F消費",
     vtrigger: 2,
     type: "jump",
     command: ""
@@ -1241,7 +1270,7 @@ const cody = [
     guard: "-7",
     damage: "90",
     stan: "180",
-    remarks: "ヒット時Vタイマー300消費",
+    remarks: "ヒット時Vタイマー300F消費",
     vtrigger: 2,
     type: "unique",
     command: "(パイプ所持状態で) → + 強P"
@@ -1312,7 +1341,7 @@ const cody = [
     guard: "",
     damage: "40",
     stan: "70",
-    remarks: "",
+    remarks: "めくり性能",
     vtrigger: 2,
     type: "unique",
     command: "(ジャンプ中に) 中K ▶ 弱K"
@@ -1378,11 +1407,11 @@ const cody = [
     outbreak: "3",
     persistence: "4",
     rigidity: "14",
-    hit: "2",
+    hit: "5",
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "技強度設定が弱扱い",
+    remarks: "技強度設定が強扱い",
     vtrigger: 2,
     type: "unique",
     command: "(その場受け身発動時に) ↑ + P"
@@ -1533,11 +1562,40 @@ const cody = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "リベンジブロー",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱トルネードスイープ",
     outbreak: "18",
-    persistence: "65",
+    persistence: "50",
     rigidity: "全体49",
-    hit: "-2",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -1549,9 +1607,9 @@ const cody = [
   {
     name: "中トルネードスイープ",
     outbreak: "18",
-    persistence: "52",
+    persistence: "70",
     rigidity: "全体49",
-    hit: "0",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -1563,7 +1621,7 @@ const cody = [
   {
     name: "強トルネードスイープ",
     outbreak: "18",
-    persistence: "39",
+    persistence: "55",
     rigidity: "全体49",
     hit: "2",
     guard: "-7",
@@ -1712,7 +1770,7 @@ const cody = [
     damage: "100",
     stan: "150",
     remarks:
-      "Vタイマー0では出せない\n飛び道具反射能力\n全ての通常技と必殺技をキャンセルして出せる\nヒット時Vタイマー700消費\nS※ヒット時ビーンボールでキャンセル可能",
+      "Vタイマー0では出せない\n飛び道具反射能力\n全ての通常技と必殺技をキャンセルして出せる\nヒット時Vタイマー700F消費\nS※ヒット時ビーンボールでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) (パイプ所持状態で) 強P 強K"
@@ -1727,7 +1785,7 @@ const cody = [
     damage: "100",
     stan: "150",
     remarks:
-      "Vタイマー0では出せない\n飛び道具反射能力\n全ての通常技と必殺技をキャンセルして出せる\nヒット時Vタイマー700消費\nS※ヒット時ビーンボールでキャンセル可能",
+      "Vタイマー0では出せない\n飛び道具反射能力\n全ての通常技と必殺技をキャンセルして出せる\nヒット時Vタイマー700F消費\nS※ヒット時ビーンボールでキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) (パイプ所持状態で) ↓ + 強P 強K"
@@ -1825,7 +1883,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "150",
+    damage: "160",
     stan: "150",
     remarks: "S※ビーンボールでキャンセル可能",
     vtrigger: 2,
@@ -1839,7 +1897,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "220",
+    damage: "230",
     stan: "300",
     remarks: "S※ビーンボールでキャンセル可能",
     vtrigger: 2,
@@ -1853,7 +1911,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "140",
+    damage: "150",
     stan: "150",
     remarks: "S※ビーンボールでキャンセル可能",
     vtrigger: 2,

@@ -18,7 +18,7 @@ const ed = [
     outbreak: "6",
     persistence: "3",
     rigidity: "16",
-    hit: "9",
+    hit: "10",
     guard: "3",
     damage: "60",
     stan: "100",
@@ -72,7 +72,7 @@ const ed = [
   },
   {
     name: "立ち強K",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "4",
     rigidity: "22",
     hit: "2",
@@ -405,8 +405,8 @@ const ed = [
     rigidity: "全体25(※21)",
     hit: "D",
     guard: "",
-    damage: "120",
-    stan: "150",
+    damage: "140",
+    stan: "175",
     remarks: "※レバーを前に入れることで飛び道具速度が変化",
     vtrigger: 1,
     type: "vsystem",
@@ -426,6 +426,35 @@ const ed = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱K"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "サイコスプリット",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "サイコフリッカー",
@@ -572,7 +601,7 @@ const ed = [
   },
   {
     name: "サイコバラージ",
-    outbreak: "1+12",
+    outbreak: "1+9",
     persistence: "14",
     rigidity: "49",
     hit: "D",
@@ -580,7 +609,7 @@ const ed = [
     damage: "340",
     stan: "0",
     remarks:
-      "1F～22F 完全無敵\n                                                持続フレームは空振り時の物",
+      "1F～19F 完全無敵\n                                                持続フレームは空振り時の物",
     vtrigger: 1,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
@@ -604,7 +633,7 @@ const ed = [
     outbreak: "6",
     persistence: "3",
     rigidity: "16",
-    hit: "9",
+    hit: "10",
     guard: "3",
     damage: "60",
     stan: "100",
@@ -658,7 +687,7 @@ const ed = [
   },
   {
     name: "立ち強K",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "4",
     rigidity: "22",
     hit: "2",
@@ -1015,6 +1044,35 @@ const ed = [
     command: "(ガード中に) → + 弱K"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "サイコスプリット",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "サイコフリッカー",
     outbreak: "6",
     persistence: "6",
@@ -1163,7 +1221,7 @@ const ed = [
     persistence: "8",
     rigidity: "37",
     hit: "6",
-    guard: "3",
+    guard: "GB+3",
     damage: "80",
     stan: "100",
     remarks:
@@ -1189,7 +1247,7 @@ const ed = [
   },
   {
     name: "サイコバラージ ",
-    outbreak: "1+12",
+    outbreak: "1+9",
     persistence: "14",
     rigidity: "49",
     hit: "D",
@@ -1197,7 +1255,7 @@ const ed = [
     damage: "340",
     stan: "0",
     remarks:
-      "1F～22F 完全無敵\n                                                持続フレームは空振り時の物",
+      "1F～19F 完全無敵\n                                                持続フレームは空振り時の物",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"

@@ -81,7 +81,7 @@ const fang = [
     guard: "1",
     damage: "80",
     stan: "150",
-    remarks: "S※CA※1段目のみ可能\nVS※V二升毒のみキャンセル可能",
+    remarks: "S※CA※1段目のみ可能\nVS※V二升毒のみキャンセル可能\n初段空中ヒット時吹き飛びやられ",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -279,7 +279,7 @@ const fang = [
     guard: "-5",
     damage: "100",
     stan: "200",
-    remarks: "S※CA※V※1段目のみ可能",
+    remarks: "S※CA※1段目のみ可能",
     vtrigger: 1,
     type: "unique",
     command: "↘ + 強P"
@@ -361,10 +361,10 @@ const fang = [
     outbreak: "22",
     persistence: "259",
     rigidity: "全体45",
-    hit: "2",
-    guard: "-2",
-    damage: "30+毒50",
-    stan: "50",
+    hit: "4",
+    guard: "0",
+    damage: "60+毒50",
+    stan: "100",
     remarks:
       "Vゲージタイマー250F消費\n                                                                                                                                                                                ヒット時毒効果付与\n必殺技キャンセル可能な通常技からキャンセル発動可能",
     vtrigger: 1,
@@ -442,6 +442,35 @@ const fang = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "両扇舞",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "二死球",
@@ -662,7 +691,7 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "special",
     command: "(ジャンプ中に) 弱P"
@@ -763,7 +792,7 @@ const fang = [
     guard: "1",
     damage: "80",
     stan: "150",
-    remarks: "S※CA※1段目のみ可能",
+    remarks: "S※CA※1段目のみ可能\n初段空中ヒット時吹き飛びやられ",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -961,7 +990,7 @@ const fang = [
     guard: "-5",
     damage: "100",
     stan: "200",
-    remarks: "S※CA※V※1段目のみ可能",
+    remarks: "S※CA※1段目のみ可能",
     vtrigger: 2,
     type: "unique",
     command: "↘ + 強P"
@@ -1095,6 +1124,35 @@ const fang = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "両扇舞",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "二死球",
@@ -1419,7 +1477,7 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "special",
     command: "(ジャンプ中に) 弱P"

@@ -155,7 +155,7 @@ const lucia = [
   },
   {
     name: "しゃがみ強K",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "2",
     rigidity: "22",
     hit: "D",
@@ -379,7 +379,7 @@ const lucia = [
   },
   {
     name: "[VS1]タッピングキック",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "2",
@@ -393,7 +393,7 @@ const lucia = [
   },
   {
     name: "V[VS1]タッピングキック",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "D",
@@ -462,6 +462,35 @@ const lucia = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ドリフトアッパー",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "ガンスモーク",
@@ -603,7 +632,7 @@ const lucia = [
     damage: "",
     stan: "",
     remarks:
-      "動作終了後、ブレーキングに派生\n12F目からブレーキング、ラフチェイス、トルネードスピナー、サイクロンスピナーに派生可能",
+      "動作終了後、ブレーキングに派生\n10F目からラフチェイス/トルネードスピナー/サイクロンスピナー/ナビングニードルに派生可能\nブレーキングのみ12F目から派生可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P P"
@@ -786,8 +815,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "20F目にEXフリッパーシュートへ派生可能",
     vtrigger: 1,
     type: "special",
@@ -805,7 +834,7 @@ const lucia = [
     remarks: "ファイアスピナーを当てることで性質が変化",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ 弱K"
+    command: "↓↘→ + K K ▶ 弱K OR ↓↘→ + K ▶ 弱K 中K"
   },
   {
     name: "EX フリッパーシュート 中",
@@ -819,7 +848,7 @@ const lucia = [
     remarks: "",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ 中K"
+    command: "↓↘→ + K K ▶ 中K OR ↓↘→ + K ▶ 弱K 強K"
   },
   {
     name: "EX フリッパーシュート 強",
@@ -833,7 +862,7 @@ const lucia = [
     remarks: "",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ 強K"
+    command: "↓↘→ + K K ▶ 強K OR ↓↘→ + K ▶ 中K 強K"
   },
   {
     name: "Vファイアクラッカー",
@@ -842,8 +871,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "20F目にVフリッパーシュートへ派生可能",
     vtrigger: 1,
     type: "special",
@@ -1045,6 +1074,21 @@ const lucia = [
     hit: "D",
     guard: "-32",
     damage: "340",
+    stan: "0",
+    remarks:
+      "1F～14F 完全無敵\n                                                ヒット時、攻撃持続終了まで完全無敵",
+    vtrigger: 1,
+    type: "ca",
+    command: "↓↙← ↓↙← + K"
+  },
+  {
+    name: "Vハードヒットニー",
+    outbreak: "1+7",
+    persistence: "16",
+    rigidity: "54",
+    hit: "D",
+    guard: "-32",
+    damage: "360",
     stan: "0",
     remarks:
       "1F～14F 完全無敵\n                                                ヒット時、攻撃持続終了まで完全無敵",
@@ -1432,7 +1476,7 @@ const lucia = [
   },
   {
     name: "[VS1]タッピングキック",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "2",
@@ -1488,6 +1532,35 @@ const lucia = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ドリフトアッパー",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "ガンスモーク",
@@ -1584,7 +1657,7 @@ const lucia = [
     damage: "",
     stan: "",
     remarks:
-      "動作終了後、ブレーキングに派生\n12F目からブレーキング、ラフチェイス、トルネードスピナー、サイクロンスピナーに派生可能",
+      "動作終了後、ブレーキングに派生\n10F目からラフチェイス/トルネードスピナー/サイクロンスピナー/ナビングニードルに派生可能\nブレーキングのみ12F目から派生可能",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P"
@@ -1722,8 +1795,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "20F目にEXフリッパーシュートへ派生可能",
     vtrigger: 2,
     type: "special",
@@ -1741,7 +1814,7 @@ const lucia = [
     remarks: "ファイアスピナーを当てることで性質が変化",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ 弱K"
+    command: "↓↘→ + K K ▶ 弱K OR ↓↘→ + 弱K 中K"
   },
   {
     name: "EX フリッパーシュート 中",
@@ -1755,7 +1828,7 @@ const lucia = [
     remarks: "",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ 中K"
+    command: "↓↘→ + K K ▶ 中K OR ↓↘→ + 弱K 強K"
   },
   {
     name: "EX フリッパーシュート 強",
@@ -1769,7 +1842,7 @@ const lucia = [
     remarks: "",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ 強K"
+    command: "↓↘→ + K K ▶ 強K OR ↓↘→ + 中K 強K"
   },
   {
     name: "弱 ハリケーンスピナー",

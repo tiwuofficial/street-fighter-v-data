@@ -29,7 +29,7 @@ const ibuki = [
   },
   {
     name: "立ち強P",
-    outbreak: "12",
+    outbreak: "10",
     persistence: "2",
     rigidity: "19",
     hit: "0",
@@ -346,7 +346,7 @@ const ibuki = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
     type: "unique",
     command: "(垂直・前ジャンプ中に) + K K"
@@ -579,45 +579,60 @@ const ibuki = [
   },
   {
     name: "六尺焙烙玉・曙",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(※160)",
+    outbreak: "9",
+    persistence: "29(※19)",
+    rigidity: "全体27",
+    hit: "8",
+    guard: "2",
+    damage: "20(※1100※2160)",
     stan: "80",
     remarks:
-      "Vゲージタイマー+2000F\n                                                                                                                                                                                1秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※EX苦無で誘爆した際のダメージ",
+      "Vゲージタイマー+2000F\n                                                                                                                                                                                1秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※1爆発部分の数値\n※2EX苦無で誘爆した際のダメージ",
     vtrigger: 1,
     type: "vsystem",
     command: "OR ↓ + 強P 強K"
   },
   {
     name: "六尺焙烙玉・日盛り",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(※160)",
+    outbreak: "9",
+    persistence: "29(※19)",
+    rigidity: "全体27",
+    hit: "8",
+    guard: "2",
+    damage: "20(※1100※2160)",
     stan: "80",
     remarks:
-      "Vゲージタイマー+2000F\n                                                                                                                                                                                3秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※EX苦無で誘爆した際のダメージ",
+      "Vゲージタイマー+2000F\n                                                                                                                                                                                3秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※1爆発部分の数値\n※2EX苦無で誘爆した際のダメージ",
     vtrigger: 1,
     type: "vsystem",
     command: "← + 強P 強K"
   },
   {
     name: "六尺焙烙玉・黄昏",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(※160)",
+    outbreak: "9",
+    persistence: "29(※19)",
+    rigidity: "全体27",
+    hit: "8",
+    guard: "2",
+    damage: "20(※1100※2160)",
     stan: "80",
     remarks:
-      "Vゲージタイマー+2000F\n                                                                                                                                                                                5秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※EX苦無で誘爆した際のダメージ",
+      "Vゲージタイマー+2000F\n                                                                                                                                                                                5秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※1爆発部分の数値\n※2EX苦無で誘爆した際のダメージ",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "↑ + 強P 強K"
+  },
+  {
+    name: "六尺焙烙玉・黎明",
+    outbreak: "9",
+    persistence: "29(※9)",
+    rigidity: "全体27",
+    hit: "8",
+    guard: "2",
+    damage: "20(※100)",
+    stan: "80",
+    remarks:
+      "Vゲージタイマー+2000F\n                                                                                                                                                                                0秒後爆発\n発動中六尺焙烙玉が必殺技に追加\n※爆発部分の数値",
     vtrigger: 1,
     type: "vsystem",
     command: "→ + 強P 強K"
@@ -636,6 +651,35 @@ const ibuki = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "地擦隼",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 風斬り",
@@ -968,14 +1012,14 @@ const ibuki = [
   {
     name: "V六尺焙烙玉・曙",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(※9)",
     rigidity: "全体42",
-    hit: "",
-    guard: "",
-    damage: "100",
+    hit: "8",
+    guard: "2",
+    damage: "20(※100)",
     stan: "80",
     remarks:
-      "Vゲージタイマー全消費\n                                                                                                                                                                                1秒後爆発",
+      "Vゲージタイマー全消費\n                                                                                                                                                                                1秒後爆発\n※爆発部分の数値",
     vtrigger: 1,
     type: "special",
     command: "OR ↓ + 強P 強K"
@@ -983,14 +1027,14 @@ const ibuki = [
   {
     name: "V六尺焙烙玉・日盛り",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(※9)",
     rigidity: "全体42",
     hit: "",
     guard: "",
-    damage: "100",
+    damage: "20(※100)",
     stan: "80",
     remarks:
-      "Vゲージタイマー全消費\n                                                                                                                                                                                3秒後爆発",
+      "Vゲージタイマー全消費\n                                                                                                                                                                                3秒後爆発\n※爆発部分の数値",
     vtrigger: 1,
     type: "special",
     command: "← + 強P 強K"
@@ -998,14 +1042,29 @@ const ibuki = [
   {
     name: "V六尺焙烙玉・黄昏",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(※9)",
     rigidity: "全体42",
-    hit: "",
-    guard: "",
-    damage: "100",
+    hit: "8",
+    guard: "2",
+    damage: "20(※100)",
     stan: "80",
     remarks:
-      "Vゲージタイマー全消費\n                                                                                                                                                                                5秒後爆発",
+      "Vゲージタイマー全消費\n                                                                                                                                                                                5秒後爆発\n※爆発部分の数値",
+    vtrigger: 1,
+    type: "special",
+    command: "↑ + 強P 強K"
+  },
+  {
+    name: "V六尺焙烙玉・黎明",
+    outbreak: "25",
+    persistence: "29(※9)",
+    rigidity: "全体42",
+    hit: "8",
+    guard: "2",
+    damage: "20(※100)",
+    stan: "80",
+    remarks:
+      "Vゲージタイマー全消費\n                                                                                                                                                                                0秒後爆発\n※爆発部分の数値",
     vtrigger: 1,
     type: "special",
     command: "→ + 強P 強K"
@@ -1054,7 +1113,7 @@ const ibuki = [
   },
   {
     name: "立ち強P",
-    outbreak: "12",
+    outbreak: "10",
     persistence: "2",
     rigidity: "19",
     hit: "0",
@@ -1371,7 +1430,7 @@ const ibuki = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
     type: "unique",
     command: "(垂直・前ジャンプ中に) + K K"
@@ -1644,6 +1703,35 @@ const ibuki = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "地擦隼",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 風斬り",

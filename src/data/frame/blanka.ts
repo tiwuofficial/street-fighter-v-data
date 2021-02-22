@@ -16,8 +16,8 @@ const blanka = [
   {
     name: "立ち中P",
     outbreak: "7",
-    persistence: "2",
-    rigidity: "15",
+    persistence: "3",
+    rigidity: "14",
     hit: "3",
     guard: "0",
     damage: "60",
@@ -281,6 +281,20 @@ const blanka = [
     command: "→ + 中P"
   },
   {
+    name: "ロッククラッシュ(溜め)",
+    outbreak: "34",
+    persistence: "3",
+    rigidity: "13",
+    hit: "4",
+    guard: "-2",
+    damage: "90",
+    stan: "120",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "→ + 中P (ボタンホールド)"
+  },
+  {
     name: "アマゾンリバーラン",
     outbreak: "11",
     persistence: "10",
@@ -346,7 +360,7 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+    remarks: "必殺技キャンセル可能な通常技及び立ち強Kからキャンセル発動可能",
     vtrigger: 1,
     type: "unique",
     command: "→ + 弱K"
@@ -360,7 +374,7 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+    remarks: "必殺技キャンセル可能な通常技及び立ち強Kからキャンセル発動可能",
     vtrigger: 1,
     type: "unique",
     command: "← + 弱K"
@@ -489,7 +503,7 @@ const blanka = [
     damage: "",
     stan: "",
     remarks:
-      "Vゲージタイマー+2000F\n                                                                                                                                1F 完全無敵\n                                                発動中対応した必殺技の性能が強化される\n発動中必殺技に「グランドシェイブローリング」が追加される",
+      "Vゲージタイマー+2000F\n                                                                                                                                1F 完全無敵\n                                                発動中対応した必殺技の性能が強化される\n発動中必殺技に「グランドシェイブローリング」が追加される\n必殺技キャンセル発動時に限り、タメ必殺技のタメ時間が不要に",
     vtrigger: 1,
     type: "vsystem",
     command: "強P 強K"
@@ -508,6 +522,35 @@ const blanka = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "アナコンダバイト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱ローリングアタック",
@@ -530,7 +573,7 @@ const blanka = [
     rigidity: "8+着地後7",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "110",
     stan: "150",
     remarks: "CA※根元ヒット時のみ可能",
     vtrigger: 1,
@@ -544,7 +587,7 @@ const blanka = [
     rigidity: "4+着地後23",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "120",
     stan: "150",
     remarks: "CA※根元ヒット時のみ可能",
     vtrigger: 1,
@@ -730,7 +773,7 @@ const blanka = [
     persistence: "10",
     rigidity: "17",
     hit: "D",
-    guard: "3",
+    guard: "4",
     damage: "80",
     stan: "150",
     remarks: "",
@@ -897,8 +940,8 @@ const blanka = [
   {
     name: "立ち中P",
     outbreak: "7",
-    persistence: "2",
-    rigidity: "15",
+    persistence: "3",
+    rigidity: "14",
     hit: "3",
     guard: "0",
     damage: "60",
@@ -1162,6 +1205,20 @@ const blanka = [
     command: "→ + 中P"
   },
   {
+    name: "ロッククラッシュ(溜め)",
+    outbreak: "34",
+    persistence: "3",
+    rigidity: "13",
+    hit: "4",
+    guard: "-2",
+    damage: "90",
+    stan: "120",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "→ + 中P (ボタンホールド)"
+  },
+  {
     name: "アマゾンリバーラン",
     outbreak: "11",
     persistence: "10",
@@ -1227,7 +1284,7 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+    remarks: "必殺技キャンセル可能な通常技及び立ち強Kからキャンセル発動可能",
     vtrigger: 2,
     type: "unique",
     command: "→ + 弱K"
@@ -1241,7 +1298,7 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "必殺技キャンセル可能な通常技からキャンセル発動可能",
+    remarks: "必殺技キャンセル可能な通常技及び立ち強Kからキャンセル発動可能",
     vtrigger: 2,
     type: "unique",
     command: "← + 弱K"
@@ -1391,6 +1448,35 @@ const blanka = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "アナコンダバイト",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱ローリングアタック",
     outbreak: "9",
     persistence: "22",
@@ -1411,7 +1497,7 @@ const blanka = [
     rigidity: "8+着地後7",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "110",
     stan: "150",
     remarks: "CA※根元ヒット時のみ可能",
     vtrigger: 2,
@@ -1425,7 +1511,7 @@ const blanka = [
     rigidity: "4+着地後23",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "120",
     stan: "150",
     remarks: "CA※根元ヒット時のみ可能",
     vtrigger: 2,
@@ -1566,7 +1652,7 @@ const blanka = [
     persistence: "10",
     rigidity: "17",
     hit: "D",
-    guard: "3",
+    guard: "4",
     damage: "80",
     stan: "150",
     remarks: "",

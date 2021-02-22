@@ -641,7 +641,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 1,
     type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
@@ -655,7 +655,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 1,
     type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
@@ -753,7 +753,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K"
@@ -767,7 +767,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 1,
     type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K"
@@ -782,7 +782,7 @@ const necalli = [
     damage: "",
     stan: "",
     remarks:
-      "Vゲージタイマー+無限F\n                                                                                                                                                                                ラウンド終了まで持続\n専用の必殺技が追加",
+      "Vゲージタイマー+1000F\n                                                                                                                                                                                専用の必殺技が追加",
     vtrigger: 1,
     type: "vsystem",
     command: "強P 強K"
@@ -801,6 +801,35 @@ const necalli = [
     vtrigger: 1,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "朔破る咆哮",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 円盤の導き",
@@ -1123,8 +1152,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "60",
-    stan: "50",
+    damage: "80",
+    stan: "70",
     remarks: "",
     vtrigger: 1,
     type: "special",
@@ -1137,8 +1166,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "50",
+    damage: "100",
+    stan: "70",
     remarks: "",
     vtrigger: 1,
     type: "special",
@@ -1195,7 +1224,7 @@ const necalli = [
     guard: "-3",
     damage: "70",
     stan: "100",
-    remarks: "14～17Fまで相殺判定",
+    remarks: "14～17Fまで相殺判定\nS※煙纏う鏡でのみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + 弱K"
@@ -1209,7 +1238,7 @@ const necalli = [
     guard: "-1",
     damage: "80",
     stan: "100",
-    remarks: "19～23Fまで相殺判定",
+    remarks: "19～23Fまで相殺判定\nS※煙纏う鏡でのみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + 中K"
@@ -1223,7 +1252,7 @@ const necalli = [
     guard: "2",
     damage: "100",
     stan: "150",
-    remarks: "23～28Fまで相殺判定",
+    remarks: "23～28Fまで相殺判定\nS※煙纏う鏡でのみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + 強K"
@@ -1258,7 +1287,7 @@ const necalli = [
   },
   {
     name: "V煙纏う鏡",
-    outbreak: "43",
+    outbreak: "43(※18)",
     persistence: "4",
     rigidity: "23",
     hit: "D",
@@ -1266,22 +1295,22 @@ const necalli = [
     damage: "70",
     stan: "100",
     remarks:
-      "16F～47F 飛び道具無敵\n                                                受身不可\n必殺技キャンセル可能な技とVスキルからキャンセル発動可能",
+      "16F～47F 飛び道具無敵\n                                                ※空中の相手にヒットする飛び上がり部分の発生",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) 強P 強K"
   },
   {
     name: "V煙纏う鏡(ボタンホールド)",
-    outbreak: "57",
+    outbreak: "57(※32)",
     persistence: "8",
     rigidity: "24",
     hit: "膝",
     guard: "2",
-    damage: "80",
-    stan: "100",
+    damage: "100",
+    stan: "120",
     remarks:
-      "25F～63F 飛び道具無敵\n                                                ダウン追い討ち判定\n必殺技キャンセル可能な技とVスキルからキャンセル発動可能",
+      "25F～63F 飛び道具無敵\n                                                ダウン追い討ち判定\n※空中の相手にヒットする飛び上がり部分の発生",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) 強P 強K (ボタンホールド)"
@@ -1956,7 +1985,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 2,
     type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
@@ -1970,7 +1999,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 2,
     type: "unique",
     command: "(VスキルⅡ選択時) 中K ▶ 強K ▶ 中P 中K"
@@ -2068,7 +2097,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 2,
     type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K"
@@ -2082,7 +2111,7 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks: "※180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
     vtrigger: 2,
     type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K"
@@ -2116,6 +2145,35 @@ const necalli = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "朔破る咆哮",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 円盤の導き",
@@ -2438,8 +2496,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "60",
-    stan: "50",
+    damage: "80",
+    stan: "70",
     remarks: "",
     vtrigger: 2,
     type: "special",
@@ -2452,8 +2510,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "50",
+    damage: "100",
+    stan: "70",
     remarks: "",
     vtrigger: 2,
     type: "special",

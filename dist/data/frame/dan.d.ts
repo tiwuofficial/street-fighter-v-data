@@ -11,6 +11,5 @@ declare const dan: {
     vtrigger: number;
     type: string;
     command: string;
-    zeku: string;
 }[];
 export { dan };

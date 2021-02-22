@@ -57,7 +57,7 @@ const ehonda = [
   },
   {
     name: "立ち中K",
-    outbreak: "6",
+    outbreak: "5",
     persistence: "2",
     rigidity: "14",
     hit: "7",
@@ -143,10 +143,10 @@ const ehonda = [
   },
   {
     name: "しゃがみ中K",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "14",
-    hit: "4",
+    hit: "5",
     guard: "-2",
     damage: "60",
     stan: "120",
@@ -288,7 +288,7 @@ const ehonda = [
     persistence: "6",
     rigidity: "16",
     hit: "5",
-    guard: "2",
+    guard: "4",
     damage: "90",
     stan: "120",
     remarks: "ダウン追い討ち判定あり\nS※12F～攻撃判定発生までキャンセル可能",
@@ -382,7 +382,7 @@ const ehonda = [
   },
   {
     name: "[VS1]猫だまし",
-    outbreak: "15",
+    outbreak: "12",
     persistence: "4",
     rigidity: "24",
     hit: "3",
@@ -440,6 +440,35 @@ const ehonda = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "スーパーごっつぁん砲",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 スーパー頭突き",
     outbreak: "10",
     persistence: "17",
@@ -448,7 +477,7 @@ const ehonda = [
     guard: "-4",
     damage: "120(※100)",
     stan: "180(※150)",
-    remarks: "CA※根元のみ可能\n※持続判定部分",
+    remarks: "CA※根元のみ可能\nS※ヒット時のみ鬼大角でキャンセル可能\n※持続判定部分",
     vtrigger: 1,
     type: "special",
     command: "→ + 弱P"
@@ -462,7 +491,7 @@ const ehonda = [
     guard: "-7",
     damage: "140(※110)",
     stan: "180(※150)",
-    remarks: "CA※根元のみ可能\n※持続判定部分",
+    remarks: "CA※根元のみ可能\nS※ヒット時のみ鬼大角でキャンセル可能\n※持続判定部分",
     vtrigger: 1,
     type: "special",
     command: "→ + 中P"
@@ -476,7 +505,8 @@ const ehonda = [
     guard: "-12",
     damage: "160(※120)",
     stan: "180(※150)",
-    remarks: "1F～14F 空中判定の攻撃に対して上半身が無敵\nCA※根元のみ可能\n※持続判定部分",
+    remarks:
+      "1F～14F 空中判定の攻撃に対して上半身が無敵\nCA※根元のみ可能\nS※ヒット時のみ鬼大角でキャンセル可能\n※持続判定部分",
     vtrigger: 1,
     type: "special",
     command: "→ + 強P"
@@ -737,8 +767,8 @@ const ehonda = [
   {
     name: "EX 大銀杏投げ",
     outbreak: "5",
-    persistence: "2",
-    rigidity: "60",
+    persistence: "3",
+    rigidity: "59",
     hit: "D",
     guard: "",
     damage: "200",
@@ -754,11 +784,26 @@ const ehonda = [
     persistence: "24",
     rigidity: "10+着地後10",
     hit: "D",
-    guard: "-4",
+    guard: "-2",
     damage: "120(※100)",
     stan: "200",
     remarks:
       "Vゲージタイマー1000F消費\n                                                                                                                                                                                通常技・特殊技・百裂張り手からキャンセル可能\nS※ヒット時のみ鬼無双でキャンセル可能\nCA※根元のみ可能\n50Fまでボタンホールド可能(50F以上ホールドすると最大ホールド版に派生)\n4F～攻撃判定発生2F前までアーマー判定\n※持続判定部分",
+    vtrigger: 1,
+    type: "special",
+    command: "(VトリガーⅠ発動中) 強P 強K"
+  },
+  {
+    name: "V鬼大角(スーパー頭突きキャンセル版)",
+    outbreak: "10",
+    persistence: "24",
+    rigidity: "10+着地後10",
+    hit: "D",
+    guard: "-2",
+    damage: "100(※80)",
+    stan: "200",
+    remarks:
+      "Vゲージタイマー1000F消費\n                                                                                                                                                                                スーパー頭突きからヒット時のみキャンセル可能\nS※ヒット時のみ鬼無双でキャンセル可能\nCA※根元のみ可能\n50Fまでボタンホールド可能(50F以上ホールドすると最大ホールド版に派生)\n4F～攻撃判定発生2F前までアーマー判定\n※持続判定部分",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) 強P 強K"
@@ -789,6 +834,21 @@ const ehonda = [
     stan: "200",
     remarks:
       "Vゲージタイマー1200F消費\n                                                                                                                                                                                鬼大角ヒット時のみ派生可能\nCA※根元のみ可能",
+    vtrigger: 1,
+    type: "special",
+    command: "(VトリガーⅠ発動中) 強P 強K ▶ 強P 強K"
+  },
+  {
+    name: "V鬼無双(スーパー頭突きキャンセル鬼大角派生版)",
+    outbreak: "3",
+    persistence: "24",
+    rigidity: "10+着地後10",
+    hit: "D",
+    guard: "",
+    damage: "100",
+    stan: "200",
+    remarks:
+      "Vゲージタイマー1200F消費\n                                                                                                                                                                                スーパー頭突きキャンセル版鬼大角ヒット時のみ派生可能\nCA※根元のみ可能",
     vtrigger: 1,
     type: "special",
     command: "(VトリガーⅠ発動中) 強P 強K ▶ 強P 強K"
@@ -865,7 +925,7 @@ const ehonda = [
   },
   {
     name: "立ち中K",
-    outbreak: "6",
+    outbreak: "5",
     persistence: "2",
     rigidity: "14",
     hit: "7",
@@ -951,10 +1011,10 @@ const ehonda = [
   },
   {
     name: "しゃがみ中K",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "14",
-    hit: "4",
+    hit: "5",
     guard: "-2",
     damage: "60",
     stan: "120",
@@ -1096,7 +1156,7 @@ const ehonda = [
     persistence: "6",
     rigidity: "16",
     hit: "5",
-    guard: "2",
+    guard: "4",
     damage: "90",
     stan: "120",
     remarks: "ダウン追い討ち判定あり\nS※12F～攻撃判定発生までキャンセル可能",
@@ -1190,7 +1250,7 @@ const ehonda = [
   },
   {
     name: "[VS1]猫だまし",
-    outbreak: "15",
+    outbreak: "12",
     persistence: "4",
     rigidity: "24",
     hit: "3",
@@ -1246,6 +1306,35 @@ const ehonda = [
     vtrigger: 2,
     type: "vsystem",
     command: "(ガード中に) → + 弱P"
+  },
+  {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "スーパーごっつぁん砲",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
   },
   {
     name: "弱 スーパー頭突き",
@@ -1545,8 +1634,8 @@ const ehonda = [
   {
     name: "EX 大銀杏投げ",
     outbreak: "5",
-    persistence: "2",
-    rigidity: "60",
+    persistence: "3",
+    rigidity: "59",
     hit: "D",
     guard: "",
     damage: "200",

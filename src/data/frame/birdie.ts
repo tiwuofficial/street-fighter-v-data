@@ -120,7 +120,7 @@ const birdie = [
     guard: "-9",
     damage: "80",
     stan: "120",
-    remarks: "",
+    remarks: "クラッシュカウンター対応 (D)",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -584,6 +584,35 @@ const birdie = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ブルクラッシュ",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 ブルヘッド",
     outbreak: "14",
     persistence: "3",
@@ -773,7 +802,7 @@ const birdie = [
   },
   {
     name: "中 ハンギングチェーン",
-    outbreak: "25(※21)",
+    outbreak: "20(※21)",
     persistence: "16",
     rigidity: "24",
     hit: "D",
@@ -781,7 +810,7 @@ const birdie = [
     damage: "150",
     stan: "200",
     remarks:
-      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時",
+      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + 中K"
@@ -1062,7 +1091,7 @@ const birdie = [
     guard: "-9",
     damage: "80",
     stan: "120",
-    remarks: "",
+    remarks: "クラッシュカウンター対応 (D)",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1526,6 +1555,35 @@ const birdie = [
     command: "(ガード中に) → + 弱P"
   },
   {
+    name: "Vシフト",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K"
+  },
+  {
+    name: "ブルクラッシュ",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F～10F 完全無敵",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
+  },
+  {
     name: "弱 ブルヘッド",
     outbreak: "14",
     persistence: "3",
@@ -1625,7 +1683,7 @@ const birdie = [
   },
   {
     name: "中 ハンギングチェーン",
-    outbreak: "25(※21)",
+    outbreak: "20(※21)",
     persistence: "16",
     rigidity: "24",
     hit: "D",
@@ -1633,7 +1691,7 @@ const birdie = [
     damage: "150",
     stan: "200",
     remarks:
-      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時",
+      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + 中K"

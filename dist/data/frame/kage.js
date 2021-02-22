@@ -276,7 +276,7 @@ const kage = [
         guard: "",
         damage: "60",
         stan: "100",
-        remarks: "",
+        remarks: "空中阿修羅閃空から発動した際、性質変化\n(空中の相手にヒットした際の効果が空中復帰⇒吹き飛びになる等)",
         vtrigger: 1,
         type: "unique",
         command: "(前ジャンプ中に) ↓ + 中K"
@@ -388,7 +388,7 @@ const kage = [
         guard: "-2",
         damage: "90",
         stan: "150",
-        remarks: "クラッシュカウンター対応(+24F)\n                                                                                                                                                                5F～40F 上中段の打撃・飛び道具に対してアーマー判定\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
+        remarks: "クラッシュカウンター対応(+24F)\n                                                                                                                                                                5F～42F 上中段の打撃・飛び道具に対してアーマー判定\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
         vtrigger: 1,
         type: "vsystem",
         command: "(VスキルⅠ選択時) 中P 中K (ボタンホールド)"
@@ -444,7 +444,7 @@ const kage = [
         guard: "6",
         damage: "120",
         stan: "150",
-        remarks: "2F～29F 上中段の打撃・飛び道具に対してアーマー判定\n30F～38F 打撃・飛び道具に対してアーマー判定\n通常・特殊技からキャンセル可能",
+        remarks: "2F～29F 上中段の打撃・飛び道具に対してアーマー判定\n30F～39F 打撃・飛び道具に対してアーマー判定\n通常・特殊技からキャンセル可能",
         vtrigger: 1,
         type: "vsystem",
         command: "(VスキルⅠ選択時) (VトリガーⅠ発動中) 中P 中K (ボタンホールド)"
@@ -490,6 +490,34 @@ const kage = [
         vtrigger: 1,
         type: "vsystem",
         command: "(ガード中に) → + 弱P"
+    },
+    {
+        name: "Vシフト",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "強P 中K"
+    },
+    {
+        name: "夜叉突き",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "波動拳",
@@ -703,7 +731,7 @@ const kage = [
     },
     {
         name: "EX 空靂刃",
-        outbreak: "16",
+        outbreak: "11",
         persistence: "2",
         rigidity: "26",
         hit: "D",
@@ -717,14 +745,14 @@ const kage = [
     },
     {
         name: "空中空靂刃",
-        outbreak: "10",
+        outbreak: "10(※16)",
         persistence: "4",
         rigidity: "着地後12",
-        hit: "※1D",
+        hit: "※2D",
         guard: "",
-        damage: "90(※270)",
+        damage: "90(※370)",
         stan: "150",
-        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1めくりヒット時は地上のけぞり\n※2空中版のめくり部分のパラメータ",
+        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1のぼり低空で出した際の数値\n※2めくりヒット時は地上のけぞり\n※3空中版のめくり部分のパラメータ",
         vtrigger: 1,
         type: "special",
         command: "(ジャンプ中に) ↓↙← + K"
@@ -836,7 +864,7 @@ const kage = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費",
+        remarks: "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費\n動作の22Fから天魔空刃脚でキャンセル可能",
         vtrigger: 1,
         type: "special",
         command: "(VトリガーⅠ発動中) (ジャンプ中に) 強P 強K"
@@ -850,7 +878,7 @@ const kage = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費",
+        remarks: "Vゲージタイマー500F消費\n                                                                                                                                3F～23F 飛び道具無敵\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\n必殺技キャンセル可能の通常技や各種必殺技からキャンセル発動時Vタイマー1200F消費\n動作の22Fから天魔空刃脚でキャンセル可能",
         vtrigger: 1,
         type: "special",
         command: "(VトリガーⅠ発動中) (ジャンプ中に) ← + 強P 強K"
@@ -1242,7 +1270,7 @@ const kage = [
         guard: "-2",
         damage: "90",
         stan: "150",
-        remarks: "クラッシュカウンター対応(+24F)\n                                                                                                                                                                5F～40F 上中段の打撃・飛び道具に対してアーマー判定\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
+        remarks: "クラッシュカウンター対応(+24F)\n                                                                                                                                                                5F～42F 上中段の打撃・飛び道具に対してアーマー判定\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅠ選択時) 中P 中K (ボタンホールド)"
@@ -1288,6 +1316,34 @@ const kage = [
         vtrigger: 2,
         type: "vsystem",
         command: "(ガード中に) → + 弱P"
+    },
+    {
+        name: "Vシフト",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "強P 中K"
+    },
+    {
+        name: "夜叉突き",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F～10F 完全無敵",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K"
     },
     {
         name: "波動拳",
@@ -1501,7 +1557,7 @@ const kage = [
     },
     {
         name: "EX 空靂刃",
-        outbreak: "16",
+        outbreak: "11",
         persistence: "2",
         rigidity: "26",
         hit: "D",
@@ -1515,14 +1571,14 @@ const kage = [
     },
     {
         name: "空中空靂刃",
-        outbreak: "10",
+        outbreak: "10(※16)",
         persistence: "4",
         rigidity: "着地後12",
-        hit: "※1D",
+        hit: "※2D",
         guard: "",
-        damage: "90(※270)",
+        damage: "90(※370)",
         stan: "150",
-        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1めくりヒット時は地上のけぞり\n※2空中版のめくり部分のパラメータ",
+        remarks: "めくり性能\n                                                しゃがみの相手にヒットしない\n                                                                                                ※1のぼり低空で出した際の数値\n※2めくりヒット時は地上のけぞり\n※3空中版のめくり部分のパラメータ",
         vtrigger: 2,
         type: "special",
         command: "(ジャンプ中に) ↓↙← + K"
