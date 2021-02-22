@@ -11,5 +11,6 @@ declare const ryu: {
     vtrigger: number;
     type: string;
     command: string;
+    zeku: string;
 }[];
 export { ryu };

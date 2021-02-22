@@ -84,6 +84,6 @@ characters.setCharacter(new Character("37", "ルシア", "lucia", lucia));
 characters.setCharacter(new Character("38", "エドモンド本田", "ehonda", ehonda, ["本田"]));
 characters.setCharacter(new Character("39", "ギル", "gill", gill));
 characters.setCharacter(new Character("40", "セス", "seth", seth));
-characters.setCharacter(new Character("41", "段", "dan", dan));
+characters.setCharacter(new Character("41", "ダン", "dan", dan));
 
 export { characters };

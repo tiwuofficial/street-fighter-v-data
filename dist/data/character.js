@@ -85,5 +85,5 @@ characters.setCharacter(new Character_1.default("37", "ルシア", "lucia", luci
 characters.setCharacter(new Character_1.default("38", "エドモンド本田", "ehonda", ehonda_1.ehonda, ["本田"]));
 characters.setCharacter(new Character_1.default("39", "ギル", "gill", gill_1.gill));
 characters.setCharacter(new Character_1.default("40", "セス", "seth", seth_1.seth));
-characters.setCharacter(new Character_1.default("41", "段", "dan", dan_1.dan));
+characters.setCharacter(new Character_1.default("41", "ダン", "dan", dan_1.dan));
 //# sourceMappingURL=character.js.map
