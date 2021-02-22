@@ -40,6 +40,7 @@ const urien_1 = require("./frame/urien");
 const vega_1 = require("./frame/vega");
 const zangief_1 = require("./frame/zangief");
 const zeku_1 = require("./frame/zeku");
+const dan_1 = require("./frame/dan");
 const Characters_1 = require("../class/Characters");
 const Character_1 = require("../class/Character");
 const characters = new Characters_1.default();
@@ -84,4 +85,5 @@ characters.setCharacter(new Character_1.default("37", "ルシア", "lucia", luci
 characters.setCharacter(new Character_1.default("38", "エドモンド本田", "ehonda", ehonda_1.ehonda, ["本田"]));
 characters.setCharacter(new Character_1.default("39", "ギル", "gill", gill_1.gill));
 characters.setCharacter(new Character_1.default("40", "セス", "seth", seth_1.seth));
+characters.setCharacter(new Character_1.default("41", "段", "dan", dan_1.dan));
 //# sourceMappingURL=character.js.map

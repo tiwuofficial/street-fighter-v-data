@@ -38,6 +38,7 @@ import { urien } from "./frame/urien";
 import { vega } from "./frame/vega";
 import { zangief } from "./frame/zangief";
 import { zeku } from "./frame/zeku";
+import { dan } from "./frame/dan";
 import Characters from "../class/Characters";
 import Character from "../class/Character";
 
@@ -83,5 +84,6 @@ characters.setCharacter(new Character("37", "ルシア", "lucia", lucia));
 characters.setCharacter(new Character("38", "エドモンド本田", "ehonda", ehonda, ["本田"]));
 characters.setCharacter(new Character("39", "ギル", "gill", gill));
 characters.setCharacter(new Character("40", "セス", "seth", seth));
+characters.setCharacter(new Character("41", "段", "dan", dan));
 
 export { characters };
