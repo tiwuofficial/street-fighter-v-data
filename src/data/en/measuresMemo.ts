@@ -1,7 +1,8 @@
-import MeasuresMemo from "../../class/MeasuresMemos";
+import MeasuresMemos from "../../class/MeasuresMemos";
 import { characters } from "./character";
 
-const measuresMemo = new MeasuresMemo();
-measuresMemo.syncFromLS(characters);
-
-export { measuresMemo };
+export function getMeasuresMemosFromLocalStroage(): MeasuresMemos {
+  const measuresMemos = new MeasuresMemos();
+  measuresMemos.syncFromLS(characters);
+  return measuresMemos;
+}
