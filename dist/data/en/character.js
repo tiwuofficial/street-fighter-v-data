@@ -40,6 +40,8 @@ const urien_1 = require("../frame/en/urien");
 const vega_1 = require("../frame/en/vega");
 const zangief_1 = require("../frame/en/zangief");
 const zeku_1 = require("../frame/en/zeku");
+const dan_1 = require("../frame/en/dan");
+const rose_1 = require("../frame/en/rose");
 const Characters_1 = require("../../class/Characters");
 const Character_1 = require("../../class/Character");
 const characters = new Characters_1.default();
@@ -84,4 +86,6 @@ characters.setCharacter(new Character_1.default("37", "LUCIA", "lucia", lucia_1.
 characters.setCharacter(new Character_1.default("38", "E. HONDA", "ehonda", ehonda_1.ehonda));
 characters.setCharacter(new Character_1.default("39", "GILL", "gill", gill_1.gill));
 characters.setCharacter(new Character_1.default("40", "SETH", "seth", seth_1.seth));
+characters.setCharacter(new Character_1.default("41", "DAN", "dan", dan_1.dan));
+characters.setCharacter(new Character_1.default("42", "ROSE", "rose", rose_1.rose));
 //# sourceMappingURL=character.js.map

@@ -38,6 +38,8 @@ import { urien } from "../frame/en/urien";
 import { vega } from "../frame/en/vega";
 import { zangief } from "../frame/en/zangief";
 import { zeku } from "../frame/en/zeku";
+import { dan } from "../frame/en/dan";
+import { rose } from "../frame/en/rose";
 import Characters from "../../class/Characters";
 import Character from "../../class/Character";
 
@@ -83,5 +85,7 @@ characters.setCharacter(new Character("37", "LUCIA", "lucia", lucia));
 characters.setCharacter(new Character("38", "E. HONDA", "ehonda", ehonda));
 characters.setCharacter(new Character("39", "GILL", "gill", gill));
 characters.setCharacter(new Character("40", "SETH", "seth", seth));
+characters.setCharacter(new Character("41", "DAN", "dan", dan));
+characters.setCharacter(new Character("42", "ROSE", "rose", rose));
 
 export { characters };
