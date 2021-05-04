@@ -8,7 +8,7 @@ export function getCombosFromLocalStroage(): Combos {
   const combos = new Combos();
   const combosFromLS = JSON.parse(localStorage.getItem("combos"));
   if (combosFromLS) {
-    combosFromLS.forEach(comboFromLS => {
+    combosFromLS.reverse().forEach(comboFromLS => {
       const character = characters.getCharacterById(comboFromLS.characterId);
       if (character) {
         const frames = [];
