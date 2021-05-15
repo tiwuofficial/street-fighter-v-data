@@ -24,9 +24,12 @@ export default class {
   }
 
   getNextId(): number {
-    const lastCombo = this.combos[this.combos.length - 1];
-    if (lastCombo) {
-      return lastCombo.id + 1;
+    const ids = this.combos.map(combo => {
+      return combo.id;
+    });
+    const maxId = Math.max(...ids);
+    if (maxId !== -Infinity) {
+      return maxId + 1;
     }
     return 1;
   }

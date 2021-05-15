@@ -96,6 +96,12 @@ describe("getComboFromId", (): void => {
 });
 
 describe("getNextId", (): void => {
+  test("empty", (): void => {
+    const combos = new Combos();
+    const nextId = combos.getNextId();
+    expect(nextId).toBe(1);
+  });
+
   test("getNextId", (): void => {
     const combos = new Combos();
     const character = new Character("1", "リュウ", "ryu", ryu);
@@ -105,6 +111,21 @@ describe("getNextId", (): void => {
     combos.pushCombo(
       new Combo(
         1,
+        "",
+        character,
+        [1, 2] as any,
+        startStatus,
+        position,
+        1,
+        2,
+        "title",
+        "memo",
+        new Date()
+      )
+    );
+    combos.pushCombo(
+      new Combo(
+        3,
         "",
         character,
         [1, 2] as any,
@@ -135,7 +156,7 @@ describe("getNextId", (): void => {
 
     const nextId = combos.getNextId();
 
-    expect(nextId).toBe(3);
+    expect(nextId).toBe(4);
   });
 });
 
