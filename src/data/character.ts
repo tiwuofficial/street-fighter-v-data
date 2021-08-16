@@ -40,6 +40,8 @@ import { zangief } from "./frame/zangief";
 import { zeku } from "./frame/zeku";
 import { dan } from "./frame/dan";
 import { rose } from "./frame/rose";
+import { oro } from "./frame/oro";
+import { akira } from "./frame/akira";
 import Characters from "../class/Characters";
 import Character from "../class/Character";
 
@@ -87,5 +89,7 @@ characters.setCharacter(new Character("39", "ギル", "gill", gill));
 characters.setCharacter(new Character("40", "セス", "seth", seth));
 characters.setCharacter(new Character("41", "ダン", "dan", dan));
 characters.setCharacter(new Character("42", "ローズ", "rose", rose));
+characters.setCharacter(new Character("43", "オロ", "oro", oro));
+characters.setCharacter(new Character("44", "アキラ", "akira", akira));
 
 export { characters };

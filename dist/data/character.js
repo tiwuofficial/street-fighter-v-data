@@ -42,6 +42,8 @@ const zangief_1 = require("./frame/zangief");
 const zeku_1 = require("./frame/zeku");
 const dan_1 = require("./frame/dan");
 const rose_1 = require("./frame/rose");
+const oro_1 = require("./frame/oro");
+const akira_1 = require("./frame/akira");
 const Characters_1 = require("../class/Characters");
 const Character_1 = require("../class/Character");
 const characters = new Characters_1.default();
@@ -88,4 +90,6 @@ characters.setCharacter(new Character_1.default("39", "ギル", "gill", gill_1.g
 characters.setCharacter(new Character_1.default("40", "セス", "seth", seth_1.seth));
 characters.setCharacter(new Character_1.default("41", "ダン", "dan", dan_1.dan));
 characters.setCharacter(new Character_1.default("42", "ローズ", "rose", rose_1.rose));
+characters.setCharacter(new Character_1.default("43", "オロ", "oro", oro_1.oro));
+characters.setCharacter(new Character_1.default("44", "アキラ", "akira", akira_1.akira));
 //# sourceMappingURL=character.js.map
