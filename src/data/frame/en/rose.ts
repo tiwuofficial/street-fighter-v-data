@@ -18,8 +18,8 @@ const rose = [
     outbreak: "6",
     persistence: "3",
     rigidity: "12",
-    hit: "6",
-    guard: "2",
+    hit: "7",
+    guard: "3",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -385,8 +385,8 @@ const rose = [
     outbreak: "25",
     persistence: "",
     rigidity: "51 total frames",
-    hit: "-4",
-    guard: "-8",
+    hit: "-2",
+    guard: "-6",
     damage: "10",
     stan: "0",
     remarks:
@@ -598,14 +598,14 @@ const rose = [
   {
     name: "L Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
     vtrigger: 1,
     type: "",
     command: "→↓↘ + LP"
@@ -613,14 +613,14 @@ const rose = [
   {
     name: "M Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
     vtrigger: 1,
     type: "",
     command: "→↓↘ + MP"
@@ -628,14 +628,14 @@ const rose = [
   {
     name: "H Soul Bind",
     outbreak: "11",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                11F - 16F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 10",
+      "Will not hit grounded opponents\n                                                11F - 19F  invincible to mid-air attacks\n                                1F - 10F head to torso invincible to airborne attacks",
     vtrigger: 1,
     type: "",
     command: "→↓↘ + HP"
@@ -643,14 +643,14 @@ const rose = [
   {
     name: "EX Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "110",
     stan: "160",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo\n VS*Can only be canceled V-Skill I",
     vtrigger: 1,
     type: "",
     command: "→↓↘ + P P"
@@ -717,12 +717,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "50 total frames",
-    hit: "",
+    hit: "(*D)",
     guard: "",
-    damage: "70",
+    damage: "70(*90)",
     stan: "120",
     remarks:
-      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
+      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo\n*When the projectile hits",
     vtrigger: 1,
     type: "",
     command: "↓↙← + P"
@@ -820,8 +820,8 @@ const rose = [
     outbreak: "6",
     persistence: "3",
     rigidity: "12",
-    hit: "6",
-    guard: "2",
+    hit: "7",
+    guard: "3",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -1187,8 +1187,8 @@ const rose = [
     outbreak: "25",
     persistence: "",
     rigidity: "51 total frames",
-    hit: "-4",
-    guard: "-8",
+    hit: "-2",
+    guard: "-6",
     damage: "10",
     stan: "0",
     remarks:
@@ -1511,14 +1511,14 @@ const rose = [
   {
     name: "L Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
     vtrigger: 2,
     type: "",
     command: "→↓↘ + LP"
@@ -1526,14 +1526,14 @@ const rose = [
   {
     name: "M Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
     vtrigger: 2,
     type: "",
     command: "→↓↘ + MP"
@@ -1541,14 +1541,14 @@ const rose = [
   {
     name: "H Soul Bind",
     outbreak: "11",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "Will not hit grounded opponents\n                                                11F - 16F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 10",
+      "Will not hit grounded opponents\n                                                11F - 19F  invincible to mid-air attacks\n                                1F - 10F head to torso invincible to airborne attacks",
     vtrigger: 2,
     type: "",
     command: "→↓↘ + HP"
@@ -1556,14 +1556,14 @@ const rose = [
   {
     name: "EX Soul Bind",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "110",
     stan: "160",
     remarks:
-      "Will not hit grounded opponents\n                                                7F - 12F  invincible to mid-air attacks\n                                Head is invulnerable to mid-air attacks from frames 1 to 6",
+      "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks\nVS*Can only be canceled V-Skill I",
     vtrigger: 2,
     type: "",
     command: "→↓↘ + P P"
@@ -1629,12 +1629,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "50 total frames",
-    hit: "",
+    hit: "(*D)",
     guard: "",
-    damage: "70",
+    damage: "70(*90)",
     stan: "120",
     remarks:
-      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile",
+      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\n*When the projectile hits",
     vtrigger: 2,
     type: "",
     command: "↓↙← + P"
@@ -1658,12 +1658,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "50 total frames",
-    hit: "",
+    hit: "(*D)",
     guard: "",
-    damage: "80",
+    damage: "80(*100)",
     stan: "150",
     remarks:
-      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile",
+      "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\n*When the projectile hits",
     vtrigger: 2,
     type: "",
     command: "↓↙← + P"
@@ -1691,7 +1691,7 @@ const rose = [
     guard: "-28",
     damage: "320",
     stan: "0",
-    remarks: "1F - 13F  attack & projectile invincibility",
+    remarks: "1F - 13F  full invincibility",
     vtrigger: 2,
     type: "",
     command: "↓↘→ ↓↘→ + K"

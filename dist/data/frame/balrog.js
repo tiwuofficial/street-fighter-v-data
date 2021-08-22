@@ -839,7 +839,7 @@ const balrog = [
         remarks: "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定中は飛び道具無敵",
         vtrigger: 1,
         type: "special",
-        command: "↑ + P"
+        command: "↑ + P P"
     },
     {
         name: "EX スカイハイクロー",
@@ -853,7 +853,7 @@ const balrog = [
         remarks: "攻撃判定中は飛び道具無敵",
         vtrigger: 1,
         type: "special",
-        command: "↑ + P P"
+        command: "↑ + P P P"
     },
     {
         name: "ブラッディレイン",
@@ -1679,7 +1679,7 @@ const balrog = [
         remarks: "しゃがみの相手にヒットしない\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定中は飛び道具無敵",
         vtrigger: 2,
         type: "special",
-        command: "↑ + P"
+        command: "↑ + P P"
     },
     {
         name: "EX スカイハイクロー",
@@ -1693,7 +1693,7 @@ const balrog = [
         remarks: "攻撃判定中は飛び道具無敵",
         vtrigger: 2,
         type: "special",
-        command: "↑ + P P"
+        command: "↑ + P P P"
     },
     {
         name: "ブラッディレイン",

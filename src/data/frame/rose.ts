@@ -18,8 +18,8 @@ const rose = [
     outbreak: "6",
     persistence: "3",
     rigidity: "12",
-    hit: "6",
-    guard: "2",
+    hit: "7",
+    guard: "3",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -384,8 +384,8 @@ const rose = [
     outbreak: "25",
     persistence: "",
     rigidity: "全体51",
-    hit: "-4",
-    guard: "-8",
+    hit: "-2",
+    guard: "-6",
     damage: "10",
     stan: "0",
     remarks:
@@ -597,14 +597,14 @@ const rose = [
   {
     name: "弱 ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + 弱P"
@@ -612,14 +612,14 @@ const rose = [
   {
     name: "中 ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + 中P"
@@ -627,14 +627,14 @@ const rose = [
   {
     name: "強 ソウルバインド",
     outbreak: "11",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                11F～16F 空中判定の攻撃に対して無敵\n                                1～10F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                11F～19F 空中判定の攻撃に対して無敵\n                                1～10F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + 強P"
@@ -642,14 +642,14 @@ const rose = [
   {
     name: "EX ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "110",
     stan: "160",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵\nS※ソウルテッラ・ソウルマーレ・ソウルチエーロでキャンセル可能",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵\nS※ソウルテッラ・ソウルマーレ・ソウルチエーロでキャンセル可能\n VS※VS1のみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + P P"
@@ -716,12 +716,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "全体50",
-    hit: "",
+    hit: "(※D)",
     guard: "",
-    damage: "70",
+    damage: "70(※90)",
     stan: "120",
     remarks:
-      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する\nS※ソウルテッラ・ソウルマーレ・ソウルチエーロでキャンセル可能",
+      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する\nS※ソウルテッラ・ソウルマーレ・ソウルチエーロでキャンセル可能\n※飛び道具ヒット時",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + P"
@@ -819,8 +819,8 @@ const rose = [
     outbreak: "6",
     persistence: "3",
     rigidity: "12",
-    hit: "6",
-    guard: "2",
+    hit: "7",
+    guard: "3",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -1185,8 +1185,8 @@ const rose = [
     outbreak: "25",
     persistence: "",
     rigidity: "全体51",
-    hit: "-4",
-    guard: "-8",
+    hit: "-2",
+    guard: "-6",
     damage: "10",
     stan: "0",
     remarks:
@@ -1509,14 +1509,14 @@ const rose = [
   {
     name: "弱 ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + 弱P"
@@ -1524,14 +1524,14 @@ const rose = [
   {
     name: "中 ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + 中P"
@@ -1539,14 +1539,14 @@ const rose = [
   {
     name: "強 ソウルバインド",
     outbreak: "11",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "130",
     stan: "200",
     remarks:
-      "地上の相手にヒットしない\n                                                11F～16F 空中判定の攻撃に対して無敵\n                                1～10F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                11F～19F 空中判定の攻撃に対して無敵\n                                1～10F　頭部～腰まで空中攻撃に対して無敵",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + 強P"
@@ -1554,14 +1554,14 @@ const rose = [
   {
     name: "EX ソウルバインド",
     outbreak: "7",
-    persistence: "6",
-    rigidity: "54",
+    persistence: "9",
+    rigidity: "51",
     hit: "D",
     guard: "",
     damage: "110",
     stan: "160",
     remarks:
-      "地上の相手にヒットしない\n                                                7F～12F 空中判定の攻撃に対して無敵\n                                1～6F　頭部分のみ空中攻撃に対して無敵",
+      "地上の相手にヒットしない\n                                                7F～15F 空中判定の攻撃に対して無敵\n                                1～6F　頭部～腰まで空中攻撃に対して無敵\nVS※VS1のみキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + P P"
@@ -1627,12 +1627,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "全体50",
-    hit: "",
+    hit: "(※D)",
     guard: "",
-    damage: "70",
+    damage: "70(※90)",
     stan: "120",
     remarks:
-      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する",
+      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する\n※飛び道具ヒット時",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + P"
@@ -1656,12 +1656,12 @@ const rose = [
     outbreak: "132",
     persistence: "7",
     rigidity: "全体50",
-    hit: "",
+    hit: "(※D)",
     guard: "",
-    damage: "80",
+    damage: "80(※100)",
     stan: "150",
     remarks:
-      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する",
+      "38Fで弾が出現\nボタンで弾の出現位置が変化\n停滞中に相手の飛び道具に触れると攻撃判定が発生する\n※飛び道具ヒット時",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + P"
@@ -1689,7 +1689,7 @@ const rose = [
     guard: "-28",
     damage: "320",
     stan: "0",
-    remarks: "1F～13F 打撃&飛び道具無敵",
+    remarks: "1F～13F 完全無敵",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + K"
