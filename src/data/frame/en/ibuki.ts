@@ -29,7 +29,7 @@ const ibuki = [
   },
   {
     name: "Standing HP",
-    outbreak: "12",
+    outbreak: "10",
     persistence: "2",
     rigidity: "19",
     hit: "0",
@@ -346,7 +346,7 @@ const ibuki = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "unique",
     command: "(DURING VERTICAL OR FORWARD JUMP) + K K"
@@ -557,7 +557,7 @@ const ibuki = [
     guard: "-3",
     damage: "60",
     stan: "0",
-    remarks: "ヒット/ガード時に各種苦無(地上)・苦無一気投げ(地上)からキャンセル可能",
+    remarks: "Can be canceled with light/medium/heavy Kunai and Kunai Ikkinage after hit or block",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -572,52 +572,67 @@ const ibuki = [
     damage: "20",
     stan: "0",
     remarks:
-      "コマンド入力時のボタン強度によって設置位置が変化\nヒット/ガード時に各種苦無(地上)・苦無一気投げ(地上)からキャンセル可能",
+      "Placement differs based on button strength\nCan be canceled with light/medium/heavy Kunai and Kunai Ikkinage after hit or block",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ P"
   },
   {
     name: "Rokushaku Horokudama (Akebono)",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(*160)",
+    outbreak: "9",
+    persistence: "29(*19)",
+    rigidity: "27 total frames",
+    hit: "8",
+    guard: "3",
+    damage: "20(*1100*2160)",
     stan: "80",
     remarks:
-      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 1 seconds\nGains Rokushaku Horokudama as a special move while active\n*Damage if explosion is triggered from EX Kunai",
+      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 1 seconds\nGains Rokushaku Horokudama as a special move while active\n*1Denotes values of the explosion part\n*2Damage if explosion is triggered from EX Kunai",
     vtrigger: 1,
     type: "vsystem",
     command: "OR ↓ + HP HK"
   },
   {
     name: "Rokushaku Horokudama (Hizakari)",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(*160)",
+    outbreak: "9",
+    persistence: "29(*19)",
+    rigidity: "27 total frames",
+    hit: "8",
+    guard: "3",
+    damage: "20(*1100*2160)",
     stan: "80",
     remarks:
-      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 3 seconds\nGains Rokushaku Horokudama as a special move while active\n*Damage if explosion is triggered from EX Kunai",
+      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 3 seconds\nGains Rokushaku Horokudama as a special move while active\n*1Denotes values of the explosion part\n*2Damage if explosion is triggered from EX Kunai",
     vtrigger: 1,
     type: "vsystem",
     command: "← + HP HK"
   },
   {
     name: "Rokushaku Horokudama (Tasogare)",
-    outbreak: "1",
-    persistence: "",
-    rigidity: "5",
-    hit: "",
-    guard: "",
-    damage: "120(*160)",
+    outbreak: "9",
+    persistence: "29(*19)",
+    rigidity: "27 total frames",
+    hit: "8",
+    guard: "3",
+    damage: "20(*1100*2160)",
     stan: "80",
     remarks:
-      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 5 seconds\nGains Rokushaku Horokudama as a special move while active\n*Damage if explosion is triggered from EX Kunai",
+      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes after 5 seconds\nGains Rokushaku Horokudama as a special move while active\n*1Denotes values of the explosion part\n*2Damage if explosion is triggered from EX Kunai",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "↑ + HP HK"
+  },
+  {
+    name: "Rokushaku Horokudama (Reimei)",
+    outbreak: "9",
+    persistence: "29(*9)",
+    rigidity: "27 total frames",
+    hit: "8",
+    guard: "3",
+    damage: "20(*100)",
+    stan: "80",
+    remarks:
+      "V-Gauge Timer + 2000F\n                                                                                                                                                                                Explodes immediately\nGains Rokushaku Horokudama as a special move while active\n*Denotes values of the explosion part",
     vtrigger: 1,
     type: "vsystem",
     command: "→ + HP HK"
@@ -636,6 +651,35 @@ const ibuki = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Chizuri Hayabusa",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Kazekiri",
@@ -759,7 +803,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LP"
@@ -773,7 +817,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP"
@@ -787,7 +831,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HP"
@@ -802,7 +846,7 @@ const ibuki = [
     damage: "60",
     stan: "100",
     remarks:
-      "Recovery values are for on contact\nRokushaku Horokudama will explode upon V-cancel\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*VS2のみキャンセル可能",
+      "Recovery values are for on contact\nRokushaku Horokudama will explode upon V-cancel\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LP MP"
@@ -817,7 +861,7 @@ const ibuki = [
     damage: "60",
     stan: "100",
     remarks:
-      "Recovery values are for on contact\nRegular 2nd hit will not hit the bomb, during V-cancel it will make Rokushaku Horokudama explode\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*VS2のみキャンセル可能",
+      "Recovery values are for on contact\nRegular 2nd hit will not hit the bomb, during V-cancel it will make Rokushaku Horokudama explode\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LP HP"
@@ -832,7 +876,7 @@ const ibuki = [
     damage: "60",
     stan: "100",
     remarks:
-      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*VS2のみキャンセル可能",
+      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nThe second hit can cause Rokushaku Horokudama to explode.\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP HP"
@@ -875,7 +919,7 @@ const ibuki = [
     damage: "*120",
     stan: "*120",
     remarks:
-      "Number of hits changes depending on the number of Kunai stored (1 - 6 hits)\nS*Can be canceled into special moves except for Kunai and EX Kunai\nVS*VS2のみキャンセル可能\n*Value displayed is for 6 Kunai in stock (for every Kunai less than 6, -2F from recovery, -20 from damage, -10 from Meter Gain on hit)\nDuring V-cancel, from the 6th to the 5th the recovery is -3F, for the rest it's -2F",
+      "Number of hits changes depending on the number of Kunai stored (1 - 6 hits)\nS*Can be canceled into special moves except for Kunai and EX Kunai\nVS*Can only be canceled V-Skill II\n*Value displayed is for 6 Kunai in stock (for every Kunai less than 6, -2F from recovery, -20 from damage, -10 from Meter Gain on hit)\nDuring V-cancel, from the 6th to the 5th the recovery is -3F, for the rest it's -2F",
     vtrigger: 1,
     type: "special",
     command: "P (HOLD AND RELEASE)"
@@ -970,14 +1014,14 @@ const ibuki = [
   {
     name: "VRokushaku Horokudama (Akebono)",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(*9)",
     rigidity: "42 total frames",
-    hit: "",
-    guard: "",
-    damage: "100",
+    hit: "8",
+    guard: "2",
+    damage: "20(*100)",
     stan: "80",
     remarks:
-      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 1 seconds",
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 1 seconds\n*Denotes values of the explosion part",
     vtrigger: 1,
     type: "special",
     command: "OR ↓ + HP HK"
@@ -985,14 +1029,14 @@ const ibuki = [
   {
     name: "VRokushaku Horokudama (Hizakari)",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(*9)",
     rigidity: "42 total frames",
     hit: "",
     guard: "",
-    damage: "100",
+    damage: "20(*100)",
     stan: "80",
     remarks:
-      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 3 seconds",
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 3 seconds\n*Denotes values of the explosion part",
     vtrigger: 1,
     type: "special",
     command: "← + HP HK"
@@ -1000,14 +1044,29 @@ const ibuki = [
   {
     name: "VRokushaku Horokudama (Tasogare)",
     outbreak: "25",
-    persistence: "",
+    persistence: "29(*9)",
     rigidity: "42 total frames",
-    hit: "",
-    guard: "",
-    damage: "100",
+    hit: "8",
+    guard: "2",
+    damage: "20(*100)",
     stan: "80",
     remarks:
-      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 5 seconds",
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes after 5 seconds\n*Denotes values of the explosion part",
+    vtrigger: 1,
+    type: "special",
+    command: "↑ + HP HK"
+  },
+  {
+    name: "VRokushaku Horokudama (Reimei)",
+    outbreak: "25",
+    persistence: "29(*9)",
+    rigidity: "42 total frames",
+    hit: "8",
+    guard: "2",
+    damage: "20(*100)",
+    stan: "80",
+    remarks:
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Explodes immediately\n*Denotes values of the explosion part",
     vtrigger: 1,
     type: "special",
     command: "→ + HP HK"
@@ -1056,7 +1115,7 @@ const ibuki = [
   },
   {
     name: "Standing HP",
-    outbreak: "12",
+    outbreak: "10",
     persistence: "2",
     rigidity: "19",
     hit: "0",
@@ -1373,7 +1432,7 @@ const ibuki = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "unique",
     command: "(DURING VERTICAL OR FORWARD JUMP) + K K"
@@ -1584,7 +1643,7 @@ const ibuki = [
     guard: "-3",
     damage: "60",
     stan: "0",
-    remarks: "ヒット/ガード時に各種苦無(地上)・苦無一気投げ(地上)からキャンセル可能",
+    remarks: "Can be canceled with light/medium/heavy Kunai and Kunai Ikkinage after hit or block",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1599,7 +1658,7 @@ const ibuki = [
     damage: "20",
     stan: "0",
     remarks:
-      "コマンド入力時のボタン強度によって設置位置が変化\nヒット/ガード時に各種苦無(地上)・苦無一気投げ(地上)からキャンセル可能",
+      "Placement differs based on button strength\nCan be canceled with light/medium/heavy Kunai and Kunai Ikkinage after hit or block",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ P"
@@ -1646,6 +1705,35 @@ const ibuki = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Chizuri Hayabusa",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Kazekiri",
@@ -1769,7 +1857,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LP"
@@ -1783,7 +1871,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MP"
@@ -1797,7 +1885,7 @@ const ibuki = [
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + HP"
@@ -1811,7 +1899,7 @@ const ibuki = [
     guard: "14",
     damage: "60",
     stan: "100",
-    remarks: "Recovery values are for on contact\nVS*VS2のみキャンセル可能",
+    remarks: "Recovery values are for on contact\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LP MP"
@@ -1826,7 +1914,7 @@ const ibuki = [
     damage: "60",
     stan: "100",
     remarks:
-      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nVS*VS2のみキャンセル可能",
+      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LP HP"
@@ -1841,7 +1929,7 @@ const ibuki = [
     damage: "60",
     stan: "100",
     remarks:
-      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nVS*VS2のみキャンセル可能",
+      "Recovery values are for on contact\nThe 2nd hit will not hit the bomb\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MP HP"
@@ -1884,7 +1972,7 @@ const ibuki = [
     damage: "*120",
     stan: "*120",
     remarks:
-      "Number of hits changes depending on the number of Kunai stored (1 - 6 hits)\nS*Can be canceled into special moves except for Kunai and EX Kunai\nVS*VS2のみキャンセル可能\n*Value displayed is for 6 Kunai in stock (for every Kunai less than 6, -2F from recovery, -20 from damage, -10 from Meter Gain on hit)\nDuring V-cancel, from the 6th to the 5th the recovery is -3F, for the rest it's -2F",
+      "Number of hits changes depending on the number of Kunai stored (1 - 6 hits)\nS*Can be canceled into special moves except for Kunai and EX Kunai\nVS*Can only be canceled V-Skill II\n*Value displayed is for 6 Kunai in stock (for every Kunai less than 6, -2F from recovery, -20 from damage, -10 from Meter Gain on hit)\nDuring V-cancel, from the 6th to the 5th the recovery is -3F, for the rest it's -2F",
     vtrigger: 2,
     type: "special",
     command: "P (HOLD AND RELEASE)"
@@ -1991,4 +2079,5 @@ const ibuki = [
     command: "↓↘→ ↓↘→ + K"
   }
 ];
+
 export { ibuki };

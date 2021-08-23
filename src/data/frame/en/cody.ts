@@ -33,10 +33,10 @@ const cody = [
     persistence: "5",
     rigidity: "21",
     hit: "3",
-    guard: "-7",
+    guard: "-10",
     damage: "120(*70)",
     stan: "170(*120)",
-    remarks: "S*CA*Only possible during 1st attack\n*Only for the 2nd hit",
+    remarks: "*Only for the 2nd hit",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -297,7 +297,7 @@ const cody = [
   },
   {
     name: "(WHILE HOLDING KNIFE) Crouching LP",
-    outbreak: "5",
+    outbreak: "4",
     persistence: "3",
     rigidity: "7",
     hit: "5",
@@ -462,7 +462,7 @@ const cody = [
     guard: "",
     damage: "40",
     stan: "70",
-    remarks: "",
+    remarks: "Can cross-up",
     vtrigger: 1,
     type: "unique",
     command: "(DURING JUMP) MK ▶ LK"
@@ -542,11 +542,11 @@ const cody = [
     outbreak: "3",
     persistence: "4",
     rigidity: "14",
-    hit: "2",
+    hit: "5",
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "Strength treated as a light attack",
+    remarks: "Strength treated as a hard attack",
     vtrigger: 1,
     type: "unique",
     command: "(WHEN RECOVERING IN PLACE) ↑ + P"
@@ -604,7 +604,7 @@ const cody = [
     damage: "",
     stan: "",
     remarks:
-      "2～25F 立ち/空中状態の攻撃と飛び道具に対して無敵\n13F～レンチフィストに派生可能\nSubject to counter hit during move duration",
+      "Invulnerable to standing/airborne attacks and projectiles from frames 2 to 25\nCan transition into Wrench Fist from frame 13\nSubject to counter hit during move duration",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -619,7 +619,7 @@ const cody = [
     damage: "",
     stan: "",
     remarks:
-      "2～25F しゃがみ状態の攻撃と飛び道具に対して無敵\n15F～ランバースイープに派生可能\nSubject to counter hit during move duration",
+      "Invulnerable to crouching attacks and projectiles from frames 2 to 25\nCan transition into Lumber Sweep from frame 15\nSubject to counter hit during move duration",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
@@ -677,17 +677,46 @@ const cody = [
     damage: "60",
     stan: "0",
     remarks:
-      "1F - 29F  attack invincibility\n                                                Recover 200 stun upon activation\non hit",
+      "1F - 29F  attack invincibility\n                                                Recover 200 stun upon activation\n*on hit",
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Payback",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Tornado Sweep",
     outbreak: "18",
-    persistence: "65",
+    persistence: "50",
     rigidity: "49 total frames",
-    hit: "-2",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -699,9 +728,9 @@ const cody = [
   {
     name: "M Tornado Sweep",
     outbreak: "18",
-    persistence: "52",
+    persistence: "70",
     rigidity: "49 total frames",
-    hit: "0",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -713,7 +742,7 @@ const cody = [
   {
     name: "H Tornado Sweep",
     outbreak: "18",
-    persistence: "39",
+    persistence: "55",
     rigidity: "49 total frames",
     hit: "2",
     guard: "-7",
@@ -854,7 +883,7 @@ const cody = [
   },
   {
     name: "Snipe Shot",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "",
     rigidity: "37 total frames",
     hit: "D",
@@ -906,7 +935,7 @@ const cody = [
     damage: "140",
     stan: "180",
     remarks:
-      "Uses 900F V-Gauge Timer\n                                                                                                                                                                                Cannot be performed when the V-Timer is at 0\nフィニッシュ時にVタイマーが0の時、最終段の攻撃が変化",
+      "Uses 600F V-Gauge Timer\n                                                                                                                                                                                Cannot be performed when the V-Timer is at 0\nFinal attack changes if V Timer is 0 at finish",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) (WHILE HOLDING KNIFE) ↓↙← + P"
@@ -960,10 +989,10 @@ const cody = [
     persistence: "5",
     rigidity: "21",
     hit: "3",
-    guard: "-7",
+    guard: "-10",
     damage: "120(*70)",
     stan: "170(*120)",
-    remarks: "S*CA*Only possible during 1st attack\n*Only for the 2nd hit",
+    remarks: "*Only for the 2nd hit",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1315,7 +1344,7 @@ const cody = [
     guard: "",
     damage: "40",
     stan: "70",
-    remarks: "",
+    remarks: "Can cross-up",
     vtrigger: 2,
     type: "unique",
     command: "(DURING JUMP) MK ▶ LK"
@@ -1381,11 +1410,11 @@ const cody = [
     outbreak: "3",
     persistence: "4",
     rigidity: "14",
-    hit: "2",
+    hit: "5",
     guard: "-2",
     damage: "40",
     stan: "50",
-    remarks: "Strength treated as a light attack",
+    remarks: "Strength treated as a hard attack",
     vtrigger: 2,
     type: "unique",
     command: "(WHEN RECOVERING IN PLACE) ↑ + P"
@@ -1457,7 +1486,7 @@ const cody = [
     damage: "",
     stan: "",
     remarks:
-      "2～25F 立ち/空中状態の攻撃と飛び道具に対して無敵\n13F～レンチフィストに派生可能\nSubject to counter hit during move duration",
+      "Invulnerable to standing/airborne attacks and projectiles from frames 2 to 25\nCan transition into Wrench Fist from frame 13\nSubject to counter hit during move duration",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1472,7 +1501,7 @@ const cody = [
     damage: "",
     stan: "",
     remarks:
-      "2～25F しゃがみ状態の攻撃と飛び道具に対して無敵\n15F～ランバースイープに派生可能\nSubject to counter hit during move duration",
+      "Invulnerable to crouching attacks and projectiles from frames 2 to 25\nCan transition into Lumber Sweep from frame 15\nSubject to counter hit during move duration",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
@@ -1530,17 +1559,46 @@ const cody = [
     damage: "60",
     stan: "0",
     remarks:
-      "1F - 29F  attack invincibility\n                                                Recover 200 stun upon activation\non hit",
+      "1F - 29F  attack invincibility\n                                                Recover 200 stun upon activation\n*on hit",
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Payback",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Tornado Sweep",
     outbreak: "18",
-    persistence: "65",
+    persistence: "50",
     rigidity: "49 total frames",
-    hit: "-2",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -1552,9 +1610,9 @@ const cody = [
   {
     name: "M Tornado Sweep",
     outbreak: "18",
-    persistence: "52",
+    persistence: "70",
     rigidity: "49 total frames",
-    hit: "0",
+    hit: "2",
     guard: "-7",
     damage: "50",
     stan: "100",
@@ -1566,7 +1624,7 @@ const cody = [
   {
     name: "H Tornado Sweep",
     outbreak: "18",
-    persistence: "39",
+    persistence: "55",
     rigidity: "49 total frames",
     hit: "2",
     guard: "-7",
@@ -1828,7 +1886,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "150",
+    damage: "160",
     stan: "150",
     remarks: "S*Can be canceled into Bean Ball",
     vtrigger: 2,
@@ -1842,7 +1900,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "220",
+    damage: "230",
     stan: "300",
     remarks: "S*Can be canceled into Bean Ball",
     vtrigger: 2,
@@ -1856,7 +1914,7 @@ const cody = [
     rigidity: "",
     hit: "D",
     guard: "",
-    damage: "140",
+    damage: "150",
     stan: "150",
     remarks: "S*Can be canceled into Bean Ball",
     vtrigger: 2,
@@ -1880,4 +1938,5 @@ const cody = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { cody };

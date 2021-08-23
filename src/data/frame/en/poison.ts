@@ -59,9 +59,9 @@ const poison = [
     name: "Standing MK",
     outbreak: "7",
     persistence: "3",
-    rigidity: "16",
-    hit: "2",
-    guard: "-2",
+    rigidity: "18",
+    hit: "0",
+    guard: "-4",
     damage: "70",
     stan: "100",
     remarks: "",
@@ -79,7 +79,7 @@ const poison = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter (+22F)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter (+22F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -121,7 +121,7 @@ const poison = [
     guard: "-11",
     damage: "80",
     stan: "150",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -136,7 +136,7 @@ const poison = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -150,7 +150,7 @@ const poison = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -165,7 +165,7 @@ const poison = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter (D)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -348,7 +348,7 @@ const poison = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "4～20F 押し合い判定が消える",
+    remarks: "Collision box disappears from frames 4 to 20",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -360,7 +360,7 @@ const poison = [
     rigidity: "21+10 frame(s) after landing",
     hit: "D",
     guard: "-12",
-    damage: "70",
+    damage: "60",
     stan: "100",
     remarks: "S*Only on hit",
     vtrigger: 1,
@@ -398,13 +398,42 @@ const poison = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Danger Zone",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Avant Line",
     outbreak: "15",
     persistence: "2",
     rigidity: "27",
     hit: "1",
     guard: "-7",
-    damage: "70",
+    damage: "60",
     stan: "100",
     remarks: "",
     vtrigger: 1,
@@ -418,7 +447,7 @@ const poison = [
     rigidity: "27",
     hit: "2",
     guard: "-8",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "Poison only performs the next attack on hit or block",
     vtrigger: 1,
@@ -432,7 +461,7 @@ const poison = [
     rigidity: "27",
     hit: "D",
     guard: "-17",
-    damage: "120",
+    damage: "110",
     stan: "150",
     remarks: "Poison only performs the next attack on hit or block",
     vtrigger: 1,
@@ -449,7 +478,7 @@ const poison = [
     damage: "120",
     stan: "150",
     remarks:
-      "5段目～最終段はヒット時のみ派生する\nS*最終段のみVT専用必殺技でキャンセル可能(ガード時は4段目)",
+      "Can be transitioned only on hit from frame 5 to the end of the attack\nS*Can be canceled by V Trigger exclusive Special Move, only after final attack (or on fourth attack on block)",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P P"
@@ -520,7 +549,7 @@ const poison = [
     rigidity: "26",
     hit: "2",
     guard: "-6",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -534,7 +563,7 @@ const poison = [
     rigidity: "26",
     hit: "2",
     guard: "-6",
-    damage: "100",
+    damage: "90",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -562,7 +591,7 @@ const poison = [
     rigidity: "24",
     hit: "D",
     guard: "-2",
-    damage: "120",
+    damage: "100",
     stan: "100",
     remarks:
       "V*Only possible during 1st attack\nS*2nd hit can be canceled into Shocking Heel on hit only",
@@ -576,7 +605,7 @@ const poison = [
     persistence: "4",
     rigidity: "24",
     hit: "2",
-    guard: "2",
+    guard: "1",
     damage: "130",
     stan: "200",
     remarks: "V*Only possible during 1st attack",
@@ -718,10 +747,10 @@ const poison = [
     rigidity: "44 total frames",
     hit: "D",
     guard: "-2",
-    damage: "60（*+51）",
+    damage: "40（*+51）",
     stan: "100",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from each normal and special move\nArea where the projectile hits causes fire damage\n*Value within the parenthesis is the fire damage\n*Effective value reduces if the fire damage is stacked\nVS*VS2のみキャンセル可能",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from each normal and special move\nArea where the projectile hits causes fire damage\n*Value within the parenthesis is the fire damage\n*Effective value reduces if the fire damage is stacked\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "OR ← + HP HK"
@@ -800,9 +829,9 @@ const poison = [
     name: "Standing MK",
     outbreak: "7",
     persistence: "3",
-    rigidity: "16",
-    hit: "2",
-    guard: "-2",
+    rigidity: "18",
+    hit: "0",
+    guard: "-4",
     damage: "70",
     stan: "100",
     remarks: "",
@@ -820,7 +849,7 @@ const poison = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter (+22F)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter (+22F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -862,7 +891,7 @@ const poison = [
     guard: "-11",
     damage: "80",
     stan: "150",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -877,7 +906,7 @@ const poison = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -891,7 +920,7 @@ const poison = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -906,7 +935,7 @@ const poison = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter (D)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1089,7 +1118,7 @@ const poison = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "4～20F 押し合い判定が消える",
+    remarks: "Collision box disappears from frames 4 to 20",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1101,7 +1130,7 @@ const poison = [
     rigidity: "21+10 frame(s) after landing",
     hit: "D",
     guard: "-12",
-    damage: "70",
+    damage: "60",
     stan: "100",
     remarks: "S*Only on hit",
     vtrigger: 2,
@@ -1139,13 +1168,42 @@ const poison = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Danger Zone",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Avant Line",
     outbreak: "15",
     persistence: "2",
     rigidity: "27",
     hit: "1",
     guard: "-7",
-    damage: "70",
+    damage: "60",
     stan: "100",
     remarks: "",
     vtrigger: 2,
@@ -1159,7 +1217,7 @@ const poison = [
     rigidity: "27",
     hit: "2",
     guard: "-8",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "Poison only performs the next attack on hit or block",
     vtrigger: 2,
@@ -1173,7 +1231,7 @@ const poison = [
     rigidity: "27",
     hit: "D",
     guard: "-17",
-    damage: "120",
+    damage: "110",
     stan: "150",
     remarks: "Poison only performs the next attack on hit or block",
     vtrigger: 2,
@@ -1190,7 +1248,7 @@ const poison = [
     damage: "120",
     stan: "150",
     remarks:
-      "5段目～最終段はヒット時のみ派生する\nS*最終段のみVT専用必殺技でキャンセル可能(ガード時は4段目)",
+      "Can be transitioned only on hit from frame 5 to the end of the attack\nS*Can be canceled by V Trigger exclusive Special Move, only after final attack (or on fourth attack on block)",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P"
@@ -1261,7 +1319,7 @@ const poison = [
     rigidity: "26",
     hit: "2",
     guard: "-6",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "",
     vtrigger: 2,
@@ -1275,7 +1333,7 @@ const poison = [
     rigidity: "26",
     hit: "2",
     guard: "-6",
-    damage: "100",
+    damage: "90",
     stan: "150",
     remarks: "",
     vtrigger: 2,
@@ -1303,7 +1361,7 @@ const poison = [
     rigidity: "24",
     hit: "D",
     guard: "-2",
-    damage: "120",
+    damage: "100",
     stan: "100",
     remarks:
       "V*Only possible during 1st attack\nS*2nd hit can be canceled into Shocking Heel on hit only",
@@ -1317,7 +1375,7 @@ const poison = [
     persistence: "4",
     rigidity: "24",
     hit: "2",
-    guard: "2",
+    guard: "1",
     damage: "130",
     stan: "200",
     remarks: "V*Only possible during 1st attack",
@@ -1454,7 +1512,7 @@ const poison = [
   },
   {
     name: "VToxic Hold",
-    outbreak: "6",
+    outbreak: "5",
     persistence: "3",
     rigidity: "52",
     hit: "D",
@@ -1469,13 +1527,13 @@ const poison = [
   },
   {
     name: "VToxic Bind",
-    outbreak: "29",
+    outbreak: "24",
     persistence: "2",
     rigidity: "44",
     hit: "D",
     guard: "",
-    damage: "150",
-    stan: "150",
+    damage: "180",
+    stan: "200",
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from each normal and special move\nWhen performed from a special move cancel, it can throw grounded opponents who are in hit stun",
     vtrigger: 2,
@@ -1497,4 +1555,5 @@ const poison = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { poison };

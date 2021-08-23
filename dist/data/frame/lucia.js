@@ -410,8 +410,8 @@ const lucia = [
     {
         name: "[VS2]アレストヒール",
         outbreak: "28",
-        persistence: "2",
-        rigidity: "2+着地後16",
+        persistence: "4",
+        rigidity: "着地後16",
         hit: "D",
         guard: "-4",
         damage: "90",
@@ -424,8 +424,8 @@ const lucia = [
     {
         name: "V[VS2]アレストヒール",
         outbreak: "28",
-        persistence: "2",
-        rigidity: "2+着地後16",
+        persistence: "4",
+        rigidity: "着地後16",
         hit: "D",
         guard: "-4",
         damage: "100",
@@ -914,7 +914,7 @@ const lucia = [
     {
         name: "弱 ハリケーンスピナー",
         outbreak: "7",
-        persistence: "9",
+        persistence: "12",
         rigidity: "20+着地後15",
         hit: "D",
         guard: "-38",
@@ -928,7 +928,7 @@ const lucia = [
     {
         name: "中 ハリケーンスピナー",
         outbreak: "9",
-        persistence: "9",
+        persistence: "12",
         rigidity: "23+着地後15",
         hit: "D",
         guard: "-41",
@@ -942,7 +942,7 @@ const lucia = [
     {
         name: "強 ハリケーンスピナー",
         outbreak: "13",
-        persistence: "9",
+        persistence: "12",
         rigidity: "30+着地後15",
         hit: "D",
         guard: "-48",
@@ -1474,8 +1474,8 @@ const lucia = [
     {
         name: "[VS2]アレストヒール",
         outbreak: "28",
-        persistence: "2",
-        rigidity: "2+着地後16",
+        persistence: "4",
+        rigidity: "着地後16",
         hit: "D",
         guard: "-4",
         damage: "90",
@@ -1824,7 +1824,7 @@ const lucia = [
     {
         name: "弱 ハリケーンスピナー",
         outbreak: "7",
-        persistence: "9",
+        persistence: "12",
         rigidity: "20+着地後15",
         hit: "D",
         guard: "-38",
@@ -1838,7 +1838,7 @@ const lucia = [
     {
         name: "中 ハリケーンスピナー",
         outbreak: "9",
-        persistence: "9",
+        persistence: "12",
         rigidity: "23+着地後15",
         hit: "D",
         guard: "-41",
@@ -1852,7 +1852,7 @@ const lucia = [
     {
         name: "強 ハリケーンスピナー",
         outbreak: "13",
-        persistence: "9",
+        persistence: "12",
         rigidity: "30+着地後15",
         hit: "D",
         guard: "-48",

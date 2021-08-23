@@ -345,10 +345,10 @@ const seth = [
     persistence: "3",
     rigidity: "21 (*26)",
     hit: "2",
-    guard: "-5",
+    guard: "-8",
     damage: "60",
     stan: "80",
-    remarks: "*On whiff",
+    remarks: "*on block/whiff",
     vtrigger: 1,
     type: "unique",
     command: "→ + MP ▶ HK"
@@ -365,7 +365,7 @@ const seth = [
     remarks: "",
     vtrigger: 1,
     type: "unique",
-    command: "→ + MP ▶ HK ▶ HP"
+    command: "↗ + MP ▶ HK ▶ HP"
   },
   {
     name: "Death Throw",
@@ -400,7 +400,7 @@ const seth = [
     outbreak: "20",
     persistence: "25",
     rigidity: "21",
-    hit: "2",
+    hit: "3",
     guard: "-2",
     damage: "10",
     stan: "0",
@@ -412,7 +412,7 @@ const seth = [
   {
     name: "[VS1] Tanden Install",
     outbreak: "4",
-    persistence: "5",
+    persistence: "9",
     rigidity: "25",
     hit: "D",
     guard: "-16",
@@ -517,7 +517,7 @@ const seth = [
     damage: "",
     stan: "",
     remarks:
-      "V-Gauge Timer + 4000F\n                                                                                                                                                                                While active, various attacks are added to Hecatoncheires, Mad Cradle, Cruel Disaster, and Annihilate Sword.",
+      "V-Gauge Timer + 3000F\n                                                                                                                                                                                While active, various attacks are added to Hecatoncheires, Mad Cradle, Cruel Disaster, and Annihilate Sword.",
     vtrigger: 1,
     type: "vsystem",
     command: "HP HK"
@@ -536,6 +536,35 @@ const seth = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Hell's Punishment",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Hecatoncheires",
@@ -720,7 +749,7 @@ const seth = [
     name: "L Annihilate Sword",
     outbreak: "14",
     persistence: "6",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "13 frame(s) after landing",
     hit: "",
     guard: "",
     damage: "70",
@@ -734,7 +763,7 @@ const seth = [
     name: "M Annihilate Sword",
     outbreak: "23",
     persistence: "6",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "13 frame(s) after landing",
     hit: "",
     guard: "",
     damage: "80",
@@ -748,7 +777,7 @@ const seth = [
     name: "H Annihilate Sword",
     outbreak: "27",
     persistence: "6",
-    rigidity: "16 frame(s) after landing",
+    rigidity: "20 frame(s) after landing",
     hit: "D",
     guard: "",
     damage: "90",
@@ -782,7 +811,7 @@ const seth = [
     damage: "120",
     stan: "100",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Hecatoncheires Install Art hits or is guarded.",
+      "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Hecatoncheires Install Art hits or is guarded.",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) ↓↘→ + P ▶ HP HK"
@@ -797,7 +826,7 @@ const seth = [
     damage: "*n×10",
     stan: "*n×10+20",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Mad Cradle hits, or certain Install Arts hit, or when guarded.\n*(Hits until landing)",
+      "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Mad Cradle hits, or certain Install Arts hit, or when guarded.\n*(Hits until landing)",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) →↓↘ + P ▶ HP HK"
@@ -808,10 +837,11 @@ const seth = [
     persistence: "2",
     rigidity: "75",
     hit: "D",
-    guard: "-56",
+    guard: "-2",
     damage: "80",
     stan: "100",
-    remarks: "Uses 1000F V-Gauge Timer",
+    remarks:
+      "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Recovery shortened by 52 frames on block",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) (from ALEX's Install Art) HP HK"
@@ -826,7 +856,7 @@ const seth = [
     damage: "70",
     stan: "100",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Cruel Disaster Install Art hits or is guarded.\nEX Cruel Disaster can only be cancelled on hit.",
+      "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Cruel Disaster Install Art hits or is guarded.\nEX Cruel Disaster can only be cancelled on hit.",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) ↓↙← + K ▶ HP HK"
@@ -841,7 +871,7 @@ const seth = [
     damage: "90",
     stan: "120",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Annihilate Sword Install Art hits or is guarded.",
+      "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Can be cancelled when Annihilate Sword Install Art hits or is guarded.",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) (DURING FORWARD JUMP) ↓↙← + K ▶ HP HK"
@@ -849,13 +879,13 @@ const seth = [
   {
     name: "Tanden Destruction",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "-30",
     damage: "330",
     stan: "0",
-    remarks: "1F - 15F  full invincibility",
+    remarks: "1F - 10F  full invincibility",
     vtrigger: 1,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
@@ -863,13 +893,13 @@ const seth = [
   {
     name: "VTanden Extreme",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "-30",
     damage: "350",
     stan: "0",
-    remarks: "1F - 15F  full invincibility",
+    remarks: "1F - 10F  full invincibility",
     vtrigger: 1,
     type: "ca",
     command: "(DURING V-TRIGGER I) ↓↘→ ↓↘→ + P"
@@ -1220,10 +1250,10 @@ const seth = [
     persistence: "3",
     rigidity: "21(*26)",
     hit: "2",
-    guard: "-5",
+    guard: "-8",
     damage: "60",
     stan: "80",
-    remarks: "*On whiff",
+    remarks: "*on block/whiff",
     vtrigger: 2,
     type: "unique",
     command: "→ + MP ▶ HK"
@@ -1240,7 +1270,7 @@ const seth = [
     remarks: "",
     vtrigger: 2,
     type: "unique",
-    command: "→ + MP ▶ HK ▶ HP"
+    command: "↗ + MP ▶ HK ▶ HP"
   },
   {
     name: "Death Throw",
@@ -1275,7 +1305,7 @@ const seth = [
     outbreak: "20",
     persistence: "25",
     rigidity: "21",
-    hit: "2",
+    hit: "3",
     guard: "-2",
     damage: "10",
     stan: "0",
@@ -1287,7 +1317,7 @@ const seth = [
   {
     name: "[VS1] Tanden Install",
     outbreak: "4",
-    persistence: "5",
+    persistence: "9",
     rigidity: "25",
     hit: "D",
     guard: "-16",
@@ -1524,6 +1554,35 @@ const seth = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Hell's Punishment",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Hecatoncheires",
     outbreak: "11",
     persistence: "8",
@@ -1706,7 +1765,7 @@ const seth = [
     name: "L Annihilate Sword",
     outbreak: "14",
     persistence: "6",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "13 frame(s) after landing",
     hit: "",
     guard: "",
     damage: "70",
@@ -1720,7 +1779,7 @@ const seth = [
     name: "M Annihilate Sword",
     outbreak: "23",
     persistence: "6",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "13 frame(s) after landing",
     hit: "",
     guard: "",
     damage: "80",
@@ -1734,7 +1793,7 @@ const seth = [
     name: "H Annihilate Sword",
     outbreak: "27",
     persistence: "6",
-    rigidity: "16 frame(s) after landing",
+    rigidity: "20 frame(s) after landing",
     hit: "D",
     guard: "",
     damage: "90",
@@ -1879,18 +1938,34 @@ const seth = [
     command: "(During Tanden Maneuver) HP HK"
   },
   {
+    name: "Tanden Explode (Automatic Detonation version)",
+    outbreak: "",
+    persistence: "12",
+    rigidity: "",
+    hit: "D",
+    guard: "8",
+    damage: "50",
+    stan: "50",
+    remarks:
+      "Triggers when a Tanden Maneuver projectile disappears (excluding when the projectile has been moved 4 times)",
+    vtrigger: 2,
+    type: "special",
+    command: "(During Tanden Maneuver) HP HK"
+  },
+  {
     name: "Tanden Destruction",
     outbreak: "6",
-    persistence: "10",
-    rigidity: "42",
+    persistence: "5",
+    rigidity: "47",
     hit: "D",
     guard: "30",
     damage: "330",
     stan: "0",
-    remarks: "1F - 15F  full invincibility",
+    remarks: "1F - 10F  full invincibility",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { seth };

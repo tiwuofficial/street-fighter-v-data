@@ -103,7 +103,7 @@ const kage = [
         name: "Crouching MP",
         outbreak: "5",
         persistence: "3",
-        rigidity: "15",
+        rigidity: "12",
         hit: "6",
         guard: "3",
         damage: "60",
@@ -276,7 +276,7 @@ const kage = [
         guard: "",
         damage: "60",
         stan: "100",
-        remarks: "",
+        remarks: "Properties change when used from Airborne Ashura Senku\n(When an airborne opponent is hit, the effect may change from mid-air recovery to a blow back, etc.)",
         vtrigger: 1,
         type: "unique",
         command: "(DURING FORWARD JUMP) ↓ + MK"
@@ -388,7 +388,7 @@ const kage = [
         guard: "-2",
         damage: "90",
         stan: "150",
-        remarks: "Triggers Crush Counter (+24F)\n                                                                                                                                                                High/mid hit and projectile armor from 5F to 40F.\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
+        remarks: "Triggers Crush Counter (+24F)\n                                                                                                                                                                High/mid hit and projectile armor from 5F to 42F.\nCan be canceled with special forward dash (20 frames total) on hit or block",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK (HOLD BUTTONS)"
@@ -444,7 +444,7 @@ const kage = [
         guard: "6",
         damage: "120",
         stan: "150",
-        remarks: "High/mid hit and projectile armor from 2F to 29F.\nHit and projectile armor from 30F to 38F.\nCan be canceled into from normal and unique moves.",
+        remarks: "High/mid hit and projectile armor from 2F to 29F.\nHit and projectile armor from 30F to 39F.\nCan be canceled into from normal and unique moves.",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) MP MK (HOLD BUTTONS)"
@@ -461,7 +461,7 @@ const kage = [
         remarks: "",
         vtrigger: 1,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL II) (DURING V-TRIGGER I) (Vトリガーキャンセル可能技ヒット/ガード後) MP MK"
+        command: "(WHEN SELECTING VSKILL II) (DURING V-TRIGGER I) (After a move canceled into V Trigger hits or is blocked) MP MK"
     },
     {
         name: "V[VS2] Sekieiken (Airbone)",
@@ -475,7 +475,7 @@ const kage = [
         remarks: "",
         vtrigger: 1,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL II) (DURING V-TRIGGER I) (EX空靂刃/EX空中空靂刃/EX空中波動拳いずれかヒット/ガード後) MP MK"
+        command: "(WHEN SELECTING VSKILL II) (DURING V-TRIGGER I) After EX Kurekijin/EX Airborne Kurekijin/EX Airborne Hadoken hits or is blocked MP MK"
     },
     {
         name: "Senbugeki",
@@ -490,6 +490,34 @@ const kage = [
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING GUARD) → + LP"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Yashazuki",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "Hadoken",
@@ -703,7 +731,7 @@ const kage = [
     },
     {
         name: "EX Kurekijin",
-        outbreak: "16",
+        outbreak: "11",
         persistence: "2",
         rigidity: "26",
         hit: "D",
@@ -717,14 +745,14 @@ const kage = [
     },
     {
         name: "Airborne Kurekijin",
-        outbreak: "10",
+        outbreak: "10(*16)",
         persistence: "4",
         rigidity: "12 frame(s) after landing",
-        hit: "*1D",
+        hit: "*2D",
         guard: "",
-        damage: "90(*270)",
+        damage: "90(*370)",
         stan: "150",
-        remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                *1Grounded hit stun on cross-up hit\n*2Parameters for cross-up part",
+        remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                *1Value if used at low point of upward movement\n*2Grounded hit stun on cross-up hit\n*3Parameters for cross-up part",
         vtrigger: 1,
         type: "special",
         command: "(DURING JUMP) ↓↙← + K"
@@ -836,7 +864,7 @@ const kage = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Uses 500F V-Gauge Timer\n                                                                                                                                3F - 23F  projectile invincibility\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\nUses 1,200F V-Timer gauge when canceled into from a special move cancelable normal move, and each special move",
+        remarks: "Uses 500F V-Gauge Timer\n                                                                                                                                3F - 23F  projectile invincibility\n                                                Cancelable by Airborne Ashura Senku (Forward/Back) (one time only)\nUses 1,200F V-Timer gauge when canceled into from a special move cancelable normal move, and each special move\nCancelable by Tenmakujinkyaku from frame 22 of the move",
         vtrigger: 1,
         type: "special",
         command: "(DURING V-TRIGGER I) (DURING JUMP) HP HK"
@@ -850,7 +878,7 @@ const kage = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Uses 500F V-Gauge Timer\n                                                                                                                                3F - 23F  projectile invincibility\n                                                空中阿修羅閃空(前方)/空中阿修羅閃空(後方)でキャンセル可能(1回のみ)\nUses 1,200F V-Timer gauge when canceled into from a special move cancelable normal move, and each special move",
+        remarks: "Uses 500F V-Gauge Timer\n                                                                                                                                3F - 23F  projectile invincibility\n                                                Cancelable by Airborne Ashura Senku (Forward/Back) (one time only)\nUses 1,200F V-Timer gauge when canceled into from a special move cancelable normal move, and each special move\nCancelable by Tenmakujinkyaku from frame 22 of the move",
         vtrigger: 1,
         type: "special",
         command: "(DURING V-TRIGGER I) (DURING JUMP) ← + HP HK"
@@ -971,7 +999,7 @@ const kage = [
         name: "Crouching MP",
         outbreak: "5",
         persistence: "3",
-        rigidity: "15",
+        rigidity: "12",
         hit: "6",
         guard: "3",
         damage: "60",
@@ -1242,7 +1270,7 @@ const kage = [
         guard: "-2",
         damage: "90",
         stan: "150",
-        remarks: "Triggers Crush Counter (+24F)\n                                                                                                                                                                High/mid hit and projectile armor from 5F to 40F.\nヒット/ガード時に専用の前ステップ（全体20F）でキャンセル可能",
+        remarks: "Triggers Crush Counter (+24F)\n                                                                                                                                                                High/mid hit and projectile armor from 5F to 42F.\nCan be canceled with special forward dash (20 frames total) on hit or block",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK (HOLD BUTTONS)"
@@ -1290,7 +1318,35 @@ const kage = [
         command: "(DURING GUARD) → + LP"
     },
     {
-        name: "波Hadoken",
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Yashazuki",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
+        name: "Hadoken",
         outbreak: "13",
         persistence: "5",
         rigidity: "23",
@@ -1501,7 +1557,7 @@ const kage = [
     },
     {
         name: "EX Kurekijin",
-        outbreak: "16",
+        outbreak: "11",
         persistence: "2",
         rigidity: "26",
         hit: "D",
@@ -1515,14 +1571,14 @@ const kage = [
     },
     {
         name: "Airborne Kurekijin",
-        outbreak: "10",
+        outbreak: "10(*16)",
         persistence: "4",
         rigidity: "12 frame(s) after landing",
-        hit: "*1D",
+        hit: "*2D",
         guard: "",
-        damage: "90(*270)",
+        damage: "90(*370)",
         stan: "150",
-        remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                *1Grounded hit stun on cross-up hit\n*2Parameters for cross-up part",
+        remarks: "Can cross-up\n                                                Will not hit crouching opponents\n                                                                                                *1Value if used at low point of upward movement\n*2Grounded hit stun on cross-up hit\n*3Parameters for cross-up part",
         vtrigger: 2,
         type: "special",
         command: "(DURING JUMP) ↓↙← + K"

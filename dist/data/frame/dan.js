@@ -385,7 +385,7 @@ const dan = [
         persistence: "50",
         rigidity: "全体82",
         hit: "D",
-        guard: "2",
+        guard: "3",
         damage: "100",
         stan: "150",
         remarks: "",
@@ -490,6 +490,48 @@ const dan = [
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + 強P"
+    },
+    {
+        name: "弱 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "20",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
+    },
+    {
+        name: "中 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "18",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
+    },
+    {
+        name: "強 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "16",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
     },
     {
         name: "弱 我道拳(ボタンホールド)",
@@ -1206,6 +1248,48 @@ const dan = [
         command: "↓↘→ + 強P"
     },
     {
+        name: "弱 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "20",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
+    },
+    {
+        name: "中 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "18",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
+    },
+    {
+        name: "強 我道拳(強化版)",
+        outbreak: "12",
+        persistence: "16",
+        rigidity: "全体39",
+        hit: "D",
+        guard: "1",
+        damage: "60",
+        stan: "150",
+        remarks: "VS※VS1のみキャンセル可能\nVS1は空振りキャンセル可能",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + 弱P (発動時に確率で発生)"
+    },
+    {
         name: "弱 我道拳(ボタンホールド)",
         outbreak: "32",
         persistence: "30",
@@ -1441,7 +1525,7 @@ const dan = [
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                VS※VS1のみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + P P"
+        command: "↓↘→ + P"
     },
     {
         name: "V破天我道拳（ジャスト入力失敗版）",
@@ -1455,7 +1539,7 @@ const dan = [
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                VS※VS1のみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + P P"
+        command: "↓↘→ + P"
     },
     {
         name: "V轟晃龍拳",
@@ -1469,7 +1553,7 @@ const dan = [
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～15F 完全無敵\n                                                VS※VS1のみキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + P P"
+        command: "→↓↘ + P"
     },
     {
         name: "V轟晃龍拳（ジャスト入力失敗版）",
@@ -1483,7 +1567,7 @@ const dan = [
         remarks: "Vゲージタイマー1000F消費\n                                                                                                                                1F～5F 完全無敵\n                                                VS※VS1のみキャンセル可能\n※持続3F目以降",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + P P"
+        command: "→↓↘ + P"
     },
     {
         name: "必勝無頼拳",

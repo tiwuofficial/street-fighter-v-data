@@ -11,5 +11,6 @@ declare const zeku: {
     vtrigger: number;
     type: string;
     command: string;
+    zeku: string;
 }[];
 export { zeku };

@@ -57,7 +57,7 @@ const ehonda = [
   },
   {
     name: "Standing MK",
-    outbreak: "6",
+    outbreak: "5",
     persistence: "2",
     rigidity: "14",
     hit: "7",
@@ -143,10 +143,10 @@ const ehonda = [
   },
   {
     name: "Crouching MK",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "14",
-    hit: "4",
+    hit: "5",
     guard: "-2",
     damage: "60",
     stan: "120",
@@ -288,7 +288,7 @@ const ehonda = [
     persistence: "6",
     rigidity: "16",
     hit: "5",
-    guard: "2",
+    guard: "4",
     damage: "90",
     stan: "120",
     remarks: "Can hit downed opponents\nS*Can be canceled from 12F until the attack active frames",
@@ -382,7 +382,7 @@ const ehonda = [
   },
   {
     name: "[VS1] Neko Damashi",
-    outbreak: "15",
+    outbreak: "12",
     persistence: "4",
     rigidity: "24",
     hit: "3",
@@ -404,7 +404,7 @@ const ehonda = [
     damage: "",
     stan: "",
     remarks:
-      "発動後一回だけ百裂張り手が性質変化\nパラメータ変化・Vトリガーキャンセル可能な通常技/払い蹴り/力足/地鎮からキャンセル可能になる",
+      "Changes the properties of the next Hundred Hand Slap used\nParameter changes; can be canceled into from regular moves that are cancelable into V Trigger/Harai-Geri/Chikara-Ashi/Tokoshizume",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -440,6 +440,35 @@ const ehonda = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Super Sumo Impact",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Sumo Headbutt",
     outbreak: "10",
     persistence: "17",
@@ -448,7 +477,8 @@ const ehonda = [
     guard: "-4",
     damage: "120(*100)",
     stan: "180(*150)",
-    remarks: "CA*Only for the base hit\n*Consecutive hits value",
+    remarks:
+      "CA*Only for the base hit\nS*Can be canceled into Oni-Daikaku on hit only\n*Consecutive hits value",
     vtrigger: 1,
     type: "special",
     command: "→ + LP"
@@ -462,7 +492,8 @@ const ehonda = [
     guard: "-7",
     damage: "140(*110)",
     stan: "180(*150)",
-    remarks: "CA*Only for the base hit\n*Consecutive hits value",
+    remarks:
+      "CA*Only for the base hit\nS*Can be canceled into Oni-Daikaku on hit only\n*Consecutive hits value",
     vtrigger: 1,
     type: "special",
     command: "→ + MP"
@@ -477,7 +508,7 @@ const ehonda = [
     damage: "160(*120)",
     stan: "180(*150)",
     remarks:
-      "Upper body invincibility from 1F - 14F for mid-air attacks\nCA*Only for the base hit\n*Consecutive hits value",
+      "Upper body invincibility from 1F - 14F for mid-air attacks\nCA*Only for the base hit\nS*Can be canceled into Oni-Daikaku on hit only\n*Consecutive hits value",
     vtrigger: 1,
     type: "special",
     command: "→ + HP"
@@ -738,8 +769,8 @@ const ehonda = [
   {
     name: "EX Oicho Throw",
     outbreak: "5",
-    persistence: "2",
-    rigidity: "60",
+    persistence: "3",
+    rigidity: "59",
     hit: "D",
     guard: "",
     damage: "200",
@@ -755,11 +786,26 @@ const ehonda = [
     persistence: "24",
     rigidity: "10+10 frame(s) after landing",
     hit: "D",
-    guard: "-4",
+    guard: "-2",
     damage: "120(*100)",
     stan: "200",
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from normal and unique attacks, and from Hundred Hand Slap\nS*Can cancel into Oni-Muso only on hit\nCA*Only for the base hit\nCan be held up to 50F (Honda will perform the max-hold version after 50F)\nHas armor from 4F until 2F before the attack active frames\n*Consecutive hits value",
+    vtrigger: 1,
+    type: "special",
+    command: "(DURING V-TRIGGER I) HP HK"
+  },
+  {
+    name: "VOni-Daikaku (Cancelable version of Sumo Headbutt)",
+    outbreak: "10",
+    persistence: "24",
+    rigidity: "10+10 frame(s) after landing",
+    hit: "D",
+    guard: "-2",
+    damage: "100(*80)",
+    stan: "200",
+    remarks:
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Cancelable by Sumo Headbutt only on hit\nS*Can cancel into Oni-Muso only on hit\nCA*Only for the base hit\nCan be held up to 50F (Honda will perform the max-hold version after 50F)\nHas armor from 4F until 2F before the attack active frames\n*Consecutive hits value",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) HP HK"
@@ -790,6 +836,21 @@ const ehonda = [
     stan: "200",
     remarks:
       "Uses 1200F V-Gauge Timer\n                                                                                                                                                                                Can only be performed if Oni-Daikaku hits\nCA*Only for the base hit",
+    vtrigger: 1,
+    type: "special",
+    command: "(DURING V-TRIGGER I) HP HK ▶ HP HK"
+  },
+  {
+    name: "VOni-Muso (Sumo Headbutt canceled into Oni-Daikaku version)",
+    outbreak: "3",
+    persistence: "24",
+    rigidity: "10+10 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "100",
+    stan: "200",
+    remarks:
+      "Uses 1200F V-Gauge Timer\n                                                                                                                                                                                Can be transitioned into only from successful hit with Oni-Daikaku (Sumo Headbutt Cancelable Version)\nCA*Only for the base hit",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) HP HK ▶ HP HK"
@@ -866,7 +927,7 @@ const ehonda = [
   },
   {
     name: "Standing MK",
-    outbreak: "6",
+    outbreak: "5",
     persistence: "2",
     rigidity: "14",
     hit: "7",
@@ -952,10 +1013,10 @@ const ehonda = [
   },
   {
     name: "Crouching MK",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "14",
-    hit: "4",
+    hit: "5",
     guard: "-2",
     damage: "60",
     stan: "120",
@@ -1097,7 +1158,7 @@ const ehonda = [
     persistence: "6",
     rigidity: "16",
     hit: "5",
-    guard: "2",
+    guard: "4",
     damage: "90",
     stan: "120",
     remarks: "Can hit downed opponents\nS*Can be canceled from 12F until the attack active frames",
@@ -1191,7 +1252,7 @@ const ehonda = [
   },
   {
     name: "[VS1] Neko Damashi",
-    outbreak: "15",
+    outbreak: "12",
     persistence: "4",
     rigidity: "24",
     hit: "3",
@@ -1213,7 +1274,7 @@ const ehonda = [
     damage: "",
     stan: "",
     remarks:
-      "発動後一回だけ百裂張り手が性質変化\nパラメータ変化・Vトリガーキャンセル可能な通常技/払い蹴り/力足/地鎮からキャンセル可能になる",
+      "Changes the properties of the next Hundred Hand Slap used\nParameter changes; can be canceled into from regular moves that are cancelable into V Trigger/Harai-Geri/Chikara-Ashi/Tokoshizume",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1247,6 +1308,35 @@ const ehonda = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Super Sumo Impact",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Sumo Headbutt",
@@ -1547,8 +1637,8 @@ const ehonda = [
   {
     name: "EX Oicho Throw",
     outbreak: "5",
-    persistence: "2",
-    rigidity: "60",
+    persistence: "3",
+    rigidity: "59",
     hit: "D",
     guard: "",
     damage: "200",
@@ -1588,4 +1678,5 @@ const ehonda = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { ehonda };

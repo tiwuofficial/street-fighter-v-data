@@ -802,7 +802,7 @@ const birdie = [
   },
   {
     name: "中 ハンギングチェーン",
-    outbreak: "20(※21)",
+    outbreak: "20(※19)",
     persistence: "16",
     rigidity: "24",
     hit: "D",
@@ -810,7 +810,7 @@ const birdie = [
     damage: "150",
     stan: "200",
     remarks:
-      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
+      "空中の相手にヒットしない\n                                                                ※立ち中P・しゃがみ中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + 中K"
@@ -1683,7 +1683,7 @@ const birdie = [
   },
   {
     name: "中 ハンギングチェーン",
-    outbreak: "20(※21)",
+    outbreak: "20(※19)",
     persistence: "16",
     rigidity: "24",
     hit: "D",
@@ -1691,7 +1691,7 @@ const birdie = [
     damage: "150",
     stan: "200",
     remarks:
-      "空中の相手にヒットしない\n                                                                ※立ち中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
+      "空中の相手にヒットしない\n                                                                ※立ち中P・しゃがみ中Pからキャンセル発動時\nVS※ヒット時のみVS2でキャンセル可能",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + 中K"

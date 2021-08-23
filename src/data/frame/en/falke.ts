@@ -60,7 +60,7 @@ const falke = [
     outbreak: "8",
     persistence: "3",
     rigidity: "16",
-    hit: "2",
+    hit: "4",
     guard: "-2",
     damage: "60",
     stan: "100",
@@ -100,9 +100,9 @@ const falke = [
   },
   {
     name: "Crouching MP",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "2",
-    rigidity: "18",
+    rigidity: "16",
     hit: "4",
     guard: "-2",
     damage: "70",
@@ -240,7 +240,7 @@ const falke = [
   },
   {
     name: "Jumping HK",
-    outbreak: "9",
+    outbreak: "7",
     persistence: "5",
     rigidity: "",
     hit: "",
@@ -304,7 +304,7 @@ const falke = [
     damage: "70",
     stan: "100",
     remarks:
-      "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n*爆発後",
+      "Projectile explodes 300 frames after appearing, or when hit with a staff attack\nIf Falke takes damage before the projectile explodes, the projectile will be destroyed\n*After exploding",
     vtrigger: 1,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ OR ← OR ↓ OR ↙ + MP MK"
@@ -390,7 +390,7 @@ const falke = [
     damage: "70",
     stan: "100",
     remarks:
-      "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n*爆発後",
+      "Projectile explodes 300 frames after appearing, or when hit with a staff attack\nIf Falke takes damage before the projectile explodes, the projectile will be destroyed\n*After exploding",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) OR ← OR ↓ OR ↙ + MP MK"
@@ -424,6 +424,35 @@ const falke = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Aufstand",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Psycho Kugel",
@@ -471,12 +500,12 @@ const falke = [
     name: "Psycho Schneide",
     outbreak: "8",
     persistence: "6",
-    rigidity: "38",
+    rigidity: "38(*33)",
     hit: "D",
     guard: "-17",
     damage: "120",
     stan: "150",
-    remarks: "Invincibility at the head from 1 – 10F",
+    remarks: "Invincibility at the head from 1 – 10F\n*on block/whiff",
     vtrigger: 1,
     type: "special",
     command: "P P"
@@ -500,12 +529,12 @@ const falke = [
     name: "Katapult",
     outbreak: "16",
     persistence: "4",
-    rigidity: "31",
+    rigidity: "31(*26)",
     hit: "D",
     guard: "-10",
     damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "*on block/whiff",
     vtrigger: 1,
     type: "special",
     command: "K K"
@@ -658,7 +687,7 @@ const falke = [
     outbreak: "8",
     persistence: "3",
     rigidity: "16",
-    hit: "2",
+    hit: "4",
     guard: "-2",
     damage: "60",
     stan: "100",
@@ -698,9 +727,9 @@ const falke = [
   },
   {
     name: "Crouching MP",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "2",
-    rigidity: "18",
+    rigidity: "16",
     hit: "4",
     guard: "-2",
     damage: "70",
@@ -838,7 +867,7 @@ const falke = [
   },
   {
     name: "Jumping HK",
-    outbreak: "9",
+    outbreak: "7",
     persistence: "5",
     rigidity: "",
     hit: "",
@@ -902,7 +931,7 @@ const falke = [
     damage: "70",
     stan: "100",
     remarks:
-      "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n*爆発後",
+      "Projectile explodes 300 frames after appearing, or when hit with a staff attack\nIf Falke takes damage before the projectile explodes, the projectile will be destroyed\n*After exploding",
     vtrigger: 2,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ OR ← OR ↓ OR ↙ + MP MK"
@@ -988,7 +1017,7 @@ const falke = [
     damage: "60",
     stan: "100",
     remarks:
-      "Can reflect fireballs up to EX versions\nS*CA*Only on hit\nS*必殺技キャンセル時にVタイマー1000F消費",
+      "Can reflect fireballs up to EX versions\nS*CA*Only on hit\nS*Reduces V Timer by 1000 frames when cancelled with Special Moves",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -1003,7 +1032,7 @@ const falke = [
     damage: "70",
     stan: "100",
     remarks:
-      "飛び道具出現から300F経過、若しくは棒を使う攻撃をヒットさせると爆発する。\n飛び道具爆発前にファルケ本体がダメージを受けると飛び道具は消滅する。\n*爆発後",
+      "Projectile explodes 300 frames after appearing, or when hit with a staff attack\nIf Falke takes damage before the projectile explodes, the projectile will be destroyed\n*After exploding",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) OR ← OR ↓ OR ↙ + MP MK"
@@ -1037,6 +1066,35 @@ const falke = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Aufstand",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Psycho Kugel",
@@ -1084,12 +1142,12 @@ const falke = [
     name: "Psycho Schneide",
     outbreak: "8",
     persistence: "6",
-    rigidity: "38",
+    rigidity: "38(*33)",
     hit: "D",
     guard: "-17",
     damage: "120",
     stan: "150",
-    remarks: "Invincibility at the head from 1 – 10F",
+    remarks: "Invincibility at the head from 1 – 10F *on block/whiff",
     vtrigger: 2,
     type: "special",
     command: "P P"
@@ -1113,12 +1171,12 @@ const falke = [
     name: "Katapult",
     outbreak: "16",
     persistence: "4",
-    rigidity: "31",
+    rigidity: "31(*26)",
     hit: "D",
     guard: "-10",
     damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "*on block/whiff",
     vtrigger: 2,
     type: "special",
     command: "K K"
@@ -1161,22 +1219,22 @@ const falke = [
     damage: "100",
     stan: "150",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from V-Trigger cancelable moves and V-Skill",
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                Can be canceled into from V-Trigger cancelable moves and V-Skill\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"
   },
   {
     name: "Psycho Klinge",
-    outbreak: "33",
+    outbreak: "29(*33)",
     persistence: "5",
     rigidity: "7+5 frame(s) after landing",
-    hit: "7",
+    hit: "8",
     guard: "3",
     damage: "90",
     stan: "150",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                6F - 23F  projectile invincibility\n                                                Can be canceled into from V-Trigger cancelable moves and V-Skill\n1F will not hit grounded opponents",
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                6F - 23F  projectile invincibility\n                                                Can be canceled into from V-Trigger cancelable moves and V-Skill\n1F will not hit grounded opponents\n*During cancel",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) ↓ + HP HK"
@@ -1196,4 +1254,5 @@ const falke = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { falke };

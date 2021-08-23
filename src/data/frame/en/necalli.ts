@@ -641,7 +641,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 1,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ MP MK"
@@ -655,7 +656,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 1,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ MP MK"
@@ -753,7 +755,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -767,7 +770,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -782,7 +786,7 @@ const necalli = [
     damage: "",
     stan: "",
     remarks:
-      "V-Gauge Timer + unlimited F\n                                                                                                                                                                                Remains active until the end of the round\nGains an exclusive special move",
+      "V-Gauge Timer + 1000F\n                                                                                                                                                                                Gains an exclusive special move",
     vtrigger: 1,
     type: "vsystem",
     command: "HP HK"
@@ -801,6 +805,35 @@ const necalli = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Midnight Howl",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L The Disc's Guidance",
@@ -1127,8 +1160,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "60",
-    stan: "50",
+    damage: "80",
+    stan: "70",
     remarks: "",
     vtrigger: 1,
     type: "special",
@@ -1141,9 +1174,9 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "50",
-    remarks: "",
+    damage: "100",
+    stan: "70",
+    remarks: "S*Can only be canceled with Clouded Mirror",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + K K"
@@ -1199,7 +1232,7 @@ const necalli = [
     guard: "-3",
     damage: "70",
     stan: "100",
-    remarks: "Nullifies projectiles from 14F-17F",
+    remarks: "Nullifies projectiles from 14F-17F\nS*Can only be canceled with Clouded Mirror",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LK"
@@ -1213,7 +1246,7 @@ const necalli = [
     guard: "-1",
     damage: "80",
     stan: "100",
-    remarks: "Nullifies projectiles from 19F-23F",
+    remarks: "Nullifies projectiles from 19F-23F\nS*Can only be canceled with Clouded Mirror",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MK"
@@ -1227,7 +1260,7 @@ const necalli = [
     guard: "2",
     damage: "100",
     stan: "150",
-    remarks: "Nullifies projectiles from 23F-28F",
+    remarks: "Nullifies projectiles from 23F-28F\nS*Can only be canceled with Clouded Mirror",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HK"
@@ -1262,7 +1295,7 @@ const necalli = [
   },
   {
     name: "VClouded Mirror",
-    outbreak: "43",
+    outbreak: "43(*18)",
     persistence: "4",
     rigidity: "23",
     hit: "D",
@@ -1270,22 +1303,22 @@ const necalli = [
     damage: "70",
     stan: "100",
     remarks:
-      "16F - 47F  projectile invincibility\n                                                Cannot recover\nCan be canceled into from special move cancelable moves and V-Skill",
+      "16F - 47F  projectile invincibility\n                                                *Launches airborne opponents on hit",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) HP HK"
   },
   {
     name: "VClouded Mirror (HOLD BUTTON)",
-    outbreak: "57",
+    outbreak: "57(*32)",
     persistence: "8",
     rigidity: "24",
     hit: "(crumple)",
     guard: "2",
-    damage: "80",
-    stan: "100",
+    damage: "100",
+    stan: "120",
     remarks:
-      "25F - 63F  projectile invincibility\n                                                Can hit downed opponents\nCan be canceled into from special move cancelable moves and V-Skill",
+      "25F - 63F  projectile invincibility\n                                                Can hit downed opponents\n*Launches airborne opponents on hit",
     vtrigger: 1,
     type: "special",
     command: "(DURING V-TRIGGER I) HP HK (HOLD BUTTONS)"
@@ -1960,7 +1993,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 2,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ MP MK"
@@ -1974,7 +2008,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 2,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ MP MK"
@@ -2072,7 +2107,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -2086,7 +2122,8 @@ const necalli = [
     guard: "-5",
     damage: "60",
     stan: "80",
-    remarks: "180F経過若しくは相手に接触すると攻撃判定が発生する\n(攻撃判定の持続は3F)",
+    remarks:
+      "*Attack hitbox appears after 180 frames or when in contact with the enemy\n(hitbox has 3 active frames)",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -2120,6 +2157,35 @@ const necalli = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Midnight Howl",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L The Disc's Guidance",
@@ -2446,8 +2512,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "60",
-    stan: "50",
+    damage: "80",
+    stan: "70",
     remarks: "",
     vtrigger: 2,
     type: "special",
@@ -2460,8 +2526,8 @@ const necalli = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "50",
+    damage: "100",
+    stan: "70",
     remarks: "",
     vtrigger: 2,
     type: "special",
@@ -2622,4 +2688,5 @@ const necalli = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { necalli };

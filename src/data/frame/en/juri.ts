@@ -919,16 +919,16 @@ const juri = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "溜め動作成立後に再度入力で「風破円斬」(攻撃)が発動",
+    remarks: "After completing charge, inputting command again will fire Fuha Enzan (Attack)",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
     name: "[VS2] Fuha Enzan (Attack)",
-    outbreak: "19",
+    outbreak: "18",
     persistence: "74",
-    rigidity: "47 total frames",
+    rigidity: "46 total frames",
     hit: "D",
     guard: "-2",
     damage: "50",
@@ -969,6 +969,35 @@ const juri = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Kuboshu",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Fuharenkyaku (Charge Kick)",
     outbreak: "10",
     persistence: "3",
@@ -977,7 +1006,7 @@ const juri = [
     guard: "-2",
     damage: "30",
     stan: "30",
-    remarks: "Can stock Fuharenkyaku on 10F of each strength",
+    remarks: "Can stock Fuharenkyaku on 10F of each strength\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + K"
@@ -985,13 +1014,14 @@ const juri = [
   {
     name: "L Fuharenkyaku",
     outbreak: "14",
-    persistence: "80",
+    persistence: "90",
     rigidity: "37 total frames",
     hit: "2",
     guard: "-2",
     damage: "50",
     stan: "80",
-    remarks: "VS*VS1はヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    remarks:
+      "VS*Can only be canceled into V-Skill I on hit \nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LK"
@@ -1005,7 +1035,8 @@ const juri = [
     guard: "-4",
     damage: "70",
     stan: "80",
-    remarks: "VS*VS1はヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+    remarks:
+      "VS*Can only be canceled into V-Skill I on hit \nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MK"
@@ -1020,7 +1051,7 @@ const juri = [
     damage: "90",
     stan: "150",
     remarks:
-      "VS*VS1は2段目ヒット時のみ可能 \nS*Can cancel into a Fuharenkyaku of different strength",
+      "VS*Can only be canceled into V-Skill I when the 2nd hit connects \nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HK"
@@ -1028,14 +1059,14 @@ const juri = [
   {
     name: "VL Fuharenkyaku",
     outbreak: "14",
-    persistence: "80",
+    persistence: "90",
     rigidity: "39 total frames",
     hit: "D",
     guard: "-1",
     damage: "60",
     stan: "100",
     remarks:
-      "Uses 800F V-Gauge Timer\n                                                                                                                                                                                VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+      "Uses 800F V-Gauge Timer\n                                                                                                                                                                                VS*Can only be canceled into V-Skill I on hit\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LK"
@@ -1050,7 +1081,7 @@ const juri = [
     damage: "70",
     stan: "100",
     remarks:
-      "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+      "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*Can only be canceled into V-Skill I on hit\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MK"
@@ -1065,7 +1096,7 @@ const juri = [
     damage: "90",
     stan: "170",
     remarks:
-      "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*VS1は2段目ヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
+      "Uses 600F V-Gauge Timer\n                                                                                                                                                                                VS*Can only be canceled into V-Skill I when the 2nd hit connects\nS*Can cancel into a Fuharenkyaku of different strength\n(Cannot use the same strength twice)",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HK"
@@ -1204,12 +1235,13 @@ const juri = [
     name: "Sakkai Fuhazan",
     outbreak: "1+8",
     persistence: "",
-    rigidity: "67 total frames",
+    rigidity: "67 total frames(*77)",
     hit: "D",
-    guard: "-15",
+    guard: "-25",
     damage: "330",
     stan: "0",
-    remarks: "1F - 8F  full invincibility",
+    remarks:
+      "1F - 8F  full invincibility\n                                                *on block/whiff",
     vtrigger: 1,
     type: "ca",
     command: "↓↙← ↓↙← + K"
@@ -1635,16 +1667,16 @@ const juri = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "溜め動作成立後に再度入力で「風破円斬」(攻撃)が発動",
+    remarks: "After completing charge, inputting command again will fire Fuha Enzan (Attack)",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
     name: "[VS2] Fuha Enzan (Attack)",
-    outbreak: "19",
+    outbreak: "18",
     persistence: "74",
-    rigidity: "47 total frames",
+    rigidity: "46 total frames",
     hit: "D",
     guard: "-2",
     damage: "50",
@@ -1660,11 +1692,11 @@ const juri = [
     persistence: "6",
     rigidity: "31",
     hit: "5",
-    guard: "1",
+    guard: "2",
     damage: "70",
     stan: "150",
     remarks:
-      "V-Gauge Timer + 750F\n                                                                                                                                                                                While active, the opponent's EX gauge will be absorbed while they are within the effect range",
+      "V-Gauge Timer + 750F\n                                                                                                                                                                                Stores one Light/Medium/Heavy Fuharenkyaku when used\nWhile active, the opponent's EX gauge will be absorbed while they are within the effect range",
     vtrigger: 2,
     type: "vsystem",
     command: "HP HK"
@@ -1685,6 +1717,35 @@ const juri = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Kuboshu",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Fuharenkyaku (Charge Kick)",
     outbreak: "10",
     persistence: "3",
@@ -1693,7 +1754,7 @@ const juri = [
     guard: "-2",
     damage: "30",
     stan: "30",
-    remarks: "Can stock Fuharenkyaku on 10F of each strength",
+    remarks: "Can stock Fuharenkyaku on 10F of each strength\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + K"
@@ -1701,13 +1762,14 @@ const juri = [
   {
     name: "L Fuharenkyaku",
     outbreak: "14",
-    persistence: "80",
+    persistence: "90",
     rigidity: "37 total frames",
     hit: "2",
     guard: "-2",
     damage: "50",
     stan: "80",
-    remarks: "VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+    remarks:
+      "VS*Can only be canceled into V-Skill I on hit\nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LK"
@@ -1721,7 +1783,8 @@ const juri = [
     guard: "-4",
     damage: "70",
     stan: "80",
-    remarks: "VS*VS1はヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+    remarks:
+      "VS*Can only be canceled into V-Skill I on hit\nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MK"
@@ -1736,7 +1799,7 @@ const juri = [
     damage: "90",
     stan: "150",
     remarks:
-      "VS*VS1は2段目ヒット時のみ可能\nS*Can cancel into a Fuharenkyaku of different strength",
+      "VS*Can only be canceled into V-Skill I when the 2nd hit connects\nS*Can cancel into a Fuharenkyaku of different strength",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + HK"
@@ -1875,15 +1938,17 @@ const juri = [
     name: "Sakkai Fuhazan",
     outbreak: "1+8",
     persistence: "",
-    rigidity: "67 total frames",
+    rigidity: "67 total frames(*77)",
     hit: "D",
-    guard: "-15",
+    guard: "-25",
     damage: "330",
     stan: "0",
-    remarks: "1F - 8F  full invincibility",
+    remarks:
+      "1F - 8F  full invincibility\n                                                *on block/whiff",
     vtrigger: 2,
     type: "ca",
     command: "↓↙← ↓↙← + K"
   }
 ];
+
 export { juri };

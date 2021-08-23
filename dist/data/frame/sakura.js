@@ -1186,7 +1186,7 @@ const sakura = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "",
+        remarks: "V春風脚から発動した場合のみ、派生技への移行タイミングが異なる",
         vtrigger: 2,
         type: "vsystem",
         command: "(VスキルⅠ選択時) 中P 中K"

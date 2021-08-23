@@ -591,7 +591,7 @@ const zangief = [
     guard: "",
     damage: "220",
     stan: "300",
-    remarks: "1F～6F 投げ無敵",
+    remarks: "",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙←↖↑↗ + P P"
@@ -1442,7 +1442,7 @@ const zangief = [
     guard: "",
     damage: "220",
     stan: "300",
-    remarks: "1F～6F 投げ無敵",
+    remarks: "",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙←↖↑↗ + P P"
@@ -1456,8 +1456,7 @@ const zangief = [
     guard: "",
     damage: "350",
     stan: "400",
-    remarks:
-      "1F～6F 投げ無敵\n                                                発動時Vタイマー1000F、ヒット時1000F消費",
+    remarks: "発動時Vタイマー1000F、ヒット時1000F消費",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) →↘↓↙←↖↑↗ + P P"
@@ -1471,8 +1470,7 @@ const zangief = [
     guard: "",
     damage: "300",
     stan: "300",
-    remarks:
-      "1F～6F 投げ無敵\n                                                発動時Vタイマー1000F、ヒット時1000F消費",
+    remarks: "発動時Vタイマー1000F、ヒット時1000F消費",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) →↘↓↙←↖↑↗ + P P"

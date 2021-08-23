@@ -643,7 +643,7 @@ const g = [
         remarks: "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュアンダー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + P"
+        command: "→↓↘ + 強P"
     },
     {
         name: "V G・スマッシュ・オーバー",
@@ -783,7 +783,7 @@ const g = [
         remarks: "※密着時\nS※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + K"
+        command: "→↓↘ + 強K"
     },
     {
         name: "V G・スマッシュ・アンダー",
@@ -923,7 +923,7 @@ const g = [
         remarks: "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・スピンキック、EX (キャンセル版)G・インパクトでキャンセル可能\n※CA Vトリガー以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P"
+        command: "↓↘→ + 強P"
     },
     {
         name: "V G・バースト",
@@ -1063,7 +1063,7 @@ const g = [
         remarks: "4F～30F 飛び道具無敵\n                                                S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + K"
+        command: "↓↘→ + 強K"
     },
     {
         name: "V G・スピンキック",
@@ -1861,7 +1861,7 @@ const g = [
         remarks: "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュアンダー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + P"
+        command: "→↓↘ + 強P"
     },
     {
         name: "EX　G・スマッシュ・オーバー(→↓＼ + PP)",
@@ -1973,7 +1973,7 @@ const g = [
         remarks: "※密着時\nS※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スピンキック、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + K"
+        command: "→↓↘ + 強K"
     },
     {
         name: "EX G・スマッシュ・アンダー",
@@ -2085,7 +2085,7 @@ const g = [
         remarks: "S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・スピンキック、EX (キャンセル版)G・インパクトでキャンセル可能\n※CA Vトリガー G・エクスプロージョン以外は空振り時もキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + P"
+        command: "↓↘→ + 強P"
     },
     {
         name: "EX G・バースト",
@@ -2197,7 +2197,7 @@ const g = [
         remarks: "4F～30F 投げ無敵\n                                                S※G・チャージはヒット時のみ、ヒット・ガード時はEX G・スマッシュオーバー、EX G・スマッシュアンダー、EX G・バースト、EX (キャンセル版)G・インパクトでキャンセル可能\nヒット時のみ地球人民に告ぐでキャンセル可能",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + K"
+        command: "↓↘→ + 強K"
     },
     {
         name: "EX G・スピンキック",
@@ -2334,7 +2334,7 @@ const g = [
         guard: "-28",
         damage: "170(※150)",
         stan: "200(※200)",
-        remarks: "Vゲージタイマー1500F消費\n                                                                                                                                                                                ※先端ヒット時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
+        remarks: "Vゲージタイマー1000F消費\n                                                                                                                                                                                ※先端ヒット時\nS※G・チャージのみキャンセル可能\n地球人民に告ぐでキャンセル可能",
         vtrigger: 2,
         type: "special",
         command: "(VトリガーⅡ発動中) 強P 強K"

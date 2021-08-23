@@ -18,7 +18,7 @@ const ed = [
     outbreak: "6",
     persistence: "3",
     rigidity: "16",
-    hit: "9",
+    hit: "10",
     guard: "3",
     damage: "60",
     stan: "100",
@@ -72,7 +72,7 @@ const ed = [
   },
   {
     name: "Standing HK",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "4",
     rigidity: "22",
     hit: "2",
@@ -405,8 +405,8 @@ const ed = [
     rigidity: "25 total frames(*21)",
     hit: "D",
     guard: "",
-    damage: "120",
-    stan: "150",
+    damage: "140",
+    stan: "175",
     remarks: "*Press the forward direction to change the projectile's speed",
     vtrigger: 1,
     type: "vsystem",
@@ -426,6 +426,35 @@ const ed = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Split",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Psycho Flicker",
@@ -493,7 +522,7 @@ const ed = [
     damage: "100",
     stan: "150",
     remarks:
-      "Moves behind the opponent on hit and block\nCrumple time is longer the closer the attack hits\nVS*VS2のみキャンセル可能",
+      "Moves behind the opponent on hit and block\nCrumple time is longer the closer the attack hits\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "HP (HOLD BUTTONS)"
@@ -572,7 +601,7 @@ const ed = [
   },
   {
     name: "Psycho Barrage",
-    outbreak: "1+12",
+    outbreak: "1+9",
     persistence: "14",
     rigidity: "49",
     hit: "D",
@@ -580,7 +609,7 @@ const ed = [
     damage: "340",
     stan: "0",
     remarks:
-      "1F - 22F  full invincibility\n                                                The active frames are for whiff",
+      "1F - 19F  full invincibility\n                                                The active frames are for whiff",
     vtrigger: 1,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
@@ -604,7 +633,7 @@ const ed = [
     outbreak: "6",
     persistence: "3",
     rigidity: "16",
-    hit: "9",
+    hit: "10",
     guard: "3",
     damage: "60",
     stan: "100",
@@ -658,7 +687,7 @@ const ed = [
   },
   {
     name: "Standing HK",
-    outbreak: "15",
+    outbreak: "14",
     persistence: "4",
     rigidity: "22",
     hit: "2",
@@ -1015,6 +1044,35 @@ const ed = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Split",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Psycho Flicker",
     outbreak: "6",
     persistence: "6",
@@ -1080,7 +1138,7 @@ const ed = [
     damage: "100",
     stan: "150",
     remarks:
-      "Moves behind the opponent on hit and block\nCrumple time is longer the closer the attack hits\nVS*VS2のみキャンセル可能",
+      "Moves behind the opponent on hit and block\nCrumple time is longer the closer the attack hits\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "HP (HOLD BUTTONS)"
@@ -1163,7 +1221,7 @@ const ed = [
     persistence: "8",
     rigidity: "37",
     hit: "6",
-    guard: "3",
+    guard: "GB+3",
     damage: "80",
     stan: "100",
     remarks:
@@ -1189,7 +1247,7 @@ const ed = [
   },
   {
     name: "Psycho Barrage",
-    outbreak: "1+12",
+    outbreak: "1+9",
     persistence: "14",
     rigidity: "49",
     hit: "D",
@@ -1197,10 +1255,11 @@ const ed = [
     damage: "340",
     stan: "0",
     remarks:
-      "1F - 22F  full invincibility\n                                                The active frames are for whiff",
+      "1F - 19F  full invincibility\n                                                The active frames are for whiff",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { ed };

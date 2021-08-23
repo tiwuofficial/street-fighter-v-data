@@ -598,11 +598,40 @@ const laura = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Neutralize",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Thunder Clap (Lv1)",
     outbreak: "19",
-    persistence: "40",
-    rigidity: "47 total frames",
-    hit: "0",
+    persistence: "45",
+    rigidity: "45 total frames",
+    hit: "2",
     guard: "-5",
     damage: "60",
     stan: "60",
@@ -613,11 +642,11 @@ const laura = [
   },
   {
     name: "Thunder Clap (Lv2)",
-    outbreak: "41",
+    outbreak: "36",
     persistence: "80",
-    rigidity: "68 total frames",
-    hit: "9",
-    guard: "0",
+    rigidity: "61 total frames",
+    hit: "11",
+    guard: "2",
     damage: "90",
     stan: "90",
     remarks: "",
@@ -643,8 +672,8 @@ const laura = [
     name: "VThunder Clap (Lv1)",
     outbreak: "19",
     persistence: "80",
-    rigidity: "47 total frames",
-    hit: "0",
+    rigidity: "45 total frames",
+    hit: "2",
     guard: "-5",
     damage: "60",
     stan: "60",
@@ -658,8 +687,8 @@ const laura = [
     outbreak: "26",
     persistence: "80",
     rigidity: "53 total frames",
-    hit: "9",
-    guard: "0",
+    hit: "11",
+    guard: "2",
     damage: "90",
     stan: "90",
     remarks: "",
@@ -690,7 +719,7 @@ const laura = [
     guard: "3",
     damage: "90",
     stan: "90",
-    remarks: "Button strength changes projectile speed\n*強度が弱の場合",
+    remarks: "Button strength changes projectile speed\n*Value in case of weakest button strength",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + P P"
@@ -704,7 +733,7 @@ const laura = [
     guard: "7",
     damage: "120",
     stan: "120",
-    remarks: "Button strength changes projectile speed\n*強度が弱の場合",
+    remarks: "Button strength changes projectile speed\n*Value in case of weakest button strength",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + P P"
@@ -795,7 +824,7 @@ const laura = [
   },
   {
     name: "EX Bolt Charge",
-    outbreak: "14",
+    outbreak: "12",
     persistence: "3",
     rigidity: "22",
     hit: "0",
@@ -809,7 +838,7 @@ const laura = [
   },
   {
     name: "VEX Bolt Charge",
-    outbreak: "14",
+    outbreak: "12",
     persistence: "3",
     rigidity: "22",
     hit: "0",
@@ -830,7 +859,7 @@ const laura = [
     guard: "",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ P"
@@ -844,7 +873,7 @@ const laura = [
     guard: "",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ K"
@@ -858,7 +887,7 @@ const laura = [
     guard: "",
     damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ P"
@@ -872,7 +901,7 @@ const laura = [
     guard: "",
     damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ K"
@@ -1514,11 +1543,40 @@ const laura = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Neutralize",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Thunder Clap (Lv1)",
     outbreak: "19",
-    persistence: "40",
-    rigidity: "47 total frames",
-    hit: "0",
+    persistence: "45",
+    rigidity: "45 total frames",
+    hit: "2",
     guard: "-5",
     damage: "60",
     stan: "60",
@@ -1529,11 +1587,11 @@ const laura = [
   },
   {
     name: "Thunder Clap (Lv2)",
-    outbreak: "41",
+    outbreak: "36",
     persistence: "80",
-    rigidity: "68 total frames",
-    hit: "9",
-    guard: "0",
+    rigidity: "61 total frames",
+    hit: "11",
+    guard: "2",
     damage: "90",
     stan: "90",
     remarks: "",
@@ -1564,7 +1622,7 @@ const laura = [
     guard: "3",
     damage: "90",
     stan: "90",
-    remarks: "Button strength changes projectile speed\n*強度が弱の場合",
+    remarks: "Button strength changes projectile speed\n*Value in case of weakest button strength",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + P P"
@@ -1613,7 +1671,7 @@ const laura = [
   },
   {
     name: "EX Bolt Charge",
-    outbreak: "14",
+    outbreak: "12",
     persistence: "3",
     rigidity: "22",
     hit: "0",
@@ -1634,7 +1692,7 @@ const laura = [
     guard: "",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ P"
@@ -1648,7 +1706,7 @@ const laura = [
     guard: "",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "Recovery shortened by one frame when using Ex Bolt Charge",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MP OR P P ▶ K"
@@ -1731,9 +1789,10 @@ const laura = [
     rigidity: "60",
     hit: "19",
     guard: "",
-    damage: "60",
+    damage: "100",
     stan: "0",
-    remarks: "Uses 1000F V-Gauge Timer",
+    remarks:
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 8F  projectile invincibility\n                1F - 8F  invincible to mid-air attacks",
     vtrigger: 2,
     type: "special",
     command: "(DURING MATSUDA SWAY) HP HK"
@@ -1825,4 +1884,5 @@ const laura = [
     command: "↓↘→ ↓↘→ + K"
   }
 ];
+
 export { laura };

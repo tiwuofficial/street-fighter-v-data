@@ -1168,7 +1168,7 @@ const necalli = [
     guard: "",
     damage: "100",
     stan: "70",
-    remarks: "",
+    remarks: "S※煙纏う鏡でのみキャンセル可能",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + K K"

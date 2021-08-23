@@ -16,8 +16,8 @@ const blanka = [
   {
     name: "Standing MP",
     outbreak: "7",
-    persistence: "2",
-    rigidity: "15",
+    persistence: "3",
+    rigidity: "14",
     hit: "3",
     guard: "0",
     damage: "60",
@@ -281,6 +281,20 @@ const blanka = [
     command: "→ + MP"
   },
   {
+    name: "Rock Crusher (Charge Attack)",
+    outbreak: "34",
+    persistence: "3",
+    rigidity: "13",
+    hit: "4",
+    guard: "-2",
+    damage: "90",
+    stan: "120",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "→ + MP (HOLD BUTTONS)"
+  },
+  {
     name: "Amazon River Run",
     outbreak: "11",
     persistence: "10",
@@ -332,7 +346,7 @@ const blanka = [
     damage: "80(*2100)",
     stan: "100(*2150)",
     remarks:
-      "*1発生フレームはボタンホールド無し時のもの\n*2LV2発動可能時の数値 Vゲージ増加量は0/80に変化",
+      "*1When buttons not held at startup frame\n*2Denotes value when LV2 available; V Gauge increase becomes 0/80",
     vtrigger: 1,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ (ON HIT) MP MK"
@@ -346,7 +360,8 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "Can be canceled into from special move-cancelable normal moves",
+    remarks:
+      "Can be canceled into with regular moves that can cancel into Special Moves, as well as standing heavy kick",
     vtrigger: 1,
     type: "unique",
     command: "→ + LK"
@@ -360,7 +375,8 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "Can be canceled into from special move-cancelable normal moves",
+    remarks:
+      "Can be canceled into with regular moves that can cancel into Special Moves, as well as standing heavy kick",
     vtrigger: 1,
     type: "unique",
     command: "← + LK"
@@ -446,7 +462,7 @@ const blanka = [
     damage: "80",
     stan: "100",
     remarks:
-      "*発生フレームはボタンホールド無し時のもの\n50F以上ボタンホールドを続けることにより攻撃がLV2に変化\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+      "*When buttons not held at startup frame\nHolding the buttons beyond frame 50 makes the attack LV2\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -461,7 +477,7 @@ const blanka = [
     damage: "100",
     stan: "150",
     remarks:
-      "*発生フレームはLV2に変化後、最速で発生させた時のもの\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+      "*Denotes shortest startup possible after making attack LV2\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK (HOLD BUTTONS)"
@@ -490,7 +506,7 @@ const blanka = [
     damage: "",
     stan: "",
     remarks:
-      "V-Gauge Timer + 2000F\n                                                                                                                                1F  full invincibility\n                                                While active, the applicable special moves become stronger\nGains the special move Ground Shave Rolling while active",
+      "V-Gauge Timer + 2000F\n                                                                                                                                1F  full invincibility\n                                                While active, the applicable special moves become stronger\nGains the special move Ground Shave Rolling while active\nNo charge time required for charge moves used from a special move cancel",
     vtrigger: 1,
     type: "vsystem",
     command: "HP HK"
@@ -509,6 +525,35 @@ const blanka = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Anaconda's Maw",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Rolling Attack",
@@ -531,7 +576,7 @@ const blanka = [
     rigidity: "8+7 frame(s) after landing",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "110",
     stan: "150",
     remarks: "CA*Only possible during startup hit",
     vtrigger: 1,
@@ -545,7 +590,7 @@ const blanka = [
     rigidity: "4+23 frame(s) after landing",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "120",
     stan: "150",
     remarks: "CA*Only possible during startup hit",
     vtrigger: 1,
@@ -731,7 +776,7 @@ const blanka = [
     persistence: "10",
     rigidity: "17",
     hit: "D",
-    guard: "3",
+    guard: "4",
     damage: "80",
     stan: "150",
     remarks: "",
@@ -898,8 +943,8 @@ const blanka = [
   {
     name: "Standing MP",
     outbreak: "7",
-    persistence: "2",
-    rigidity: "15",
+    persistence: "3",
+    rigidity: "14",
     hit: "3",
     guard: "0",
     damage: "60",
@@ -1163,6 +1208,20 @@ const blanka = [
     command: "→ + MP"
   },
   {
+    name: "Rock Crusher (Charge Attack)",
+    outbreak: "34",
+    persistence: "3",
+    rigidity: "13",
+    hit: "4",
+    guard: "-2",
+    damage: "90",
+    stan: "120",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "→ + MP (HOLD BUTTONS)"
+  },
+  {
     name: "Amazon River Run",
     outbreak: "11",
     persistence: "10",
@@ -1214,7 +1273,7 @@ const blanka = [
     damage: "80(*2100)",
     stan: "100(*2150)",
     remarks:
-      "*1発生フレームはボタンホールド無し時のもの\n*2LV2発動可能時の数値 Vゲージ増加量は0/80に変化",
+      "*1When buttons not held at startup frame\n*2Denotes value when LV2 available; V Gauge increase becomes 0/80",
     vtrigger: 2,
     type: "unique",
     command: "(WHEN SELECTING VSKILL II) MK ▶ HK ▶ (ON HIT) MP MK"
@@ -1228,7 +1287,8 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "Can be canceled into from special move-cancelable normal moves",
+    remarks:
+      "Can be canceled into with regular moves that can cancel into Special Moves, as well as standing heavy kick",
     vtrigger: 2,
     type: "unique",
     command: "→ + LK"
@@ -1242,7 +1302,8 @@ const blanka = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "Can be canceled into from special move-cancelable normal moves",
+    remarks:
+      "Can be canceled into with regular moves that can cancel into Special Moves, as well as standing heavy kick",
     vtrigger: 2,
     type: "unique",
     command: "← + LK"
@@ -1328,7 +1389,7 @@ const blanka = [
     damage: "80",
     stan: "100",
     remarks:
-      "*発生フレームはボタンホールド無し時のもの\n50F以上ボタンホールドを続けることにより攻撃がLV2に変化\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+      "*When buttons not held at startup frame\nHolding the buttons beyond frame 50 makes the attack LV2\nCan be canceled into a forward or backward dash from button hold 22F\nUpon holding the buttons to Lv. 2 and then canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1343,7 +1404,7 @@ const blanka = [
     damage: "100",
     stan: "150",
     remarks:
-      "*発生フレームはLV2に変化後、最速で発生させた時のもの\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
+      "*Denotes shortest startup possible after making attack LV2\nCan cancel into a forward or backwards dash while holding the buttons\nUpon canceling into a forward or backwards dash, the Lv. 2 version can be performed instantly without holding the buttons",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK (HOLD BUTTONS)"
@@ -1393,6 +1454,35 @@ const blanka = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Anaconda's Maw",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Rolling Attack",
     outbreak: "9",
     persistence: "22",
@@ -1413,7 +1503,7 @@ const blanka = [
     rigidity: "8+7 frame(s) after landing",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "110",
     stan: "150",
     remarks: "CA*Only possible during startup hit",
     vtrigger: 2,
@@ -1427,7 +1517,7 @@ const blanka = [
     rigidity: "4+23 frame(s) after landing",
     hit: "D",
     guard: "-21",
-    damage: "100",
+    damage: "120",
     stan: "150",
     remarks: "CA*Only possible during startup hit",
     vtrigger: 2,
@@ -1568,7 +1658,7 @@ const blanka = [
     persistence: "10",
     rigidity: "17",
     hit: "D",
-    guard: "3",
+    guard: "4",
     damage: "80",
     stan: "150",
     remarks: "",
@@ -1690,4 +1780,5 @@ const blanka = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { blanka };

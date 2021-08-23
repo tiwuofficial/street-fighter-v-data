@@ -413,8 +413,8 @@ const g = [
   },
   {
     name: "[VS1] G Barrier",
-    outbreak: "13(*9)",
-    persistence: "13(*23)",
+    outbreak: "13(*13)",
+    persistence: "13(*13)",
     rigidity: "23",
     hit: "D",
     guard: "-17",
@@ -451,7 +451,7 @@ const g = [
     damage: "50+80",
     stan: "100+100",
     remarks:
-      "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) MP MK"
@@ -466,7 +466,7 @@ const g = [
     damage: "50+80",
     stan: "100+100",
     remarks:
-      "Uses 300F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
+      "Uses 500F V-Gauge Timer\n                                                                                                                                                                                *Value while absorbing projectile\nGain 80 EX Gauge upon successfully absorbing a projectile",
     vtrigger: 1,
     type: "vsystem",
     command:
@@ -482,7 +482,7 @@ const g = [
     damage: "",
     stan: "",
     remarks:
-      "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+      "Increases defense when activated (equal to 1 attack's worth of combo scaling) Note: Can be stacked 3 times\nPresidentiality Level won't drop even if knocked down, but strengthened status will be lost",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -497,7 +497,7 @@ const g = [
     damage: "",
     stan: "",
     remarks:
-      "Uses 300F V-Gauge Timer\n                                                                                                                                                                                発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される\nArmor from 3F to 31F",
+      "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Increases defense when activated (equal to 1 attack's worth of combo scaling) Note: Can be stacked 3 times\nPresidentiality Level won't drop even if knocked down, but strengthened status will be lost\nArmor from 3F to 31F",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -512,7 +512,7 @@ const g = [
     damage: "0",
     stan: "0",
     remarks:
-      "V-Gauge Timer + 3000F\n                                                                                                                                                                                While active, certain special moves will be strengthened, and G can cancel from one strengthened special move into another (once)",
+      "V Timer will increase depending on Presidentiality Level when V-Trigger is activated, as detailed below\nPresidentiality level 1 -> 2500 frames\nPresidentiality level 2 -> 3000 frames\nPresidentiality level 3 -> 3500 frames\n\nWhile active, certain special moves will be strengthened, and G can cancel from one strengthened special move into another (once)",
     vtrigger: 1,
     type: "vsystem",
     command: "HP HK"
@@ -531,6 +531,35 @@ const g = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "G Elimination",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L G Smash Over (Lv1)",
@@ -632,10 +661,10 @@ const g = [
     damage: "100",
     stan: "120",
     remarks:
-      "S*Cannot be canceled on block. Can only be canceled into G Charge on hit.\nCan only be canceled into Message to the People on hit.",
+      "S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Under, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People on hit.",
     vtrigger: 1,
     type: "special",
-    command: "→↓↘ + P"
+    command: "→↓↘ + HP"
   },
   {
     name: "V G Smash Over",
@@ -782,10 +811,10 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "*When in contact\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+      "*When in contact\nS*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People.",
     vtrigger: 1,
     type: "special",
-    command: "→↓↘ + K"
+    command: "→↓↘ + HK"
   },
   {
     name: "V G Smash Under",
@@ -836,9 +865,9 @@ const g = [
     name: "L G Burst (Lv1)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "46 total frames",
-    hit: "-3",
-    guard: "-8",
+    rigidity: "49 total frames",
+    hit: "-6",
+    guard: "-11",
     damage: "50",
     stan: "100",
     remarks:
@@ -881,9 +910,9 @@ const g = [
     name: "L G Burst (Lv2)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "46 total frames",
-    hit: "±0",
-    guard: "-5",
+    rigidity: "49 total frames",
+    hit: "-3",
+    guard: "-8",
     damage: "80",
     stan: "150",
     remarks:
@@ -932,10 +961,10 @@ const g = [
     damage: "100",
     stan: "150",
     remarks:
-      "S*Can only be canceled into G Charge\nNote: Can be canceled on whiff, excluding CA, V-Trigger\nCan only be canceled into Message to the People.",
+      "S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Smash Under, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nNote: Can be canceled on whiff, excluding CA, V-Trigger\nCan only be canceled into Message to the People.",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + P"
+    command: "↓↘→ + HP"
   },
   {
     name: "V G Burst",
@@ -1082,10 +1111,10 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "4F - 30F  projectile invincibility\n                                                S*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+      "4F - 30F  projectile invincibility\n                                                S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Smash Under, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People.",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K"
+    command: "↓↘→ + HK"
   },
   {
     name: "V G Spin Kick",
@@ -1211,8 +1240,22 @@ const g = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "120",
+    damage: "110",
+    stan: "150",
+    remarks: "Hit recovery can be canceled into special moves, V-Skill",
+    vtrigger: 1,
+    type: "special",
+    command: "→↘↓↙← + K K"
+  },
+  {
+    name: "EX G Impact (LV3 cancelable version)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "110",
+    stan: "150",
     remarks: "Hit recovery can be canceled into special moves, V-Skill",
     vtrigger: 1,
     type: "special",
@@ -1688,8 +1731,8 @@ const g = [
   },
   {
     name: "[VS1] G Barrier",
-    outbreak: "13(*9)",
-    persistence: "13(*23)",
+    outbreak: "13(*13)",
+    persistence: "13(*13)",
     rigidity: "23",
     hit: "D",
     guard: "-17",
@@ -1726,7 +1769,7 @@ const g = [
     damage: "",
     stan: "",
     remarks:
-      "発動すると防御力アップ(コンボ補正1技分)　※3回まで重ねがけ可能\n強化中はダウンしてもプレジデントLvが下がらないが、強化状態は解除される",
+      "Increases defense when activated (equal to 1 attack's worth of combo scaling) Note: Can be stacked 3 times\nPresidentiality Level won't drop even if knocked down, but strengthened status will be lost",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1760,6 +1803,35 @@ const g = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "G Elimination",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L G Smash Over (Lv1)",
@@ -1861,10 +1933,10 @@ const g = [
     damage: "100",
     stan: "120",
     remarks:
-      "S*Cannot be canceled on block. Can be canceled into G Charge, G Explosion only on hit\nCan only be canceled into Message to the People on hit.",
+      "S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Under, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People on hit.",
     vtrigger: 2,
     type: "special",
-    command: "→↓↘ + P"
+    command: "→↓↘ + HP"
   },
   {
     name: "EX　G Smash Over",
@@ -1981,10 +2053,10 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "*When in contact\nS*Can only be canceled into G Charge, G Explosion\nCan only be canceled into Message to the People.",
+      "*When in contact\nS*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People.",
     vtrigger: 2,
     type: "special",
-    command: "→↓↘ + K"
+    command: "→↓↘ + HK"
   },
   {
     name: "EX G Smash Under",
@@ -2005,9 +2077,9 @@ const g = [
     name: "L G Burst (Lv1)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "46 total frames",
-    hit: "-3",
-    guard: "-8",
+    rigidity: "49 total frames",
+    hit: "-6",
+    guard: "-11",
     damage: "50",
     stan: "100",
     remarks:
@@ -2050,9 +2122,9 @@ const g = [
     name: "L G Burst (Lv2)",
     outbreak: "15",
     persistence: "11",
-    rigidity: "46 total frames",
-    hit: "±0",
-    guard: "-5",
+    rigidity: "49 total frames",
+    hit: "-3",
+    guard: "-8",
     damage: "80",
     stan: "150",
     remarks:
@@ -2101,10 +2173,10 @@ const g = [
     damage: "100",
     stan: "150",
     remarks:
-      "S*Can only be canceled into G Charge, G Explosion\nNote: Can be canceled on whiff, excluding CA, V-Trigger, G Explosion\nCan only be canceled into Message to the People.",
+      "S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Smash Under, EX G Spin Kick, EX G Burst, EX G Impact (cancelable version) on hit or on block\nNote: Can be canceled on whiff, excluding CA, V-Trigger, G Explosion\nCan only be canceled into Message to the People.",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + P"
+    command: "↓↘→ + HP"
   },
   {
     name: "EX G Burst",
@@ -2221,10 +2293,10 @@ const g = [
     damage: "110",
     stan: "150",
     remarks:
-      "4F - 30F  throw invincibility\n                                                S*Can only be canceled into G Charge on hit\nCan only be canceled into Message to the People on hit.",
+      "4F - 30F  throw invincibility\n                                                S*Can be canceled into G Charge only on hit. Can be canceled into EX G Smash Over, EX G Smash Under, EX G Burst, EX G Impact (cancelable version) on hit or on block\nCan only be canceled into Message to the People on hit.",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K"
+    command: "↓↘→ + HK"
   },
   {
     name: "EX G Spin Kick",
@@ -2290,8 +2362,22 @@ const g = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "120",
+    damage: "110",
+    stan: "150",
+    remarks: "Hit recovery can be canceled into special moves, V-Skill",
+    vtrigger: 2,
+    type: "special",
+    command: "→↘↓↙← + K K"
+  },
+  {
+    name: "EX G Impact (LV3 cancelable version)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "60",
+    hit: "D",
+    guard: "",
+    damage: "110",
+    stan: "150",
     remarks: "Hit recovery can be canceled into special moves, V-Skill",
     vtrigger: 2,
     type: "special",
@@ -2346,10 +2432,10 @@ const g = [
     rigidity: "38",
     hit: "D",
     guard: "-28",
-    damage: "150(*150)",
+    damage: "170(*150)",
     stan: "200(*200)",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                *On max-distance hit\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                *On max-distance hit\nS*Can only be canceled into G Charge\nCan only be canceled into Message to the People.",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"
@@ -2399,4 +2485,5 @@ const g = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { g };

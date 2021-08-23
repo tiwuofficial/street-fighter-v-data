@@ -18,7 +18,7 @@ const ryu = [
     outbreak: "3",
     persistence: "2",
     rigidity: "7",
-    hit: "4",
+    hit: "6",
     guard: "2",
     damage: "30",
     stan: "100",
@@ -32,8 +32,8 @@ const ryu = [
     outbreak: "5",
     persistence: "3",
     rigidity: "10",
-    hit: "7",
-    guard: "1",
+    hit: "6",
+    guard: "2",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -46,8 +46,8 @@ const ryu = [
     outbreak: "5",
     persistence: "3",
     rigidity: "10",
-    hit: "7",
-    guard: "1",
+    hit: "8",
+    guard: "2",
     damage: "60",
     stan: "130",
     remarks: "",
@@ -74,7 +74,7 @@ const ryu = [
     outbreak: "8",
     persistence: "3",
     rigidity: "20",
-    hit: "3",
+    hit: "5",
     guard: "-1",
     damage: "90",
     stan: "180",
@@ -145,7 +145,7 @@ const ryu = [
     outbreak: "4",
     persistence: "3",
     rigidity: "5",
-    hit: "3",
+    hit: "5",
     guard: "2",
     damage: "30",
     stan: "100",
@@ -173,8 +173,8 @@ const ryu = [
     outbreak: "6",
     persistence: "3",
     rigidity: "12",
-    hit: "4",
-    guard: "3",
+    hit: "6",
+    guard: "2",
     damage: "60",
     stan: "130",
     remarks: "",
@@ -202,7 +202,7 @@ const ryu = [
     outbreak: "6",
     persistence: "4",
     rigidity: "24",
-    hit: "-7",
+    hit: "-5",
     guard: "-10",
     damage: "90(*70)",
     stan: "180",
@@ -228,7 +228,7 @@ const ryu = [
   },
   {
     name: "Crouching MK",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "13",
     hit: "2",
@@ -242,7 +242,7 @@ const ryu = [
   },
   {
     name: "Crouching HK",
-    outbreak: "8",
+    outbreak: "7",
     persistence: "2",
     rigidity: "22",
     hit: "D",
@@ -454,6 +454,20 @@ const ryu = [
     name: "Jodan Nirengeki",
     outbreak: "9",
     persistence: "2",
+    rigidity: "26",
+    hit: "D",
+    guard: "-7",
+    damage: "70",
+    stan: "100",
+    remarks: "VS*Can be canceled with V-Skill II after successful hit",
+    vtrigger: 1,
+    type: "unique",
+    command: "HP ▶ HK"
+  },
+  {
+    name: "Jodan Sanrengeki(1)(Standing)",
+    outbreak: "9",
+    persistence: "2",
     rigidity: "28",
     hit: "-2",
     guard: "-9",
@@ -465,7 +479,7 @@ const ryu = [
     command: "MP ▶ HP"
   },
   {
-    name: "VJodan Nirengeki",
+    name: "VJodan Sanrengeki(1)(Standing)",
     outbreak: "9",
     persistence: "2",
     rigidity: "28",
@@ -479,7 +493,35 @@ const ryu = [
     command: "MP ▶ HP"
   },
   {
-    name: "Jodan Sanrengeki",
+    name: "Jodan Sanrengeki(1)(Crouching)",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "21",
+    hit: "-2",
+    guard: "-9",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "MP ▶ ↓ + HP"
+  },
+  {
+    name: "VJodan Sanrengeki(1)(Crouching)",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "21",
+    hit: "-2",
+    guard: "-9",
+    damage: "80",
+    stan: "130",
+    remarks: "",
+    vtrigger: 1,
+    type: "unique",
+    command: "MP ▶ ↓ + HP"
+  },
+  {
+    name: "Jodan Sanrengeki(2)",
     outbreak: "9",
     persistence: "2",
     rigidity: "26",
@@ -487,10 +529,10 @@ const ryu = [
     guard: "-7",
     damage: "70",
     stan: "100",
-    remarks: "",
+    remarks: "VS*Can be canceled with V-Skill II after successful hit",
     vtrigger: 1,
     type: "unique",
-    command: "MP ▶ HP ▶ HK"
+    command: "MP ▶ HP OR ↓ + HP ▶ HK"
   },
   {
     name: "Shoulder Throw",
@@ -530,7 +572,7 @@ const ryu = [
     damage: "",
     stan: "",
     remarks:
-      "The startup for a Mind's Eye canceled from a successful Mind's Eye is 1F\nNo counter hit while the move is active (does not apply to cancel Mind's Eye)",
+      "The startup for a Mind's Eye canceled from a successful Mind's Eye is 1F\nNo counter hit while the move is active (does not apply to cancel Mind's Eye)\nRecover 50 frames of V Timer on successful parry with V Trigger active\nS*Cancelable by EX special move only on a successful parry\nCA*Cancelable only on a successful parry",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -542,9 +584,9 @@ const ryu = [
     rigidity: "26",
     hit: "D",
     guard: "-4",
-    damage: "60",
+    damage: "70",
     stan: "100",
-    remarks: "Counter for all hit levels from 10F to 19F",
+    remarks: "Counter for all hit levels from 10F to 21F",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -559,7 +601,7 @@ const ryu = [
     damage: "120",
     stan: "200",
     remarks:
-      "1F - 23F  full invincibility\n                                                (初段空振り時は1～11F完全無敵)\n*When the first hit whiffs",
+      "1F - 23F  full invincibility\n                                                Fully invincible from frames 1-11 when first hit whiffs\n*When the first hit whiffs",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -571,9 +613,9 @@ const ryu = [
     rigidity: "26",
     hit: "D",
     guard: "-4",
-    damage: "60",
+    damage: "70",
     stan: "130",
-    remarks: "Counter for all hit levels from 10F to 19F",
+    remarks: "Counter for all hit levels from 10F to 21F",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -588,7 +630,7 @@ const ryu = [
     damage: "120",
     stan: "250",
     remarks:
-      "1F - 23F  full invincibility\n                                                (初段空振り時は1～11F完全無敵)\n*When the first hit whiffs",
+      "1F - 23F  full invincibility\n                                                Fully invincible from frames 1-11 when first hit whiffs\n*When the first hit whiffs",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -603,7 +645,7 @@ const ryu = [
     damage: "",
     stan: "",
     remarks:
-      "V-Gauge Timer + 800F\n                                                                                                                                                                                While active, all punch-type Normal/Unique/Special moves and CA will be strenghtened",
+      "V-Gauge Timer + 1000F\n                                                                                                                                                                                While active, all punch-type Normal/Unique/Special moves and CA will be strenghtened",
     vtrigger: 1,
     type: "vsystem",
     command: "HP HK"
@@ -622,6 +664,35 @@ const ryu = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Fumikomi Jodan Kagizuki",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Hadoken",
@@ -784,7 +855,7 @@ const ryu = [
     rigidity: "19+11 frame(s) after landing",
     hit: "D",
     guard: "-24",
-    damage: "100(*60)",
+    damage: "110(*60)",
     stan: "150(*100)",
     remarks:
       "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F",
@@ -829,7 +900,7 @@ const ryu = [
     rigidity: "19+11 frame(s) after landing",
     hit: "D",
     guard: "-24",
-    damage: "110(*80)",
+    damage: "120(*80)",
     stan: "200(*150)",
     remarks:
       "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F",
@@ -904,7 +975,7 @@ const ryu = [
     rigidity: "18+12 frame(s) after landing",
     hit: "D",
     guard: "-10",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -918,7 +989,7 @@ const ryu = [
     rigidity: "16+14 frame(s) after landing",
     hit: "D",
     guard: "-12",
-    damage: "100",
+    damage: "90",
     stan: "150",
     remarks:
       "6F - 45F  projectile invincibility\n                                                Chip damage is 1/6ths the hit damage",
@@ -933,7 +1004,7 @@ const ryu = [
     rigidity: "16+15 frame(s) after landing",
     hit: "D",
     guard: "-13",
-    damage: "110",
+    damage: "100",
     stan: "150",
     remarks:
       "9F - 61F  projectile invincibility\n                                                Chip damage is 1/6ths the hit damage",
@@ -990,8 +1061,8 @@ const ryu = [
     persistence: "2",
     rigidity: "28",
     hit: "D",
-    guard: "-16",
-    damage: "70",
+    guard: "-15",
+    damage: "90",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -1004,8 +1075,8 @@ const ryu = [
     persistence: "2",
     rigidity: "28",
     hit: "D",
-    guard: "-16",
-    damage: "80",
+    guard: "-15",
+    damage: "100",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -1018,8 +1089,8 @@ const ryu = [
     persistence: "2",
     rigidity: "28",
     hit: "D",
-    guard: "-16",
-    damage: "100",
+    guard: "-15",
+    damage: "110",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -1028,11 +1099,11 @@ const ryu = [
   },
   {
     name: "EX Jodan Sokutou Geri",
-    outbreak: "18",
+    outbreak: "17",
     persistence: "2",
-    rigidity: "36",
+    rigidity: "33",
     hit: "D",
-    guard: "-16",
+    guard: "-13",
     damage: "80",
     stan: "150",
     remarks: "S*Only Tatsumaki Senpukyaku and EX Tatsumaki Senpukyaku can be canceled",
@@ -1046,7 +1117,7 @@ const ryu = [
     persistence: "",
     rigidity: "65 total frames",
     hit: "D",
-    guard: "-17",
+    guard: "-25",
     damage: "320",
     stan: "0",
     remarks: "1F - 3F  full invincibility",
@@ -1064,7 +1135,7 @@ const ryu = [
     damage: "350",
     stan: "300",
     remarks:
-      "Uses 800F V-Gauge Timer\n                                                                                                                                1F - 3F  full invincibility\n                                                During guard break+9F",
+      "1F - 3F  full invincibility\n                                                Uses all of the V-Timer\nDuring guard break+9F",
     vtrigger: 1,
     type: "ca",
     command: "↓↘→ ↓↘→ + P"
@@ -1088,8 +1159,8 @@ const ryu = [
     outbreak: "5",
     persistence: "3",
     rigidity: "10",
-    hit: "7",
-    guard: "1",
+    hit: "6",
+    guard: "2",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -1099,20 +1170,6 @@ const ryu = [
   },
   {
     name: "Standing HP",
-    outbreak: "8",
-    persistence: "3",
-    rigidity: "20",
-    hit: "3",
-    guard: "-1",
-    damage: "90",
-    stan: "150",
-    remarks: "Triggers Crush Counter  (D)",
-    vtrigger: 2,
-    type: "normal",
-    command: ""
-  },
-  {
-    name: "VStanding HP",
     outbreak: "8",
     persistence: "3",
     rigidity: "20",
@@ -1227,7 +1284,7 @@ const ryu = [
   },
   {
     name: "Crouching MK",
-    outbreak: "7",
+    outbreak: "6",
     persistence: "3",
     rigidity: "13",
     hit: "2",
@@ -1241,7 +1298,7 @@ const ryu = [
   },
   {
     name: "Crouching HK",
-    outbreak: "8",
+    outbreak: "7",
     persistence: "2",
     rigidity: "22",
     hit: "D",
@@ -1384,6 +1441,20 @@ const ryu = [
     name: "Jodan Nirengeki",
     outbreak: "9",
     persistence: "2",
+    rigidity: "26",
+    hit: "D",
+    guard: "-7",
+    damage: "70",
+    stan: "100",
+    remarks: "VS*Can be canceled with V-Skill II after successful hit",
+    vtrigger: 2,
+    type: "unique",
+    command: "HP ▶ HK"
+  },
+  {
+    name: "Jodan Sanrengeki(1)(Standing)",
+    outbreak: "9",
+    persistence: "2",
     rigidity: "28",
     hit: "-2",
     guard: "-9",
@@ -1395,7 +1466,21 @@ const ryu = [
     command: "MP ▶ HP"
   },
   {
-    name: "Jodan Sanrengeki",
+    name: "Jodan Sanrengeki(1)(Crouching)",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "21",
+    hit: "-2",
+    guard: "-9",
+    damage: "70",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "unique",
+    command: "MP ▶ ↓ + HP"
+  },
+  {
+    name: "Jodan Sanrengeki(2)",
     outbreak: "9",
     persistence: "2",
     rigidity: "26",
@@ -1403,10 +1488,10 @@ const ryu = [
     guard: "-7",
     damage: "70",
     stan: "100",
-    remarks: "",
+    remarks: "VS*Can be canceled with V-Skill II after successful hit",
     vtrigger: 2,
     type: "unique",
-    command: "MP ▶ HP ▶ HK"
+    command: "MP ▶ HP OR ↓ + HP ▶ HK"
   },
   {
     name: "Shoulder Throw",
@@ -1446,7 +1531,7 @@ const ryu = [
     damage: "",
     stan: "",
     remarks:
-      "The startup for a Mind's Eye canceled from a successful Mind's Eye is 1F\nNo counter hit while the move is active (does not apply to cancel Mind's Eye)",
+      "The startup for a Mind's Eye canceled from a successful Mind's Eye is 1F\nNo counter hit while the move is active (does not apply to cancel Mind's Eye)\nRecover 50 frames of V Timer on successful parry with V Trigger active\nS*Cancelable by EX special move only on a successful parry\nCA*Cancelable only on a successful parry",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -1458,9 +1543,9 @@ const ryu = [
     rigidity: "26",
     hit: "D",
     guard: "-4",
-    damage: "60",
+    damage: "70",
     stan: "100",
-    remarks: "Counter for all hit levels from 10F to 19F",
+    remarks: "Counter for all hit levels from 10F to 21F",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1475,7 +1560,7 @@ const ryu = [
     damage: "120",
     stan: "200",
     remarks:
-      "1F - 23F  full invincibility\n                                                (初段空振り時は1～11F完全無敵)\n*When the first hit whiffs",
+      "1F - 23F  full invincibility\n                                                Fully invincible from frames 1-11 when first hit whiffs\n*When the first hit whiffs",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1511,6 +1596,35 @@ const ryu = [
     command: "(DURING GUARD) → + LP"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Fumikomi Jodan Kagizuki",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Hadoken",
     outbreak: "14",
     persistence: "",
@@ -1519,7 +1633,7 @@ const ryu = [
     guard: "-6",
     damage: "60",
     stan: "100",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LP"
@@ -1533,7 +1647,7 @@ const ryu = [
     guard: "-6",
     damage: "60",
     stan: "100",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MP"
@@ -1547,7 +1661,7 @@ const ryu = [
     guard: "-6",
     damage: "60",
     stan: "100",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + HP"
@@ -1561,7 +1675,7 @@ const ryu = [
     guard: "2",
     damage: "100",
     stan: "150",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P"
@@ -1573,10 +1687,10 @@ const ryu = [
     rigidity: "19+11 frame(s) after landing",
     hit: "D",
     guard: "-24",
-    damage: "100(*60)",
+    damage: "110(*60)",
     stan: "150(*100)",
     remarks:
-      "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F",
+      "1F - 3F  throw invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F\nS*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + LP"
@@ -1591,7 +1705,7 @@ const ryu = [
     damage: "120(*60)",
     stan: "150(*100)",
     remarks:
-      "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*From active frame 3F",
+      "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*From active frame 3F\nS*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + MP"
@@ -1606,7 +1720,7 @@ const ryu = [
     damage: "130(*60)",
     stan: "150",
     remarks:
-      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F",
+      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\n*From active frame 2F\nS*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + HP"
@@ -1633,7 +1747,7 @@ const ryu = [
     rigidity: "18+12 frame(s) after landing",
     hit: "D",
     guard: "-10",
-    damage: "90",
+    damage: "80",
     stan: "150",
     remarks: "",
     vtrigger: 2,
@@ -1647,7 +1761,7 @@ const ryu = [
     rigidity: "16+14 frame(s) after landing",
     hit: "D",
     guard: "-12",
-    damage: "100",
+    damage: "90",
     stan: "150",
     remarks:
       "6F - 45F  projectile invincibility\n                                                Chip damage is 1/6ths the hit damage",
@@ -1662,7 +1776,7 @@ const ryu = [
     rigidity: "16+15 frame(s) after landing",
     hit: "D",
     guard: "-13",
-    damage: "110",
+    damage: "100",
     stan: "150",
     remarks:
       "9F - 61F  projectile invincibility\n                                                Chip damage is 1/6ths the hit damage",
@@ -1720,9 +1834,9 @@ const ryu = [
     rigidity: "28",
     hit: "D",
     guard: "-16",
-    damage: "70",
+    damage: "90",
     stan: "150",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "←↙↓↘→ + LK"
@@ -1734,9 +1848,9 @@ const ryu = [
     rigidity: "28",
     hit: "D",
     guard: "-16",
-    damage: "80",
+    damage: "100",
     stan: "150",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "←↙↓↘→ + MK"
@@ -1748,9 +1862,9 @@ const ryu = [
     rigidity: "28",
     hit: "D",
     guard: "-16",
-    damage: "100",
+    damage: "110",
     stan: "150",
-    remarks: "",
+    remarks: "S*Cancelable only by Isshin on hit",
     vtrigger: 2,
     type: "special",
     command: "←↙↓↘→ + HK"
@@ -1779,7 +1893,7 @@ const ryu = [
     damage: "0",
     stan: "0",
     remarks:
-      "Uses 800F V-Gauge Timer\n                                                                                                                                                                                Subject to counter hit during move duration\nThe recovery of a successful Mind's Eye parry can be canceled into Isshin.\nIf the Isshin parry was successful but the attack does not connect, the recovery can be canceled into Isshin.\nNote: When canceled into from Mind's Eye, the counter is active from 1F, and the move cannot be counter hit\nCannot be canceled into from a special move-cancelable move",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Subject to counter hit during move duration\nThe recovery of a successful Mind's Eye parry can be canceled into Isshin.\nIf the Isshin parry was successful but the attack does not connect, the recovery can be canceled into Isshin.\nNote: When canceled into from Mind's Eye, the counter is active from 1F, and the move cannot be counter hit\nCannot be canceled into from a special move-cancelable move",
     vtrigger: 2,
     type: "special",
     command: "HP HK"
@@ -1793,10 +1907,25 @@ const ryu = [
     guard: "",
     damage: "150",
     stan: "200",
-    remarks: "S*Can only be canceled into Shoryuken (all strengths), EX Jodan Sokutou Geri",
+    remarks:
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                S*Can only be canceled into Shoryuken (all strengths), EX Jodan Sokutou Geri",
     vtrigger: 2,
     type: "special",
     command: "(UPON SUCCESSFUL PARRY)"
+  },
+  {
+    name: "Isshin (Attack)",
+    outbreak: "",
+    persistence: "5",
+    rigidity: "35",
+    hit: "D",
+    guard: "-22",
+    damage: "140",
+    stan: "200",
+    remarks: "Uses 1500F V-Gauge Timer",
+    vtrigger: 2,
+    type: "special",
+    command: "(UPON CANCEL SPECIAL MOVE)"
   },
   {
     name: "Shinku Hadoken",
@@ -1804,7 +1933,7 @@ const ryu = [
     persistence: "",
     rigidity: "65 total frames",
     hit: "D",
-    guard: "-17",
+    guard: "-25",
     damage: "320",
     stan: "0",
     remarks: "1F - 3F  full invincibility",

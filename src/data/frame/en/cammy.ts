@@ -9,7 +9,7 @@ const cammy = [
     damage: "30",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -23,7 +23,7 @@ const cammy = [
     guard: "3",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -37,7 +37,7 @@ const cammy = [
     guard: "-3",
     damage: "80",
     stan: "150",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -95,7 +95,7 @@ const cammy = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -109,7 +109,7 @@ const cammy = [
     guard: "1",
     damage: "60",
     stan: "100",
-    remarks: "*On whiff\nVS*VS2のみキャンセル可能",
+    remarks: "*On whiff\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -151,7 +151,7 @@ const cammy = [
     guard: "-3",
     damage: "50",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -264,7 +264,7 @@ const cammy = [
     damage: "60",
     stan: "100",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS2のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "unique",
     command: "← + MP"
@@ -293,7 +293,7 @@ const cammy = [
     damage: "80",
     stan: "100",
     remarks:
-      "Will not hit crouching opponents\n                                                                                                S*CA*VS*Only on hit\nVS*VS2のみキャンセル可能",
+      "Will not hit crouching opponents\n                                                                                                S*CA*VS*Only on hit\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "unique",
     command: "← + MP ▶ HK"
@@ -415,6 +415,35 @@ const cammy = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Counter Spike",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Spiral Arrow",
     outbreak: "7",
     persistence: "11",
@@ -484,7 +513,7 @@ const cammy = [
     damage: "140",
     stan: "200",
     remarks:
-      "16F - 25F  throw invincibility\n1F - 2F  projectile invincibility\n3F - 15F  projectile & throw invincibility",
+      "16F - 25F  throw invincibility\n4F - 6F  projectile invincibility\n7F - 15F  projectile & throw invincibility",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + K K"
@@ -597,12 +626,13 @@ const cammy = [
     name: "VCannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "9 frame(s) after landing(*17)",
     hit: "6",
     guard: "4",
     damage: "80",
     stan: "100",
-    remarks: "Uses 1500F V-Gauge Timer",
+    remarks:
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                *On whiff",
     vtrigger: 1,
     type: "special",
     command: "(DURING FORWARD JUMP) ↓↙← + K"
@@ -611,12 +641,12 @@ const cammy = [
     name: "EX Cannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "13 frame(s) after landing",
+    rigidity: "13 frame(s) after landing(*17)",
     hit: "D",
     guard: "-5",
     damage: "80",
     stan: "100",
-    remarks: "",
+    remarks: "*On whiff",
     vtrigger: 1,
     type: "special",
     command: "(DURING FORWARD JUMP) ↓↙← + K K"
@@ -667,12 +697,13 @@ const cammy = [
     name: "VHooligan Cannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "9 frame(s) after landing(*17)",
     hit: "",
     guard: "",
     damage: "80",
     stan: "100",
-    remarks: "Uses 1500F V-Gauge Timer",
+    remarks:
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                *On whiff",
     vtrigger: 1,
     type: "special",
     command: "←↙↓↘→ + P ▶ K"
@@ -681,12 +712,12 @@ const cammy = [
     name: "EX Hooligan Cannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "9 frame(s) after landing(*17)",
     hit: "D",
     guard: "-2",
     damage: "80",
     stan: "100",
-    remarks: "",
+    remarks: "*On whiff",
     vtrigger: 1,
     type: "special",
     command: "←↙↓↘→ + P P ▶ K"
@@ -771,7 +802,7 @@ const cammy = [
     damage: "30",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -785,7 +816,7 @@ const cammy = [
     guard: "3",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -799,7 +830,7 @@ const cammy = [
     guard: "-3",
     damage: "80",
     stan: "150",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -857,7 +888,7 @@ const cammy = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS2のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -871,7 +902,7 @@ const cammy = [
     guard: "1",
     damage: "60",
     stan: "100",
-    remarks: "*On whiff\nVS*VS2のみキャンセル可能",
+    remarks: "*On whiff\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -913,7 +944,7 @@ const cammy = [
     guard: "-3",
     damage: "50",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1026,7 +1057,7 @@ const cammy = [
     damage: "60",
     stan: "100",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS2のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "unique",
     command: "← + MP"
@@ -1055,7 +1086,7 @@ const cammy = [
     damage: "80",
     stan: "100",
     remarks:
-      "Will not hit crouching opponents\n                                                                                                S*CA*VS*Only on hit\nVS*VS2のみキャンセル可能",
+      "Will not hit crouching opponents\n                                                                                                S*CA*VS*Only on hit\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "unique",
     command: "← + MP ▶ HK"
@@ -1183,7 +1214,7 @@ const cammy = [
     rigidity: "25+13 frame(s) after landing",
     hit: "7",
     guard: "",
-    damage: "120",
+    damage: "150",
     stan: "0",
     remarks: "Will not hit crouching opponents",
     vtrigger: 2,
@@ -1196,7 +1227,7 @@ const cammy = [
     persistence: "7",
     rigidity: "13+13 frame(s) after landing",
     hit: "3",
-    guard: "-2",
+    guard: "2",
     damage: "80",
     stan: "100",
     remarks: "",
@@ -1218,6 +1249,35 @@ const cammy = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Counter Spike",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Spiral Arrow",
@@ -1274,7 +1334,7 @@ const cammy = [
     damage: "140",
     stan: "200",
     remarks:
-      "16F - 25F  throw invincibility\n1F - 2F  projectile invincibility\n3F - 15F  projectile & throw invincibility",
+      "16F - 25F  throw invincibility\n4F - 6F  projectile invincibility\n7F - 15F  projectile & throw invincibility",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + K K"
@@ -1357,12 +1417,12 @@ const cammy = [
     name: "EX Cannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "13 frame(s) after landing",
+    rigidity: "13 frame(s) after landing(*17)",
     hit: "D",
     guard: "-5",
     damage: "80",
     stan: "100",
-    remarks: "",
+    remarks: "*On whiff",
     vtrigger: 2,
     type: "special",
     command: "(DURING FORWARD JUMP) ↓↙← + K K"
@@ -1413,12 +1473,12 @@ const cammy = [
     name: "EX Hooligan Cannon Strike",
     outbreak: "13",
     persistence: "11",
-    rigidity: "9 frame(s) after landing",
+    rigidity: "9 frame(s) after landing(*17)",
     hit: "D",
     guard: "-2",
     damage: "80",
     stan: "100",
-    remarks: "",
+    remarks: "*On whiff",
     vtrigger: 2,
     type: "special",
     command: "←↙↓↘→ + P P ▶ K"
@@ -1516,7 +1576,7 @@ const cammy = [
     rigidity: "25+13 frame(s) after landing",
     hit: "7",
     guard: "",
-    damage: "120",
+    damage: "150",
     stan: "0",
     remarks: "Will not hit crouching opponents",
     vtrigger: 2,
@@ -1529,7 +1589,7 @@ const cammy = [
     persistence: "7",
     rigidity: "13+13 frame(s) after landing",
     hit: "3",
-    guard: "-2",
+    guard: "2",
     damage: "80",
     stan: "100",
     remarks: "",

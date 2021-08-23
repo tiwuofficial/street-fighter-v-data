@@ -11,8 +11,8 @@ const dan = [
     remarks:
       "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "LP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing MP",
@@ -25,8 +25,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "MP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing HP",
@@ -40,8 +40,8 @@ const dan = [
     remarks:
       "Triggers Crush Counter  (+9F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "HP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing LK",
@@ -54,8 +54,8 @@ const dan = [
     stan: "50",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "LK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing MK",
@@ -68,8 +68,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 1,
-    type: "",
-    command: "MK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing HK",
@@ -82,8 +82,8 @@ const dan = [
     stan: "120",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 1,
-    type: "",
-    command: "HK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching LP",
@@ -97,8 +97,8 @@ const dan = [
     remarks:
       "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) LP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching MP",
@@ -111,8 +111,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) MP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching HP",
@@ -125,8 +125,8 @@ const dan = [
     stan: "120",
     remarks: "VS*Can only be canceled V-Skill II\nCan be canceled up to active frame 2F",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) HP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching LK",
@@ -140,8 +140,8 @@ const dan = [
     remarks:
       "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) LK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching MK",
@@ -154,8 +154,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) MK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching HK",
@@ -168,8 +168,8 @@ const dan = [
     stan: "120",
     remarks: "Triggers Crush Counter  (D)",
     vtrigger: 1,
-    type: "",
-    command: "(WHILE CROUCHING) HK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Jumping LP",
@@ -182,8 +182,8 @@ const dan = [
     stan: "70",
     remarks: "",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) LP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping MP",
@@ -196,8 +196,8 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nCauses blowback knockdown on airborne hit",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) MP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping HP",
@@ -210,8 +210,8 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) HP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping LK",
@@ -224,8 +224,8 @@ const dan = [
     stan: "70",
     remarks: "",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) LK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping MK",
@@ -238,8 +238,8 @@ const dan = [
     stan: "100",
     remarks: "Can cross-up",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) MK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping HK",
@@ -252,8 +252,8 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
-    command: "(DURING JUMP) HK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Saikyo Chop",
@@ -266,7 +266,7 @@ const dan = [
     stan: "120",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "→ + HP"
   },
   {
@@ -280,7 +280,7 @@ const dan = [
     stan: "120",
     remarks: "Triggers Crush Counter  (crumple)",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "← + HK"
   },
   {
@@ -294,7 +294,7 @@ const dan = [
     stan: "130",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(NEAR OPPONENT) → OR + LP LK"
   },
   {
@@ -308,7 +308,7 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(NEAR OPPONENT) ← + LP LK"
   },
   {
@@ -323,7 +323,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when hitbox appears.\nSubject to counter hit during move duration",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
@@ -338,7 +338,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 on the 29th frame.\nSubject to counter hit during move duration",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) ← + MP MK"
   },
   {
@@ -353,7 +353,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when hitbox appears.\nSpecial counter hit when active",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) (DURING JUMP) MP MK"
   },
   {
@@ -368,7 +368,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when active.\nAll normal attacks except for crouching heavy kick can be canceled when active\nWhen canceling from a normal attack, normal attacks and special attacks can be canceled into on the 11th frame.\nNormal attacks from a canceled V-Skill II have their stats cut by half.\nA standing heavy punch from a canceled V-Skill II will have the same effect as a crush counter and float the opponent.\nSubject to counter hit during move duration",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
@@ -383,7 +383,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when active.\nAll normal attacks except for crouching heavy kick can be canceled when active\nWhen canceling from a normal attack, normal attacks and special attacks can be canceled into on the 11th frame.\nNormal attacks from a canceled V-Skill II have their stats cut by half.\nA standing heavy punch from a canceled V-Skill II will have the same effect as a crush counter and float the opponent.\nSubject to counter hit during move duration",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
   },
   {
@@ -392,12 +392,12 @@ const dan = [
     persistence: "50",
     rigidity: "82 total frames",
     hit: "D",
-    guard: "2",
+    guard: "3",
     damage: "100",
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "HP HK"
   },
   {
@@ -411,7 +411,7 @@ const dan = [
     stan: "150",
     remarks: "Wall bound when the attack connects",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "HP HK (HOLD BUTTONS)"
   },
   {
@@ -426,7 +426,7 @@ const dan = [
     remarks:
       "1F - 40F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(DURING GUARD) → + LP"
   },
   {
@@ -441,7 +441,7 @@ const dan = [
     remarks:
       "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "HP MK"
   },
   {
@@ -455,7 +455,7 @@ const dan = [
     stan: "0",
     remarks: "1F - 10F  full invincibility",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
@@ -469,7 +469,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + LP"
   },
   {
@@ -483,7 +483,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + MP"
   },
   {
@@ -497,8 +497,50 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + HP"
+  },
+  {
+    name: "L Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "20",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
+  },
+  {
+    name: "M Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "18",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
+  },
+  {
+    name: "H Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "16",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 1,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
   },
   {
     name: "L Gadoken (Hold Button)",
@@ -511,7 +553,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + LP (HOLD BUTTONS)"
   },
   {
@@ -525,7 +567,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + MP (HOLD BUTTONS)"
   },
   {
@@ -539,7 +581,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + HP (HOLD BUTTONS)"
   },
   {
@@ -553,7 +595,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P"
   },
   {
@@ -568,7 +610,7 @@ const dan = [
     remarks:
       "1F - 5F  throw invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + LP"
   },
   {
@@ -583,7 +625,7 @@ const dan = [
     remarks:
       "1F - 6F  invincible to mid-air attacks\n                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + MP"
   },
   {
@@ -598,7 +640,7 @@ const dan = [
     remarks:
       "6F - 9F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + HP"
   },
   {
@@ -613,7 +655,7 @@ const dan = [
     remarks:
       "1F - 5F  full invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + P P"
   },
   {
@@ -627,7 +669,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + LK"
   },
   {
@@ -641,7 +683,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + MK"
   },
   {
@@ -655,7 +697,7 @@ const dan = [
     stan: "120",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + HK"
   },
   {
@@ -668,9 +710,9 @@ const dan = [
     damage: "140",
     stan: "150",
     remarks:
-      "VS*Can only be canceled V-Skill I\nGoes to 2nd hit only when the first attack connects.",
+      "VS*Can only be canceled V-Skill I\nSecond attack only triggers when the first one hits or is blocked",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + K K"
   },
   {
@@ -685,7 +727,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + LP"
   },
   {
@@ -700,7 +742,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + MP"
   },
   {
@@ -715,7 +757,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + HP"
   },
   {
@@ -730,7 +772,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + P P"
   },
   {
@@ -745,7 +787,7 @@ const dan = [
     remarks:
       "1F - 10F  full invincibility\n                                                Lock animation occurs when the first attack connects.",
     vtrigger: 1,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + P"
   },
   {
@@ -760,8 +802,8 @@ const dan = [
     remarks:
       "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "LP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing MP",
@@ -774,8 +816,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "MP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing HP",
@@ -789,8 +831,8 @@ const dan = [
     remarks:
       "Triggers Crush Counter  (+9F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "HP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing LK",
@@ -803,8 +845,8 @@ const dan = [
     stan: "50",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "LK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing MK",
@@ -817,8 +859,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 2,
-    type: "",
-    command: "MK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Standing HK",
@@ -831,8 +873,8 @@ const dan = [
     stan: "120",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 2,
-    type: "",
-    command: "HK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching LP",
@@ -845,8 +887,8 @@ const dan = [
     stan: "50",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) LP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching MP",
@@ -859,8 +901,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) MP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching HP",
@@ -874,8 +916,8 @@ const dan = [
     remarks:
       "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II\nCan be canceled up to active frame 2F",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) HP"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching LK",
@@ -888,8 +930,8 @@ const dan = [
     stan: "50",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) LK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching MK",
@@ -902,8 +944,8 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) MK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Crouching HK",
@@ -916,8 +958,8 @@ const dan = [
     stan: "120",
     remarks: "Triggers Crush Counter  (D)\n                                Can be rapid canceled",
     vtrigger: 2,
-    type: "",
-    command: "(WHILE CROUCHING) HK"
+    type: "normal",
+    command: ""
   },
   {
     name: "Jumping LP",
@@ -930,8 +972,8 @@ const dan = [
     stan: "70",
     remarks: "",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) LP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping MP",
@@ -944,8 +986,8 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nCauses blowback knockdown on airborne hit",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) MP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping HP",
@@ -958,8 +1000,8 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) HP"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping LK",
@@ -972,8 +1014,8 @@ const dan = [
     stan: "70",
     remarks: "",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) LK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping MK",
@@ -986,8 +1028,8 @@ const dan = [
     stan: "100",
     remarks: "Can cross-up",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) MK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Jumping HK",
@@ -1000,8 +1042,8 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
-    command: "(DURING JUMP) HK"
+    type: "jump",
+    command: ""
   },
   {
     name: "Saikyo Chop",
@@ -1014,7 +1056,7 @@ const dan = [
     stan: "120",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "→ + HP"
   },
   {
@@ -1028,7 +1070,7 @@ const dan = [
     stan: "120",
     remarks: "Triggers Crush Counter  (crumple)",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "← + HK"
   },
   {
@@ -1042,7 +1084,7 @@ const dan = [
     stan: "130",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(NEAR OPPONENT) → OR + LP LK"
   },
   {
@@ -1056,7 +1098,7 @@ const dan = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(NEAR OPPONENT) ← + LP LK"
   },
   {
@@ -1071,7 +1113,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when hitbox appears.\nSubject to counter hit during move duration",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
   },
   {
@@ -1086,7 +1128,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 on the 29th frame.\nSubject to counter hit during move duration",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) ← + MP MK"
   },
   {
@@ -1101,7 +1143,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when hitbox appears.\nSpecial counter hit when active",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) (DURING JUMP) MP MK"
   },
   {
@@ -1116,7 +1158,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when active.\nAll normal attacks except for crouching heavy kick can be canceled when active\nWhen canceling from a normal attack, normal attacks and special attacks can be canceled into on the 11th frame.\nNormal attacks from a canceled V-Skill II have their stats cut by half.\nA standing heavy punch from a canceled V-Skill II will have the same effect as a crush counter and float the opponent.\nSubject to counter hit during move duration",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
   },
   {
@@ -1131,7 +1173,7 @@ const dan = [
     remarks:
       "Opponent's V-Gauge increases by 20 when active.\nAll normal attacks except for crouching heavy kick can be canceled when active\nWhen canceling from a normal attack, normal attacks and special attacks can be canceled into on the 11th frame.\nNormal attacks from a canceled V-Skill II have their stats cut by half.\nA standing heavy punch from a canceled V-Skill II will have the same effect as a crush counter and float the opponent.\nSubject to counter hit during move duration",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
   },
   {
@@ -1146,7 +1188,7 @@ const dan = [
     remarks:
       "V-Gauge Timer + 3000F\n                                                                                                                                                                                Gains the special moves Haten Gadoken, Goh Koryuken while active",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "HP HK"
   },
   {
@@ -1161,7 +1203,7 @@ const dan = [
     remarks:
       "1F - 40F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(DURING GUARD) → + LP"
   },
   {
@@ -1176,7 +1218,7 @@ const dan = [
     remarks:
       "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "HP MK"
   },
   {
@@ -1190,7 +1232,7 @@ const dan = [
     stan: "0",
     remarks: "1F - 10F  full invincibility",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
@@ -1204,7 +1246,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + LP"
   },
   {
@@ -1218,7 +1260,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + MP"
   },
   {
@@ -1232,8 +1274,50 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + HP"
+  },
+  {
+    name: "L Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "20",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
+  },
+  {
+    name: "M Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "18",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
+  },
+  {
+    name: "H Gadoken (Powered-up version)",
+    outbreak: "12",
+    persistence: "16",
+    rigidity: "39 total frames",
+    hit: "D",
+    guard: "1",
+    damage: "60",
+    stan: "150",
+    remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
+    vtrigger: 2,
+    type: "special",
+    command: "↓↘→ + LP (Chance to trigger on activation)"
   },
   {
     name: "L Gadoken (Hold Button)",
@@ -1246,7 +1330,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + LP (HOLD BUTTONS)"
   },
   {
@@ -1260,7 +1344,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + MP (HOLD BUTTONS)"
   },
   {
@@ -1274,7 +1358,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + HP (HOLD BUTTONS)"
   },
   {
@@ -1288,7 +1372,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I\nV-Skill 1 allows cancel on whiff.",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P"
   },
   {
@@ -1303,7 +1387,7 @@ const dan = [
     remarks:
       "1F - 5F  throw invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + LP"
   },
   {
@@ -1318,7 +1402,7 @@ const dan = [
     remarks:
       "1F - 6F  invincible to mid-air attacks\n                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + MP"
   },
   {
@@ -1333,7 +1417,7 @@ const dan = [
     remarks:
       "6F - 9F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + HP"
   },
   {
@@ -1348,7 +1432,7 @@ const dan = [
     remarks:
       "1F - 5F  full invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + P P"
   },
   {
@@ -1362,7 +1446,7 @@ const dan = [
     stan: "80",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + LK"
   },
   {
@@ -1376,7 +1460,7 @@ const dan = [
     stan: "100",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + MK"
   },
   {
@@ -1390,7 +1474,7 @@ const dan = [
     stan: "120",
     remarks: "VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + HK"
   },
   {
@@ -1403,9 +1487,9 @@ const dan = [
     damage: "140",
     stan: "150",
     remarks:
-      "VS*Can only be canceled V-Skill I\nGoes to 2nd hit only when the first attack connects.",
+      "VS*Can only be canceled V-Skill I\nSecond attack only triggers when the first one hits or is blocked",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + K K"
   },
   {
@@ -1420,7 +1504,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + LP"
   },
   {
@@ -1435,7 +1519,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + MP"
   },
   {
@@ -1450,7 +1534,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + HP"
   },
   {
@@ -1465,7 +1549,7 @@ const dan = [
     remarks:
       "VS*Can only be canceled V-Skill I\nLock animation occurs when the first attack connects.\n*When the first hit doesn't connect",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + P P"
   },
   {
@@ -1480,7 +1564,7 @@ const dan = [
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + P"
   },
   {
@@ -1495,7 +1579,7 @@ const dan = [
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + P"
   },
   {
@@ -1510,7 +1594,7 @@ const dan = [
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 15F  full invincibility\n                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + P"
   },
   {
@@ -1525,7 +1609,7 @@ const dan = [
     remarks:
       "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 5F  full invincibility\n                                                VS*Can only be canceled V-Skill I\n*From active frame 3F",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + P"
   },
   {
@@ -1540,7 +1624,7 @@ const dan = [
     remarks:
       "1F - 10F  full invincibility\n                                                Lock animation occurs when the first attack connects.",
     vtrigger: 2,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + P"
   }
 ];

@@ -191,7 +191,7 @@ const rashid = [
     guard: "",
     damage: "50",
     stan: "100",
-    remarks: "Causes blowback knockdown on airborne hit\nVS*VS2のみキャンセル可能",
+    remarks: "Causes blowback knockdown on airborne hit\nVS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "jump",
     command: ""
@@ -289,7 +289,7 @@ const rashid = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "unique",
     command: "(DURING JUMP NEAR WALL) ↗ OR ↘"
@@ -430,7 +430,7 @@ const rashid = [
     damage: "",
     stan: "",
     remarks:
-      "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能",
+      "Can be canceled from all forms of Whirlwind Shot\nV Gauge increases if the move's jumping attack hits or is blocked\nCan transition to Wing Spike after frame 27\nCan transition to any jumping attack after frame 48\nEnters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -460,7 +460,7 @@ const rashid = [
     damage: "110",
     stan: "150",
     remarks:
-      "Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                初段ヒット時のみ2段目に派生",
+      "Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                Second attack only triggers when the first one hits or is blocked",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ K K"
@@ -475,7 +475,7 @@ const rashid = [
     damage: "",
     stan: "",
     remarks:
-      "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能",
+      "V Gauge increases if the move's jumping attack hits or is blocked\nCan transition to Wing Spike after frame 24\nCan transition to any jumping attack after frame 41\nEnters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING VERTICAL OR FORWARD JUMP) MP MK"
@@ -564,6 +564,35 @@ const rashid = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Eagle Slash",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Spinning Mixer",
@@ -1012,7 +1041,7 @@ const rashid = [
     guard: "-5",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LK"
@@ -1026,7 +1055,7 @@ const rashid = [
     guard: "-2",
     damage: "60",
     stan: "140",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MK"
@@ -1265,7 +1294,7 @@ const rashid = [
     guard: "",
     damage: "50",
     stan: "100",
-    remarks: "Causes blowback knockdown on airborne hit\nVS*VS2のみキャンセル可能",
+    remarks: "Causes blowback knockdown on airborne hit\nVS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "jump",
     command: ""
@@ -1363,7 +1392,7 @@ const rashid = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "unique",
     command: "(DURING JUMP NEAR WALL) ↗ OR ↘"
@@ -1504,7 +1533,7 @@ const rashid = [
     damage: "",
     stan: "",
     remarks:
-      "各種ワールウインドショットからキャンセル可能\n動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n27F後～ウイングスパイクに移行可能\n48F後～各種ジャンプ攻撃に移行可能",
+      "Can be canceled from all forms of Whirlwind Shot\nV Gauge increases if the move's jumping attack hits or is blocked\nCan transition to Wing Spike after frame 27\nCan transition to any jumping attack after frame 48\nEnters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1534,7 +1563,7 @@ const rashid = [
     damage: "110",
     stan: "150",
     remarks:
-      "Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                初段ヒット時のみ2段目に派生",
+      "Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                Second attack only triggers when the first one hits or is blocked",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ K K"
@@ -1549,7 +1578,7 @@ const rashid = [
     damage: "",
     stan: "",
     remarks:
-      "動作中のジャンプ攻撃をヒット/ガードさせた場合、Vゲージが増加\n24F後～ウイングスパイクに移行可能\n41F後～各種ジャンプ攻撃に移行可能",
+      "V Gauge increases if the move's jumping attack hits or is blocked\nCan transition to Wing Spike after frame 24\nCan transition to any jumping attack after frame 41\nEnters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING VERTICAL OR FORWARD JUMP) MP MK"
@@ -1620,7 +1649,7 @@ const rashid = [
     damage: "",
     stan: "",
     remarks:
-      "各種ワールウインドショットからキャンセル可能\n19F後～Vウイングスパイクに移行可能\n40F後～各種ジャンプ攻撃に移行可能",
+      "Can be canceled from all forms of Whirlwind Shot\nCan transition to V Wing Spike after frame 19\nCan transition to any jumping attack after frame 40\nEnters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1635,7 +1664,7 @@ const rashid = [
     damage: "120",
     stan: "150",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - 29F  projectile invincibility",
+      "Uses 750F V-Gauge Timer\n                                                                                                                                1F - 29F  projectile invincibility\n                                                Depletes V Timer by 500 frames if executed from V Whirlwind Shot/Haboob",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ K"
@@ -1650,7 +1679,7 @@ const rashid = [
     damage: "110",
     stan: "150",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                初段ヒット時のみ2段目に派生",
+      "Uses 750F V-Gauge Timer\n                                                                                Will not hit crouching opponents\n                                                1F - 28F  projectile invincibility\n                                                Second attack only triggers when the first one hits or is blocked\nDepletes V Timer by 500 frames if executed from V Whirlwind Shot/Haboob",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK ▶ K K"
@@ -1664,7 +1693,8 @@ const rashid = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "19F後～V空中ウイングスパイクに移行可能\n36F後～各種ジャンプ攻撃に移行可能",
+    remarks:
+      "Can transition to V Airborne Wing Spike after frame 19\nCan transition to any jumping attack after frame 36\nEnters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING VERTICAL OR FORWARD JUMP) MP MK"
@@ -1678,7 +1708,7 @@ const rashid = [
     guard: "",
     damage: "100",
     stan: "150",
-    remarks: "Uses 1000F V-Gauge Timer",
+    remarks: "Uses 750F V-Gauge Timer",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING VERTICAL OR FORWARD JUMP) MP MK ▶ K"
@@ -1693,7 +1723,7 @@ const rashid = [
     damage: "120",
     stan: "150",
     remarks:
-      "Uses 1000F V-Gauge Timer\n                                                                                                                                1F - Until landing, 1 frame(s) after landing - 29F  projectile invincibility",
+      "Uses 750F V-Gauge Timer\n                                                                                                                                1F - Until landing, 1 frame(s) after landing - 29F  projectile invincibility",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING VERTICAL OR FORWARD JUMP) MP MK ▶ K K"
@@ -1770,6 +1800,35 @@ const rashid = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Eagle Slash",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Spinning Mixer",
@@ -2234,7 +2293,7 @@ const rashid = [
     guard: "-5",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + LK"
@@ -2248,7 +2307,7 @@ const rashid = [
     guard: "-2",
     damage: "60",
     stan: "140",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + MK"
@@ -2371,4 +2430,5 @@ const rashid = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { rashid };

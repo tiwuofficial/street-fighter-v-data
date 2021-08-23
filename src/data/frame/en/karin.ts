@@ -345,7 +345,8 @@ const karin = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "Triggers Crush Counter (D)",
+    remarks:
+      "Triggers Crush Counter (D)\n                                                                                                                                                                S*Can only be canceled with Guren Ken",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -355,7 +356,7 @@ const karin = [
     outbreak: "30",
     persistence: "5",
     rigidity: "17",
-    hit: "4",
+    hit: "6",
     guard: "3",
     damage: "80",
     stan: "120",
@@ -393,6 +394,35 @@ const karin = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Koka Tenshinchu: Sumeragi",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Kanzuki-Ryu Hokojutsu Seppo",
@@ -681,7 +711,7 @@ const karin = [
     persistence: "4",
     rigidity: "32",
     hit: "D",
-    guard: "-9",
+    guard: "-16",
     damage: "110",
     stan: "120",
     remarks: "",
@@ -1143,7 +1173,7 @@ const karin = [
     outbreak: "30",
     persistence: "5",
     rigidity: "17",
-    hit: "4",
+    hit: "6",
     guard: "3",
     damage: "80",
     stan: "120",
@@ -1181,6 +1211,35 @@ const karin = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Koka Tenshinchu: Sumeragi",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Kanzuki-Ryu Hokojutsu Seppo",
@@ -1514,4 +1573,5 @@ const karin = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { karin };

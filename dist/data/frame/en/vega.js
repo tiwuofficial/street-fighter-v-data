@@ -332,7 +332,7 @@ const vega = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Can perform jump attacks from 19F",
+        remarks: "Can perform jump attacks from 19F\nEnters special counterable state from the start of the move until landing",
         vtrigger: 1,
         type: "unique",
         command: "(DURING JUMP NEAR WALL) ↗"
@@ -458,7 +458,7 @@ const vega = [
         guard: "-2",
         damage: "110",
         stan: "150",
-        remarks: "Completely invincible from the 7th active frame through the attack motion",
+        remarks: "Completely invincible from the 7th active frame through the attack motion\nGiven Armor Break attribute",
         vtrigger: 1,
         type: "vsystem",
         command: "HP HK"
@@ -486,7 +486,7 @@ const vega = [
         guard: "-23",
         damage: "150",
         stan: "200",
-        remarks: "Projectile invincibility while moving forward\nCompletely invincible from the 7th active frame through the attack motion",
+        remarks: "Projectile invincibility while moving forward\nCompletely invincible from the 7th active frame through the attack motion\nGiven Armor Break attribute",
         vtrigger: 1,
         type: "vsystem",
         command: "↓ + HP HK"
@@ -514,7 +514,7 @@ const vega = [
         guard: "2",
         damage: "110",
         stan: "150",
-        remarks: "Fully invincible during attack active frames",
+        remarks: "Fully invincible during attack active frames\nGiven Armor Break attribute",
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING FORWARD JUMP) HP HK"
@@ -546,6 +546,34 @@ const vega = [
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING GUARD) → + LK"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Beautiful Severance",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "Flying Barcelona",
@@ -634,7 +662,7 @@ const vega = [
     {
         name: "L Crimson Terror",
         outbreak: "8",
-        persistence: "7",
+        persistence: "8",
         rigidity: "12",
         hit: "2",
         guard: "-6",
@@ -738,7 +766,7 @@ const vega = [
         guard: "-3",
         damage: "150",
         stan: "200",
-        remarks: "Throw invincible during active frames",
+        remarks: "1F - 18F  throw invincibility",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + P P"
@@ -808,10 +836,10 @@ const vega = [
         guard: "-20",
         damage: "100",
         stan: "120",
-        remarks: "Will not hit crouching opponents\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定発生中は飛び道具無敵",
+        remarks: "Will not hit crouching opponents\n                                                                                                Startup time and duration differ depending on character positioning\nInvulnerable to projectiles while hitbox is active",
         vtrigger: 1,
         type: "special",
-        command: "↑ + P"
+        command: "↑ + P P"
     },
     {
         name: "EX Sky High Claw",
@@ -822,18 +850,18 @@ const vega = [
         guard: "-15",
         damage: "120",
         stan: "150",
-        remarks: "攻撃判定発生中は飛び道具無敵",
+        remarks: "Invulnerable to projectiles while hitbox is active",
         vtrigger: 1,
         type: "special",
-        command: "↑ + P P"
+        command: "↑ + P P P"
     },
     {
         name: "Bloody Rain",
         outbreak: "9",
         persistence: "Until the corner/8",
-        rigidity: "29",
+        rigidity: "40",
         hit: "D",
-        guard: "-14",
+        guard: "-25",
         damage: "330",
         stan: "0",
         remarks: "Throw and projectile invincible from 1F until the screen goes dark",
@@ -1172,7 +1200,7 @@ const vega = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "Can perform jump attacks from 19F",
+        remarks: "Can perform jump attacks from 19F\nEnters special counterable state from the start of the move until landing",
         vtrigger: 2,
         type: "unique",
         command: "(DURING JUMP NEAR WALL) ↗"
@@ -1318,6 +1346,34 @@ const vega = [
         command: "(DURING GUARD) → + LK"
     },
     {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Beautiful Severance",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
         name: "Flying Barcelona",
         outbreak: "",
         persistence: "",
@@ -1404,7 +1460,7 @@ const vega = [
     {
         name: "L Crimson Terror",
         outbreak: "8",
-        persistence: "7",
+        persistence: "8",
         rigidity: "12",
         hit: "2",
         guard: "-6",
@@ -1508,7 +1564,7 @@ const vega = [
         guard: "-3",
         damage: "150",
         stan: "200",
-        remarks: "Throw invincible during active frames",
+        remarks: "1F - 18F  throw invincibility",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + P P"
@@ -1592,7 +1648,7 @@ const vega = [
         guard: "",
         damage: "150",
         stan: "200",
-        remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                                                                Completely invincible during the motion",
+        remarks: "Completely invincible during the motion",
         vtrigger: 2,
         type: "special",
         command: "(DURING V-TRIGGER II) HP HK"
@@ -1604,9 +1660,9 @@ const vega = [
         rigidity: "27",
         hit: "D",
         guard: "-11",
-        damage: "120",
-        stan: "150",
-        remarks: "Uses all of the V-Gauge Timer",
+        damage: "100",
+        stan: "120",
+        remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                S*CA*Only on hit",
         vtrigger: 2,
         type: "special",
         command: "(DURING V-TRIGGER II) → + HP HK"
@@ -1620,10 +1676,10 @@ const vega = [
         guard: "-20",
         damage: "100",
         stan: "120",
-        remarks: "Will not hit crouching opponents\n                                                                                                キャラの位置によって発生・持続が変化\n攻撃判定発生中は飛び道具無敵",
+        remarks: "Will not hit crouching opponents\n                                                                                                Startup time and duration differ depending on character positioning\nInvulnerable to projectiles while hitbox is active",
         vtrigger: 2,
         type: "special",
-        command: "↑ + P"
+        command: "↑ + P P"
     },
     {
         name: "EX Sky High Claw",
@@ -1634,18 +1690,18 @@ const vega = [
         guard: "-15",
         damage: "120",
         stan: "150",
-        remarks: "攻撃判定発生中は飛び道具無敵",
+        remarks: "Invulnerable to projectiles while hitbox is active",
         vtrigger: 2,
         type: "special",
-        command: "↑ + P P"
+        command: "↑ + P P P"
     },
     {
         name: "Bloody Rain",
         outbreak: "9",
         persistence: "Until the corner/8",
-        rigidity: "29",
+        rigidity: "40",
         hit: "D",
-        guard: "-14",
+        guard: "-25",
         damage: "330",
         stan: "0",
         remarks: "Throw and projectile invincible from 1F until the screen goes dark",

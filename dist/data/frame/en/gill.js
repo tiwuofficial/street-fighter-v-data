@@ -38,7 +38,7 @@ const gill = [
         guard: "-2",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -80,7 +80,7 @@ const gill = [
         guard: "-4",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -104,7 +104,7 @@ const gill = [
         outbreak: "6",
         persistence: "2",
         rigidity: "16",
-        hit: "2",
+        hit: "4",
         guard: "-2",
         damage: "60",
         stan: "100",
@@ -122,7 +122,7 @@ const gill = [
         guard: "-9",
         damage: "80(*70)",
         stan: "150",
-        remarks: "反属性ダメージ対応技\nCA*S*V*Only possible during 2nd attack\n*For the 2nd hit",
+        remarks: "Does Anti-type damage\nCA*S*V*Only possible during 2nd attack\n*For the 2nd hit",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -164,7 +164,7 @@ const gill = [
         guard: "-13",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n反属性成立時受身不可",
+        remarks: "Does Anti-type damage\nOpponent cannot quick recover if anti-type damage was dealt",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -206,7 +206,7 @@ const gill = [
         guard: "",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "jump",
         command: ""
@@ -248,7 +248,7 @@ const gill = [
         guard: "",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "jump",
         command: ""
@@ -262,7 +262,7 @@ const gill = [
         guard: "-8",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n反属性成立時受身不可\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\nOpponent cannot quick recover if anti-type damage was dealt\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 1,
         type: "unique",
         command: "→ + HP"
@@ -276,7 +276,7 @@ const gill = [
         guard: "-6",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*1On whiff\n*2反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*1On whiff\n*2Value when used on opponent afflicted with the opposing state",
         vtrigger: 1,
         type: "unique",
         command: "→ + HK"
@@ -286,11 +286,11 @@ const gill = [
         outbreak: "9",
         persistence: "4",
         rigidity: "21",
-        hit: "3(*13)",
+        hit: "5(*13)",
         guard: "-7",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 1,
         type: "unique",
         command: "← + HK"
@@ -355,12 +355,12 @@ const gill = [
         name: "[VS1] Meteor Strike",
         outbreak: "44",
         persistence: "Until landing",
-        rigidity: "53 total frames",
+        rigidity: "50 total frames",
         hit: "",
         guard: "",
         damage: "60",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) OR ← OR → + MP MK"
@@ -369,12 +369,12 @@ const gill = [
         name: "V[VS1] Meteor Strike",
         outbreak: "44",
         persistence: "Until landing",
-        rigidity: "53 total frames",
+        rigidity: "50 total frames",
         hit: "",
         guard: "",
         damage: "70",
         stan: "100",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) OR ← OR → + MP MK"
@@ -388,7 +388,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "ブロッキング成立後に出すキャンセルブロッキングは発生1F\nNo counter hit while the move is active (does not apply to cancel Blocking)",
+        remarks: "The parry cancel that comes out after a successful parry occurs on the 1st frame\nNo counter hit while the move is active (does not apply to cancel Blocking)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -402,7 +402,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "ブロッキング成立後に出すキャンセルブロッキングは発生1F\nNo counter hit while the move is active (does not apply to cancel Blocking)",
+        remarks: "The parry cancel that comes out after a successful parry occurs on the 1st frame\nNo counter hit while the move is active (does not apply to cancel Blocking)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
@@ -416,7 +416,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                発動中、パイロキネシスとパイロサイバーラリアットが強化され、専用技「バーンストーム」「フレイムジャベリン」「ヴォルカニックストーム」が使用可能になる",
+        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                When used, Pyrokinesis/Pyro Cyber Lariat will be strengthened, and Burn Storm/Flame Javelin/Volcanic Storm will become available",
         vtrigger: 1,
         type: "vsystem",
         command: "HP HK"
@@ -436,6 +436,34 @@ const gill = [
         command: "(DURING GUARD) → + LK"
     },
     {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Radiant Judgment",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
         name: "L Pyrokinesis",
         outbreak: "14",
         persistence: "",
@@ -444,7 +472,7 @@ const gill = [
         guard: "-6",
         damage: "70",
         stan: "80",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LP"
@@ -458,7 +486,7 @@ const gill = [
         guard: "-6",
         damage: "70",
         stan: "80",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MP"
@@ -472,7 +500,7 @@ const gill = [
         guard: "",
         damage: "70",
         stan: "80",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + HP"
@@ -486,7 +514,7 @@ const gill = [
         guard: "1",
         damage: "90",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LP MP"
@@ -500,7 +528,7 @@ const gill = [
         guard: "1",
         damage: "90",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LP HP"
@@ -514,7 +542,7 @@ const gill = [
         guard: "",
         damage: "90",
         stan: "80",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MP HP"
@@ -528,7 +556,7 @@ const gill = [
         guard: "-4",
         damage: "70",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LP"
@@ -542,7 +570,7 @@ const gill = [
         guard: "-4",
         damage: "70",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MP"
@@ -556,7 +584,7 @@ const gill = [
         guard: "",
         damage: "70",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + HP"
@@ -570,7 +598,7 @@ const gill = [
         guard: "-4",
         damage: "50",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LP"
@@ -584,7 +612,7 @@ const gill = [
         guard: "-4",
         damage: "50",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + MP"
@@ -598,7 +626,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "120",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + HP"
@@ -612,7 +640,7 @@ const gill = [
         guard: "3",
         damage: "50",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LP MP"
@@ -626,7 +654,7 @@ const gill = [
         guard: "3",
         damage: "50",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LP HP"
@@ -640,7 +668,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "140",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + MP HP"
@@ -654,7 +682,7 @@ const gill = [
         guard: "-6",
         damage: "80",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LK"
@@ -668,7 +696,7 @@ const gill = [
         guard: "-6",
         damage: "100",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MK"
@@ -682,7 +710,7 @@ const gill = [
         guard: "-6",
         damage: "120",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + HK"
@@ -696,7 +724,7 @@ const gill = [
         guard: "-12",
         damage: "120",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
+        remarks: "Does Anti-type damage\nGrants anti-type damage\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + K K"
@@ -710,7 +738,7 @@ const gill = [
         guard: "-6",
         damage: "80",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + LK"
@@ -724,7 +752,7 @@ const gill = [
         guard: "-6",
         damage: "100",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MK"
@@ -738,7 +766,7 @@ const gill = [
         guard: "-6",
         damage: "120",
         stan: "80",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、メテオストライクでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Meteor Strike on hit or block",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + HK"
@@ -752,7 +780,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LK"
@@ -766,7 +794,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + MK"
@@ -780,7 +808,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "160",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + HK"
@@ -794,7 +822,7 @@ const gill = [
         guard: "-12",
         damage: "60",
         stan: "160",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
+        remarks: "Does Anti-type damage\nGrants anti-type damage\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + K K"
@@ -850,7 +878,7 @@ const gill = [
         guard: "-2",
         damage: "120",
         stan: "160",
-        remarks: "Forward movement distance can be controlled with directional input\nRecovery value is against a standing block Ryu",
+        remarks: "5F - 12F  invincible to mid-air attacks\n                                Forward movement distance can be controlled with directional input\nRecovery value is against a standing block Ryu",
         vtrigger: 1,
         type: "special",
         command: "→↓↘ + K K"
@@ -864,7 +892,7 @@ const gill = [
         guard: "-9",
         damage: "120",
         stan: "80",
-        remarks: "Uses 800F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n通常技/特殊技(クリオドロップエルボー以外)からキャンセル可能\nヴォルカニックストームに派生可能\n反属性ダメージ付与",
+        remarks: "Uses 800F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nCan be canceled into via regular moves and unique attacks (aside from Cryo Drop Elbow)\nCan be transitioned into Volcanic Storm\nGrants anti-type damage",
         vtrigger: 1,
         type: "special",
         command: "(DURING V-TRIGGER I) HP HK"
@@ -878,7 +906,7 @@ const gill = [
         guard: "-2",
         damage: "90",
         stan: "100",
-        remarks: "Uses 700F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n通常技/特殊技(クリオドロップエルボー以外)からキャンセル可能\n反属性ダメージ付与\n硬直差は1入力版を近距離でガードさせた際のもの",
+        remarks: "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nCan be canceled into via regular moves and unique attacks (aside from Cryo Drop Elbow)\nGrants anti-type damage\nShows the recovery difference when the down-back version of the attack is blocked at close-range",
         vtrigger: 1,
         type: "special",
         command: "(DURING V-TRIGGER I) ↓ OR ↙ OR ↘ + HP HK"
@@ -892,7 +920,7 @@ const gill = [
         guard: "-4",
         damage: "90",
         stan: "100",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n硬直差は4入力版を近距離でガードさせた際のもの",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\nShows the recovery difference when the back version of the attack is blocked at close-range",
         vtrigger: 1,
         type: "special",
         command: "(DURING V-TRIGGER I) HP HK ▶ OR ← OR → + HP HK"
@@ -948,7 +976,7 @@ const gill = [
         guard: "-2",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -990,7 +1018,7 @@ const gill = [
         guard: "-4",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1014,7 +1042,7 @@ const gill = [
         outbreak: "6",
         persistence: "2",
         rigidity: "16",
-        hit: "2",
+        hit: "4",
         guard: "-2",
         damage: "60",
         stan: "100",
@@ -1032,7 +1060,7 @@ const gill = [
         guard: "-9",
         damage: "80(*70)",
         stan: "150",
-        remarks: "反属性ダメージ対応技\nCA*S*V*Only possible during 2nd attack\n*For the 2nd hit",
+        remarks: "Does Anti-type damage\nCA*S*V*Only possible during 2nd attack\n*For the 2nd hit",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1074,7 +1102,7 @@ const gill = [
         guard: "-13",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n反属性成立時受身不可",
+        remarks: "Does Anti-type damage\nOpponent cannot quick recover if anti-type damage was dealt",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1116,7 +1144,7 @@ const gill = [
         guard: "",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "jump",
         command: ""
@@ -1158,7 +1186,7 @@ const gill = [
         guard: "",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "jump",
         command: ""
@@ -1172,7 +1200,7 @@ const gill = [
         guard: "-8",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n反属性成立時受身不可\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\nOpponent cannot quick recover if anti-type damage was dealt\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 2,
         type: "unique",
         command: "→ + HP"
@@ -1186,7 +1214,7 @@ const gill = [
         guard: "-6",
         damage: "90",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*1On whiff\n*2反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*1On whiff\n*2Value when used on opponent afflicted with the opposing state",
         vtrigger: 2,
         type: "unique",
         command: "→ + HK"
@@ -1196,11 +1224,11 @@ const gill = [
         outbreak: "9",
         persistence: "4",
         rigidity: "21",
-        hit: "3(*13)",
+        hit: "5(*13)",
         guard: "-7",
         damage: "80",
         stan: "150",
-        remarks: "反属性ダメージ対応技\n*反属性ダメージ中の相手に攻撃をヒットさせた際の数値",
+        remarks: "Does Anti-type damage\n*Value when used on opponent afflicted with the opposing state",
         vtrigger: 2,
         type: "unique",
         command: "← + HK"
@@ -1265,12 +1293,12 @@ const gill = [
         name: "[VS1] Hail Sting",
         outbreak: "44",
         persistence: "Until landing",
-        rigidity: "53 total frames",
+        rigidity: "50 total frames",
         hit: "",
         guard: "",
         damage: "60",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) OR ← OR → + MP MK"
@@ -1279,12 +1307,12 @@ const gill = [
         name: "V[VS1] Hail Sting",
         outbreak: "44",
         persistence: "Until landing",
-        rigidity: "53 total frames",
+        rigidity: "50 total frames",
         hit: "",
         guard: "",
         damage: "70",
         stan: "100",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) (DURING V-TRIGGER I) OR ← OR → + MP MK"
@@ -1298,7 +1326,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "ブロッキング成立後に出すキャンセルブロッキングは発生1F\nNo counter hit while the move is active (does not apply to cancel Blocking)",
+        remarks: "The parry cancel that comes out after a successful parry occurs on the 1st frame\nNo counter hit while the move is active (does not apply to cancel Blocking)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1312,7 +1340,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "ブロッキング成立後に出すキャンセルブロッキングは発生1F\nNo counter hit while the move is active (does not apply to cancel Blocking)",
+        remarks: "The parry cancel that comes out after a successful parry occurs on the 1st frame\nNo counter hit while the move is active (does not apply to cancel Blocking)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) ↓ + MP MK"
@@ -1326,7 +1354,7 @@ const gill = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                発動中、クリオキネシスとクリオサイバーラリアットが強化され、専用技「ツリーオブフロスト」「ディレイフリーズランス」が使用可能になる",
+        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                When used, Cryokinesis/Cryo Cyber Lariat will be strengthened, and Tree Of Frost/Delay Freeze Lance will become available",
         vtrigger: 2,
         type: "vsystem",
         command: "HP HK"
@@ -1346,6 +1374,34 @@ const gill = [
         command: "(DURING GUARD) → + LK"
     },
     {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Radiant Judgment",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
         name: "L Pyrokinesis",
         outbreak: "14",
         persistence: "",
@@ -1354,7 +1410,7 @@ const gill = [
         guard: "-6",
         damage: "70",
         stan: "80",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + LP"
@@ -1368,7 +1424,7 @@ const gill = [
         guard: "-6",
         damage: "70",
         stan: "80",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + MP"
@@ -1382,7 +1438,7 @@ const gill = [
         guard: "",
         damage: "70",
         stan: "80",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + HP"
@@ -1396,7 +1452,7 @@ const gill = [
         guard: "1",
         damage: "90",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + LP MP"
@@ -1410,7 +1466,7 @@ const gill = [
         guard: "1",
         damage: "90",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + LP HP"
@@ -1424,7 +1480,7 @@ const gill = [
         guard: "",
         damage: "90",
         stan: "80",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + MP HP"
@@ -1438,7 +1494,7 @@ const gill = [
         guard: "-4",
         damage: "50",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LP"
@@ -1452,7 +1508,7 @@ const gill = [
         guard: "-4",
         damage: "50",
         stan: "120",
-        remarks: "反属性ダメージ対応技",
+        remarks: "Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + MP"
@@ -1466,7 +1522,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "120",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + HP"
@@ -1480,7 +1536,7 @@ const gill = [
         guard: "3",
         damage: "50",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LP MP"
@@ -1494,7 +1550,7 @@ const gill = [
         guard: "3",
         damage: "50",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LP HP"
@@ -1508,7 +1564,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "140",
-        remarks: "Will not hit grounded opponents\n                                                                                反属性ダメージ対応技\n反属性ダメージ付与",
+        remarks: "Will not hit grounded opponents\n                                                                                Does Anti-type damage\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + MP HP"
@@ -1522,7 +1578,7 @@ const gill = [
         guard: "1(*-3)",
         damage: "50",
         stan: "120",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*しゃがみ強P・クリオライズキックからキャンセル発動した場合の数値\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*Denotes value when canceled into from crouching heavy punch/Cryo Rise Kick\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LP"
@@ -1536,7 +1592,7 @@ const gill = [
         guard: "1(*-3)",
         damage: "50",
         stan: "120",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*しゃがみ強P・クリオライズキックからキャンセル発動した場合の数値\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*Denotes value when canceled into from crouching heavy punch/Cryo Rise Kick\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + MP"
@@ -1550,7 +1606,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "120",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*しゃがみ強P・クリオライズキックからキャンセル発動した場合の数値\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*Denotes value when canceled into from crouching heavy punch/Cryo Rise Kick\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + HP"
@@ -1564,7 +1620,7 @@ const gill = [
         guard: "-6",
         damage: "80",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + LK"
@@ -1578,7 +1634,7 @@ const gill = [
         guard: "-6",
         damage: "100",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + MK"
@@ -1592,7 +1648,7 @@ const gill = [
         guard: "-6",
         damage: "120",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + HK"
@@ -1606,7 +1662,7 @@ const gill = [
         guard: "-12",
         damage: "120",
         stan: "80",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
+        remarks: "Does Anti-type damage\nGrants anti-type damage\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + K K"
@@ -1620,7 +1676,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "120",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LK"
@@ -1634,7 +1690,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "140",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + MK"
@@ -1648,7 +1704,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "160",
-        remarks: "反属性ダメージ対応技\n*When in contact",
+        remarks: "Does Anti-type damage\n*When in contact",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + HK"
@@ -1662,7 +1718,7 @@ const gill = [
         guard: "-12",
         damage: "60",
         stan: "160",
-        remarks: "反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
+        remarks: "Does Anti-type damage\nGrants anti-type damage\n*When in contact\nHas armor from 3F until the end of the attack active frames of the base hit",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + K K"
@@ -1676,7 +1732,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "120",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LK"
@@ -1690,7 +1746,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "140",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + MK"
@@ -1704,7 +1760,7 @@ const gill = [
         guard: "-6",
         damage: "60",
         stan: "160",
-        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n反属性ダメージ付与\n*When in contact\nVS*ヒット/ガード時、ヘイルスティングでキャンセル可能",
+        remarks: "Uses 300F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nGrants anti-type damage\n*When in contact\nVS*Can be canceled with Hail Sting on hit or block",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + HK"
@@ -1760,7 +1816,7 @@ const gill = [
         guard: "-2",
         damage: "120",
         stan: "160",
-        remarks: "Forward movement distance can be controlled with directional input\nRecovery value is against a standing block Ryu",
+        remarks: "5F - 12F  invincible to mid-air attacks\n                                Forward movement distance can be controlled with directional input\nRecovery value is against a standing block Ryu",
         vtrigger: 2,
         type: "special",
         command: "→↓↘ + K K"
@@ -1774,7 +1830,7 @@ const gill = [
         guard: "-10",
         damage: "100",
         stan: "210",
-        remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n通常技/特殊技(クリオドロップエルボー以外)からキャンセル可能\n反属性ダメージ付与",
+        remarks: "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nCan be canceled into via regular moves/unique attacks (aside from Cryo Drop Elbow)/EX Pyrokinesis/V Cryokinesis\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "(DURING V-TRIGGER II) HP HK"
@@ -1788,7 +1844,7 @@ const gill = [
         guard: "",
         damage: "50",
         stan: "120",
-        remarks: "Uses 700F V-Gauge Timer\n                                                                                                                                                                                反属性ダメージ対応技\n通常技/特殊技(クリオドロップエルボー以外)からキャンセル可能\n反属性ダメージ付与",
+        remarks: "Uses 700F V-Gauge Timer\n                                                                                                                                                                                Does Anti-type damage\nCan be canceled into via regular moves and unique attacks (aside from Cryo Drop Elbow)\nGrants anti-type damage",
         vtrigger: 2,
         type: "special",
         command: "(DURING V-TRIGGER II) OR ↙ OR ↘ + HP HK"

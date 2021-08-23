@@ -408,6 +408,34 @@ const menat = [
         command: "(DURING GUARD) → + LP"
     },
     {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Sistrum Of Fortune",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
         name: "L Soul Sphere",
         outbreak: "14",
         persistence: "26",
@@ -954,6 +982,34 @@ const menat = [
         command: "(DURING GUARD) → + LP"
     },
     {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Sistrum Of Fortune",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+    },
+    {
         name: "L Soul Sphere",
         outbreak: "14",
         persistence: "26",
@@ -1032,7 +1088,7 @@ const menat = [
         guard: "-9",
         damage: "150(*40)",
         stan: "200(*70)",
-        remarks: "Locks if it hits an airborne opponent\n*On grounded hit\nS*地上ヒット時のみジェフティの審判、ジェフティの預言でキャンセル可能",
+        remarks: "Locks if it hits an airborne opponent\n*On grounded hit\nS*Can be canceled with Judgment of Thoth/Prophecy of Thoth only on hit or block",
         vtrigger: 2,
         type: "special",
         command: "(WITH THE CRYSTAL BALL) ↓↘→ + MP HP"

@@ -118,7 +118,7 @@ const ken = [
     outbreak: "6",
     persistence: "5",
     rigidity: "22",
-    hit: "-4",
+    hit: "2",
     guard: "-9",
     damage: "90(※70)",
     stan: "150",
@@ -697,7 +697,7 @@ const ken = [
     damage: "50",
     stan: "100",
     remarks:
-      "めくり性能\n                                                                                                                                                CA※V※1段目のみ可能",
+      "めくり性能\n                                                                                                                                                CA※V※1段目のみ可能\n初段がヒットしなかった場合、2段目のダメージが50に変化",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + 弱K"
@@ -1048,7 +1048,7 @@ const ken = [
     outbreak: "6",
     persistence: "5",
     rigidity: "22",
-    hit: "-4",
+    hit: "2",
     guard: "-9",
     damage: "90(※70)",
     stan: "150",
@@ -1699,7 +1699,8 @@ const ken = [
     guard: "-26",
     damage: "340",
     stan: "0",
-    remarks: "1F～6F 完全無敵",
+    remarks:
+      "1F～6F 完全無敵\n                                                初段がヒットしなかった場合、2段目のダメージが50に変化",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + K"

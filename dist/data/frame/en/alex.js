@@ -21,7 +21,7 @@ const alex = [
         persistence: "2",
         rigidity: "12",
         hit: "5",
-        guard: "2",
+        guard: "3",
         damage: "60",
         stan: "100",
         remarks: "",
@@ -34,11 +34,11 @@ const alex = [
         outbreak: "9",
         persistence: "4",
         rigidity: "22",
-        hit: "-1",
+        hit: "0",
         guard: "-3",
         damage: "90",
         stan: "150",
-        remarks: "1F will not hit grounded opponents",
+        remarks: "1F will not hit grounded opponents\nCauses blowback knockdown on mid-air hit",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -49,7 +49,7 @@ const alex = [
         persistence: "3",
         rigidity: "8",
         hit: "2",
-        guard: "-1",
+        guard: "0",
         damage: "40",
         stan: "70",
         remarks: "",
@@ -80,7 +80,7 @@ const alex = [
         guard: "-4",
         damage: "100",
         stan: "150",
-        remarks: "Triggers Crush Counter  (crumple)",
+        remarks: "Triggers Crush Counter  (crumple)\n                                                                                                                                                                Causes blowback knockdown on mid-air hit",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -90,7 +90,7 @@ const alex = [
         outbreak: "4",
         persistence: "2",
         rigidity: "7",
-        hit: "4",
+        hit: "5",
         guard: "2",
         damage: "30",
         stan: "70",
@@ -106,7 +106,7 @@ const alex = [
         rigidity: "17",
         hit: "2",
         guard: "-1",
-        damage: "60",
+        damage: "70",
         stan: "100",
         remarks: "",
         vtrigger: 1,
@@ -157,7 +157,7 @@ const alex = [
     },
     {
         name: "Crouching HK",
-        outbreak: "11",
+        outbreak: "10",
         persistence: "2",
         rigidity: "24",
         hit: "D",
@@ -287,7 +287,7 @@ const alex = [
         persistence: "4",
         rigidity: "16",
         hit: "8",
-        guard: "3",
+        guard: "4",
         damage: "80",
         stan: "150",
         remarks: "Triggers Crush Counter (+15F)\n                                                Forces stand",
@@ -346,7 +346,7 @@ const alex = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "発動後一回だけ打撃必殺技から別の打撃必殺技にキャンセル可能\n※EX必殺技からはEX必殺技でのみキャンセル可能\nキャンセル版必殺技をヒット/ガードさせた際にVゲージが増加",
+        remarks: "After use, allows one Special Move to be canceled into a different Special Move\nNote: EX Special Moves can only be canceled into other EX Special Moves\nCanceled special moves that connect or are blocked will increase V Gauge",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -378,6 +378,34 @@ const alex = [
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING GUARD) → + LK"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "War Hammer",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "L Flash Chop",
@@ -447,7 +475,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + LP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + LP"
     },
     {
         name: "M Flash Chop (VS2 Ver.)",
@@ -461,7 +489,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + MP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + MP"
     },
     {
         name: "H Flash Chop (VS2 Ver.)",
@@ -475,7 +503,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + HP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + HP"
     },
     {
         name: "EX Flash Chop (VS2 Ver.)",
@@ -489,7 +517,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + P P"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + P P"
     },
     {
         name: "L Slash Elbow",
@@ -499,7 +527,7 @@ const alex = [
         hit: "3",
         guard: "-2",
         damage: "80",
-        stan: "200",
+        stan: "150",
         remarks: "",
         vtrigger: 1,
         type: "special",
@@ -513,7 +541,7 @@ const alex = [
         hit: "D",
         guard: "-6",
         damage: "90",
-        stan: "200",
+        stan: "150",
         remarks: "",
         vtrigger: 1,
         type: "special",
@@ -559,7 +587,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + LK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + LK"
     },
     {
         name: "M Slash Elbow (VS2 Ver.)",
@@ -573,7 +601,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + MK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + MK"
     },
     {
         name: "H Slash Elbow (VS2 Ver.)",
@@ -587,7 +615,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + HK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + HK"
     },
     {
         name: "EX Slash Elbow (VS2 Ver.)",
@@ -601,7 +629,7 @@ const alex = [
         remarks: "First hit only forces stand\n                                                                                                                Startup frames for when in close contact\nArmor from 3F until attack startup",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + K K"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + K K"
     },
     {
         name: "L Air Knee Smash",
@@ -671,7 +699,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + LK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + LK"
     },
     {
         name: "M Air Knee Smash (VS2 Ver.)",
@@ -685,7 +713,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + MK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + MK"
     },
     {
         name: "H Air Knee Smash (VS2 Ver.)",
@@ -699,7 +727,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + HK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + HK"
     },
     {
         name: "EX Air Knee Smash (VS2 Ver.)",
@@ -713,7 +741,7 @@ const alex = [
         remarks: "Will not hit crouching opponents\n                                                5F - 13F  projectile invincibility\n                5F - 13F  invincible to mid-air attacks",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + K K"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + K K"
     },
     {
         name: "L Air Stampede",
@@ -783,7 +811,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + LK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + LK"
     },
     {
         name: "M Air Stampede (VS2 Ver.)",
@@ -797,7 +825,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + MK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + MK"
     },
     {
         name: "H Air Stampede (VS2 Ver.)",
@@ -811,7 +839,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + HK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + HK"
     },
     {
         name: "EX Air Stampede (VS2 Ver.)",
@@ -825,14 +853,14 @@ const alex = [
         remarks: "1F - 30F  projectile invincibility\n                                                Movement distance can be controlled with left/right directional input",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + K K"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + K K"
     },
     {
         name: "L Head Crush",
         outbreak: "36",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -846,7 +874,7 @@ const alex = [
         outbreak: "40",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -860,7 +888,7 @@ const alex = [
         outbreak: "44",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -874,7 +902,7 @@ const alex = [
         outbreak: "30",
         persistence: "2",
         rigidity: "50",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "180",
         stan: "300",
@@ -885,7 +913,7 @@ const alex = [
     },
     {
         name: "L Power Bomb",
-        outbreak: "6",
+        outbreak: "9",
         persistence: "2",
         rigidity: "60",
         hit: "D",
@@ -928,8 +956,8 @@ const alex = [
     {
         name: "EX Power Bomb",
         outbreak: "5",
-        persistence: "2",
-        rigidity: "60",
+        persistence: "3",
+        rigidity: "59",
         hit: "D",
         guard: "",
         damage: "230",
@@ -951,7 +979,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(強フラッシュチョップヒットorガード時に) →↘↓↙← + P"
+        command: "(When H Flash Chop hits or is blocked) →↘↓↙← + P"
     },
     {
         name: "EX Power Drop",
@@ -965,7 +993,7 @@ const alex = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(強フラッシュチョップヒットorガード時に) →↘↓↙← + P P"
+        command: "(When H Flash Chop hits or is blocked) →↘↓↙← + P P"
     },
     {
         name: "VSledge Hammer (Parry)",
@@ -1085,7 +1113,7 @@ const alex = [
         persistence: "2",
         rigidity: "12",
         hit: "5",
-        guard: "2",
+        guard: "3",
         damage: "60",
         stan: "100",
         remarks: "",
@@ -1098,11 +1126,11 @@ const alex = [
         outbreak: "9",
         persistence: "4",
         rigidity: "22",
-        hit: "-1",
+        hit: "0",
         guard: "-3",
         damage: "90",
         stan: "150",
-        remarks: "1F will not hit grounded opponents",
+        remarks: "1F will not hit grounded opponents\nCauses blowback knockdown on mid-air hit",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1113,7 +1141,7 @@ const alex = [
         persistence: "3",
         rigidity: "8",
         hit: "2",
-        guard: "-1",
+        guard: "0",
         damage: "40",
         stan: "70",
         remarks: "",
@@ -1144,7 +1172,7 @@ const alex = [
         guard: "-4",
         damage: "100",
         stan: "150",
-        remarks: "Triggers Crush Counter  (crumple)",
+        remarks: "Triggers Crush Counter  (crumple)\n                                                                                                                                                                Causes blowback knockdown on mid-air hit",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1154,7 +1182,7 @@ const alex = [
         outbreak: "4",
         persistence: "2",
         rigidity: "7",
-        hit: "4",
+        hit: "5",
         guard: "2",
         damage: "30",
         stan: "70",
@@ -1170,7 +1198,7 @@ const alex = [
         rigidity: "17",
         hit: "2",
         guard: "-1",
-        damage: "60",
+        damage: "70",
         stan: "100",
         remarks: "",
         vtrigger: 2,
@@ -1221,7 +1249,7 @@ const alex = [
     },
     {
         name: "Crouching HK",
-        outbreak: "11",
+        outbreak: "10",
         persistence: "2",
         rigidity: "24",
         hit: "D",
@@ -1351,7 +1379,7 @@ const alex = [
         persistence: "4",
         rigidity: "16",
         hit: "8",
-        guard: "3",
+        guard: "4",
         damage: "80",
         stan: "150",
         remarks: "Triggers Crush Counter (+15F)\n                                                Forces stand",
@@ -1410,7 +1438,7 @@ const alex = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "発動後一回だけ打撃必殺技から別の打撃必殺技にキャンセル可能\n※EX必殺技からはEX必殺技でのみキャンセル可能\nキャンセル版必殺技をヒット/ガードさせた際にVゲージが増加",
+        remarks: "After use, allows one Special Move to be canceled into a different Special Move\nNote: EX Special Moves can only be canceled into other EX Special Moves\nCanceled special moves that connect or are blocked will increase V Gauge",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1424,7 +1452,7 @@ const alex = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                                                                Gains the special moves Flying DDT and Choke Sleeper while active",
+        remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                Gains the special moves Flying DDT and Choke Sleeper while active",
         vtrigger: 2,
         type: "vsystem",
         command: "HP HK"
@@ -1442,6 +1470,34 @@ const alex = [
         vtrigger: 2,
         type: "vsystem",
         command: "(DURING GUARD) → + LK"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "War Hammer",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "L Flash Chop",
@@ -1511,7 +1567,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + LP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + LP"
     },
     {
         name: "M Flash Chop (VS2 Ver.)",
@@ -1525,7 +1581,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + MP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + MP"
     },
     {
         name: "H Flash Chop (VS2 Ver.)",
@@ -1539,7 +1595,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + HP"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + HP"
     },
     {
         name: "EX Flash Chop (VS2 Ver.)",
@@ -1553,7 +1609,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (スラッシュエルボー、エアスタンピート中に) ↓↘→ + P P"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) ↓↘→ + P P"
     },
     {
         name: "L Slash Elbow",
@@ -1563,7 +1619,7 @@ const alex = [
         hit: "3",
         guard: "-2",
         damage: "80",
-        stan: "200",
+        stan: "150",
         remarks: "S*Can only be canceled into Flying DDT",
         vtrigger: 2,
         type: "special",
@@ -1577,7 +1633,7 @@ const alex = [
         hit: "D",
         guard: "-6",
         damage: "90",
-        stan: "200",
+        stan: "150",
         remarks: "",
         vtrigger: 2,
         type: "special",
@@ -1620,10 +1676,10 @@ const alex = [
         guard: "-2",
         damage: "80",
         stan: "150",
-        remarks: "S*First hit can only be canceled into Flying DDT",
+        remarks: "S*Can only be canceled into Flying DDT",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + LK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + LK"
     },
     {
         name: "M Slash Elbow (VS2 Ver.)",
@@ -1637,7 +1693,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + MK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + MK"
     },
     {
         name: "H Slash Elbow (VS2 Ver.)",
@@ -1651,7 +1707,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + HK"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + HK"
     },
     {
         name: "EX Slash Elbow (VS2 Ver.)",
@@ -1665,7 +1721,7 @@ const alex = [
         remarks: "First hit only forces stand\n                                                                                                                Startup frames for when in close contact\nArmor from 3F until attack startup\nS*First hit can only be canceled into Flying DDT",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、エアスタンピート中に) → + K K"
+        command: "(DURING V-SKILL II) (During Slash Elbow/Air Stampede) → + K K"
     },
     {
         name: "L Air Knee Smash",
@@ -1735,7 +1791,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + LK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + LK"
     },
     {
         name: "M Air Knee Smash (VS2 Ver.)",
@@ -1749,7 +1805,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + MK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + MK"
     },
     {
         name: "H Air Knee Smash (VS2 Ver.)",
@@ -1763,7 +1819,7 @@ const alex = [
         remarks: "Will not hit grounded opponents",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + HK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + HK"
     },
     {
         name: "EX Air Knee Smash (VS2 Ver.)",
@@ -1777,7 +1833,7 @@ const alex = [
         remarks: "Will not hit crouching opponents\n                                                5F - 13F  projectile invincibility\n                5F - 13F  invincible to mid-air attacks",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー、エアスタンピート中に) →↓↘ + K K"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow/Air Stampede) →↓↘ + K K"
     },
     {
         name: "L Air Stampede",
@@ -1847,7 +1903,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + LK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + LK"
     },
     {
         name: "M Air Stampede (VS2 Ver.)",
@@ -1861,7 +1917,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + MK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + MK"
     },
     {
         name: "H Air Stampede (VS2 Ver.)",
@@ -1875,7 +1931,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + HK"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + HK"
     },
     {
         name: "EX Air Stampede (VS2 Ver.)",
@@ -1889,14 +1945,14 @@ const alex = [
         remarks: "1F - 30F  projectile invincibility\n                                                Movement distance can be controlled with left/right directional input",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-SKILL II) (フラッシュチョップ、スラッシュエルボー中に) ↑ + K K"
+        command: "(DURING V-SKILL II) (During Flash Chop/Slash Elbow) ↑ + K K"
     },
     {
         name: "L Head Crush",
         outbreak: "36",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -1910,7 +1966,7 @@ const alex = [
         outbreak: "40",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -1924,7 +1980,7 @@ const alex = [
         outbreak: "44",
         persistence: "2",
         rigidity: "30",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "160",
         stan: "250",
@@ -1938,7 +1994,7 @@ const alex = [
         outbreak: "30",
         persistence: "2",
         rigidity: "50",
-        hit: "4",
+        hit: "3",
         guard: "",
         damage: "180",
         stan: "300",
@@ -1949,7 +2005,7 @@ const alex = [
     },
     {
         name: "L Power Bomb",
-        outbreak: "6",
+        outbreak: "9",
         persistence: "2",
         rigidity: "60",
         hit: "D",
@@ -1992,8 +2048,8 @@ const alex = [
     {
         name: "EX Power Bomb",
         outbreak: "5",
-        persistence: "2",
-        rigidity: "60",
+        persistence: "3",
+        rigidity: "59",
         hit: "D",
         guard: "",
         damage: "230",
@@ -2015,7 +2071,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(強フラッシュチョップヒットorガード時に) →↘↓↙← + P"
+        command: "(When H Flash Chop hits or is blocked) →↘↓↙← + P"
     },
     {
         name: "EX Power Drop",
@@ -2029,7 +2085,7 @@ const alex = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(強フラッシュチョップヒットorガード時に) →↘↓↙← + P P"
+        command: "(When H Flash Chop hits or is blocked) →↘↓↙← + P P"
     },
     {
         name: "VFlyng DDT",

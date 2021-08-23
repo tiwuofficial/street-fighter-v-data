@@ -73,7 +73,7 @@ const mbison = [
     name: "Standing HK",
     outbreak: "9",
     persistence: "3",
-    rigidity: "13",
+    rigidity: "18",
     hit: "6",
     guard: "3",
     damage: "80",
@@ -145,7 +145,7 @@ const mbison = [
     outbreak: "7",
     persistence: "2",
     rigidity: "15",
-    hit: "-1",
+    hit: "0",
     guard: "-2",
     damage: "50",
     stan: "100",
@@ -158,7 +158,7 @@ const mbison = [
     name: "Crouching HK",
     outbreak: "15",
     persistence: "10",
-    rigidity: "18",
+    rigidity: "23",
     hit: "D",
     guard: "-12",
     damage: "90",
@@ -361,7 +361,7 @@ const mbison = [
     damage: "100",
     stan: "150",
     remarks:
-      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+      "Psycho Reflect (Shoot Projectile) automatically triggers if an attack or projectile attached to a character is stopped by the counter hitbox",
     vtrigger: 1,
     type: "vsystem",
     command: ""
@@ -425,6 +425,35 @@ const mbison = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Fist",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Psycho Blast",
@@ -574,7 +603,7 @@ const mbison = [
     rigidity: "54 total frames",
     hit: "D",
     guard: "-1",
-    damage: "140",
+    damage: "120",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -779,7 +808,7 @@ const mbison = [
     damage: "160(*100)",
     stan: "200(*100)",
     remarks:
-      "Can cross-up\n                                                                                                                                                Projectile invincible from 1-2F, 8F until landing\nHit and projectile invincible from 3F to 7F\n*During airborne hit",
+      "Can cross-up\n                                                                                                1F - Until landing  projectile invincibility\n                                                *During airborne hit",
     vtrigger: 1,
     type: "special",
     command: "↑ + K K"
@@ -986,7 +1015,7 @@ const mbison = [
     name: "Standing HK",
     outbreak: "9",
     persistence: "3",
-    rigidity: "13",
+    rigidity: "18",
     hit: "6",
     guard: "3",
     damage: "80",
@@ -1058,7 +1087,7 @@ const mbison = [
     outbreak: "7",
     persistence: "2",
     rigidity: "15",
-    hit: "-1",
+    hit: "0",
     guard: "-2",
     damage: "50",
     stan: "100",
@@ -1071,7 +1100,7 @@ const mbison = [
     name: "Crouching HK",
     outbreak: "15",
     persistence: "10",
-    rigidity: "18",
+    rigidity: "23",
     hit: "D",
     guard: "-12",
     damage: "90",
@@ -1274,7 +1303,7 @@ const mbison = [
     damage: "100",
     stan: "150",
     remarks:
-      "※「サイコリジェクト（吸収）」の当身判定に打撃攻撃や本体に付随する飛び道具を受け止めた際に自動派生",
+      "Psycho Reflect (Shoot Projectile) automatically triggers if an attack or projectile attached to a character is stopped by the counter hitbox",
     vtrigger: 2,
     type: "vsystem",
     command: ""
@@ -1338,6 +1367,35 @@ const mbison = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Psycho Fist",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Psycho Blast",
@@ -1444,7 +1502,7 @@ const mbison = [
     rigidity: "54 total frames",
     hit: "D",
     guard: "-1",
-    damage: "140",
+    damage: "120",
     stan: "150",
     remarks: "",
     vtrigger: 2,
@@ -1532,7 +1590,7 @@ const mbison = [
     damage: "160(*100)",
     stan: "200(*100)",
     remarks:
-      "Can cross-up\n                                                                                                1F - 6F  attack & projectile invincibility\n                                                *During airborne hit",
+      "Can cross-up\n                                                                                                1F - Until landing  projectile invincibility\n                                                *During airborne hit",
     vtrigger: 2,
     type: "special",
     command: "↑ + K K"
@@ -1589,7 +1647,7 @@ const mbison = [
     damage: "100",
     stan: "100",
     remarks:
-      "Uses 2000F V-Gauge Timer\n                                Can cross-up\n                                                                                                14F - 29F  projectile invincibility\n                                                30F～34F 上半身飛び道具無敵\nCan be canceled into from V-Trigger-cancelable moves",
+      "Uses 2000F V-Gauge Timer\n                                Can cross-up\n                                                                                                14F - 29F  projectile invincibility\n                                                Upper-body projectile invincibility on frames 30-34.\nCan be canceled into from V-Trigger-cancelable moves",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"

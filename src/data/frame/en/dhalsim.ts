@@ -99,7 +99,7 @@ const dhalsim = [
   },
   {
     name: "Crouching MP",
-    outbreak: "8",
+    outbreak: "9",
     persistence: "4",
     rigidity: "19",
     hit: "-1",
@@ -361,7 +361,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from frame 6 until landing",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) → OR + MP MK"
@@ -375,7 +375,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) (DURING JUMP) MP MK"
@@ -389,7 +389,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "ヨガファイアが強化される(1回)",
+    remarks: "Strengthens Yoga Fire (1 time)",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -403,7 +403,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "ヨガファイアが強化される(1回)",
+    remarks: "Strengthens Yoga Fire (1 time)",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING JUMP) MP MK"
@@ -436,6 +436,35 @@ const dhalsim = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Yoga Bazooka",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Yoga Fire",
@@ -832,7 +861,7 @@ const dhalsim = [
   },
   {
     name: "Crouching MP",
-    outbreak: "8",
+    outbreak: "9",
     persistence: "4",
     rigidity: "19",
     hit: "-1",
@@ -1094,7 +1123,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from frame 6 until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) → OR + MP MK"
@@ -1108,7 +1137,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) (DURING JUMP) MP MK"
@@ -1122,7 +1151,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "ヨガファイアが強化される(1回)",
+    remarks: "Strengthens Yoga Fire (1 time)",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1136,7 +1165,7 @@ const dhalsim = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "ヨガファイアが強化される(1回)",
+    remarks: "Strengthens Yoga Fire (1 time)",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) (DURING JUMP) MP MK"
@@ -1185,6 +1214,35 @@ const dhalsim = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Yoga Bazooka",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Yoga Fire",
@@ -1251,7 +1309,7 @@ const dhalsim = [
     guard: "-3",
     damage: "60",
     stan: "150",
-    remarks: "",
+    remarks: "S*V*Can be canceled with Yoga Sansara on hit",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + LP"
@@ -1265,7 +1323,7 @@ const dhalsim = [
     guard: "-2",
     damage: "70",
     stan: "150",
-    remarks: "",
+    remarks: "S*V*Can be canceled with Yoga Sansara on hit",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + MP"
@@ -1279,7 +1337,7 @@ const dhalsim = [
     guard: "3",
     damage: "90",
     stan: "200",
-    remarks: "",
+    remarks: "S*V*Can be canceled with Yoga Sansara on hit",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + HP"
@@ -1293,7 +1351,7 @@ const dhalsim = [
     guard: "-8",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "S*V*Can be canceled with Yoga Sansara on hit",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + P P"
@@ -1527,4 +1585,5 @@ const dhalsim = [
     command: "(DURING JUMP) ↓↘→ ↓↘→ + P"
   }
 ];
+
 export { dhalsim };

@@ -155,7 +155,7 @@ const lucia = [
   },
   {
     name: "Crouching HK",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "2",
     rigidity: "22",
     hit: "D",
@@ -379,7 +379,7 @@ const lucia = [
   },
   {
     name: "[VS1] Tap-Kick",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "2",
@@ -393,7 +393,7 @@ const lucia = [
   },
   {
     name: "V[VS1] Tap-Kick",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "D",
@@ -408,8 +408,8 @@ const lucia = [
   {
     name: "[VS2] Arrest Heel",
     outbreak: "28",
-    persistence: "2",
-    rigidity: "2+16 frame(s) after landing",
+    persistence: "4",
+    rigidity: "16 frame(s) after landing",
     hit: "D",
     guard: "-4",
     damage: "90",
@@ -422,8 +422,8 @@ const lucia = [
   {
     name: "V[VS2] Arrest Heel",
     outbreak: "28",
-    persistence: "2",
-    rigidity: "2+16 frame(s) after landing",
+    persistence: "4",
+    rigidity: "16 frame(s) after landing",
     hit: "D",
     guard: "-4",
     damage: "100",
@@ -462,6 +462,35 @@ const lucia = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Peacekeeper",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Gun Smoke",
@@ -603,7 +632,7 @@ const lucia = [
     damage: "",
     stan: "",
     remarks:
-      "Lucia will perform Braking after the move ends\nCan perform Braking, Rough Chase, Tornado Spinner, and Cyclone Spinner from 12F",
+      "Lucia will perform Braking after the move ends\nCan be transitioned into Rough Chase/Tornado Spinner/Cyclone Spinner/Nubbing Needle from frame 10\nCan be transitioned into from frame 12 of Braking only",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P P"
@@ -786,8 +815,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "Can perform EX Flipper Shot on 20F",
     vtrigger: 1,
     type: "special",
@@ -805,7 +834,7 @@ const lucia = [
     remarks: "Properties change if hit by Fire Spinner",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ LK"
+    command: "↓↘→ + K K ▶ LK OR ↓↘→ + K ▶ LK MK"
   },
   {
     name: "EX Flipper Shot M",
@@ -819,7 +848,7 @@ const lucia = [
     remarks: "",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ MK"
+    command: "↓↘→ + K K ▶ MK OR ↓↘→ + K ▶ LK HK"
   },
   {
     name: "EX Flipper Shot H",
@@ -833,7 +862,7 @@ const lucia = [
     remarks: "",
     vtrigger: 1,
     type: "special",
-    command: "↓↘→ + K K ▶ HK"
+    command: "↓↘→ + K K ▶ HK OR ↓↘→ + K ▶ MK HK"
   },
   {
     name: "VFirecracker",
@@ -842,8 +871,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "Can perform V-Flipper Shot on 20F",
     vtrigger: 1,
     type: "special",
@@ -895,7 +924,7 @@ const lucia = [
   {
     name: "L Hurricane Spinner",
     outbreak: "7",
-    persistence: "9",
+    persistence: "12",
     rigidity: "20+15 frame(s) after landing",
     hit: "D",
     guard: "-38",
@@ -910,7 +939,7 @@ const lucia = [
   {
     name: "M Hurricane Spinner",
     outbreak: "9",
-    persistence: "9",
+    persistence: "12",
     rigidity: "23+15 frame(s) after landing",
     hit: "D",
     guard: "-41",
@@ -925,7 +954,7 @@ const lucia = [
   {
     name: "H Hurricane Spinner",
     outbreak: "13",
-    persistence: "9",
+    persistence: "12",
     rigidity: "30+15 frame(s) after landing",
     hit: "D",
     guard: "-48",
@@ -1045,6 +1074,21 @@ const lucia = [
     hit: "D",
     guard: "-32",
     damage: "340",
+    stan: "0",
+    remarks:
+      "1F - 14F  full invincibility\n                                                Complete invincibility until the end of attack active frames on hit",
+    vtrigger: 1,
+    type: "ca",
+    command: "↓↙← ↓↙← + K"
+  },
+  {
+    name: "VHard Hit Knee",
+    outbreak: "1+7",
+    persistence: "16",
+    rigidity: "54",
+    hit: "D",
+    guard: "-32",
+    damage: "360",
     stan: "0",
     remarks:
       "1F - 14F  full invincibility\n                                                Complete invincibility until the end of attack active frames on hit",
@@ -1432,7 +1476,7 @@ const lucia = [
   },
   {
     name: "[VS1] Tap-Kick",
-    outbreak: "9",
+    outbreak: "8",
     persistence: "6",
     rigidity: "20",
     hit: "2",
@@ -1448,8 +1492,8 @@ const lucia = [
   {
     name: "[VS2] Arrest Heel",
     outbreak: "28",
-    persistence: "2",
-    rigidity: "2+16 frame(s) after landing",
+    persistence: "4",
+    rigidity: "16 frame(s) after landing",
     hit: "D",
     guard: "-4",
     damage: "90",
@@ -1488,6 +1532,35 @@ const lucia = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Peacekeeper",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Gun Smoke",
@@ -1584,7 +1657,7 @@ const lucia = [
     damage: "",
     stan: "",
     remarks:
-      "Lucia will perform Braking after the move ends\nCan perform Braking, Rough Chase, Tornado Spinner, and Cyclone Spinner from 12F",
+      "Lucia will perform Braking after the move ends\nCan be transitioned into Rough Chase/Tornado Spinner/Cyclone Spinner/Nubbing Needle from frame 10\nCan be transitioned into from frame 12 of Braking only",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P"
@@ -1722,8 +1795,8 @@ const lucia = [
     rigidity: "19",
     hit: "0",
     guard: "-4",
-    damage: "30",
-    stan: "30",
+    damage: "50",
+    stan: "50",
     remarks: "Can perform EX Flipper Shot on 20F",
     vtrigger: 2,
     type: "special",
@@ -1741,7 +1814,7 @@ const lucia = [
     remarks: "Properties change if hit by Fire Spinner",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ LK"
+    command: "↓↘→ + K K ▶ LK OR ↓↘→ + LK MK"
   },
   {
     name: "EX Flipper Shot M",
@@ -1755,7 +1828,7 @@ const lucia = [
     remarks: "",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ MK"
+    command: "↓↘→ + K K ▶ MK OR ↓↘→ + LK HK"
   },
   {
     name: "EX Flipper Shot H",
@@ -1769,12 +1842,12 @@ const lucia = [
     remarks: "",
     vtrigger: 2,
     type: "special",
-    command: "↓↘→ + K K ▶ HK"
+    command: "↓↘→ + K K ▶ HK OR ↓↘→ + MK HK"
   },
   {
     name: "L Hurricane Spinner",
     outbreak: "7",
-    persistence: "9",
+    persistence: "12",
     rigidity: "20+15 frame(s) after landing",
     hit: "D",
     guard: "-38",
@@ -1789,7 +1862,7 @@ const lucia = [
   {
     name: "M Hurricane Spinner",
     outbreak: "9",
-    persistence: "9",
+    persistence: "12",
     rigidity: "23+15 frame(s) after landing",
     hit: "D",
     guard: "-41",
@@ -1804,7 +1877,7 @@ const lucia = [
   {
     name: "H Hurricane Spinner",
     outbreak: "13",
-    persistence: "9",
+    persistence: "12",
     rigidity: "30+15 frame(s) after landing",
     hit: "D",
     guard: "-48",
@@ -1918,4 +1991,5 @@ const lucia = [
     command: "↓↙← ↓↙← + K"
   }
 ];
+
 export { lucia };

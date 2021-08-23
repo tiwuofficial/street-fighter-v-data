@@ -61,7 +61,7 @@ const rmika = [
     persistence: "4",
     rigidity: "15",
     hit: "2",
-    guard: "-3",
+    guard: "-2",
     damage: "60",
     stan: "100",
     remarks:
@@ -157,8 +157,8 @@ const rmika = [
   {
     name: "Crouching MK",
     outbreak: "7",
-    persistence: "3",
-    rigidity: "15",
+    persistence: "4",
+    rigidity: "14",
     hit: "3",
     guard: "-2",
     damage: "60",
@@ -331,7 +331,7 @@ const rmika = [
     guard: "-5",
     damage: "50",
     stan: "100",
-    remarks: "専用の強シューティングピーチにキャンセル可能",
+    remarks: "Can be canceled with H Shooting Peach",
     vtrigger: 1,
     type: "unique",
     command: "LK ▶ MP"
@@ -402,7 +402,7 @@ const rmika = [
     damage: "40",
     stan: "70",
     remarks:
-      "Armor from 5F to 79F\nIncreased command throw damage + V-Gauge meter gain based on the length of the button hold\n1F - 186F: 1.2x (V-Gauge + 50)\n187F - 395F: 1.5x (V-Gauge + 100)\n396F - 559F: 2x (V-Gauge + 100)\n560F - 707F: 3x (V-Gauge + 100)\n708F - 764F: 5x (V-Gauge + 100)\n765F - 940F: 9x (V-Gauge + 150)\n*ボタンリリース時に前入力しながら離すとマイクの飛距離が変化",
+      "Armor from 5F to 79F\nIncreased command throw damage + V-Gauge meter gain based on the length of the button hold\n1F - 186F: 1.2x (V-Gauge + 50)\n187F - 395F: 1.5x (V-Gauge + 100)\n396F - 559F: 2x (V-Gauge + 100)\n560F - 707F: 3x (V-Gauge + 100)\n708F - 764F: 5x (V-Gauge + 100)\n765F - 940F: 9x (V-Gauge + 150)\n*Mic range differs if forward is held while releasing the button\nOn successful powerup, allows rainbow typhoon and brimstone to be combo'd",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -416,7 +416,7 @@ const rmika = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "上・中段判定の攻撃を当身可能\nSubject to counter hit during move duration",
+    remarks: "Can counter high and overhead attacks\nSubject to counter hit during move duration",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -430,7 +430,8 @@ const rmika = [
     guard: "4",
     damage: "90",
     stan: "150",
-    remarks: "40のリカバリアブルダメージを受ける",
+    remarks:
+      "Take 40 recoverable damage\nIncreases throw priority (1.2x) + allows Rainbow Typhoon and Brimstone to be combo'd",
     vtrigger: 1,
     type: "vsystem",
     command: ""
@@ -535,6 +536,35 @@ const rmika = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Gutsy Lariat",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Shooting Peach",
     outbreak: "10",
     persistence: "6",
@@ -597,9 +627,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "180",
+    damage: "180(*130)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + LP"
@@ -611,9 +641,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "190",
+    damage: "190(*140)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + MP"
@@ -625,9 +655,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "200",
+    damage: "200(*150)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + HP"
@@ -639,9 +669,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "240",
+    damage: "240(*190)",
     stan: "250",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + P P"
@@ -653,9 +683,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "120",
+    damage: "120(*90)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + LK"
@@ -667,9 +697,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "130",
+    damage: "130(*100)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + MK"
@@ -681,9 +711,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "140",
+    damage: "140(*110)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + HK"
@@ -695,9 +725,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "180",
+    damage: "180(*150)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙← + K K"
@@ -753,7 +783,7 @@ const rmika = [
     guard: "",
     damage: "160",
     stan: "200",
-    remarks: "5F - 15F  full invincibility",
+    remarks: "5F - 15F  full invincibility\n                1F - 4F  invincible to mid-air attacks",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + K K"
@@ -834,7 +864,7 @@ const rmika = [
     persistence: "4",
     rigidity: "15",
     hit: "2",
-    guard: "-3",
+    guard: "-2",
     damage: "60",
     stan: "100",
     remarks:
@@ -930,8 +960,8 @@ const rmika = [
   {
     name: "Crouching MK",
     outbreak: "7",
-    persistence: "3",
-    rigidity: "15",
+    persistence: "4",
+    rigidity: "14",
     hit: "3",
     guard: "-2",
     damage: "60",
@@ -1104,7 +1134,7 @@ const rmika = [
     guard: "-5",
     damage: "50",
     stan: "100",
-    remarks: "専用の強シューティングピーチにキャンセル可能",
+    remarks: "Can be canceled with H Shooting Peach",
     vtrigger: 2,
     type: "unique",
     command: "LK ▶ MP"
@@ -1175,7 +1205,7 @@ const rmika = [
     damage: "40",
     stan: "70",
     remarks:
-      "Armor from 5F to 79F\nIncreased command throw damage + V-Gauge meter gain based on the length of the button hold\n1F - 186F: 1.2x (V-Gauge + 50)\n187F - 395F: 1.5x (V-Gauge + 100)\n396F - 559F: 2x (V-Gauge + 100)\n560F - 707F: 3x (V-Gauge + 100)\n708F - 764F: 5x (V-Gauge + 100)\n765F - 940F: 9x (V-Gauge + 150)\n*ボタンリリース時に前入力しながら離すとマイクの飛距離が変化",
+      "Armor from 5F to 79F\nIncreased command throw damage + V-Gauge meter gain based on the length of the button hold\n1F - 186F: 1.2x (V-Gauge + 50)\n187F - 395F: 1.5x (V-Gauge + 100)\n396F - 559F: 2x (V-Gauge + 100)\n560F - 707F: 3x (V-Gauge + 100)\n708F - 764F: 5x (V-Gauge + 100)\n765F - 940F: 9x (V-Gauge + 150)\n*Mic range differs if forward is held while releasing the button\nOn successful powerup, allows rainbow typhoon and brimstone to be combo'd",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -1189,7 +1219,7 @@ const rmika = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "上・中段判定の攻撃を当身可能\nSubject to counter hit during move duration",
+    remarks: "Can counter high and overhead attacks\nSubject to counter hit during move duration",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1203,7 +1233,8 @@ const rmika = [
     guard: "4",
     damage: "90",
     stan: "150",
-    remarks: "40のリカバリアブルダメージを受ける",
+    remarks:
+      "Take 40 recoverable damage\nIncreases throw priority (1.2x) + allows Rainbow Typhoon and Brimstone to be combo'd",
     vtrigger: 2,
     type: "vsystem",
     command: ""
@@ -1252,6 +1283,35 @@ const rmika = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Gutsy Lariat",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Shooting Peach",
@@ -1316,9 +1376,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "180",
+    damage: "180(*130)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + LP"
@@ -1330,9 +1390,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "190",
+    damage: "190(*140)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + MP"
@@ -1344,9 +1404,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "200",
+    damage: "200(*150)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + HP"
@@ -1358,9 +1418,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "240",
+    damage: "240(*190)",
     stan: "250",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + P P"
@@ -1372,9 +1432,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "120",
+    damage: "120(*90)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + LK"
@@ -1386,9 +1446,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "130",
+    damage: "130(*100)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + MK"
@@ -1400,9 +1460,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "140",
+    damage: "140(*110)",
     stan: "150",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + HK"
@@ -1414,9 +1474,9 @@ const rmika = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "180",
+    damage: "180(*150)",
     stan: "200",
-    remarks: "",
+    remarks: "*Value when used in a combo while in powered up state",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙← + K K"
@@ -1472,21 +1532,22 @@ const rmika = [
     guard: "",
     damage: "160",
     stan: "200",
-    remarks: "5F - 15F  full invincibility",
+    remarks: "5F - 15F  full invincibility\n                1F - 4F  invincible to mid-air attacks",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + K K"
   },
   {
     name: "Steel Chair",
-    outbreak: "104",
+    outbreak: "104(*74)",
     persistence: "25",
-    rigidity: "46 total frames",
+    rigidity: "46 total frames(*16)",
     hit: "",
     guard: "",
     damage: "60",
     stan: "150",
-    remarks: "Uses all of the V-Gauge Timer",
+    remarks:
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                *During cancel",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"
@@ -1495,12 +1556,13 @@ const rmika = [
     name: "Fightin' Dirty",
     outbreak: "17 at close range to opponent",
     persistence: "28",
-    rigidity: "58 total frames",
+    rigidity: "58 total frames(*21)",
     hit: "",
     guard: "",
     damage: "100+60",
     stan: "100+100",
-    remarks: "Uses all of the V-Gauge Timer",
+    remarks:
+      "Uses all of the V-Gauge Timer\n                                                                                                                                                                                *During cancel",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK (HOLD BUTTONS)"
@@ -1520,4 +1582,5 @@ const rmika = [
     command: "↓↙← ↓↙← + P"
   }
 ];
+
 export { rmika };

@@ -38,7 +38,7 @@ const cody = [
         guard: "-10",
         damage: "120(※70)",
         stan: "170(※120)",
-        remarks: "S※CA※1段目のみ可能\n※2段目だけヒット時",
+        remarks: "※2段目だけヒット時",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -297,7 +297,7 @@ const cody = [
     },
     {
         name: "（ナイフ所持状態）しゃがみ弱P",
-        outbreak: "5",
+        outbreak: "4",
         persistence: "3",
         rigidity: "7",
         hit: "5",
@@ -668,7 +668,7 @@ const cody = [
         guard: "-2",
         damage: "60",
         stan: "0",
-        remarks: "1F～29F 打撃無敵\n                                                発動時スタン値200回復\nヒット時",
+        remarks: "1F～29F 打撃無敵\n                                                発動時スタン値200回復\n※ヒット時",
         vtrigger: 1,
         type: "vsystem",
         command: "(ガード中に) → + 弱K"
@@ -976,7 +976,7 @@ const cody = [
         guard: "-10",
         damage: "120(※70)",
         stan: "170(※120)",
-        remarks: "S※CA※1段目のみ可能\n※2段目だけヒット時",
+        remarks: "※2段目だけヒット時",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1536,7 +1536,7 @@ const cody = [
         guard: "-2",
         damage: "60",
         stan: "0",
-        remarks: "1F～29F 打撃無敵\n                                                発動時スタン値200回復\nヒット時",
+        remarks: "1F～29F 打撃無敵\n                                                発動時スタン値200回復\n※ヒット時",
         vtrigger: 2,
         type: "vsystem",
         command: "(ガード中に) → + 弱K"

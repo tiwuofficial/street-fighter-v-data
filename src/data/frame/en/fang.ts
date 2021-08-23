@@ -81,7 +81,8 @@ const fang = [
     guard: "1",
     damage: "80",
     stan: "150",
-    remarks: "S*CA*Only possible during 1st attack\nVS*Can only be canceled into V-Nishodoku",
+    remarks:
+      "S*CA*Only possible during 1st attack\nVS*Can only be canceled into V-Nishodoku\nWill be blown away if hit while mid-air during first attack",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -279,7 +280,7 @@ const fang = [
     guard: "-5",
     damage: "100",
     stan: "200",
-    remarks: "S*CA*V*Only possible during 1st attack",
+    remarks: "S*CA*Only possible during 1st attack",
     vtrigger: 1,
     type: "unique",
     command: "↘ + HP"
@@ -361,10 +362,10 @@ const fang = [
     outbreak: "22",
     persistence: "259",
     rigidity: "45 total frames",
-    hit: "2",
-    guard: "-2",
-    damage: "30+50 poison",
-    stan: "50",
+    hit: "4",
+    guard: "0",
+    damage: "60+50 poison",
+    stan: "100",
     remarks:
       "Uses 250F V-Gauge Timer\n                                                                                                                                                                                Causes poison effect on hit\nCan be canceled into from special move-cancelable normal moves",
     vtrigger: 1,
@@ -380,7 +381,7 @@ const fang = [
     guard: "",
     damage: "0",
     stan: "0",
-    remarks: "打撃属性の攻撃を当身可能\nSubject to counter hit during move duration",
+    remarks: "Can counter striking attacks\nSubject to counter hit during move duration",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -442,6 +443,35 @@ const fang = [
     vtrigger: 1,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Ryosenbu",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Nishikyu",
@@ -662,7 +692,7 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 1,
     type: "special",
     command: "(DURING JUMP) LP"
@@ -763,7 +793,8 @@ const fang = [
     guard: "1",
     damage: "80",
     stan: "150",
-    remarks: "S*CA*Only possible during 1st attack",
+    remarks:
+      "S*CA*Only possible during 1st attack\nWill be blown away if hit while mid-air during first attack",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -961,7 +992,7 @@ const fang = [
     guard: "-5",
     damage: "100",
     stan: "200",
-    remarks: "S*CA*V*Only possible during 1st attack",
+    remarks: "S*CA*Only possible during 1st attack",
     vtrigger: 2,
     type: "unique",
     command: "↘ + HP"
@@ -1047,7 +1078,7 @@ const fang = [
     guard: "",
     damage: "0",
     stan: "0",
-    remarks: "打撃属性の攻撃を当身可能\nSubject to counter hit during move duration",
+    remarks: "Can counter striking attacks\nSubject to counter hit during move duration",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1095,6 +1126,35 @@ const fang = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LP"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Ryosenbu",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "Nishikyu",
@@ -1419,7 +1479,7 @@ const fang = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks: "Enters special counterable state from the start of the move until landing",
     vtrigger: 2,
     type: "special",
     command: "(DURING JUMP) LP"
@@ -1440,4 +1500,5 @@ const fang = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { fang };

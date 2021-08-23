@@ -12,8 +12,8 @@ const oro = [
         stan: "70",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -26,8 +26,8 @@ const oro = [
         stan: "120",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -40,8 +40,8 @@ const oro = [
         stan: "150",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP (Hold Button)",
@@ -54,8 +54,8 @@ const oro = [
         stan: "150",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "HP (HOLD BUTTONS)"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -68,8 +68,8 @@ const oro = [
         stan: "70",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
@@ -82,8 +82,8 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -96,8 +96,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (+22F)",
         vtrigger: 1,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -110,8 +110,8 @@ const oro = [
         stan: "70",
         remarks: "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -124,8 +124,8 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -138,8 +138,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (+15F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -152,8 +152,8 @@ const oro = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -166,8 +166,8 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -180,8 +180,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -194,8 +194,8 @@ const oro = [
         stan: "90",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -208,8 +208,8 @@ const oro = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -222,8 +222,8 @@ const oro = [
         stan: "150",
         remarks: "Second hit causes blowback knockdown",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -236,8 +236,8 @@ const oro = [
         stan: "90",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -250,8 +250,8 @@ const oro = [
         stan: "120",
         remarks: "Causes blowback knockdown on airborne hit",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -264,8 +264,8 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Kaeshi Genkotsu",
@@ -278,7 +278,7 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + MP"
     },
     {
@@ -292,7 +292,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -306,7 +306,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "← + MK"
     },
     {
@@ -320,7 +320,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "MK ▶ MP"
     },
     {
@@ -334,7 +334,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ MP MK"
     },
     {
@@ -348,7 +348,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ ↓ + MP MK"
     },
     {
@@ -362,7 +362,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ ← + MP MK"
     },
     {
@@ -376,7 +376,7 @@ const oro = [
         stan: "",
         remarks: "Can follow up with Kaki Otoshi or Eda Uchi from frame 18",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK"
     },
     {
@@ -390,7 +390,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK ▶ P"
     },
     {
@@ -404,7 +404,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK ▶ K"
     },
     {
@@ -418,7 +418,7 @@ const oro = [
         stan: "",
         remarks: "Enters special counterable state from the start of the move until landing",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(DURING JUMP) ↖ OR ↑ OR ↗"
     },
     {
@@ -432,7 +432,7 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) → OR + LP LK"
     },
     {
@@ -446,7 +446,7 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) ← + LP LK"
     },
     {
@@ -460,7 +460,7 @@ const oro = [
         stan: "200",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(CLOSE TO OPPONENT IN AIR) LP LK"
     },
     {
@@ -474,7 +474,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) + MP MK"
     },
     {
@@ -488,7 +488,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
     },
     {
@@ -502,7 +502,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ← + MP MK"
     },
     {
@@ -516,7 +516,7 @@ const oro = [
         stan: "",
         remarks: "Can follow up with Kaki Otoshi or Eda Uchi from frame 18",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -530,7 +530,7 @@ const oro = [
         stan: "100",
         remarks: "S*Can be canceled with Kishinriki on hit or block",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK ▶ P"
     },
     {
@@ -544,7 +544,7 @@ const oro = [
         stan: "100",
         remarks: "S*Second attack can be cancelled with Kishinriki on hit or guard.",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK ▶ K"
     },
     {
@@ -558,7 +558,7 @@ const oro = [
         stan: "",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -572,7 +572,7 @@ const oro = [
         stan: "",
         remarks: "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LK"
     },
     {
@@ -586,7 +586,7 @@ const oro = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -600,7 +600,7 @@ const oro = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -614,7 +614,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→ + LP"
     },
     {
@@ -628,7 +628,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→ + MP"
     },
     {
@@ -642,7 +642,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→ + HP"
     },
     {
@@ -656,7 +656,7 @@ const oro = [
         stan: "100",
         remarks: "Homes in on opponent after travelling a fixed distance",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→ + P P"
     },
     {
@@ -670,7 +670,7 @@ const oro = [
         stan: "150",
         remarks: "1F - 5F  throw invincibility\n                1F - 5F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↑ + LP"
     },
     {
@@ -684,7 +684,7 @@ const oro = [
         stan: "150",
         remarks: "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↑ + MP"
     },
     {
@@ -698,7 +698,7 @@ const oro = [
         stan: "150",
         remarks: "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↑ + HP"
     },
     {
@@ -712,7 +712,7 @@ const oro = [
         stan: "200",
         remarks: "1F - 16F  full invincibility\n                                                Subject to counter hit during move duration\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↑ + P P"
     },
     {
@@ -726,7 +726,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + LP"
     },
     {
@@ -740,7 +740,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + MP"
     },
     {
@@ -754,7 +754,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + HP"
     },
     {
@@ -768,7 +768,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + P P"
     },
     {
@@ -782,7 +782,7 @@ const oro = [
         stan: "150",
         remarks: "If opponent is close on or after frame 24, attack will trigger after 2 more frames\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + K"
     },
     {
@@ -796,7 +796,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + K K"
     },
     {
@@ -810,7 +810,7 @@ const oro = [
         stan: "120",
         remarks: "S*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING FORWARD JUMP) ↓↘→ + K"
     },
     {
@@ -824,7 +824,7 @@ const oro = [
         stan: "200",
         remarks: "Can follow up with up to four attacks on block and up to five attacks on hit\nS*Can only be canceled into Kishin Kuchu Jigoku Guruma on hit.",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING FORWARD JUMP) ↓↘→ + K K"
     },
     {
@@ -838,7 +838,7 @@ const oro = [
         stan: "100",
         remarks: "S*Can be canceled with Kishinriki on hit or block",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LK"
     },
     {
@@ -852,7 +852,7 @@ const oro = [
         stan: "120",
         remarks: "S*Can be canceled with Kishinriki on hit or block",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MK"
     },
     {
@@ -866,7 +866,7 @@ const oro = [
         stan: "150",
         remarks: "S*Can be canceled with Kishinriki on hit or block (Only on the first attack)",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HK"
     },
     {
@@ -880,7 +880,7 @@ const oro = [
         stan: "100",
         remarks: "Third attack triggers only on hit\nVS*Can only be canceled V-Skill II\nVS*Only possible during 3rd attack",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + K K"
     },
     {
@@ -894,7 +894,7 @@ const oro = [
         stan: "240",
         remarks: "Can be canceled from V-Trigger cancellable moves",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-TRIGGER I) (NEAR OPPONENT) HP HK"
     },
     {
@@ -908,7 +908,7 @@ const oro = [
         stan: "250(*200)",
         remarks: "*During cancel",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-TRIGGER I) (CLOSE TO OPPONENT IN AIR) HP HK"
     },
     {
@@ -922,7 +922,7 @@ const oro = [
         stan: "0",
         remarks: "1F - 8F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + P"
     },
     {
@@ -936,8 +936,8 @@ const oro = [
         stan: "70",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -950,8 +950,8 @@ const oro = [
         stan: "120",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -964,8 +964,8 @@ const oro = [
         stan: "150",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP (Hold Button)",
@@ -978,8 +978,8 @@ const oro = [
         stan: "150",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "HP (HOLD BUTTONS)"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -992,8 +992,8 @@ const oro = [
         stan: "70",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
@@ -1006,8 +1006,8 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -1020,8 +1020,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (+22F)",
         vtrigger: 2,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -1034,8 +1034,8 @@ const oro = [
         stan: "70",
         remarks: "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -1048,8 +1048,8 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -1062,8 +1062,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (+15F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -1076,8 +1076,8 @@ const oro = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -1090,8 +1090,8 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -1104,8 +1104,8 @@ const oro = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -1118,8 +1118,8 @@ const oro = [
         stan: "90",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -1132,8 +1132,8 @@ const oro = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -1146,8 +1146,8 @@ const oro = [
         stan: "150",
         remarks: "Second hit causes blowback knockdown",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -1160,8 +1160,8 @@ const oro = [
         stan: "90",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -1174,8 +1174,8 @@ const oro = [
         stan: "120",
         remarks: "Causes blowback knockdown on airborne hit",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -1188,8 +1188,8 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Kaeshi Genkotsu",
@@ -1202,7 +1202,7 @@ const oro = [
         stan: "100",
         remarks: "VS*Can only be canceled V-Skill II",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + MP"
     },
     {
@@ -1216,7 +1216,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -1230,7 +1230,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "← + MK"
     },
     {
@@ -1244,7 +1244,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "MK ▶ MP"
     },
     {
@@ -1258,7 +1258,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ MP MK"
     },
     {
@@ -1272,7 +1272,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ ↓ + MP MK"
     },
     {
@@ -1286,7 +1286,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) MK ▶ MP ▶ ← + MP MK"
     },
     {
@@ -1300,7 +1300,7 @@ const oro = [
         stan: "",
         remarks: "Can follow up with Kaki Otoshi or Eda Uchi from frame 18",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK"
     },
     {
@@ -1314,7 +1314,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK ▶ P"
     },
     {
@@ -1328,7 +1328,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) MK ▶ MP ▶ MP MK ▶ K"
     },
     {
@@ -1342,7 +1342,7 @@ const oro = [
         stan: "",
         remarks: "Enters special counterable state from the start of the move until landing",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(DURING JUMP) ↖ OR ↑ OR ↗"
     },
     {
@@ -1356,7 +1356,7 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) → OR + LP LK"
     },
     {
@@ -1370,7 +1370,7 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) ← + LP LK"
     },
     {
@@ -1384,7 +1384,7 @@ const oro = [
         stan: "200",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(CLOSE TO OPPONENT IN AIR) LP LK"
     },
     {
@@ -1398,7 +1398,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) + MP MK"
     },
     {
@@ -1412,7 +1412,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
     },
     {
@@ -1426,7 +1426,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ← + MP MK"
     },
     {
@@ -1440,7 +1440,7 @@ const oro = [
         stan: "",
         remarks: "Can follow up with Kaki Otoshi or Eda Uchi from frame 18",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -1454,7 +1454,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK ▶ P"
     },
     {
@@ -1468,7 +1468,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK ▶ K"
     },
     {
@@ -1482,7 +1482,7 @@ const oro = [
         stan: "",
         remarks: "V-Gauge Timer + 1200F\n                                                                                                                                                                                Summons three objects that follow up Oro's attacks\nV-Timer decreases by 40 frames each time an object follows up an attack",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -1496,7 +1496,7 @@ const oro = [
         stan: "",
         remarks: "V-Gauge Timer + 1200F\n                                                                                                                                                                                Summons five objects that follow up Oro's attacks\nV-Timer decreases by 40 frames each time an object follows up an attack",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "↓ + HP HK"
     },
     {
@@ -1510,7 +1510,7 @@ const oro = [
         stan: "0",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1524,7 +1524,7 @@ const oro = [
         stan: "10",
         remarks: "Recovers 20 frames of V-Timer on hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1538,7 +1538,7 @@ const oro = [
         stan: "0",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1552,7 +1552,7 @@ const oro = [
         stan: "0",
         remarks: "Sets opponent on fire on hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1566,7 +1566,7 @@ const oro = [
         stan: "15",
         remarks: "Recovers 10 frames of V-Timer on hit\nElectrocutes opponent on hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1580,7 +1580,7 @@ const oro = [
         stan: "20",
         remarks: "Chills opponent on hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: ""
     },
     {
@@ -1594,7 +1594,7 @@ const oro = [
         stan: "",
         remarks: "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LP"
     },
     {
@@ -1608,7 +1608,7 @@ const oro = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -1622,7 +1622,7 @@ const oro = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -1636,7 +1636,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→ + LP"
     },
     {
@@ -1650,7 +1650,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→ + MP"
     },
     {
@@ -1664,7 +1664,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→ + HP"
     },
     {
@@ -1678,7 +1678,7 @@ const oro = [
         stan: "100",
         remarks: "Homes in on opponent after travelling a fixed distance",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→ + P P"
     },
     {
@@ -1692,7 +1692,7 @@ const oro = [
         stan: "150",
         remarks: "1F - 5F  throw invincibility\n                1F - 5F  invincible to mid-air attacks\n                                Subject to counter hit during move duration",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↑ + LP"
     },
     {
@@ -1706,7 +1706,7 @@ const oro = [
         stan: "150",
         remarks: "1F - 6F  invincible to mid-air attacks\n                                Subject to counter hit during move duration",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↑ + MP"
     },
     {
@@ -1720,7 +1720,7 @@ const oro = [
         stan: "150",
         remarks: "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↑ + HP"
     },
     {
@@ -1734,7 +1734,7 @@ const oro = [
         stan: "200",
         remarks: "1F - 16F  full invincibility\n                                                Subject to counter hit during move duration",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↑ + P P"
     },
     {
@@ -1748,7 +1748,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + LP"
     },
     {
@@ -1762,7 +1762,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + MP"
     },
     {
@@ -1776,7 +1776,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + HP"
     },
     {
@@ -1790,7 +1790,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↘↓↙← + P P"
     },
     {
@@ -1804,7 +1804,7 @@ const oro = [
         stan: "150",
         remarks: "If opponent is close on or after frame 24, attack will trigger after 2 more frames",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + K"
     },
     {
@@ -1818,7 +1818,7 @@ const oro = [
         stan: "200",
         remarks: "Second attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + K K"
     },
     {
@@ -1832,7 +1832,7 @@ const oro = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING FORWARD JUMP) ↓↘→ + K"
     },
     {
@@ -1846,7 +1846,7 @@ const oro = [
         stan: "200",
         remarks: "Can follow up with up to four attacks on block and up to five attacks on hit",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING FORWARD JUMP) ↓↘→ + K K"
     },
     {
@@ -1860,7 +1860,7 @@ const oro = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LK"
     },
     {
@@ -1874,7 +1874,7 @@ const oro = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MK"
     },
     {
@@ -1888,7 +1888,7 @@ const oro = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HK"
     },
     {
@@ -1902,7 +1902,7 @@ const oro = [
         stan: "100",
         remarks: "Third attack triggers only on hit\nVS*Can only be canceled V-Skill II\nVS*Only possible during 3rd attack",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + K K"
     },
     {
@@ -1916,7 +1916,7 @@ const oro = [
         stan: "0",
         remarks: "1F - 8F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + P"
     }
 ];

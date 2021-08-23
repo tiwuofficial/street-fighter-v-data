@@ -30,10 +30,10 @@ const zangief = [
   {
     name: "Standing HP",
     outbreak: "13",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "2",
-    guard: "-3",
+    guard: "0",
     damage: "100",
     stan: "150",
     remarks:
@@ -45,10 +45,10 @@ const zangief = [
   {
     name: "Standing HP (Hold Button)",
     outbreak: "37",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "D",
-    guard: "1",
+    guard: "3",
     damage: "130",
     stan: "200",
     remarks:
@@ -514,6 +514,35 @@ const zangief = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Colossal Boot",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Screw Pile Driver",
     outbreak: "5",
     persistence: "2",
@@ -564,7 +593,7 @@ const zangief = [
     guard: "",
     damage: "220",
     stan: "300",
-    remarks: "1F - 6F  throw invincibility",
+    remarks: "",
     vtrigger: 1,
     type: "special",
     command: "→↘↓↙←↖↑↗ + P P"
@@ -691,7 +720,7 @@ const zangief = [
     damage: "130(*100)",
     stan: "200",
     remarks:
-      "1F - 41F  projectile invincibility\n                                                *From active frame 4F\nIf the attack hits on active frames 9F-11F, recovery reduced by 10F",
+      "1F - 41F  projectile invincibility\n                                                *From active frame 4F\nIf the attack hits on active frames 9F-11F, recovery reduced by 10F\nV*On hit or block",
     vtrigger: 1,
     type: "special",
     command: "LP"
@@ -800,10 +829,10 @@ const zangief = [
   {
     name: "Standing HP",
     outbreak: "13",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "2",
-    guard: "-3",
+    guard: "0",
     damage: "100",
     stan: "150",
     remarks:
@@ -815,10 +844,10 @@ const zangief = [
   {
     name: "Standing HP (Hold Button)",
     outbreak: "37",
-    persistence: "4",
-    rigidity: "23",
+    persistence: "5",
+    rigidity: "22",
     hit: "D",
-    guard: "1",
+    guard: "3",
     damage: "130",
     stan: "200",
     remarks:
@@ -1254,6 +1283,35 @@ const zangief = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Colossal Boot",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Screw Pile Driver",
     outbreak: "5",
     persistence: "2",
@@ -1388,7 +1446,7 @@ const zangief = [
     guard: "",
     damage: "220",
     stan: "300",
-    remarks: "1F - 6F  throw invincibility",
+    remarks: "",
     vtrigger: 2,
     type: "special",
     command: "→↘↓↙←↖↑↗ + P P"
@@ -1402,8 +1460,7 @@ const zangief = [
     guard: "",
     damage: "350",
     stan: "400",
-    remarks:
-      "1F - 6F  throw invincibility\n                                                V-Timer 1,000F on activation, uses 1,000F on hit.",
+    remarks: "V-Timer 1,000F on activation, uses 1,000F on hit.",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) →↘↓↙←↖↑↗ + P P"
@@ -1417,8 +1474,7 @@ const zangief = [
     guard: "",
     damage: "300",
     stan: "300",
-    remarks:
-      "1F - 6F  throw invincibility\n                                                V-Timer 1,000F on activation, uses 1,000F on hit.",
+    remarks: "V-Timer 1,000F on activation, uses 1,000F on hit.",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) →↘↓↙←↖↑↗ + P P"
@@ -1528,9 +1584,10 @@ const zangief = [
     rigidity: "12 frame(s) after landing",
     hit: "D",
     guard: "",
-    damage: "310",
-    stan: "350",
-    remarks: "V-Timer 1,000F on activation, uses 1,000F on hit.",
+    damage: "310(*240)",
+    stan: "350(*300)",
+    remarks:
+      "V-Timer 1,000F on activation, uses 1,000F on hit.\n*Value when canceling from Flying Head Butt",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) (DURING VERTICAL OR FORWARD JUMP) →↘↓↙← + LP"
@@ -1542,9 +1599,10 @@ const zangief = [
     rigidity: "12 frame(s) after landing",
     hit: "D",
     guard: "",
-    damage: "330",
-    stan: "350",
-    remarks: "V-Timer 1,000F on activation, uses 1,000F on hit.",
+    damage: "330(*250)",
+    stan: "350(*300)",
+    remarks:
+      "V-Timer 1,000F on activation, uses 1,000F on hit.\n*Value when canceling from Flying Head Butt",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) (DURING VERTICAL OR FORWARD JUMP) →↘↓↙← + MP"
@@ -1556,9 +1614,10 @@ const zangief = [
     rigidity: "12 frame(s) after landing",
     hit: "D",
     guard: "",
-    damage: "350",
-    stan: "350",
-    remarks: "V-Timer 1,000F on activation, uses 1,000F on hit.",
+    damage: "350(*260)",
+    stan: "350(*300)",
+    remarks:
+      "V-Timer 1,000F on activation, uses 1,000F on hit.\n*Value when canceling from Flying Head Butt",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) (DURING VERTICAL OR FORWARD JUMP) →↘↓↙← + HP"
@@ -1601,13 +1660,13 @@ const zangief = [
     damage: "130(*100)",
     stan: "200",
     remarks:
-      "1F - 41F  projectile invincibility\n                                                *From active frame 4F\nIf the attack hits on active frames 9F-11F, recovery reduced by 10F",
+      "1F - 41F  projectile invincibility\n                                                *From active frame 4F\nIf the attack hits on active frames 9F-11F, recovery reduced by 10F\nV*On hit or block",
     vtrigger: 2,
     type: "special",
     command: "LP"
   },
   {
-    name: "",
+    name: "Tundra Storm",
     outbreak: "2",
     persistence: "12",
     rigidity: "32",
@@ -1635,4 +1694,5 @@ const zangief = [
     command: "→↘↓↙←↖↑↗ →↘↓↙←↖↑↗ + P"
   }
 ];
+
 export { zangief };

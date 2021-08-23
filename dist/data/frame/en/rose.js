@@ -12,8 +12,8 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -26,8 +26,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -40,8 +40,8 @@ const rose = [
         stan: "150",
         remarks: "*On whiff",
         vtrigger: 1,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -54,22 +54,22 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
         outbreak: "10",
         persistence: "3",
-        rigidity: "15",
+        rigidity: "2",
         hit: "3",
         guard: "-1",
         damage: "60",
         stan: "100",
         remarks: "5F - 20F  throw invincibility",
         vtrigger: 1,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -82,8 +82,8 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 1,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -96,8 +96,8 @@ const rose = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -110,8 +110,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -124,8 +124,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -138,8 +138,8 @@ const rose = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -152,8 +152,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -166,8 +166,8 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -180,8 +180,8 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -194,8 +194,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -208,8 +208,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -222,8 +222,8 @@ const rose = [
         stan: "70",
         remarks: "Can cross-up",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -236,8 +236,8 @@ const rose = [
         stan: "100",
         remarks: "Can cross-up",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -250,8 +250,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Slide",
@@ -264,7 +264,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "↘ + MK"
     },
     {
@@ -278,7 +278,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -292,7 +292,7 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "← + HK"
     },
     {
@@ -306,7 +306,7 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (+24F)\n                                                                Will not hit crouching opponents",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + HK"
     },
     {
@@ -320,7 +320,7 @@ const rose = [
         stan: "100",
         remarks: "Will not hit crouching opponents\n                                                                                                S*CA*on hit",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "LK ▶ → + HK"
     },
     {
@@ -334,7 +334,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "OR → + LP LK"
     },
     {
@@ -348,7 +348,7 @@ const rose = [
         stan: "200",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "← + LP LK"
     },
     {
@@ -362,7 +362,7 @@ const rose = [
         stan: "",
         remarks: "Increases Rose's attack damage by 10%\nEffect canceled after 600 frames or when Rose is hit, thrown, or affected by V-Reveral or V-Shift Break.",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -376,7 +376,7 @@ const rose = [
         stan: "",
         remarks: "Increases V-Gauge. Can hold the buttons to extend the effect duration",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -390,7 +390,7 @@ const rose = [
         stan: "0",
         remarks: "Green - Decreases opponent's attack damage by 10%. Effect canceled after 420 frames\nPurple - Increases chip damage by 50%. Effect canceled after 600 frames or when Rose is hit",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -404,7 +404,7 @@ const rose = [
         stan: "",
         remarks: "Changes the tarot card to one not currently held",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
     },
     {
@@ -418,7 +418,7 @@ const rose = [
         stan: "50",
         remarks: "Can call up to 2 at a time",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -432,7 +432,7 @@ const rose = [
         stan: "",
         remarks: "V-Gauge Timer + 2000F\n                                                                                                                                                                                Soul Terrag, Soul Mare, and Soul Cielo will become available",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -446,7 +446,7 @@ const rose = [
         stan: "",
         remarks: "1F - 31F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LP"
     },
     {
@@ -460,7 +460,7 @@ const rose = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -474,7 +474,7 @@ const rose = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -488,7 +488,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + LP"
     },
     {
@@ -502,7 +502,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + MP"
     },
     {
@@ -516,7 +516,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + HP"
     },
     {
@@ -530,7 +530,7 @@ const rose = [
         stan: "150",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + P P"
     },
     {
@@ -544,7 +544,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -558,7 +558,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -572,7 +572,7 @@ const rose = [
         stan: "100",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -586,7 +586,7 @@ const rose = [
         stan: "150",
         remarks: "Angle of the projectile differs based on the 2 buttons pressed simultaneously\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -600,7 +600,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + LP"
     },
     {
@@ -614,7 +614,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + MP"
     },
     {
@@ -628,7 +628,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                11F - 19F  invincible to mid-air attacks\n                                1F - 10F head to torso invincible to airborne attacks",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + HP"
     },
     {
@@ -642,7 +642,7 @@ const rose = [
         stan: "160",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo\n VS*Can only be canceled V-Skill I",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + P P"
     },
     {
@@ -656,7 +656,7 @@ const rose = [
         stan: "150",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + LK"
     },
     {
@@ -670,7 +670,7 @@ const rose = [
         stan: "150",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + MK"
     },
     {
@@ -684,7 +684,7 @@ const rose = [
         stan: "150",
         remarks: "S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + HK"
     },
     {
@@ -698,7 +698,7 @@ const rose = [
         stan: "200",
         remarks: "1F - 13F  attack & projectile invincibility\n                                                S*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + K K"
     },
     {
@@ -712,7 +712,7 @@ const rose = [
         stan: "120",
         remarks: "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo\n*When the projectile hits",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + P"
     },
     {
@@ -726,7 +726,7 @@ const rose = [
         stan: "150",
         remarks: "Projectile placement differs based on the 2 buttons pressed simultaneously\nS*Can be canceled with Soul Terrag, Soul Mare, and Soul Cielo",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + P P"
     },
     {
@@ -740,7 +740,7 @@ const rose = [
         stan: "-",
         remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                11F - 18F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "HP HK (CAN BE DONE IN AIR)"
     },
     {
@@ -754,7 +754,7 @@ const rose = [
         stan: "",
         remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                11F - 18F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "← + HP HK (CAN BE DONE IN AIR)"
     },
     {
@@ -768,7 +768,7 @@ const rose = [
         stan: "",
         remarks: "Uses 1000F V-Gauge Timer\n                                                                                                                                11F - 18F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓ + HP HK (CAN BE DONE IN AIR)"
     },
     {
@@ -782,7 +782,7 @@ const rose = [
         stan: "0",
         remarks: "1F - 13F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + K"
     },
     {
@@ -796,8 +796,8 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -810,8 +810,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -824,8 +824,8 @@ const rose = [
         stan: "150",
         remarks: "*On whiff",
         vtrigger: 2,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -838,8 +838,8 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
@@ -852,8 +852,8 @@ const rose = [
         stan: "100",
         remarks: "5F - 20F  throw invincibility",
         vtrigger: 2,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -866,8 +866,8 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 2,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -880,8 +880,8 @@ const rose = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -894,8 +894,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -908,8 +908,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -922,8 +922,8 @@ const rose = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -936,8 +936,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -950,8 +950,8 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -964,8 +964,8 @@ const rose = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -978,8 +978,8 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -992,8 +992,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -1006,8 +1006,8 @@ const rose = [
         stan: "70",
         remarks: "Can cross-up",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -1020,8 +1020,8 @@ const rose = [
         stan: "100",
         remarks: "Can cross-up",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -1034,8 +1034,8 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Slide",
@@ -1048,7 +1048,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "↘ + MK"
     },
     {
@@ -1062,7 +1062,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -1076,7 +1076,7 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "← + HK"
     },
     {
@@ -1090,7 +1090,7 @@ const rose = [
         stan: "150",
         remarks: "Triggers Crush Counter  (+24F)\n                                                                Will not hit crouching opponents",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + HK"
     },
     {
@@ -1104,7 +1104,7 @@ const rose = [
         stan: "100",
         remarks: "Will not hit crouching opponents\n                                                                                                S*CA*on hit",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "LK ▶ → + HK"
     },
     {
@@ -1118,7 +1118,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "OR → + LP LK"
     },
     {
@@ -1132,7 +1132,7 @@ const rose = [
         stan: "200",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "← + LP LK"
     },
     {
@@ -1146,7 +1146,7 @@ const rose = [
         stan: "",
         remarks: "Increases Rose's attack damage by 10%\nEffect canceled after 600 frames or when Rose is hit, thrown, or affected by V-Reveral or V-Shift Break.",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -1160,7 +1160,7 @@ const rose = [
         stan: "",
         remarks: "Increases V-Gauge. Can hold the buttons to extend the effect duration",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -1174,7 +1174,7 @@ const rose = [
         stan: "0",
         remarks: "Green - Decreases opponent's attack damage by 10%. Effect canceled after 420 frames\nPurple - Increases chip damage by 50%. Effect canceled after 600 frames or when Rose is hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -1188,7 +1188,7 @@ const rose = [
         stan: "",
         remarks: "Changes the tarot card to one not currently held",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) ↓ + MP MK"
     },
     {
@@ -1202,7 +1202,7 @@ const rose = [
         stan: "50",
         remarks: "Can call up to 2 at a time",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -1216,7 +1216,7 @@ const rose = [
         stan: "",
         remarks: "V-Gauge Timer + 300F\n                                                                                                                                                                                Calls a shadow spawn that trails Rose and creates a high hitbox 9 frames after performing an attack. Spawn deals 25% of Rose's damage\nIncreases potency of projectile Special Moves\nWhen a ground-based regular move or unique attack hits twice, the spawn's hit will have a launch effect\nWhile active, on a mid-air regular move or unique attack hit, the hit will have a launch effect",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -1230,7 +1230,7 @@ const rose = [
         stan: "",
         remarks: "1F - 31F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LP"
     },
     {
@@ -1244,7 +1244,7 @@ const rose = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -1258,7 +1258,7 @@ const rose = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -1272,7 +1272,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + LP"
     },
     {
@@ -1286,7 +1286,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + MP"
     },
     {
@@ -1300,7 +1300,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + HP"
     },
     {
@@ -1314,7 +1314,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + P P"
     },
     {
@@ -1328,7 +1328,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + LP"
     },
     {
@@ -1342,7 +1342,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + MP"
     },
     {
@@ -1356,7 +1356,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + HP"
     },
     {
@@ -1370,7 +1370,7 @@ const rose = [
         stan: "200",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + P P"
     },
     {
@@ -1384,7 +1384,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -1398,7 +1398,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -1412,7 +1412,7 @@ const rose = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -1426,7 +1426,7 @@ const rose = [
         stan: "150",
         remarks: "Angle of the projectile differs based on the 2 buttons pressed simultaneously",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -1440,7 +1440,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -1454,7 +1454,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -1468,7 +1468,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -1482,7 +1482,7 @@ const rose = [
         stan: "200",
         remarks: "Angle of the projectile differs based on the 2 buttons pressed simultaneously",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -1496,7 +1496,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + LP"
     },
     {
@@ -1510,7 +1510,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + MP"
     },
     {
@@ -1524,7 +1524,7 @@ const rose = [
         stan: "200",
         remarks: "Will not hit grounded opponents\n                                                11F - 19F  invincible to mid-air attacks\n                                1F - 10F head to torso invincible to airborne attacks",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + HP"
     },
     {
@@ -1538,7 +1538,7 @@ const rose = [
         stan: "160",
         remarks: "Will not hit grounded opponents\n                                                7F - 15F  invincible to mid-air attacks\n                                1F - 6F head to torso invincible to airborne attacks\nVS*Can only be canceled V-Skill I",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + P P"
     },
     {
@@ -1552,7 +1552,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + LK"
     },
     {
@@ -1566,7 +1566,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + MK"
     },
     {
@@ -1580,7 +1580,7 @@ const rose = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + HK"
     },
     {
@@ -1594,7 +1594,7 @@ const rose = [
         stan: "200",
         remarks: "1F - 13F  attack & projectile invincibility",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + K K"
     },
     {
@@ -1608,7 +1608,7 @@ const rose = [
         stan: "120",
         remarks: "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\n*When the projectile hits",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + P"
     },
     {
@@ -1622,7 +1622,7 @@ const rose = [
         stan: "150",
         remarks: "Projectile placement differs based on the 2 buttons pressed simultaneously",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + P P"
     },
     {
@@ -1636,7 +1636,7 @@ const rose = [
         stan: "150",
         remarks: "Projectile appears on frame 38\nProjectile placement differs based on button input\nWhen present, attack hitbox appears on contact with an opponent's projectile\n*When the projectile hits",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + P"
     },
     {
@@ -1650,7 +1650,7 @@ const rose = [
         stan: "200",
         remarks: "Projectile placement differs based on the 2 buttons pressed simultaneously",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + P P"
     },
     {
@@ -1664,7 +1664,7 @@ const rose = [
         stan: "0",
         remarks: "1F - 13F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + K"
     }
 ];

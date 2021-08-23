@@ -583,7 +583,7 @@ const ibuki = [
     persistence: "29(※19)",
     rigidity: "全体27",
     hit: "8",
-    guard: "2",
+    guard: "3",
     damage: "20(※1100※2160)",
     stan: "80",
     remarks:
@@ -598,7 +598,7 @@ const ibuki = [
     persistence: "29(※19)",
     rigidity: "全体27",
     hit: "8",
-    guard: "2",
+    guard: "3",
     damage: "20(※1100※2160)",
     stan: "80",
     remarks:
@@ -613,7 +613,7 @@ const ibuki = [
     persistence: "29(※19)",
     rigidity: "全体27",
     hit: "8",
-    guard: "2",
+    guard: "3",
     damage: "20(※1100※2160)",
     stan: "80",
     remarks:
@@ -628,7 +628,7 @@ const ibuki = [
     persistence: "29(※9)",
     rigidity: "全体27",
     hit: "8",
-    guard: "2",
+    guard: "3",
     damage: "20(※100)",
     stan: "80",
     remarks:

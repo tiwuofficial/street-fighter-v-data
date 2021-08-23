@@ -65,7 +65,7 @@ const ken = [
     damage: "60",
     stan: "100",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS1のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -80,7 +80,7 @@ const ken = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS1のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -118,7 +118,7 @@ const ken = [
     outbreak: "6",
     persistence: "5",
     rigidity: "22",
-    hit: "-4",
+    hit: "2",
     guard: "-9",
     damage: "90(*70)",
     stan: "150",
@@ -138,7 +138,7 @@ const ken = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS1のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -167,7 +167,7 @@ const ken = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS1のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -405,7 +405,7 @@ const ken = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -419,7 +419,7 @@ const ken = [
     guard: "3",
     damage: "90",
     stan: "120",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK (HOLD BUTTONS)"
@@ -433,7 +433,7 @@ const ken = [
     guard: "-2",
     damage: "80",
     stan: "120",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -447,7 +447,7 @@ const ken = [
     guard: "3",
     damage: "100",
     stan: "150",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK (HOLD BUTTONS)"
@@ -483,12 +483,41 @@ const ken = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Hadoken",
     outbreak: "14",
     persistence: "",
-    rigidity: "49 total frames",
-    hit: "-2",
-    guard: "-8",
+    rigidity: "47 total frames",
+    hit: "0",
+    guard: "-6",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -500,9 +529,9 @@ const ken = [
     name: "VHadoken",
     outbreak: "13",
     persistence: "",
-    rigidity: "48 total frames",
+    rigidity: "46 total frames",
     hit: "D",
-    guard: "-7",
+    guard: "-5",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -578,7 +607,7 @@ const ken = [
     damage: "140",
     stan: "150",
     remarks:
-      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack",
+      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack\nS*Last 7 frames of landing recovery cancelable by Special Moves after a successful hit",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + HP"
@@ -668,7 +697,7 @@ const ken = [
     damage: "50",
     stan: "100",
     remarks:
-      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack",
+      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack\nIf the first hit does not connect, damage for the 2nd hits increases to 50",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + LK"
@@ -683,7 +712,7 @@ const ken = [
     damage: "80",
     stan: "150",
     remarks:
-      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack\nIf the first hit does not connect, damage for the 2nd and 3rd hits increases from 40 + 40, to 75 + 75",
+      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack\nIf the first hit does not connect, the damage for the 2nd and 3rd hits changes 40 + 40, and the stun for the 2nd and 3rd hits changes 75 + 75",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + MK"
@@ -727,7 +756,7 @@ const ken = [
     damage: "100",
     stan: "150",
     remarks:
-      "Can cross-up\n                                                                                                                                                CA*Only possible during 1st attack\nIf the first hit does not connect, damage for the 2nd and 3rd hits increases from 50 + 50, to 75 + 75",
+      "Can cross-up\n                                                                                                                                                CA*Only possible during 1st attack\nIf the first hit does not connect, the damage for the 2nd and 3rd hits changes 50 + 50, and the stun for the 2nd and 3rd hits changes 75 + 75",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + MK"
@@ -966,7 +995,7 @@ const ken = [
     damage: "60",
     stan: "100",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS1のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -981,7 +1010,7 @@ const ken = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS1のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1019,7 +1048,7 @@ const ken = [
     outbreak: "6",
     persistence: "5",
     rigidity: "22",
-    hit: "-4",
+    hit: "2",
     guard: "-9",
     damage: "90(*70)",
     stan: "150",
@@ -1039,7 +1068,7 @@ const ken = [
     damage: "20",
     stan: "70",
     remarks:
-      "Can be rapid canceled\n                                                                                                                                VS*VS1のみキャンセル可能",
+      "Can be rapid canceled\n                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1068,7 +1097,7 @@ const ken = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS1のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill I",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1306,7 +1335,7 @@ const ken = [
     guard: "-2",
     damage: "60",
     stan: "100",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1320,7 +1349,7 @@ const ken = [
     guard: "3",
     damage: "90",
     stan: "120",
-    remarks: "必殺技キャンセル可能な技からキャンセル可能",
+    remarks: "Can only be canceled by attacks that can cancel into Special Moves.",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK (HOLD BUTTONS)"
@@ -1335,7 +1364,7 @@ const ken = [
     damage: "110",
     stan: "150",
     remarks:
-      "V-Gauge Timer + 3000F\n                                                                                                                                19F - 61F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                                                Gains an exclusive special move\nCan rapid-press P on hit\nヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
+      "V-Gauge Timer + 3000F\n                                                                                                                                19F - 61F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                12F - 33F  invincible to mid-air attacks\n                                Gains an exclusive special move\nCan rapid-press P on hit\nLanding recovery cancelable by Special Move/V-Skill after successful hit",
     vtrigger: 2,
     type: "vsystem",
     command: "HP HK"
@@ -1350,7 +1379,7 @@ const ken = [
     damage: "140",
     stan: "150",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                19F - 94F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                                                ヒット時に着地硬直を必殺技/Vスキルでキャンセル可",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                19F - 94F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                                                Landing recovery cancelable by Special Move/V-Skill after successful hit",
     vtrigger: 2,
     type: "vsystem",
     command: "HP HK ▶ P (REPEAT BUTTON)"
@@ -1365,7 +1394,7 @@ const ken = [
     damage: "180",
     stan: "200",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                19F - 111F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                                                Can cancel the landing recovery into a special move on hit",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                19F - 111F  projectile invincibility\n1F - 18F  projectile & throw invincibility\n                                                Landing recovery cancelable by Special Move/V-Skill after successful hit",
     vtrigger: 2,
     type: "vsystem",
     command: "HP HK ▶ P (REPEAT BUTTON)"
@@ -1386,12 +1415,41 @@ const ken = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Shadow Thunder-Kick",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "Hadoken",
     outbreak: "14",
     persistence: "",
-    rigidity: "49 total frames",
-    hit: "-2",
-    guard: "-8",
+    rigidity: "47 total frames",
+    hit: "0",
+    guard: "-6",
     damage: "60",
     stan: "100",
     remarks: "",
@@ -1453,7 +1511,7 @@ const ken = [
     damage: "140",
     stan: "150",
     remarks:
-      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack",
+      "3F - 6F  attack & projectile invincibility\n                                                Subject to counter hit during move duration\nCA*V*Only possible during 1st, 2nd attack\nS*Last 7 frames of landing recovery cancelable by Special Moves after a successful hit",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + HP"
@@ -1498,7 +1556,7 @@ const ken = [
     damage: "80",
     stan: "150",
     remarks:
-      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack\nIf the first hit does not connect, damage for the 2nd and 3rd hits increases from 40 + 40, to 75 + 75",
+      "Can cross-up\n                                                                                                                                                CA*V*Only possible during 1st attack\nIf the first hit does not connect, the damage for the 2nd and 3rd hits changes 40 + 40, and the stun for the 2nd and 3rd hits changes 75 + 75",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + MK"
@@ -1594,10 +1652,10 @@ const ken = [
     rigidity: "28+30 frame(s) after landing",
     hit: "D",
     guard: "-51",
-    damage: "140",
-    stan: "200",
+    damage: "110",
+    stan: "150",
     remarks:
-      "Uses 2000F V-Gauge Timer\n                                                                                                                                4F - 61F  projectile invincibility\n                                                Can be canceled into from V-Trigger-cancelable moves\nCan rapid-press P on hit\nCan cancel the landing recovery into a special move on hit",
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                4F - 61F  projectile invincibility\n                12F - 33F  invincible to mid-air attacks\n                                Can be canceled into from V-Trigger-cancelable moves\nCan rapid-press P on hit\nLanding recovery cancelable by Special Move/V-Skill after successful hit",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"
@@ -1609,10 +1667,25 @@ const ken = [
     rigidity: "54+40 frame(s) after landing",
     hit: "D",
     guard: "",
-    damage: "170",
+    damage: "140",
+    stan: "150",
+    remarks:
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                4F - 94F  projectile invincibility\n                                                Landing recovery cancelable by Special Move/V-Skill after successful hit",
+    vtrigger: 2,
+    type: "special",
+    command: "(DURING V-TRIGGER II) HP HK ▶ P (REPEAT BUTTON)"
+  },
+  {
+    name: "Shinryuken (Lv3)",
+    outbreak: "9",
+    persistence: "31",
+    rigidity: "71+40 frame(s) after landing",
+    hit: "D",
+    guard: "",
+    damage: "180",
     stan: "200",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                4F - 94F  projectile invincibility\n                                                Can cancel the landing recovery into a special move on hit",
+      "Uses 1000F V-Gauge Timer\n                                                                                                                                4F - 111F  projectile invincibility\n                                                Landing recovery cancelable by Special Move/V-Skill after successful hit",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK ▶ P (REPEAT BUTTON)"
@@ -1626,7 +1699,8 @@ const ken = [
     guard: "-26",
     damage: "340",
     stan: "0",
-    remarks: "1F - 6F  full invincibility",
+    remarks:
+      "1F - 6F  full invincibility\n                                                If the first hit does not connect, damage for the 2nd hits increases to 50",
     vtrigger: 2,
     type: "ca",
     command: "↓↘→ ↓↘→ + K"

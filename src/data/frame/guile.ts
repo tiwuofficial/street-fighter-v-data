@@ -584,6 +584,20 @@ const guile = [
     command: "→ + P"
   },
   {
+    name: "Vソニックブーム",
+    outbreak: "10",
+    persistence: "",
+    rigidity: "全体40",
+    hit: "7",
+    guard: "2",
+    damage: "60",
+    stan: "50",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + P"
+  },
+  {
     name: "Vソニックブレイク(初段)",
     outbreak: "10",
     persistence: "",
@@ -613,6 +627,20 @@ const guile = [
   },
   {
     name: "EX ソニックブーム",
+    outbreak: "10",
+    persistence: "",
+    rigidity: "全体36",
+    hit: "D",
+    guard: "4",
+    damage: "100",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "special",
+    command: "→ + P P"
+  },
+  {
+    name: "VEX ソニックブーム",
     outbreak: "10",
     persistence: "",
     rigidity: "全体36",

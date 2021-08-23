@@ -1539,14 +1539,15 @@ const rmika = [
   },
   {
     name: "スピニングチェアー！",
-    outbreak: "104",
+    outbreak: "104(※74)",
     persistence: "25",
-    rigidity: "全体46",
+    rigidity: "全体46(※16)",
     hit: "",
     guard: "",
     damage: "60",
     stan: "150",
-    remarks: "Vゲージタイマー全消費",
+    remarks:
+      "Vゲージタイマー全消費\n                                                                                                                                                                                ※キャンセル発動時",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K"
@@ -1555,12 +1556,13 @@ const rmika = [
     name: "反則上等！",
     outbreak: "相手接近後17",
     persistence: "28",
-    rigidity: "全体58",
+    rigidity: "全体58(※21)",
     hit: "",
     guard: "",
     damage: "100+60",
     stan: "100+100",
-    remarks: "Vゲージタイマー全消費",
+    remarks:
+      "Vゲージタイマー全消費\n                                                                                                                                                                                ※キャンセル発動時",
     vtrigger: 2,
     type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K (ボタンホールド)"

@@ -290,7 +290,7 @@ const kolin = [
         guard: "",
         damage: "30",
         stan: "70",
-        remarks: "",
+        remarks: "Enters special counterable state from the start of the move until landing",
         vtrigger: 1,
         type: "unique",
         command: "(DURING JUMP) ↓ + MK"
@@ -570,7 +570,7 @@ const kolin = [
         guard: "32",
         damage: "120",
         stan: "360",
-        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                                                                While active, Kolin gains the Diamond Dust special move\nOpponent takes ice damage on hit\nWhile under the ice effect, the opponent's stun gauge will not recover. Effect is released if Kolin is hit\nCan hit a knocked down opponent",
+        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                                                                While active, Kolin gains the Diamond Dust special move\nHolding forward after a Forward Dash performed immediately after this move will result in a dash\nOpponent takes ice damage on hit\nWhile under the ice effect, the opponent's stun gauge will not recover. Effect is released if Kolin is hit\nCan hit a knocked down opponent",
         vtrigger: 1,
         type: "vsystem",
         command: "HP HK"
@@ -588,6 +588,34 @@ const kolin = [
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING GUARD) → + LK"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Cold Snap",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "Frost Touch - Low",
@@ -738,7 +766,7 @@ const kolin = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "7F - 14F  attack & projectile invincibility\n                                                VS*VS2のみキャンセル可能",
+        remarks: "7F - 14F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill II",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LK"
@@ -780,7 +808,7 @@ const kolin = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "17F - 32F  projectile invincibility\n1F - 16F  attack & projectile invincibility\n                                                VS*VS2のみキャンセル可能",
+        remarks: "17F - 32F  projectile invincibility\n1F - 16F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill II",
         vtrigger: 1,
         type: "special",
         command: "↓↙← + LK MK"
@@ -892,7 +920,7 @@ const kolin = [
         guard: "-8",
         damage: "50+100",
         stan: "100+200",
-        remarks: "The startup motion and the projectile itself nullify projectiles\n初段が空中の相手にヒットした場合飛び道具部分のスタン値が50になる",
+        remarks: "The startup motion and the projectile itself nullify projectiles\nIf the first attack hits the enemy while airborne, the projectile's stun value becomes 50",
         vtrigger: 1,
         type: "special",
         command: "→↓↘ + P P"
@@ -906,7 +934,7 @@ const kolin = [
         guard: "26",
         damage: "120",
         stan: "360",
-        remarks: "Uses 2000F V-Gauge Timer\n                                                                                                                                                                                Opponent takes ice damage on hit\nWhile under the ice effect, the opponent's stun gauge will not recover. Effect is released if Kolin is hit\nPuts the opponent in a knocked down juggle state",
+        remarks: "Uses 2000F V-Gauge Timer\n                                                                                                                                                                                Holding forward after a Forward Dash performed immediately after this move will result in a dash\nOpponent takes ice damage on hit\nWhile under the ice effect, the opponent's stun gauge will not recover. Effect is released if Kolin is hit\nPuts the opponent in a knocked down juggle state",
         vtrigger: 1,
         type: "special",
         command: "HP HK"
@@ -1186,7 +1214,7 @@ const kolin = [
         guard: "2",
         damage: "40",
         stan: "70",
-        remarks: "",
+        remarks: "Uses 80 V-Timer gauge on hit (40 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1200,7 +1228,7 @@ const kolin = [
         guard: "2",
         damage: "70",
         stan: "100",
-        remarks: "",
+        remarks: "Uses 100 V-Timer gauge on hit (50 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1214,7 +1242,7 @@ const kolin = [
         guard: "-4",
         damage: "90",
         stan: "150",
-        remarks: "Triggers Crush Counter (+18F)",
+        remarks: "Triggers Crush Counter (+18F)\n                                                                                                                                                                Uses 150 V-Timer gauge on hit (75 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1228,7 +1256,7 @@ const kolin = [
         guard: "1",
         damage: "30",
         stan: "70",
-        remarks: "",
+        remarks: "Uses 80 V-Timer gauge on hit (40 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1242,7 +1270,7 @@ const kolin = [
         guard: "2",
         damage: "70",
         stan: "100",
-        remarks: "",
+        remarks: "Uses 100 V-Timer gauge on hit (50 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1256,7 +1284,7 @@ const kolin = [
         guard: "-3",
         damage: "90",
         stan: "150",
-        remarks: "",
+        remarks: "Uses 150 V-Timer gauge on hit (75 on block)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1270,7 +1298,7 @@ const kolin = [
         guard: "",
         damage: "50",
         stan: "70",
-        remarks: "",
+        remarks: "Uses 80 V-Timer gauge on hit (40 on block)",
         vtrigger: 2,
         type: "jump",
         command: ""
@@ -1284,7 +1312,7 @@ const kolin = [
         guard: "",
         damage: "80",
         stan: "100",
-        remarks: "",
+        remarks: "Uses 100 V-Timer gauge on hit (50 on block)",
         vtrigger: 2,
         type: "jump",
         command: ""
@@ -1298,7 +1326,7 @@ const kolin = [
         guard: "",
         damage: "100",
         stan: "150",
-        remarks: "",
+        remarks: "Uses 150 V-Timer gauge on hit (75 on block)",
         vtrigger: 2,
         type: "jump",
         command: ""
@@ -1340,7 +1368,7 @@ const kolin = [
         guard: "",
         damage: "30",
         stan: "70",
-        remarks: "",
+        remarks: "Enters special counterable state from the start of the move until landing",
         vtrigger: 2,
         type: "unique",
         command: "(DURING JUMP) ↓ + MK"
@@ -1536,7 +1564,7 @@ const kolin = [
         guard: "-6",
         damage: "50",
         stan: "60",
-        remarks: "S*Can only be canceled into Frost Edge",
+        remarks: "S*Can only be canceled into Frost Edge\nUses 50 V-Timer gauge on hit (25 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) LP ▶ MP"
@@ -1550,7 +1578,7 @@ const kolin = [
         guard: "-9",
         damage: "70",
         stan: "80",
-        remarks: "S*CA*Only on hit",
+        remarks: "S*CA*Only on hit\nUses 75 V-Timer gauge on hit (38 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) LP ▶ MP ▶ HP"
@@ -1564,7 +1592,7 @@ const kolin = [
         guard: "-9",
         damage: "60",
         stan: "70",
-        remarks: "S*Can only be canceled into Frost Edge",
+        remarks: "S*Can only be canceled into Frost Edge\nUses 75 V-Timer gauge on hit (38 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) MK ▶ HP"
@@ -1592,7 +1620,7 @@ const kolin = [
         guard: "-2",
         damage: "100",
         stan: "150",
-        remarks: "S*CA*Only on hit",
+        remarks: "S*CA*Only on hit\nUses 75 V-Timer gauge on hit (38 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) (DURING M Vanity Step) ↓ + LK ▶ ↓ + HP"
@@ -1606,7 +1634,7 @@ const kolin = [
         guard: "2",
         damage: "70",
         stan: "100",
-        remarks: "",
+        remarks: "Uses 100 V-Timer gauge on hit (50 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) (DURING M Vanity Step) ↓ + MP"
@@ -1620,7 +1648,7 @@ const kolin = [
         guard: "-8",
         damage: "100",
         stan: "150",
-        remarks: "S*CA*Only on hit",
+        remarks: "S*CA*Only on hit\nUses 75 V-Timer gauge on hit (38 on block)",
         vtrigger: 2,
         type: "unique",
         command: "(DURING V-TRIGGER II) (DURING M Vanity Step) ↓ + MP ▶ HP"
@@ -1718,7 +1746,7 @@ const kolin = [
         guard: "",
         damage: "0",
         stan: "0",
-        remarks: "V-Gauge Timer + 2800F\n                                                                                                                                                                                Continuing to hold forward turns the forward dash into a slide, and uses 700 of the V-Timer\nGains the special moves Frost Edge, Reverse Javelin while active\nStrengthens P regular moves, unique attacks, Hailstorm",
+        remarks: "V-Gauge Timer + 2500F\n                                                                                                                                                                                Continuing to hold forward turns the forward dash into a slide, and uses 600 of the V-Timer\nGains the special moves Frost Edge, Reverse Javelin while active\nStrengthens P regular moves, unique attacks, Hailstorm",
         vtrigger: 2,
         type: "vsystem",
         command: "HP HK"
@@ -1750,6 +1778,34 @@ const kolin = [
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Cold Snap",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "Frost Touch - Low",
@@ -1900,7 +1956,7 @@ const kolin = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "7F - 14F  attack & projectile invincibility\n                                                VS*VS2のみキャンセル可能",
+        remarks: "7F - 14F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill II",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LK"
@@ -1942,7 +1998,7 @@ const kolin = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "17F - 32F  projectile invincibility\n1F - 16F  attack & projectile invincibility\n                                                VS*VS2のみキャンセル可能",
+        remarks: "17F - 32F  projectile invincibility\n1F - 16F  attack & projectile invincibility\n                                                VS*Can only be canceled V-Skill II",
         vtrigger: 2,
         type: "special",
         command: "↓↙← + LK MK"
@@ -2054,7 +2110,7 @@ const kolin = [
         guard: "-8",
         damage: "50+100",
         stan: "100+200",
-        remarks: "The startup motion and the projectile itself nullify projectiles\n初段が空中の相手にヒットした場合飛び道具部分のスタン値が50になる",
+        remarks: "The startup motion and the projectile itself nullify projectiles\nIf the first attack hits the enemy while airborne, the projectile's stun value becomes 50",
         vtrigger: 2,
         type: "special",
         command: "→↓↘ + P P"
@@ -2110,7 +2166,7 @@ const kolin = [
         guard: "-8",
         damage: "50+120",
         stan: "100+200",
-        remarks: "The startup motion and the projectile itself nullify projectiles\n初段が空中の相手にヒットした場合飛び道具部分のスタン値が50になる",
+        remarks: "The startup motion and the projectile itself nullify projectiles\nIf the first attack hits the enemy while airborne, the projectile's stun value becomes 50",
         vtrigger: 2,
         type: "special",
         command: "(DURING V-TRIGGER II) →↓↘ + P P"

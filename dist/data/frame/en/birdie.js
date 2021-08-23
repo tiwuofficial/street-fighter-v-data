@@ -122,7 +122,7 @@ const birdie = [
         guard: "-9",
         damage: "80",
         stan: "120",
-        remarks: "",
+        remarks: "Triggers Crush Counter  (D)",
         vtrigger: 1,
         type: "normal",
         command: ""
@@ -444,7 +444,7 @@ const birdie = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "飛び道具相殺判定発生後は、前進/後退/しゃがみを行うことができる。\nチューイングタイム中に相手との位置が入れ替わっても振り向くことができない",
+        remarks: "Able to move forward/move backward/crouch after projectile trade hitbox appears\nUnable to change directions during Chewing Time even if characters' positions are reversed",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) OR ↓ + MP MK (HOLD BUTTONS)"
@@ -458,7 +458,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ LP"
@@ -472,7 +472,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ MP"
@@ -486,7 +486,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ HP"
@@ -500,7 +500,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + LP"
@@ -514,7 +514,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + MP"
@@ -528,7 +528,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + HP"
@@ -542,7 +542,7 @@ const birdie = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "風船ガムの攻撃判定/相殺判定/ダメージ/Vゲージ増加量を変化させる(2回まで)",
+        remarks: "Changes hitbox/trade box/damage/V-Gauge gain of Bubble Gum (Up to 2 times)",
         vtrigger: 1,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ OR ↓ + K"
@@ -574,6 +574,34 @@ const birdie = [
         vtrigger: 1,
         type: "vsystem",
         command: "(DURING GUARD) → + LP"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Bull Crush",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "L Bull Head",
@@ -759,14 +787,14 @@ const birdie = [
     },
     {
         name: "M Hanging Chain",
-        outbreak: "25(*21)",
+        outbreak: "20(*19)",
         persistence: "16",
         rigidity: "24",
         hit: "D",
         guard: "-23",
         damage: "150",
         stan: "200",
-        remarks: "Will not hit airborne opponents\n                                                                *When canceled into from S.MP",
+        remarks: "Will not hit airborne opponents\n                                                                *When canceled into from S.MP or C.MP\nVS*Can be canceled with V-Skill II after successful hit",
         vtrigger: 1,
         type: "special",
         command: "↓↘→ + MK"
@@ -1046,7 +1074,7 @@ const birdie = [
         guard: "-9",
         damage: "80",
         stan: "120",
-        remarks: "",
+        remarks: "Triggers Crush Counter  (D)",
         vtrigger: 2,
         type: "normal",
         command: ""
@@ -1368,7 +1396,7 @@ const birdie = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "飛び道具相殺判定発生後は、前進/後退/しゃがみを行うことができる。\nチューイングタイム中に相手との位置が入れ替わっても振り向くことができない",
+        remarks: "Able to move forward/move backward/crouch after projectile trade hitbox appears\nUnable to change directions during Chewing Time even if characters' positions are reversed",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) OR ↓ + MP MK (HOLD BUTTONS)"
@@ -1382,7 +1410,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ LP"
@@ -1396,7 +1424,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ MP"
@@ -1410,7 +1438,7 @@ const birdie = [
         guard: "9",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ HP"
@@ -1424,7 +1452,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + LP"
@@ -1438,7 +1466,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + MP"
@@ -1452,7 +1480,7 @@ const birdie = [
         guard: "4",
         damage: "40(*150)(*260)",
         stan: "50",
-        remarks: "*1メイキングバブル１回時\n*2メイキングバブル２回時\nVゲージ増加量もメイキングバブル回数に応じて変化\n(１回:100/2回:120)",
+        remarks: "*1Blow Bubble: First time\n*2Blow Bubble: Second time\nAmount of V-Gauge gained differs based Blow Bubble use count\n(First time: 100, Second time: 120)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ ↓ + HP"
@@ -1466,7 +1494,7 @@ const birdie = [
         guard: "",
         damage: "",
         stan: "",
-        remarks: "風船ガムの攻撃判定/相殺判定/ダメージ/Vゲージ増加量を変化させる(2回まで)",
+        remarks: "Changes hitbox/trade box/damage/V-Gauge gain of Bubble Gum (Up to 2 times)",
         vtrigger: 2,
         type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK (AFTER HOLDING THE BUTTON) ▶ OR ↓ + K"
@@ -1498,6 +1526,34 @@ const birdie = [
         vtrigger: 2,
         type: "vsystem",
         command: "(DURING GUARD) → + LP"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK"
+    },
+    {
+        name: "Bull Crush",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
         name: "L Bull Head",
@@ -1599,14 +1655,14 @@ const birdie = [
     },
     {
         name: "M Hanging Chain",
-        outbreak: "25(*21)",
+        outbreak: "20(*19)",
         persistence: "16",
         rigidity: "24",
         hit: "D",
         guard: "-23",
         damage: "150",
         stan: "200",
-        remarks: "Will not hit airborne opponents\n                                                                *When canceled into from S.MP",
+        remarks: "Will not hit airborne opponents\n                                                                *When canceled into from S.MP or C.MP\nVS*Can be canceled with V-Skill II after successful hit",
         vtrigger: 2,
         type: "special",
         command: "↓↘→ + MK"

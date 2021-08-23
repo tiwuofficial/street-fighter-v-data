@@ -394,7 +394,7 @@ const abigail = [
     rigidity: "30",
     hit: "D",
     guard: "-14",
-    damage: "90",
+    damage: "100",
     stan: "150",
     remarks: "",
     vtrigger: 1,
@@ -418,8 +418,8 @@ const abigail = [
   {
     name: "Bang Bang",
     outbreak: "4",
-    persistence: "3",
-    rigidity: "9",
+    persistence: "2",
+    rigidity: "10",
     hit: "4",
     guard: "3",
     damage: "30",
@@ -621,13 +621,13 @@ const abigail = [
     name: "[VS2] C'mon Spare Tire",
     outbreak: "29",
     persistence: "",
-    rigidity: "76 total frames",
+    rigidity: "71 total frames",
     hit: "",
     guard: "",
     damage: "70(*100)",
     stan: "100(*150)",
     remarks:
-      "タイアに攻撃をヒットさせると軌道が変化する\n(5回攻撃をヒットさせるとタイアが消失)\n*タイアに以下の攻撃をヒットさせた際の数値 Vゲージ増加も0/100に変化\n立ち強P/立ち強K/しゃがみ強K/ジャンプ強K/アビシザー/中・EXアビゲイルパンチ/ダイナマイトパンチ/アビゲイラー",
+      "All normal and unique attacks can be canceled on hit only.\nTire's trajectory changes on hit\n(Tire will be destroyed after 5 hits)\n*Value when hitting the tire with the moves below; V Gauge gain also becomes 0/100\nStanding heavy punch/Standing heavy kick/Crouching heavy kick/Jumping heavy kick/Abi Scissor/M/EX Abigail Punch/Dynamite Punch/Abigail Special",
     vtrigger: 1,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -663,6 +663,35 @@ const abigail = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Abigail Junker",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Abigail Punch",
     outbreak: "14",
     persistence: "2",
@@ -671,7 +700,7 @@ const abigail = [
     guard: "-12",
     damage: "100",
     stan: "120",
-    remarks: "CA*Only possible on the first and last hit",
+    remarks: "CA*Only possible on the first and last hit\nV*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LP"
@@ -685,7 +714,7 @@ const abigail = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "Can only be performed from L Abigail Punch\nCA*Only possible for the final part",
+    remarks: "Can only be performed from L Abigail Punch\nCA*V*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + LP (REPEAT BUTTON)"
@@ -699,7 +728,7 @@ const abigail = [
     guard: "-19",
     damage: "110",
     stan: "120",
-    remarks: "CA*Only possible on the first and last hit",
+    remarks: "CA*Only possible on the first and last hit\nV*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP"
@@ -713,7 +742,7 @@ const abigail = [
     guard: "",
     damage: "130",
     stan: "150",
-    remarks: "Can only be performed from M Abigail Punch\nCA*Only possible for the final part",
+    remarks: "Can only be performed from M Abigail Punch\nCA*V*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + MP (REPEAT BUTTON)"
@@ -727,7 +756,7 @@ const abigail = [
     guard: "-16",
     damage: "120",
     stan: "120",
-    remarks: "CA*Only possible on the first and last hit",
+    remarks: "CA*Only possible on the first and last hit\nV*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HP"
@@ -741,7 +770,7 @@ const abigail = [
     guard: "",
     damage: "140",
     stan: "150",
-    remarks: "Can only be performed from H Abigail Punch\nCA*Only possible for the final part",
+    remarks: "Can only be performed from H Abigail Punch\nCA*V*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + HP (REPEAT BUTTON)"
@@ -755,7 +784,8 @@ const abigail = [
     guard: "-23",
     damage: "140",
     stan: "150",
-    remarks: "Armor from 3F to 13F (1 hit)\nVS*VS2のみキャンセル可能",
+    remarks:
+      "Armor from 3F to 13F (1 hit)\nVS*Can be canceled with V Skill II only after final hit\nV*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P P"
@@ -769,7 +799,8 @@ const abigail = [
     guard: "",
     damage: "160",
     stan: "200",
-    remarks: "Can only be performed from EX Abigail Punch on hit\nVS*VS2のみキャンセル可能",
+    remarks:
+      "Can only be performed from EX Abigail Punch on hit\nVS*Can be canceled with V Skill II only after final hit\nV*Only possible for the final part",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P P (REPEAT BUTTON)"
@@ -838,7 +869,7 @@ const abigail = [
     rigidity: "26",
     hit: "D",
     guard: "-8",
-    damage: "70",
+    damage: "90",
     stan: "100",
     remarks: "Can hit a knocked down opponent",
     vtrigger: 1,
@@ -894,8 +925,8 @@ const abigail = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "100",
+    damage: "100",
+    stan: "120",
     remarks: "",
     vtrigger: 1,
     type: "special",
@@ -1047,12 +1078,12 @@ const abigail = [
     name: "EX Dynamite Punch",
     outbreak: "15",
     persistence: "3",
-    rigidity: "29",
+    rigidity: "29(*49)",
     hit: "(crumple)",
-    guard: "-9",
+    guard: "-29",
     damage: "100",
-    stan: "200",
-    remarks: "Armor from 1F to 14F (1 hit)",
+    stan: "150",
+    remarks: "Armor from 1F to 14F (1 hit)\n*on block/whiff",
     vtrigger: 1,
     type: "special",
     command: "LK ▶ P"
@@ -1450,7 +1481,7 @@ const abigail = [
     rigidity: "30",
     hit: "D",
     guard: "-14",
-    damage: "90",
+    damage: "100",
     stan: "150",
     remarks: "",
     vtrigger: 2,
@@ -1474,8 +1505,8 @@ const abigail = [
   {
     name: "Bang Bang",
     outbreak: "4",
-    persistence: "3",
-    rigidity: "9",
+    persistence: "2",
+    rigidity: "10",
     hit: "4",
     guard: "3",
     damage: "30",
@@ -1573,13 +1604,13 @@ const abigail = [
     name: "[VS2] C'mon Spare Tire",
     outbreak: "29",
     persistence: "",
-    rigidity: "76 total frames",
+    rigidity: "71 total frames",
     hit: "",
     guard: "",
     damage: "70(*100)",
     stan: "100(*150)",
     remarks:
-      "タイアに攻撃をヒットさせると軌道が変化する\n(5回攻撃をヒットさせるとタイアが消失)\n*タイアに以下の攻撃をヒットさせた際の数値 Vゲージ増加も0/100に変化\n立ち強P/立ち強K/しゃがみ強K/ジャンプ強K/アビシザー/中・EXアビゲイルパンチ/ダイナマイトパンチ/アビゲイラー",
+      "All normal and unique attacks can be canceled on hit only.\nTire's trajectory changes on hit\n(Tire will be destroyed after 5 hits)\n*Value when hitting the tire with the moves below; V Gauge gain also becomes 0/100\nStanding heavy punch/Standing heavy kick/Crouching heavy kick/Jumping heavy kick/Abi Scissor/M/EX Abigail Punch/Dynamite Punch/Abigail Special",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL II) MP MK"
@@ -1613,6 +1644,35 @@ const abigail = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Abigail Junker",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Abigail Punch",
@@ -1708,7 +1768,7 @@ const abigail = [
     damage: "140",
     stan: "150",
     remarks:
-      "Armor from 3F to 13F (1 hit)\nVS*VS2のみキャンセル可能\nV*Only possible for the final part",
+      "Armor from 3F to 13F (1 hit)\nVS*Can only be canceled V-Skill II\nV*Only possible for the final part",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P"
@@ -1723,7 +1783,7 @@ const abigail = [
     damage: "160",
     stan: "200",
     remarks:
-      "V*Only possible for the final part\nVS*VS2のみキャンセル可能\nCan only be performed from EX Abigail Punch on hit",
+      "V*Only possible for the final part\nVS*Can only be canceled V-Skill II\nCan only be performed from EX Abigail Punch on hit",
     vtrigger: 2,
     type: "special",
     command: "↓↘→ + P P (REPEAT BUTTON)"
@@ -1792,7 +1852,7 @@ const abigail = [
     rigidity: "26",
     hit: "D",
     guard: "-8",
-    damage: "70",
+    damage: "90",
     stan: "100",
     remarks: "Can hit a knocked down opponent",
     vtrigger: 2,
@@ -1848,8 +1908,8 @@ const abigail = [
     rigidity: "60",
     hit: "D",
     guard: "",
-    damage: "80",
-    stan: "100",
+    damage: "100",
+    stan: "120",
     remarks: "",
     vtrigger: 2,
     type: "special",
@@ -2001,12 +2061,12 @@ const abigail = [
     name: "EX Dynamite Punch",
     outbreak: "15",
     persistence: "3",
-    rigidity: "29",
+    rigidity: "29(*49)",
     hit: "(crumple)",
-    guard: "-9",
+    guard: "-29",
     damage: "100",
-    stan: "200",
-    remarks: "Armor from 1F to 14F (1 hit)",
+    stan: "150",
+    remarks: "Armor from 1F to 14F (1 hit)\n*on block/whiff",
     vtrigger: 2,
     type: "special",
     command: "LK ▶ P"
@@ -2079,7 +2139,7 @@ const abigail = [
     damage: "150",
     stan: "200",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Release the button by 27F to perform\nGains armor from 2F through the duration of the hold (99 hits)\nNote: For fastest release, from 2F - 10F\nCan be canceled from special moves that are V-Trigger cancellable",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                (V-Timer decreases by 2,500 frames when EX Dynamite Punch is canceled)\nRelease the button by 27F to perform\nGains armor from 2F through the duration of the hold (99 hits)\nNote: For fastest release, from 2F - 10F\nCan be canceled from special moves that are V-Trigger cancellable",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK"
@@ -2094,7 +2154,7 @@ const abigail = [
     damage: "170",
     stan: "250",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Release the button between 28F - 52F to perform\nGains armor from 2F through the duration of the hold (99 hits)\nNote: For fastest release, from 2F - 29F\nCan be canceled from special moves that are V-Trigger cancellable",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                (V-Timer decreases by 2,500 frames when EX Dynamite Punch is canceled)\nRelease the button between 28F - 52F to perform\nGains armor from 2F through the duration of the hold (99 hits)\nNote: For fastest release, from 2F - 29F\nCan be canceled from special moves that are V-Trigger cancellable",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK (HOLD BUTTONS)"
@@ -2109,7 +2169,7 @@ const abigail = [
     damage: "250",
     stan: "300",
     remarks:
-      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Gains armor from 2F - 54F (99 hits)\nGains armor from 55F - 82F (2 hits)\nCan be canceled from special moves that are V-Trigger cancellable\nDuring guard break +20F",
+      "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                (V-Timer decreases by 2,500 frames when EX Dynamite Punch is canceled)\nGains armor from 2F - 54F (99 hits)\nGains armor from 55F - 82F (2 hits)\nCan be canceled from special moves that are V-Trigger cancellable\nDuring guard break +20F",
     vtrigger: 2,
     type: "special",
     command: "(DURING V-TRIGGER II) HP HK (HOLD BUTTONS)"
@@ -2130,4 +2190,5 @@ const abigail = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { abigail };

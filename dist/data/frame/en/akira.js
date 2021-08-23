@@ -12,8 +12,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -26,8 +26,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -35,13 +35,13 @@ const akira = [
         persistence: "3",
         rigidity: "21(*24)",
         hit: "1",
-        guard: "6",
+        guard: "-6",
         damage: "80",
         stan: "150",
         remarks: "*On whiff",
         vtrigger: 1,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -54,8 +54,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
@@ -68,8 +68,8 @@ const akira = [
         stan: "100",
         remarks: "Forces stand",
         vtrigger: 1,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -82,8 +82,8 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 1,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -96,8 +96,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -110,8 +110,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -124,8 +124,8 @@ const akira = [
         stan: "150",
         remarks: "Forces stand",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -138,8 +138,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -152,8 +152,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -166,8 +166,8 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 1,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -180,8 +180,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -194,8 +194,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -208,8 +208,8 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -222,8 +222,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -236,8 +236,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -250,8 +250,8 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping LP",
@@ -264,8 +264,8 @@ const akira = [
         stan: "50",
         remarks: "Can chain with a light attack once",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping MP",
@@ -278,8 +278,8 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping HP",
@@ -292,8 +292,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping LK",
@@ -306,8 +306,8 @@ const akira = [
         stan: "60",
         remarks: "Can chain with a light attack once",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping MK",
@@ -320,8 +320,8 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping HK",
@@ -334,8 +334,8 @@ const akira = [
         stan: "100",
         remarks: "S*Can only be canceled into EX Airborne Kiko Kai",
         vtrigger: 1,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Kaihosho",
@@ -348,7 +348,7 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (crumple)",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + HP"
     },
     {
@@ -362,7 +362,7 @@ const akira = [
         stan: "100",
         remarks: "18F - 28F  throw invincibility",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -376,7 +376,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "→ + MK ▶ HK"
     },
     {
@@ -390,7 +390,7 @@ const akira = [
         stan: "100",
         remarks: "The hit effect changes when this hits high in the air\n(The ground impact has a special bound property, deals a fixed 10 damage that is unaltered by combo scaling, and cannot KO)",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) (DURING JUMP AFTER Tsutenda HITS) → + HK"
     },
     {
@@ -404,7 +404,7 @@ const akira = [
         stan: "100",
         remarks: "S*CA*on hit",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "LP ▶ MP"
     },
     {
@@ -418,7 +418,7 @@ const akira = [
         stan: "120",
         remarks: "Can be canceled into a special vertical or forward jump (Short Air Burst) on hit\nAdds one additional move's worth of combo scaling",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) LP ▶ MP ▶ MP MK"
     },
     {
@@ -432,7 +432,7 @@ const akira = [
         stan: "60",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "HP ▶ → + HP"
     },
     {
@@ -446,7 +446,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "HP ▶ → + HP ▶ → + HP"
     },
     {
@@ -460,7 +460,7 @@ const akira = [
         stan: "",
         remarks: "Powered-up state active from frame 49. The powered-up state strengthens Kiko Kai while active",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) HP ▶ → + HP ▶ → + HP ▶ MP MK"
     },
     {
@@ -474,7 +474,7 @@ const akira = [
         stan: "120",
         remarks: "Can be canceled into a special vertical or forward jump (Short Air Burst) on hit\nAdds one additional move's worth of combo scaling",
         vtrigger: 1,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) HP ▶ → + HP ▶ MP MK"
     },
     {
@@ -488,7 +488,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) → OR + LP LK"
     },
     {
@@ -502,7 +502,7 @@ const akira = [
         stan: "200",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) ← + LP LK"
     },
     {
@@ -516,7 +516,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "throw",
         command: "(CLOSE TO OPPONENT IN AIR) LP LK"
     },
     {
@@ -530,7 +530,7 @@ const akira = [
         stan: "",
         remarks: "Powered-up state active from frame 49. The powered-up state strengthens Kiko Kai while active",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -544,7 +544,7 @@ const akira = [
         stan: "150",
         remarks: "Can be canceled into a special jump (Air Burst) by inputting up on hit",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -558,7 +558,7 @@ const akira = [
         stan: "",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -572,7 +572,7 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -586,7 +586,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LP"
     },
     {
@@ -600,7 +600,7 @@ const akira = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -614,7 +614,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -628,7 +628,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + LP"
     },
     {
@@ -642,7 +642,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + MP"
     },
     {
@@ -656,7 +656,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + HP"
     },
     {
@@ -670,7 +670,7 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↘→ + P P"
     },
     {
@@ -684,7 +684,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + LP"
     },
     {
@@ -698,7 +698,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + MP"
     },
     {
@@ -712,7 +712,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + HP"
     },
     {
@@ -726,7 +726,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + P P"
     },
     {
@@ -740,7 +740,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -754,7 +754,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -768,7 +768,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -782,7 +782,7 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -796,7 +796,7 @@ const akira = [
         stan: "110",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -810,7 +810,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -824,7 +824,7 @@ const akira = [
         stan: "130",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -838,7 +838,7 @@ const akira = [
         stan: "150",
         remarks: "*on hit",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -852,7 +852,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + LP"
     },
     {
@@ -866,7 +866,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + MP"
     },
     {
@@ -880,7 +880,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + HP"
     },
     {
@@ -894,7 +894,7 @@ const akira = [
         stan: "160",
         remarks: "Guaranteed to deal at least 30% of its damage",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + P P"
     },
     {
@@ -908,7 +908,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LP"
     },
     {
@@ -922,7 +922,7 @@ const akira = [
         stan: "100",
         remarks: "If opponent is close on frame 11, attack will trigger after 4 more frames",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MP"
     },
     {
@@ -936,7 +936,7 @@ const akira = [
         stan: "150",
         remarks: "If opponent is close on frame 17, attack will trigger after 1 more frame",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HP"
     },
     {
@@ -950,7 +950,7 @@ const akira = [
         stan: "200",
         remarks: "If opponent is close on frame 9, attack will trigger after 1 more frame\nSecond attack only triggers when the first one hits or is blocked",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + P P"
     },
     {
@@ -964,7 +964,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 7F  throw invincibility\n                1F - 8F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + LK"
     },
     {
@@ -978,7 +978,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 10F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + MK"
     },
     {
@@ -992,7 +992,7 @@ const akira = [
         stan: "150",
         remarks: "4F - 16F  projectile invincibility\n                1F - 16F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + HK"
     },
     {
@@ -1006,7 +1006,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 8F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "→↓↘ + K K"
     },
     {
@@ -1020,7 +1020,7 @@ const akira = [
         stan: "100",
         remarks: "Akira's whole body, except for her feet, is invulnerable to projectiles from frames 12 to 34",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LK"
     },
     {
@@ -1034,7 +1034,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MK"
     },
     {
@@ -1048,7 +1048,7 @@ const akira = [
         stan: "100",
         remarks: "Will not hit crouching opponents\n                                                                                                Akira's head is invulnerable to mid-air attacks from frames 1 to 15\n*On whiff",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HK"
     },
     {
@@ -1062,7 +1062,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ LK"
     },
     {
@@ -1076,7 +1076,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ MK"
     },
     {
@@ -1090,7 +1090,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ HK"
     },
     {
@@ -1104,7 +1104,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ LK"
     },
     {
@@ -1118,7 +1118,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ MK"
     },
     {
@@ -1132,7 +1132,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ HK"
     },
     {
@@ -1146,7 +1146,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ LK"
     },
     {
@@ -1160,7 +1160,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ MK"
     },
     {
@@ -1174,7 +1174,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ HK"
     },
     {
@@ -1188,7 +1188,7 @@ const akira = [
         stan: "150",
         remarks: "First hit only forces stand\n                                                                                                                Third hit will not hit crouching opponents\n*1Value when canceled into from crouching LP\n*2When the third attack whiffs",
         vtrigger: 1,
-        type: "",
+        type: "special",
         command: "↓↙← + K K"
     },
     {
@@ -1202,7 +1202,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 8F  full invincibility",
         vtrigger: 1,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + P"
     },
     {
@@ -1216,8 +1216,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MP",
@@ -1230,8 +1230,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HP",
@@ -1239,13 +1239,13 @@ const akira = [
         persistence: "3",
         rigidity: "21(*24)",
         hit: "1",
-        guard: "6",
+        guard: "-6",
         damage: "80",
         stan: "150",
         remarks: "*On whiff",
         vtrigger: 2,
-        type: "",
-        command: "HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing LK",
@@ -1258,8 +1258,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing MK",
@@ -1272,8 +1272,8 @@ const akira = [
         stan: "100",
         remarks: "Forces stand",
         vtrigger: 2,
-        type: "",
-        command: "MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Standing HK",
@@ -1286,8 +1286,8 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 2,
-        type: "",
-        command: "HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LP",
@@ -1300,8 +1300,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MP",
@@ -1314,8 +1314,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HP",
@@ -1328,8 +1328,8 @@ const akira = [
         stan: "150",
         remarks: "Forces stand",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HP"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching LK",
@@ -1342,8 +1342,8 @@ const akira = [
         stan: "70",
         remarks: "Can be rapid canceled",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) LK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching MK",
@@ -1356,8 +1356,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) MK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Crouching HK",
@@ -1370,8 +1370,8 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (D)",
         vtrigger: 2,
-        type: "",
-        command: "(WHILE CROUCHING) HK"
+        type: "normal",
+        command: ""
     },
     {
         name: "Jumping LP",
@@ -1384,8 +1384,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MP",
@@ -1398,8 +1398,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HP",
@@ -1412,8 +1412,8 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping LK",
@@ -1426,8 +1426,8 @@ const akira = [
         stan: "70",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping MK",
@@ -1440,8 +1440,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Jumping HK",
@@ -1454,8 +1454,8 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping LP",
@@ -1468,8 +1468,8 @@ const akira = [
         stan: "50",
         remarks: "Can chain with a light attack once",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) LP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping MP",
@@ -1482,8 +1482,8 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) MP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping HP",
@@ -1496,8 +1496,8 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) HP"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping LK",
@@ -1510,8 +1510,8 @@ const akira = [
         stan: "60",
         remarks: "Can chain with a light attack once",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) LK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping MK",
@@ -1524,8 +1524,8 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) MK"
+        type: "jump",
+        command: ""
     },
     {
         name: "VS2 Jumping HK",
@@ -1538,8 +1538,8 @@ const akira = [
         stan: "100",
         remarks: "S*Can only be canceled into EX Airborne Kiko Kai",
         vtrigger: 2,
-        type: "",
-        command: "(DURING V-SKILL II) (DURING JUMP) HK"
+        type: "jump",
+        command: ""
     },
     {
         name: "Kaihosho",
@@ -1552,7 +1552,7 @@ const akira = [
         stan: "150",
         remarks: "Triggers Crush Counter (crumple)",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + HP"
     },
     {
@@ -1566,7 +1566,7 @@ const akira = [
         stan: "100",
         remarks: "18F - 28F  throw invincibility",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + MK"
     },
     {
@@ -1580,7 +1580,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "→ + MK ▶ HK"
     },
     {
@@ -1594,7 +1594,7 @@ const akira = [
         stan: "100",
         remarks: "The hit effect changes when this hits high in the air\n(The ground impact has a special bound property, deals a fixed 10 damage that is unaltered by combo scaling, and cannot KO)",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) (DURING JUMP AFTER Tsutenda HITS) → + HK"
     },
     {
@@ -1608,7 +1608,7 @@ const akira = [
         stan: "100",
         remarks: "S*CA*on hit",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "LP ▶ MP"
     },
     {
@@ -1622,7 +1622,7 @@ const akira = [
         stan: "120",
         remarks: "Can be canceled into a special vertical or forward jump (Short Air Burst) on hit\nAdds one additional move's worth of combo scaling",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) LP ▶ MP ▶ MP MK"
     },
     {
@@ -1636,7 +1636,7 @@ const akira = [
         stan: "60",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "HP ▶ → + HP"
     },
     {
@@ -1650,7 +1650,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "HP ▶ → + HP ▶ → + HP"
     },
     {
@@ -1664,7 +1664,7 @@ const akira = [
         stan: "",
         remarks: "Powered-up state active from frame 49. The powered-up state strengthens Kiko Kai while active",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL I) HP ▶ → + HP ▶ → + HP ▶ MP MK"
     },
     {
@@ -1678,7 +1678,7 @@ const akira = [
         stan: "120",
         remarks: "Can be canceled into a special vertical or forward jump (Short Air Burst) on hit\nAdds one additional move's worth of combo scaling",
         vtrigger: 2,
-        type: "",
+        type: "unique",
         command: "(WHEN SELECTING VSKILL II) HP ▶ → + HP ▶ MP MK"
     },
     {
@@ -1692,7 +1692,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) → OR + LP LK"
     },
     {
@@ -1706,7 +1706,7 @@ const akira = [
         stan: "200",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(NEAR OPPONENT) ← + LP LK"
     },
     {
@@ -1720,7 +1720,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "throw",
         command: "(CLOSE TO OPPONENT IN AIR) LP LK"
     },
     {
@@ -1734,7 +1734,7 @@ const akira = [
         stan: "",
         remarks: "Powered-up state active from frame 49. The powered-up state strengthens Kiko Kai while active",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL I) MP MK"
     },
     {
@@ -1748,7 +1748,7 @@ const akira = [
         stan: "150",
         remarks: "Can be canceled into a special jump (Air Burst) by inputting up on hit",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(WHEN SELECTING VSKILL II) MP MK"
     },
     {
@@ -1762,7 +1762,7 @@ const akira = [
         stan: "",
         remarks: "V-Gauge Timer + 3000F\n                                                                                                                                                                                Gains an exclusive special move\nCan transition into any of the follow-up moves from frame 53",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP HK"
     },
     {
@@ -1776,7 +1776,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 30F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "(DURING GUARD) → + LP"
     },
     {
@@ -1790,7 +1790,7 @@ const akira = [
         stan: "",
         remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK"
     },
     {
@@ -1804,7 +1804,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 10F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "vsystem",
         command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
     },
     {
@@ -1818,7 +1818,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + LP"
     },
     {
@@ -1832,7 +1832,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + MP"
     },
     {
@@ -1846,7 +1846,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + HP"
     },
     {
@@ -1860,7 +1860,7 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↘→ + P P"
     },
     {
@@ -1874,7 +1874,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + LP"
     },
     {
@@ -1888,7 +1888,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + MP"
     },
     {
@@ -1902,7 +1902,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + HP"
     },
     {
@@ -1916,7 +1916,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) ↓↘→ + P P"
     },
     {
@@ -1930,7 +1930,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -1944,7 +1944,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -1958,7 +1958,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -1972,7 +1972,7 @@ const akira = [
         stan: "150",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -1986,7 +1986,7 @@ const akira = [
         stan: "110",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + LP"
     },
     {
@@ -2000,7 +2000,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + MP"
     },
     {
@@ -2014,7 +2014,7 @@ const akira = [
         stan: "130",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + HP"
     },
     {
@@ -2028,7 +2028,7 @@ const akira = [
         stan: "150",
         remarks: "*on hit",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-SKILL I) (DURING VERTICAL OR FORWARD JUMP) ↓↘→ + P P"
     },
     {
@@ -2042,7 +2042,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + LP"
     },
     {
@@ -2056,7 +2056,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + MP"
     },
     {
@@ -2070,7 +2070,7 @@ const akira = [
         stan: "120",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + HP"
     },
     {
@@ -2084,7 +2084,7 @@ const akira = [
         stan: "160",
         remarks: "Guaranteed to deal at least 30% of its damage",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(WHEN SELECTING VSKILL II) (DURING Air Burst / Short Air Burst) ↓↘→ + P P"
     },
     {
@@ -2098,7 +2098,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LP"
     },
     {
@@ -2112,7 +2112,7 @@ const akira = [
         stan: "100",
         remarks: "If opponent is close on frame 11, attack will trigger after 4 more frames",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MP"
     },
     {
@@ -2126,7 +2126,7 @@ const akira = [
         stan: "150",
         remarks: "If opponent is close on frame 17, attack will trigger after 1 more frame",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HP"
     },
     {
@@ -2140,7 +2140,7 @@ const akira = [
         stan: "200",
         remarks: "If opponent is close on frame 9, attack will trigger after 1 more frame\nSecond attack only triggers when the first one hits or is blocked",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + P P"
     },
     {
@@ -2154,7 +2154,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 7F  throw invincibility\n                1F - 8F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + LK"
     },
     {
@@ -2168,7 +2168,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 10F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + MK"
     },
     {
@@ -2182,7 +2182,7 @@ const akira = [
         stan: "150",
         remarks: "4F - 16F  projectile invincibility\n                1F - 16F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\n*on hit",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + HK"
     },
     {
@@ -2196,7 +2196,7 @@ const akira = [
         stan: "150",
         remarks: "1F - 8F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "→↓↘ + K K"
     },
     {
@@ -2210,7 +2210,7 @@ const akira = [
         stan: "100",
         remarks: "Akira's whole body, except for her feet, is invulnerable to projectiles from frames 12 to 34",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LK"
     },
     {
@@ -2224,7 +2224,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MK"
     },
     {
@@ -2238,7 +2238,7 @@ const akira = [
         stan: "100",
         remarks: "Will not hit crouching opponents\n                                                                                                Akira's head is invulnerable to mid-air attacks from frames 1 to 15\n*On whiff",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HK"
     },
     {
@@ -2252,7 +2252,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ LK"
     },
     {
@@ -2266,7 +2266,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ MK"
     },
     {
@@ -2280,7 +2280,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + LK ▶ HK"
     },
     {
@@ -2294,7 +2294,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ LK"
     },
     {
@@ -2308,7 +2308,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ MK"
     },
     {
@@ -2322,7 +2322,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + MK ▶ HK"
     },
     {
@@ -2336,7 +2336,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ LK"
     },
     {
@@ -2350,7 +2350,7 @@ const akira = [
         stan: "80",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ MK"
     },
     {
@@ -2364,7 +2364,7 @@ const akira = [
         stan: "80",
         remarks: "Will not hit crouching opponents\n                                                                                                *On whiff",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + HK ▶ HK"
     },
     {
@@ -2378,7 +2378,7 @@ const akira = [
         stan: "150",
         remarks: "First hit only forces stand\n                                                                                                                Third hit will not hit crouching opponents\n*1Value when canceled into from crouching LP\n*2When the third attack whiffs",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "↓↙← + K K"
     },
     {
@@ -2392,7 +2392,7 @@ const akira = [
         stan: "",
         remarks: "Uses 1500F V-Gauge Timer\n                                                                                                                                                                                Can transition into any of the follow-up moves from frame 10",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING V-TRIGGER II) HP HK"
     },
     {
@@ -2406,7 +2406,7 @@ const akira = [
         stan: "60",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) P"
     },
     {
@@ -2420,7 +2420,7 @@ const akira = [
         stan: "50",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) P ▶ P"
     },
     {
@@ -2434,7 +2434,7 @@ const akira = [
         stan: "90",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) P ▶ P ▶ P"
     },
     {
@@ -2448,7 +2448,7 @@ const akira = [
         stan: "90",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) K"
     },
     {
@@ -2462,7 +2462,7 @@ const akira = [
         stan: "60",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) K ▶ P"
     },
     {
@@ -2476,7 +2476,7 @@ const akira = [
         stan: "100",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) K ▶ P ▶ K"
     },
     {
@@ -2490,7 +2490,7 @@ const akira = [
         stan: "200",
         remarks: "3F - 16F  projectile invincibility\n                                                Guaranteed to deal at least 30% of its damage",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) ← + K"
     },
     {
@@ -2504,7 +2504,7 @@ const akira = [
         stan: "",
         remarks: "",
         vtrigger: 2,
-        type: "",
+        type: "special",
         command: "(DURING Haten no Kamae) ↓"
     },
     {
@@ -2518,7 +2518,7 @@ const akira = [
         stan: "0",
         remarks: "1F - 8F  full invincibility",
         vtrigger: 2,
-        type: "",
+        type: "ca",
         command: "↓↘→ ↓↘→ + P"
     }
 ];

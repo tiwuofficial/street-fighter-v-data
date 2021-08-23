@@ -893,7 +893,8 @@ const gill = [
     guard: "-2",
     damage: "120",
     stan: "160",
-    remarks: "レバー入力で前進距離を調整可能\n硬直差はリュウの立ち状態にガードさせた場合のもの",
+    remarks:
+      "5F～12F 空中判定の攻撃に対して無敵\n                                レバー入力で前進距離を調整可能\n硬直差はリュウの立ち状態にガードさせた場合のもの",
     vtrigger: 1,
     type: "special",
     command: "→↓↘ + K K"
@@ -1851,7 +1852,8 @@ const gill = [
     guard: "-2",
     damage: "120",
     stan: "160",
-    remarks: "レバー入力で前進距離を調整可能\n硬直差はリュウの立ち状態にガードさせた場合のもの",
+    remarks:
+      "5F～12F 空中判定の攻撃に対して無敵\n                                レバー入力で前進距離を調整可能\n硬直差はリュウの立ち状態にガードさせた場合のもの",
     vtrigger: 2,
     type: "special",
     command: "→↓↘ + K K"

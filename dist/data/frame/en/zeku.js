@@ -13,7 +13,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MP",
@@ -27,7 +28,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HP",
@@ -41,7 +43,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing LK",
@@ -55,7 +58,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MK",
@@ -69,7 +73,8 @@ const zeku = [
         remarks: "Forces stand",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HK",
@@ -83,7 +88,8 @@ const zeku = [
         remarks: "Triggers Crush Counter (+21F)",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LP",
@@ -97,7 +103,8 @@ const zeku = [
         remarks: "Can be rapid canceled",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MP",
@@ -111,7 +118,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HP",
@@ -125,11 +133,12 @@ const zeku = [
         remarks: "Triggers Crush Counter  (D)\n                                                Forces stand",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LK",
-        outbreak: "5",
+        outbreak: "4",
         persistence: "2",
         rigidity: "8",
         hit: "4",
@@ -139,7 +148,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MK",
@@ -153,7 +163,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HK",
@@ -167,7 +178,8 @@ const zeku = [
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping LP",
@@ -181,7 +193,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping MP",
@@ -195,7 +208,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping HP",
@@ -209,7 +223,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping LK",
@@ -223,7 +238,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping MK",
@@ -237,7 +253,8 @@ const zeku = [
         remarks: "Can cross-up",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping HK",
@@ -251,7 +268,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing LP (from Idaten)",
@@ -265,7 +283,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MP (from Idaten)",
@@ -279,7 +298,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HP (from Idaten)",
@@ -293,7 +313,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing LK (from Idaten)",
@@ -307,7 +328,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MK (from Idaten)",
@@ -321,7 +343,8 @@ const zeku = [
         remarks: "Forces stand\n                                                                                                                S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HK (from Idaten)",
@@ -335,7 +358,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LP (from Idaten)",
@@ -349,7 +373,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MP (from Idaten)",
@@ -363,7 +388,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HP (from Idaten)",
@@ -377,7 +403,8 @@ const zeku = [
         remarks: "Forces stand\n                                                                                                                S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LK (from Idaten)",
@@ -391,7 +418,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MK (from Idaten)",
@@ -405,7 +433,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HK (from Idaten)",
@@ -419,7 +448,8 @@ const zeku = [
         remarks: "S*CA*Only when used from the 1st hit",
         vtrigger: 1,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Nouten Wari",
@@ -433,7 +463,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "unique",
-        command: "→ + HP"
+        command: "→ + HP",
+        zeku: "old"
     },
     {
         name: "Tsurigane Otoshi",
@@ -447,7 +478,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "throw",
-        command: "(NEAR OPPONENT) → OR + LP LK"
+        command: "(NEAR OPPONENT) → OR + LP LK",
+        zeku: "old"
     },
     {
         name: "Mikoshi",
@@ -461,7 +493,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "throw",
-        command: "(NEAR OPPONENT) ← + LP LK"
+        command: "(NEAR OPPONENT) ← + LP LK",
+        zeku: "old"
     },
     {
         name: "[VS1] Fukuro",
@@ -475,21 +508,53 @@ const zeku = [
         remarks: "On hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides",
         vtrigger: 1,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL I) MP MK"
+        command: "(WHEN SELECTING VSKILL I) MP MK",
+        zeku: "old"
     },
     {
-        name: "[VS2] Kuchiyose - Shii",
-        outbreak: "182*",
-        persistence: "5",
+        name: "[VS2] Kuchiyose - Shii (Back)",
+        outbreak: "82(*151)",
+        persistence: "Until landing/*5",
         rigidity: "64 total frames",
         hit: "D",
         guard: "",
-        damage: "80",
-        stan: "80",
-        remarks: "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS*宿命でキャンセル可能\n*数値はニュートラル時 後ろ入力時:151/前入力時:217",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
         vtrigger: 1,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL II) ← OR OR → + MP MK"
+        command: "(WHEN SELECTING VSKILL II) ← + MP MK",
+        zeku: "old"
+    },
+    {
+        name: "[VS2] Kuchiyose - Shii (Center)",
+        outbreak: "112(*182)",
+        persistence: "Until landing/*5",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) + MP MK",
+        zeku: "old"
+    },
+    {
+        name: "[VS2] Kuchiyose - Shii (Forward)",
+        outbreak: "143(*217)",
+        persistence: "Until landing/*5",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) → + MP MK",
+        zeku: "old"
     },
     {
         name: "Bushinryu Shingekiko",
@@ -503,7 +568,8 @@ const zeku = [
         remarks: "V-Gauge Timer + 1500F\n                                                                                                                                                                                Will be able to use Idaten",
         vtrigger: 1,
         type: "vsystem",
-        command: "HP HK"
+        command: "HP HK",
+        zeku: "old"
     },
     {
         name: "Toushi",
@@ -517,7 +583,38 @@ const zeku = [
         remarks: "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 1,
         type: "vsystem",
-        command: "(DURING GUARD) → + LP"
+        command: "(DURING GUARD) → + LP",
+        zeku: "old"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK",
+        zeku: "old"
+    },
+    {
+        name: "Bushin Murakumo",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Koku (base hit)",
@@ -531,7 +628,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + LK"
+        command: "↓↘→ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Koku (base hit)",
@@ -545,7 +643,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + MK"
+        command: "↓↘→ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Koku (base hit)",
@@ -559,7 +658,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + HK"
+        command: "↓↘→ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Koku (base hit)",
@@ -573,7 +673,8 @@ const zeku = [
         remarks: "S*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + K K"
+        command: "↓↘→ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Koku",
@@ -587,7 +688,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + LK"
+        command: "↓↘→ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Koku",
@@ -601,7 +703,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + MK"
+        command: "↓↘→ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Koku",
@@ -615,7 +718,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + HK"
+        command: "↓↘→ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Koku",
@@ -629,7 +733,8 @@ const zeku = [
         remarks: "S*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + K K"
+        command: "↓↘→ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Ban (base hit)",
@@ -640,10 +745,11 @@ const zeku = [
         guard: "-23",
         damage: "100",
         stan: "200",
-        remarks: "The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "1F - 5F  throw invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + LK"
+        command: "→↓↘ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Ban (base hit)",
@@ -654,10 +760,11 @@ const zeku = [
         guard: "-29",
         damage: "110",
         stan: "200",
-        remarks: "1F - 7F  throw invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "3F - 12F  projectile invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + MK"
+        command: "→↓↘ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Ban (base hit)",
@@ -671,7 +778,8 @@ const zeku = [
         remarks: "1F - 8F  invincible to mid-air attacks\n                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + HK"
+        command: "→↓↘ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Ban (base hit)",
@@ -685,7 +793,8 @@ const zeku = [
         remarks: "1F - 7F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + K K"
+        command: "→↓↘ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Ban",
@@ -696,10 +805,11 @@ const zeku = [
         guard: "",
         damage: "100",
         stan: "150",
-        remarks: "Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "1F - 5F  throw invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + LK"
+        command: "→↓↘ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Ban",
@@ -710,10 +820,11 @@ const zeku = [
         guard: "",
         damage: "110",
         stan: "150",
-        remarks: "1F - 7F  throw invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "3F - 12F  projectile invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + MK"
+        command: "→↓↘ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Ban",
@@ -727,7 +838,8 @@ const zeku = [
         remarks: "1F - 8F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + HK"
+        command: "→↓↘ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Ban",
@@ -741,7 +853,8 @@ const zeku = [
         remarks: "1F - 7F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "→↓↘ + K K"
+        command: "→↓↘ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Teki (base hit)",
@@ -755,7 +868,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + LK"
+        command: "↓↙← + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Teki (base hit)",
@@ -769,7 +883,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + MK"
+        command: "↓↙← + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Teki (base hit)",
@@ -783,7 +898,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + HK"
+        command: "↓↙← + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Teki (base hit)",
@@ -797,7 +913,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + K K"
+        command: "↓↙← + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Teki",
@@ -811,7 +928,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + LK"
+        command: "↓↙← + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Teki",
@@ -825,7 +943,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + MK"
+        command: "↓↙← + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Teki",
@@ -839,7 +958,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + HK"
+        command: "↓↙← + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Teki",
@@ -853,7 +973,8 @@ const zeku = [
         remarks: "Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 1,
         type: "special",
-        command: "↓↙← + K K"
+        command: "↓↙← + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Jakura",
@@ -867,7 +988,8 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + LP"
+        command: "↓↘→ + LP",
+        zeku: "old"
     },
     {
         name: "M Bushin Jakura",
@@ -881,7 +1003,8 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + MP"
+        command: "↓↘→ + MP",
+        zeku: "old"
     },
     {
         name: "H Bushin Jakura",
@@ -895,13 +1018,14 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + HP"
+        command: "↓↘→ + HP",
+        zeku: "old"
     },
     {
         name: "EX Bushin Jakura",
         outbreak: "",
         persistence: "",
-        rigidity: "46+7 frame(s) after landing",
+        rigidity: "46+4 frame(s) after landing",
         hit: "",
         guard: "",
         damage: "0",
@@ -909,7 +1033,8 @@ const zeku = [
         remarks: "Can control the travel distance with directional inputs\nProjectile invincible from startup until landing",
         vtrigger: 1,
         type: "special",
-        command: "↓↘→ + P P"
+        command: "↓↘→ + P P",
+        zeku: "old"
     },
     {
         name: "Bushin Gekirinchu",
@@ -923,7 +1048,8 @@ const zeku = [
         remarks: "Only hits as a cross-up",
         vtrigger: 1,
         type: "special",
-        command: "(DURING Bushin Jakura) P"
+        command: "(DURING Bushin Jakura) P",
+        zeku: "old"
     },
     {
         name: "Bushin Kirinkyaku",
@@ -937,7 +1063,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING Bushin Jakura) K"
+        command: "(DURING Bushin Jakura) K",
+        zeku: "old"
     },
     {
         name: "Bushin Tengen",
@@ -951,7 +1078,8 @@ const zeku = [
         remarks: "Cannot throw airborne or crouching opponents",
         vtrigger: 1,
         type: "special",
-        command: "(DURING Bushin Jakura) LP LK"
+        command: "(DURING Bushin Jakura) LP LK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gekirinchu",
@@ -965,7 +1093,8 @@ const zeku = [
         remarks: "Only hits as a cross-up",
         vtrigger: 1,
         type: "special",
-        command: "(DURING EX Bushin Jakura) P"
+        command: "(DURING EX Bushin Jakura) P",
+        zeku: "old"
     },
     {
         name: "EX Bushin Kirinkyaku",
@@ -979,7 +1108,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING EX Bushin Jakura) K"
+        command: "(DURING EX Bushin Jakura) K",
+        zeku: "old"
     },
     {
         name: "EX Bushin Tengen",
@@ -993,7 +1123,8 @@ const zeku = [
         remarks: "Cannot throw airborne or crouching opponents",
         vtrigger: 1,
         type: "special",
-        command: "(DURING EX Bushin Jakura) LP LK"
+        command: "(DURING EX Bushin Jakura) LP LK",
+        zeku: "old"
     },
     {
         name: "Shukumyo",
@@ -1007,7 +1138,8 @@ const zeku = [
         remarks: "Changes into Young Zeku",
         vtrigger: 1,
         type: "special",
-        command: "↓ ↓ + P P"
+        command: "↓ ↓ + P P",
+        zeku: "old"
     },
     {
         name: "VIdaten",
@@ -1021,7 +1153,8 @@ const zeku = [
         remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                16F - 17F  projectile & throw invincibility\n3F - 15F  full invincibility\n                                                Can be canceled from V-Trigger cancellable moves\nWhile active, Zeku can perform chain combos using unique moves, in the order of LP -> LK -> MP -> MK -> HP -> HK (standing or crouching)\nBushin Bakujasho can be performed during Idaten, or during the chain combo",
         vtrigger: 1,
         type: "special",
-        command: "(DURING V-TRIGGER) HP HK"
+        command: "(DURING V-TRIGGER) HP HK",
+        zeku: "old"
     },
     {
         name: "Bushin Bakujasho",
@@ -1035,7 +1168,8 @@ const zeku = [
         remarks: "",
         vtrigger: 1,
         type: "special",
-        command: "(DURING IDATEN, OR DURING AN IDATEN ATTACK) HP HK"
+        command: "(DURING IDATEN, OR DURING AN IDATEN ATTACK) HP HK",
+        zeku: "old"
     },
     {
         name: "Batsuzan Gaisei",
@@ -1049,7 +1183,8 @@ const zeku = [
         remarks: "1F - 11F  full invincibility",
         vtrigger: 1,
         type: "ca",
-        command: "↓↘→ ↓↘→ + K"
+        command: "↓↘→ ↓↘→ + K",
+        zeku: "old"
     },
     {
         name: "Standing LP",
@@ -1063,7 +1198,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MP",
@@ -1077,7 +1213,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HP",
@@ -1091,7 +1228,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing LK",
@@ -1105,7 +1243,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing MK",
@@ -1119,7 +1258,8 @@ const zeku = [
         remarks: "Forces stand",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Standing HK",
@@ -1133,7 +1273,8 @@ const zeku = [
         remarks: "Triggers Crush Counter (+21F)",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LP",
@@ -1147,7 +1288,8 @@ const zeku = [
         remarks: "Can be rapid canceled",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MP",
@@ -1161,7 +1303,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HP",
@@ -1175,11 +1318,12 @@ const zeku = [
         remarks: "Triggers Crush Counter  (D)\n                                                Forces stand",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching LK",
-        outbreak: "5",
+        outbreak: "4",
         persistence: "2",
         rigidity: "8",
         hit: "4",
@@ -1189,7 +1333,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching MK",
@@ -1203,7 +1348,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Crouching HK",
@@ -1217,7 +1363,8 @@ const zeku = [
         remarks: "Triggers Crush Counter  (D)",
         vtrigger: 2,
         type: "normal",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping LP",
@@ -1231,7 +1378,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping MP",
@@ -1245,7 +1393,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping HP",
@@ -1259,7 +1408,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping LK",
@@ -1273,7 +1423,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping MK",
@@ -1287,7 +1438,8 @@ const zeku = [
         remarks: "Can cross-up",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Jumping HK",
@@ -1301,7 +1453,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "jump",
-        command: ""
+        command: "",
+        zeku: "old"
     },
     {
         name: "Nouten Wari",
@@ -1315,7 +1468,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "unique",
-        command: "→ + HP"
+        command: "→ + HP",
+        zeku: "old"
     },
     {
         name: "Tsurigane Otoshi",
@@ -1329,7 +1483,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "throw",
-        command: "(NEAR OPPONENT) → OR + LP LK"
+        command: "(NEAR OPPONENT) → OR + LP LK",
+        zeku: "old"
     },
     {
         name: "Mikoshi",
@@ -1343,7 +1498,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "throw",
-        command: "(NEAR OPPONENT) ← + LP LK"
+        command: "(NEAR OPPONENT) ← + LP LK",
+        zeku: "old"
     },
     {
         name: "[VS1] Fukuro",
@@ -1357,21 +1513,53 @@ const zeku = [
         remarks: "On hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides",
         vtrigger: 2,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL I) MP MK"
+        command: "(WHEN SELECTING VSKILL I) MP MK",
+        zeku: "old"
     },
     {
-        name: "[VS2] Kuchiyose - Shii",
-        outbreak: "182*",
-        persistence: "5",
+        name: "[VS2] Kuchiyose - Shii (Back)",
+        outbreak: "82(*151)",
+        persistence: "Until landing/*5",
         rigidity: "64 total frames",
         hit: "D",
         guard: "",
-        damage: "80",
-        stan: "80",
-        remarks: "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS*宿命でキャンセル可能\n*数値はニュートラル時 後ろ入力時:151/前入力時:217",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
         vtrigger: 2,
         type: "vsystem",
-        command: "(WHEN SELECTING VSKILL II) ← OR OR → + MP MK"
+        command: "(WHEN SELECTING VSKILL II) ← + MP MK",
+        zeku: "old"
+    },
+    {
+        name: "[VS2] Kuchiyose - Shii (Center)",
+        outbreak: "112(*182)",
+        persistence: "Until landing/*5",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) + MP MK",
+        zeku: "old"
+    },
+    {
+        name: "[VS2] Kuchiyose - Shii (Forward)",
+        outbreak: "143(*217)",
+        persistence: "Until landing/*5",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "40+*80",
+        stan: "70+*80",
+        remarks: "Firecracker's positioning can be altered with the joystick\nIf damage is taken before the firecracker is placed, the hawk will be destroyed and the firecracker will not be placed\nS*Can be canceled with Shukumyo\n*Denotes values of the explosion part",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) → + MP MK",
+        zeku: "old"
     },
     {
         name: "Karura Tenzan",
@@ -1382,10 +1570,11 @@ const zeku = [
         guard: "-28",
         damage: "140",
         stan: "150",
-        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                1F - 13F  projectile & throw invincibility\n                1F - 13F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides\nGains the special move Karura Tenzan on hit\nS*ヒット後の着地硬直をEX必殺技でキャンセル可能",
+        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                1F - 13F  projectile & throw invincibility\n                1F - 13F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides\nGains the special move Karura Tenzan on hit\nS*Landing recovery can be canceled with EX Special Move after successful hit",
         vtrigger: 2,
         type: "vsystem",
-        command: "HP HK"
+        command: "HP HK",
+        zeku: "old"
     },
     {
         name: "Toushi",
@@ -1399,7 +1588,38 @@ const zeku = [
         remarks: "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
         vtrigger: 2,
         type: "vsystem",
-        command: "(DURING GUARD) → + LP"
+        command: "(DURING GUARD) → + LP",
+        zeku: "old"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK",
+        zeku: "old"
+    },
+    {
+        name: "Bushin Murakumo",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Koku (base hit)",
@@ -1413,7 +1633,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + LK"
+        command: "↓↘→ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Koku (base hit)",
@@ -1427,7 +1648,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + MK"
+        command: "↓↘→ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Koku (base hit)",
@@ -1441,7 +1663,8 @@ const zeku = [
         remarks: "The ranged part of the attack will not be activated if the base hits\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + HK"
+        command: "↓↘→ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Koku (base hit)",
@@ -1455,7 +1678,8 @@ const zeku = [
         remarks: "S*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + K K"
+        command: "↓↘→ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Koku",
@@ -1469,7 +1693,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + LK"
+        command: "↓↘→ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Koku",
@@ -1483,7 +1708,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + MK"
+        command: "↓↘→ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Koku",
@@ -1497,7 +1723,8 @@ const zeku = [
         remarks: "Has a separate projectile-nullifying hitbox (1 hit) at close-range\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + HK"
+        command: "↓↘→ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Koku",
@@ -1511,7 +1738,8 @@ const zeku = [
         remarks: "S*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + K K"
+        command: "↓↘→ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Ban (base hit)",
@@ -1522,10 +1750,11 @@ const zeku = [
         guard: "-23",
         damage: "100",
         stan: "200",
-        remarks: "The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "1F - 5F  throw invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + LK"
+        command: "→↓↘ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Ban (base hit)",
@@ -1536,10 +1765,11 @@ const zeku = [
         guard: "-29",
         damage: "110",
         stan: "200",
-        remarks: "1F - 7F  throw invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "3F - 12F  projectile invincibility\n                                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + MK"
+        command: "→↓↘ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Ban (base hit)",
@@ -1553,7 +1783,8 @@ const zeku = [
         remarks: "1F - 8F  invincible to mid-air attacks\n                                The ranged part of the attack will not be activated if the base hits\nSubject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + HK"
+        command: "→↓↘ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Ban (base hit)",
@@ -1567,7 +1798,8 @@ const zeku = [
         remarks: "1F - 7F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + K K"
+        command: "→↓↘ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Ban",
@@ -1578,10 +1810,11 @@ const zeku = [
         guard: "",
         damage: "100",
         stan: "150",
-        remarks: "Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "1F - 5F  throw invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + LK"
+        command: "→↓↘ + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Ban",
@@ -1592,10 +1825,11 @@ const zeku = [
         guard: "",
         damage: "110",
         stan: "150",
-        remarks: "1F - 7F  throw invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
+        remarks: "3F - 12F  projectile invincibility\n                                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + MK"
+        command: "→↓↘ + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Ban",
@@ -1609,7 +1843,8 @@ const zeku = [
         remarks: "1F - 8F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + HK"
+        command: "→↓↘ + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Ban",
@@ -1623,7 +1858,8 @@ const zeku = [
         remarks: "1F - 7F  full invincibility\n                                                Subject to counter hit during move duration (1.2x damage)\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "→↓↘ + K K"
+        command: "→↓↘ + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Teki (base hit)",
@@ -1637,7 +1873,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + LK"
+        command: "↓↙← + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Teki (base hit)",
@@ -1651,7 +1888,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + MK"
+        command: "↓↙← + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Teki (base hit)",
@@ -1665,7 +1903,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                The ranged part of the attack will not be activated if the base hits\nCan perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo, EX Bushin Gran - Teki on hit\nVS*on hit",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + HK"
+        command: "↓↙← + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Teki (base hit)",
@@ -1679,7 +1918,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + K K"
+        command: "↓↙← + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Gram - Teki",
@@ -1693,7 +1933,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + LK"
+        command: "↓↙← + LK",
+        zeku: "old"
     },
     {
         name: "M Bushin Gram - Teki",
@@ -1707,7 +1948,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + MK"
+        command: "↓↙← + MK",
+        zeku: "old"
     },
     {
         name: "H Bushin Gram - Teki",
@@ -1721,7 +1963,8 @@ const zeku = [
         remarks: "Will not hit crouching opponents\n                                                                                                Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + HK"
+        command: "↓↙← + HK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gram - Teki",
@@ -1735,7 +1978,8 @@ const zeku = [
         remarks: "Can perform Bushin Gram - Koku and Bushin Gran - Ban from this move\nS*Can be canceled into Shukumyo on hit only",
         vtrigger: 2,
         type: "special",
-        command: "↓↙← + K K"
+        command: "↓↙← + K K",
+        zeku: "old"
     },
     {
         name: "L Bushin Jakura",
@@ -1749,7 +1993,8 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + LP"
+        command: "↓↘→ + LP",
+        zeku: "old"
     },
     {
         name: "M Bushin Jakura",
@@ -1763,7 +2008,8 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + MP"
+        command: "↓↘→ + MP",
+        zeku: "old"
     },
     {
         name: "H Bushin Jakura",
@@ -1777,13 +2023,14 @@ const zeku = [
         remarks: "Distance and general movement change depending on the strength used",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + HP"
+        command: "↓↘→ + HP",
+        zeku: "old"
     },
     {
         name: "EX Bushin Jakura",
         outbreak: "",
         persistence: "",
-        rigidity: "46+7 frame(s) after landing",
+        rigidity: "46+4 frame(s) after landing",
         hit: "",
         guard: "",
         damage: "0",
@@ -1791,7 +2038,8 @@ const zeku = [
         remarks: "Can control the travel distance with directional inputs\nProjectile invincible from startup until landing",
         vtrigger: 2,
         type: "special",
-        command: "↓↘→ + P P"
+        command: "↓↘→ + P P",
+        zeku: "old"
     },
     {
         name: "Bushin Gekirinchu",
@@ -1805,7 +2053,8 @@ const zeku = [
         remarks: "Only hits as a cross-up",
         vtrigger: 2,
         type: "special",
-        command: "(DURING Bushin Jakura) P"
+        command: "(DURING Bushin Jakura) P",
+        zeku: "old"
     },
     {
         name: "Bushin Kirinkyaku",
@@ -1819,7 +2068,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING Bushin Jakura) K"
+        command: "(DURING Bushin Jakura) K",
+        zeku: "old"
     },
     {
         name: "Bushin Tengen",
@@ -1833,7 +2083,8 @@ const zeku = [
         remarks: "Cannot throw airborne or crouching opponents",
         vtrigger: 2,
         type: "special",
-        command: "(DURING Bushin Jakura) LP LK"
+        command: "(DURING Bushin Jakura) LP LK",
+        zeku: "old"
     },
     {
         name: "EX Bushin Gekirinchu",
@@ -1847,7 +2098,8 @@ const zeku = [
         remarks: "Only hits as a cross-up",
         vtrigger: 2,
         type: "special",
-        command: "(DURING EX Bushin Jakura) P"
+        command: "(DURING EX Bushin Jakura) P",
+        zeku: "old"
     },
     {
         name: "EX Bushin Kirinkyaku",
@@ -1861,7 +2113,8 @@ const zeku = [
         remarks: "",
         vtrigger: 2,
         type: "special",
-        command: "(DURING EX Bushin Jakura) K"
+        command: "(DURING EX Bushin Jakura) K",
+        zeku: "old"
     },
     {
         name: "EX Bushin Tengen",
@@ -1875,7 +2128,8 @@ const zeku = [
         remarks: "Cannot throw airborne or crouching opponents",
         vtrigger: 2,
         type: "special",
-        command: "(DURING EX Bushin Jakura) LP LK"
+        command: "(DURING EX Bushin Jakura) LP LK",
+        zeku: "old"
     },
     {
         name: "Shukumyo",
@@ -1889,7 +2143,8 @@ const zeku = [
         remarks: "Changes into Young Zeku",
         vtrigger: 2,
         type: "special",
-        command: "↓ ↓ + P P"
+        command: "↓ ↓ + P P",
+        zeku: "old"
     },
     {
         name: "Karura Tenzan",
@@ -1900,10 +2155,11 @@ const zeku = [
         guard: "-28",
         damage: "140",
         stan: "100",
-        remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                1F - 17F  projectile & throw invincibility\n                1F - 17F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides\nS*ヒット後の着地硬直をEX必殺技でキャンセル可能",
+        remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                1F - 17F  projectile & throw invincibility\n                1F - 17F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides\nS*Landing recovery can be canceled with EX Special Move after successful hit",
         vtrigger: 2,
         type: "special",
-        command: "(DURING V-TRIGGER II) HP HK"
+        command: "(DURING V-TRIGGER II) HP HK",
+        zeku: "old"
     },
     {
         name: "Batsuzan Gaisei",
@@ -1917,7 +2173,2123 @@ const zeku = [
         remarks: "1F - 11F  full invincibility",
         vtrigger: 2,
         type: "ca",
-        command: "↓↘→ ↓↘→ + K"
+        command: "↓↘→ ↓↘→ + K",
+        zeku: "old"
+    },
+    {
+        name: "Standing LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "3",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MP",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "16",
+        hit: "8",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HP",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "20(*25)",
+        hit: "2",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "*Recovery increases by 5F on whiff.",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing LK",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "-2",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MK",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HK",
+        outbreak: "12",
+        persistence: "4",
+        rigidity: "19(*24)",
+        hit: "3",
+        guard: "-2",
+        damage: "90",
+        stan: "150",
+        remarks: "*Recovery increases by 5F on whiff.",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LP",
+        outbreak: "3",
+        persistence: "2",
+        rigidity: "8",
+        hit: "4",
+        guard: "2",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "14",
+        hit: "5",
+        guard: "1",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HP",
+        outbreak: "10",
+        persistence: "3",
+        rigidity: "20(*25)",
+        hit: "1",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (+21F)\n                                                                                                                                                                *Recovery increases by 5F on whiff.",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LK",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "8",
+        hit: "3",
+        guard: "2",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "16",
+        hit: "2",
+        guard: "-3",
+        damage: "50",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HK",
+        outbreak: "10",
+        persistence: "11",
+        rigidity: "20",
+        hit: "D(*3)",
+        guard: "-13",
+        damage: "90",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (D*+13F)\n                                                                                                                                                                Final 4 active frames causes grounded hitstun\n*When hitting on active frame 8F",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping LP",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "8",
+        persistence: "2",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Causes blowback knockdown on airborne hit",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "8",
+        persistence: "2",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "7",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Can cross-up",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing LP (from Idaten)",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "11",
+        hit: "1",
+        guard: "-1",
+        damage: "30",
+        stan: "70",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MP (from Idaten)",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "21",
+        hit: "1",
+        guard: "-3",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HP (from Idaten)",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "26",
+        hit: "-4",
+        guard: "-8",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing LK (from Idaten)",
+        outbreak: "5",
+        persistence: "4",
+        rigidity: "9",
+        hit: "1",
+        guard: "0",
+        damage: "40",
+        stan: "70",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MK (from Idaten)",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "23",
+        hit: "-3",
+        guard: "-8",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HK (from Idaten)",
+        outbreak: "12",
+        persistence: "4",
+        rigidity: "25",
+        hit: "-3",
+        guard: "-8",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LP (from Idaten)",
+        outbreak: "3",
+        persistence: "2",
+        rigidity: "10",
+        hit: "2",
+        guard: "0",
+        damage: "20",
+        stan: "70",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MP (from Idaten)",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "19",
+        hit: "-2",
+        guard: "-4",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HP (from Idaten)",
+        outbreak: "10",
+        persistence: "3",
+        rigidity: "26",
+        hit: "-5",
+        guard: "-9",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LK (from Idaten)",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "10",
+        hit: "1",
+        guard: "0",
+        damage: "20",
+        stan: "70",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MK (from Idaten)",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "21",
+        hit: "-4",
+        guard: "-8",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HK (from Idaten)",
+        outbreak: "10",
+        persistence: "11",
+        rigidity: "26",
+        hit: "D",
+        guard: "-18",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only when used from the 1st hit",
+        vtrigger: 1,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Kubi Kudaki",
+        outbreak: "22",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "80",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "Kaeshi Saiha",
+        outbreak: "10",
+        persistence: "2",
+        rigidity: "25",
+        hit: "D",
+        guard: "-12",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 1,
+        type: "unique",
+        command: "HP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Kaeshi Urasaiha",
+        outbreak: "9",
+        persistence: "1",
+        rigidity: "28",
+        hit: "D",
+        guard: "-10",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 1,
+        type: "unique",
+        command: "↓ + HP ▶ ↓ + HP",
+        zeku: "young"
+    },
+    {
+        name: "Kagerou",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nCA*Only on hit",
+        vtrigger: 1,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL I) HP ▶ HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Urakagerou",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nCA*Only on hit",
+        vtrigger: 1,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL I) ↓ + HP ▶ ↓ + HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Sekibu No Jin",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 1,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL II) HP ▶ HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Hakuso No Jin",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 1,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL II) ↓ + HP ▶ ↓ + HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Sankaku Tobi",
+        outbreak: "",
+        persistence: "",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Enters special counterable state from the start of the move until landing",
+        vtrigger: 1,
+        type: "unique",
+        command: "(DURING JUMP NEAR WALL) →",
+        zeku: "young"
+    },
+    {
+        name: "Hassou Tobi",
+        outbreak: "",
+        persistence: "",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Button strength changes the travel distance\nEnters special counterable state from the start of the move until landing",
+        vtrigger: 1,
+        type: "unique",
+        command: "(DURING WALL JUMP, NEAR THE WALL) P",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Shidenkyaku",
+        outbreak: "27",
+        persistence: "Until landing",
+        rigidity: "4 frame(s) after landing",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "Buttons strength changes the movement distance\nEnters special counterable state from the start of the move until landing",
+        vtrigger: 1,
+        type: "unique",
+        command: "(DURING WALL JUMP, NEAR THE WALL) K",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Soukosou",
+        outbreak: "13",
+        persistence: "2",
+        rigidity: "24",
+        hit: "-2",
+        guard: "-6",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 1,
+        type: "unique",
+        command: "MP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - Ni",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "22",
+        hit: "-3",
+        guard: "-7",
+        damage: "50",
+        stan: "80",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "LP ▶ MP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - San",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "30",
+        hit: "D",
+        guard: "-11",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - Shu",
+        outbreak: "16",
+        persistence: "7",
+        rigidity: "27",
+        hit: "D",
+        guard: "-16",
+        damage: "80",
+        stan: "100",
+        remarks: "",
+        vtrigger: 1,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanage",
+        outbreak: "7",
+        persistence: "2",
+        rigidity: "29",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "200",
+        remarks: "Can only be performed from the first HP hit of Bushin Gokusanken - San",
+        vtrigger: 1,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP ▶ ↓ + HK",
+        zeku: "young"
+    },
+    {
+        name: "Tesso",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "140",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(NEAR OPPONENT) → OR + LP LK",
+        zeku: "young"
+    },
+    {
+        name: "Raiju",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "150",
+        remarks: "",
+        vtrigger: 1,
+        type: "throw",
+        command: "(NEAR OPPONENT) ← + LP LK",
+        zeku: "young"
+    },
+    {
+        name: "[VS1] Tenpo Kari",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) MP MK",
+        zeku: "young"
+    },
+    {
+        name: "[VS2] Kuchiyose - Bii",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Bushinryu Shingekiko",
+        outbreak: "1",
+        persistence: "",
+        rigidity: "5",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "V-Gauge Timer + 1500F\n                                                                                                                                                                                Will be able to use Idaten",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP HK",
+        zeku: "young"
+    },
+    {
+        name: "Toushi",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "24",
+        hit: "2",
+        guard: "-2",
+        damage: "40",
+        stan: "0",
+        remarks: "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "(DURING GUARD) → + LP",
+        zeku: "young"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK",
+        zeku: "young"
+    },
+    {
+        name: "Habakiri",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 1,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK",
+        zeku: "young"
+    },
+    {
+        name: "L Bushin Sho",
+        outbreak: "12",
+        persistence: "6",
+        rigidity: "20",
+        hit: "D",
+        guard: "-4",
+        damage: "60",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Bushin Sho",
+        outbreak: "18",
+        persistence: "6",
+        rigidity: "16",
+        hit: "D",
+        guard: "-2",
+        damage: "90",
+        stan: "150",
+        remarks: "Hit anywhere during the active frames causes 2 hits\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Bushin Sho",
+        outbreak: "24",
+        persistence: "6",
+        rigidity: "15",
+        hit: "D",
+        guard: "2",
+        damage: "120",
+        stan: "200",
+        remarks: "Hit anywhere during the active frames causes 3 hits\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Bushin Sho",
+        outbreak: "23",
+        persistence: "6",
+        rigidity: "21",
+        hit: "(crumple)",
+        guard: "2",
+        damage: "80",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + P P",
+        zeku: "young"
+    },
+    {
+        name: "L Hozanto",
+        outbreak: "12",
+        persistence: "6",
+        rigidity: "12(*22)",
+        hit: "D",
+        guard: "-6",
+        damage: "60",
+        stan: "100",
+        remarks: "Upper body invincibility to airborne attacks from 1F - 17F\n*Recovery increases by 10F on whiff.\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↙← + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Hozanto",
+        outbreak: "22",
+        persistence: "6",
+        rigidity: "13",
+        hit: "D",
+        guard: "-6",
+        damage: "70",
+        stan: "100",
+        remarks: "Upper body projectile invincibility from 8F - 27F\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↙← + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Hozanto",
+        outbreak: "26",
+        persistence: "5",
+        rigidity: "14",
+        hit: "D",
+        guard: "-6",
+        damage: "90",
+        stan: "100",
+        remarks: "Upper body projectile invincibility from 7F - 30F\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↙← + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Hozanto",
+        outbreak: "16",
+        persistence: "9",
+        rigidity: "14",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "Upper body projectile invincibility from 7F - 19F\n2nd hit occurs only if 1st hit connects\n2nd hit can be jump cancelled\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↙← + P P",
+        zeku: "young"
+    },
+    {
+        name: "L Bushin Sangoku Otoshi",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Bushin Sangoku Otoshi",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Bushin Sangoku Otoshi",
+        outbreak: "6",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Bushin Sangoku Otoshi",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + P P",
+        zeku: "young"
+    },
+    {
+        name: "Hayagake",
+        outbreak: "",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Each branch move can be performed from 9F",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K",
+        zeku: "young"
+    },
+    {
+        name: "EX Hayagake",
+        outbreak: "",
+        persistence: "",
+        rigidity: "40 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "8F - 21F  full invincibility\n                                                Can transition into EX Ashikari/EX Gekkou after frame 8\nCan transition into EX Tozetsu after frame 9",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K K",
+        zeku: "young"
+    },
+    {
+        name: "Tozetsu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "15 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K ▶ LK",
+        zeku: "young"
+    },
+    {
+        name: "Ashikari",
+        outbreak: "9",
+        persistence: "9",
+        rigidity: "27",
+        hit: "D",
+        guard: "-21",
+        damage: "100",
+        stan: "120",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K ▶ MK",
+        zeku: "young"
+    },
+    {
+        name: "Gekkou",
+        outbreak: "22",
+        persistence: "4",
+        rigidity: "24",
+        hit: "D",
+        guard: "-5",
+        damage: "120",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "EX Tozetsu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "12 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "1F - 3F  full invincibility",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K K ▶ LK",
+        zeku: "young"
+    },
+    {
+        name: "EX Ashikari",
+        outbreak: "9",
+        persistence: "9",
+        rigidity: "27",
+        hit: "D",
+        guard: "-21",
+        damage: "130",
+        stan: "200",
+        remarks: "1F - 3F  full invincibility\n                                                S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K K ▶ MK",
+        zeku: "young"
+    },
+    {
+        name: "EX Gekkou",
+        outbreak: "22",
+        persistence: "4",
+        rigidity: "24",
+        hit: "D",
+        guard: "-2",
+        damage: "150",
+        stan: "200",
+        remarks: "1F - 3F  full invincibility\n                                                S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 1,
+        type: "special",
+        command: "↓↘→ + K K ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "Shukumyo",
+        outbreak: "",
+        persistence: "",
+        rigidity: "25 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Changes into Old Zeku",
+        vtrigger: 1,
+        type: "special",
+        command: "↓ ↓ + P P",
+        zeku: "young"
+    },
+    {
+        name: "VIdaten",
+        outbreak: "",
+        persistence: "",
+        rigidity: "25 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                16F - 17F  projectile & throw invincibility\n3F - 15F  full invincibility\n                                                Can be canceled from V-Trigger cancellable moves\nWhile active, Zeku can perform chain combos using unique moves, in the order of LP -> LK -> MP -> MK -> HP -> HK (standing or crouching)\nBushin Seiryukyaku can be performed during Idaten, or during the chain combo",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING V-TRIGGER) HP HK",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Seiryukyaku",
+        outbreak: "14",
+        persistence: "5",
+        rigidity: "21",
+        hit: "D",
+        guard: "-2",
+        damage: "160",
+        stan: "200",
+        remarks: "",
+        vtrigger: 1,
+        type: "special",
+        command: "(DURING IDATEN, OR DURING AN IDATEN ATTACK) HP HK",
+        zeku: "young"
+    },
+    {
+        name: "Batsuzan Gaisei",
+        outbreak: "1+3",
+        persistence: "8",
+        rigidity: "47",
+        hit: "D",
+        guard: "-33",
+        damage: "340",
+        stan: "0",
+        remarks: "1F - 11F  full invincibility",
+        vtrigger: 1,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + K",
+        zeku: "young"
+    },
+    {
+        name: "Standing LP",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "9",
+        hit: "3",
+        guard: "2",
+        damage: "30",
+        stan: "70",
+        remarks: "Can be rapid canceled",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MP",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "16",
+        hit: "8",
+        guard: "2",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HP",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "20(*25)",
+        hit: "2",
+        guard: "-3",
+        damage: "80",
+        stan: "150",
+        remarks: "*Recovery increases by 5F on whiff.",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing LK",
+        outbreak: "4",
+        persistence: "3",
+        rigidity: "10",
+        hit: "4",
+        guard: "-2",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing MK",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "17",
+        hit: "2",
+        guard: "-3",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Standing HK",
+        outbreak: "12",
+        persistence: "4",
+        rigidity: "19(*24)",
+        hit: "3",
+        guard: "-2",
+        damage: "90",
+        stan: "150",
+        remarks: "*Recovery increases by 5F on whiff.",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LP",
+        outbreak: "3",
+        persistence: "2",
+        rigidity: "8",
+        hit: "4",
+        guard: "2",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MP",
+        outbreak: "6",
+        persistence: "3",
+        rigidity: "14",
+        hit: "5",
+        guard: "1",
+        damage: "60",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HP",
+        outbreak: "10",
+        persistence: "3",
+        rigidity: "20(*25)",
+        hit: "1",
+        guard: "-5",
+        damage: "80",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (+21F)\n                                                                                                                                                                *Recovery increases by 5F on whiff.",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching LK",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "8",
+        hit: "3",
+        guard: "2",
+        damage: "20",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching MK",
+        outbreak: "7",
+        persistence: "3",
+        rigidity: "16",
+        hit: "2",
+        guard: "-3",
+        damage: "50",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Crouching HK",
+        outbreak: "10",
+        persistence: "11",
+        rigidity: "20",
+        hit: "D(*3)",
+        guard: "-13",
+        damage: "90",
+        stan: "150",
+        remarks: "Triggers Crush Counter  (D*+13F)\n                                                                                                                                                                Final 4 active frames causes grounded hitstun\n*When hitting on active frame 8F",
+        vtrigger: 2,
+        type: "normal",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping LP",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping MP",
+        outbreak: "8",
+        persistence: "2",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Causes blowback knockdown on airborne hit",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping HP",
+        outbreak: "8",
+        persistence: "2",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping LK",
+        outbreak: "5",
+        persistence: "6",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "40",
+        stan: "70",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping MK",
+        outbreak: "7",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "60",
+        stan: "100",
+        remarks: "Can cross-up",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Jumping HK",
+        outbreak: "8",
+        persistence: "4",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "jump",
+        command: "",
+        zeku: "young"
+    },
+    {
+        name: "Kubi Kudaki",
+        outbreak: "22",
+        persistence: "2",
+        rigidity: "22",
+        hit: "1",
+        guard: "-7",
+        damage: "80",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "Kaeshi Saiha",
+        outbreak: "10",
+        persistence: "2",
+        rigidity: "25",
+        hit: "D",
+        guard: "-12",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 2,
+        type: "unique",
+        command: "HP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Kaeshi Urasaiha",
+        outbreak: "9",
+        persistence: "1",
+        rigidity: "28",
+        hit: "D",
+        guard: "-10",
+        damage: "60",
+        stan: "100",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 2,
+        type: "unique",
+        command: "↓ + HP ▶ ↓ + HP",
+        zeku: "young"
+    },
+    {
+        name: "Kagerou",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nCA*V*Only on hit",
+        vtrigger: 2,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL I) HP ▶ HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Urakagerou",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "",
+        damage: "80",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nCA*V*Only on hit",
+        vtrigger: 2,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL I) ↓ + HP ▶ ↓ + HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Sekibu No Jin",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 2,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL II) HP ▶ HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Hakuso No Jin",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 2,
+        type: "unique",
+        command: "(WHEN SELECTING VSKILL II) ↓ + HP ▶ ↓ + HP ▶ MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Sankaku Tobi",
+        outbreak: "",
+        persistence: "",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Enters special counterable state from the start of the move until landing",
+        vtrigger: 2,
+        type: "unique",
+        command: "(DURING JUMP NEAR WALL) →",
+        zeku: "young"
+    },
+    {
+        name: "Hassou Tobi",
+        outbreak: "",
+        persistence: "",
+        rigidity: "",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "Button strength changes the travel distance\nEnters special counterable state from the start of the move until landing",
+        vtrigger: 2,
+        type: "unique",
+        command: "(DURING WALL JUMP, NEAR THE WALL) P",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Shidenkyaku",
+        outbreak: "27",
+        persistence: "Until landing",
+        rigidity: "4 frame(s) after landing",
+        hit: "",
+        guard: "",
+        damage: "90",
+        stan: "150",
+        remarks: "Buttons strength changes the movement distance\nEnters special counterable state from the start of the move until landing",
+        vtrigger: 2,
+        type: "unique",
+        command: "(DURING WALL JUMP, NEAR THE WALL) K",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Soukosou",
+        outbreak: "13",
+        persistence: "2",
+        rigidity: "24",
+        hit: "-2",
+        guard: "-6",
+        damage: "50",
+        stan: "80",
+        remarks: "S*CA*Only on hit",
+        vtrigger: 2,
+        type: "unique",
+        command: "MP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - Ni",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "22",
+        hit: "-3",
+        guard: "-7",
+        damage: "50",
+        stan: "80",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "LP ▶ MP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - San",
+        outbreak: "11",
+        persistence: "4",
+        rigidity: "30",
+        hit: "D",
+        guard: "-11",
+        damage: "70",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanken - Shu",
+        outbreak: "16",
+        persistence: "7",
+        rigidity: "27",
+        hit: "D",
+        guard: "-16",
+        damage: "80",
+        stan: "100",
+        remarks: "",
+        vtrigger: 2,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "Bushin Gokusanage",
+        outbreak: "7",
+        persistence: "2",
+        rigidity: "29",
+        hit: "D",
+        guard: "",
+        damage: "100",
+        stan: "200",
+        remarks: "Can only be performed from the first HP hit of Bushin Gokusanken - San",
+        vtrigger: 2,
+        type: "unique",
+        command: "LP ▶ MP ▶ HP ▶ ↓ + HK",
+        zeku: "young"
+    },
+    {
+        name: "Tesso",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "140",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(NEAR OPPONENT) → OR + LP LK",
+        zeku: "young"
+    },
+    {
+        name: "Raiju",
+        outbreak: "5",
+        persistence: "3",
+        rigidity: "17",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "150",
+        remarks: "",
+        vtrigger: 2,
+        type: "throw",
+        command: "(NEAR OPPONENT) ← + LP LK",
+        zeku: "young"
+    },
+    {
+        name: "[VS1] Tenpo Kari",
+        outbreak: "14",
+        persistence: "2",
+        rigidity: "31",
+        hit: "D",
+        guard: "-7",
+        damage: "90",
+        stan: "150",
+        remarks: "On hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nCA*V*Only on hit",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL I) MP MK",
+        zeku: "young"
+    },
+    {
+        name: "[VS2] Kuchiyose - Bii",
+        outbreak: "54",
+        persistence: "21",
+        rigidity: "64 total frames",
+        hit: "D",
+        guard: "",
+        damage: "60",
+        stan: "80",
+        remarks: "The ferret will be destroyed if Zeku takes damage\nS*Can be canceled with Shukumyo",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(WHEN SELECTING VSKILL II) MP MK",
+        zeku: "young"
+    },
+    {
+        name: "Karura Tenzan",
+        outbreak: "1+5",
+        persistence: "8",
+        rigidity: "39",
+        hit: "D",
+        guard: "-28",
+        damage: "140",
+        stan: "150",
+        remarks: "V-Gauge Timer + 2000F\n                                                                                                                                1F - 13F  projectile & throw invincibility\n                1F - 13F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Old Zeku and performs an additional strike\nHold forward on hit to switch sides\nS*Landing recovery can be canceled with EX Special Move after successful hit",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP HK",
+        zeku: "young"
+    },
+    {
+        name: "Toushi",
+        outbreak: "12",
+        persistence: "2",
+        rigidity: "24",
+        hit: "2",
+        guard: "-2",
+        damage: "40",
+        stan: "0",
+        remarks: "1F - 25F  attack & projectile invincibility\n                                                Recover 200 stun upon activation",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "(DURING GUARD) → + LP",
+        zeku: "young"
+    },
+    {
+        name: "V-Shift",
+        outbreak: "1",
+        persistence: "9",
+        rigidity: "22",
+        hit: "",
+        guard: "",
+        damage: "",
+        stan: "",
+        remarks: "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK",
+        zeku: "young"
+    },
+    {
+        name: "Habakiri",
+        outbreak: "8",
+        persistence: "3",
+        rigidity: "23",
+        hit: "D",
+        guard: "-2",
+        damage: "60",
+        stan: "0",
+        remarks: "1F - 10F  full invincibility",
+        vtrigger: 2,
+        type: "vsystem",
+        command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK",
+        zeku: "young"
+    },
+    {
+        name: "L Bushin Sho",
+        outbreak: "12",
+        persistence: "6",
+        rigidity: "20",
+        hit: "D",
+        guard: "-4",
+        damage: "60",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Bushin Sho",
+        outbreak: "18",
+        persistence: "6",
+        rigidity: "16",
+        hit: "D",
+        guard: "-2",
+        damage: "90",
+        stan: "150",
+        remarks: "Hit anywhere during the active frames causes 2 hits\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Bushin Sho",
+        outbreak: "24",
+        persistence: "6",
+        rigidity: "15",
+        hit: "D",
+        guard: "2",
+        damage: "120",
+        stan: "200",
+        remarks: "Hit anywhere during the active frames causes 3 hits\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Bushin Sho",
+        outbreak: "23",
+        persistence: "6",
+        rigidity: "21",
+        hit: "(crumple)",
+        guard: "2",
+        damage: "80",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + P P",
+        zeku: "young"
+    },
+    {
+        name: "L Hozanto",
+        outbreak: "12",
+        persistence: "6",
+        rigidity: "12(*22)",
+        hit: "D",
+        guard: "-6",
+        damage: "60",
+        stan: "100",
+        remarks: "Upper body invincibility to airborne attacks from 1F - 17F\n*Recovery increases by 10F on whiff.\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Hozanto",
+        outbreak: "22",
+        persistence: "6",
+        rigidity: "13",
+        hit: "D",
+        guard: "-6",
+        damage: "70",
+        stan: "100",
+        remarks: "Upper body projectile invincibility from 8F - 27F\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Hozanto",
+        outbreak: "26",
+        persistence: "5",
+        rigidity: "14",
+        hit: "D",
+        guard: "-6",
+        damage: "90",
+        stan: "100",
+        remarks: "Upper body projectile invincibility from 7F - 30F\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Hozanto",
+        outbreak: "16",
+        persistence: "9",
+        rigidity: "14",
+        hit: "D",
+        guard: "-6",
+        damage: "100",
+        stan: "150",
+        remarks: "Upper body projectile invincibility from 7F - 19F\n2nd hit occurs only if 1st hit connects\n2nd hit can be jump cancelled\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↙← + P P",
+        zeku: "young"
+    },
+    {
+        name: "L Bushin Sangoku Otoshi",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "120",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + LP",
+        zeku: "young"
+    },
+    {
+        name: "M Bushin Sangoku Otoshi",
+        outbreak: "5",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "130",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + MP",
+        zeku: "young"
+    },
+    {
+        name: "H Bushin Sangoku Otoshi",
+        outbreak: "6",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "140",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nCombos only when performed from EX Hozanto jump cancel\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + HP",
+        zeku: "young"
+    },
+    {
+        name: "EX Bushin Sangoku Otoshi",
+        outbreak: "4",
+        persistence: "2",
+        rigidity: "6 frame(s) after landing",
+        hit: "D",
+        guard: "",
+        damage: "160",
+        stan: "200",
+        remarks: "Throws only airborne opponents\nS*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING VERTICAL OR FORWARD JUMP) (CLOSE TO OPPONENT IN AIR) ↓↘→ + P P",
+        zeku: "young"
+    },
+    {
+        name: "Hayagake",
+        outbreak: "",
+        persistence: "",
+        rigidity: "69 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Each branch move can be performed from 9F",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K",
+        zeku: "young"
+    },
+    {
+        name: "EX Hayagake",
+        outbreak: "",
+        persistence: "",
+        rigidity: "40 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "8F - 21F  full invincibility\n                                                Can transition into EX Ashikari/EX Gekkou after frame 8\nCan transition into EX Tozetsu after frame 9",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K",
+        zeku: "young"
+    },
+    {
+        name: "Tozetsu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "15 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K ▶ LK",
+        zeku: "young"
+    },
+    {
+        name: "Ashikari",
+        outbreak: "9",
+        persistence: "9",
+        rigidity: "27",
+        hit: "D",
+        guard: "-21",
+        damage: "100",
+        stan: "120",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K ▶ MK",
+        zeku: "young"
+    },
+    {
+        name: "Gekkou",
+        outbreak: "22",
+        persistence: "4",
+        rigidity: "24",
+        hit: "D",
+        guard: "-5",
+        damage: "120",
+        stan: "150",
+        remarks: "S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "EX Tozetsu",
+        outbreak: "",
+        persistence: "",
+        rigidity: "12 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "1F - 3F  full invincibility",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K ▶ LK",
+        zeku: "young"
+    },
+    {
+        name: "EX Ashikari",
+        outbreak: "9",
+        persistence: "9",
+        rigidity: "27",
+        hit: "D",
+        guard: "-21",
+        damage: "130",
+        stan: "200",
+        remarks: "1F - 3F  full invincibility\n                                                S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K ▶ MK",
+        zeku: "young"
+    },
+    {
+        name: "EX Gekkou",
+        outbreak: "22",
+        persistence: "4",
+        rigidity: "24",
+        hit: "D",
+        guard: "-2",
+        damage: "150",
+        stan: "200",
+        remarks: "1F - 3F  full invincibility\n                                                S*Can be canceled into Shukumyo on hit only",
+        vtrigger: 2,
+        type: "special",
+        command: "↓↘→ + K K ▶ HK",
+        zeku: "young"
+    },
+    {
+        name: "Shukumyo",
+        outbreak: "",
+        persistence: "",
+        rigidity: "25 total frames",
+        hit: "",
+        guard: "",
+        damage: "0",
+        stan: "0",
+        remarks: "Changes into Old Zeku",
+        vtrigger: 2,
+        type: "special",
+        command: "↓ ↓ + P P",
+        zeku: "young"
+    },
+    {
+        name: "Karura Tenzan",
+        outbreak: "10",
+        persistence: "8",
+        rigidity: "39",
+        hit: "D",
+        guard: "-28",
+        damage: "140",
+        stan: "100",
+        remarks: "Uses all of the V-Gauge Timer\n                                                                                                                                1F - 17F  projectile & throw invincibility\n                1F - 17F  invincible to mid-air attacks\n                                Subject to counter hit during move duration\nOn hit, transforms into Young Zeku and performs an additional strike\nHold forward on hit to switch sides\nS*Landing recovery can be canceled with EX Special Move after successful hit",
+        vtrigger: 2,
+        type: "special",
+        command: "(DURING V-TRIGGER II) HP HK",
+        zeku: "young"
+    },
+    {
+        name: "Batsuzan Gaisei",
+        outbreak: "1+3",
+        persistence: "8",
+        rigidity: "47",
+        hit: "D",
+        guard: "-33",
+        damage: "340",
+        stan: "0",
+        remarks: "1F - 11F  full invincibility",
+        vtrigger: 2,
+        type: "ca",
+        command: "↓↘→ ↓↘→ + K",
+        zeku: "young"
     }
 ];
 exports.zeku = zeku;

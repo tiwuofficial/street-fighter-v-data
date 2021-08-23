@@ -22,7 +22,7 @@ const sakura = [
     guard: "3",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -64,7 +64,7 @@ const sakura = [
     guard: "1",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能\n*On whiff",
+    remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -79,7 +79,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (+20F)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter  (+20F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -135,7 +135,7 @@ const sakura = [
     guard: "0",
     damage: "20",
     stan: "70",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -164,7 +164,7 @@ const sakura = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 1,
     type: "normal",
     command: ""
@@ -291,7 +291,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS2のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill II\nCauses blowback knockdown on airborne hit",
     vtrigger: 1,
     type: "unique",
     command: "↘ + HK"
@@ -455,6 +455,35 @@ const sakura = [
     command: "(DURING GUARD) → + LK"
   },
   {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Floral Side-Kick",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 1,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
+  },
+  {
     name: "L Hadoken",
     outbreak: "15",
     persistence: "42",
@@ -520,7 +549,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Uses 800F V-Gauge Timer\n                                                                                                                                                                                VS*VS2キャンセルはヒット・ガード時のみ可能",
+      "Uses 800F V-Gauge Timer\n                                                                                                                                                                                VS*Can be canceled into V-Skill II on hit or block only",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + P"
@@ -591,7 +620,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Will not hit crouching opponents\n                                                                                                VS*VS2キャンセルはヒット・ガード時のみ可能",
+      "Will not hit crouching opponents\n                                                                                                VS*Can be canceled into V-Skill II on hit or block only",
     vtrigger: 1,
     type: "special",
     command: "↓↘→ + K"
@@ -686,7 +715,7 @@ const sakura = [
     outbreak: "17",
     persistence: "2",
     rigidity: "13+9 frame(s) after landing",
-    hit: "1",
+    hit: "2",
     guard: "-2",
     damage: "60",
     stan: "150",
@@ -732,7 +761,8 @@ const sakura = [
     guard: "-2",
     damage: "",
     stan: "",
-    remarks: "*立ち弱P、しゃがみ中Kキャンセル時",
+    remarks:
+      "*When canceled by standing light punch, crouching light punch, crouching medium kick\nV*Third attack can be canceled when blocked",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + K K"
@@ -746,7 +776,7 @@ const sakura = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "V*Only possible during 3rd attack",
     vtrigger: 1,
     type: "special",
     command: "↓↙← + K K"
@@ -847,7 +877,7 @@ const sakura = [
     guard: "3",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -889,7 +919,7 @@ const sakura = [
     guard: "1",
     damage: "60",
     stan: "100",
-    remarks: "VS*VS2のみキャンセル可能\n*On whiff",
+    remarks: "VS*Can only be canceled V-Skill II\n*On whiff",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -904,7 +934,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (+20F)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter  (+20F)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -960,7 +990,7 @@ const sakura = [
     guard: "0",
     damage: "20",
     stan: "70",
-    remarks: "VS*VS2のみキャンセル可能",
+    remarks: "VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -989,7 +1019,7 @@ const sakura = [
     damage: "90",
     stan: "150",
     remarks:
-      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*VS2のみキャンセル可能",
+      "Triggers Crush Counter  (D)\n                                                                                                                                                                VS*Can only be canceled V-Skill II",
     vtrigger: 2,
     type: "normal",
     command: ""
@@ -1116,7 +1146,7 @@ const sakura = [
     damage: "80",
     stan: "150",
     remarks:
-      "Forces stand\n                                                                                                                VS*VS2のみキャンセル可能",
+      "Forces stand\n                                                                                                                VS*Can only be canceled V-Skill II\nCauses blowback knockdown on airborne hit",
     vtrigger: 2,
     type: "unique",
     command: "↘ + HK"
@@ -1172,7 +1202,8 @@ const sakura = [
     guard: "",
     damage: "",
     stan: "",
-    remarks: "",
+    remarks:
+      "Follow-up attack timing differs when performed from a V-Trigger 2 powered Shunpukyaku",
     vtrigger: 2,
     type: "vsystem",
     command: "(WHEN SELECTING VSKILL I) MP MK"
@@ -1278,6 +1309,35 @@ const sakura = [
     vtrigger: 2,
     type: "vsystem",
     command: "(DURING GUARD) → + LK"
+  },
+  {
+    name: "V-Shift",
+    outbreak: "1",
+    persistence: "9",
+    rigidity: "22",
+    hit: "",
+    guard: "",
+    damage: "",
+    stan: "",
+    remarks:
+      "1F - 16F  throw invincibility\n                                                Allows you to evade strikes and projectiles from frames 1-9 (Increases the V-Gauge by 150 when the evasion triggers)\nCounterable during recovery\n17 frame move that's fully invincible until the end of recovery when evading attacks.\nTransitions to V-Shift Break when evading attacks.",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK"
+  },
+  {
+    name: "Floral Side-Kick",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "23",
+    hit: "D",
+    guard: "-2",
+    damage: "60",
+    stan: "0",
+    remarks: "1F - 10F  full invincibility",
+    vtrigger: 2,
+    type: "vsystem",
+    command: "HP MK ▶ (AFTER EVADING WITH V-SHIFT) HP MK"
   },
   {
     name: "L Hadoken",
@@ -1468,7 +1528,7 @@ const sakura = [
     outbreak: "17",
     persistence: "2",
     rigidity: "13+9 frame(s) after landing",
-    hit: "1",
+    hit: "2",
     guard: "-2",
     damage: "60",
     stan: "150",
@@ -1543,7 +1603,8 @@ const sakura = [
     guard: "-2",
     damage: "",
     stan: "",
-    remarks: "*立ち弱P、しゃがみ中Kキャンセル時",
+    remarks:
+      "*When canceled by standing light punch, crouching light punch, crouching medium kick\nV*Third attack can be canceled when blocked",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + K K"
@@ -1557,7 +1618,7 @@ const sakura = [
     guard: "",
     damage: "120",
     stan: "150",
-    remarks: "",
+    remarks: "V*Only possible during 3rd attack",
     vtrigger: 2,
     type: "special",
     command: "↓↙← + K K"
@@ -1606,4 +1667,5 @@ const sakura = [
     command: "↓↘→ ↓↘→ + P"
   }
 ];
+
 export { sakura };
