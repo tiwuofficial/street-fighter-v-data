@@ -9,7 +9,10 @@ function getCombosFromLocalStroage() {
     const combos = new Combos_1.default();
     const combosFromLS = JSON.parse(localStorage.getItem("combos"));
     if (combosFromLS) {
-        combosFromLS.reverse().forEach(comboFromLS => {
+        const sortedCombosFromLS = combosFromLS.sort((a, b) => {
+            return b.id - a.id;
+        });
+        sortedCombosFromLS.forEach(comboFromLS => {
             const character = character_1.characters.getCharacterById(comboFromLS.characterId);
             if (character) {
                 const frames = [];
