@@ -1,5 +1,458 @@
 const zeku = [
   {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中P",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強P",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "30",
+    hit: "-2",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "12",
+    hit: "7",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "強制立ち効果",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強K",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "24",
+    hit: "5",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応(+21F)",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "16",
+    hit: "7",
+    guard: "2",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (D)\n                                                強制立ち効果",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-8",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち弱P(韋駄天派生)",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "11",
+    hit: "2",
+    guard: "0",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中P(韋駄天派生)",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "19",
+    hit: "0",
+    guard: "-3",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強P(韋駄天派生)",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "34",
+    hit: "-8",
+    guard: "-11",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち弱K(韋駄天派生)",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "9",
+    hit: "1",
+    guard: "-1",
+    damage: "40",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中K(韋駄天派生)",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "18",
+    hit: "1",
+    guard: "-2",
+    damage: "50",
+    stan: "80",
+    remarks:
+      "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強K(韋駄天派生)",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "30",
+    hit: "-4",
+    guard: "-11",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱P(韋駄天派生)",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "2",
+    guard: "-1",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中P(韋駄天派生)",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "21",
+    hit: "0",
+    guard: "-4",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強P(韋駄天派生)",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "22",
+    hit: "1",
+    guard: "-4",
+    damage: "60",
+    stan: "100",
+    remarks:
+      "強制立ち効果\n                                                                                                                S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱K(韋駄天派生)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "10",
+    hit: "2",
+    guard: "0",
+    damage: "20",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中K(韋駄天派生)",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "22",
+    hit: "-7",
+    guard: "-11",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強K(韋駄天派生)",
+    outbreak: "12",
+    persistence: "2",
+    rigidity: "31",
+    hit: "D",
+    guard: "-14",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
     name: "脳巓割り",
     outbreak: "22",
     persistence: "4",
@@ -10,7 +463,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "→ + 強P",
     zeku: "old"
   },
@@ -25,7 +478,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(近距離で) → OR + 弱P 弱K",
     zeku: "old"
   },
@@ -40,7 +493,7 @@ const zeku = [
     stan: "200",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(近距離で) ← + 弱P 弱K",
     zeku: "old"
   },
@@ -56,7 +509,7 @@ const zeku = [
     remarks:
       "ヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅠ選択時) 中P 中K",
     zeku: "old"
   },
@@ -72,7 +525,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) ← + 中P 中K",
     zeku: "old"
   },
@@ -88,7 +541,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) + 中P 中K",
     zeku: "old"
   },
@@ -104,7 +557,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) → + 中P 中K",
     zeku: "old"
   },
@@ -120,7 +573,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー+1500F\n                                                                                                                                                                                韋駄天が使用可能になる",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 強K",
     zeku: "old"
   },
@@ -136,7 +589,7 @@ const zeku = [
     remarks:
       "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(ガード中に) → + 弱P",
     zeku: "old"
   },
@@ -152,7 +605,7 @@ const zeku = [
     remarks:
       "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 中K",
     zeku: "old"
   },
@@ -167,7 +620,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～10F 完全無敵",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
     zeku: "old"
   },
@@ -183,7 +636,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱K",
     zeku: "old"
   },
@@ -199,7 +652,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中K",
     zeku: "old"
   },
@@ -215,7 +668,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強K",
     zeku: "old"
   },
@@ -230,7 +683,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "old"
   },
@@ -245,7 +698,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱K",
     zeku: "old"
   },
@@ -260,7 +713,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中K",
     zeku: "old"
   },
@@ -275,7 +728,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強K",
     zeku: "old"
   },
@@ -290,7 +743,7 @@ const zeku = [
     stan: "100",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "old"
   },
@@ -306,7 +759,7 @@ const zeku = [
     remarks:
       "1F～5F 投げ無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 弱K",
     zeku: "old"
   },
@@ -322,7 +775,7 @@ const zeku = [
     remarks:
       "3F～12F 飛び道具無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 中K",
     zeku: "old"
   },
@@ -338,7 +791,7 @@ const zeku = [
     remarks:
       "1F～8F 空中判定の攻撃に対して無敵\n                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 強K",
     zeku: "old"
   },
@@ -354,7 +807,7 @@ const zeku = [
     remarks:
       "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + K K",
     zeku: "old"
   },
@@ -370,7 +823,7 @@ const zeku = [
     remarks:
       "1F～5F 投げ無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 弱K",
     zeku: "old"
   },
@@ -386,7 +839,7 @@ const zeku = [
     remarks:
       "3F～12F 飛び道具無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 中K",
     zeku: "old"
   },
@@ -402,7 +855,7 @@ const zeku = [
     remarks:
       "1F～8F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + 強K",
     zeku: "old"
   },
@@ -418,7 +871,7 @@ const zeku = [
     remarks:
       "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "→↓↘ + K K",
     zeku: "old"
   },
@@ -434,7 +887,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱K",
     zeku: "old"
   },
@@ -450,7 +903,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 中K",
     zeku: "old"
   },
@@ -466,7 +919,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 強K",
     zeku: "old"
   },
@@ -482,7 +935,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + K K",
     zeku: "old"
   },
@@ -498,7 +951,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱K",
     zeku: "old"
   },
@@ -514,7 +967,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 中K",
     zeku: "old"
   },
@@ -530,7 +983,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 強K",
     zeku: "old"
   },
@@ -545,7 +998,7 @@ const zeku = [
     stan: "100",
     remarks: "武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + K K",
     zeku: "old"
   },
@@ -560,7 +1013,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱P",
     zeku: "old"
   },
@@ -575,7 +1028,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中P",
     zeku: "old"
   },
@@ -590,7 +1043,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強P",
     zeku: "old"
   },
@@ -605,7 +1058,7 @@ const zeku = [
     stan: "0",
     remarks: "発生後レバー入力により前後移動が可能\n発生から着地まで飛び道具無敵",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P",
     zeku: "old"
   },
@@ -620,7 +1073,7 @@ const zeku = [
     stan: "100",
     remarks: "めくり状態でしか当たらない",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) P",
     zeku: "old"
   },
@@ -635,7 +1088,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) K",
     zeku: "old"
   },
@@ -650,7 +1103,7 @@ const zeku = [
     stan: "200",
     remarks: "空中・しゃがんでいる相手は投げられない",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) 弱P 弱K",
     zeku: "old"
   },
@@ -665,7 +1118,7 @@ const zeku = [
     stan: "150",
     remarks: "めくり状態でしか当たらない",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) P",
     zeku: "old"
   },
@@ -680,7 +1133,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) K",
     zeku: "old"
   },
@@ -695,7 +1148,7 @@ const zeku = [
     stan: "250",
     remarks: "空中・しゃがんでいる相手は投げられない",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) 弱P 弱K",
     zeku: "old"
   },
@@ -710,7 +1163,7 @@ const zeku = [
     stan: "0",
     remarks: "若に変身する",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓ ↓ + P P",
     zeku: "old"
   },
@@ -726,7 +1179,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー全消費\n                                                                                                                                16F～17F 飛び道具&投げ無敵\n3F～15F 完全無敵\n                                                Vトリガーキャンセルできる技からキャンセル可能\n動作中は弱P→弱K→中P→中K→強P→強Kの順番（立ちしゃがみ区別なし）でチェーンコンボが可能な特殊な通常技が出せる\n韋駄天動作中、またはチェーンコンボ中に武神白蛇掌へ派生可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(Vトリガー発動中) 強P 強K",
     zeku: "old"
   },
@@ -741,7 +1194,7 @@ const zeku = [
     stan: "200",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(韋駄天・韋駄天からの攻撃中に) 強P 強K",
     zeku: "old"
   },
@@ -756,8 +1209,279 @@ const zeku = [
     stan: "0",
     remarks: "1F～11F 完全無敵",
     vtrigger: 1,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + K",
+    zeku: "old"
+  },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中P",
+    outbreak: "6",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強P",
+    outbreak: "9",
+    persistence: "2",
+    rigidity: "30",
+    hit: "-2",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "6",
+    hit: "4",
+    guard: "2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "12",
+    hit: "7",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "立ち強K",
+    outbreak: "13",
+    persistence: "2",
+    rigidity: "24",
+    hit: "5",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応(+21F)",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "7",
+    hit: "4",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "16",
+    hit: "7",
+    guard: "2",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (D)\n                                                強制立ち効果",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "2",
+    rigidity: "25",
+    hit: "D",
+    guard: "-8",
+    damage: "90",
+    stan: "150",
+    remarks: "クラッシュカウンター対応 (D)",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "5",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "4",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "old"
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "10",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
     zeku: "old"
   },
   {
@@ -771,7 +1495,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "→ + 強P",
     zeku: "old"
   },
@@ -786,7 +1510,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(近距離で) → OR + 弱P 弱K",
     zeku: "old"
   },
@@ -801,7 +1525,7 @@ const zeku = [
     stan: "200",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(近距離で) ← + 弱P 弱K",
     zeku: "old"
   },
@@ -817,7 +1541,7 @@ const zeku = [
     remarks:
       "ヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅠ選択時) 中P 中K",
     zeku: "old"
   },
@@ -833,7 +1557,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) ← + 中P 中K",
     zeku: "old"
   },
@@ -849,7 +1573,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) + 中P 中K",
     zeku: "old"
   },
@@ -865,7 +1589,7 @@ const zeku = [
     remarks:
       "レバー入れで爆竹の設置位置を変更できる\n爆竹設置前に本体がダメージを受けると、爆竹を設置せずに蒔威(鷹)が消滅する\nS※宿命でキャンセル可能\n※爆発部分の数値",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) → + 中P 中K",
     zeku: "old"
   },
@@ -881,7 +1605,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー+2000F\n                                                                                                                                1F～13F 飛び道具&投げ無敵\n                1F～13F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\n発動中、必殺技に「迦楼羅天斬」が追加\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 強K",
     zeku: "old"
   },
@@ -897,7 +1621,7 @@ const zeku = [
     remarks:
       "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(ガード中に) → + 弱P",
     zeku: "old"
   },
@@ -913,7 +1637,7 @@ const zeku = [
     remarks:
       "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 中K",
     zeku: "old"
   },
@@ -928,7 +1652,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～10F 完全無敵",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
     zeku: "old"
   },
@@ -944,7 +1668,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱K",
     zeku: "old"
   },
@@ -960,7 +1684,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中K",
     zeku: "old"
   },
@@ -976,7 +1700,7 @@ const zeku = [
     remarks:
       "根元の攻撃判定が当たった場合に飛び道具が射出されない\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強K",
     zeku: "old"
   },
@@ -991,7 +1715,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "old"
   },
@@ -1006,7 +1730,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱K",
     zeku: "old"
   },
@@ -1021,7 +1745,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中K",
     zeku: "old"
   },
@@ -1036,7 +1760,7 @@ const zeku = [
     stan: "100",
     remarks: "近距離に1発分の相殺判定が別に付く\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強K",
     zeku: "old"
   },
@@ -1051,7 +1775,7 @@ const zeku = [
     stan: "100",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "old"
   },
@@ -1067,7 +1791,7 @@ const zeku = [
     remarks:
       "1F～5F 投げ無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 弱K",
     zeku: "old"
   },
@@ -1083,7 +1807,7 @@ const zeku = [
     remarks:
       "3F～12F 飛び道具無敵\n                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 中K",
     zeku: "old"
   },
@@ -1099,7 +1823,7 @@ const zeku = [
     remarks:
       "1F～8F 空中判定の攻撃に対して無敵\n                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 強K",
     zeku: "old"
   },
@@ -1115,7 +1839,7 @@ const zeku = [
     remarks:
       "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + K K",
     zeku: "old"
   },
@@ -1131,7 +1855,7 @@ const zeku = [
     remarks:
       "1F～5F 投げ無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 弱K",
     zeku: "old"
   },
@@ -1147,7 +1871,7 @@ const zeku = [
     remarks:
       "3F～12F 飛び道具無敵\n                                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 中K",
     zeku: "old"
   },
@@ -1163,7 +1887,7 @@ const zeku = [
     remarks:
       "1F～8F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + 強K",
     zeku: "old"
   },
@@ -1179,7 +1903,7 @@ const zeku = [
     remarks:
       "1F～7F 完全無敵\n                                                動作中常に被カウンター判定(被ダメージ1.2倍)\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "→↓↘ + K K",
     zeku: "old"
   },
@@ -1195,7 +1919,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱K",
     zeku: "old"
   },
@@ -1211,7 +1935,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 中K",
     zeku: "old"
   },
@@ -1227,7 +1951,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                根元の攻撃判定が当たった場合に飛び道具が射出されない\n武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命、EX武神俱羅無・狄でキャンセル可能\nVS※ヒット時",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 強K",
     zeku: "old"
   },
@@ -1243,7 +1967,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + K K",
     zeku: "old"
   },
@@ -1259,7 +1983,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱K",
     zeku: "old"
   },
@@ -1275,7 +1999,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 中K",
     zeku: "old"
   },
@@ -1291,7 +2015,7 @@ const zeku = [
     remarks:
       "しゃがみの相手にヒットしない\n                                                                                                武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 強K",
     zeku: "old"
   },
@@ -1306,7 +2030,7 @@ const zeku = [
     stan: "100",
     remarks: "武神倶羅無・刻と武神倶羅無・蛮に派生できる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + K K",
     zeku: "old"
   },
@@ -1321,7 +2045,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱P",
     zeku: "old"
   },
@@ -1336,7 +2060,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中P",
     zeku: "old"
   },
@@ -1351,7 +2075,7 @@ const zeku = [
     stan: "0",
     remarks: "強度によって飛距離と全体動作が変化する",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強P",
     zeku: "old"
   },
@@ -1366,7 +2090,7 @@ const zeku = [
     stan: "0",
     remarks: "発生後レバー入力により前後移動が可能\n発生から着地まで飛び道具無敵",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P",
     zeku: "old"
   },
@@ -1381,7 +2105,7 @@ const zeku = [
     stan: "100",
     remarks: "めくり状態でしか当たらない",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) P",
     zeku: "old"
   },
@@ -1396,7 +2120,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) K",
     zeku: "old"
   },
@@ -1411,7 +2135,7 @@ const zeku = [
     stan: "200",
     remarks: "空中・しゃがんでいる相手は投げられない",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(武神雀羅中に) 弱P 弱K",
     zeku: "old"
   },
@@ -1426,7 +2150,7 @@ const zeku = [
     stan: "150",
     remarks: "めくり状態でしか当たらない",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) P",
     zeku: "old"
   },
@@ -1441,7 +2165,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) K",
     zeku: "old"
   },
@@ -1456,7 +2180,7 @@ const zeku = [
     stan: "250",
     remarks: "空中・しゃがんでいる相手は投げられない",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(EX武神雀羅中に) 弱P 弱K",
     zeku: "old"
   },
@@ -1471,7 +2195,7 @@ const zeku = [
     stan: "0",
     remarks: "若に変身する",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓ ↓ + P P",
     zeku: "old"
   },
@@ -1487,7 +2211,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー全消費\n                                                                                                                                1F～17F 飛び道具&投げ無敵\n                1F～17F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K",
     zeku: "old"
   },
@@ -1502,9 +2226,461 @@ const zeku = [
     stan: "0",
     remarks: "1F～11F 完全無敵",
     vtrigger: 2,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + K",
     zeku: "old"
+  },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "3",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中P",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "16",
+    hit: "8",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強P",
+    outbreak: "12",
+    persistence: "2",
+    rigidity: "20(※25)",
+    hit: "2",
+    guard: "-3",
+    damage: "80",
+    stan: "150",
+    remarks: "※空振りすると硬直が5F伸びる",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "10",
+    hit: "4",
+    guard: "-2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強K",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "19(※24)",
+    hit: "3",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "※空振りすると硬直が5F伸びる",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "3",
+    rigidity: "20(※25)",
+    hit: "1",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (+21F)\n                                                                                                                                                                ※空振りすると硬直が5F伸びる",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "16",
+    hit: "2",
+    guard: "-3",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "11",
+    rigidity: "20",
+    hit: "D(※3)",
+    guard: "-13",
+    damage: "90",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (D※+13F)\n                                                                                                                                                                持続後半の4フレームはのけぞりやられになる\n※持続の8F目が当たった場合",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "5",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "空中ヒット時吹き飛びやられ",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "5",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "8",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 1,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち弱P(韋駄天派生)",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "11",
+    hit: "1",
+    guard: "-1",
+    damage: "30",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中P(韋駄天派生)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "21",
+    hit: "1",
+    guard: "-3",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強P(韋駄天派生)",
+    outbreak: "12",
+    persistence: "2",
+    rigidity: "26",
+    hit: "-4",
+    guard: "-8",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち弱K(韋駄天派生)",
+    outbreak: "5",
+    persistence: "4",
+    rigidity: "9",
+    hit: "1",
+    guard: "0",
+    damage: "40",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中K(韋駄天派生)",
+    outbreak: "8",
+    persistence: "4",
+    rigidity: "23",
+    hit: "-3",
+    guard: "-8",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強K(韋駄天派生)",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "25",
+    hit: "-3",
+    guard: "-8",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱P(韋駄天派生)",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "10",
+    hit: "2",
+    guard: "0",
+    damage: "20",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中P(韋駄天派生)",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "19",
+    hit: "-2",
+    guard: "-4",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強P(韋駄天派生)",
+    outbreak: "10",
+    persistence: "3",
+    rigidity: "26",
+    hit: "-5",
+    guard: "-9",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱K(韋駄天派生)",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "10",
+    hit: "1",
+    guard: "0",
+    damage: "20",
+    stan: "70",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中K(韋駄天派生)",
+    outbreak: "8",
+    persistence: "3",
+    rigidity: "21",
+    hit: "-4",
+    guard: "-8",
+    damage: "50",
+    stan: "80",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強K(韋駄天派生)",
+    outbreak: "10",
+    persistence: "11",
+    rigidity: "26",
+    hit: "D",
+    guard: "-18",
+    damage: "60",
+    stan: "100",
+    remarks: "S※CA※初段で使用した時のみ",
+    vtrigger: 1,
+    type: "normal",
+    command: "",
+    zeku: "young"
   },
   {
     name: "首砕き",
@@ -1517,7 +2693,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "→ + 強P",
     zeku: "young"
   },
@@ -1532,7 +2708,7 @@ const zeku = [
     stan: "100",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "強P ▶ 強P",
     zeku: "young"
   },
@@ -1547,7 +2723,7 @@ const zeku = [
     stan: "100",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "↓ + 強P ▶ ↓ + 強P",
     zeku: "young"
   },
@@ -1563,7 +2739,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nCA※ヒット時のみ可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) 強P ▶ 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -1579,7 +2755,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nCA※ヒット時のみ可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) ↓ + 強P ▶ ↓ + 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -1594,7 +2770,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(VスキルⅡ選択時) 強P ▶ 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -1609,7 +2785,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(VスキルⅡ選択時) ↓ + 強P ▶ ↓ + 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -1624,7 +2800,7 @@ const zeku = [
     stan: "",
     remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(ジャンプ中、壁付近で) →",
     zeku: "young"
   },
@@ -1639,7 +2815,7 @@ const zeku = [
     stan: "",
     remarks: "押すボタンで飛距離が変化\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(三角跳び中、壁付近で) P",
     zeku: "young"
   },
@@ -1654,7 +2830,7 @@ const zeku = [
     stan: "150",
     remarks: "押すボタンで移動距離が変化\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "(三角跳び中、壁付近で) K",
     zeku: "young"
   },
@@ -1669,7 +2845,7 @@ const zeku = [
     stan: "80",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "中P ▶ 強P",
     zeku: "young"
   },
@@ -1684,7 +2860,7 @@ const zeku = [
     stan: "80",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P",
     zeku: "young"
   },
@@ -1699,7 +2875,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P",
     zeku: "young"
   },
@@ -1714,7 +2890,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P ▶ 強K",
     zeku: "young"
   },
@@ -1729,7 +2905,7 @@ const zeku = [
     stan: "200",
     remarks: "武神獄鎖拳・参の1段目からのみ出せる",
     vtrigger: 1,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P ▶ ↓ + 強K",
     zeku: "young"
   },
@@ -1744,7 +2920,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(近距離で) → OR + 弱P 弱K",
     zeku: "young"
   },
@@ -1759,7 +2935,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "throw",
     command: "(近距離で) ← + 弱P 弱K",
     zeku: "young"
   },
@@ -1775,7 +2951,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅠ選択時) 中P 中K",
     zeku: "young"
   },
@@ -1790,7 +2966,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K",
     zeku: "young"
   },
@@ -1806,7 +2982,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー+1500F\n                                                                                                                                                                                韋駄天が使用可能になる",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 強K",
     zeku: "young"
   },
@@ -1822,7 +2998,7 @@ const zeku = [
     remarks:
       "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "(ガード中に) → + 弱P",
     zeku: "young"
   },
@@ -1838,7 +3014,7 @@ const zeku = [
     remarks:
       "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 中K",
     zeku: "young"
   },
@@ -1853,7 +3029,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～10F 完全無敵",
     vtrigger: 1,
-    type: "",
+    type: "vsystem",
     command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
     zeku: "young"
   },
@@ -1868,7 +3044,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱P",
     zeku: "young"
   },
@@ -1883,7 +3059,7 @@ const zeku = [
     stan: "150",
     remarks: "持続のどの部分で当たっても2ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中P",
     zeku: "young"
   },
@@ -1898,7 +3074,7 @@ const zeku = [
     stan: "200",
     remarks: "持続のどの部分で当たっても3ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強P",
     zeku: "young"
   },
@@ -1913,7 +3089,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P",
     zeku: "young"
   },
@@ -1929,7 +3105,7 @@ const zeku = [
     remarks:
       "1F～17F目まで上半身のみ空中判定の攻撃に対して無敵\n※空振りすると硬直が10F伸びる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱P",
     zeku: "young"
   },
@@ -1944,7 +3120,7 @@ const zeku = [
     stan: "100",
     remarks: "8F～27F目まで上半身のみ弾無敵\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 中P",
     zeku: "young"
   },
@@ -1959,7 +3135,7 @@ const zeku = [
     stan: "100",
     remarks: "7F～30F目まで上半身のみ弾無敵\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + 強P",
     zeku: "young"
   },
@@ -1975,7 +3151,7 @@ const zeku = [
     remarks:
       "7F～19F目まで上半身のみ弾無敵\nヒット時のみ2段目に派生する\n2段目ヒット時ジャンプキャンセル可能\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↙← + P P",
     zeku: "young"
   },
@@ -1991,7 +3167,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 弱P",
     zeku: "young"
   },
@@ -2007,7 +3183,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 中P",
     zeku: "young"
   },
@@ -2023,7 +3199,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 強P",
     zeku: "young"
   },
@@ -2038,7 +3214,7 @@ const zeku = [
     stan: "200",
     remarks: "空中判定の相手のみ投げられる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + P P",
     zeku: "young"
   },
@@ -2053,7 +3229,7 @@ const zeku = [
     stan: "0",
     remarks: "9F目から各技に派生可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K",
     zeku: "young"
   },
@@ -2069,7 +3245,7 @@ const zeku = [
     remarks:
       "8F～21F 完全無敵\n                                                8FからEX葦刈/EX月光に派生可能\n9FからEX杜絶に派生可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "young"
   },
@@ -2084,7 +3260,7 @@ const zeku = [
     stan: "0",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 弱K",
     zeku: "young"
   },
@@ -2099,7 +3275,7 @@ const zeku = [
     stan: "120",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 中K",
     zeku: "young"
   },
@@ -2114,7 +3290,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 強K",
     zeku: "young"
   },
@@ -2129,7 +3305,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～3F 完全無敵",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 弱K",
     zeku: "young"
   },
@@ -2145,7 +3321,7 @@ const zeku = [
     remarks:
       "1F～3F 完全無敵\n                                                S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 中K",
     zeku: "young"
   },
@@ -2161,7 +3337,7 @@ const zeku = [
     remarks:
       "1F～3F 完全無敵\n                                                S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 強K",
     zeku: "young"
   },
@@ -2176,7 +3352,7 @@ const zeku = [
     stan: "0",
     remarks: "老に変身する",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "↓ ↓ + P P",
     zeku: "young"
   },
@@ -2192,7 +3368,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー全消費\n                                                                                                                                16F～17F 飛び道具&投げ無敵\n3F～15F 完全無敵\n                                                Vトリガーキャンセルできる技からキャンセル可能\n動作中は弱P→弱K→中P→中K→強P→強Kの順番（立ちしゃがみ区別なし）でチェーンコンボが可能な特殊な通常技が出せる\n韋駄天動作中、またはチェーンコンボ中に武神青竜脚へ派生可能",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(Vトリガー発動中) 強P 強K",
     zeku: "young"
   },
@@ -2207,7 +3383,7 @@ const zeku = [
     stan: "200",
     remarks: "",
     vtrigger: 1,
-    type: "",
+    type: "special",
     command: "(韋駄天・韋駄天からの攻撃中に) 強P 強K",
     zeku: "young"
   },
@@ -2222,8 +3398,280 @@ const zeku = [
     stan: "0",
     remarks: "1F～11F 完全無敵",
     vtrigger: 1,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + K",
+    zeku: "young"
+  },
+  {
+    name: "立ち弱P",
+    outbreak: "4",
+    persistence: "2",
+    rigidity: "9",
+    hit: "3",
+    guard: "2",
+    damage: "30",
+    stan: "70",
+    remarks: "連打キャンセル対応",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中P",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "16",
+    hit: "8",
+    guard: "2",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強P",
+    outbreak: "12",
+    persistence: "2",
+    rigidity: "20(※25)",
+    hit: "2",
+    guard: "-3",
+    damage: "80",
+    stan: "150",
+    remarks: "※空振りすると硬直が5F伸びる",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち弱K",
+    outbreak: "4",
+    persistence: "3",
+    rigidity: "10",
+    hit: "4",
+    guard: "-2",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "17",
+    hit: "2",
+    guard: "-3",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "立ち強K",
+    outbreak: "12",
+    persistence: "4",
+    rigidity: "19(※24)",
+    hit: "3",
+    guard: "-2",
+    damage: "90",
+    stan: "150",
+    remarks: "※空振りすると硬直が5F伸びる",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱P",
+    outbreak: "3",
+    persistence: "2",
+    rigidity: "8",
+    hit: "4",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中P",
+    outbreak: "6",
+    persistence: "3",
+    rigidity: "14",
+    hit: "5",
+    guard: "1",
+    damage: "60",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強P",
+    outbreak: "10",
+    persistence: "3",
+    rigidity: "20(※25)",
+    hit: "1",
+    guard: "-5",
+    damage: "80",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (+21F)\n                                                                                                                                                                ※空振りすると硬直が5F伸びる",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ弱K",
+    outbreak: "5",
+    persistence: "2",
+    rigidity: "8",
+    hit: "3",
+    guard: "2",
+    damage: "20",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ中K",
+    outbreak: "7",
+    persistence: "3",
+    rigidity: "16",
+    hit: "2",
+    guard: "-3",
+    damage: "50",
+    stan: "100",
+    remarks: "",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "しゃがみ強K",
+    outbreak: "10",
+    persistence: "11",
+    rigidity: "20",
+    hit: "D(※3)",
+    guard: "-13",
+    damage: "90",
+    stan: "150",
+    remarks:
+      "クラッシュカウンター対応 (D※+13F)\n                                                                                                                                                                持続後半の4フレームはのけぞりやられになる\n※持続の8F目が当たった場合",
+    vtrigger: 2,
+    type: "normal",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ弱P",
+    outbreak: "5",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ中P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "空中ヒット時吹き飛びやられ",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ強P",
+    outbreak: "8",
+    persistence: "2",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ弱K",
+    outbreak: "5",
+    persistence: "6",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "40",
+    stan: "70",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ中K",
+    outbreak: "7",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "60",
+    stan: "100",
+    remarks: "めくり性能",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
+    zeku: "young"
+  },
+  {
+    name: "ジャンプ強K",
+    outbreak: "8",
+    persistence: "4",
+    rigidity: "",
+    hit: "",
+    guard: "",
+    damage: "90",
+    stan: "150",
+    remarks: "",
+    vtrigger: 2,
+    type: "jump",
+    command: "",
     zeku: "young"
   },
   {
@@ -2237,7 +3685,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "→ + 強P",
     zeku: "young"
   },
@@ -2252,7 +3700,7 @@ const zeku = [
     stan: "100",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "強P ▶ 強P",
     zeku: "young"
   },
@@ -2267,7 +3715,7 @@ const zeku = [
     stan: "100",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "↓ + 強P ▶ ↓ + 強P",
     zeku: "young"
   },
@@ -2283,7 +3731,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nCA※V※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) 強P ▶ 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -2299,7 +3747,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nCA※V※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(VスキルⅠ選択時) ↓ + 強P ▶ ↓ + 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -2314,7 +3762,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(VスキルⅡ選択時) 強P ▶ 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -2329,7 +3777,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(VスキルⅡ選択時) ↓ + 強P ▶ ↓ + 強P ▶ 中P 中K",
     zeku: "young"
   },
@@ -2344,7 +3792,7 @@ const zeku = [
     stan: "",
     remarks: "動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(ジャンプ中、壁付近で) →",
     zeku: "young"
   },
@@ -2359,7 +3807,7 @@ const zeku = [
     stan: "",
     remarks: "押すボタンで飛距離が変化\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(三角跳び中、壁付近で) P",
     zeku: "young"
   },
@@ -2374,7 +3822,7 @@ const zeku = [
     stan: "150",
     remarks: "押すボタンで移動距離が変化\n動作開始から着地までの間、特殊な被カウンター状態",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "(三角跳び中、壁付近で) K",
     zeku: "young"
   },
@@ -2389,7 +3837,7 @@ const zeku = [
     stan: "80",
     remarks: "S※CA※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "中P ▶ 強P",
     zeku: "young"
   },
@@ -2404,7 +3852,7 @@ const zeku = [
     stan: "80",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P",
     zeku: "young"
   },
@@ -2419,7 +3867,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P",
     zeku: "young"
   },
@@ -2434,7 +3882,7 @@ const zeku = [
     stan: "100",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P ▶ 強K",
     zeku: "young"
   },
@@ -2449,7 +3897,7 @@ const zeku = [
     stan: "200",
     remarks: "武神獄鎖拳・参の1段目からのみ出せる",
     vtrigger: 2,
-    type: "",
+    type: "unique",
     command: "弱P ▶ 中P ▶ 強P ▶ ↓ + 強K",
     zeku: "young"
   },
@@ -2464,7 +3912,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(近距離で) → OR + 弱P 弱K",
     zeku: "young"
   },
@@ -2479,7 +3927,7 @@ const zeku = [
     stan: "150",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "throw",
     command: "(近距離で) ← + 弱P 弱K",
     zeku: "young"
   },
@@ -2495,7 +3943,7 @@ const zeku = [
     remarks:
       "ヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nCA※V※ヒット時のみ可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅠ選択時) 中P 中K",
     zeku: "young"
   },
@@ -2510,7 +3958,7 @@ const zeku = [
     stan: "80",
     remarks: "本体がダメージを受けると毘居(鼬)が消滅する\nS※宿命でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(VスキルⅡ選択時) 中P 中K",
     zeku: "young"
   },
@@ -2526,7 +3974,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー+2000F\n                                                                                                                                1F～13F 飛び道具&投げ無敵\n                1F～13F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると老に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 強K",
     zeku: "young"
   },
@@ -2542,7 +3990,7 @@ const zeku = [
     remarks:
       "1F～25F 打撃&飛び道具無敵\n                                                発動時スタン値200回復",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "(ガード中に) → + 弱P",
     zeku: "young"
   },
@@ -2558,7 +4006,7 @@ const zeku = [
     remarks:
       "1F～16F 投げ無敵\n                                                1～9F　相手の打撃と飛び道具を避ける判定（回避時Vゲージ150増加）\n硬直中は被カウンター判定\n攻撃回避時、硬直終了まで完全無敵、全体フレームが17Fになる\n攻撃回避時、Vシフトブレイクに移行可能",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 中K",
     zeku: "young"
   },
@@ -2573,7 +4021,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～10F 完全無敵",
     vtrigger: 2,
-    type: "",
+    type: "vsystem",
     command: "強P 中K ▶ (V-シフトで攻撃回避後に) 強P 中K",
     zeku: "young"
   },
@@ -2588,7 +4036,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 弱P",
     zeku: "young"
   },
@@ -2603,7 +4051,7 @@ const zeku = [
     stan: "150",
     remarks: "持続のどの部分で当たっても2ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 中P",
     zeku: "young"
   },
@@ -2618,7 +4066,7 @@ const zeku = [
     stan: "200",
     remarks: "持続のどの部分で当たっても3ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + 強P",
     zeku: "young"
   },
@@ -2633,7 +4081,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + P P",
     zeku: "young"
   },
@@ -2649,7 +4097,7 @@ const zeku = [
     remarks:
       "1F～17F目まで上半身のみ空中判定の攻撃に対して無敵\n※空振りすると硬直が10F伸びる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 弱P",
     zeku: "young"
   },
@@ -2664,7 +4112,7 @@ const zeku = [
     stan: "100",
     remarks: "8F～27F目まで上半身のみ弾無敵\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 中P",
     zeku: "young"
   },
@@ -2679,7 +4127,7 @@ const zeku = [
     stan: "100",
     remarks: "7F～30F目まで上半身のみ弾無敵\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + 強P",
     zeku: "young"
   },
@@ -2695,7 +4143,7 @@ const zeku = [
     remarks:
       "7F～19F目まで上半身のみ弾無敵\nヒット時のみ2段目に派生する\n2段目ヒット時ジャンプキャンセル可能\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↙← + P P",
     zeku: "young"
   },
@@ -2711,7 +4159,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 弱P",
     zeku: "young"
   },
@@ -2727,7 +4175,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 中P",
     zeku: "young"
   },
@@ -2743,7 +4191,7 @@ const zeku = [
     remarks:
       "空中判定の相手のみ投げられる\nEX崩山斗からジャンプキャンセルした時のみ連続ヒットする\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + 強P",
     zeku: "young"
   },
@@ -2758,7 +4206,7 @@ const zeku = [
     stan: "200",
     remarks: "空中判定の相手のみ投げられる\nS※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(垂直・前ジャンプ中に) (空中の相手に対して近距離で) ↓↘→ + P P",
     zeku: "young"
   },
@@ -2773,7 +4221,7 @@ const zeku = [
     stan: "0",
     remarks: "9F目から各技に派生可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K",
     zeku: "young"
   },
@@ -2789,7 +4237,7 @@ const zeku = [
     remarks:
       "8F～21F 完全無敵\n                                                8FからEX葦刈/EX月光に派生可能\n9FからEX杜絶に派生可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K",
     zeku: "young"
   },
@@ -2804,7 +4252,7 @@ const zeku = [
     stan: "0",
     remarks: "",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 弱K",
     zeku: "young"
   },
@@ -2819,7 +4267,7 @@ const zeku = [
     stan: "120",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 中K",
     zeku: "young"
   },
@@ -2834,7 +4282,7 @@ const zeku = [
     stan: "150",
     remarks: "S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K ▶ 強K",
     zeku: "young"
   },
@@ -2849,7 +4297,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～3F 完全無敵",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 弱K",
     zeku: "young"
   },
@@ -2865,7 +4313,7 @@ const zeku = [
     remarks:
       "1F～3F 完全無敵\n                                                S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 中K",
     zeku: "young"
   },
@@ -2881,7 +4329,7 @@ const zeku = [
     remarks:
       "1F～3F 完全無敵\n                                                S※ヒット時、宿命でのみキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓↘→ + K K ▶ 強K",
     zeku: "young"
   },
@@ -2896,7 +4344,7 @@ const zeku = [
     stan: "0",
     remarks: "老に変身する",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "↓ ↓ + P P",
     zeku: "young"
   },
@@ -2912,7 +4360,7 @@ const zeku = [
     remarks:
       "Vゲージタイマー全消費\n                                                                                                                                1F～17F 飛び道具&投げ無敵\n                1F～17F 空中判定の攻撃に対して無敵\n                                動作中常に被カウンター判定\nヒットすると若に変身して追撃する\nヒット後レバーを前に入れっぱなしにしておくと逆側へ移動できる\nS※ヒット後の着地硬直をEX必殺技でキャンセル可能",
     vtrigger: 2,
-    type: "",
+    type: "special",
     command: "(VトリガーⅡ発動中) 強P 強K",
     zeku: "young"
   },
@@ -2927,7 +4375,7 @@ const zeku = [
     stan: "0",
     remarks: "1F～11F 完全無敵",
     vtrigger: 2,
-    type: "",
+    type: "ca",
     command: "↓↘→ ↓↘→ + K",
     zeku: "young"
   }
