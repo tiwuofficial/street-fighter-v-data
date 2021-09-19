@@ -118,7 +118,7 @@ class default_1 {
         }
         if (name !== "") {
             frames = frames.filter(frame => {
-                return frame.name.includes(name);
+                return frame.name.toLowerCase().includes(name.toLowerCase());
             });
         }
         if (sortKey) {
