@@ -143,7 +143,8 @@ export default class {
     filterTypes = [],
     sortKey = "",
     sortOrder = "asc",
-    zeku: "" | "old" | "young" = ""
+    zeku: "" | "old" | "young" = "",
+    name = ""
   ): void {
     let frames = this.filterFrameByVtrigger(vtrigger);
     if (zeku !== "") {
@@ -158,6 +159,12 @@ export default class {
     if (trimFilterTypes.length) {
       frames = frames.filter(frame => {
         return trimFilterTypes.includes(frame.type);
+      });
+    }
+
+    if (name !== "") {
+      frames = frames.filter(frame => {
+        return frame.name.includes(name);
       });
     }
 

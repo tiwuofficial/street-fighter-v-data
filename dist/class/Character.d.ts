@@ -53,7 +53,7 @@ export default class {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEach(vtrigger: 1 | 2, callback: (frame: Frame, character: this) => void, filterTypes?: any[], sortKey?: string, sortOrder?: string, zeku?: "" | "old" | "young"): void;
+    sortedFrameForEach(vtrigger: 1 | 2, callback: (frame: Frame, character: this) => void, filterTypes?: any[], sortKey?: string, sortOrder?: string, zeku?: "" | "old" | "young", name?: string): void;
     /**
      *
      * @param {string} text

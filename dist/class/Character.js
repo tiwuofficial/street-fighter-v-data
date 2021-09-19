@@ -102,7 +102,7 @@ class default_1 {
      * @param {string} sortKey
      * @param {string} sortOrder
      */
-    sortedFrameForEach(vtrigger, callback, filterTypes = [], sortKey = "", sortOrder = "asc", zeku = "") {
+    sortedFrameForEach(vtrigger, callback, filterTypes = [], sortKey = "", sortOrder = "asc", zeku = "", name = "") {
         let frames = this.filterFrameByVtrigger(vtrigger);
         if (zeku !== "") {
             frames = frames.filter(frame => {
@@ -114,6 +114,11 @@ class default_1 {
         if (trimFilterTypes.length) {
             frames = frames.filter(frame => {
                 return trimFilterTypes.includes(frame.type);
+            });
+        }
+        if (name !== "") {
+            frames = frames.filter(frame => {
+                return frame.name.includes(name);
             });
         }
         if (sortKey) {

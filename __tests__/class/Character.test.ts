@@ -44,7 +44,7 @@ describe("sortedFrameForEach", (): void => {
       cnt++;
     });
 
-    expect(cnt).toBe(75);
+    expect(cnt).toBe(80);
   });
 
   test("filter empty array, sort empty", (): void => {
@@ -58,7 +58,7 @@ describe("sortedFrameForEach", (): void => {
       []
     );
 
-    expect(cnt).toBe(75);
+    expect(cnt).toBe(80);
   });
 
   test("filter empty string, sort empty", (): void => {
@@ -72,7 +72,7 @@ describe("sortedFrameForEach", (): void => {
       [""]
     );
 
-    expect(cnt).toBe(75);
+    expect(cnt).toBe(80);
   });
 
   test("filter special, sort empty", (): void => {
@@ -162,6 +162,24 @@ describe("sortedFrameForEach", (): void => {
       "",
       "",
       "young"
+    );
+
+    expect(cnt).toBe(1);
+  });
+
+  test("filter name", (): void => {
+    const character = new Character("1", "リュウ", "ryu", ryu);
+    let cnt = 0;
+    character.sortedFrameForEach(
+      2,
+      () => {
+        cnt++;
+      },
+      [],
+      "",
+      "",
+      "",
+      "一心(攻撃)"
     );
 
     expect(cnt).toBe(1);
