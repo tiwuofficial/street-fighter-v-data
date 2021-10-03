@@ -30,7 +30,7 @@ function getCombosFromLocalStroage() {
                 if (!position) {
                     position = position_1.positions.getPositionById("1");
                 }
-                combos.pushCombo(new Combo_1.default(comboFromLS.id, "", character, frames, startStatus, position, comboFromLS.damage, comboFromLS.stun, comboFromLS.title, comboFromLS.memo, comboFromLS.create));
+                combos.pushCombo(new Combo_1.default(comboFromLS.id, "", character, frames, startStatus, position, comboFromLS.damage, comboFromLS.stun, comboFromLS.title, comboFromLS.memo, new Date(comboFromLS.create)));
             }
         });
     }

@@ -46,7 +46,7 @@ export function getCombosFromLocalStroage(): Combos {
             comboFromLS.stun,
             comboFromLS.title,
             comboFromLS.memo,
-            comboFromLS.create
+            new Date(comboFromLS.create)
           )
         );
       }
